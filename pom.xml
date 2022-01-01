@@ -358,6 +358,7 @@
         <module>languagetool-language-modules/pt</module>
         <module>languagetool-language-modules/ru</module>
         <module>languagetool-language-modules/ast</module>
+        <module>languagetool-language-modules/bb</module>
         <module>languagetool-language-modules/be</module>
         <module>languagetool-language-modules/zh</module>
         <module>languagetool-language-modules/da</module>
@@ -380,7 +381,6 @@
         <module>languagetool-language-modules/uk</module>
         <module>languagetool-language-modules/de-DE-x-simple-language</module>
         <module>languagetool-language-modules/ga</module>
-        <module>languagetool-language-modules/bb</module><!--Test support for Babyish-->
         <module>languagetool-language-modules/all</module>
         <module>languagetool-gui-commons</module>
         <module>languagetool-commandline</module>
