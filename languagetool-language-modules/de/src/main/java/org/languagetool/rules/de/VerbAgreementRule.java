@@ -19,6 +19,7 @@
 package org.languagetool.rules.de;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.text.similarity.LevenshteinDistance;
 import org.languagetool.AnalyzedSentence;
 import org.languagetool.AnalyzedToken;
 import org.languagetool.AnalyzedTokenReadings;
@@ -65,6 +66,22 @@ public class VerbAgreementRule extends TextLevelRule {
       token("du"),
       token("wärst"),
       token("ich")
+    ),
+    Arrays.asList(
+      token("ich"),
+      token("schlafen"),
+      token("gehe")
+    ),
+    Arrays.asList(
+      token("du"),
+      token("schlafen"),
+      token("gehst")
+    ),
+    Arrays.asList(
+      // "Da freut er sich, wenn er schlafen geht und was findet."
+      token("er"),
+      token("schlafen"),
+      token("geht")
     ),
     Arrays.asList(
       token("vermittelst")  // "Sie befestigen die Regalbretter vermittelst dreier Schrauben."
@@ -662,7 +679,6 @@ public class VerbAgreementRule extends TextLevelRule {
           suggestions.set(i, StringTools.uppercaseFirstChar(suggestions.get(i)));
         }
       }
-      Collections.sort(suggestions);
       return suggestions;
     } catch (IOException e) {
       throw new RuntimeException(e);
@@ -730,6 +746,8 @@ public class VerbAgreementRule extends TextLevelRule {
       for (String pronounSuggestion : pronounSuggestions) {
         suggestions.add(pronounSuggestion + " " + verb.getToken());
       }
+      String markedText = sentence.getText().substring(subject.getStartPos(), verb.getStartPos()+verb.getToken().length());
+      sortBySimilarity(suggestions, markedText);
       ruleMatch.setSuggestedReplacements(suggestions);
     } else {
       ruleMatch = new RuleMatch(this, sentence, pos+verb.getStartPos(), pos+subject.getStartPos()+subject.getToken().length(), msg);
@@ -741,12 +759,22 @@ public class VerbAgreementRule extends TextLevelRule {
       for (String pronounSuggestion : pronounSuggestions) {
         suggestions.add(verb.getToken() + " " + pronounSuggestion);
       }
+      String markedText = sentence.getText().substring(verb.getStartPos(), subject.getStartPos()+subject.getToken().length());
+      sortBySimilarity(suggestions, markedText);
       ruleMatch.setSuggestedReplacements(suggestions);
     }
     
     return ruleMatch;
   }
-  
+
+  private void sortBySimilarity(List<String> suggestions, String markedText) {
+    suggestions.sort((o1, o2) -> {
+      int diff1 = LevenshteinDistance.getDefaultInstance().apply(markedText, o1);
+      int diff2 = LevenshteinDistance.getDefaultInstance().apply(markedText, o2);
+      return diff1 - diff2;
+    });
+  }
+
   static class BooleanAndFiniteVerb {
     boolean verbDoesMatchPersonAndNumber;
     AnalyzedTokenReadings finiteVerb;

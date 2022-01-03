@@ -255,6 +255,14 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
     <!-- Tippfehler -->
     <!-- ====================================================================== -->
     <category id="TYPOS" name="Mögliche Tippfehler">
+        <rule id="SPELL_NUMBER_TEST" name="spell number test" default="temp_off">
+            <pattern>
+               <token regexp="yes">\d+</token> 
+            </pattern>
+            <message>Buchstabiere die Zahlen! (Test)</message>
+            <suggestion><match no="1" postag="_spell_number_"/></suggestion>
+            <example correction="einhundertdreiundzwanzig"><marker>123</marker></example>
+        </rule>
         <rule id="MOMENTANE" name="momentane (momentan)">
             <antipattern>
                 <token regexp="yes">die|eine</token>
@@ -268,10 +276,12 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <exception postag_regexp="yes" postag="SUB:.*"/>
                     <exception postag_regexp="yes" postag="ADJ:.*"/>
                     <exception postag="UNKNOWN"/>
+                    <exception regexp="yes">und|oder|bzw|,</exception>
                 </token>
             </pattern>
             <message>Meinten Sie <suggestion>momentan</suggestion>?</message>
             <example correction="momentan">Was programmieren angeht befinde ich mich <marker>momentane</marker> noch in der Lernphase.</example>
+            <example>Momentane und mittlere Reaktionsgeschwindigkeit</example>
         </rule>
         <rule id="WIR_HABE" name="wir habe (haben)">
             <antipattern>
@@ -1039,7 +1049,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </rule>
         </rulegroup>
         <rulegroup id="AUS_DEM_EFFEFF" name="Redewendung: aus dem Effeff">
-            <url>https://de.wikipedia.org/wiki/Effeff_(Redewendung)</url>
+            <url>https://languagetool.org/insights/de/beitrag/bunte-tute-november-2021/#die-korrekte-schreibweise-aus-dem-effeff</url>
             <rule>
                 <pattern case_sensitive="no">
                     <token>aus</token>
@@ -2866,7 +2876,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token postag="VER:(1|2|3):.*" postag_regexp="yes" regexp="yes">[a-zäöü].*
                         <exception negate_pos="yes" postag="VER:(1|2|3):.*|VER:IMP:PLU.*" postag_regexp="yes"/>
                         <exception postag_regexp="yes" postag="VER:AUX:.*"/>
-                        <exception regexp="yes">schei(ß|ss)e|.+aufnahmen</exception>
+                        <exception regexp="yes">schei(ß|ss)e|.+aufnahmen|vermittelst</exception>
                     </token>
                 </pattern>
                 <message>Möglicherweise ist hier ein Wort zu viel oder es fehlt ein Komma.</message>
@@ -5000,7 +5010,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         </rulegroup>
         <rulegroup id="SEID_VS_SEIT" name="'seit (seid)'">
             <!-- Jan: TODO - extend this -->
-            <url>https://www.duden.de/rechtschreibung/seit_von_da_an_spaeter_als</url>
+            <url>https://languagetool.org/insights/de/beitrag/bunte-tute-november-2021/#seit-der-erkl%C3%A4rung-seid-ihr-geschichte-liebe-rechtschreibzweifel</url>
             <short>'seit' (Präposition) ≠ 'seid' (Verbform)</short>
             <rule>
                 <pattern>
@@ -5143,6 +5153,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </rule>
         </rulegroup>
         <rulegroup id="SEIT_VS_SEID" name="'seid (seit)'">
+            <url>https://languagetool.org/insights/de/beitrag/bunte-tute-november-2021/#seit-der-erkl%C3%A4rung-seid-ihr-geschichte-liebe-rechtschreibzweifel</url>
             <rule><!-- 1 -->
                 <pattern>
                     <marker>
@@ -6105,7 +6116,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
     <!-- Verwechslungen -->
     <!-- ====================================================================== -->
     <category id="CONFUSED_WORDS" name="Leicht zu verwechselnde Wörter">
-        <rule id="ZU_SO" name="zu (so) lange" default="temp_off">
+        <rule id="ZU_SO" name="zu (so) lange">
             <pattern>
                 <token postag="KON.*|SENT_START|PKT" postag_regexp="yes" />
                 <marker>
@@ -7466,6 +7477,20 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <message>Meinten Sie <suggestion><match no="1" regexp_match="R" regexp_replace="Fr"/></suggestion>?</message>
                 <short>&verw;</short>
                 <example correction="Frohes"><marker>Rohes</marker> Schaffen!</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <marker>
+                        <token>rohes</token>
+                    </marker>
+                    <token>neues</token>
+                    <token min="0">zu</token>
+                    <token regexp="yes" inflected="yes">wünschen|Jahr|\!|\.|\,</token>
+                </pattern>
+                <message>Meinten Sie <suggestion>frohes</suggestion>?</message>
+                <short>&verw;</short>
+                <example correction="frohes">Ich wünsche ein <marker>rohes</marker> neues Jahr!</example>
+                <example correction="frohes">Ich wünsche dir ein <marker>rohes</marker> Neues!</example>
             </rule>
         </rulegroup>
         <rule id="GEISEL_DER_MENSCHHEIT" name="Geisel (Geißel) der Menschheit">
@@ -11808,7 +11833,27 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
     <!-- Siehe auch ../../resource/de/compounds.txt -->
     <!-- ====================================================================== -->
     <category id="COMPOUNDING" name="Getrennt- und Zusammenschreibung">
-        <rule id="EIN_LOGGEN" name="ein loggen (einloggen)" default="temp_off">
+        <rule id="LIEBLINGS_SUB" name="Lieblings Tisch (Lieblingstisch)" default="temp_off">
+            <antipattern>
+                <token postag="EIG.*|UNKNOWN" postag_regexp="yes" case_sensitive="yes" regexp="yes">[A-ZÄÖÜ].*</token>
+                <token min="0">.</token>
+                <token case_sensitive="yes">Lieblings</token>
+            </antipattern>
+            <antipattern>
+                <token regexp="yes">Herrn?|Frau|Fräulein|Dr|Mrs?|Doktor|Prof(essor)?</token>
+                <token min="0">.</token>
+                <token>Lieblings</token>
+            </antipattern>
+            <pattern>
+                <token>Lieblings</token>
+                <token postag="SUB.*" postag_regexp="yes" />
+            </pattern>
+            <message>Dieses Nomen wird in der Regel zusammengeschrieben.</message>
+            <suggestion>Lieblings<match no="2" case_conversion="startlower" /></suggestion>
+            <suggestion>Lieblings-\2</suggestion>
+            <example correction="Lieblingsauto|Lieblings-Auto">VW Golf ist mein <marker>Lieblings Auto</marker>.</example>
+        </rule>
+        <rule id="EIN_LOGGEN" name="ein loggen (einloggen)">
             <antipattern>
                 <token>Loggen</token>
                 <token postag="VER.*" postag_regexp="yes" />
@@ -15032,7 +15077,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             <example>Tom fragte sich, wo Maria sei und was sie wohl tue.</example>
         </rule>
         <rulegroup id="ZU_GUTE_ZUGUTE" name="zu gute (zugute)">
-            <url>https://www.duden.de/rechtschreibung/zugut</url>
+            <url>https://languagetool.org/insights/de/beitrag/praposition-adjektiv/</url>
             <rule>
                 <pattern>
                     <token inflected="yes" regexp="yes" skip="7">halten|kommen</token>
@@ -22671,6 +22716,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         </rulegroup>
         <rulegroup id="DASSELBE_DAS_GLEICHE" name="'das gleiche (dasselbe)'">
             <!-- http://www.duden.de/rechtschreibung/derselbe#Bedeutung2 and http://www.youtube.com/watch?v=NUJtHFF8Qy0 -->
+            <url>https://languagetool.org/insights/de/beitrag/dasselbe-vs-das-gleiche/</url>
             <rule>
                 <pattern>
                     <token skip="-1" postag="SENT_START"><exception scope="next" regexp="yes">geb(urt|or).*</exception></token>
@@ -22683,7 +22729,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 </pattern>
                 <message>Spricht man von einer ganz bestimmten und einzigen Sache (hier: \4), sollte '\2 <match no="3" regexp_match="gleiche" regexp_replace="selbe"/>' statt '\2 \3' verwendet werden.</message>
                 <suggestion><match no="3" regexp_match="gleiche" regexp_replace="selbe"/></suggestion>
-                <url>https://www.youtube.com/watch?v=hePMxBhJK3E</url>
                 <example correction="selben">Noch am <marker>gleichen</marker> Tag ist er gekommen.</example>
                 <example correction="selben">Noch am <marker>gleichen</marker> Nachmittag ist er gekommen.</example>
                 <example correction="selben">Noch am <marker>gleichen</marker> Mittag ist er gekommen.</example>
@@ -24419,12 +24464,14 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 </marker>
             </pattern>
             <message>Meinten Sie <suggestion><match no="4" case_conversion="alllower"/></suggestion>?</message>
+            <url>https://languagetool.org/insights/de/beitrag/duzen-grossgeschrieben/#gro%C3%9Fschreibung-von-pers%C3%B6nlichen-f%C3%BCrw%C3%B6rtern</url>
             <example correction="sie">Aber gibt <marker>Sie</marker> uns das?</example>
             <example correction="sie">Gibt <marker>Sie</marker> uns das?</example>
             <example>Der Bus wird <marker>Sie</marker> zum Stadtzentrum bringen.</example>
             <example>Was hat Sie veranlasst, die Polizei zu rufen?</example>
         </rule>
         <rulegroup id="SIE_ANREDE" name="Möglicherweise fälschlich kleingeschriebenes 'sie' markieren" default="off">
+            <url>https://languagetool.org/insights/de/beitrag/duzen-grossgeschrieben/#gro%C3%9Fschreibung-von-pers%C3%B6nlichen-f%C3%BCrw%C3%B6rtern</url>
             <short>Möglicherweise fälschlich kleingeschriebenes 'sie'.</short>
             <rule>
                 <pattern case_sensitive="yes">
@@ -24450,6 +24497,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </rule>
         </rulegroup>
         <rulegroup id="SIE_ANREDE_BITTE" name="Möglicherweise fälschlich kleingeschriebenes 'Sie' in 'bitte ... sie'">
+            <url>https://languagetool.org/insights/de/beitrag/duzen-grossgeschrieben/#gro%C3%9Fschreibung-von-pers%C3%B6nlichen-f%C3%BCrw%C3%B6rtern</url>
             <rule>
                 <pattern case_sensitive="yes">
                     <token regexp="yes">[Bb]itte</token>
@@ -24513,6 +24561,31 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
     <!-- Groß- und Kleinschreibung -->
     <!-- ====================================================================== -->
     <category id="CASING" name="Groß-/Kleinschreibung">
+        <rule id="FROHES_NEUES" name="frohes neues (Neues)!">
+            <antipattern>
+                <token>neues</token>
+                <token regexp="yes">.*jahr</token>
+            </antipattern>
+            <antipattern>
+                <token>neues</token>
+                <token postag="UNKNOWN|SUB.*|EIG.*" postag_regexp="yes" />
+            </antipattern>
+            <antipattern>
+                <token>neues</token>
+                <token regexp="yes" min="0">und|oder|&amp;|,</token>
+                <token regexp="yes" case_sensitive="yes">[a-zäöü].+es</token>
+            </antipattern>
+            <pattern>
+                <token regexp="yes">frohes|fröhliches</token>
+                <marker>
+                    <token case_sensitive="yes">neues</token>
+                </marker>
+            </pattern>
+            <message>Nominalisierte Adjektive sollten in der Regel großgeschrieben werden.</message>
+            <suggestion>Neues</suggestion>
+            <example correction="Neues">Ich wünsche dir ein frohes <marker>neues</marker>!</example>
+            <example>Ich wünsche dir ein frohes neues Jahr.</example>
+        </rule>
         <rulegroup id="AM_NOETIGSTEN" name="am nötigsten (Nötigsten)">
             <url>https://www.lernnetz24.de/regeln/0453.html</url>
             <rule>
@@ -24808,6 +24881,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </rule>
         </rulegroup>
         <rulegroup id="DAS_RICHTIGE_TUN" name="das richtige (Richtige) tun">
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <rule>
                 <pattern>
                     <token>das</token>
@@ -24842,21 +24916,21 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         </rulegroup>
         <rulegroup id="PRIVATES_UND_BERUFLICHES" name="privates und berufliches (Privates und Berufliches)">
             <antipattern case_sensitive="yes">
-                <token regexp="yes">[PB].+</token>
+                <token regexp="yes">[PBG].+</token>
                 <token regexp="yes">und|UND|oder|ODER|sowie|SOWIE&amp;</token>
-                <token regexp="yes">[PB].+</token>
+                <token regexp="yes">[PBG].+</token>
             </antipattern>
             <antipattern>
-                <token regexp="yes">[pb].+</token>
+                <token regexp="yes">[pbg].+</token>
                 <token regexp="yes">und|oder|sowie|&amp;</token>
-                <token regexp="yes">[pb].+</token>
+                <token regexp="yes">[pbg].+</token>
                 <token postag="SUB.*|UNKNOWN|EIG.*" postag_regexp="yes" regexp="yes">.*[a-z].*</token>
             </antipattern>
             <rule>
                 <pattern>
                     <token regexp="yes">private[snm]</token>
                     <token regexp="yes">und|oder|sowie|&amp;</token>
-                    <token regexp="yes">berufliche[snm]</token>
+                    <token regexp="yes">berufliche[snm]|geschäftliche[snm]</token>
                 </pattern>
                 <message>Nominalisierte Adjektive sollten in der Regel großgeschrieben werden.</message>
                 <suggestion><match no="1" case_conversion="startupper" /> \2 <match no="3" case_conversion="startupper" /></suggestion>
@@ -24865,7 +24939,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </rule>
             <rule>
                 <pattern>
-                    <token regexp="yes">berufliche[snm]</token>
+                    <token regexp="yes">berufliche[snm]|geschäftliche[snm]</token>
                     <token regexp="yes">und|oder|sowie|&amp;</token>
                     <token regexp="yes">private[snm]</token>
                 </pattern>
@@ -24918,7 +24992,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             <example correction="Schlimmeres">Er tat dies, um <marker>schlimmeres</marker> abzuwenden.</example>
         </rule>
         <rulegroup id="DER_KLUEGERE_GIBT_NACH" name="Der klügere (Klügere) gibt nach">
-            <url>http://www.sprichwort-plattform.org/sp/Der%20Kl%C3%BCgere%20gibt%20nach</url>
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <rule>
                 <pattern>
                     <token regexp="yes">der|die</token>
@@ -25056,6 +25130,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             <message>In diesem Kontext wird "zuhause" als Adverb verwendet und sollte klein- oder getrennt (empfohlen) geschrieben werden.</message>
             <suggestion><match no="2" case_conversion="alllower">zu</match> Hause</suggestion>
             <suggestion><match no="2" case_conversion="alllower" /></suggestion>
+            <url>https://languagetool.org/insights/de/beitrag/bunte-tute-august-2021/#wie-lautet-die-korrekte-schreibung-von-%E2%80%9Ezu-hause%E2%80%9C</url>
             <example correction="zu Hause|zuhause">Ich freue mich auf <marker>Zuhause</marker>.</example>
         </rule>
         <rule id="AUF_DAHEIM" name="auf Daheim (daheim)">
@@ -25334,6 +25409,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </pattern>
             <message>Bitte prüfen Sie die Groß- und Kleinschreibung.</message>
             <suggestion><match no="2" case_conversion="startupper"/></suggestion>
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <example correction="Stillen">Ich sitze hier im <marker>stillen</marker>.</example>
             <example correction="Wesentlichen">Das ist im <marker>wesentlichen</marker> richtig so.</example>
             <example correction="Dunklen">Ich gehe gerne im <marker>dunklen</marker> spazieren.</example>
@@ -25393,6 +25469,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </pattern>
             <message>Wenn dieses Wort als Nomen verwendet wird, sollte es großgeschrieben werden.</message>
             <suggestion><match no="2" case_conversion="startupper" /></suggestion>
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <example correction="Geringerer">Es war kein <marker>geringerer</marker> als der Vize-Meister selbst.</example>
         </rule>
         <rule id="IM_OSTEN" name="im osten (Osten)">
@@ -25465,6 +25542,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </pattern>
             <message>Wenn dieses Wort als Nomen verwendet wird, sollte es großgeschrieben werden.</message>
             <suggestion><match no="2" case_conversion="startupper" /></suggestion>
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <example correction="Besseren">Es hat sich zum <marker>besseren</marker> gewendet.</example>
         </rule>
         <rulegroup id="AUS_DEM_NICHTS" name="aus dem nichts (Nichts)">
@@ -25519,6 +25597,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </rule>
         </rulegroup>
         <rulegroup id="GROEBSTEN" name="mit dem gröbsten (Gröbsten) durch">
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <rule>
                 <pattern>
                     <token>durch</token>
@@ -25584,6 +25663,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </pattern>
             <message>Wenn dieses Adjektiv als Nomen verwendet wird, sollte es großgeschrieben werden.</message>
             <suggestion><match no="2" case_conversion="startupper" /></suggestion>
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <example correction="Schlimmste">Er hat das <marker>schlimmste</marker> noch vor sich.</example>
         </rule>
         <rule id="EINE_MENGE_GUTES" name="Eine Menge gutes (Gutes)">
@@ -25598,9 +25678,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </pattern>
             <message>Wenn dieses Adjektiv als Nomen verwendet wird, sollte es großgeschrieben werden.</message>
             <suggestion><match no="4" case_conversion="startupper" /></suggestion>
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <example correction="Gutes">Ich habe eine Menge <marker>gutes</marker> über dich gehört.</example>
         </rule>
         <rulegroup id="SICH_SELBST_DER_NAECHSTE" name="sich selbst der nächste (Nächste)">
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <antipattern>
                 <token regexp="yes">nächsten?</token>
                 <token case_sensitive="yes" regexp="yes">[A-ZÄÖÜ].*</token>
@@ -25632,6 +25714,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </rule>
         </rulegroup>
         <rulegroup id="DIE_GRUENEN_WAEHLEN" name="Die grünen (Grünen) wählen">
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <rule>
                 <pattern>
                     <token>die</token>
@@ -25843,6 +25926,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             <example correction="extra">Den Support müssten die <marker>Extra</marker> einkaufen.</example>
         </rule>
         <rulegroup id="DAS_WEITE" name="das weite (Weite) suchen">
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <rule>
                 <pattern case_sensitive="yes">
                     <token>das</token>
@@ -26230,6 +26314,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </rule>
         </rulegroup>
         <rulegroup id="IHR_EUCH" name="Ihr euch (Euch)">
+            <url>https://languagetool.org/insights/de/beitrag/duzen-grossgeschrieben/#welche-formen-betrifft-die-gro%C3%9Fschreibung-von-%E2%80%9Edu%E2%80%9C-und-%E2%80%9Esie%E2%80%9C</url>
             <rule>
                 <pattern case_sensitive="yes">
                     <token>Ihr</token>
@@ -26801,6 +26886,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </rule>
         </rulegroup>
         <rulegroup id="AUFS_SCHAERFSTE" name="auf das schärfste (Schärfste)">
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <rule>
                 <pattern>
                     <token regexp="yes">aufs?</token>
@@ -27273,6 +27359,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <token regexp="yes">d(ies)?e[rs]|[mds]?eine[rs]</token>
             </pattern>
             <message>Meinten Sie das Nomen <suggestion>Schwere</suggestion>?</message>
+            <url></url>
             <short>&prgk;.</short>
             <example correction="Schwere">Festgestellt wurde eine besondere <marker>schwere</marker> der Schuld.</example>
         </rule>
@@ -27335,6 +27422,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             <example correction="Fest">Frohes <marker>fest</marker>!</example>
         </rule>
         <rulegroup id="DAS_KLEINES_SUBST_ADJEKTIV" name="kleingeschriebenes nominalisiertes Adjektiv am Satzanfang">
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <rule>
                 <pattern>
                     <or>
@@ -27408,6 +27496,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </pattern>
             <message>Wenn sich 'beste' nicht auf ein anderes Nomen bezieht, wird es in diesem Zusammenhang großgeschrieben.</message>
             <suggestion>Beste</suggestion>
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <short>&prgk;.</short>
             <example correction="Beste">Er will immer der <marker>beste</marker> sein.</example>
             <example correction="Beste">Um die <marker>beste</marker> zu sein, musst du hart arbeiten.</example>
@@ -27489,6 +27578,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </rule>
         </rulegroup>
         <rulegroup id="DAS_BESTE_AM" name="'das beste (Beste) am' etc.">
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <rule>
                 <antipattern>
                     <token>das</token>
@@ -28004,7 +28094,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </rule>
         </rulegroup>
         <rulegroup id="AUF_DEM_TROCKENEN" name="auf dem trockenen (Trockenen) sitzen">
-            <url>https://de.wiktionary.org/wiki/auf_dem_Trockenen_sitzen</url>
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <rule>
                 <pattern>
                     <token>auf</token>
@@ -28034,6 +28124,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </rule>
         </rulegroup>
         <rulegroup id="SIE_DIALOG" name="Erlauben sie (Sie)?">
+            <url>https://languagetool.org/insights/de/beitrag/duzen-grossgeschrieben/#gro%C3%9Fschreibung-von-pers%C3%B6nlichen-f%C3%BCrw%C3%B6rtern</url>
             <rule>
                 <pattern case_sensitive='yes'>
                     <token regexp='yes'>Erlauben|Gestatten|Verzeihen</token>
@@ -28074,6 +28165,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <token postag_regexp="yes" postag="VER:AUX:3:SIN:.*"/>
             </pattern>
             <message>Wenn es keine Anrede ist, wird <suggestion><match no="3" case_conversion="startlower"/></suggestion> kleingeschrieben.</message>
+            <url>https://languagetool.org/insights/de/beitrag/duzen-grossgeschrieben/#gro%C3%9Fschreibung-von-pers%C3%B6nlichen-f%C3%BCrw%C3%B6rtern</url>
             <short>&prgk;.</short>
             <example correction="sie">Wenn <marker>Sie</marker> auch eher zurückhaltender ist...</example>
             <example>Sie ist halt so.</example>
@@ -28521,6 +28613,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </rule>
         </rulegroup>
         <rulegroup id="DU_DICH" name="Du dich (Du Dich, du dich)">
+            <url>https://languagetool.org/insights/de/beitrag/duzen-grossgeschrieben/#welche-formen-betrifft-die-gro%C3%9Fschreibung-von-%E2%80%9Edu%E2%80%9C-und-%E2%80%9Esie%E2%80%9C</url>
             <rule>
                 <pattern case_sensitive="yes">
                     <token>Du<exception postag="SENT_START" scope="previous"/><exception scope="previous" regexp="yes">&anfauf;</exception></token>
@@ -29417,21 +29510,21 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </rule>
         </rulegroup>
         <rulegroup id="IM_KLAREN" name="'im klaren (Klaren)'">
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <rule>
                 <antipattern case_sensitive="yes">
                     <token regexp="yes">[iI]m</token>
-                    <token regexp="yes">wesentlichen|voraus|ungewissen|speziellen|klaren|guten|ganzen|dunkeln|argen|besonderen|übrigen|trüben|grünen|einzelnen|weitesten|entferntesten</token>
+                    <token regexp="yes">wesentlichen|voraus|ungewissen|speziellen|(un)?klaren|guten|ganzen|dunkeln|argen|besonderen|übrigen|trüben|grünen|einzelnen|weitesten|entferntesten</token>
                     <token postag="ADV:.+" postag_regexp="yes"><exception postag="ZUS"/></token>
                 </antipattern>
                 <pattern case_sensitive="yes">
                     <token regexp="yes">[iI]m</token>
                     <marker>
-                        <token regexp="yes">wesentlichen|voraus|ungewissen|speziellen|klaren|guten|ganzen|dunkeln|argen|besonderen|übrigen|trüben|grünen|einzelnen|weitesten|entferntesten</token>
+                        <token regexp="yes">wesentlichen|voraus|ungewissen|speziellen|(un)?klaren|guten|ganzen|dunkeln|argen|besonderen|übrigen|trüben|grünen|einzelnen|weitesten|entferntesten</token>
                     </marker>
                     <token><exception postag="(SUB|ADJ|EIG):.*|UNKNOWN" postag_regexp="yes"/></token>
                 </pattern>
                 <message>&inwend;'im <match case_conversion="startupper" no="2"/>' wird <suggestion><match case_conversion="startupper" no="2"/></suggestion> in der Regel großgeschrieben.</message>
-                <url>https://www.korrekturen.de/wortliste/i/</url>
                 <short>&prgk;.</short>
                 <example correction="Voraus">Bezahlung bitte im <marker>voraus</marker>!</example>
                 <example correction="Wesentlichen">Gurken bestehen im <marker>wesentlichen</marker> aus Wasser.</example>
@@ -30177,6 +30270,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </rule>
         </rulegroup>
         <rulegroup id="INNERES_SUBST" name="'im inneren (Inneren) des Körpers' etc.">
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <rule>
                 <pattern>
                     <token>im</token>
@@ -32722,7 +32816,7 @@ Andere Projekte</example>
                 <token inflected="yes">ziehen</token>
             </pattern>
             <message>&inwend;'den Kürzeren ziehen' (metaphorisch im Sinne von 'das Nachsehen haben', 'unterliegen') wird <suggestion><match no="2" case_conversion="startupper"/></suggestion> großgeschrieben.</message>
-            <url>https://de.wiktionary.org/wiki/den_K%C3%BCrzeren_ziehen</url>
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <short>&prgk;.</short>
             <example correction="Kürzeren">Da haben wir wohl den <marker>kürzeren</marker> gezogen.</example>
         </rule>
@@ -35404,6 +35498,7 @@ Andere Projekte</example>
             <example correction="Schwelle">Auf der <marker>schwelle</marker> zum 21. Jahrhundert erscheint die Sache in neuem Licht.</example>
         </rule>
         <rulegroup id="AUFS_GANZE_GEHEN" name="aus dem vollen">
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <rule>
                 <pattern>
                     <token>aufs</token>
@@ -35430,6 +35525,7 @@ Andere Projekte</example>
             </rule>
         </rulegroup>
         <rulegroup id="DAS_GANZE" name="das ganze (Ganze)">
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <rule>
                 <pattern>
                     <token>das</token>
@@ -35440,7 +35536,6 @@ Andere Projekte</example>
                     <token postag="VER:AUX:3:SIN:.+|ADJ:PRD:KOM|PRP:LOK:DAT" postag_regexp="yes"/>
                 </pattern>
                 <message>Vermutlich wird <suggestion>Ganze</suggestion> hier großgeschrieben.</message>
-                <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
                 <short>&prgk;.</short>
                 <example correction="Ganze">Das <marker>ganze</marker> ist mehr als die Summe seiner Teile</example>
                 <example correction="Ganze">Bitte stelle das <marker>ganze</marker> ausführlicher dar.</example>
@@ -35457,6 +35552,7 @@ Andere Projekte</example>
                 </marker>
             </pattern>
             <message>&inwend;'im Reinen sein' wird <suggestion>Reinen</suggestion> großgeschrieben.</message>
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <short>&prgk;.</short>
             <example correction="Reinen">Ich bin mit mir im <marker>reinen</marker>.</example>
         </rule>
@@ -38343,6 +38439,7 @@ Andere Projekte</example>
             <example correction="Großen und Ganzen">Im <marker>großen und ganzen</marker> war es ein gelungener Abend.</example>
         </rule>
         <rulegroup id="ZU_HAUSE" name="'zu hause (Hause)'">
+            <url>https://languagetool.org/insights/de/beitrag/bunte-tute-august-2021/#wie-lautet-die-korrekte-schreibung-von-%E2%80%9Ezu-hause%E2%80%9C</url>
             <antipattern>
                 <token>ab</token>
                 <token regexp="yes">und|&amp;</token>
@@ -41525,6 +41622,7 @@ Andere Projekte</example>
                 <token postag="(VER|PA2):.*|ART:.*" postag_regexp="yes" regexp="yes">[a-zäöü].*</token>
             </pattern>
             <message><suggestion>Folgenden</suggestion> wird als Nominalisierung großgeschrieben.</message>
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <example correction="Folgenden">Im <marker>folgenden</marker> geht es um Fahrräder.</example>
             <example correction="Folgenden">Diese These werde ich im <marker>folgenden</marker> ausführen.</example>
             <example correction="Folgenden">Die im <marker>folgenden</marker> beschriebene Geschichte.</example>
@@ -42362,11 +42460,12 @@ Andere Projekte</example>
                 <token negate_pos="yes" postag="SUB:.*" postag_regexp="yes"/>
             </pattern>
             <message>&inwend;'aufs Gleiche rauskommen' wird <suggestion>Gleiche</suggestion> großgeschrieben.</message>
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <example correction="Gleiche">Das kommt aufs <marker>gleiche</marker> raus.</example>
             <example>Aufs <marker>gleiche</marker> Pferd setzen.</example>
         </rule>
         <rulegroup id="ETWAS_GUTES" name="'etwas/nichts gutes (Gutes)' etc.">
-            <url>https://www.duden.de/sprachwissen/rechtschreibregeln/Gro%C3%9F-%20und%20Kleinschreibung#D72</url>
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <rule>
                 <antipattern>
                     <token regexp="yes">[a-zäöü].+es</token>
@@ -42575,6 +42674,7 @@ Andere Projekte</example>
             </rule>
         </rulegroup>
         <rulegroup id="ALLES_GUTE" name="'alles gute (Gute)' [Glückwunschformel]">
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <rule>
                 <pattern case_sensitive="yes">
                     <token regexp="yes">[aA]lles</token>
@@ -42657,6 +42757,7 @@ Andere Projekte</example>
             </rule>
         </rulegroup>
         <rulegroup id="ZUM_BESTEN_GEBEN" name="'zum besten (Besten) geben'">
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <rule>
                 <pattern case_sensitive="yes">
                     <token>zum</token>
@@ -42683,6 +42784,7 @@ Andere Projekte</example>
             </rule>
         </rulegroup>
         <rulegroup id="AM_BESTEN" name="am Besten (besten)">
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/#was-gibt-es-bei-der-nominalisierung-von-adjektiven-zu-beachten</url>
             <rule>
                 <pattern>
                     <token>am</token>
@@ -42691,7 +42793,6 @@ Andere Projekte</example>
                     </marker>
                 </pattern>
                 <message>&inwend;'am <match no="2" case_conversion="startlower"/>' schreibt man <suggestion><match no="2" case_conversion="startlower"/></suggestion> klein.</message>
-                <url>https://www.korrekturen.de/beliebte_fehler/am-besten.shtml</url>
                 <short>&prgk;.</short>
                 <example correction="besten">Du gehst am <marker>Besten</marker> sofort!</example>
                 <example correction="liebsten">Was magst du am <marker>Liebsten</marker> an ihr?</example>
@@ -43110,6 +43211,7 @@ Andere Projekte</example>
             <example correction="Rede">Ich habe ihn zur <marker>rede</marker> gestellt.</example>
         </rule>
         <rulegroup id="INS_REINE" name="'ins reine (Reine) kommen'">
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <rule>
                 <pattern case_sensitive="yes">
                     <token inflected="yes" skip="1">kommen</token>
@@ -43252,6 +43354,7 @@ Andere Projekte</example>
             </rule>
         </rulegroup>
         <rulegroup id="GROSS_KLEIN_EINHEITEN" name="Einheiten 'KB (kB), KWh (kWh)'">
+            <url>https://languagetool.org/insights/de/beitrag/masseinheiten-ausschreiben/</url>
             <rule>
                 <pattern case_sensitive="yes">
                     <token regexp="yes">(\-)?[0-9]{1,30}</token>
@@ -43334,6 +43437,7 @@ Andere Projekte</example>
             </rule>
         </rulegroup>
         <rulegroup id="EIN_PAAR" name="Paar vs. paar">
+            <url>https://languagetool.org/insights/de/beitrag/indefinitpronomen/#ein-paar-weitere-beispiele</url>
             <rule>
                 <pattern>
                     <token>einem</token>
@@ -43424,6 +43528,7 @@ Andere Projekte</example>
         <rule id="GUTEN_UND_SCHLECHTEN" name="'in Guten (guten) wie in Schlechten (schlechten) Zeiten'">
             <regexp case_sensitive='yes'>[Ii]n Guten wie in Schlechten</regexp>
             <message><suggestion>in guten wie in schlechten Zeiten</suggestion> wird in dieser Wendung kleingeschrieben.</message>
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/#werden-nominalisierte-adjektive-immer-gro%C3%9Fgeschrieben</url>
             <example><marker>In guten wie in schlechten</marker> Zeiten.</example>
             <example correction="In guten wie in schlechten Zeiten"><marker>In Guten wie in Schlechten</marker> Zeiten.</example>
         </rule>
@@ -43569,7 +43674,7 @@ Andere Projekte</example>
             </rule>
         </rulegroup>
         <rulegroup id="IM_ALLGEMEINEN" name="'im allgemeinen (Allgemeinen)'">
-            <url>https://www.korrekturen.de/wortliste/im_allgemeinen.shtml</url>
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <rule>
                 <pattern case_sensitive="yes">
                     <token regexp="yes">[iI]m</token>
@@ -43618,6 +43723,7 @@ Andere Projekte</example>
                 </token>
             </pattern>
             <message>&subanfang;<suggestion>Üblichen</suggestion>&subende;</message>
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <short>&prgk;.</short>
             <example correction="Üblichen">Im Rahmen des <marker>üblichen</marker>.</example>
             <example>Im Rahmen des <marker>üblichen</marker> Verfahrens.</example>
@@ -44272,6 +44378,7 @@ Andere Projekte</example>
             </rule>
         </rulegroup>
         <rulegroup id="BESSEREN_BELEHREN" name="eines besseren (belehren)">
+            <url>https://languagetool.org/insights/de/beitrag/nominalisierte-adjektive/</url>
             <rule>
                 <pattern case_sensitive="yes">
                     <token>eines</token>
@@ -45396,6 +45503,7 @@ Andere Projekte</example>
         </rulegroup>
 
         <rulegroup id="SIMPLE_AGREEMENT_NEU" name="Der (Das) Haus ist">
+            <url>https://languagetool.org/insights/de/beitrag/der-die-das/</url>
             <short>Evtl. keine Übereinstimmung von Kasus, Genus oder Numerus</short>
             <antipattern>
                 <token regexp="yes">Recht|Glück</token><!-- Dusel, Zeit, Lust (for other rules) -->
@@ -47220,7 +47328,7 @@ Andere Projekte</example>
             </rule>
         </rulegroup>
         <rulegroup id="E_AUTO" name="E-Auto/E-Mobilität">
-            <url>https://www.duden.de/rechtschreibung/E_Auto</url>
+            <url>https://languagetool.org/insights/de/beitrag/e-mail/</url>
             <rule>
                 <pattern>
                     <token>e</token>
@@ -47243,13 +47351,13 @@ Andere Projekte</example>
             </rule>
         </rulegroup>
         <rulegroup id="E_BOOK" name="E-Book/E-Commerce">
+            <url>https://languagetool.org/insights/de/beitrag/e-mail/</url>
             <rule>
                 <pattern>
                     <token regexp="yes">e\-?book</token>
                     <token regexp="yes">reader[sn]?</token>
                 </pattern>
                 <message>Meinten Sie <suggestion>E-Book-<match no="2" case_conversion="startupper" /></suggestion>?</message>
-                <url>https://www.duden.de/rechtschreibung/E_Book_Reader</url>
                 <example correction="E-Book-Reader">Ein <marker>EBook Reader</marker> ist oft umweltschonender als ein Buch aus Papier.</example>
             </rule>
             <rule>
@@ -47258,7 +47366,6 @@ Andere Projekte</example>
                     <token regexp="yes">books?|commerce|paper[ns]?|buch|büchern?</token>
                 </pattern>
                 <message>Meinten Sie <suggestion>E-<match no="2" case_conversion="startupper" /></suggestion>?</message>
-                <url>https://www.duden.de/rechtschreibung/E_Book</url>
                 <example correction="E-Books">Die <marker>E Books</marker> sind umweltschonender als normale Bücher.</example>
             </rule>
             <rule>
@@ -47269,7 +47376,6 @@ Andere Projekte</example>
                     <token regexp="yes">e-?(books?|paper[ns]?|commerce|buch|büchern?)</token>
                 </pattern>
                 <message>Meinten Sie <suggestion>E-<match no="1" regexp_match="(?i)^e-?" regexp_replace="" case_conversion="startupper" /></suggestion>?</message>
-                <url>https://www.duden.de/rechtschreibung/E_Book</url>
                 <example correction="E-Book">Ein <marker>EBook</marker> ist oft umweltschonender als ein Buch aus Papier.</example>
             </rule>
         </rulegroup>
@@ -51105,6 +51211,7 @@ Andere Projekte</example>
             </rule>
         </rulegroup>
         <rulegroup id="AUFFORDERUNG_SIE" name="'Kommen sie (Sie)!' [Aufforderung in Höflichkeitsform]">
+            <url>https://languagetool.org/insights/de/beitrag/duzen-grossgeschrieben/#gro%C3%9Fschreibung-von-pers%C3%B6nlichen-f%C3%BCrw%C3%B6rtern</url>
             <rule>
                 <pattern case_sensitive="yes">
                     <token postag="SENT_START"/>
@@ -52808,6 +52915,7 @@ Andere Projekte</example>
         <rule id="GANG_UND_GEBE" name="'gang und gebe (gäbe)'">
             <regexp>\bgang und gebe\b</regexp>
             <message>Meinten Sie <suggestion>gang und gäbe</suggestion>? (feste Redewendung)</message>
+            <url>https://languagetool.org/insights/de/beitrag/bunte-tute-august-2021/#schreibt-man-%E2%80%9Egang-und-g%C3%A4be%E2%80%9C-klein-und-mit-%E2%80%9E%C3%A4%E2%80%9C</url>
             <short>Möglicherweise falsch verwendete Redewendung</short>
             <example correction="gang und gäbe">Das ist <marker>gang und gebe</marker>.</example>
         </rule>
@@ -53989,7 +54097,7 @@ Andere Projekte</example>
                 <short>Meinten Sie 'Im-'?</short>
                 <example correction="Im-">Auf dem Schild stand "<marker>Im</marker> und Export".</example>
             </rule>
-            <rule default="temp_off">
+            <rule>
                 <pattern>
                     <marker>
                         <token case_sensitive="yes">ein</token>
@@ -54001,7 +54109,7 @@ Andere Projekte</example>
                 <message>Die Wendung '<suggestion>\1-</suggestion> und ausloggen' wird mit Bindestrich geschrieben.</message>
                 <example correction="ein-">Ich versuchte bereits mich <marker>ein</marker> und auszuloggen.</example>
             </rule>
-            <rule default="temp_off">
+            <rule>
                 <pattern>
                     <marker>
                         <token case_sensitive="yes">aus</token>
@@ -54013,7 +54121,7 @@ Andere Projekte</example>
                 <message>Die Wendung '<suggestion>\1-</suggestion> und einloggen' wird mit Bindestrich geschrieben.</message>
                 <example correction="aus-">Ich versuchte bereits mich <marker>aus</marker> und einzuloggen.</example>
             </rule>
-            <rule default="temp_off">
+            <rule>
                 <pattern>
                     <marker>
                         <token case_sensitive="yes">an</token>
@@ -54025,7 +54133,7 @@ Andere Projekte</example>
                 <message>Die Wendung '<suggestion>\1-</suggestion> und abmelden' wird mit Bindestrich geschrieben.</message>
                 <example correction="an-">Ich versuchte bereits mich <marker>an</marker> und abzumelden.</example>
             </rule>
-            <rule default="temp_off">
+            <rule>
                 <pattern>
                     <marker>
                         <token case_sensitive="yes">ab</token>
@@ -54037,7 +54145,7 @@ Andere Projekte</example>
                 <message>Die Wendung '<suggestion>\1-</suggestion> und anmelden' wird mit Bindestrich geschrieben.</message>
                 <example correction="ab-">Ich versuchte bereits mich <marker>ab</marker> und anzumelden.</example>
             </rule>
-            <rule default="temp_off">
+            <rule>
                 <pattern>
                     <marker>
                         <token case_sensitive="yes">hoch</token>
@@ -54049,7 +54157,7 @@ Andere Projekte</example>
                 <message>Die Wendung '<suggestion>\1-</suggestion> und herunterfahren' wird mit Bindestrich geschrieben.</message>
                 <example correction="hoch-">Ich versuche es <marker>hoch</marker> und runterzufahren.</example>
             </rule>
-            <rule default="temp_off">
+            <rule>
                 <pattern>
                     <marker>
                         <token regexp="yes" case_sensitive="yes">(he)?runter</token>
@@ -55801,6 +55909,7 @@ Andere Projekte</example>
             </pattern>
             <message>Rechenzeichen sollten durch (schmale, geschützte) Leerzeichen abgetrennt werden.</message>
             <suggestion>\1 \2 \3</suggestion>
+            <url>https://languagetool.org/insights/de/beitrag/leerstellen-sonderzeichen/</url>
             <example>Eine Karte im Maßstab 1:80000.</example>
             <example>Ich muss um 7:00 Uhr aufstehen.</example>
             <example>Ich muss um 7:00h aufstehen.</example>
@@ -55849,6 +55958,7 @@ Andere Projekte</example>
         </rulegroup>
         <rulegroup id="KOMMA_ALS_KOMPARATIV" name="Komma bei 'als' mit Komparativ">
             <!-- TODO needs work -->
+            <url>https://languagetool.org/insights/de/beitrag/vergleiche-wie-als/#kommasetzung-bei-vergleichen</url>
             <rule>
                 <pattern>
                     <marker>
@@ -55860,7 +55970,6 @@ Andere Projekte</example>
                     <token postag="SENT_END"/>
                 </pattern>
                 <message>&inwend;<suggestion>\1 als \4</suggestion> sollte kein Komma stehen.</message>
-                <url>https://dict.leo.org/grammatik/deutsch/Rechtschreibung/Regeln/Interpunktion/Komma/Nebensatz.html#grammarAnchor-In-47857</url>
                 <short>Falsch gesetztes Komma</short>
                 <example correction="schneller als nötig">Du fährst <marker>schneller, als nötig</marker>. </example>
                 <example correction="schneller als erlaubt">Du fährst <marker>schneller, als erlaubt</marker>. </example>
@@ -57854,6 +57963,7 @@ Andere Projekte</example>
             </rule>
         </rulegroup>
         <rulegroup id="PARAGRAF_LEERZEICHEN" name="Fehlendes geschütztes Leerzeichen nach '§'">
+            <url>https://languagetool.org/insights/de/beitrag/leerstellen-sonderzeichen/</url>
             <rule>
                 <regexp case_sensitive='yes' type="exact">§ ?(\d+[a-z]?)</regexp>
                 <message>Nach dem Paragrafenzeichen sollte ein geschütztes Leerzeichen stehen, um Zeilenumbrüche danach zu vermeiden.</message>
@@ -58727,7 +58837,7 @@ Andere Projekte</example>
                 </pattern>
                 <message>Wenn nach der direkten Rede ein Begleitsatz folgt, muss ein Komma gesetzt werden.</message>
                 <suggestion>\3, \4</suggestion>
-                <url>https://languagetool.org/insights/de/beitrag/woertliche-rede/</url>
+                <url>https://languagetool.org/insights/de/beitrag/woertliche-rede/#w%C3%B6rtliche-rede-vor-dem-einleitungssatz</url>
                 <example correction="«, sagte">»Ich gehe nach Hause<marker>« sagte</marker> sie.</example>
                 <example>»Ich gehe nach Hause<marker>«, sagte</marker> sie.</example>
                 <example>Ich wollte nur „Danke!“ sagen.</example>
@@ -59211,7 +59321,7 @@ Andere Projekte</example>
                 <token postag="VER:[1-3]:.*|VER.*:[1-3]:.*|VER:IMP:.*" postag_regexp="yes" regexp="yes" case_sensitive="yes">[a-zäöü]+
                     <exception postag="VER:(INF:|PA2).*|VER:MOD:INF.*|PA[12]:.*|SUB:.*|EIG:.*|ADJ:.*|ART:.*|PRO:.*|ADV.*|PRP:.*|NEG:.*|ABK:.*|ZUS.*|ZAL.*" postag_regexp="yes"/>
                     <exception inflected="yes" regexp="yes">bleiben|lassen|sieben|achten</exception>   <!-- siebte, achte werden nicht als Zahlwort erkannt  -->
-                    <exception regexp="yes">bitte|halt|mindere|lichte|sog|rauf</exception>
+                    <exception regexp="yes">bitte|halt|mindere|lichte|sog|rauf|vermittelst</exception>
                     <exception postag="VER:IMP:SIN:NON" />
                     <exception regexp="yes" scope="previous">,|\.|:|\?|!|;|-|–|—|\)|\(|„|“|»|«|"|und|oder|da|weil|ob(wohl|gleich)?|damit|sodass|dass|indem|wenn|falls|sofern|während|bevor|nachdem|seitdem|so(bald|lange)|was|als|wie|bis|wer|wo|wohin</exception>
                     <exception scope="next">,</exception>
@@ -60205,7 +60315,7 @@ Andere Projekte</example>
             </rule>
             <rule>
                 <pattern>
-                    <token case_sensitive="yes" regexp="yes">[Gg]eouted|[Gg]ekited|[Gg]edated|[Gg]ecasted|[Gg]evested</token>
+                    <token case_sensitive="yes" regexp="yes">[Gg]eouted|[Gg]ekited|[Gg]edated|[Gg]ecasted|[Gg]evested|[Gg]eshorted</token>
                 </pattern>
                 <message>Die empfohlene Schreibweise für diesen Anglizismus ist <suggestion><match no="1" regexp_match="ed$" regexp_replace="et" /></suggestion>.</message>
                 <example correction="gedatet">Sie haben sich 2 Wochen lang <marker>gedated</marker>.</example>
@@ -60354,6 +60464,7 @@ Andere Projekte</example>
             </rule>
         </rulegroup>
         <rulegroup id="TEST_F_ANSTATT_PH" name="Worte mit Ph anstatt F">
+            <url>https://languagetool.org/insights/de/beitrag/ph-versus-f/</url>
             <rule>
                 <antipattern>
                     <token regexp="yes">Phone|Photograph.*|Photons?|Photonen.*|Photoshop.*|Phono.*|Phone[mt].*</token>
@@ -60362,7 +60473,6 @@ Andere Projekte</example>
                     <token regexp="yes" case_sensitive="yes">Pho(to|n)[\wäöüÄÖÜß-]*</token>
                 </pattern>
                 <message>Möchten Sie die modernere Schreibweise <suggestion><match no="1" regexp_match="Photo(.*)" regexp_replace="Foto$1"/></suggestion> verwenden?</message>
-                <url>https://languagetool.org/insights/de/beitrag/ph-versus-f/</url>
                 <example correction="Fotoalbum">Sie blätterte gerne durch das <marker>Photoalbum</marker>.</example>
             </rule>
             <rule>
@@ -60376,7 +60486,6 @@ Andere Projekte</example>
                     <token regexp="yes" case_sensitive="yes">.*pho(to|n).*</token>
                 </pattern>
                 <message>Möchten Sie die modernere Schreibweise <suggestion><match no="1" regexp_match="(.*)pho(.*)" regexp_replace="$1fo$2"/></suggestion> verwenden?</message>
-                <url>https://languagetool.org/insights/de/beitrag/ph-versus-f/</url>
                 <example correction="Familienfotos">Ihr gelangen immer wieder wundervolle <marker>Familienphotos</marker>.</example>
                 <example>https://unsplash.com/photos/xxxxx</example>
             </rule>
