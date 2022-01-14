@@ -855,6 +855,32 @@ Este é o pai cujo seu filho foi à escola.
 		<token postag='DP.+' postag_regexp='yes'/>
       </antipattern>
 <!-- MARCOAGPINTO 2021-11-05 (25-JUN-2021+) *END* -->
+
+<!-- MARCOAGPINTO 2022-01-13 (1-JAN-2022+) *START* -->
+<!--
+THIS ANTIPATTERN CHECKS FOR AN INTERJECTION + COMMA(_PUNCT) + DP + NC/AQ/NP/etc.:MIN_MAX=1_TO_3 + _PUNCT.
+ITS ACCURACY WILL IMPROVE AS NEW INTERJECTIONS POS ARE ADDED.
+
+Parabéns, meu Querido Irmão Vítor!
+Feliz Natal, meu Querido Irmão Vítor!
+Olá, Seu Pica Pica! Como vai a sua esposa?
+Olhe, seu João, eu jamais diria uma coisa assim.
+Sim — minha mãezinha, pessoa atenciosa e de bom coração! A única criatura amável naquela família desajustada.
+Boa noite, meu ursinho fofinho!
+
+HITS AGAINST A 600 000 CORPORA:
+BEFORE:42837
+ AFTER:42826
+-->
+      <antipattern>
+	    <token postag='I' postag_regexp='no'/>
+		<token postag='_PUNCT' postag_regexp='no'/>
+		<token postag='DP.+' postag_regexp='yes'/>
+		<token min="1" max="3" postag='NP.+|AQ.+|NC.+|RG|SPS.+|CC|DA.+|DI.+' postag_regexp='yes'/>
+		<token postag='_PUNCT' postag_regexp='no'/>
+      </antipattern>
+<!-- MARCOAGPINTO 2022-01-13 (1-JAN-2022+) *END* -->
+
       <pattern>
           <token>
             <exception regexp="yes">[ao]s?|es[st][ae]s?|uma?s?|uns|por|de|em|&contracoes_MS;|&contracoes_MP;|&contracoes_FS;|&contracoes_FP;</exception></token>
@@ -914,6 +940,13 @@ Este é o pai cujo seu filho foi à escola.
 	  <example>Eu não peguei o seu maldito carro, meu deus do céu!</example>
 	  
 	  <example>Este é o pai cujo seu filho foi à escola.</example>
+	  
+	  <example>Parabéns, meu Querido Irmão Vítor!</example>
+<!--	  <example>Feliz Natal, meu Querido Irmão Vítor!</example> -->
+	  <example>Olá, Seu Pica Pica! Como vai a sua esposa?</example>
+	  <example>Olhe, seu João, eu jamais diria uma coisa assim.</example>
+	  <example>Sim — minha mãezinha, pessoa atenciosa e de bom coração! A única criatura amável naquela família desajustada.</example>
+	  <example>Boa noite, meu ursinho fofinho!</example>
     </rule>
     <rule>
       <antipattern>
@@ -2037,18 +2070,44 @@ Ambrósio responde-lhe por um tratado "Sobre a fé para Graciano Augusto", em ci
       <url>https://ciberduvidas.iscte-iul.pt/artigos/rubricas/idioma/o-uso-do-hifen-segundo-o-acordo-ortografico/3195</url>-->
       <url>https://pt.wikipedia.org/wiki/Uso_do_h%C3%ADfen_conforme_o_Acordo_Ortogr%C3%A1fico_de_1990</url>
 	  
-<!-- MARCOAGPINTO 2021-03-21 (Enhanced) (17-MAR-2021+) *START* -->
+<!-- MARCOAGPINTO 2022-01-12 (Checked/Enhanced) (1-JAN-2022+) *START* -->
 <!--
 As atualizações do extra são automáticas.
 O extra está desativado.
 O extra sugere correções/melhorias ortográficas e gramaticais.
+O CardBook (extra Thunderbird) é ótimo.
 -->
       <antipattern>
 	    <token regexp='no'>extra</token>
-	    <token postag='SPS.+|CS|CC|V.+' postag_regexp='yes'/>
+	    <token postag='SPS.+|CS|CC|V.+|NP.+' postag_regexp='yes'/>
       </antipattern> 
-<!-- MARCOAGPINTO 2021-03-21 (Enhanced) (17-MAR-2021+) *END* -->
-	  
+<!-- MARCOAGPINTO 2022-01-12 (Checked/Enhanced) (1-JAN-2022+) *END* -->
+
+<!-- MARCOAGPINTO 2022-01-12 (1-JAN-2022+) *START* -->
+<!--
+Os preços em Che Lagarto Bonito podem variar dependendo da sua estadia (ex: suas datas, políticas do hotel etc.).
+Ex: carretéis, dói, herói, chapéu, anéis.
+Ex: Liso ou ondulado.
+-->
+      <antipattern>
+	    <token regexp='no'>ex</token>
+	    <token spacebefore='no' postag='_PUNCT' postag_regexp='no'/>
+      </antipattern> 
+<!-- MARCOAGPINTO 2022-01-12 (1-JAN-2022+) *END* -->
+ 
+<!-- MARCOAGPINTO 2022-01-12 (1-JAN-2022+) *START* -->
+<!--
+E na colisão entre esses dois mundos tão distintos, será suficiente apenas a atração para uni-los?
+Uni-vos a nós.
+Trabalhadores do mundo, uni-vos!
+-->
+      <antipattern>
+	    <token regexp='no'>uni</token>
+		<token regexp='yes' spacebefore='no'>&tracos_de_separacao;</token>
+		<token regexp='yes' spacebefore='no'>[ao]s?|l[ao]s?|lh[aeo]s?|n[ao]s?|me|se|te|vos</token>
+      </antipattern> 
+<!-- MARCOAGPINTO 2022-01-12 (1-JAN-2022+) *END* -->
+ 
     <rule>
       <pattern>
           <token regexp='yes'>ex|sota|soto|vice|vizo|grã|pós|pré|pró|recém</token>

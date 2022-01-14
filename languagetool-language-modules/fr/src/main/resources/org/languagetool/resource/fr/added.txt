@@ -464,3 +464,52 @@ paddles;paddle; N m p
 pb;pb; S
 boutasse;boutasse; N f s
 boutasses;boutasse; N f p
+e-réputation;e-reputation; N f s
+micro-ondes;micro-ondes; N m s
+cloud;cloud; N m s
+spin-off;spin-off; N m s
+spin-offs;spin-off; N m p
+Saint-Joryens;Saint-Joryens; Z e sp
+Jafar;Jafar; Z e sp
+Castex;Castex; Z e sp
+Attal;Attal;Z e sp
+quart-temps;quart-temps; N m sp
+bas-carbone;bas-carbone; J e sp
+porte-épingles;porte-épingles; N m sp
+bas-alpin;bas-alpin; N m s
+bas-alpine;bas-alpin; N f s
+bas-alpins;bas-alpin; N m p
+bas-alpines;bas-alpin; N f p
+Portes-lès-Valence;Portes-lès-Valence; Z e sp
+micro-ondes;micro-ondes; N m sp
+thaïes;thaï; N f p
+brise-vue;brise-vue; N m s
+brise-vues;brise-vue; N m s
+Bar-Mitsvah;Bar-Mitsvah; Z f sp
+asso;asso; N f s
+assos;asso; N f p
+Lego;Lego;N m s
+Legos;Lego; N m p
+Lensois;Lensois; Z e sp
+lapis;lapis; N m sp
+lapis-lazuli;lapis-lazuli; N m sp
+Lans;Lans; Z e sp
+Dumbo;Dumbo; Z e sp
+mrd;mrd; S
+mrds;mrd; S
+tutura;tutora; N m sp
+Lans-en-Vercors;Lans-en-Vercors; Z e sp
+MSN;MSN; Z e sp
+mdr;mdr; I
+allers-retours;aller-retour;N m p
+Avast;Avast; Z e sp
+Avery;Avery; Z e sp
+Avoriaz;Avoriaz; Z e sp
+Avène;Avène; Z e sp
+Award;Award; Z e sp
+Award;Awards; Z e sp
+Aznavour;Aznavour; Z e sp
+Barthez;Barthez; Z e sp
+Bartoli;Bartoli; Z e sp
+Bayrou;Bayrou; Z e sp
+Amora;Amora; Z e sp

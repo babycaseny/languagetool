@@ -10,6 +10,30 @@
 # For specific variant words, comment the word before adding it,
 # so it will be added to the specific dictionary later.
 #
+#
+# Structure of this file:
+#  - OBSCENE WORDS
+#  - Antes e depois de Cristo
+#  - Abreviaturas CTT
+#  - Estrangeirismos 2
+#  - Química
+#  - Raças de cavalos
+#  - Raças de cães
+#  - Greek letters
+#  - List of Companies from OpenData500
+#  - Rael / Raël
+#  - Months abbreviated
+#  - KARATE/MARTIAL ARTS
+#  - TAXONOMIC WORDS IN LATIN
+#  - PROPER NAMES, INCLUDING PLACES, UNIVERSITIES AND ORGANIZATIONS
+#  - ALPHABET LETTERS
+#  - Google
+#  - COMPUTERS RELATED
+#  - INTERNETÊS
+#  - CURRENCY CODES (ISO 4217)
+#  - ROMAN NUMERALS
+#
+#
 abdominoplastia
 abdominoplastias
 abetarda
@@ -906,10 +930,6 @@ capotamento
 capotamentos
 capuchino
 caquexia
-caralhada
-caralhadas
-caralho
-caralhos
 Caramulo
 carbamazepina
 carcinogénea
@@ -979,6 +999,7 @@ Catabola
 catalepsia
 catamarã
 catamarãs
+catano
 Catarino
 catastrofista
 catastrofistas
@@ -1087,7 +1108,6 @@ Chokwé
 choninhas
 choupa
 choupas
-Chrome
 Chromecast
 Chromium
 chunga
@@ -1225,8 +1245,6 @@ complexificações
 comportamentalismo
 comuneiro
 comuneiros
-cona
-conas
 conceitualmente
 concheiro
 concheiros
@@ -1983,10 +2001,6 @@ espigão
 espigões
 espinocelular
 espinocelulares
-esporra
-esporradela
-esporradelas
-esporras
 esquálida
 esquálidas
 esquálido
@@ -2218,6 +2232,7 @@ fê-la
 fê-las
 fê-lo
 fê-los
+febre-amarela
 feed
 feiarrão
 Feirense
@@ -3305,6 +3320,8 @@ LG
 LGBT
 liana
 lianas
+liberação
+liberações
 libertarianismo
 libertarianismos
 LibertyView
@@ -4750,23 +4767,11 @@ purpurinas
 Pushkin
 pústula
 pústulas
-puta
-putanheiro
-putanheiros
-putas
 putativa
 putativamente
 putativas
 putativo
 putativos
-putazinha
-putazinhas
-putéfia
-putéfias
-putinha
-putinhas
-putona
-putonas
 PuTTY
 PVP
 Pyeongchang
@@ -4929,6 +4934,7 @@ replicável
 represamento
 represamentos
 Repsol
+reputacional
 réquiem
 reset
 ressabiada
@@ -6033,6 +6039,33 @@ zwingliana
 zwinglianas
 zwingliano
 zwinglianos
+###################
+# OBSCENE WORDS ###
+###################
+caralhada
+caralhadas
+caralhão
+caralho
+caralhões
+caralhos
+cona
+conas
+esporra
+esporradela
+esporradelas
+esporras
+puta
+putanheiro
+putanheiros
+putas
+putazinha
+putazinhas
+putéfia
+putéfias
+putinha
+putinhas
+putona
+putonas
 ############################
 # Antes e depois de Cristo #
 ############################
@@ -10196,6 +10229,7 @@ Aleister
 Alex
 Alexander
 Alexeyevich
+Alf
 Algéria
 Alibaba
 AliExpress
@@ -10476,6 +10510,7 @@ Khomeini
 Kim
 Kropotkin
 Kullervo
+Labrousse
 Lanchester
 Langton
 Lapidus
@@ -10496,6 +10531,7 @@ Marine Corps
 Markow
 Marmot
 Marquinho
+Marquito
 Marta
 Marty
 MathWorld
@@ -10668,6 +10704,14 @@ w
 x
 y
 z
+############
+# Google ###
+############
+Chrome
+gmail
+Gmail
+google
+Google
 #######################
 # COMPUTERS RELATED ###
 #######################
@@ -10796,14 +10840,11 @@ framework
 FreeBSD
 FTP
 gateway
+gateways
 gigabit
 gigabits
 GIMP
 GitHub
-GMail
-Gmail
-google
-Google
 GPU
 GPUs
 GT
@@ -10986,6 +11027,7 @@ ZX
 ################
 # INTERNETÊS ###
 ################
+bbiab
 lol
 omg
 rotfl

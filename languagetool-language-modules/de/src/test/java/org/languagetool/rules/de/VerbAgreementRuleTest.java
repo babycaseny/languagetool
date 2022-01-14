@@ -72,6 +72,12 @@ public class VerbAgreementRuleTest {
     assertThat(match3.length, is(1));
     assertThat(match3[0].getFromPos(), is(97));
     assertThat(match3[0].getToPos(), is(107));
+    
+    //TODO: This is a FP to be fixed
+    RuleMatch[] match4 = rule.match(lt.analyzeText("Mir ist bewusst, dass viele Menschen wie du empfinden."));
+    assertThat(match4.length, is(1));
+    assertThat(match4[0].getFromPos(), is(41));
+    assertThat(match4[0].getToPos(), is(53));
   }
   
   @Test
@@ -161,7 +167,7 @@ public class VerbAgreementRuleTest {
     assertGood("Mögest du lange leben!");
     assertGood("Planst du lange hier zu bleiben?");
     assertGood("Du bist zwischen 11 und 12 Jahren alt und spielst gern Fußball bzw. möchtest damit anfangen?");
-    assertGood("Ist das so schnell, wie du gehen kannst?");
+    assertGood("Ein großer Hadithwissenschaftler, Scheich Şemseddin Mehmed bin Muhammed-ül Cezri, kam in der Zeit von Mirza Uluğ Bey nach Semerkant.");
     assertGood("Die Prüfbescheinigung bekommst du gleich nach der bestanden Prüfung vom Prüfer.");
     assertGood("Du bist sehr schön und brauchst überhaupt gar keine Schminke zu verwenden.");
     assertGood("Ist das so schnell, wie du gehen kannst?");
@@ -169,6 +175,7 @@ public class VerbAgreementRuleTest {
     assertGood("Du bist verheiratet und hast zwei Kinder.");
     assertGood("Du bist aus Berlin und wohnst in Bonn.");
     assertGood("Sie befestigen die Regalbretter vermittelst dreier Schrauben.");
+    assertGood("Meine Familie & ich haben uns ein neues Auto gekauft.");
     // incorrect sentences:
     assertBad("Als Borcarbid weißt es eine hohe Härte auf.");
     assertBad("Das greift auf Vorläuferinstitutionen bist auf die Zeit von 1234 zurück.");

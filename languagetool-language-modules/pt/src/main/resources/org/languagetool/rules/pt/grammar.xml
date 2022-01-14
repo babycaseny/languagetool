@@ -123,8 +123,8 @@ title="Easy editing stylesheet" ?>
     <!ENTITY barbarismos3 "abstracts?|applets?|apps?|backbones?|baconburgers?|banners?|bitcoins?|bits?|blue|bluetooth|bogie|boids?|boost|bottom[-]up|brainstorms?|bullying|burnouts?|cameraman|carjacking|chairman|contactless|crackers?|cracking|crashes|cyberbullying|czar|czares|debugging|demand|developers?|dildos?|downgrades?|downtime|drones?|e[-]bullying|e[-]commerce|e[-]learning|e[-]manuals?|e[-]newsletters?|e[-]readers?|exabits?|exabytes?|fair[-]play|faxes|feeders?|flats?|flyers?|forward|führers?|gaming|gangbang|geeks?|gigabits?|gigabytes?|goals?|gold|homebanking|homepages?|idem|jiu[-]jitsu|kilobits?|kilobytes?|know[-]how|KO|layers?|lob|loops?|lossless|marketeers?|maydays?|megabits?|megabytes?|milkshakes?|nerds?|netiquette|newsgroups?|off[-]label|offside|on[-]label|overflows?|p[-]values?|papers?|patch|patches|pens?|petabits?|petabytes?|players?|preview|ransomware|reboot|red|roadmaps?|royalty|royalties|scams?|scammers?|screenshots?|scroll|seals?|shell|shelters?|smartphones?|sockets?|stalking|strings?|swarms?|tablets?|tagging|takeovers?|terabits?|terabytes?|thresholds?|tips?|toolkits?|tracking|triggers?|trolls?|tweeters?|underscores?|Unicode|updates?|upgrades?|uptime|Usenet|wargames?|warm[-]up|webinar|webinares|webmasters?|webpages?|wireless|woofers?|yes[-]man|yottabits?|yottabytes?|zettabits?|zettabytes?">
 
     <!ENTITY infantil "(?:b[aá]bá|bichano|bilau|bobalhão|bumbum|caca|cachorrês|cocó|cocô|cuti|dodói|escapulir|flango|formiguês|lelé|mamã|maminha|miau|mimir|nananinanão|nana[rs]|oba|oiê|ohoh|olhinho|papá|Papai|pap(?:ar|ei|aste|ou)|peixa|pepeta|pipi|piu|pum|susu|titi[ao]|totó|totô|vovô|xixi)|memés?|pilocas?|pirilaus?">
-    <!ENTITY informal "chaval[ao]s?|porreiros?|(?:a(?:bafar|dultescente|ham|nh.+)|b(?:abado|adalhoc[ao]|adalo|adamec[ao]|adana|agarai|agunça|aita|aixinh[ao]|alof[ao]|ate-papo|atelada|eiço|ejeca|elê|ichan[ao]|ichinh[ao]|iscate|itaite|js|lablablá|ófia|orrachão|otequeir[ao]|razuca|reaco|rega)|c(?:abaço|acilda|adê|adé|alhamaço|apar|arago|arango|asinha|asório|Dcê|ertinh[ao]|hantar|huninha|huto|obrão|ocó|ocô|oisar|opião|ornear|utucar)|d(?:anad[ao]|anar|aonde|esmiolad[ao]|ocinh[ao]|oíd[ao])|e(?:spertalh(?:ão|ona)|spigadote|strilho|strovenga)|f(?:ilar|ixe|loripa|of[ao]|uxicar|uxiqueir[ao])|g(?:agá|aj[ao]|alera|atunar|elô|oró|osma|ranel|uit[ao]|una|urizada)|herman[ao]|irad[ao]|j(?:avardice|ola)|l(?:aivo|aracha|elé|ogar|ulopetismo)|m(?:acarrone|agrel[ao]|amaã|anda-chuva|ânfi[ao]|an[ao]|atraca|eia-boca|itra|oçada|oina|orcão|otoqueir[oa]|uvuca)|n(?:intendinho|op|ovat[ao])|o(?:i|iê|lhômetro|lh[ôó]metro)|p(?:andeiro|apão|apo|atada|eixão|ejada|elar|epeta|erua|etiz|indaíba|ixulé|ixuleco|orn[oô]|orrad[ao]|orre|r[áoó]|romo|rum|ruma|runs)|q(?:uebra-galho|ueca)|r(?:acha|anho|apaziada|emexer|emexida|icardão|olê)|s(?:acana|ave|elinho|úper)|surripi.+|t(?:abefe|antã|ascar|ime|ótil|rampar|rampo|ransar|reta|rocentos|rouxa|rucid.+|uga.+)|v(?:acil.+|aquinha|egetar|elhot[ae]|ó|ô)|x(?:i|ixi)|z(?:en|i[il]h(ão|ões)))|bacanos?|baril|borliú|barracadas?|camandros?|caraças|caxamolas?|chachas?|chilindrós?|chinocas?|chungas?|chungaria|chunguice|contigo|cuscar|drunfos?|esbardalhar|estrambóticas?|estrambóticos?|fartazanas?|festarolas?|fezadas?|gentinhas?|janados?|maradas?|marados?|maralhas?|maricadas?|milhentas?|morcão|morcões|nhurro|piegas|pindéricos?|porreiraços?|poucochinhos?|regabofes?|sandochas?|tintol|tintóis">
-    <!ENTITY obscenidades "(?:b(?:abaca|acanal|acorinha|acurinha|adalo|adamerda|aranga|ardamerda|edamerda|eita|enga|erdamerda|ichana|ilha|imba|imbada|oceta|oiola|olagato|roche|ruaca|uceta)|c(?:[uú]|abaço|abrão|abrões|acete|adela|agada|agalh(ão|ões)|agar|aralhada|aralho|atatau|atraia|havasca|huchu|huleta|hupeta|omua|ona|onaça|onanas|onsolo|oxanga|rica|roquete|unete|uzão)|f(?:iote|od.+|orunf.+|uampa|ufa|urico|urunf.+)|g(?:aita|relo|rutinha|ulosa)|j(?:eba)|l(?:angonha|ola)|m(?:amado|angalho|armelar|einha|erda|erdeiro|essalina|inete|oca)|nhonhoca|p(?:andeiro|aneleiro|assaralho|atolar|eid.+|ene|entelho|iça|ind?oc.+|intudo|iroca|irrola|ito|iupiu|ixa|otranca|unheta|unheteiro|uta|utada|utaria|utedo|utice)|q(?:ueca|uenga|uirica)|(qui|co)lh(ão|ões)|r(?:abeta|acha|apidinha|ata)|s(?:apatão|apatona|iririca|uruba|urubandê)|t(?:abaca|anajura|esão|esud[ao]|eta|oba|repada|roca-troca)|x(?:ana|arifa|arol[ao]|ereca|ibungo|imbica|iranha|iri|o(?:xo)ta))|cagalhão|cagalhões|caganças?|cagão|cagões|cagãozinho|cagueiros?|caguinchas|enconadas?|enconados?|esporradelas?|esporras?|merdices?|merdilheiro|merdosas?|merdosos?|pachachas?|panascas?|peidas?|piças?|pichas?|putanheiros?|putazinhas?|putéfias?|putinhas?|putonas?">
+    <!ENTITY informal "chaval[ao]s?|porreiros?|(?:a(?:bafar|dultescente|ham|nh.+)|b(?:abado|adalhoc[ao]|adalo|adamec[ao]|adana|agarai|agunça|aita|aixinh[ao]|alof[ao]|ate-papo|atelada|eiço|ejeca|elê|ichan[ao]|ichinh[ao]|iscate|itaite|js|lablablá|ófia|orrachão|otequeir[ao]|razuca|reaco|rega)|c(?:abaço|acilda|adê|adé|alhamaço|apar|arago|arango|asinha|asório|Dcê|ertinh[ao]|hantar|huninha|huto|obrão|ocó|ocô|oisar|opião|ornear|utucar)|d(?:anad[ao]|anar|aonde|esmiolad[ao]|ocinh[ao]|oíd[ao])|e(?:spertalh(?:ão|ona)|spigadote|strilho|strovenga)|f(?:ilar|ixe|loripa|of[ao]|uxicar|uxiqueir[ao])|g(?:agá|aj[ao]|alera|atunar|elô|oró|osma|ranel|uit[ao]|una|urizada)|herman[ao]|irad[ao]|j(?:avardice|ola)|l(?:aivo|aracha|elé|ogar|ulopetismo)|m(?:acarrone|agrel[ao]|amaã|anda-chuva|ânfi[ao]|an[ao]|atraca|eia-boca|itra|oçada|oina|orcão|otoqueir[oa]|uvuca)|n(?:intendinho|op|ovat[ao])|o(?:i|iê|lhômetro|lh[ôó]metro)|p(?:andeiro|apão|apo|atada|eixão|ejada|elar|epeta|erua|etiz|indaíba|ixulé|ixuleco|orn[oô]|orrad[ao]|orre|r[áoó]|romo|rum|ruma|runs)|q(?:uebra-galho|ueca)|r(?:acha|anho|apaziada|emexer|emexida|icardão|olê)|s(?:acana|ave|elinho|úper)|surripi.+|t(?:abefe|antã|ascar|ime|ótil|rampar|rampo|ransar|reta|rocentos|rouxa|rucid.+|uga.+)|v(?:acil.+|aquinha|egetar|elhot[ae]|ó|ô)|x(?:i|ixi)|z(?:en|i[il]h(ão|ões)))|bacanos?|baril|borliú|barracadas?|camandros?|caraças|caxamolas?|chachas?|chilindrós?|chinocas?|chungas?|chungaria|chunguice|contigo|cuscar|drunfos?|esbardalhar|estrambóticas?|estrambóticos?|fartazanas?|festarolas?|fezadas?|gentinhas?|janados?|maradas?|marados?|maralhas?|maricadas?|milhentas?|morcão|morcões|nhurro|piegas|pindéricos?|porreiraços?|poucochinhos?|regabofes?|sandochas?|tanas|tintol|tintóis">
+    <!ENTITY obscenidades "(?:b(?:abaca|acanal|acorinha|acurinha|adalo|adamerda|aranga|ardamerda|edamerda|eita|enga|erdamerda|ichana|ilha|imba|imbada|oceta|oiola|olagato|roche|ruaca|uceta)|c(?:[uú]|abaço|abrão|abrões|acete|adela|agada|agalh(ão|ões)|agar|aralhada|aralho|atatau|atraia|havasca|huchu|huleta|hupeta|omua|ona|onaça|onanas|onsolo|oxanga|rica|roquete|unete|uzão)|f(?:iote|od.+|orunf.+|uampa|ufa|urico|urunf.+)|g(?:aita|relo|rutinha|ulosa)|j(?:eba)|l(?:angonha|ola)|m(?:amado|angalho|armelar|einha|erda|erdeiro|essalina|inete|oca)|nhonhoca|p(?:andeiro|aneleiro|assaralho|atolar|eid.+|ene|entelho|iça|ind?oc.+|intudo|iroca|irrola|ito|iupiu|ixa|otranca|unheta|unheteiro|uta|utada|utaria|utedo|utice)|q(?:ueca|uenga|uirica)|(qui|co)lh(ão|ões)|r(?:abeta|acha|apidinha|ata)|s(?:apatão|apatona|iririca|uruba|urubandê)|t(?:abaca|anajura|esão|esud[ao]|eta|oba|repada|roca-troca)|x(?:ana|arifa|arol[ao]|ereca|ibungo|imbica|iranha|iri|o(?:xo)ta))|cagalhão|cagalhões|caganças?|cagão|cagões|cagãozinho|cagueiros?|caguinchas|caralhão|caralhões|enconadas?|enconados?|esporradelas?|esporras?|merdices?|merdilheiro|merdosas?|merdosos?|pachachas?|panascas?|peidas?|piças?|pichas?|putanheiros?|putazinhas?|putéfias?|putinhas?|putonas?">
 
 	<!ENTITY languages "açoriano|baiano|balcânico|bordalês|eslavo|latino|maia|islâmico|judeu|bárbaro|muçulmano|afro[-]americano|afro[-]brasileiro|anglo[-]afegã|franco[-]prussiana|luso[-]brasileira|russo[-]persa|russo[-]turca|sino[-]japonesa|abancaino|abcásio|abcázio|abecásio|abecázio|abexim|abissínio|acrense|adigueu|afegã|afegane|afegânico|afegão|africano|alamão|alandês|alasquense|alasquiano|albanense|albanês|albânio|albano|alemanisco|alemão|alemânico|algeriano|alpino|alsaciano|americano|amesterdamês|amesterdanês|amsterdamês|anamês|anamita|ancarense|andorrano|andorrenho|andorrense|andorriano|angelino|anglicano|ânglico|anglo|angolano|angolense|angolês|angorá|anguilano|antiguano|antilhano|antioquenho|antofagastino|aqueu|árabe|árabe[-]saudita|arábico|arábigo|arábio|argeliano|argeliense|argelino|argentino|argivo|argoviano|ariquenho|armeniano|arménico|armênico|arménio|armênio|arubanense|arubano|arubenho|asiático|assuncionenho|ateniense|atlanticense|australês|australiano|austrálio|austríaco|austro[-]africano|austro[-]áfrico|austro[-]húngaro|axumita|azerbaidjanês|azerbaidjano|azerbaijanês|azerbaijano|azeri|baamense|baamês|baamiano|babilônico|bagdali|bahamense|bahamiano|balinês|bangladechiano|bangladense|bangladês|bangladeshiano|bangladexiano|baramês|barbadense|barbadiano|bareinita|baremense|baremês|baremita|barenita|basileiense|batávico|batávio|batavo|bechuana|bechuano|belarusso|belemita|belenense|belga|bélgico|belgradino|belizenho|belizense|bengala|bengalense|bengalês|bengáli|bengali|bengalim|beninense|beninês|bermá|bermã|bermano|bermudense|bermudês|bernense|bernês|bexuana|bexuano|bielo[-]russo|bielorrusso|bife|birmã|birmane|birmanense|birmanês|birmaniano|birmano|bissanense|bissauense|bizantino|boche|boêmio|boémio|bogotano|boliviano|bonaerense|borgonhês|bosnense|bosníaco|bosniano|bosniense|bósnio|bostoniano|botsuanense|botsuanês|botsuano|botswanense|botswanês|botswano|brabanção|bramá|brasileiro|brasilense|brasilês|brasiliano|brasílico|brasiliense|brasílio|brasilista|bretão|britânico|britano|bruneano|bruneíno|bruxelense|bruxelês|bucarestense|bucarestino|budapestense|budapestino|buenairense|bulgarês|búlgaro|burkinense|burquinabê|burquinense|burquinês|burquino|burundiano|burundiense|burundinês|burúndio|butanense|butanês|butani|butâni|butânico|cabo[-]verdense|cabo[-]verdiano|caienense|caimanês|calamenho|calenho|californiano|calmuco|camaronense|camaronês|camberrano|cambodjano|cambojano|cambojiano|camerunense|camerunês|cameruniano|campucheano|canadense|canadiano|canadiense|cantonês|capitalino|caraquenho|carélio|caribenho|cartageneiro|cartaginense|cartaginês|casaco|casáquio|casaquistano|catarense|catari|catariano|caucasiano|cazaque|cazaquistanês|ceilonense|centrafricano|centro[-]africano|centro[-]americano|chadiano|chadiense|checheno|checo|checoslovaco|chicagüense|chileno|chiloense|chilote|chim|china|chinês|chingalá|chino|chinoca|chiprense|cingalá|cingalês|cipreno|cipríaco|cíprico|cíprio|cipriota|colombense|colombiano|colombino|colombo|comi|comorense|comoriano|concepcionense|congo|congolense|congolês|conguense|conguês|cookense|copenhaguense|coquense|cordobense|cordovês|coríntio|córnico|cornualês|corso|cosovano|cossovano|cossovar|costa[-]marfinense|costa[-]marfiniano|costa[-]ricense|costa[-]riquenho|costa[-]riquense|costarricense|costarriquenho|costarriquense|couaitiano|coveitiano|cretense|Crimeano|Crimeu|croaciano|croácio|croata|cuaitiano|cubano|curaçauense|curdo|cusquenho|cuvaiti|cuvaitiano|cuwaitiano|dacarense|daguestanês|dálmata|damanense|damasceno|damasquino|danês|dânio|dano|diense|dinamarquês|dioense|diuense|djibutiano|djibutiense|dominicano|domínico|dominiquense|dominiquês|dublinense|ebúrneo|edokko|egipcíaco|egipciano|egipcião|egípcio|egiptanense|egiptano|egíptico|egiptino|eirense|emiradense|emirático|equato[-]guineense|equatoriano|erino|eritreu|escandinavo|escocês|esguíçaro|esguízaro|eslovaco|eslováquio|eslovénico|eslovênico|esloveno|espanhol|espartano|essuatiniano|estado[-]unidense|estadunidense|estoniano|estônico|estónico|estônio|estónio|esvalbardense|etíope|etiopês|etiopiano|etiópico|etiópio|europeu|falklandês|faroense|feroês|feroico|fidjiano|fijiano|filipino|finense|finês|fínico|finlandês|fino|flamengo|floridense|formosano|formosino|forro|francês|franciú|franco|frisão|frísio|gabonense|gabonês|galense|galês|galicano|gálico|gálio|galo|gambiano|gambiense|ganense|ganês|gascão|gaulês|gaulo|gazeu|gazita|genebrense|genebrês|genebrino|georgiano|geórgico|germânico|germano|giblita|gibraltarino|gibraltino|goano|goense|goês|grã[-]bretão|granadino|grecânico|greciano|grego|gregório|groenlandês|gronelandês|grúzico|gruzínico|gruzínio|grúzio|guadalupense|guadalupino|guajiro|guamês|guantanameiro|guatemalense|guatemalteco|guatemaltense|guernesiano|guianense|guianês|guiano|guineano|guineense|guinéu|guinéu[-]equatoriano|haitiano|hauaiano|havaiano|havaneiro|havanês|helene|helênico|helénico|heleno|helvécio|helvético|helveto|herzegovino|herzegóvino|hibérnico|hibérnio|hidrocálido|hiérnio|hierosolimita|hierosolimitano|hindu|hindustâni|hindustani|hispânico|hispaniense|hispano|holandês|hollywoodiano|holmiense|honconguês|hondurenho|hungarês|hungárico|húngaro|ianque|iemenense|iemenês|iemênico|ieménico|iemenita|Ilhas|indiano|indiático|índico|índio|indochinês|indonésio|inglês|iraniano|irânico|irânio|iraquenho|iraquense|iraquiano|irlandês|irlândes|islandense|islandês|islândico|israelense|israeliano|israelita|israelítico|italiano|itálico|italiota|ítalo|jamaicano|jamaicense|japão|japona|japonense|japonês|japônico|japónico|jau|javanês|jerosolimita|jerosomilitano|jersiano|jerusalemita|jibutiano|jibutiense|jordaniano|jordânico|jordano|kiribatiano|kiribatino|kosovar|kossovar|kowaitiano|koweitiano|kuwaiti|kuwaitiano|kuweitiano|kwaitiano|lacedemônio|lao|laociano|laosiano|lapão|latino[-]americano|lau|lausiano|lesotense|lesotiano|lesoto|letão|lético|letónico|letônico|letônio|letónio|libanês|liberiano|libério|líbico|líbio|liechtensteinense|liechtensteinês|liechtensteiniano|liechtensteiniense|limenho|lionense|lionês|listenstainense|listenstainês|listenstainiano|listenstainiense|listenstaino|lituânico|lituânio|lituano|liverpuldiano|loíno|londrino|luandense|lusíada|lusitaniano|lusitânico|lusitano|luso|luxemburguês|macaense|macaísta|macau|macauense|mácedo|macedoniano|macedônico|macedónico|macedônio|macedónio|madagascarense|madgiar|magiar|maiotense|malaico|malaio|malasiano|malásio|malaui|malauiano|malauiense|malauista|malauita|malaviano|malavita|malawiano|malawiense|maldivano|maldivense|maldiviano|maldívio|maldivo|malês|malgaxe|malgaxo|maliano|malinês|maltês|malvinense|malvinês|malvino|managuenho|managuense|manchu|mancuniano|manês|manquês|manx|maputense|marechalês|marechaliniano|marfinense|marfiniano|mari|marroquino|marselhês|marshallês|marshallino|martinicano|maubere|mauriciano|mauritaniano|mauritânico|mauritano|mecano|medelhinense|mediterrâneo|mediterrânico|mejilhonino|melanésio|mendocino|meroíta|meroítico|mesopotâmico|mexicano|mexilhonino|mianmarense|micênico|michigânder|micronésio|milésio|Miquelon|moçambicano|moçambique|moçambiquenho|moçambiquense|mogol|mogor|mogore|moldávico|moldávio|moldavo|monagasco|monegasco|mongol|mongólico|mongolino|mongolita|monserratense|montenegrino|moraviano|mordóvio|mordovo|moscovita|mouro|namibiano|namíbio|napatense|narbonense|narbonês|natalense|nauruano|nauruense|nazareno|nederlandês|neerlandês|neocaledónio|neocaledônio|neozelandense|neozelandês|neozelandiense|nepalês|nepali|nicaraguano|nicaraguense|nigerense|nigeriano|nigerino|ninivita|nipão|nipo|niponense|nipónico|nipônico|niueano|niuiano|norfolkino|norfolquino|normando|norte[-]americano|norte[-]chiprense|norte[-]cíprico|norte[-]ciprino|norte[-]cíprio|norte[-]cipriota|norte[-]coreano|norte[-]irlandês|norte[-]marianense|norte[-]osseta|noruego|norueguense|norueguês|nova[-]iorquino|núbio|oceânico|olímpico|omanense|omani|omaniano|oriental|orleniano|osmandi|osmânico|osmanli|osseta|otomano|otomão|pacenho|palauano|palauense|palestinense|palestiniano|palestino|panamaense|panamenho|panamense|panamiano|panamista|papua|papuásio|paquistanense|paquistanês|paquistani|paquistânico|paraguaiano|paraguaio|parisiense|párseo|pársio|pascoense|patagão|patagónio|penquista|pequinês|persa|pérseo|persiano|pérsico|pérsio|peruano|peruviano|perúvio|picardiano|pinheiro|piquenho|pitcairnês|platino|poblano|polaco|polinésico|polinésio|polonês|Polónia|polônico|polónico|polónio|polônio|polono|portenho|porto[-]riquenho|porto[-]riquense|portucalense|portuga|portugalense|portugalês|português|praguense|praiense|provençal|prussiano|púnico|puntarenense|quaitiano|queniano|quermano|quindiano|quirguistanês|quirguiz|quirguize|quirguizistanês|quiribatiano|quitenho|régio|regiomontano|reunionense|romaico|romenho|roménico|romênico|romeno|ruandense|ruandês|russiano|russo|russo[-]branco|sã[-]tomense|saaraui|saarauí|saarense|saariano|saárico|salomonense|salomónico|salomônico|salônico|salvadorenho|salvatoriano|samarinês|samoano|samoense|san[-]marinense|sanandresano|santa[-]helenense|santa[-]lucense|santa[-]luciense|santanderiano|santiagueiro|santiaguense|santiaguino|santo[-]antoniense|santomense|são[-]bartolomeense|são[-]cristovense|são[-]marinense|são[-]marinhense|são[-]martinhense|são[-]nicolauense|são[-]pedrense|são[-]tomense|são[-]vicentino|sarauí|saraui|sarauita|sarense|sariano|sárico|saudi[-]árabe|saudi[-]arábico|saudita|seattleíta|seichelense|senegalense|senegalês|senegalesco|senegaliano|senegálico|serra[-]leonense|serra[-]leonês|serra[-]leonino|sérvio|seychellense|siame|siamense|siamês|siberiano|sidônio|silesiano|singala|singalense|singalês|singalibense|singapurano|singapurense|singapuriano|sínico|sino|siríaco|siriano|sírio|siro|socotorino|somali|somáli|somaliano|somaliense|somalilandense|somalilandês|soviético|srilankês|srilankesa|suázi|suazi|suazilandense|suazilandês|suazilandiense|sudanês|suécio|sueco|suíço|sul[-]africanista|sul[-]africano|sul[-]americano|sul[-]coreano|sul[-]osseta|sul[-]sudanês|sumério|surinamense|surinamês|svalbardense|tadjique|tadjiquistanês|tagal|tagalar|tagalo|tailandês|taitiano|taiuanês|taiwanês|tajique|tajiquistanês|tanzaniano|tapatio|tártaro|tasmaniano|tchadiano|tchadiense|tcheco|tchecoslovaco|tchetcheno|tebano|tedesco|tegucigalpenho|tessalônico|teucro|teutão|teuto|teutónico|texano|tibetano|timor|timorense|timorino|tírio|tirolês|tocopilhano|togolês|toguês|tonganês|toquelauano|trácio|transdniestriano|transdnistriano|transdnístrio|transilvano|transnistriano|transnístrio|trinitário|trinitário[-]tobagense|tripolitano|tristanita|troiano|tudesco|tuga|tunesino|tunetano|tunisiano|tunisino|túrcico|turco|turco[-]caicense|turcomeno|turquemenistanês|turquemeno|turquês|turquesco|tuvalês|tuvaluano|ucraniano|ucrânio|ugandense|ugandês|uruguaiano|uruguaio|usbeque|usbequistanês|uzbeque|uzbequistanês|valão|vanuatense|vanuatuense|varsoviano|vaticano|venezolano|venezuelano|veracruzano|vienense|vietnamense|vietnamês|vietnamiano|vietnamita|vinhamarino|virginense|wallisense|washingtoniano|wellingtoniano|xangaiense|yankee|zagrebino|zairense|zambiano|zambiense|zâmbio|zamorano[-]chinchipense|zanzibar|zanzibarita|zelandês|zimbabuano|zimbabuense|zimbabwense|zimbabwiano|zuriquenho|zuriquense">
 
@@ -334,7 +334,9 @@ title="Easy editing stylesheet" ?>
     </phrase>
   </phrases>
 
+
  <category id='GRAMMAR' name="Gramática Geral" type="grammar">
+
 
     <!--          Tiago F. Santos Rules Start         ****START**** -->
     <!-- ********************************************************** -->
@@ -2142,18 +2144,6 @@ A César o que é de César.
 		  <token regexp="yes">que|na|no|maiores|menores|como|por|o|[.,?!]</token>
 	  </antipattern>
 <!-- MARCOAGPINTO 2020-10-05 + 2020-11-05 (2-JUL-2020+) *END* -->
-<!-- MARCOAGPINTO 2021-02-09 (1-JAN-2021+) *START* -->
-<!--
-As folhas de louro dão um sabor especial ao feijão e a outros cozidos.
-O pai opunha-se firmemente a tais planos, preferindo que o filho fizesse carreira na função pública.
-Vi-o algumas vezes na televisão.
--->
-      <antipattern>
-		<token postag='DA0.S.+' postag_regexp='yes'/>
-		<token postag='DI0.P.+' postag_regexp='yes'/>
-	    <token postag='NC.P.+|AQ0.P.+' postag_regexp='yes'/>
-      </antipattern> 
-<!-- MARCOAGPINTO 2021-02-09 (1-JAN-2021+) *END* -->
 <!-- MARCOAGPINTO 2021-02-22 (1-JAN-2021+) *START* -->
 <!--
 O grande mal nos conflitos deve-se a inocentes serem lesados.
@@ -2191,6 +2181,30 @@ Estas instruções basearam-se nas várias a que tive acesso.
 		<token regexp='no'></token>
       </antipattern> 	  
 <!-- MARCOAGPINTO 2021-03-05 (1-JAN-2021+) *END* -->
+
+<!-- MARCOAGPINTO 2022-01-07 (1-JAN-2022+) *START* -->
+<!--
+Apresente-me a seus pais quando se sentir preparada.
+Apresente-me a suas mães quando se sentir preparada.
+As folhas de louro dão um sabor especial ao feijão e a outros cozidos.
+O pai opunha-se firmemente a tais planos, preferindo que o filho fizesse carreira na função pública.
+Já o rio Alva, que corre a seus pés, não desempenhou aqui o papel que tomou noutras povoações a montante.
+A seus olhos "diante do paciente só existe a compreensão individual".
+É o único ser vivo que cria uma aparência de realidade para enganar a si próprio ou a seus similares.
+Intelectual muito talentoso devotou-se a seus estudos, em especial à filosofia e à medicina.
+
+THIS ANTIPATTERN APPEARS THREE TIMES IN THE GRAMMAR.XML.
+HITS AGAINST A 600 000 CORPORA:
+BEFORE:4586
+ AFTER:4576
+-->
+      <antipattern>
+		<token postag='DA0FS.+' postag_regexp='yes'/>
+		<token postag='DP..P.+|DI..P.+|DD..P.+|PI..P.+' postag_regexp='yes'/>
+		<token postag='AQ..P.+|NC.P.+|CS|CC|VM...P.+|SPS00|RN|RM|RG' postag_regexp='yes'/>
+      </antipattern>
+<!-- MARCOAGPINTO 2022-01-07 (1-JAN-2022+) *END* -->
+
       <pattern>
 			<token>a
 				<exception negate_pos='yes' postag_regexp='yes' postag='D.+'/>
@@ -2207,11 +2221,7 @@ Estas instruções basearam-se nas várias a que tive acesso.
 	  <example type='correct'>Daí <marker>a duas</marker> semanas temos a festa.</example>
 	  <example type='correct'>Os arqueólogos dedicam-se cada vez mais <marker>a fases tardias</marker> da evolução humana.</example>
 	  <example type='correct'>O profeta, mas <marker>a evidências que</marker> apoiam que esta reivindicação é falsa.</example>
-	  
-	  <example>As folhas de louro dão um sabor especial ao feijão e <marker>a outros</marker> cozidos.</example>
-	  <example>O pai opunha-se firmemente a tais planos, preferindo que o filho fizesse carreira na função pública.</example>
-	  <example>Vi-o algumas vezes na televisão.</example>
-	  
+
 	  <example>O grande mal nos conflitos deve-se <marker>a inocentes</marker> serem lesados.</example>
 	  <example>Existem prejuízos graves e dispendiosos a instalações ou vantagens para os criminosos.</example>
 	  
@@ -2219,7 +2229,16 @@ Estas instruções basearam-se nas várias a que tive acesso.
 	  <example>A campanha de vendas levou eles a perdas de mais de 95%.</example>
 	  <example>A campanha de vendas levou estes a perdas de mais de 95%.</example>
 	  <example>Outras proteínas evoluíram de modo a ligar-se a sequências de ADN específicas.</example>
-	  <example>Estas instruções basearam-se nas várias a que tive acesso.</example>	  
+	  <example>Estas instruções basearam-se nas várias a que tive acesso.</example>
+
+	  <example>Apresente-me a seus pais quando se sentir preparada.</example>
+	  <example>Apresente-me a suas mães quando se sentir preparada.</example>
+	  <example>As folhas de louro dão um sabor especial ao feijão e a outros cozidos.</example>
+	  <example>O pai opunha-se firmemente a tais planos, preferindo que o filho fizesse carreira na função pública.</example>
+	  <example>Já o rio Alva, que corre a seus pés, não desempenhou aqui o papel que tomou noutras povoações a montante.</example>
+	  <example>A seus olhos "diante do paciente só existe a compreensão individual".</example>
+	  <example>É o único ser vivo que cria uma aparência de realidade para enganar a si próprio ou a seus similares.</example>
+	  <example>Intelectual muito talentoso devotou-se a seus estudos, em especial à filosofia e à medicina.</example>
 	</rule>
   </rulegroup>
 
@@ -4477,18 +4496,7 @@ Verificámos que ao termos forças uniformes conseguimos.
 		  <token regexp="yes">que|na|no|maiores|menores|como|por|o|[.,?!]</token>
 	  </antipattern>
 <!-- MARCOAGPINTO 2020-10-05 + 2020-11-05 (2-JUL-2020+) *END* -->
-<!-- MARCOAGPINTO 2021-02-09 (1-JAN-2021+) *START* -->
-<!--
-As folhas de louro dão um sabor especial ao feijão e a outros cozidos.
-O pai opunha-se firmemente a tais planos, preferindo que o filho fizesse carreira na função pública.
-Vi-o algumas vezes na televisão.
--->
-      <antipattern>
-		<token postag='DA0.S.+' postag_regexp='yes'/>
-		<token postag='DI0.P.+' postag_regexp='yes'/>
-	    <token postag='NC.P.+|AQ0.P.+' postag_regexp='yes'/>
-      </antipattern> 
-<!-- MARCOAGPINTO 2021-02-09 (1-JAN-2021+) *END* -->
+
 <!-- MARCOAGPINTO 2021-02-22 (1-JAN-2021+) *START* -->
 <!--
 O grande mal nos conflitos deve-se a inocentes serem lesados.
@@ -4642,6 +4650,52 @@ António Gonçalves Dias nasceu em 10 de agosto de 1823, no sítio Boa Vista, em
 		  <token postag='AQ0.P.+|NC.P.+' postag_regexp='yes'/>	  
       </antipattern>
 <!-- MARCOAGPINTO 2021-09-21 (25-JUN-2021+) *END* -->
+
+<!-- MARCOAGPINTO 2022-01-05 (1-JAN-2022+) *START* -->
+<!--
+Estou de férias e regresso de sábado a oito.
+Estou de férias e regresso de segunda-feira a oito.
+
+THIS ANTIPATTERN APPEARS ONCE IN THE GRAMMAR.
+IT SHOWS NO HITS AGAINST A 900 000 CORPORA.
+-->
+      <antipattern>
+		<token regexp='yes'>segunda|terça|quarta|quinta|sexta|sábado|domingo</token>
+		<token>a</token>
+		<token postag='Z0.+' postag_regexp='yes'/>
+      </antipattern>
+      <antipattern>
+		<token regexp='yes'>segunda|terça|quarta|quinta|sexta</token>
+		<token spacebefore='no' regexp='yes'>[-]</token>
+		<token spacebefore='no'>feira</token>
+		<token>a</token>
+		<token postag='Z0.+' postag_regexp='yes'/>
+      </antipattern>	  
+<!-- MARCOAGPINTO 2022-01-05 (1-JAN-2022+) *END* -->
+
+<!-- MARCOAGPINTO 2022-01-07 (1-JAN-2022+) *START* -->
+<!--
+Apresente-me a seus pais quando se sentir preparada.
+Apresente-me a suas mães quando se sentir preparada.
+As folhas de louro dão um sabor especial ao feijão e a outros cozidos.
+O pai opunha-se firmemente a tais planos, preferindo que o filho fizesse carreira na função pública.
+Já o rio Alva, que corre a seus pés, não desempenhou aqui o papel que tomou noutras povoações a montante.
+A seus olhos "diante do paciente só existe a compreensão individual".
+É o único ser vivo que cria uma aparência de realidade para enganar a si próprio ou a seus similares.
+Intelectual muito talentoso devotou-se a seus estudos, em especial à filosofia e à medicina.
+
+THIS ANTIPATTERN APPEARS THREE TIMES IN THE GRAMMAR.XML.
+HITS AGAINST A 600 000 CORPORA:
+BEFORE:4586
+ AFTER:4576
+-->
+      <antipattern>
+		<token postag='DA0FS.+' postag_regexp='yes'/>
+		<token postag='DP..P.+|DI..P.+|DD..P.+|PI..P.+' postag_regexp='yes'/>
+		<token postag='AQ..P.+|NC.P.+|CS|CC|VM...P.+|SPS00|RN|RM|RG' postag_regexp='yes'/>
+      </antipattern>
+<!-- MARCOAGPINTO 2022-01-07 (1-JAN-2022+) *END* -->
+
       <pattern>
           <token negate='yes' regexp='yes'>e|ou|&hifen;</token>
         <marker>
@@ -4669,11 +4723,7 @@ António Gonçalves Dias nasceu em 10 de agosto de 1823, no sítio Boa Vista, em
       <example correction='bastante mesa|bastantes mesas|bastante, mesas'>Existem <marker>bastante mesas</marker>!</example>
       <example>Algo que nos une como plataforma a tantos continentes, a tantos oceanos, a tantas culturas, a tantas civilizações</example>
 	  <example type='correct'>O Rui quer enfrentar de <marker>forma eficaz ações entrópicas</marker>.</example>
-	  
-	  <example>As folhas de louro dão um sabor especial ao feijão e <marker>a outros</marker> cozidos.</example>
-	  <example>O pai opunha-se firmemente a tais planos, preferindo que o filho fizesse carreira na função pública.</example>
-	  <example>Vi-o algumas vezes na televisão.</example>
-	  
+	 
 	  <example>O grande mal nos conflitos deve-se <marker>a inocentes</marker> serem lesados.</example>
 	  <example>Existem prejuízos graves e dispendiosos a instalações ou vantagens para os criminosos.</example>
 	  
@@ -4718,6 +4768,18 @@ António Gonçalves Dias nasceu em 10 de agosto de 1823, no sítio Boa Vista, em
 	  <example>Existe uma linha de gol a 10 jardas de cada uma das linhas finais e paralela a ambas.</example>
 	  <example>A blastulação ocorre depois da clivagem ter dado origem a 128 células.</example>
 	  <example>António Gonçalves Dias nasceu em 10 de agosto de 1823, no sítio Boa Vista, em terras de Jatobá (a 14 léguas de Caxias).</example>
+	  
+	  <example>Estou de férias e regresso de sábado a oito.</example>
+	  <example>Estou de férias e regresso de segunda-feira a oito.</example>
+	  
+	  <example>Apresente-me a seus pais quando se sentir preparada.</example>
+	  <example>Apresente-me a suas mães quando se sentir preparada.</example>
+	  <example>As folhas de louro dão um sabor especial ao feijão e a outros cozidos.</example>
+	  <example>O pai opunha-se firmemente a tais planos, preferindo que o filho fizesse carreira na função pública.</example>
+	  <example>Já o rio Alva, que corre a seus pés, não desempenhou aqui o papel que tomou noutras povoações a montante.</example>
+	  <example>A seus olhos "diante do paciente só existe a compreensão individual".</example>
+	  <example>É o único ser vivo que cria uma aparência de realidade para enganar a si próprio ou a seus similares.</example>
+	  <example>Intelectual muito talentoso devotou-se a seus estudos, em especial à filosofia e à medicina.</example>
 	</rule>
     <rule>
       <antipattern>
@@ -5306,18 +5368,7 @@ HITS AGAINST A 600 000 CORPORA: NO HITS.
 		  <token postag='DA0MS0' postag_regexp='no'/>		  	  
       </antipattern>
 <!-- MARCOAGPINTO 2020-06-06 *END* -->
-<!-- MARCOAGPINTO 2021-02-09 (1-JAN-2021+) *START* -->
-<!--
-As folhas de louro dão um sabor especial ao feijão e a outros cozidos.
-O pai opunha-se firmemente a tais planos, preferindo que o filho fizesse carreira na função pública.
-Vi-o algumas vezes na televisão.
--->
-      <antipattern>
-		<token postag='DA0.S.+' postag_regexp='yes'/>
-		<token postag='DI0.P.+' postag_regexp='yes'/>
-	    <token postag='NC.P.+|AQ0.P.+' postag_regexp='yes'/>
-      </antipattern> 
-<!-- MARCOAGPINTO 2021-02-09 (1-JAN-2021+) *END* -->
+
 <!-- MARCOAGPINTO 2021-03-05 (1-JAN-2021+) *START* -->
 <!--
 A campanha de vendas levou milhares deles a perdas de mais de 95%.
@@ -5357,6 +5408,30 @@ Mas a todos quantos o receberam deu-lhes o poder de serem feitos filhos de Deus.
 		<token postag='DA..P.+|DD..P.+|CS|RG|PI..P.+|PP..P.+' postag_regexp='yes'/>
       </antipattern>
 <!-- MARCOAGPINTO 2021-11-21 (25-JUN-2021+) *END* -->
+
+<!-- MARCOAGPINTO 2022-01-07 (1-JAN-2022+) *START* -->
+<!--
+Apresente-me a seus pais quando se sentir preparada.
+Apresente-me a suas mães quando se sentir preparada.
+As folhas de louro dão um sabor especial ao feijão e a outros cozidos.
+O pai opunha-se firmemente a tais planos, preferindo que o filho fizesse carreira na função pública.
+Já o rio Alva, que corre a seus pés, não desempenhou aqui o papel que tomou noutras povoações a montante.
+A seus olhos "diante do paciente só existe a compreensão individual".
+É o único ser vivo que cria uma aparência de realidade para enganar a si próprio ou a seus similares.
+Intelectual muito talentoso devotou-se a seus estudos, em especial à filosofia e à medicina.
+
+THIS ANTIPATTERN APPEARS THREE TIMES IN THE GRAMMAR.XML.
+HITS AGAINST A 600 000 CORPORA:
+BEFORE:4586
+ AFTER:4576
+-->
+      <antipattern>
+		<token postag='DA0FS.+' postag_regexp='yes'/>
+		<token postag='DP..P.+|DI..P.+|DD..P.+|PI..P.+' postag_regexp='yes'/>
+		<token postag='AQ..P.+|NC.P.+|CS|CC|VM...P.+|SPS00|RN|RM|RG' postag_regexp='yes'/>
+      </antipattern>
+<!-- MARCOAGPINTO 2022-01-07 (1-JAN-2022+) *END* -->
+
       <pattern>
           <unify negate="yes">
             <feature id="number"/>
@@ -5370,17 +5445,12 @@ Mas a todos quantos o receberam deu-lhes o poder de serem feitos filhos de Deus.
         <suggestion><match no='1' postag='D(...).(.+)' postag_replace='D$1S$2' postag_regexp='yes'/> <match no='2' postag='D(...).(.+)' postag_replace='D$1S$2' postag_regexp='yes'/></suggestion>
         <suggestion><match no='1' postag='D(...).(.+)' postag_replace='D$1P$2' postag_regexp='yes'/> <match no='2' postag='D(...).(.+)' postag_replace='D$1P$2' postag_regexp='yes'/></suggestion>
       <example correction="A nossa|As nossas"><marker>As nossa</marker> equipa de operações está muito focada nos campos de verão..</example>
-	  	  
-	  <example>As folhas de louro dão um sabor especial ao feijão e <marker>a outros</marker> cozidos.</example>
-	  <example>O pai opunha-se firmemente a tais planos, preferindo que o filho fizesse carreira na função pública.</example>
-	  <example>Vi-o algumas vezes na televisão.</example>
-	  
+
 	  <example type='correct'>A campanha de vendas levou milhares deles <marker>a perdas</marker> de mais de 95%.</example>
 	  <example>A campanha de vendas levou eles a perdas de mais de 95%.</example>
 	  <example>A campanha de vendas levou estes a perdas de mais de 95%.</example>
 	  <example>Outras proteínas evoluíram de modo a ligar-se a sequências de ADN específicas.</example>
 	  <example>Estas instruções basearam-se nas várias a que tive acesso.</example>
-
 
 	  <example>Estou grato a todos aqueles que contribuíram para o meu desenvolvimento técnico.</example>
 	  <example>Basta colar uma lista de e-mails abaixo para enviar convites a todos nós.</example>
@@ -5388,6 +5458,15 @@ Mas a todos quantos o receberam deu-lhes o poder de serem feitos filhos de Deus.
 	  <example>A todos os apelido e canais numa rede era atribuído uma marca temporal – a data e tempo da sua criação.</example>
 	  <example>O Commons é um banco de imagens, sons e mídia em geral comum a todas as Wikipédias.</example>
 	  <example>Mas a todos quantos o receberam deu-lhes o poder de serem feitos filhos de Deus.</example>
+	  
+	  <example>Apresente-me a seus pais quando se sentir preparada.</example>
+	  <example>Apresente-me a suas mães quando se sentir preparada.</example>
+	  <example>As folhas de louro dão um sabor especial ao feijão e a outros cozidos.</example>
+	  <example>O pai opunha-se firmemente a tais planos, preferindo que o filho fizesse carreira na função pública.</example>
+	  <example>Já o rio Alva, que corre a seus pés, não desempenhou aqui o papel que tomou noutras povoações a montante.</example>
+	  <example>A seus olhos "diante do paciente só existe a compreensão individual".</example>
+	  <example>É o único ser vivo que cria uma aparência de realidade para enganar a si próprio ou a seus similares.</example>
+	  <example>Intelectual muito talentoso devotou-se a seus estudos, em especial à filosofia e à medicina.</example>
     </rule>
   </rulegroup>
 
@@ -7629,7 +7708,6 @@ Nos poderiam escrever uma carta? → Poder-nos-iam escrever uma carta?
 		</rule>		
 
     </rulegroup>
-
 
 
 	<!-- CUJO , cujo -->
@@ -10646,7 +10724,9 @@ Vamos minorar a dor.
 	  
 	</rulegroup>
 
+
  </category>
+
 
  <category id='SYNTAX' name='Sintaxe' type='grammar'>
 
@@ -11247,9 +11327,12 @@ Vamos minorar a dor.
       <example>… irá muito provavelmente esbarrar na dinâmica instalada…</example>
     </rule>
 
+
  </category>
 
+
  <category id='CASING' name='Capitalização' type='grammar'>
+
 
     <rule id="UPPERCASE_AFTER_COMMA" name="Maiúsculas depois de uma vírgula">
     <!-- Based on English forum rule https://forum.languagetool.org/t/case-sensitive-postag-check/3567/2,
@@ -11521,9 +11604,12 @@ Vamos minorar a dor.
     </rule>
   </rulegroup>
 
+
  </category>
 
+
  <category id='MISC' name="Sem Categoria Definida" type="uncategorized">
+
 
     <rulegroup id='À_MINHA-TUA-SUA-VOSSA_VERB' name="à + minha/tua/sua/vossa(s) + verb" >
     <!--      Created by Marco A.G.Pinto, Portuguese rule - 2020-09-07 (2-JUL-2020+) -->
@@ -12893,51 +12979,6 @@ A minha UPS nova vinha estragada. → A minha UPS nova vinha avariada.
       <example correction="à meia-noite">O encontro é <marker>à meia noite</marker>.</example>
     </rule>
 
-    <rule id='À_HÁ_CONFUSÃO' name="Confusão: à/há">
-    <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-05-27 (Enhanced) (17-MAR-2021+)      -->
-<!--
-Ainda à muito para fazer. → Ainda há muito para fazer. 
-Ainda à pouco para fazer. → Ainda há pouco para fazer.
-Ainda à bastante para fazer. → Ainda há bastante para fazer.
-Ainda à imenso para fazer. → Ainda há imenso para fazer.
-Ele veio, embora à muito se saiba. → Ele veio, embora há muito se saiba.
--->	
-      <antipattern>
-		<token postag='RG|CS' postag_regexp='yes'/>
-		<token>à</token>
-		<token regexp='yes'>noite|tarde|esquerda|direita|frente|disposição|medida|primeira|partida</token>
-	  </antipattern>
-	  <pattern>
-		  <token postag='RG|CS' postag_regexp='yes'>
-            <exception postag_regexp='yes' postag='DI.+|NC.+|AQ0.+|PI.+|CC|SPS.+'/>
-		  </token>
-		  <marker>
-			<token>à</token>
-		  </marker>
-		  <token postag='PI.+|RG' postag_regexp='yes'>
-            <exception postag_regexp='yes' postag='V.+'/>
-		  </token>
-      </pattern>
-      <message>Substitua por <suggestion>há</suggestion>.</message>
-      <example correction="há">Ainda <marker>à</marker> muito a fazer.</example>
-	  <example>Ainda há muito para fazer.</example>
-	  <example>Ainda há pouco para fazer.</example>
-	  <example>Ainda há bastante para fazer.</example>
-	  <example>Ainda há imenso para fazer.</example>
-	  <example>Ele veio, embora há muito se saiba.</example>	  
-    </rule>
-
-    <rule id='A_PREÇO_PELO' name="Confusão: a preço/apreço">
-    <!--      Created by Marco A.G.Pinto, Portuguese rule      -->
-      <pattern>
-          <token>a</token>
-          <token>preço</token>
-          <token regexp='yes'>por|pel[ao]s?</token>
-      </pattern>
-      <message>Substitua por <suggestion>apreço \3</suggestion>.</message>
-      <example correction="apreço pelo">Tenho muito <marker>a preço pelo</marker> DVD.</example>
-      <example correction="apreço por">Tenho muito <marker>a preço por</marker> ele.</example>
-    </rule>
 
     <rule id='A_QUANDO' name="Confusão: a quando/aquando">
     <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-04-25 (Enhanced) (17-MAR-2021+)      -->
@@ -15685,9 +15726,12 @@ O edifício tem um grau de altura 5, que é também o mais alto da lista. → O 
       <example correction="traduzir para">Temos de <marker>traduzir em</marker> Inglês.</example>
     </rule>
 
+
  </category>
 
+
  <category id='CONTRACTIONS' name="Contrações">
+
 
     <rule id='DAÍ' name="Contração: de aí">
     <!-- Created by Marco A.G. Pinto, Portuguese rule -->
@@ -16421,9 +16465,12 @@ Por as DDR efetuarem duas operações por ciclo, surgiram os módulos CL2.5 que 
     <!--          Tiago F. Santos Rules Ending          ****END**** -->
     <!-- ********************************************************** -->
 
+
  </category>
 
+
  <category id='PUNCTUATION' name="Pontuação">
+
 
     <!-- COMMA BEFORE/AFTER WORDS #1 -->
   <rulegroup id='COMMA_1' name="Vírgula antes conjunção">
@@ -16736,10 +16783,10 @@ Bom dia, Ana.
     <rule>
       <pattern>
 		<token postag='SENT_START' postag_regexp='no'/>
-		<token postag='AQ.+' postag_regexp='yes'>
+		<token postag='AQ.+|I' postag_regexp='yes'>
 			<exception postag_regexp='yes' postag='V.+|NP.+|RG|Z0[FM]P0'/></token>
 		<marker>
-			<token postag='NC.+' postag_regexp='yes'>
+			<token postag='NC.+|I' postag_regexp='yes'>
 				<exception postag_regexp='yes' postag='V.+|NP.+|AQ.+|RG|Z0[FM]P0'/></token>
 		</marker>
 		<token postag='NC.+|NP.+' postag_regexp='yes'>
@@ -18857,9 +18904,12 @@ O quê?!
     </rule>
   </rulegroup>
 
+
  </category>
 
+
  <category id='REPETITIONS' name='Repetições' type='grammar'>
+
 
     <rule id='CONJUNCTION_REPETITION' name="Repetição de conjunções" default='on'>
     <!-- Created by Tiago F. Santos, Portuguese rule, 2016-12-03	-->
@@ -18936,7 +18986,9 @@ O quê?!
     </rule>
   </rulegroup>
 
+
  </category>
+
 
  <category id='REPETITIONS_STYLE' name='Repetições (estilo)' type='style'>
 
@@ -19074,9 +19126,12 @@ O quê?!
       <example>Principalmente migrantes têm procurado residência em Alagoas, estabelecendo-se <marker>principalmente</marker> na região litorânea</example>
     </rule>
 
+
  </category>
 
+
  <category id='REDUNDANCY' name="Redundância">
+
 
     <rule id='ANTES_PREFIRO' name="Prefiro">
     <!--      Created by Marco A.G.Pinto, Portuguese rule      -->
@@ -21658,9 +21713,12 @@ tokenizer spreadsheet in the forum	     -->
     </rule>
   </rulegroup>
 
+
  </category>
 
+
  <category id='CLICHES' name="Frases-Feitas e Expressões Idiomáticas" type='style'>
+
 
   <rulegroup id='PT_CLICHE_REPLACE_2' name='Frases-feitas e expressões idiomáticas'>
       <url>https://pt.wikipedia.org/wiki/V%C3%ADcio_de_linguagem#Chav.C3.B5es_ou_Clich.C3.AA_.28frases-feitas.29</url>
@@ -24802,10 +24860,13 @@ o tomate'>
     </rule>
   </rulegroup>
 
+
  </category>
 
+
  <category id='CONFUSED_WORDS' name="Confusão de Palavras">
- 
+
+
      <rulegroup id="DIACRITICS" name="Confusão com diacríticos">
 	 <!--      Created by Jaume Ortolà, Portuguese rule 2021-01-08      -->
          <rule>
@@ -24860,7 +24921,227 @@ Como nos canta Afonso X de Castela, o Rei Sábio.
              <example>Você nos incomoda com sua música.</example>
          </rule>
      </rulegroup>
-	 
+
+
+	<!-- À há -->
+    <rulegroup id='CONFUSÃO_À_HÁ' name="Confusão: à/há (expressões de tempo/quantidade)">
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-04/5/11 (1-JAN-2022+)      -->
+	<!--
+Ainda à muito para fazer. → Ainda há muito para fazer.
+Ainda à bastante para fazer. → Ainda há bastante para fazer.
+Ainda à imenso para fazer. → Ainda há imenso para fazer.
+Conheço a Ana à quase 30 anos. → Conheço a Ana há quase 30 anos.
+O show aconteceu à aproximadamente dois meses. → O show aconteceu há aproximadamente dois meses.
+Tudo à bastante tempo. → Tudo há bastante tempo.
+Conheço a Ana à 30 anos. → Conheço a Ana há 30 anos.
+Conhecemos os maias à séculos. → Conhecemos os maias há séculos.
+Nos barcos à toneladas de peixe pescado. → Nos barcos há toneladas de peixe pescado.
+Tudo à minutos. → Tudo há minutos.
+
+NOTE THAT THIS FIRST RULE DOESN'T HAVE AN EXCEPTION FOR 'SPS.+' TO FLAG:
+Até à relativamente pouco tempo era possível observar-se as faixas horizontais de azulejos. → "Até HÁ"
+	-->
+
+<!--
+THIS ANTIPATTERN IS FOR BOTH RULES.
+IT REMOVES FALSE POSITIVES SUCH AS:
+Seu fuso horário é de menos quatro horas (-4) em relação à hora mundial GMT.
+"Ele reúne, o que é muito raro, a maior inocência de costumes à mais vasta capacidade intelectual que já encontrei na América num menino da sua idade".
+Antologia Ilustrada de Filosofia: das origens à Idade Moderna.
+Não há diferenças com relação à idade, sexo e entre grupos no uso de tais vocalizações.
+A Revolução é considerada como o acontecimento que deu início à Idade Contemporânea.
+-->
+	  <antipattern>
+		<token postag='SPS.+|_PUNCT|V.+|NC.+|AQ.+|RG|DI.+|DP.+|PP.+|AO.+|CC|NP.+|UNKNOWN|CS|I|Z0.+|PI.+|_QUOT|RM|DD.+' postag_regexp='yes'/>
+		<token postag='NC.+|AQ.+|_PUNCT|UNKNOWN|NP.+|DP.+|I|V.+|PP.+|RM|DD.+|_QUOT' postag_regexp='yes'/>
+		<token>à</token>
+		<token postag='NC.+|AQ.+|NP.+|SPS.+|UNKNOWN|DI.+|DP.+|PP.+|DA.+|RG|RN|CS|_PUNCT|I|V.+|DD.+|_QUOT' postag_regexp='yes'/>
+		<token postag='NC.+|AQ.+|NP.+|_PUNCT|CC|V.+|CS|UNKNOWN|DI.+|DP.+|PP.+|DA.+|RN|I|RG|RM|DD.+|_QUOT' postag_regexp='yes'>
+			<exception regexp='yes'>&expressoes_de_tempo;</exception>
+		</token>
+	  </antipattern>
+	  
+<!--
+THIS ANTIPATTERN IS FOR BOTH RULES.
+BASED ON THE FIRST ONE AND THE SENTENCE STARTING AS "À" (SENT_START or COMMA).
+STARTING ALSO WITH "JÁ" (CS|I)
+STARTING ALSO WITH A VERB (V.+)
+NO MORE CHANGES IN THE FIRST.
+IT REMOVES FALSE POSITIVES SUCH AS:
+À época, Hippolyte Bayard também desenvolveu um método de fotografia.
+À época, o Maranhão era uma das mais ricas regiões do Brasil.
+À data, parte da freguesia já era «Honra de Farlães».
+À data, nenhuma sonda visitou Ceres.
+À época esta cidade compunha os territórios Poloneses tomados pela Prússia nas Divisões da Polônia.
+-->
+	  <antipattern>
+		<token postag='SENT_START|_PUNCT' postag_regexp='yes'/>
+		<token min="0" max="1" postag='CS|I|V.+' postag_regexp='yes'/> <!-- "Já à época o quitute foi congratulado." + "Apresentei à época, inúmeros trabalhos em reuniões." 2022-01-11 -->
+		<token>à</token>
+		<token postag='NC.+|AQ.+|NP.+|SPS.+|UNKNOWN|DI.+|DP.+|PP.+|DA.+|RG|RN|CS|_PUNCT|I|V.+|DD.+|_QUOT' postag_regexp='yes'/>
+		<token postag='NC.+|AQ.+|NP.+|_PUNCT|CC|V.+|CS|UNKNOWN|DI.+|DP.+|PP.+|DA.+|RN|I|RG|RM|DD.+|_QUOT' postag_regexp='yes'>
+			<exception regexp='yes'>&expressoes_de_tempo;</exception>
+		</token>
+	  </antipattern>
+	  
+<!--
+THIS ANTIPATTERN IS FOR BOTH RULES.
+BASED ON THE FIRST ONE AND INSTEAD OF CHECKING FOR THE WORD "À",
+IT SEARCHES FOR "à hora de" (SPS00).
+NO MORE CHANGES IN THE FIRST.
+IT FIXES FALSE POSITIVES SUCH AS:
+Isso significa que horário oficial no Brasil varia de 2 a 4 horas a menos em relação à hora de Greenwich (GMT).
+Não teve tanto sucesso à hora de tornar França numa grande potência comercial equiparável à Inglaterra e a Holanda.
+Os acadêmicos também estão divididos à hora de estabelecer uma causa para o final do mercantilismo.
+À hora de assinar os ofícios valorizava acima de tudo a lealdade e a maleabilidade.
+No atual acordo ortográfico (2003) é feita uma referência ao português como critério utilizado à hora de elaborar a norma.
+-->
+	  <antipattern>
+		<token>à</token>
+		<token>hora</token>
+		<token>de</token>
+	  </antipattern>
+
+	  <rule>
+<!--
+A flora corresponde à predominantemente típica do domínio do cerrado.
+Em oposição à relativamente monótona atmosfera de Úrano, a atmosfera de Neptuno é notável.
+Essas movendo-se obviamente também em direção contrária à realmente verificada para as cargas negativas.
+-->
+		<antipattern>
+			<token negate_pos="yes" postag='RG|SPS00' postag_regexp='yes'/>
+			<token>à</token>
+			<token postag='RM' postag_regexp='no'/>
+			<token postag='NC.+|AQ.+|NP.+|V.+' postag_regexp='yes'>
+				<exception postag_regexp='yes' postag='Z0.+'/>
+			</token>
+		</antipattern>
+
+		<pattern>
+			<token postag='SENT_START|_PUNCT|NC.+|AQ.+|NP.+|RG|PP.+|V.+|PI0NN000' postag_regexp='yes'/>
+			<marker>
+				<token>à</token>
+			</marker>
+			<token regexp="yes">&adverbios_de_intensidade;
+				<exception postag_regexp='yes' postag='RN|NP.+'/>
+			</token>
+		</pattern>
+		<message>Para expressões de tempo/quantidade utilize 'há'.</message>
+		<suggestion>há</suggestion>
+		<example correction="há">Ainda <marker>à</marker> muito para fazer.</example>
+		<example correction="há">Conheço a Ana <marker>à</marker> quase 30 anos.</example>
+		<example correction="há">Esteve à margem <marker>à</marker> aproximadamente dois meses.</example>
+		<example correction="há">Tudo <marker>à</marker> bastante tempo.</example>
+		<example>Ainda há muito para fazer.</example>
+		<example>Ainda há pouco para fazer.</example>
+		<example>Ainda há bastante para fazer.</example>
+		<example>Ainda há imenso para fazer.</example>
+		<example>Até há relativamente pouco tempo era possível observar-se as faixas horizontais de azulejos.</example>
+		<example>Até os seus mortos foram por esses caminhos transportados, até à não muito distante década de 1960, para o cemitério da Erada.</example>		
+
+		<example>A flora corresponde à predominantemente típica do domínio do cerrado.</example>
+		<example>Em oposição à relativamente monótona atmosfera de Úrano, a atmosfera de Neptuno é notável.</example>
+		<example>Essas movendo-se obviamente também em direção contrária à realmente verificada para as cargas negativas.</example>
+	  </rule>
+	  
+	<!--
+Conheço a Ana à 30 anos. → Conheço a Ana há 30 anos.
+Conhecemos os maias à séculos. → Conhecemos os maias há séculos.
+Nos barcos à toneladas de peixe pescado. → Nos barcos há toneladas de peixe pescado.
+Tudo à minutos. → Tudo há minutos.
+	-->
+	  <rule>
+<!--
+A bandeira do Estado do Amazonas remonta ao século XIX, especificamente à década de 1890.
+À idade de 25 anos, ela vivera em muitos países.
+À hora da experiência, uma chuva forte tornou o balão pesado.
+Ainda à época do conflito, ocorreu a inauguração do Peter Café Sport (1918).
+-->
+		<antipattern>
+			<token>à</token>
+			<token regexp="yes">&expressoes_de_tempo;</token>
+			<token postag='SPS.+' postag_regexp='yes'/>
+		</antipattern>
+		
+<!--
+Toy Story, e sua continuação , Toy Story 2 ganham uma roupagem à Século XXI.
+-->
+		<antipattern>
+			<token>à</token>
+			<token regexp="yes">&expressoes_de_tempo;</token>
+			<token postag='ZR.+|AO.+' postag_regexp='yes'/>
+		</antipattern>
+
+<!--
+Ele está assistindo à TV em seu quarto.
+Eu provavelmente não assistirei à TV esta noite.
+Tom estava assistindo à TV na noite passada.
+O Tom não faz nada além de assistir à TV o dia inteiro.
+Assistir à TV é um dos meus passatempos favoritos.
+-->
+		<antipattern>
+			<token postag='V.+' postag_regexp='yes'/>
+			<token>à</token>
+			<token postag='NP.+' postag_regexp='yes'/>
+		</antipattern>	
+
+		<pattern>
+			<token postag='SENT_START|_PUNCT|NC.+|AQ.+|NP.+|RG|PP.+|V.+|PI0NN000' postag_regexp='yes'>
+				<exception postag_regexp='yes' postag='SPS.+'/>
+			</token>
+			<marker>
+				<token>à</token>
+			</marker>
+			<token min="0" max="1" postag='Z0.+' postag_regexp='yes'/>
+			<token regexp="yes">&expressoes_de_tempo;|&unidades_de_medida;|&unidades_de_medida_por_extenso;
+				<exception postag_regexp='yes' postag='SPS.+|NP.+'/>
+			</token>
+		</pattern>
+		<message>Para expressões de tempo/quantidade utilize 'há'.</message>
+		<suggestion>há</suggestion>
+		<example correction="há">Conheço a Ana <marker>à</marker> 30 anos.</example>
+		<example correction="há">Conhecemos os maias <marker>à</marker> séculos.</example>
+		<example correction="há">Nos barcos <marker>à</marker> toneladas de peixe pescado.</example>
+		<example correction="há">Tudo <marker>à</marker> minutos.</example>	
+		<example>A agricultura de subsistência, muito praticada até à década de 1980, tem vindo a ser abandonada.</example>
+		<example>Sua produção, muito superior à das ilhas portuguesas no Atlântico, supria quase toda a Europa.</example>
+		<example>A estrutura de funcionamento das comunidades intermunicipais é muito semelhante à das áreas metropolitanas.</example>
+		<example>A Bandeira de Portugal deverá ser sempre de dimensão superior ou igual à das outras bandeiras;</example>
+		<example>Esta métrica é similar à das distâncias no espaço euclidiano.</example>
+
+		<example>A bandeira do Estado do Amazonas remonta ao século XIX, especificamente à década de 1890.</example>
+		<example>À idade de 25 anos, ela vivera em muitos países.</example>
+		<example>À hora da experiência, uma chuva forte tornou o balão pesado.</example>
+		<example>Ainda à época do conflito, ocorreu a inauguração do Peter Café Sport (1918).</example>
+
+		<example>Toy Story, e sua continuação , Toy Story 2 ganham uma roupagem à Século XXI.</example>
+
+		<example>Ele está assistindo à TV em seu quarto.</example>
+		<example>Eu provavelmente não assistirei à TV esta noite.</example>
+		<example>Tom estava assistindo à TV na noite passada.</example>
+		<example>O Tom não faz nada além de assistir à TV o dia inteiro.</example>
+		<example>Assistir à TV é um dos meus passatempos favoritos.</example>
+	  </rule>
+	</rulegroup>
+
+
+	<!-- A PREÇO apreço -->
+    <rule id='CONFUSÃO_A_PREÇO_APREÇO' name="Confusão: a preço/apreço">
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-13 (Checked/Enhanced) (1-JAN-2022+)      -->
+      <pattern>
+		  <marker>
+			<token>a</token>
+			<token>preço</token>
+          </marker>
+		  <token regexp='yes'>para|por|pel[ao]s?</token>
+      </pattern>
+	  <message>Possível confusão de termos.</message>
+	  <suggestion>apreço</suggestion>
+      <example correction="apreço">Tenho muito <marker>a preço</marker> pelo DVD.</example>
+      <example correction="apreço">Tenho muito <marker>a preço</marker> por ele.</example>
+    </rule>
+
+
 	<!-- ASSERTO acerto -->
     <rule id='CONFUSÃO_ASSERTO_ACERTO_DE_CONTAS' name="Confusão: asserto/acerto">
     <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-01 (Checked/Enhanced) (1-JAN-2022+)      -->
@@ -24875,9 +25156,30 @@ Como nos canta Afonso X de Castela, o Rei Sábio.
 	  <suggestion>acerto</suggestion>
       <example correction="acerto">Vamos fazer um <marker>asserto</marker> de contas.</example>
     </rule>
-	 
+
+
+	<!-- CAPAS capaz -->
+    <rule id='CONFUSÃO_CAPAS_CAPAZ' name="Confusão: capas/capaz">
+	<!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-13 (Checked/Enhanced) (1-JAN-2022+)      -->
+	<!--
+Este é capas de ser o pior port de sempre.
+	-->	
+      <pattern>
+		  <token regexp='yes' inflected='yes'>ser|estar</token>
+		  <marker>
+			<token>capas</token>
+		  </marker>
+		  <token></token>
+		  <token postag='V.+|NC.+|AQ.+' postag_regexp='yes'/>
+      </pattern>
+	  <message>Possível confusão de termos.</message>
+      <suggestion>capaz</suggestion>
+      <example correction="capaz">Este é <marker>capas</marker> de ser o pior port de sempre.</example>
+    </rule>
+
+
 	<!-- DÊS desde -->
-    <rulegroup id='CONFUSÃO_DÊS_DESDE' name="Confusão: dês/desde" default="temp_off">
+    <rulegroup id='CONFUSÃO_DÊS_DESDE' name="Confusão: dês/desde">
     <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-03 (1-JAN-2022+)      -->
 	<!--
 Faço isso dês que me dê o livro. → Faço isso desde que me dê o livro.
@@ -24896,6 +25198,7 @@ Faço isso dês de que me dê o livro. → Faço isso desde que me dê o livro.
 		<example correction="desde">Faço isso <marker>dês</marker> que me dê o livro.</example>
 		<example correction="desde">Faço isso <marker>dês de</marker> que me dê o livro.</example>
       </rule>
+
 	<!--
 Isto acontece dês do mês passado. → Isto acontece desde o mês passado.
 Isto acontece dês dos meses passados. → Isto acontece desde os meses passados.
@@ -24915,8 +25218,9 @@ Isto acontece dês das semanas passadas. → Isto acontece desde as semanas pass
 		<example correction="desde as">Isto acontece <marker>dês das</marker> semanas passadas.</example>		
       </rule>
 	</rulegroup>
-	 
-	<!-- DOS dois -->	
+
+
+	<!-- DOS dois -->
 	<rulegroup id='CONFUSÃO_DOS_DOIS' name="Confusão: dos/dois">
 	<!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-01 (Checked/Enhanced) (1-JAN-2022+)      -->
 <!--
@@ -24937,6 +25241,7 @@ Sinto frio mesmo com dos pares de meias. → Sinto frio mesmo com dois pares de 
 			<example>Cada um dos dois prisioneiros receberá uma dura pena.</example>
 			<example>Isto aconteceu em dois anos de trabalho.</example>
 		</rule>
+
 <!--
 Nós os dos queremos ganhar. → Nós os dois queremos ganhar.
 -->
@@ -24961,12 +25266,13 @@ Nós os dos queremos ganhar. → Nós os dois queremos ganhar.
 		</rule>
 	</rulegroup>
 
+
 	<!-- NOS nós -->
 	<rulegroup id='CONFUSÃO_NOS_NÓS' name="Confusão: nos/nós" default="temp_off">
 	<!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-02/3 (1-JAN-2022+)      -->
 <!--
 Nos somos os chefes. → Nós somos os chefes.
--->		
+-->
 		<rule>
 <!--
 Nos mais jovens, é mais comum ela ser noticiada aos familiares.
@@ -25042,21 +25348,22 @@ THIS ANTIPATTERN WAS BASED ON TIAGO SANTO'S RULE WHICH WAS REPLACED BY MY OWN RU
 			<example>Nos outros movimentos há passagens em acordes e arpejos.</example>			
 			<example>São Roque do Pico, nos Açores.</example>
 			<example>Criámos um fórum onde nós os três seríamos os administradores.</example>
-			
+
 			<example>Nos mais jovens, é mais comum ela ser noticiada aos familiares.</example>
 			<example>Por favor, nos dê alguns exemplos.</example>
-			
+
 			<example>Desde 1951, a Austrália tem sido um aliado militar formal dos Estados Unidos, nos termos do tratado ANZUS.</example>
 			<example>Nos termos da Constituição, a autonomia regional não afecta a integridade da soberania do Estado.</example>
 			<example>Nos termos deste acordo, formar-se-ia no mesmo mês um governo de transição.</example>
 			<example>Nos lhanos do Orinoco e no planalto das Guianas, as precipitações vão de moderadas a elevadas.</example>
 			<example>Nos seres unicelulares a mitose já possui o papel da reprodução em si.</example>
 			<example>Nos dez dias após seu lançamento, o livro vendeu 11,5 milhões de cópias.</example>
-			
+
 			<example>O que não nos mata, nos deixa mais fortes.</example>
 			<example>Nos cerca de 100 eventos organizados entre Setembro de 2006 e Outubro de 2012, estiveram contabilizados os feridos.</example>	
 		</rule>
 	</rulegroup>
+
 
 	<!-- VESTIR calçar -->
     <rule id='CONFUSÃO_VESTIR_CALÇAR' name="Confusão: vestir/calçar">
@@ -25065,6 +25372,7 @@ THIS ANTIPATTERN WAS BASED ON TIAGO SANTO'S RULE WHICH WAS REPLACED BY MY OWN RU
 Vou calçar os sapatos.
 Não se esqueça de calçar as meias.
 -->
+
 <!--
 Kullervo abriu a arca que continha seus tesouros, deixando ver galas soberbas, vestidos esplêndidos, meias bordadas com fios de ouro, cintos e broches de prata.
 Vence a indústria do luxo, porque a disputa hoje é sobre os melhores e piores vestidos, sapatos, acessórios, publicados exaustivamente pela imprensa internacional e, claro, repercutidos aqui no Brasil.
@@ -25074,6 +25382,7 @@ Vence a indústria do luxo, porque a disputa hoje é sobre os melhores e piores 
 		<token min="0" max="1" negate="yes" regexp="yes">botas?|chinelos?|galochas?|luvas?|meias?|peúgas?|sandálias?|sapatilhas?|sapatos?|ténis</token>
 		<token postag='_PUNCT' postag_regexp='no'/>
       </antipattern>
+
       <pattern>
 	      <marker>
 			<token inflected="yes">vestir</token>
@@ -25090,6 +25399,51 @@ Vence a indústria do luxo, porque a disputa hoje é sobre os melhores e piores 
 	  <example>Kullervo abriu a arca que continha seus tesouros, deixando ver galas soberbas, vestidos esplêndidos, meias bordadas com fios de ouro, cintos e broches de prata.</example>
 	  <example>Vence a indústria do luxo, porque a disputa hoje é sobre os melhores e piores vestidos, sapatos, acessórios, publicados exaustivamente pela imprensa internacional e, claro, repercutidos aqui no Brasil.</example>
     </rule>
+
+
+  <!-- XEQUE(s) cheque(s) -->
+  <rulegroup id='CONFUSÃO_XEQUE_CHEQUE' name='Confusão: xeque(s)/cheque(s)'>
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-12 (Checked/Enhanced) (1-JAN-2022+)      -->
+    <rule>
+      <pattern>
+		  <marker>
+			<token regexp="yes">xeques?</token>
+		  </marker>
+          <token regexp="yes">avulsos?|carecas?|cruzados?|visados?</token>
+      </pattern>
+      <message>Possível confusão de termos.</message>
+	  <suggestion><match no='1' regexp_match='xeque(s?)' regexp_replace='cheque$1'/></suggestion>
+      <example correction="cheque">É um <marker>xeque</marker> cruzado.</example>
+      <example correction="cheques">São <marker>xeques</marker> visados.</example>
+    </rule>
+    <rule>
+      <pattern>
+		  <marker>
+			<token regexp="yes">xeques?</token>
+		  </marker>
+          <token>sem</token>
+          <token>cobertura</token>
+      </pattern>
+      <message>Possível confusão de termos.</message>
+      <suggestion><match no='1' regexp_match='xeque(s?)' regexp_replace='cheque$1'/></suggestion>
+	  <example correction="cheque">É um <marker>xeque</marker> sem cobertura.</example>
+      <example correction="cheques">São <marker>xeques</marker> sem cobertura.</example>
+    </rule>
+    <rule>
+      <pattern>
+		  <marker>
+			<token regexp="yes">xeques?</token>
+		  </marker>
+          <token>em</token>
+          <token>branco</token>
+      </pattern>
+      <message>Possível confusão de termos.</message>
+	  <suggestion><match no='1' regexp_match='xeque(s?)' regexp_replace='cheque$1'/></suggestion>
+      <example correction="cheque">É um <marker>xeque</marker> em branco.</example>
+      <example correction="cheques">São <marker>xeques</marker> em branco.</example>
+    </rule>
+  </rulegroup>
+
 
 	<!-- ASSISTIR (Ver) -->
     <rule id='ASSISTIR_VER' name="Confusão: Assistir (ver)">
@@ -25173,46 +25527,6 @@ Apenas adultos podem assistir àquele filme.
       <example correction="à tua">Dá uma mãozinha <marker>há tua</marker> família.</example>
     </rule>
 
-    <rule id='À-HÁ_N_TEMPO' name="Confusão: há/à (há n tempo)">
-    <!--      Created by Marco A.G.Pinto, Portuguese rule      -->
-      <antipattern>
-          <token>à</token>
-          <token>última</token>
-          <token>hora</token>
-      </antipattern>
-      <antipattern>
-          <token>à</token>
-          <token regexp='yes'>d[eao]s?|direita|disposição|distância|espreita|esquerda|frente|hora|mesma|noite|pressa|tarde|toa|vontade</token>
-      </antipattern>
-      <antipattern>
-          <token>à</token>
-          <token regexp='yes'>beira|custa|distância|maneira|medida|venda|vista|volta|hora|luz</token>
-          <token regexp='yes'>de|que</token>
-      </antipattern>
-      <antipattern>
-          <token>em</token>
-          <token>tempo</token>
-          <token>real</token>
-      </antipattern>
-      <pattern>
-          <token>à</token>
-          <token min="0" regexp="yes">quase|poucos?|alguns|cerca|volta</token>
-          <token min="0" postag_regexp='yes' postag='[RS].+'/>
-          <token skip="-1" postag_regexp='yes' postag='[CZ].+'>
-            <exception postag='(?:V.[CIS][CFIMPS].|NP|DP).+|_PUNCT' postag_regexp='yes' scope='next'/>
-            <exception postag='(?:V.[CIS][CFIMPS].|NP|DP).+|_PUNCT' postag_regexp='yes'/>
-            <exception regexp='yes'>altura|frente|trás|esquerda|direita|manhã|tarde|noite</exception></token>
-          <token regexp="yes">&expressoes_de_tempo;</token>
-      </pattern>
-      <message>Se se refere ao tempo já decorrido, substitua por <suggestion>há <match no='2' include_skipped='all'/> <match no='3' include_skipped='all'/> <match no='4' include_skipped='all'/> <match no='5' include_skipped='all'/></suggestion>.</message>
-      <example correction="há quase 30 anos">Conheço a Ana <marker>à quase 30 anos</marker>.</example>
-      <example>Algumas pessoas e ideias parecem fora do lugar ou à frente do seu tempo.</example>
-      <example>No entanto, antes de vir à Terra por qualquer período de tempo.</example>
-      <example>Esta situação é semelhante à do ano anterior.</example>
-      <example>Estão em festa até à tarde do dia seguinte.</example>
-      <example>Esteve à margem dos quase dois meses de viagem.</example>
-      <example correction="há aproximadamente dois meses">Esteve à margem <marker>à aproximadamente dois meses</marker>.</example>
-    </rule>
 
     <rule id='HÁ-DIRECTION' name="Confusão: Há + Direção">
     <!--      Created by Marco A.G.Pinto, Portuguese rule      -->
@@ -25271,23 +25585,6 @@ Os Russos conhecem a ilha desde pelo menos o século XI, quando caçadores de No
       <example correction="arriar a vela">Vamos <marker>arrear a vela</marker>.</example>
     </rule>
 
-	<!-- CAPAS capaz -->
-	<!--      Created by Marco A.G.Pinto, Portuguese rule 2021-01-27 (1-JAN-2021+)      -->
-<!--
-Este é capas de ser o pior port de sempre.
--->	
-    <rule id='CAPAS_CAPAZ' name="Confusão: capas/capaz">
-      <pattern>
-		  <token inflected='yes'>ser</token>
-		  <marker>
-			<token>capas</token>
-		  </marker>
-		  <token></token>
-		  <token postag='V.+|NC.+' postag_regexp='yes'/>
-      </pattern>
-      <message>Substitua por <suggestion>capaz</suggestion>.</message>
-      <example correction="capaz">Este é <marker>capas</marker> de ser o pior port de sempre.</example>
-    </rule>
 
   <rulegroup id='ESTA_CONFUSION' name="Confusão: Esta/Está">
     <!--      Created by Marco A.G.Pinto, Portuguese rule      -->
@@ -34266,9 +34563,12 @@ Nunca fui avisado a cerca desses alarmes. → Nunca fui avisado acerca desses al
 	  <example>Então isso comprova que não existe uma definição exata acerca do belo, mas sim um sentimento que é universal e necessário.</example>  
     </rule>
 
+
  </category>
 
+
  <category id='TYPOGRAPHY' name="Tipografia" type="typographical">
+
 
   <rulegroup id='GENERAL_NUMBER_FORMAT' name="Matemático: Formatação de números: 10 341 330">
     <!-- Created by Tiago F. Santos, 2017-03-05 -->
@@ -36372,9 +36672,13 @@ O Rui esteve lá no período 2013 –2021. → O Rui esteve lá no período 2013
       <example>O jantar estará pronto às 18:30.</example>
     </rule>
 
+
  </category>
 
+
  <category id='REGISTERED_BRANDS' name="Regras de Marcas e Termos Registados">
+ 
+ 
     <!-- Localized from French grammar.xml by Tiago F. Santos, 30-01-2017 -->
     <rule id='UBUNTU' name="Nome de Produto: Ubuntu-16.10 → Ubuntu-16.10">
       <pattern>
@@ -36567,9 +36871,13 @@ O Rui esteve lá no período 2013 –2021. → O Rui esteve lá no período 2013
       <example correction="uma folha de cálculo">Tenho que fazer <marker>um Excel</marker>.</example>
       <example correction="outras folhas de cálculo">Isso está explicado nos <marker>outras folhas de Excel</marker>.</example>
     </rule>
+	
+	
  </category>
 
+
  <category id='SEMANTICS' name="Semântica" type="inconsistency">
+
 
     <rule id='ADESÃO' name="Aderência">
     <!--      Created by Marco A.G.Pinto, Portuguese rule      -->
@@ -36706,38 +37014,6 @@ O Rui esteve lá no período 2013 –2021. → O Rui esteve lá no período 2013
     </rule>
   </rulegroup>
 
-  <rulegroup id='XEQUE_CHEQUE' name='Confusão Xeque - Cheque'>
-    <!-- Rule by Marco A.G. Pinto -->
-    <rule>
-      <pattern case_sensitive="no">
-          <token regexp="yes">xeques?</token>
-          <token regexp="yes">(?:avulso|careca|cruzado|visado)s?</token>
-      </pattern>
-      <message>Substitua por <suggestion><match no='1' regexp_match='xeque(s?)' regexp_replace='cheque$1'/> \2</suggestion>.</message>
-      <example correction="cheque cruzado">É um <marker>xeque cruzado</marker>.</example>
-      <example correction="cheques visados">São <marker>xeques visados</marker>.</example>
-    </rule>
-    <rule>
-      <pattern case_sensitive="no">
-          <token regexp="yes">xeques?</token>
-          <token>sem</token>
-          <token>cobertura</token>
-      </pattern>
-      <message>Substitua por <suggestion><match no='1' regexp_match='xeque(s?)' regexp_replace='cheque$1'/> \2 \3</suggestion>.</message>
-      <example correction="cheque sem cobertura">É um <marker>xeque sem cobertura</marker>.</example>
-      <example correction="cheques sem cobertura">São <marker>xeques sem cobertura</marker>.</example>
-    </rule>
-    <rule>
-      <pattern case_sensitive="no">
-          <token regexp="yes">xeques?</token>
-          <token>em</token>
-          <token>branco</token>
-      </pattern>
-      <message>Substitua por <suggestion><match no='1' regexp_match='xeque(s?)' regexp_replace='cheque$1'/> \2 \3</suggestion>.</message>
-      <example correction="cheque em branco">É um <marker>xeque em branco</marker>.</example>
-      <example correction="cheques em branco">São <marker>xeques em branco</marker>.</example>
-    </rule>
-  </rulegroup>
 
     <rule id='WEEKDAY_TO_WEEKDAY' name="Datas: redundâcia de '-feira'">
     <!--       Created by Tiago F. Santos,  2019-09-05      -->
@@ -36755,6 +37031,7 @@ O Rui esteve lá no período 2013 –2021. → O Rui esteve lá no período 2013
         <suggestion>\1 a \5\6\7</suggestion>
       <example correction="segunda a sexta-feira">Podem visitar o museu de <marker>segunda-feira a sexta-feira</marker>.</example>
     </rule>
+
 
   <rulegroup id="DATE_FUTURE_VERB_PAST" name="Datas: Data futura + verbo no passado">
     <!-- Localized from English grammar.xml by Tiago F. Santos, 2018-09-11 -->
@@ -37504,10 +37781,13 @@ O Rui esteve lá no período 2013 –2021. → O Rui esteve lá no período 2013
     </rule>
   </rulegroup>
 
+
  </category>
 
+
  <category id='STYLE' name="Estilo" type="style">
-     
+
+
      <!-- DE FORMA/MODO + ADJ adv -->
      <!--      Created by Marco A.G.Pinto, Portuguese rule 2020-10-08 (2-JUL-2020+)     -->
      <rule id='DE_FORMA-MODO_ADJ' name="De + forma/modo + Adj -> Advérbio" tags="picky">
@@ -38048,8 +38328,12 @@ Ele nem sabe escrever o nome. → Ele nem o nome sabe escrever.
       <example correction="evidentemente">O Rui <marker>evidentemente que</marker> cometeu um erro.</example>
     </rule>
 
+
  </category>
+ 
+ 
  <category id='FORMAL_SPEECH' name="Linguagem Formal" type="register">
+
 
   <rulegroup id='ARCHAISMS' name='1. Arcaísmos (Palavras que caíram em desuso)'>
     <!--      Created by Tiago F. Santos, Portuguese rule, BARBARISMS2017-05-08      -->
@@ -40389,9 +40673,13 @@ Vou bazar. → Vou embora.
       <message>Substitua por <suggestion>fila</suggestion>.</message>
       <example correction="fila">Estou na <marker>bicha</marker> de espera.</example>
     </rule>
+	
+	
  </category>
 
+
  <category id='EGGCORNS' name="Calinadas">
+
 
     <rule id='EM_LONGO_PRAZO' name='Expressão: a largo prazo'>
     <!--       Created by Tiago F. Santos, 2019-03-17 -->
@@ -41076,9 +41364,13 @@ Elas têm umas sextas de vime. → Elas têm umas cestas de vime.
       <example correction="medicina tradicional chinesa">A <marker>medicina chinesa antiga</marker> é milenar.</example>
     </rule>
   </rulegroup>
+
+
  </category>
 
+
  <category id='REDACTION_TIPS' name='Dicas de redação' type='style'>
+
 
 	<!-- ATRAVÉS DE por -->
     <rulegroup id='ATRAVES_DE_POR' name="Através de → por" type="style">
@@ -41904,32 +42196,44 @@ Era visto nas mãos de todos os japoneses em paradas.
 	  <example>Era visto nas mãos de todos os japoneses em paradas.</example>	  
     </rule>
 
+
  </category>
+
 
  <category id='TRANSLATION_ERRORS' name="Erros de Tradução" type="mistranslation">
 
-    <rule id='CAMINHAR_CAMINHOS' name="percorrer caminhos">
-    <!-- Created by Marco A.G. Pinto, 2017-XX-XX -->
+
+	<!-- ATAQUES EM MASSA ataques em grande escala -->
+    <rule id='ATAQUES_EM_MASSA' name="Erro de tradução: 'ataque(s) em grande escala'">
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-05 (Checked/Enhanced) (1-JAN-2022+)      -->
+      <pattern>
+          <token regexp='yes'>ataques?</token>
+          <token>em</token>
+		  <marker>
+			<token>massa</token>
+		  </marker>
+      </pattern>
+	  <message>Expressão não pode ser traduzida literalmente.</message>
+      <suggestion>grande escala</suggestion>
+      <example correction="grande escala">As botnets fazem ataques em <marker>massa</marker>.</example>
+    </rule>
+
+
+	<!-- CAMINHAR CAMINHOS percorrer/trilhar caminhos -->
+    <rule id='CAMINHAR_CAMINHOS' name="Erro de tradução: 'percorrer/trilhar caminhos'">
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-06 (Checked/Enhanced) (1-JAN-2022+)      -->
       <pattern>
         <marker>
           <token inflected='yes'>caminhar</token>
         </marker>
-          <token>caminhos</token>
+        <token>caminhos</token>
       </pattern>
-      <message>Substitua por <suggestion><match no='1' postag='V.+' postag_regexp='yes'>percorrer</match></suggestion>.</message>
-      <example correction="percorrer">Deve <marker>caminhar</marker> caminhos descobertos por tentativa e erro.</example>
+	  <message>Expressão não pode ser traduzida literalmente.</message>
+      <suggestion><match no='1' postag='V.+' postag_regexp='yes'>percorrer</match></suggestion>
+	  <suggestion><match no='1' postag='V.+' postag_regexp='yes'>trilhar</match></suggestion>
+      <example correction="percorrer|trilhar">Deve <marker>caminhar</marker> caminhos descobertos por tentativa e erro.</example>
     </rule>
 
-    <rule id='ATAQUES_EM_MASSA' name="Ataques em grande escala">
-    <!-- Created by Marco A.G. Pinto, 2017-XX-XX -->
-      <pattern>
-          <token regexp='yes'>ataques?</token>
-          <token>em</token>
-          <token>massa</token>
-      </pattern>
-      <message>Substitua por <suggestion>\1 em grande escala</suggestion>.</message>
-      <example correction="ataques em grande escala">As botnets fazem <marker>ataques em massa</marker>.</example>
-    </rule>
 
   <rulegroup id='ENG_ELETRICO' name="Erro de tradução: 'engenheiro elétrico'">
     <!-- Created by Tiago F. Santos, 2017-05-19 -->
@@ -41958,78 +42262,44 @@ Era visto nas mãos de todos os japoneses em paradas.
     -->
   </rulegroup>
 
-    <rule id='ESTIMAÇÃO_MÁXIMA_SEMELHANÇA' name="Erro de tradução: 'estimação máxima verosimilhança'">
-    <!--      Created by Marco A.G.Pinto, Portuguese rule      -->
+
+	<!-- ESTIMAÇÃO MÁXIMA SEMELHANÇA estimação máxima verosimilhança -->
+    <rule id='ESTIMAÇÃO_MÁXIMA_SEMELHANÇA' name="Erro de tradução: 'estimação máxima verosimilhança(PT)/verossimilhança(BR)'">
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-06 (Checked/Enhanced) (1-JAN-2022+)      -->
+	<!--
+	IN pt_PT: verosimilhança
+	IN pt_BR: verossimilhança
+	-->
       <pattern>
           <token regexp="yes">estimativas?|estimação|estimações|estimador|estimadores</token>
-		  <token regexp="yes">de|da|por</token>
+		  <token regexp="yes">d[ae]|pela|por</token>
 		  <token>máxima</token>
         <marker>
           <token>semelhança</token>
         </marker>
       </pattern>
       <message>Expressão não pode ser traduzida literalmente.</message>
-        <suggestion>verosimilhança</suggestion>
-      <example correction='verosimilhança'>A estimativa de máxima <marker>semelhança</marker> é usada em Estatística.</example>
+      <suggestion>verosimilhança</suggestion>
+	  <suggestion>verossimilhança</suggestion>
+      <example correction='verosimilhança|verossimilhança'>A estimativa de máxima <marker>semelhança</marker> é usada em Estatística.</example>
     </rule>
 
-    <!-- 	FURTO/ROUBO DA/DE IDENTIDADE usurpação de identidade -->	
-	<!--      Created by Marco A.G.Pinto, Portuguese rule 2021-01-03 (Enhanced) (1-JAN-2021+)      -->
-    <rule id='FURTO_ROUBO_IDENTIDADE' name="Usurpação de identidade">
+
+    <!-- 	FURTO/ROUBO DE IDENTIDADE usurpação de identidade -->	
+	<!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-06 (Checked/Enhanced) (1-JAN-2022+)      -->
+    <rule id='FURTO_ROUBO_IDENTIDADE' name="Erro de tradução: 'usurpação de identidade'">
 		<pattern>
 		    <marker>
 				<token skip="3" inflected='yes' regexp='yes'>furtar|roubar</token>
 			</marker>
 			<token regexp='yes'>identidades?</token>
-		</pattern>		
-		<message>Substitua por <suggestion><match no='1' postag='V.+' postag_regexp='yes'>usurpar</match></suggestion>.</message>
+		</pattern>
+		<message>Expressão não pode ser traduzida literalmente.</message>
+		<suggestion><match no='1' postag='V.+' postag_regexp='yes'>usurpar</match></suggestion>
 		<example correction="usurpou">Alguém <marker>roubou</marker> a identidade do dono da empresa.</example>  
 		<example type='correct'>Alguém <marker>usurpou</marker> a minha identidade.</example>
 	</rule>
 
-    <rule id='OPENING_INTERROGATION' name="Sinal de interrogação inicial" default="on">
-    <!-- Localized from Catalan, by Tiago F. Santos, 2017-02-27 -->
-<!-- MARCOAGPINTO 2021-05-17 (17-MAR-2021+) *START* -->
-<!--
-#¿$?%!¡
--->
-      <antipattern>
-		<token regexp='yes'>[¿]</token>
-		<token regexp='yes' spacebefore='no'>[$]</token>
-	  </antipattern>
-<!-- MARCOAGPINTO 2021-05-17 (17-MAR-2021+) *END* -->
-      <pattern>
-          <token>¿</token>
-          <token/>
-      </pattern>
-      <message>O português não utiliza o sinal de interrogação inicial.</message>
-        <suggestion>\2</suggestion>
-      <url>https://pt.wikipedia.org/wiki/Ponto_de_interroga%C3%A7%C3%A3o</url>
-      <example correction="Como"><marker>¿Como</marker> estás?</example>
-      <example>Estás bem?</example>
-    </rule>
-
-    <rule id='OPENING_EXCLAMATION' name="Sinal de exclamação inicial" default="on">
-    <!-- Localized and improved from Catalan, by Tiago F. Santos, 2017-02-27 -->
-<!-- MARCOAGPINTO 2021-05-17 (17-MAR-2021+) *START* -->
-<!--
-#¿$?%!¡
--->
-      <antipattern>
-		<token regexp='yes'>[!]</token>
-		<token regexp='yes' spacebefore='no'>[¡]</token>
-	  </antipattern>
-<!-- MARCOAGPINTO 2021-05-17 (17-MAR-2021+) *END* -->	
-      <pattern>
-          <token>¡</token>
-          <token/>
-      </pattern>
-      <message>O português não utiliza o sinal de exclamação inicial.</message>
-        <suggestion>\2</suggestion>
-      <url>https://pt.wikipedia.org/wiki/Pontos_de_interroga%C3%A7%C3%A3o_e_de_exclama%C3%A7%C3%A3o_invertidos</url>
-      <example correction="Muito"><marker>¡Muito</marker> bem!</example>
-      <example>Mesmo bom!</example>
-    </rule>
 
     <rule id='LOWER_QUOTES' name="Símbolo não utilizado em português: „">
     <!--  Localized from Catalan grammar.xml, by Tiago F. Santos, 2017-02-22      -->
@@ -42042,71 +42312,123 @@ Era visto nas mãos de todos os japoneses em paradas.
       <example correction="“">A palavra <marker>„</marker>desenvovedor” vem do inglês e traduz-se em programador.</example>
     </rule>
 
-  <rulegroup id='PEQUENO_INTESTINO' name="Erro de tradução: 'intestino delgado'">
-    <!-- Created by Marco A.G. Pinto -->
-      <short>Erro de tradução</short>
-    <rule>
-      <pattern>
-          <token>pequeno</token>
-          <token>intestino</token>
-      </pattern>
-      <message>Expressão não pode ser traduzida literalmente.</message>
-        <suggestion>intestino delgado</suggestion>
-      <example correction="intestino delgado">O <marker>pequeno intestino</marker> é um órgão importante.</example>
-    </rule>
-    <rule>
-      <pattern>
-          <token>intestino</token>
-          <token>pequeno</token>
-      </pattern>
-      <message>Expressão não pode ser traduzida literalmente.</message>
-        <suggestion>intestino delgado</suggestion>
-      <example correction="intestino delgado">O <marker>intestino pequeno</marker> é um órgão importante.</example>
-    </rule>
-  </rulegroup>
 
-  <rulegroup id='TRAZEDORES_DA_JUSTIÇA' name="Erro de tradução: 'justiceiro(s)'">
-    <!-- Created by Marco A.G. Pinto -->
-      <short>Erro de tradução</short>
-    <rule>
+    <rule id='OPENING_INTERROGATION' name="Sinal de interrogação inicial" default="on">
+    <!-- Localized from Catalan, by Tiago F. Santos, 2017-02-27 -->
+<!-- MARCOAGPINTO 2022-01-05 (Checked/Enhanced) (1-JAN-2022+) *START* -->
+<!--
+THIS ANTIPATTERN IS TO AVOID FLAGGING THE REPLACEMENT TEXT FOR OBSCENE WORDS.
+#¿$?%!¡
+-->
+      <antipattern>
+		<token regexp='yes'>[¿]</token>
+		<token regexp='yes' spacebefore='no'>[$]</token>
+	  </antipattern>
+<!-- MARCOAGPINTO 2022-01-05 (Checked/Enhanced) (1-JAN-2022+) *END* -->
       <pattern>
-          <token>trazedores</token>
-          <token regexp="yes">de|da</token>
+          <token>¿</token>
+          <token/>
+      </pattern>
+      <message>O português não utiliza o sinal de interrogação inicial.</message>
+        <suggestion>\2</suggestion>
+      <url>https://pt.wikipedia.org/wiki/Ponto_de_interroga%C3%A7%C3%A3o</url>
+      <example correction="Como"><marker>¿Como</marker> estás?</example>
+      <example>Estás bem?</example>
+    </rule>
+
+
+    <rule id='OPENING_EXCLAMATION' name="Sinal de exclamação inicial" default="on">
+    <!-- Localized and improved from Catalan, by Tiago F. Santos, 2017-02-27 -->
+<!-- MARCOAGPINTO 2022-01-05 (Checked/Enhanced) (1-JAN-2022+) *START* -->
+<!--
+THIS ANTIPATTERN IS TO AVOID FLAGGING THE REPLACEMENT TEXT FOR OBSCENE WORDS.
+#¿$?%!¡
+-->
+      <antipattern>
+		<token regexp='yes'>[!]</token>
+		<token regexp='yes' spacebefore='no'>[¡]</token>
+	  </antipattern>
+<!-- MARCOAGPINTO 2022-01-05 (Checked/Enhanced) (1-JAN-2022+) *END* -->
+      <pattern>
+          <token>¡</token>
+          <token/>
+      </pattern>
+      <message>O português não utiliza o sinal de exclamação inicial.</message>
+        <suggestion>\2</suggestion>
+      <url>https://pt.wikipedia.org/wiki/Pontos_de_interroga%C3%A7%C3%A3o_e_de_exclama%C3%A7%C3%A3o_invertidos</url>
+      <example correction="Muito"><marker>¡Muito</marker> bem!</example>
+      <example>Mesmo bom!</example>
+    </rule>
+
+
+    <!-- PEQUENO INTESTINO intestino delgado -->
+	<rulegroup id='PEQUENO_INTESTINO' name="Erro de tradução: 'intestino delgado'">
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-06 (Checked/Enhanced) (1-JAN-2022+)      -->
+		<rule>
+			<pattern>
+				<marker>
+					<token>pequeno</token>
+					<token>intestino</token>
+				</marker>
+				<token postag='V.+' postag_regexp='yes'/>
+			</pattern>
+			<message>Expressão não pode ser traduzida literalmente.</message>
+			<suggestion>intestino delgado</suggestion>
+			<example correction="intestino delgado">O <marker>pequeno intestino</marker> é um órgão importante.</example>
+		</rule>
+		<rule>
+			<pattern>
+				<marker>
+					<token>intestino</token>
+					<token>pequeno</token>
+				</marker>
+				<token postag='V.+' postag_regexp='yes'/>
+			</pattern>
+			<message>Expressão não pode ser traduzida literalmente.</message>
+			<suggestion>intestino delgado</suggestion>
+			<example correction="intestino delgado">O <marker>intestino pequeno</marker> é um órgão importante.</example>
+		</rule>
+	</rulegroup>
+
+
+	<!-- TRAZEDOR(ES) DA JUSTIÇA justiceiro(s) -->
+	<rule id='TRAZEDORES_DA_JUSTIÇA' name="Erro de tradução: 'justiceir[ao](s)'">
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-06 (Checked/Enhanced) (1-JAN-2022+)      -->
+
+      <pattern>
+		  <token regexp="yes">trazedora?|trazedor[ae]s</token>
+          <token regexp="yes">d[ae]</token>
           <token>justiça</token>
       </pattern>
       <message>Expressão não pode ser traduzida literalmente.</message>
-        <suggestion>justiceiros</suggestion>
+      <suggestion><match no='1' postag='NC(..)000' postag_replace='NC$1000'>justiceiro</match></suggestion>
+	  <example correction="justiceiro">O terrorista julga ser <marker>trazedor da justiça</marker>.</example>
       <example correction="justiceiros">Os terroristas julgam ser <marker>trazedores da justiça</marker>.</example>
     </rule>
-    <rule>
-      <pattern>
-          <token>trazedor</token>
-          <token regexp="yes">de|da</token>
-          <token>justiça</token>
-      </pattern>
-      <message>Expressão não pode ser traduzida literalmente.</message>
-        <suggestion>justiceiro</suggestion>
-      <example correction="justiceiro">O terrorista julga ser <marker>trazedor da justiça</marker>.</example>
-    </rule>
-  </rulegroup>
 
-    <rule id='UM_TAMANHO_SERVE_PARA_TODOS' name="Erro de tradução: 'tamanho único'">
-    <!-- Created by Marco A.G. Pinto -->
+
+	<!-- UM TAMANHO DÁ/SERVE PARA TODOS tamanho único -->
+    <rule id='UM_TAMANHO_SERVE_DÁ_PARA_TODOS' name="Erro de tradução: 'tamanho único'">
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-06 (Checked/Enhanced) (1-JAN-2022+)      -->
       <pattern>
           <token>um</token>
           <token>tamanho</token>
           <token regexp="yes" inflected='yes'>servir|dar</token>
           <token regexp='yes'>pa?ra</token>
-          <token>todos</token>
+		  <token regexp='yes'>tod[ao]s</token>
       </pattern>
       <message>Expressão não pode ser traduzida literalmente.</message>
-        <suggestion>tamanho único</suggestion>
+      <suggestion>tamanho único</suggestion>
       <example correction="tamanho único">As meias são <marker>um tamanho serve para todos</marker>.</example>
     </rule>
+
+
  </category>
 
+
  <category id='MISSPELLING' name="Erros Ortográficos" type="misspelling">
- 
+
+
  	<!-- PODERIAM-SE poder-se-ia -->
     <rulegroup id='PODERIAM-SE' name="Formas verbais: poderiam-se → poder-se-iam">
     <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-11-24/30 + 2021-12-02 (Enhanced) (25-JUN-2021+)      -->
@@ -42713,7 +43035,7 @@ Assim comerão-me o pão. → Assim comer-me-ão o pão.
       </antipattern>
     <rule>
       <pattern>
-          <token regexp='yes'>n|ñ|pq?|q(?:nd|ts)?|lol|vc|b(jos?|lz)|kk+|tbm?|omg|rotfl|wtf
+          <token regexp='yes'>bbiab|n|ñ|pq?|q(?:nd|ts)?|lol|vc|b(jos?|lz)|kk+|tbm?|omg|rotfl|wtf
             <exception case_sensitive='yes'>N</exception></token>
       </pattern>
       <message>Linguagem de Internet. Escreva por extenso.</message>
@@ -45353,37 +45675,30 @@ Assim comerão-me o pão. → Assim comer-me-ão o pão.
     </rule>
   </rulegroup>
 
+
  </category>
+
 
  <category id='COMPOUNDING' name="Palavras Compostas" type="misspelling">
 
+
 	<!-- ALÉM AQUÉM RECÉM além- aquém- recém- -->
-	<!--      Created by Marco A.G.Pinto, Portuguese rule 2021-01-07 +  2021-01-08 (1-JAN-2021+)      -->
+	<!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-12 (Checked/Enhanced) (1-JAN-2022+)      -->
 <!--
 O conflito ocorre além-mar.
 -->		
-	<rule id='ALÉM_AQUÉM_RECÉM' name="Além/Aquém/Recém → Além-/Aquém-/Recém-" type="style">    
+	<rule id='ALÉM_AQUÉM_RECÉM' name="Além/Aquém/Recém (hifenizar)" type="style">    
       <pattern>
 		<token regexp='yes'>além|aquém|recém</token>
 		<token postag='NC.+|AQ.+' postag_regexp='yes'/>
       </pattern>
       <message>Esta palavra é hifenizada.</message>
-        <suggestion>\1-\2</suggestion>
+      <suggestion>\1-\2</suggestion>
       <example correction="além-mar">O conflito ocorre <marker>além mar</marker>.</example>
 	  <example type='correct'>O conflito ocorre <marker>além-mar</marker>.</example>
+	  <example>Tom e eu somos recém-casados.</example>
     </rule>
 
-    <rule id='LP_HIPHEN_DE_HIPHEN' name='Compostas: Palavras com -de-'>
-    <!-- Based on Lightproof rule by Tiago F. Santos , Portuguese rule, 2017-07-06 -->
-      <regexp>\b(?!feij(?:ão|ões)-frade)((?:c(?:a(?:r(?:rap(?:icho(?:s-(?:c(?:a(?:(?:rneir|val)o|lçada)|igana)|(?:agu|ove)lha|l(?:inho|ã)|boi)|-(?:c(?:a(?:(?:rneir|val)o|lçada)|igana)|(?:agu|ove)lha|l(?:inho|ã)|boi))|ato(?:s-(?:p(?:assarinho|eixe)|(?:caval|sap)o|galinha|boi)|-(?:p(?:assarinho|eixe)|(?:caval|sap)o|galinha|boi)))|u(?:ru(?:s-(?:(?:s(?:oldad|ap)|cach|vead)o|espi(?:nho|ga)|po(?:mba|rco))|-(?:(?:s(?:oldad|ap)|cach|vead)o|espi(?:nho|ga)|po(?:mba|rco)))|atás?-pau)|d(?:o(?:s-(?:(?:(?:bur|ou)r|vis[cg])o|co(?:chonilha|alho|mer)|isca)|-(?:(?:(?:bur|ou)r|vis[cg])o|co(?:chonilha|alho|mer)|isca))|ea(?:is|l)-poupa)|á(?:s-(?:(?:sapateir|cabocl|espinh)o|(?:angol|pedr|águ)a|jardim)|-(?:(?:sapateir|cabocl|espinh)o|(?:pedr|águ)a|jardim))|a(?:n(?:ha(?:s-(?:viveir|toc|ri)|-(?:viveir|toc))o|guejos?-pedra)|guatás?-jardim)|(?:v(?:ões|ão)-ferreir|mim-cártam)o|nes-donzela)|p(?:i(?:ns-(?:b(?:o(?:t(?:ão|a)|lota|de)|a(?:ndeira|tatais)|u(?:cha|rro)|ezerro)|c(?:a(?:(?:rneir|val)o|(?:piva|b)ra)|o(?:ntas|rte|co)|heiro|uba)|t(?:(?:artarug|ouceir)a|e(?:nerife|so))|(?:m(?:a(?:rrec|nad)|ul)|esteir|égu)a|p(?:(?:ernambuc|ast|omb)o|lanta)|f(?:o(?:rquilha|go)|lecha|eixe)|r(?:o(?:[ls]a|des)|ebanho|aiz)|a(?:n(?:gola|dar)|çude)|s(?:apo|oca)|diamante|lastro|natal|itu)|m-(?:b(?:o(?:t(?:ão|a)|lota|de)|a(?:ndeira|tatais)|u(?:cha|rro)|ezerro)|c(?:a(?:(?:rneir|val)o|(?:piva|b)ra)|o(?:ntas|rte|co)|heiro|uba)|(?:m(?:a(?:rrec|nad)|ul)|esteir|égu|soc)a|t(?:(?:artarug|ouceir)a|e(?:nerife|so))|p(?:(?:ernambuc|ast|omb)o|lanta)|f(?:o(?:rquilha|go)|lecha|eixe)|r(?:o(?:[ls]a|des)|ebanho|aiz)|a(?:n(?:gola|dar)|çude)|d(?:iamante|eus)|lastro|natal|itu)|tã(?:es|o)-sa(?:ír|l)a|xinguis?-bicho)|elas?-viúva)|n(?:a(?:s-(?:(?:(?:chei|bur)r|passarinh|macac)o|(?:v(?:asso[iu]|íbo)r|frech|roc)a|(?:jacar|imb)é|elefante|açúcar|urubu)|-(?:(?:v(?:asso[iu]|íbo)r|frech|roc)a|(?:passarinh|macac|burr)o|(?:jacar|imb)é|elefante|açúcar|urubu)|fístula(?:s-(?:igapó|lagoa|boi)|-(?:igapó|lagoa|boi)))|el(?:a(?:s-(?:c(?:a(?:poeira|tarro)|(?:eilã|heir)o|utia)|v(?:e(?:ad|lh)o|argem)|g(?:arça|oiás)|papagaio|jacamim|ema)|-(?:c(?:a(?:poeira|tarro)|utia)|v(?:argem|eado)|g(?:arça|oiás)|papagaio|jacamim|ema))|eira(?:s-(?:cheiro|ema)|-(?:cheiro|ema)))|udo(?:s-(?:cachimbo|lagoa)|-(?:cachimbo|lagoa))|(?:ários?-franç|iços?-águ)a|sanç(?:ões|ão)-leite|oés?-botão)|s(?:t(?:a(?:nh(?:a(?:-(?:(?:á(?:fric|gu)|a(?:rar|nt))a|m(?:oçambique|acaco|inas)|c(?:aiaté|utia)|p(?:eixe|uri)|jatobá|bugre)|s-(?:(?:á(?:fric|gu)|a(?:rar|nt))a|m(?:oçambique|acaco|inas)|c(?:aiaté|utia)|p(?:eixe|uri)|bugre))|eiros?-minas)|s?-correr)|or(?:es)?-montanha)|c(?:a(?:s-(?:carvalho|jacaré|anta)|-(?:carvalho|jacaré|noz))|o(?:s-(?:cavalo|jabuti|tatu)|-(?:cavalo|jabuti|tatu))|udo(?:s-(?:enfeite|aranha)|-(?:enfeite|aranha))))|m(?:a(?:r(?:á(?:s-(?:(?:c(?:aval|heir)|espinh)o|b(?:ilro|oi)|flecha)|-(?:(?:c(?:aval|heir)|espinh)o|b(?:ilro|oi)|flecha))|ões-(?:pe(?:nedo|dra)|estalo|areia)|ão-(?:pe(?:nedo|dra)|estalo|areia))|le(?:ões-(?:pedreira|asas)|ão-(?:pedreira|asas)))|b(?:ará(?:s-(?:c(?:h(?:eir|umb)o|apoeira)|espinho|lixa)|-(?:c(?:h(?:eir|umb)o|apoeira)|espinho|lixa))|oatãs?-leite)|urus?-cheiro)|c(?:himbo(?:s-(?:(?:maca|tur)co|jabuti)|-(?:(?:maca|tur)co|jabuti))|au(?:s-(?:ca(?:racas|iena)|mico)|-(?:ca(?:racas|iena)|mico))|tos?-cabeça)|b(?:a(?:(?:ças?-trombet|cinhas?-cobr)a|s-(?:igreja|ladrão|peixe)|-(?:igreja|ladrão|peixe))|u(?:mbos?-azeite|rés?-orelha))|val(?:inho(?:-(?:judeu|deus|cão)|s-judeu)|o-cão)|fé(?:s-b(?:agueio|ugre)|-b(?:agueio|ugre))|t(?:ingueiros?-porc|otas?-espinh)o|avuranas?-cunhã)|o(?:c(?:o(?:-(?:(?:b(?:acai(?:aú|u)b|ocaiuv)|p(?:almeir|indob|urg)|quar(?:esm|t)|oitav)a|v(?:a(?:queiro|ssoura)|inagre|eado)|c(?:(?:a(?:cho|ta)rr|igan)o|olher)|(?:espinh|rosári|macac|óle)o|i(?:ndaiá|ri)|(?:gur|a)iri|na(?:tal|iá)|dendê)|s-(?:(?:b(?:acai(?:aú|u)b|ocaiuv)|p(?:almeir|indob|urg)|quar(?:esm|t)|oitav)a|v(?:a(?:queiro|ssoura)|inagre|eado)|c(?:(?:a(?:cho|ta)rr|igan)o|olher)|(?:espinh|rosári|macac|óle)o|i(?:ndaiá|ri)|na(?:tal|iá)|dendê|guriri))|(?:honilhas?-cer|as?-águ)a)|bra(?:-(?:c(?:a(?:p(?:elo|im)|scavel|belo|ju)|o(?:lchete|ral)|ipó)|(?:es[cp]ad|ferradur|barat|águ)a|(?:v(?:ead|idr)|lix|oc)o|a(?:r(?:eia)?|sa)|pernas|ratos?)|s-(?:c(?:a(?:p(?:elo|im)|scavel|belo|ju)|o(?:lchete|ral)|ipó)|(?:ferradur|barat|espad|águ)a|(?:v(?:ead|idr)|lix|oc)o|a(?:r(?:eia)?|sa)|pernas|ratos?))|l(?:a(?:-(?:(?:(?:sapatei|zor)r|caval)o|peixe)|s-(?:(?:caval|zorr)o|peixe))|eir(?:o(?:s-(?:(?:band|choc)o|sapé)|-(?:(?:band|choc)o|sapé))|as?-sapé))|r(?:(?:uj(?:as?|ão)-igrej|tiças?-montanh|-ros)a|vina(?:s-(?:corso|linha)|-(?:corso|linha))|d(?:ões|ão)-frade|reias?-inverno)|e(?:rana(?:s-(?:(?:caravel|min)as|pernambuco)|-(?:(?:caravel|min)as|pernambuco))|ntro(?:s-caboclos|-caboclo))|gumelo(?:s-(?:c(?:aboclo|hapéu)|(?:sangu|leit)e|paris)|-(?:c(?:aboclo|hapéu)|(?:sangu|leit)e|paris))|uve(?:s-(?:a(?:dorno|reia)|(?:saboi|águ)a|cortar)|-(?:a(?:dorno|reia)|(?:saboi|águ)a|cortar))|n(?:gonha(?:s-(?:caixeta|bugre|goiás)|-(?:caixeta|bugre|goiás))|durus?-sangue|tas?-cabra)|irana(?:s-(?:(?:caravel|min)as|pernambuco)|-(?:(?:caravel|min)as|pernambuco))|(?:xas?-(?:d(?:am|on)|freir)|mer(?:es)?-arar|tovias?-poup)a|queiro(?:s-(?:vassoura|dendê)|-(?:vassoura|dendê))|paibeiras?-minas)|ipó(?:-(?:c(?:a(?:r(?:neiro|ijó)|b(?:oclo|aça)|noa)|o(?:r(?:ação|da)|(?:br|l)a)|h(?:agas|umbo)|u[mn]anã|esto)|a(?:l(?:caçuz|ho)|r(?:acuã|c)o|marrar|gulha)|m(?:a(?:inibu|caco)|o(?:fumb|rceg)o|ucuna)|b(?:a(?:(?:mburra|rri)l|tata)|reu|oi)|j(?:a(?:b(?:ut[ái]|ota)|rrinha)|unta)|p(?:(?:a(?:in|lm)|oit)a|enas)|t(?:amanduá|ucunaré|imbó)|l(?:avadeira|eite)|v(?:aqueiro|iúva)|e(?:mbiri|scada)|im(?:pingem|bé)|g(?:ato|ota)|s(?:apo|eda)|(?:fo|re)go|quati|água)|s-(?:c(?:a(?:r(?:neiro|ijó)|b(?:oclo|aça)|noa)|o(?:r(?:ação|da)|(?:br|l)a)|u[mn]anã|hagas|esto)|a(?:l(?:caçuz|ho)|r(?:acuã|c)o|marrar|gulha)|m(?:a(?:inibu|caco)|o(?:fumb|rceg)o|ucuna)|b(?:a(?:(?:mburra|rri)l|tata)|reu|oi)|j(?:a(?:b(?:ut[ái]|ota)|rrinha)|unta)|p(?:(?:a(?:in|lm)|oit)a|enas)|t(?:amanduá|ucunaré|imbó)|l(?:avadeira|eite)|v(?:aqueiro|iúva)|e(?:mbiri|scada)|im(?:pingem|bé)|g(?:ato|ota)|s(?:apo|eda)|(?:fo|re)go|quati|água))|r(?:av(?:o(?:s-(?:(?:cabe(?:cinh|ç)|esperanç|sear)a|b(?:(?:astã|urr)o|ouba)|p(?:oeta|au)|defunto|tunes|urubu|amor)|-(?:(?:cabe(?:cinh|ç)|esperanç|sear)a|b(?:(?:astã|urr)o|ouba)|p(?:oeta|au)|defunto|tunes|urubu|amor))|in(?:a(?:s-(?:(?:lagartix|águ)a|ambrósio|tunes|pau)|-(?:(?:lagartix|águ)a|tunes|pau))|ho(?:s-(?:(?:lagartix|campin)a|defunto)|-(?:lagartixa|defunto))))|ista(?:s-(?:gal(?:inha|o)|mutum|peru)|-(?:gal(?:inha|o)|mutum|peru)|(?:is|l)-rocha))|e(?:bol(?:(?:a(?:s-(?:cheir|lob)|-lob)|inhas?-cheir)o|etas?-frança)|r(?:ej(?:as?-(?:caien|purg)|eiras?-purg)a|vejas?-pobre)|n(?:táureas?-jardim|ouras?-creta)|vadas?-jardim)|h(?:a(?:ga(?:s-(?:bauru|jesus)|-bauru)|scos?-leque)|u(?:p(?:ões|ão)-arroz|vas?-imbu))|u(?:tia(?:s-(?:rabo|pau)|-(?:rabo|pau))|(?:mbuc|i)as?-macaco)|ânhamo-manila)|p(?:a(?:u(?:s-(?:c(?:a(?:n(?:(?:galh|inan)a|deeiro|oas?|til)|m(?:peche|arão)|r(?:rapato|ne)|c(?:himbo|a)|i(?:bro|xa)|pitão|stor)|o(?:r(?:tiça|al)|n(?:ch|t)a|lher|bre)|h(?:a(?:pad|nc)a|i(?:cl|fr)e|eiro)|u(?:rt(?:ume|ir)|nanã|biú|tia)|erc?a|inzas|ruz)|s(?:a(?:n(?:t(?:ana|o)|gue)|p(?:ateir)?o|b(?:ão|iá)|ssafrás|lsa)|e(?:(?:rr|d)a|bo)|urriola|olar)|m(?:a(?:(?:n(?:jeriob|teig)|ri)a|(?:cac|str|lh)o)|o(?:(?:njol|rceg)o|quém|có)|(?:utamb|erd)a)|b(?:u(?:jarrona|gre|rro)|i(?:ch?o|lros)|a(?:rbas|lso)|o(?:[lt]o|ia)|r(?:incos|eu)|álsamo)|p(?:e(?:r(?:nambuco|eira)|nte)|r(?:eg(?:uiça|o)|aga)|i(?:ranha|lão)|o(?:mb|rc)o|ólvora)|l(?:a(?:g(?:arto|oa)|cre|nça)|e(?:(?:br|it)e|tras|pra)|i(?:vros|xa)|ágrima)|f(?:(?:a(?:[iv]|rinh)|ormig)a|(?:u[ms]|ígad)o|l(?:echas?|or)|e(?:bre|rro))|r(?:e(?:(?:spost|nd)a|(?:[gm]|in)o|de)|os(?:eira|as?)|a(?:inha|to))|e(?:s(?:p(?:inh|et)o|teira)|(?:rv(?:ilh)?|mbir)a|lefante)|a(?:(?:bóbor|ngol)a|r(?:ara|co)|l(?:ho|oé))|t(?:a(?:rtaruga|manco)|in(?:gui|ta)|ucano)|v(?:i(?:n(?:tém|ho)|ola)|e(?:ado|ia)|aca)|g(?:(?:asolin|om)a|ui(?:tarra|né))|j(?:erimum?|angada|udeu)|d(?:igestão|edal)|n(?:avalha|ovato)|o(?:rvalho|laria)|(?:incens|óle)o|(?:zebr|águ)a|qui(?:abo|na))|-(?:c(?:a(?:n(?:(?:galh|inan)a|deeiro|oas?|til)|m(?:peche|arão)|r(?:rapato|ne)|c(?:himbo|a)|i(?:bro|xa)|pitão|stor)|o(?:r(?:tiça|al)|n(?:ch|t)a|lher|bre)|h(?:a(?:pad|nc)a|i(?:cl|fr)e|eiro)|u(?:rt(?:ume|ir)|nanã|biú|tia)|erc?a|inzas|ruz)|s(?:a(?:n(?:t(?:ana|o)|gue)|p(?:ateir)?o|b(?:ão|iá)|ssafrás|lsa)|e(?:(?:rr|d)a|bo)|urriola|olar)|m(?:a(?:(?:n(?:jeriob|teig)|ri)a|(?:cac|str|lh)o)|o(?:(?:njol|rceg)o|quém|có)|(?:utamb|erd)a)|b(?:u(?:jarrona|gre|rro)|i(?:ch?o|lros)|a(?:rbas|lso)|o(?:[lt]o|ia)|r(?:incos|eu)|álsamo)|p(?:e(?:r(?:nambuco|eira)|nte)|r(?:eg(?:uiça|o)|aga)|i(?:ranha|lão)|o(?:mb|rc)o|ólvora)|l(?:a(?:g(?:arto|oa)|cre|nça)|e(?:(?:br|it)e|tras|pra)|i(?:vros|xa)|ágrima)|f(?:(?:a(?:[iv]|rinh)|ormig)a|(?:u[ms]|ígad)o|l(?:echas?|or)|e(?:bre|rro))|r(?:e(?:(?:spost|nd)a|(?:[gm]|in)o|de)|os(?:eira|as?)|a(?:inha|to))|e(?:s(?:p(?:inh|et)o|teira)|(?:rv(?:ilh)?|mbir)a|lefante)|t(?:a(?:rtaruga|manco)|in(?:gui|ta)|ucano)|v(?:i(?:n(?:tém|ho)|ola)|e(?:ado|ia)|aca)|a(?:(?:bóbor|ngol)a|l(?:ho|oé)|rco)|g(?:(?:asolin|om)a|ui(?:tarra|né))|j(?:erimum?|angada|udeu)|d(?:igestão|edal)|n(?:avalha|ovato)|o(?:rvalho|laria)|(?:incens|óle)o|(?:zebr|águ)a|qui(?:abo|na))|xis?-pedra)|l(?:m(?:eir(?:a(?:s-(?:(?:(?:palmi|ce)r|igrej)a|madagascar|dendê|leque|tebas|vinho)|-(?:(?:(?:palmi|ce)r|igrej)a|madagascar|dendê|leque|tebas|vinho))|inhas?-petrópolis)|a(?:s-(?:c(?:hicote|acho)|igreja|leque)|-(?:c(?:hicote|acho)|igreja|leque)|tórias?-espinho)|i(?:tos?-ferrão|lhas?-papa))|ha(?:s-(?:(?:penach|caniç)o|guiné|água)|-(?:(?:penach|caniç)o|guiné|água))|os-(?:calenturas|maria))|r(?:ic(?:á(?:s-(?:esponjas|curtume)|-(?:esponjas|curtume))|aranas?-espinhos)|a(?:cuuba(?:s-lei(?:te)?|-lei(?:te)?)|sitas?-samambaiaçu|tudos?-praia)|go(?:s-(?:m(?:itra|orro)|cótula)|-(?:m(?:itra|orro)|cótula)))|p(?:o(?:ila(?:s-(?:espinho|holanda)|-(?:espinho|holanda))|ula(?:s-(?:espinho|holanda)|-(?:espinho|holanda)))|agaio(?:s-cole(?:ira|te)|-cole(?:ira|te)))|in(?:a(?:s-(?:s(?:apo|eda)|arbusto|penas|cuba)|-(?:s(?:apo|eda)|arbusto|penas|cuba))|eira(?:s-(?:c(?:ipó|uba)|leite)|-(?:c(?:ipó|uba)|leite)))|(?:c(?:o(?:vas?-macac|s?-golung)|as-rab)|ssarinhos?-(?:arribaç|ver)ã|nelas?-bugi)o|t(?:os?-c(?:a(?:rúncul|ien)|rist)a|i(?:nhos?-igapó|s?-goiás))|v(?:ões|ão)-java)|i(?:nh(?:eir(?:o(?:s-(?:(?:(?:pur|ri)g|casquinh)a|jerusalém|alepo)|-(?:(?:(?:pur|ri)g|casquinh)a|jerusalém|alepo))|inho(?:s-(?:jardim|sala)|-(?:jardim|sala)))|ões-(?:(?:cerc|purg)a|madagascar|ratos?)|ão-(?:(?:cerc|purg)a|madagascar|rato)|o(?:s-(?:flandres|riga)|-riga)|as?-raiz)|ment(?:a(?:s-(?:c(?:(?:aien|oro)a|heiro)|(?:ra[bt]|macac)o|g(?:alinha|entio)|bu(?:gre|ta)|queimar|água)|-(?:c(?:(?:aien|oro)a|heiro)|(?:ra[bt]|macac)o|g(?:alinha|entio)|bu(?:gre|ta)|queimar|água))|ões-c(?:aiena|heiro)|ão-c(?:aiena|heiro))|t(?:o(?:mb(?:a(?:s-(?:macaco|leite)|-(?:macaco|leite))|eiras?-marajó)|s-(?:água|saci)|-(?:água|saci))|a(?:ng(?:ueira(?:s-(?:cachorro|jardim)|-(?:cachorro|jardim))|as?-cachorro)|s?-erva)|eiras?-sinal)|olho(?:s-(?:(?:galinh|balei|onç)a|(?:soldad|tubarã)o|p(?:lanta|adre)|c(?:ação|obra)|faraó|urubu)|-(?:(?:galinh|balei|onç)a|(?:soldad|tubarã)o|p(?:lanta|adre)|c(?:ação|obra)|faraó|urubu))|(?:piras?-(?:máscar|prat)|quiás?-pedr|ão-purg)a|c(?:ões-tr(?:opeiro|epar)|ão-tropeiro)|xiricas?-bolas|raíbas?-pele)|e(?:r(?:a(?:s-(?:a(?:(?:guieir|lmeid)a|dvogado)|r(?:e(?:fego|i)|osa)|(?:cris|un)to|jesus|água)|-(?:a(?:(?:guieir|lmeid)a|dvogado)|r(?:e(?:fego|i)|osa)|(?:cris|un)to|jesus|água))|oba(?:s-(?:(?:pernambuc|reg)o|ca(?:ntagalo|mpos)|go(?:iás|mo)|minas)|-(?:(?:pernambuc|reg)o|ca(?:ntagalo|mpos)|go(?:iás|mo)|minas))|(?:iquit(?:o(?:s-(?:campin|ant)|-ant)|inhos?-vassour)|cevejos?-(?:ca[ms]|galinh))a|diz(?:es)?-alqueive|us?-sol)|na(?:chos?-capim|s-avestruz)|pinos?-(?:papagai|burr)o|ssegueiros?-abrir|quiás?-pedra)|u(?:rga(?:s-(?:c(?:a(?:i(?:tité|apó)|(?:boc|va)lo|rijó)|ereja)|(?:ve(?:ad|nt)|marinheir|genti)o|pa(?:ulista|stor)|nabiça)|-(?:c(?:a(?:i(?:tité|apó)|(?:boc|va)lo|rijó)|ereja)|(?:ve(?:ad|nt)|marinheir|genti)o|pa(?:ulista|stor)|nabiça))|lg(?:a(?:s-(?:(?:a(?:rei|nt)|galinh|águ)a|bicho)|-(?:(?:a(?:rei|nt)|galinh|águ)a|bicho))|(?:ões|ão)-planta))|o(?:mb(?:a(?:s-(?:(?:(?:arribaç|sert)ã|espelh|band)o|mulata)|-(?:(?:(?:arribaç|sert)ã|espelh|band)o|mulata))|o(?:s-(?:montanha|leque)|-(?:montanha|leque)))|rco(?:s-(?:verrugas|ferro)|-(?:verrugas|ferro))|aia(?:s-(?:minas|cipó)|-(?:minas|cipó)))|ã(?:es-(?:p(?:o(?:rc(?:in)?o|bre)|ássaros)|gal(?:inha|o)|leite|cuco)|o-(?:p(?:orc(?:in)?o|ássaros)|gal(?:inha|o)|cuco))|l(?:uma(?:s-(?:príncipe|capim)|-(?:príncipe|capim))|átanos?-gênio|antas?-neve)|r(?:eguiça(?:s-(?:bentinho|coleira)|-(?:bentinho|coleira))|imaveras?-caiena)|ássaros?-f(?:andan|i)go|êssegos?-abrir)|f(?:lor(?:es-(?:c(?:a(?:(?:(?:r(?:nav|de)|m)a)?l|(?:sament|chimb|bocl)o)|o(?:(?:[iu]r|elh|c)o|ntas|bra|ral)|e(?:tim|ra)|hagas|iúme|uco)|p(?:a(?:(?:ssarinh|pagai|raís|vã)o|dre|lha|u)|e(?:licano|dra)|érolas)|m(?:a(?:r(?:acujá|iposa)|deira|io)|(?:(?:eren|osca)d|us)a|ico)|b(?:a(?:(?:b(?:eir|ad)|rbeir)o|unilha|ile)|eso[iu]ro)|a(?:(?:lgodã|njinh)o|ranha|bril|zar)|s(?:a(?:p(?:at)?o|ngue)|(?:ed|ol)a)|v(?:(?:iúv|ac)a|e(?:lu|a)do)|n(?:(?:espereir|oiv)a|atal)|l(?:is(?:ado)?|agartixa|ã)|(?:quaresm|dian|águ)a|(?:invern|índi|fog)o|e(?:spírito|nxofre)|t(?:rombeta|anino)|g(?:ra[mx]a|elo)|jesus)|-(?:c(?:a(?:(?:(?:r(?:nav|de)|m)a)?l|(?:sament|chimb|bocl)o)|o(?:(?:[iu]r|elh|c)o|ntas|bra|ral)|e(?:tim|ra)|hagas|iúme|uco)|p(?:a(?:(?:ssarinh|pagai|raís|vã)o|dre|lha|u)|e(?:licano|dra)|érolas)|m(?:a(?:r(?:acujá|iposa)|deira|io)|(?:(?:eren|osca)d|us)a|ico)|b(?:a(?:(?:b(?:eir|ad)|rbeir)o|unilha|ile)|eso[iu]ro)|a(?:(?:lgodã|njinh)o|ranha|bril|zar)|s(?:a(?:p(?:at)?o|ngue)|(?:ed|ol)a)|v(?:(?:iúv|ac)a|e(?:lu|a)do)|n(?:(?:espereir|oiv)a|atal)|(?:quaresm|dian|águ)a|(?:invern|índi|fog)o|e(?:spírito|nxofre)|l(?:agartixa|is|ã)|t(?:rombeta|anino)|g(?:ra[mx]a|elo)|jesus))|rut(?:a(?:s-(?:c(?:o(?:n(?:de(?:ssa)?|ta)|(?:dorn|ruj)a)|a(?:chorro|scavel|iapó)|utia)|g(?:(?:enti|al)o|uar(?:iba|á)|rude)|m(?:a(?:n(?:teig|il)a|caco)|orcego)|p(?:(?:a(?:pagai|vã)|omb|ã)o|erdiz)|sa(?:(?:pucainh|ír)a|b(?:ão|iá))|a(?:n(?:ambé|el)|rara)|v(?:(?:íbor|i)a|eado)|b(?:abad|urr)o|t(?:ucano|atu)|l(?:epra|obo)|jac(?:aré|u)|árvore|faraó|ema)|-(?:c(?:o(?:n(?:de(?:ssa)?|ta)|(?:dorn|ruj)a)|a(?:chorro|scavel|iapó)|utia)|g(?:(?:enti|al)o|uar(?:iba|á)|rude)|m(?:a(?:n(?:teig|il)a|caco)|orcego)|p(?:(?:a(?:pagai|vã)|omb|ã)o|erdiz)|sa(?:(?:pucainh|ír)a|b(?:ão|iá))|a(?:n(?:ambé|el)|rara)|v(?:(?:íbor|i)a|eado)|b(?:abad|urr)o|t(?:ucano|atu)|l(?:epra|obo)|jac(?:aré|u)|árvore|faraó|ema))|eira(?:s-(?:c(?:onde(?:ssa)?|achorro|utia)|(?:macac|tucan|burr|lob)o|p(?:(?:avã|omb)o|erdiz)|jac(?:aré|u)|arara|faraó)|-(?:c(?:onde(?:ssa)?|achorro|utia)|(?:macac|tucan|burr|lob)o|p(?:(?:avã|omb)o|erdiz)|jac(?:aré|u)|arara|faraó))|o(?:s-(?:c(?:a(?:xinguelê|chorro)|o(?:br|nt)a)|m(?:a(?:nteiga|caco)|orcego)|p(?:apagaio|erdiz)|burro|sabiá|imbé)|-(?:c(?:a(?:xinguelê|chorro)|o(?:br|nt)a)|m(?:a(?:nteiga|caco)|orcego)|p(?:apagaio|erdiz)|burro|sabiá|imbé)))|o(?:r(?:m(?:iga(?:s-(?:f(?:e(?:rrão|bre)|ogo)|r(?:a(?:spa|bo)|oça)|c(?:emitério|upim)|m(?:andioca|onte)|b(?:entinho|ode)|(?:imbaúv|onç)a|n(?:ovato|ós)|defunto)|-(?:f(?:e(?:rrão|bre)|ogo)|r(?:a(?:spa|bo)|oça)|c(?:emitério|upim)|m(?:andioca|onte)|b(?:entinho|ode)|(?:imbaúv|onç)a|n(?:ovato|ós)|defunto))|osa(?:s-(?:besteiros|darei)|-(?:besteiros|darei)))|no(?:s-ja(?:çanã|caré)|-ja(?:çanã|caré)))|lha(?:s-(?:s(?:a(?:n(?:tana|gue)|bão)|e(?:rr|d)a)|f(?:(?:ígad|og)o|igueira|ronte)|p(?:a(?:pagaio|dre|jé)|irarucu)|(?:comichã|bold?|gel)o|l(?:ança|eite|ouco)|(?:zeb|he|ta)ra|mangue|urubu)|-(?:s(?:a(?:n(?:tana|gue)|bão)|erra)|f(?:(?:ígad|og)o|igueira|ronte)|p(?:a(?:pagaio|dre|jé)|irarucu)|(?:comichã|bold?|gel)o|l(?:ança|eite|ouco)|(?:zeb|he|ta)ra|mangue|urubu))|cas?-capuz)|a(?:v(?:a(?:s-(?:(?:a(?:ngol|rar)|(?:mal|v)ac|r(?:osc|am)|sucupir|holand)a|c(?:a(?:labar|valo)|h(?:eiro|apa)|obra)|b(?:e(?:souro|lém)|ol(?:ach|ot)a)|(?:quebrant|engenh|ordáli)o|l(?:(?:ázar|ob)o|ima)|t(?:ambaqui|onca)|p(?:orco|aca)|impin?gem)|-(?:(?:a(?:ngol|rar)|(?:mal|v)ac|r(?:osc|am)|sucupir|holand)a|b(?:e(?:souro|lém)|ol(?:ach|ot)a)|c(?:a(?:labar|valo)|(?:hap|obr)a)|(?:quebrant|ordáli)o|t(?:ambaqui|onca)|p(?:orco|aca)|l(?:ima|obo)|impin?gem))|eira(?:s-(?:impin?gem|berloque)|-(?:impin?gem|berloque))|inhas?-capoeira)|lc(?:ões|ão)-coleira)|e(?:ij(?:õe(?:s-(?:c(?:(?:o(?:br|rd)|er|ub)a|avalo)|g(?:u(?:ando|izos)|ado)|(?:árvor|azeit|frad)e|l(?:i(?:sbo|m)a|eite)|(?:jav|rol|soj)a|m(?:acáçar|etro)|po(?:mbinha|rco)|va(?:[cr]a|gem)|tropeiro|boi)|zinhos-capoeira)|ão(?:-(?:c(?:(?:ord|er|ub)a|avalo)|g(?:u(?:ando|izos)|ado)|(?:árvor|azeit|frad)e|l(?:i(?:sbo|m)a|eite)|(?:jav|rol|soj)a|m(?:acáçar|etro)|po(?:mbinha|rco)|va(?:[cr]a|gem)|tropeiro|boi)|zinho-capoeira))|(?:l(?:es)?-genti|nos?-cheir|tos?-botã)o)|i(?:g(?:ueira(?:s-(?:(?:lombrigueir|pit|go)a|b(?:engala|aco)|to(?:car|que)|jardim)|-(?:(?:lombrigueir|pit|go)a|b(?:engala|aco)|to(?:car|que)|jardim))|o(?:s-(?:(?:figueir|banan)a|r(?:echeio|ocha)|(?:tord|verã)o)|-(?:(?:figueir|banan)a|r(?:echeio|ocha)|(?:tord|verã)o)))|lária(?:s-(?:medina|guiné)|-(?:medina|guiné))|andeiras?-algodão)|u(?:mo(?:s-(?:(?:rapos|cord|folh)a|pa(?:isan|raís)o|jardim)|-(?:(?:rapos|cord|folh)a|pa(?:isan|raís)o|jardim))|ncho(?:s-(?:(?:florenç|águ)a|porco)|-(?:(?:florenç|águ)a|porco)))|éis-gentio)|b(?:a(?:nan(?:eir(?:a(?:s-(?:(?:madag[áa]sca|flo)r|(?:italian|papagai)o|sementes|jardim|corda|leque)|-(?:(?:madag[áa]sca|flo)r|(?:italian|papagai)o|sementes|jardim|corda|leque))|inha(?:s-(?:touceira|salão|flor)|-(?:touceira|salão|flor)))|a(?:s-(?:(?:m(?:orceg|acac)|papagai)o|s(?:ementes|ancho)|imbé)|-(?:(?:m(?:orceg|acac)|papagai)o|s(?:ementes|ancho)|imbé)))|tat(?:a(?:s-(?:p(?:e(?:rdiz|dra)|ur(?:ga|i)|orco)|a(?:(?:ngol|rrob)a|maro)|b(?:(?:ranc|ugi)o|ainha)|(?:cabocl|vead)o|t(?:aiuiá|iú)|escamas|rama)|-(?:p(?:e(?:rdiz|dra)|ur(?:ga|i)|orco)|a(?:(?:ngol|rrob)a|maro)|b(?:(?:ranc|ugi)o|ainha)|(?:cabocl|vead)o|t(?:aiuiá|iú)|escamas|rama))|inhas?-cobra)|g(?:a(?:s-(?:(?:cabocl|tucan|lour)o|p(?:ombo|raia))|-(?:(?:cabocl|tucan|lour)o|p(?:ombo|raia)))|re(?:s-(?:(?:arei|lago)a|man(?:gue|ta)|penacho)|-(?:(?:arei|lago)a|man(?:gue|ta)|penacho))|os?-chumbo)|r(?:r(?:ete(?:s-(?:clérigo|eleitor|padre)|-(?:clérigo|eleitor|padre))|ig(?:udas?-espinho|as?-freira))|ba(?:-(?:(?:chib|timã)o|pa(?:ca|u)|lagoa)|s-(?:(?:chib|timã)o|lagoa|boi|pau)))|b(?:osa(?:s-(?:árvore|espiga|pau)|-(?:árvore|espiga|pau))|a(?:-(?:(?:camel|sap)o|boi)|s-(?:sapo|boi)))|c(?:u(?:r(?:aus?-(?:lajea|ban)do|is?-cerca)|(?:paris?-capoei|s?-ped)ra)|abas?-(?:azeit|lequ)e)|mbu(?:s-(?:(?:espinh|caniç)o|pescador|mobília)|-(?:(?:espinh|caniç)o|pescador|mobília))|leia(?:s-(?:b(?:arbatana|ico)|corcova|gomo)|-(?:b(?:arbatana|ico)|corcova|gomo))|i(?:acu(?:s-(?:espinho|chifre)|-(?:espinho|chifre))|nhas?-(?:espad|fac)a)|st(?:(?:i(?:ões|ão)-arrud|ardos?-rom)a|ões-velho)|d(?:ianas?-cheiro|ejos?-lista)|unilhas?-auacuri|únas?-fogo)|i(?:c(?:h(?:o(?:-(?:c(?:(?:a(?:rpintei|chor)r|est)o|o(?:nta|co)|hifre)|(?:(?:ester|bura)c|ouvid|rum)o|(?:(?:gali|u)nh|taquar|sed)a|p(?:a(?:rede|u)|orco|ena|é)|m(?:(?:edranç|osc)a|ato)|v(?:areja|eludo)|f(?:rade|ogo))|s-(?:c(?:(?:a(?:rpintei|chor|nast)r|est)o|o(?:nta|co)|hifre)|(?:m(?:edranç|osc)|(?:gali|u)nh|taquar|sed)a|(?:(?:ester|bura)c|ouvid|rum)o|p(?:a(?:rede|u)|orco|ena|é)|v(?:areja|eludo)|f(?:rade|ogo)))|eiros?-conta)|udas?-corso)|ribás?-pernambuco|telos?-gente)|o(?:r(?:boleta(?:s-(?:p(?:êssego|iracema)|a(?:moreira|lface)|(?:carvalh|band)o|gás)|-(?:p(?:êssego|iracema)|a(?:moreira|lface)|(?:carvalh|band)o|gás))|d(?:ões|ão)-(?:santiag|macac)o)|i(?:s-(?:carro|guará|deus)|-(?:carro|guará|deus)|tas?-bigodes)|a(?:is|l)-alicante|fes?-burro|tos-óculos)|r(?:edo(?:s-(?:(?:namor(?:ad)?|porc|vead|mur)o|espi(?:nho|ga)|cabeça|jardim)|-(?:(?:namor(?:ad)?|porc|vead|mur)o|espi(?:nho|ga)|cabeça|jardim))|inco(?:s-(?:s(?:a(?:guim?|uim)|urubim)|passarinho)|-(?:sa(?:guim?|uim)|passarinho))|(?:ucos?-salvaterr|ancos?-barit)a|ocas?-raiz)|e(?:s(?:ouro(?:s-(?:(?:limeir|águ)a|chifre|maio)|-(?:(?:limeir|águ)a|chifre|maio))|ugos?-ovas)|l(?:droega(?:s-(?:inverno|cuba)|-(?:inverno|cuba))|a(?:s-felgueiras?|-felgueiras?))|ngalas?-camarão|tónicas?-água|ijus?-potó)|álsamo(?:s-(?:c(?:a(?:rtagena|nudo)|heiro)|(?:arce|tol)u|enxofre)|-(?:c(?:a(?:rtagena|nudo)|heiro)|(?:arce|tol)u|enxofre))|u(?:ch(?:o(?:s-(?:veado|boi|rã)|-(?:veado|boi|rã))|as?-purga)|t(?:iás?-vinagre|uas?-corvo)|xos?-holanda))|a(?:l(?:f(?:a(?:vaca(?:s-(?:c(?:(?:abocl|heir)o|obra)|vaqueiro)|-(?:c(?:(?:abocl|heir)o|obra)|vaqueiro))|ce(?:s-(?:(?:c(?:ordeir|ã)|porc)o|alger)|-(?:(?:c(?:ordeir|ã)|porc)o|alger))|zemas?-caboclo|fas?-provença)|inete(?:s-(?:toucar|dama)|-toucar))|m(?:a(?:s-(?:c(?:a(?:(?:boc|va)lo|çador)|(?:hichar|ânta)ro)|(?:tapui|pomb|gat)o|biafada|mestre)|-(?:c(?:a(?:(?:boc|va)lo|çador)|(?:hichar|ânta)ro)|(?:tapui|pomb|gat)o|biafada))|ecegueira(?:s-(?:cheiro|minas)|-(?:cheiro|minas)))|e(?:cri(?:ns-(?:c(?:ampina|heiro)|angola)|m-(?:c(?:ampina|heiro)|angola))|trias?-pau)|ho(?:s-(?:espanha|cheiro)|-(?:espanha|cheiro))|ba(?:troz(?:es)?-sobrancelha|coras?-laje)|g(?:odoeiros?-pernambuco|ibeiras?-dama)|cachofras?-jerusalém|amandas?-jacobina)|r(?:a(?:ç(?:á(?:s-(?:c(?:o(?:mer|roa)|heiro)|(?:umbig|vead)o|(?:pomb|ant)a|tinguijar|minas)|-(?:c(?:o(?:mer|roa)|heiro)|(?:umbig|vead)o|(?:pomb|ant)a|tinguijar|minas))|aris?-minhoca)|ticu(?:ns-(?:(?:espinh|cheir)o|(?:jangad|pac)a|boia?)|m-(?:(?:espinh|cheir)o|(?:jangad|pac)a|boia?))|nha(?:s-(?:água|coco)|-(?:água|coco))|(?:pocas?-cheir|rutas?-porc)o)|r(?:aia(?:s-(?:coroa|fogo)|-(?:coroa|fogo))|ozes-(?:telhad|rat)o|udas?-campinas)|oeira(?:s-(?:(?:goiá|mina)s|capoeira|bugre)|-(?:(?:goiá|mina)s|capoeira|bugre))|(?:lequi(?:ns|m)-caien|cos?-pip)a)|n(?:g(?:ico(?:s-(?:m(?:onte|ina)s|banhado|curtume)|-(?:m(?:onte|ina)s|banhado|curtume))|eli(?:ns|m)-(?:espinh|morceg)o|élicas?-rama)|a(?:n(?:ases-(?:caraguatá|agulha)|ás-(?:caraguatá|agulha))|mbés?-capuz)|dorinha(?:s-(?:bando|casa)|-(?:bando|casa))|ingas?-(?:espinh|macac)o|u(?:n?s|m)?-enchente|z(?:óis|ol)-lontra)|m(?:or(?:e(?:ira(?:s-(?:espinho|árvore)|-(?:espinho|árvore))|s-(?:(?:(?:vaquei|bur)r|hortelã)o|moça))|-(?:(?:(?:vaquei|bur)r|hortelã)o|moça))|e(?:ndo(?:i(?:ns-(?:árvore|veado)|m-(?:árvore|veado))|eiras?-coco)|ixa(?:s-(?:madagascar|espinho)|-(?:madagascar|espinho)))|êndoas?-(?:espinh|coc)o)|b(?:elha(?:s-(?:c(?:(?:achorr|hã)o|upim)|(?:rein|fog|our|sap)o|p(?:urga|au))|-(?:(?:rein|fog|our|sap)o|p(?:urga|au)|cupim))|(?:utuas?-batat|óbora-coro)a|r(?:icós?-macaco|aços?-vide))|s(?:a(?:s-(?:pa(?:pagaio|lha)|(?:barat|telh)a|sabre)|-(?:pa(?:pagaio|lha)|(?:barat|telh)a|sabre))|pargo(?:s-(?:jardim|sala)|-(?:jardim|sala))|so[bv]ios?-(?:cobr|folh)a)|ça(?:f(?:ate(?:s-(?:o[iu]ro|prata)|-(?:o[iu]ro|prata))|roeiras?-pernambuco)|ís?-caatinga)|g(?:ulh(?:(?:ões|ão)-(?:(?:trombe|pra)t|vel)a|as?-pastor)|rílicas?-rama)|zed(?:inha(?:s-(?:corumbá|goiás)|-(?:corumbá|goiás))|as-ovelha)|ve(?:nca(?:s-(?:espiga|minas)|-(?:espiga|minas))|s?-crocodilo)|(?:ipos?-montevid|carás?-v)éu|tu(?:ns|m)-galha)|m(?:a(?:r(?:acujá(?:s-(?:c(?:a(?:iena|cho)|o(?:rtiç|br)a|heiro)|(?:ga(?:rap|vet)|mochil)a|pe(?:riquito|dra)|est(?:rada|alo)|(?:alh|rat)o)|-(?:c(?:a(?:iena|cho)|o(?:rtiç|br)a|heiro)|(?:ga(?:rap|vet)|mochil)a|pe(?:riquito|dra)|est(?:rada|alo)|(?:alh|rat)o))|m(?:el(?:adas?-(?:ca(?:chorr|val)|invern|verã)o|(?:eir)?os?-bengala)|itas?-macaco)|reco(?:s-(?:pequim|ruão)|-(?:pequim|ruão))|imbondos?-chapéu|quesas?-belas)|c(?:a(?:co(?:s-(?:(?:cheir|band)o|noite|sabá)|-(?:(?:cheir|band)o|noite|sabá))|mbira(?:s-(?:(?:flech|pedr)a|serrote)|-(?:(?:flech|pedr)a|serrote))|quinhos?-bambá)|ieira(?:s-(?:(?:anáfeg|coro)a|boi)|-(?:(?:anáfeg|coro)a|boi))|elas?-(?:tabuleir|botã)o|ucus?-paca)|n(?:gue(?:s-(?:(?:(?:pend|bot)ã|sapateir|espet)o|obó)|-(?:(?:(?:pend|bot)ã|sapateir|espet)o|obó))|t(?:imento(?:s-(?:araponga|pobre)|-(?:araponga|pobre))|as?-bretão)|jeric(?:ões|ão)-(?:ceilã|molh)o|d(?:ibis?-juntas|acarus?-boi))|çã(?:s-(?:c(?:(?:[au]c|rav)o|ipreste|obra)|a(?:náfega|rrátel)|(?:espelh|prat)o|rosa|vime|boi)|-(?:c(?:(?:[au]c|rav)o|ipreste|obra)|a(?:náfega|rrátel)|(?:espelh|prat)o|rosa|vime|boi))|t(?:inho(?:s-(?:agulhas|lisboa|sargo)|-(?:agulhas|lisboa|sargo))|o(?:s-(?:engodo|salema)|-(?:engodo|salema)))|m(?:(?:icas?-(?:ca(?:chorr|del)|porc)|(?:ões|ão)-cord)a|oeiro(?:s-(?:espinho|corda)|-(?:espinho|corda)))|lva(?:s-(?:(?:cheir|pendã)o|marajó)|-(?:marajó|pendão)|íscos?-pernambuco)|d(?:ressilvas?-cheiro|eiras?-rei)|itacas?-maximiliano|parás?-cametá)|o(?:s(?:ca(?:s-(?:b(?:a(?:nheir|gaç)o|ich(?:eira|o))|e(?:lefante|stábulo)|ca(?:valos?|sa)|f(?:reira|ogo)|(?:madei|u)ra|inverno)|-(?:b(?:a(?:nheir|gaç)o|ich(?:eira|o))|e(?:lefante|stábulo)|ca(?:valos?|sa)|(?:madei|u)ra|fogo)|t(?:éis-(?:setúbal|jesus)|el-(?:setúbal|jesus)))|quitos?-parede)|ela(?:s-(?:mutum|ema)|-(?:mutum|ema))|n(?:stros?-gila|cos?-peru|tes?-ouro)|(?:uriscos?-sement|reias?-mangu)e|c(?:itaíbas?-leite|hos?-orelhas)|longós?-colher)|u(?:r(?:ici(?:s-(?:(?:tabuleir|porc)o|lenha)|-(?:(?:tabuleir|porc)o|lenha))|uré(?:s-(?:canudo|pajés)|-(?:canudo|pajé))|ta(?:s-(?:cheiro|parida)|-parida))|s(?:go(?:s-(?:irlanda|perdão)|-(?:irlanda|perdão))|aranhos?-água)|tu(?:ns-(?:asso[bv]io|fava)|m-(?:asso[bv]io|fava))|çambés?-espinhos|ngunzás?-cortar)|i(?:lh(?:o(?:s-(?:cobr|águ)|-águ)a|ãs?-pendão)|mos(?:as?-vereda|os?-cacho)|neiras?-petrópolis|cos?-topete|jos?-cavalo|olos-capim)|el(?:(?:(?:ões|ão)-(?:cabocl|morceg|soldad)|oeiros?-soldad)o|(?:ros?-(?:coleir|águ)|ancias?-cobr)a))|e(?:rv(?:a(?:s-(?:m(?:a(?:l(?:eitas|aca)|caé)|u(?:lher|ro)|o[iu]ra|endigo)|p(?:a(?:(?:rid|in)a|ssarinho)|(?:ântan|iolh)o|ontada)|a(?:n(?:(?:dorinh|t)a|jinho|il)|l(?:finete|ho)|mor)|b(?:(?:(?:ascul|ic)h|otã)o|(?:esteir|álsam)os|ugre)|c(?:(?:abr(?:it)?|obr)a|h(?:eir|umb)o)|sa(?:n(?:t(?:iago|ana)|gue)|(?:le)?po)|l(?:a(?:(?:vadeir|c)a|garto)|ouco)|g(?:o(?:[mt]|iabeir)a|uiné|elo)|f(?:(?:og|um|i)o|ebra)|(?:r(?:ober|a)t|our)o|ja(?:raraca|buti)|impingem|esteira)|-(?:m(?:a(?:l(?:eitas|aca)|caé)|u(?:lher|ro)|o[iu]ra|endigo)|p(?:a(?:(?:rid|in)a|ssarinho)|(?:ântan|iolh)o|ontada)|a(?:l(?:finete|míscar|ho)|n(?:(?:dorinh|t)a|il)|mor)|b(?:(?:(?:ascul|ic)h|otã)o|(?:esteir|álsam)os|ugre)|sa(?:n(?:t(?:iago|ana)|gue)|(?:le)?po)|c(?:(?:abr(?:it)?|obr)a|(?:humb|ã)o)|l(?:a(?:(?:vadeir|c)a|garto)|ouco)|g(?:o(?:[mt]|iabeir)a|uiné|elo)|f(?:(?:og|um|i)o|ebra)|(?:r(?:ober|a)t|our)o|ja(?:raraca|buti)|impingem|esteira))|i(?:lha(?:s-(?:(?:cheir|pomb)o|(?:árvo|leb)re|(?:angol|vac)a)|-(?:(?:cheir|pomb)o|(?:árvo|leb)re|(?:angol|vac)a))|nhas?-parida))|s(?:p(?:i(?:n(?:h(?:o(?:s-(?:c(?:a(?:(?:chor|rnei)ro|çada)|r(?:isto|uz)|erca)|(?:bananeir|agulh|roset)a|(?:ladrã|tour|urs)o|j(?:erusalém|udeu)|mari(?:ana|cá)|vintém|deus)|-(?:c(?:a(?:(?:chor|rnei)ro|çada)|r(?:isto|uz)|erca)|(?:bananeir|agulh|roset)a|(?:ladrã|tour|urs)o|j(?:erusalém|udeu)|mari(?:ana|cá)|vintém|deus))|eiro(?:s-(?:c(?:a(?:rneiro|iena)|risto|erca)|j(?:erusalém|udeu)|a(?:gulh|meix)a|vintém)|-(?:c(?:a(?:rneiro|iena)|risto|erca)|j(?:erusalém|udeu)|a(?:gulh|meix)a|vintém))|as?-(?:carneir|vead)o)|afres?-cuba)|ga(?:s-(?:(?:sangu|leit)e|ferrugem|água)|-(?:(?:sangu|leit)e|ferrugem|água)))|onjas?-raiz)|c(?:a(?:móneas?-alepo|das?-jabuti)|ovas?-macaco|umas?-sangue)|tercos?-jurema)|mbira(?:s-(?:ca(?:rrapato|çador)|(?:porc|sap)o)|-(?:ca(?:rrapato|çador)|(?:porc|sap)o))|n(?:xertos?-passarinho|redadeiras?-borla))|g(?:r(?:a(?:m(?:a(?:s-(?:p(?:(?:ernambuc|ast)o|onta)|(?:forquilh|sananduv)a|c(?:oradouro|idade)|ja(?:cobina|rdim)|ma(?:rajó|caé)|adorno)|-(?:p(?:(?:ernambuc|ast)o|onta)|(?:forquilh|sananduv)a|c(?:oradouro|idade)|ja(?:cobina|rdim)|ma(?:rajó|caé)|adorno))|inha(?:s-(?:campinas|jacobina|raiz)|-(?:campinas|jacobina|raiz)))|vatá(?:s-(?:(?:moquec|agulh)a|c(?:o[iu]ro|erca)|(?:ganch|lajed)o|r(?:aposa|ede)|árvore|tingir)|-(?:(?:moquec|agulh)a|c(?:o[iu]ro|erca)|(?:ganch|lajed)o|r(?:aposa|ede)|árvore|tingir))|lhas?-crista)|ão(?:s-(?:(?:c(?:aval|humb)|(?:malu|bi)c|gal)o|p(?:orco|ulha))|-(?:(?:(?:malu|bi)c|(?:cav|g)al)o|p(?:orco|ulha))|zinhos?-galo)|inaldas?-viúva)|a(?:l(?:o(?:s-(?:p(?:enacho|luma)|b(?:ando|riga)|rebanho|fita|ebó)|-(?:p(?:enacho|luma)|b(?:ando|riga)|rebanho|fita|ebó))|inha(?:s-(?:bugre|faraó|água)|-(?:bugre|faraó|água)))|fanhoto(?:s-(?:(?:(?:marmel|coqu)eir|arribaçã)o|(?:jurem|prag)a)|-(?:(?:(?:marmel|coqu)eir|arribaçã)o|(?:jurem|prag)a))|vi(?:ões-(?:(?:(?:colei|ser)r|queimad)a|a(?:nta|ruá)|penacho)|ão-(?:(?:(?:colei|ser)r|queimad)a|a(?:nta|ruá)|penacho))|meleira(?:-(?:(?:lombrigueir|p(?:in|ur)g)a|(?:cansaç|venen)o)|s-(?:(?:cansaç|venen)o|lombrigueiras|p(?:in|ur)ga))|to(?:-(?:madagáscar|algália)|s-algália)|r(?:oupas?-segunda|gantas-ferro))|u(?:a(?:birob(?:eira(?:s-(?:cachorro|minas)|-(?:cachorro|minas))|a(?:s-(?:cachorro|minas)|-(?:cachorro|minas)))|ricangas?-bengala)|iratãs?-coqueiro)|o(?:iab(?:a(?:s-(?:(?:espinh|macac)o|anta)|-(?:(?:espinh|macac)o|anta))|eiras?-(?:cuti|pac)a)|meiros?-minas|gós?-guariba|elas?-lobo)|e(?:rgeli(?:ns|m)-laguna|ngibres?-dourar)|irass(?:óis|ol)-batatas)|t(?:r(?:e(?:vo(?:s-(?:c(?:ar(?:retilha|valho)|heiro)|(?:se[ar]r|águ)a)|-(?:c(?:ar(?:retilha|valho)|heiro)|(?:se[ar]r|águ)a))|moço(?:s-(?:cheiro|jardim|minas)|-(?:cheiro|jardim|minas)))|i(?:go(?:s-(?:p(?:rioste|erdiz)|milagre|israel|verão)|-(?:p(?:rioste|erdiz)|milagre|israel|verão))|colino(?:s-c(?:hifre|rista)|-c(?:hifre|rista))|nca(?:is|l)-pau)|(?:aças?-bibliotec|épanos?-coro)a|omb(?:as?-elefante|etas?-arauto)|utas?-lago)|a(?:i(?:uiá(?:s-(?:c(?:omer|ipó)|pimenta|jardim|quiabo|goiás)|-(?:c(?:omer|ipó)|pimenta|jardim|quiabo|goiás))|nhas?-(?:cors|ri)o)|r(?:taruga(?:s-(?:couro|pente)|-(?:couro|pente))|umã(?:s-espinhos?|-espinhos?))|m(?:b(?:etarus?-espinh|ori[ls]-brav)o|anqueiras?-leite)|j(?:ujás?-(?:cabacinh|quiab)o|ás?-cobra)|(?:xizeiros?-tint|tus?-folh)a|b(?:ocas?-marajó|acos?-cão)|quaris?-cavalo)|i(?:n(?:gui(?:s-(?:c(?:(?:aien|ol)a|ipó)|(?:leit|peix)e)|-(?:c(?:(?:aien|ol)a|ipó)|(?:leit|peix)e))|hor(?:ões|ão)-lombriga)|mbó(?:s-(?:boticário|caiena|jacaré|peixe|raiz)|-(?:boticário|caiena|jacaré|peixe|raiz))|gres?-bengala)|o(?:m(?:at(?:e(?:s-(?:princesa|árvore)|-(?:princesa|árvore))|inhos?-capucho)|ilhos?-creta)|(?:rós?-espinh|adas-cour)o|petes?-cardeal)|u(?:c(?:u(?:ns-(?:carnaúba|redes)|m-(?:carnaúba|redes))|anos?-cinta)|bar(?:ões|ão)-focinho|lipas?-jardim|ias?-areia)|e(?:m(?:betarus?-espinho|porãos?-coruche)|rebintina-quio)|úberas?-(?:invern|verã)o)|r(?:a(?:to(?:s-(?:p(?:a(?:lmatória|iol)|entes|raga)|(?:es(?:pinh|got)|algodã)o|(?:t(?:aquar|romb)|águ)a|c(?:ouro|asa)|fa(?:raó|va)|bambu)|-(?:p(?:a(?:lmatória|iol)|entes|raga)|(?:es(?:pinh|got)|algodã)o|(?:t(?:aquar|romb)|águ)a|c(?:ouro|asa)|fa(?:raó|va)|bambu))|ízes-(?:c(?:(?:edr|urv)o|o(?:bra|rvo)|h(?:eiro|á)|âmaras|ana)|b(?:(?:ar?beir|randã)o|ugre)|(?:angélic|mostard|quin)a|l(?:agarto|opes)|sol(?:teira)?|t(?:ucano|iú)|f(?:rade|el)|guiné|pipi)|iz-(?:c(?:(?:edr|urv)o|o(?:bra|rvo)|h(?:eiro|á)|âmaras|ana)|b(?:(?:ar?beir|randã)o|ugre)|(?:angélic|mostard|quin)a|l(?:agarto|opes)|sol(?:teira)?|t(?:ucano|iú)|f(?:rade|el)|guiné|pipi)|b(?:uge(?:ns|m)-cachorr|anetes?-caval)o|m(?:as?-bezerro|os?-seda)|pés?-saci)|o(?:s(?:a(?:-(?:(?:c(?:a(?:chorr|bocl)|h?ã)|[bl]ob|defunt|o[iu]r|musg)o|p(?:áscoa|au)|jericó|toucar)|s-(?:(?:c(?:a(?:chorr|bocl)|h?ã)|[bl]ob|defunt|o[iu]r|musg)o|jericó|páscoa|toucar))|ário(?:s-(?:jamb[ou]|ifá)|-(?:jamb[ou]|ifá))|e(?:tas?-pernambu|iras?-damas)co)|uxin(?:óis-(?:m(?:uralha|anaus)|(?:espadan|jav)a|caniços)|ol-(?:m(?:uralha|anaus)|(?:espadan|jav)a|caniços))|(?:balos?-(?:arei|galh)|az(?:es)?-bandeir)a|ca(?:s-(?:flores|eva)|-(?:flores|eva)))|(?:e(?:sedás?-cheir|des?-leã)|ábanos?-caval)o|inocerontes?-Java)|s(?:a(?:l(?:sa(?:s-(?:c(?:a(?:stanheiro|valos)|heiro|upim)|(?:roch|águ)a|burro)|-(?:c(?:a(?:stanheiro|valos?)|upim)|(?:roch|águ)a|burro)|parrilhas?-lisboa)|va(?:s-(?:pernambuco|marajó)|-(?:pernambuco|marajó))|amandras?-água)|r(?:a(?:ndis?-(?:(?:carangu|gargar)ej|espinh)o|(?:magos?-águ|s?-pit)a)|dinha(?:s-(?:ga(?:lha|to)|laje)|-(?:ga(?:lha|to)|laje))|go(?:s-(?:beiço|dente)|-(?:beiço|dente))|ros?-pito)|n(?:haç(?:o(?:s-(?:(?:(?:coqu|mamo)eir|fog)o|encontros)|-(?:(?:(?:coqu|mamo)eir|fog)o|encontros))|us?-(?:encont|mamoei)ro)|ãs?-samambaia)|p(?:(?:ucaias?-castanh|és?-capoeir)a|o(?:-chifres?|s-chifre))|gui(?:n?s|m)?-bigode|mambaias?-penacho|[bv]acus?-coroa)|u(?:rucucu(?:s-(?:p(?:ati|ind)oba|fogo)|-(?:p(?:ati|ind)oba|fogo))|ma(?:umeiras?-macaco|gres?-provença|rés?-pedras))|orgo(?:s-(?:(?:vassour|espig)a|pincel|alepo)|-(?:(?:vassour|espig)a|pincel|alepo))|iris?-coral)|j(?:a(?:ca(?:r(?:andá(?:s-(?:campinas|espinho|sangue)|-(?:campinas|espinho|sangue))|és?-óculos)|(?:tir(?:ões|ão)-capot|s?-pobr)e)|smi(?:ns-(?:c(?:a(?:chorro|iena)|erca)|soldado|leite)|m-(?:c(?:a(?:chorro|iena)|erca)|soldado|leite))|(?:mb(?:eir)?os?-malac|lapas?-lisbo|puçá-coleir)a|tobá(?:s-(?:porco|anta)|-(?:porco|anta))|buticab(?:eiras?-campinas|as?-cipó)|r(?:aracas?-agosto|rinhas?-franja))|u(?:n(?:co(?:s-(?:c(?:a(?:ngalh|br)|obr)a|banhado)|-(?:c(?:a(?:ngalh|br)|obr)a|banhado))|ta(?:s-c(?:alangro|obra)|-c(?:alangro|obra))|ças-c(?:heiro|onta))|á(?:s-c(?:apote|omer)|-c(?:apote|omer))|rubebas?-espinho|ciris?-comer|quis?-cerca)|o(?:ões-(?:santarém|barros?|leite|puça)|ão-(?:santarém|barro|leite|puça))|e(?:quitibás?-agulheir|taís?-pernambuc)o|i(?:queranas?-goiás|tiranas?-leite))|l(?:i(?:m(?:(?:a(?:s-(?:cheir|umbig|bic)|-(?:umbig|bic))|eiras?-umbig)o|ões-(?:c(?:aiena|heiro)|galinha)|ão-(?:c(?:aiena|heiro)|galinha)|os?-manta)|n(?:ho(?:s-(?:raposa|cuco)|-(?:raposa|cuco))|gu(?:eir(?:ões|ão)-canud|ados?-ri)o)|x(?:a(?:s-(?:lei|pau)|-(?:lei|pau))|inhas?-fundura))|a(?:ranj(?:a(?:s-(?:(?:terr|onç)a|umbigo)|-(?:umbigo|onça))|eiras?-vaqueiro)|g(?:art(?:as?-(?:vidr|fog)o|os?-água)|ostas?-espinho)|lás?-cintura)|e(?:it(?:e(?:s-(?:ga(?:meleir|linh)a|cachorro)|-(?:ga(?:meleir|linh)a|cachorro)|iras?-espinho)|ugas?-burro)|sma-conchinha)|o(?:ur(?:eiro(?:s-(?:jardim|apolo)|-(?:jardim|apolo))|os?-cheiro)|ireiros?-apolo)|u(?:(?:tos-quaresm|vas-pastor)a|zernas?-sequeiro)|írios?-petrópolis)|v(?:a(?:sso(?:urinha(?:s-(?:(?:relógi|botã)o|varrer)|-(?:(?:relógi|botã)o|varrer))|ira(?:s-(?:fe(?:iticeira|rro)|bruxa)|-(?:feiticeir|brux)a))|ra(?:s-(?:foguete|o[iu]ro|canoa)|-o[iu]ro)|les?-arinto)|e(?:r(?:g(?:onhas?-estudante|as?-jabuti)|(?:melhinhas?-galh|ças?-cã)o)|spa(?:s-(?:rodeio|cobra)|-(?:rodeio|cobra))|l(?:ames?-cheiro|udos?-penca)|ados?-virgínia|nenos?-porco)|i(?:d(?:eiras?-enforcado|oeiros?-papel)|oletas?-(?:par|da)ma|nháticos?-espinho)|oador(?:es)?-pedra)|qu(?:i(?:n(?:a(?:s-(?:(?:per(?:nambuc|iquit)|vead)o|c(?:errado|aiena|ipó)|r(?:e(?:mígi|g)o|aiz)|goiás)|-(?:(?:per(?:nambuc|iquit)|vead)o|c(?:errado|aiena|ipó)|r(?:e(?:mígi|g)o|aiz)|goiás))|gombós?-(?:espinh|cheir)o)|ab(?:o(?:s-(?:c(?:aiena|heiro|ipó)|(?:angol|quin)a)|-(?:c(?:aiena|heiro|ipó)|(?:angol|quin)a)|ranas?-espinho)|eiros?-angola)|(?:gombós?-cheir|to-pernambuc)o|bondos?-água)|ati(?:s-(?:bando|vara)|-(?:bando|vara))|ássias?-caiena)|á(?:rvore(?:s-(?:(?:bálsam|incens|ranc?h|seb)o|(?:gra(?:lh|x)|orquíde)a|c(?:hocalho|oral|uia)|l(?:ótus|eite|ã)|(?:jud|vel)as|a(?:rr|n)oz|pagode|natal)|-(?:(?:bálsam|incens|ranc?h|seb)o|(?:gra(?:lh|x)|orquíde)a|c(?:hocalho|oral|uia)|l(?:ótus|eite|ã)|(?:jud|vel)as|a(?:rr|n)oz|pagode|natal))|(?:gu(?:as?-colóni|ias?-poup)|caros?-galinh)a)|i(?:n(?:ha(?:me(?:s-(?:c(?:oriolá|ão)|lagartixa|enxerto|benim)|-(?:c(?:oriolá|ão)|lagartixa|enxerto|benim))|íbas?-rego)|censos?-caiena|gás?-fogo)|mb(?:(?:ur(?:ana(?:s-(?:c(?:ambã|heir)|espinh)|-(?:espinh|cambã))|is?-cachorr)|aúbas?-(?:cheir|vinh))o|és?-(?:amarra|come)r)|p(?:ês?-impingem|ecas?-cuiabá)|xoras-cheiro|scas?-sola)|n(?:o(?:z(?:-(?:b(?:a(?:tauá|nda)|ugre)|co(?:(?:br|l)a|co)|(?:arec|galh)a)|es-(?:(?:co(?:br|l)|arec|galh)a|b(?:a(?:tauá|nda)|ugre)))|gueira(?:s-(?:cobra|pecã)|-(?:cobra|pecã)))|a(?:(?:rciso(?:-(?:invern|cheir)|s-cheir)|valhas?-macac)o|nás?-raposa)|iqui(?:ns-(?:areia|saco)|m-areia)|ené(?:ns|m)-galinha|ós-cachorro)|u(?:va(?:s-(?:(?:(?:espin|fac)h|g(?:enti|al)|c(?:heir|ã)|urs)o|r(?:ato|ei)|praia|obó)|-(?:(?:(?:espin|fac)h|g(?:enti|al)|urs|cã)o|praia|obó|rei))|(?:irapurus?-band|xis?-morceg|bás?-fach)o|queté(?:s-(?:água|obó)|-(?:água|obó))|m(?:baranas?-abelha|iris?-cheiro)|apuçás?-coleira|ntués?-obó)|h(?:ortelã(?:s-(?:c(?:a(?:mpina|valo)|heiro)|b(?:urro|oi)|leite)|-(?:c(?:a(?:mpina|valo)|heiro)|b(?:urro|oi)|leite))|idras?-água)|o(?:liveira(?:s-(?:marrocos|cheiro)|-(?:marrocos|cheiro))|iti(?:s-porcoóleo-copaíbaóleos-copaíba|-porco)|stras?-pobre)|ç(?:ana-áçúcar|or-Rosa)|ébanos?-zanzibar|xexéu-bananeira|Grão-Bico))\b</regexp>
-      <message>Esta expressão hifenizada é separada por '-de-'.</message>
-    <!--suggestion><match no='1' regexp_match='(.+?)-(.+?)' regexp_replace='$1-de-$2'/></suggestion-->
-      <url>http://www.portaldalinguaportuguesa.org/recursos.html?action=novoacordo</url>
-    <!--example correction='rato-de-água'>Vi um <marker>rato-água</marker> na casa.</example-->
-      <example type='incorrect'>Vi um <marker>rato-água</marker> na casa.</example>
-      <example type='correct'>Vi um <marker>rato-de-água</marker> na casa.</example>
-      <example>É um prato com feijão-frade.</example>
-    </rule>
 
   <rulegroup id='FRENCH_HIPHENATED_NAMES' name="Nomes franceses hifenizados">
     <!--      Localized from French grammar.xml by Tiago F. Santos, Portuguese rule, 2017-05-30      -->
@@ -45434,9 +45749,25 @@ O conflito ocorre além-mar.
     </rule>
   </rulegroup>
 
+
+    <rule id='LP_HIPHEN_DE_HIPHEN' name='Compostas: Palavras com -de-'>
+    <!-- Based on Lightproof rule by Tiago F. Santos , Portuguese rule, 2017-07-06 -->
+      <regexp>\b(?!feij(?:ão|ões)-frade)((?:c(?:a(?:r(?:rap(?:icho(?:s-(?:c(?:a(?:(?:rneir|val)o|lçada)|igana)|(?:agu|ove)lha|l(?:inho|ã)|boi)|-(?:c(?:a(?:(?:rneir|val)o|lçada)|igana)|(?:agu|ove)lha|l(?:inho|ã)|boi))|ato(?:s-(?:p(?:assarinho|eixe)|(?:caval|sap)o|galinha|boi)|-(?:p(?:assarinho|eixe)|(?:caval|sap)o|galinha|boi)))|u(?:ru(?:s-(?:(?:s(?:oldad|ap)|cach|vead)o|espi(?:nho|ga)|po(?:mba|rco))|-(?:(?:s(?:oldad|ap)|cach|vead)o|espi(?:nho|ga)|po(?:mba|rco)))|atás?-pau)|d(?:o(?:s-(?:(?:(?:bur|ou)r|vis[cg])o|co(?:chonilha|alho|mer)|isca)|-(?:(?:(?:bur|ou)r|vis[cg])o|co(?:chonilha|alho|mer)|isca))|ea(?:is|l)-poupa)|á(?:s-(?:(?:sapateir|cabocl|espinh)o|(?:angol|pedr|águ)a|jardim)|-(?:(?:sapateir|cabocl|espinh)o|(?:pedr|águ)a|jardim))|a(?:n(?:ha(?:s-(?:viveir|toc|ri)|-(?:viveir|toc))o|guejos?-pedra)|guatás?-jardim)|(?:v(?:ões|ão)-ferreir|mim-cártam)o|nes-donzela)|p(?:i(?:ns-(?:b(?:o(?:t(?:ão|a)|lota|de)|a(?:ndeira|tatais)|u(?:cha|rro)|ezerro)|c(?:a(?:(?:rneir|val)o|(?:piva|b)ra)|o(?:ntas|rte|co)|heiro|uba)|t(?:(?:artarug|ouceir)a|e(?:nerife|so))|(?:m(?:a(?:rrec|nad)|ul)|esteir|égu)a|p(?:(?:ernambuc|ast|omb)o|lanta)|f(?:o(?:rquilha|go)|lecha|eixe)|r(?:o(?:[ls]a|des)|ebanho|aiz)|a(?:n(?:gola|dar)|çude)|s(?:apo|oca)|diamante|lastro|natal|itu)|m-(?:b(?:o(?:t(?:ão|a)|lota|de)|a(?:ndeira|tatais)|u(?:cha|rro)|ezerro)|c(?:a(?:(?:rneir|val)o|(?:piva|b)ra)|o(?:ntas|rte|co)|heiro|uba)|(?:m(?:a(?:rrec|nad)|ul)|esteir|égu|soc)a|t(?:(?:artarug|ouceir)a|e(?:nerife|so))|p(?:(?:ernambuc|ast|omb)o|lanta)|f(?:o(?:rquilha|go)|lecha|eixe)|r(?:o(?:[ls]a|des)|ebanho|aiz)|a(?:n(?:gola|dar)|çude)|d(?:iamante|eus)|lastro|natal|itu)|tã(?:es|o)-sa(?:ír|l)a|xinguis?-bicho)|elas?-viúva)|n(?:a(?:s-(?:(?:(?:chei|bur)r|passarinh|macac)o|(?:v(?:asso[iu]|íbo)r|frech|roc)a|(?:jacar|imb)é|elefante|açúcar|urubu)|-(?:(?:v(?:asso[iu]|íbo)r|frech|roc)a|(?:passarinh|macac|burr)o|(?:jacar|imb)é|elefante|açúcar|urubu)|fístula(?:s-(?:igapó|lagoa|boi)|-(?:igapó|lagoa|boi)))|el(?:a(?:s-(?:c(?:a(?:poeira|tarro)|(?:eilã|heir)o|utia)|v(?:e(?:ad|lh)o|argem)|g(?:arça|oiás)|papagaio|jacamim|ema)|-(?:c(?:a(?:poeira|tarro)|utia)|v(?:argem|eado)|g(?:arça|oiás)|papagaio|jacamim|ema))|eira(?:s-(?:cheiro|ema)|-(?:cheiro|ema)))|udo(?:s-(?:cachimbo|lagoa)|-(?:cachimbo|lagoa))|(?:ários?-franç|iços?-águ)a|sanç(?:ões|ão)-leite|oés?-botão)|s(?:t(?:a(?:nh(?:a(?:-(?:(?:á(?:fric|gu)|a(?:rar|nt))a|m(?:oçambique|acaco|inas)|c(?:aiaté|utia)|p(?:eixe|uri)|jatobá|bugre)|s-(?:(?:á(?:fric|gu)|a(?:rar|nt))a|m(?:oçambique|acaco|inas)|c(?:aiaté|utia)|p(?:eixe|uri)|bugre))|eiros?-minas)|s?-correr)|or(?:es)?-montanha)|c(?:a(?:s-(?:carvalho|jacaré|anta)|-(?:carvalho|jacaré|noz))|o(?:s-(?:cavalo|jabuti|tatu)|-(?:cavalo|jabuti|tatu))|udo(?:s-(?:enfeite|aranha)|-(?:enfeite|aranha))))|m(?:a(?:r(?:á(?:s-(?:(?:c(?:aval|heir)|espinh)o|b(?:ilro|oi)|flecha)|-(?:(?:c(?:aval|heir)|espinh)o|b(?:ilro|oi)|flecha))|ões-(?:pe(?:nedo|dra)|estalo|areia)|ão-(?:pe(?:nedo|dra)|estalo|areia))|le(?:ões-(?:pedreira|asas)|ão-(?:pedreira|asas)))|b(?:ará(?:s-(?:c(?:h(?:eir|umb)o|apoeira)|espinho|lixa)|-(?:c(?:h(?:eir|umb)o|apoeira)|espinho|lixa))|oatãs?-leite)|urus?-cheiro)|c(?:himbo(?:s-(?:(?:maca|tur)co|jabuti)|-(?:(?:maca|tur)co|jabuti))|au(?:s-(?:ca(?:racas|iena)|mico)|-(?:ca(?:racas|iena)|mico))|tos?-cabeça)|b(?:a(?:(?:ças?-trombet|cinhas?-cobr)a|s-(?:igreja|ladrão|peixe)|-(?:igreja|ladrão|peixe))|u(?:mbos?-azeite|rés?-orelha))|val(?:inho(?:-(?:judeu|deus|cão)|s-judeu)|o-cão)|fé(?:s-b(?:agueio|ugre)|-b(?:agueio|ugre))|t(?:ingueiros?-porc|otas?-espinh)o|avuranas?-cunhã)|o(?:c(?:o(?:-(?:(?:b(?:acai(?:aú|u)b|ocaiuv)|p(?:almeir|indob|urg)|quar(?:esm|t)|oitav)a|v(?:a(?:queiro|ssoura)|inagre|eado)|c(?:(?:a(?:cho|ta)rr|igan)o|olher)|(?:espinh|rosári|macac|óle)o|i(?:ndaiá|ri)|(?:gur|a)iri|na(?:tal|iá)|dendê)|s-(?:(?:b(?:acai(?:aú|u)b|ocaiuv)|p(?:almeir|indob|urg)|quar(?:esm|t)|oitav)a|v(?:a(?:queiro|ssoura)|inagre|eado)|c(?:(?:a(?:cho|ta)rr|igan)o|olher)|(?:espinh|rosári|macac|óle)o|i(?:ndaiá|ri)|na(?:tal|iá)|dendê|guriri))|(?:honilhas?-cer|as?-águ)a)|bra(?:-(?:c(?:a(?:p(?:elo|im)|scavel|belo|ju)|o(?:lchete|ral)|ipó)|(?:es[cp]ad|ferradur|barat|águ)a|(?:v(?:ead|idr)|lix|oc)o|a(?:r(?:eia)?|sa)|pernas|ratos?)|s-(?:c(?:a(?:p(?:elo|im)|scavel|belo|ju)|o(?:lchete|ral)|ipó)|(?:ferradur|barat|espad|águ)a|(?:v(?:ead|idr)|lix|oc)o|a(?:r(?:eia)?|sa)|pernas|ratos?))|l(?:a(?:-(?:(?:(?:sapatei|zor)r|caval)o|peixe)|s-(?:(?:caval|zorr)o|peixe))|eir(?:o(?:s-(?:(?:band|choc)o|sapé)|-(?:(?:band|choc)o|sapé))|as?-sapé))|r(?:(?:uj(?:as?|ão)-igrej|tiças?-montanh|-ros)a|vina(?:s-(?:corso|linha)|-(?:corso|linha))|d(?:ões|ão)-frade|reias?-inverno)|e(?:rana(?:s-(?:(?:caravel|min)as|pernambuco)|-(?:(?:caravel|min)as|pernambuco))|ntro(?:s-caboclos|-caboclo))|gumelo(?:s-(?:c(?:aboclo|hapéu)|(?:sangu|leit)e|paris)|-(?:c(?:aboclo|hapéu)|(?:sangu|leit)e|paris))|uve(?:s-(?:a(?:dorno|reia)|(?:saboi|águ)a|cortar)|-(?:a(?:dorno|reia)|(?:saboi|águ)a|cortar))|n(?:gonha(?:s-(?:caixeta|bugre|goiás)|-(?:caixeta|bugre|goiás))|durus?-sangue|tas?-cabra)|irana(?:s-(?:(?:caravel|min)as|pernambuco)|-(?:(?:caravel|min)as|pernambuco))|(?:xas?-(?:d(?:am|on)|freir)|mer(?:es)?-arar|tovias?-poup)a|queiro(?:s-(?:vassoura|dendê)|-(?:vassoura|dendê))|paibeiras?-minas)|ipó(?:-(?:c(?:a(?:r(?:neiro|ijó)|b(?:oclo|aça)|noa)|o(?:r(?:ação|da)|(?:br|l)a)|h(?:agas|umbo)|u[mn]anã|esto)|a(?:l(?:caçuz|ho)|r(?:acuã|c)o|marrar|gulha)|m(?:a(?:inibu|caco)|o(?:fumb|rceg)o|ucuna)|b(?:a(?:(?:mburra|rri)l|tata)|reu|oi)|j(?:a(?:b(?:ut[ái]|ota)|rrinha)|unta)|p(?:(?:a(?:in|lm)|oit)a|enas)|t(?:amanduá|ucunaré|imbó)|l(?:avadeira|eite)|v(?:aqueiro|iúva)|e(?:mbiri|scada)|im(?:pingem|bé)|g(?:ato|ota)|s(?:apo|eda)|(?:fo|re)go|quati|água)|s-(?:c(?:a(?:r(?:neiro|ijó)|b(?:oclo|aça)|noa)|o(?:r(?:ação|da)|(?:br|l)a)|u[mn]anã|hagas|esto)|a(?:l(?:caçuz|ho)|r(?:acuã|c)o|marrar|gulha)|m(?:a(?:inibu|caco)|o(?:fumb|rceg)o|ucuna)|b(?:a(?:(?:mburra|rri)l|tata)|reu|oi)|j(?:a(?:b(?:ut[ái]|ota)|rrinha)|unta)|p(?:(?:a(?:in|lm)|oit)a|enas)|t(?:amanduá|ucunaré|imbó)|l(?:avadeira|eite)|v(?:aqueiro|iúva)|e(?:mbiri|scada)|im(?:pingem|bé)|g(?:ato|ota)|s(?:apo|eda)|(?:fo|re)go|quati|água))|r(?:av(?:o(?:s-(?:(?:cabe(?:cinh|ç)|esperanç|sear)a|b(?:(?:astã|urr)o|ouba)|p(?:oeta|au)|defunto|tunes|urubu|amor)|-(?:(?:cabe(?:cinh|ç)|esperanç|sear)a|b(?:(?:astã|urr)o|ouba)|p(?:oeta|au)|defunto|tunes|urubu|amor))|in(?:a(?:s-(?:(?:lagartix|águ)a|ambrósio|tunes|pau)|-(?:(?:lagartix|águ)a|tunes|pau))|ho(?:s-(?:(?:lagartix|campin)a|defunto)|-(?:lagartixa|defunto))))|ista(?:s-(?:gal(?:inha|o)|mutum|peru)|-(?:gal(?:inha|o)|mutum|peru)|(?:is|l)-rocha))|e(?:bol(?:(?:a(?:s-(?:cheir|lob)|-lob)|inhas?-cheir)o|etas?-frança)|r(?:ej(?:as?-(?:caien|purg)|eiras?-purg)a|vejas?-pobre)|n(?:táureas?-jardim|ouras?-creta)|vadas?-jardim)|h(?:a(?:ga(?:s-(?:bauru|jesus)|-bauru)|scos?-leque)|u(?:p(?:ões|ão)-arroz|vas?-imbu))|u(?:tia(?:s-(?:rabo|pau)|-(?:rabo|pau))|(?:mbuc|i)as?-macaco)|ânhamo-manila)|p(?:a(?:u(?:s-(?:c(?:a(?:n(?:(?:galh|inan)a|deeiro|oas?|til)|m(?:peche|arão)|r(?:rapato|ne)|c(?:himbo|a)|i(?:bro|xa)|pitão|stor)|o(?:r(?:tiça|al)|n(?:ch|t)a|lher|bre)|h(?:a(?:pad|nc)a|i(?:cl|fr)e|eiro)|u(?:rt(?:ume|ir)|nanã|biú|tia)|erc?a|inzas|ruz)|s(?:a(?:n(?:t(?:ana|o)|gue)|p(?:ateir)?o|b(?:ão|iá)|ssafrás|lsa)|e(?:(?:rr|d)a|bo)|urriola|olar)|m(?:a(?:(?:n(?:jeriob|teig)|ri)a|(?:cac|str|lh)o)|o(?:(?:njol|rceg)o|quém|có)|(?:utamb|erd)a)|b(?:u(?:jarrona|gre|rro)|i(?:ch?o|lros)|a(?:rbas|lso)|o(?:[lt]o|ia)|r(?:incos|eu)|álsamo)|p(?:e(?:r(?:nambuco|eira)|nte)|r(?:eg(?:uiça|o)|aga)|i(?:ranha|lão)|o(?:mb|rc)o|ólvora)|l(?:a(?:g(?:arto|oa)|cre|nça)|e(?:(?:br|it)e|tras|pra)|i(?:vros|xa)|ágrima)|f(?:(?:a(?:[iv]|rinh)|ormig)a|(?:u[ms]|ígad)o|l(?:echas?|or)|e(?:bre|rro))|r(?:e(?:(?:spost|nd)a|(?:[gm]|in)o|de)|os(?:eira|as?)|a(?:inha|to))|e(?:s(?:p(?:inh|et)o|teira)|(?:rv(?:ilh)?|mbir)a|lefante)|a(?:(?:bóbor|ngol)a|r(?:ara|co)|l(?:ho|oé))|t(?:a(?:rtaruga|manco)|in(?:gui|ta)|ucano)|v(?:i(?:n(?:tém|ho)|ola)|e(?:ado|ia)|aca)|g(?:(?:asolin|om)a|ui(?:tarra|né))|j(?:erimum?|angada|udeu)|d(?:igestão|edal)|n(?:avalha|ovato)|o(?:rvalho|laria)|(?:incens|óle)o|(?:zebr|águ)a|qui(?:abo|na))|-(?:c(?:a(?:n(?:(?:galh|inan)a|deeiro|oas?|til)|m(?:peche|arão)|r(?:rapato|ne)|c(?:himbo|a)|i(?:bro|xa)|pitão|stor)|o(?:r(?:tiça|al)|n(?:ch|t)a|lher|bre)|h(?:a(?:pad|nc)a|i(?:cl|fr)e|eiro)|u(?:rt(?:ume|ir)|nanã|biú|tia)|erc?a|inzas|ruz)|s(?:a(?:n(?:t(?:ana|o)|gue)|p(?:ateir)?o|b(?:ão|iá)|ssafrás|lsa)|e(?:(?:rr|d)a|bo)|urriola|olar)|m(?:a(?:(?:n(?:jeriob|teig)|ri)a|(?:cac|str|lh)o)|o(?:(?:njol|rceg)o|quém|có)|(?:utamb|erd)a)|b(?:u(?:jarrona|gre|rro)|i(?:ch?o|lros)|a(?:rbas|lso)|o(?:[lt]o|ia)|r(?:incos|eu)|álsamo)|p(?:e(?:r(?:nambuco|eira)|nte)|r(?:eg(?:uiça|o)|aga)|i(?:ranha|lão)|o(?:mb|rc)o|ólvora)|l(?:a(?:g(?:arto|oa)|cre|nça)|e(?:(?:br|it)e|tras|pra)|i(?:vros|xa)|ágrima)|f(?:(?:a(?:[iv]|rinh)|ormig)a|(?:u[ms]|ígad)o|l(?:echas?|or)|e(?:bre|rro))|r(?:e(?:(?:spost|nd)a|(?:[gm]|in)o|de)|os(?:eira|as?)|a(?:inha|to))|e(?:s(?:p(?:inh|et)o|teira)|(?:rv(?:ilh)?|mbir)a|lefante)|t(?:a(?:rtaruga|manco)|in(?:gui|ta)|ucano)|v(?:i(?:n(?:tém|ho)|ola)|e(?:ado|ia)|aca)|a(?:(?:bóbor|ngol)a|l(?:ho|oé)|rco)|g(?:(?:asolin|om)a|ui(?:tarra|né))|j(?:erimum?|angada|udeu)|d(?:igestão|edal)|n(?:avalha|ovato)|o(?:rvalho|laria)|(?:incens|óle)o|(?:zebr|águ)a|qui(?:abo|na))|xis?-pedra)|l(?:m(?:eir(?:a(?:s-(?:(?:(?:palmi|ce)r|igrej)a|madagascar|dendê|leque|tebas|vinho)|-(?:(?:(?:palmi|ce)r|igrej)a|madagascar|dendê|leque|tebas|vinho))|inhas?-petrópolis)|a(?:s-(?:c(?:hicote|acho)|igreja|leque)|-(?:c(?:hicote|acho)|igreja|leque)|tórias?-espinho)|i(?:tos?-ferrão|lhas?-papa))|ha(?:s-(?:(?:penach|caniç)o|guiné|água)|-(?:(?:penach|caniç)o|guiné|água))|os-(?:calenturas|maria))|r(?:ic(?:á(?:s-(?:esponjas|curtume)|-(?:esponjas|curtume))|aranas?-espinhos)|a(?:cuuba(?:s-lei(?:te)?|-lei(?:te)?)|sitas?-samambaiaçu|tudos?-praia)|go(?:s-(?:m(?:itra|orro)|cótula)|-(?:m(?:itra|orro)|cótula)))|p(?:o(?:ila(?:s-(?:espinho|holanda)|-(?:espinho|holanda))|ula(?:s-(?:espinho|holanda)|-(?:espinho|holanda)))|agaio(?:s-cole(?:ira|te)|-cole(?:ira|te)))|in(?:a(?:s-(?:s(?:apo|eda)|arbusto|penas|cuba)|-(?:s(?:apo|eda)|arbusto|penas|cuba))|eira(?:s-(?:c(?:ipó|uba)|leite)|-(?:c(?:ipó|uba)|leite)))|(?:c(?:o(?:vas?-macac|s?-golung)|as-rab)|ssarinhos?-(?:arribaç|ver)ã|nelas?-bugi)o|t(?:os?-c(?:a(?:rúncul|ien)|rist)a|i(?:nhos?-igapó|s?-goiás))|v(?:ões|ão)-java)|i(?:nh(?:eir(?:o(?:s-(?:(?:(?:pur|ri)g|casquinh)a|jerusalém|alepo)|-(?:(?:(?:pur|ri)g|casquinh)a|jerusalém|alepo))|inho(?:s-(?:jardim|sala)|-(?:jardim|sala)))|ões-(?:(?:cerc|purg)a|madagascar|ratos?)|ão-(?:(?:cerc|purg)a|madagascar|rato)|o(?:s-(?:flandres|riga)|-riga)|as?-raiz)|ment(?:a(?:s-(?:c(?:(?:aien|oro)a|heiro)|(?:ra[bt]|macac)o|g(?:alinha|entio)|bu(?:gre|ta)|queimar|água)|-(?:c(?:(?:aien|oro)a|heiro)|(?:ra[bt]|macac)o|g(?:alinha|entio)|bu(?:gre|ta)|queimar|água))|ões-c(?:aiena|heiro)|ão-c(?:aiena|heiro))|t(?:o(?:mb(?:a(?:s-(?:macaco|leite)|-(?:macaco|leite))|eiras?-marajó)|s-(?:água|saci)|-(?:água|saci))|a(?:ng(?:ueira(?:s-(?:cachorro|jardim)|-(?:cachorro|jardim))|as?-cachorro)|s?-erva)|eiras?-sinal)|olho(?:s-(?:(?:galinh|balei|onç)a|(?:soldad|tubarã)o|p(?:lanta|adre)|c(?:ação|obra)|faraó|urubu)|-(?:(?:galinh|balei|onç)a|(?:soldad|tubarã)o|p(?:lanta|adre)|c(?:ação|obra)|faraó|urubu))|(?:piras?-(?:máscar|prat)|quiás?-pedr|ão-purg)a|c(?:ões-tr(?:opeiro|epar)|ão-tropeiro)|xiricas?-bolas|raíbas?-pele)|e(?:r(?:a(?:s-(?:a(?:(?:guieir|lmeid)a|dvogado)|r(?:e(?:fego|i)|osa)|(?:cris|un)to|jesus|água)|-(?:a(?:(?:guieir|lmeid)a|dvogado)|r(?:e(?:fego|i)|osa)|(?:cris|un)to|jesus|água))|oba(?:s-(?:(?:pernambuc|reg)o|ca(?:ntagalo|mpos)|go(?:iás|mo)|minas)|-(?:(?:pernambuc|reg)o|ca(?:ntagalo|mpos)|go(?:iás|mo)|minas))|(?:iquit(?:o(?:s-(?:campin|ant)|-ant)|inhos?-vassour)|cevejos?-(?:ca[ms]|galinh))a|diz(?:es)?-alqueive|us?-sol)|na(?:chos?-capim|s-avestruz)|pinos?-(?:papagai|burr)o|ssegueiros?-abrir|quiás?-pedra)|u(?:rga(?:s-(?:c(?:a(?:i(?:tité|apó)|(?:boc|va)lo|rijó)|ereja)|(?:ve(?:ad|nt)|marinheir|genti)o|pa(?:ulista|stor)|nabiça)|-(?:c(?:a(?:i(?:tité|apó)|(?:boc|va)lo|rijó)|ereja)|(?:ve(?:ad|nt)|marinheir|genti)o|pa(?:ulista|stor)|nabiça))|lg(?:a(?:s-(?:(?:a(?:rei|nt)|galinh|águ)a|bicho)|-(?:(?:a(?:rei|nt)|galinh|águ)a|bicho))|(?:ões|ão)-planta))|o(?:mb(?:a(?:s-(?:(?:(?:arribaç|sert)ã|espelh|band)o|mulata)|-(?:(?:(?:arribaç|sert)ã|espelh|band)o|mulata))|o(?:s-(?:montanha|leque)|-(?:montanha|leque)))|rco(?:s-(?:verrugas|ferro)|-(?:verrugas|ferro))|aia(?:s-(?:minas|cipó)|-(?:minas|cipó)))|ã(?:es-(?:p(?:o(?:rc(?:in)?o|bre)|ássaros)|gal(?:inha|o)|leite|cuco)|o-(?:p(?:orc(?:in)?o|ássaros)|gal(?:inha|o)|cuco))|l(?:uma(?:s-(?:príncipe|capim)|-(?:príncipe|capim))|átanos?-gênio|antas?-neve)|r(?:eguiça(?:s-(?:bentinho|coleira)|-(?:bentinho|coleira))|imaveras?-caiena)|ássaros?-f(?:andan|i)go|êssegos?-abrir)|f(?:lor(?:es-(?:c(?:a(?:(?:(?:r(?:nav|de)|m)a)?l|(?:sament|chimb|bocl)o)|o(?:(?:[iu]r|elh|c)o|ntas|bra|ral)|e(?:tim|ra)|hagas|iúme|uco)|p(?:a(?:(?:ssarinh|pagai|raís|vã)o|dre|lha|u)|e(?:licano|dra)|érolas)|m(?:a(?:r(?:acujá|iposa)|deira|io)|(?:(?:eren|osca)d|us)a|ico)|b(?:a(?:(?:b(?:eir|ad)|rbeir)o|unilha|ile)|eso[iu]ro)|a(?:(?:lgodã|njinh)o|ranha|bril|zar)|s(?:a(?:p(?:at)?o|ngue)|(?:ed|ol)a)|v(?:(?:iúv|ac)a|e(?:lu|a)do)|n(?:(?:espereir|oiv)a|atal)|l(?:is(?:ado)?|agartixa|ã)|(?:quaresm|dian|águ)a|(?:invern|índi|fog)o|e(?:spírito|nxofre)|t(?:rombeta|anino)|g(?:ra[mx]a|elo)|jesus)|-(?:c(?:a(?:(?:(?:r(?:nav|de)|m)a)?l|(?:sament|chimb|bocl)o)|o(?:(?:[iu]r|elh|c)o|ntas|bra|ral)|e(?:tim|ra)|hagas|iúme|uco)|p(?:a(?:(?:ssarinh|pagai|raís|vã)o|dre|lha|u)|e(?:licano|dra)|érolas)|m(?:a(?:r(?:acujá|iposa)|deira|io)|(?:(?:eren|osca)d|us)a|ico)|b(?:a(?:(?:b(?:eir|ad)|rbeir)o|unilha|ile)|eso[iu]ro)|a(?:(?:lgodã|njinh)o|ranha|bril|zar)|s(?:a(?:p(?:at)?o|ngue)|(?:ed|ol)a)|v(?:(?:iúv|ac)a|e(?:lu|a)do)|n(?:(?:espereir|oiv)a|atal)|(?:quaresm|dian|águ)a|(?:invern|índi|fog)o|e(?:spírito|nxofre)|l(?:agartixa|is|ã)|t(?:rombeta|anino)|g(?:ra[mx]a|elo)|jesus))|rut(?:a(?:s-(?:c(?:o(?:n(?:de(?:ssa)?|ta)|(?:dorn|ruj)a)|a(?:chorro|scavel|iapó)|utia)|g(?:(?:enti|al)o|uar(?:iba|á)|rude)|m(?:a(?:n(?:teig|il)a|caco)|orcego)|p(?:(?:a(?:pagai|vã)|omb|ã)o|erdiz)|sa(?:(?:pucainh|ír)a|b(?:ão|iá))|a(?:n(?:ambé|el)|rara)|v(?:(?:íbor|i)a|eado)|b(?:abad|urr)o|t(?:ucano|atu)|l(?:epra|obo)|jac(?:aré|u)|árvore|faraó|ema)|-(?:c(?:o(?:n(?:de(?:ssa)?|ta)|(?:dorn|ruj)a)|a(?:chorro|scavel|iapó)|utia)|g(?:(?:enti|al)o|uar(?:iba|á)|rude)|m(?:a(?:n(?:teig|il)a|caco)|orcego)|p(?:(?:a(?:pagai|vã)|omb|ã)o|erdiz)|sa(?:(?:pucainh|ír)a|b(?:ão|iá))|a(?:n(?:ambé|el)|rara)|v(?:(?:íbor|i)a|eado)|b(?:abad|urr)o|t(?:ucano|atu)|l(?:epra|obo)|jac(?:aré|u)|árvore|faraó|ema))|eira(?:s-(?:c(?:onde(?:ssa)?|achorro|utia)|(?:macac|tucan|burr|lob)o|p(?:(?:avã|omb)o|erdiz)|jac(?:aré|u)|arara|faraó)|-(?:c(?:onde(?:ssa)?|achorro|utia)|(?:macac|tucan|burr|lob)o|p(?:(?:avã|omb)o|erdiz)|jac(?:aré|u)|arara|faraó))|o(?:s-(?:c(?:a(?:xinguelê|chorro)|o(?:br|nt)a)|m(?:a(?:nteiga|caco)|orcego)|p(?:apagaio|erdiz)|burro|sabiá|imbé)|-(?:c(?:a(?:xinguelê|chorro)|o(?:br|nt)a)|m(?:a(?:nteiga|caco)|orcego)|p(?:apagaio|erdiz)|burro|sabiá|imbé)))|o(?:r(?:m(?:iga(?:s-(?:f(?:e(?:rrão|bre)|ogo)|r(?:a(?:spa|bo)|oça)|c(?:emitério|upim)|m(?:andioca|onte)|b(?:entinho|ode)|(?:imbaúv|onç)a|n(?:ovato|ós)|defunto)|-(?:f(?:e(?:rrão|bre)|ogo)|r(?:a(?:spa|bo)|oça)|c(?:emitério|upim)|m(?:andioca|onte)|b(?:entinho|ode)|(?:imbaúv|onç)a|n(?:ovato|ós)|defunto))|osa(?:s-(?:besteiros|darei)|-(?:besteiros|darei)))|no(?:s-ja(?:çanã|caré)|-ja(?:çanã|caré)))|lha(?:s-(?:s(?:a(?:n(?:tana|gue)|bão)|e(?:rr|d)a)|f(?:(?:ígad|og)o|igueira|ronte)|p(?:a(?:pagaio|dre|jé)|irarucu)|(?:comichã|bold?|gel)o|l(?:ança|eite|ouco)|(?:zeb|he|ta)ra|mangue|urubu)|-(?:s(?:a(?:n(?:tana|gue)|bão)|erra)|f(?:(?:ígad|og)o|igueira|ronte)|p(?:a(?:pagaio|dre|jé)|irarucu)|(?:comichã|bold?|gel)o|l(?:ança|eite|ouco)|(?:zeb|he|ta)ra|mangue|urubu))|cas?-capuz)|a(?:v(?:a(?:s-(?:(?:a(?:ngol|rar)|(?:mal|v)ac|r(?:osc|am)|sucupir|holand)a|c(?:a(?:labar|valo)|h(?:eiro|apa)|obra)|b(?:e(?:souro|lém)|ol(?:ach|ot)a)|(?:quebrant|engenh|ordáli)o|l(?:(?:ázar|ob)o|ima)|t(?:ambaqui|onca)|p(?:orco|aca)|impin?gem)|-(?:(?:a(?:ngol|rar)|(?:mal|v)ac|r(?:osc|am)|sucupir|holand)a|b(?:e(?:souro|lém)|ol(?:ach|ot)a)|c(?:a(?:labar|valo)|(?:hap|obr)a)|(?:quebrant|ordáli)o|t(?:ambaqui|onca)|p(?:orco|aca)|l(?:ima|obo)|impin?gem))|eira(?:s-(?:impin?gem|berloque)|-(?:impin?gem|berloque))|inhas?-capoeira)|lc(?:ões|ão)-coleira)|e(?:ij(?:õe(?:s-(?:c(?:(?:o(?:br|rd)|er|ub)a|avalo)|g(?:u(?:ando|izos)|ado)|(?:árvor|azeit|frad)e|l(?:i(?:sbo|m)a|eite)|(?:jav|rol|soj)a|m(?:acáçar|etro)|po(?:mbinha|rco)|va(?:[cr]a|gem)|tropeiro|boi)|zinhos-capoeira)|ão(?:-(?:c(?:(?:ord|er|ub)a|avalo)|g(?:u(?:ando|izos)|ado)|(?:árvor|azeit|frad)e|l(?:i(?:sbo|m)a|eite)|(?:jav|rol|soj)a|m(?:acáçar|etro)|po(?:mbinha|rco)|va(?:[cr]a|gem)|tropeiro|boi)|zinho-capoeira))|(?:l(?:es)?-genti|nos?-cheir|tos?-botã)o)|i(?:g(?:ueira(?:s-(?:(?:lombrigueir|pit|go)a|b(?:engala|aco)|to(?:car|que)|jardim)|-(?:(?:lombrigueir|pit|go)a|b(?:engala|aco)|to(?:car|que)|jardim))|o(?:s-(?:(?:figueir|banan)a|r(?:echeio|ocha)|(?:tord|verã)o)|-(?:(?:figueir|banan)a|r(?:echeio|ocha)|(?:tord|verã)o)))|lária(?:s-(?:medina|guiné)|-(?:medina|guiné))|andeiras?-algodão)|u(?:mo(?:s-(?:(?:rapos|cord|folh)a|pa(?:isan|raís)o|jardim)|-(?:(?:rapos|cord|folh)a|pa(?:isan|raís)o|jardim))|ncho(?:s-(?:(?:florenç|águ)a|porco)|-(?:(?:florenç|águ)a|porco)))|éis-gentio)|b(?:a(?:nan(?:eir(?:a(?:s-(?:(?:madag[áa]sca|flo)r|(?:italian|papagai)o|sementes|jardim|corda|leque)|-(?:(?:madag[áa]sca|flo)r|(?:italian|papagai)o|sementes|jardim|corda|leque))|inha(?:s-(?:touceira|salão|flor)|-(?:touceira|salão|flor)))|a(?:s-(?:(?:m(?:orceg|acac)|papagai)o|s(?:ementes|ancho)|imbé)|-(?:(?:m(?:orceg|acac)|papagai)o|s(?:ementes|ancho)|imbé)))|tat(?:a(?:s-(?:p(?:e(?:rdiz|dra)|ur(?:ga|i)|orco)|a(?:(?:ngol|rrob)a|maro)|b(?:(?:ranc|ugi)o|ainha)|(?:cabocl|vead)o|t(?:aiuiá|iú)|escamas|rama)|-(?:p(?:e(?:rdiz|dra)|ur(?:ga|i)|orco)|a(?:(?:ngol|rrob)a|maro)|b(?:(?:ranc|ugi)o|ainha)|(?:cabocl|vead)o|t(?:aiuiá|iú)|escamas|rama))|inhas?-cobra)|g(?:a(?:s-(?:(?:cabocl|tucan|lour)o|p(?:ombo|raia))|-(?:(?:cabocl|tucan|lour)o|p(?:ombo|raia)))|re(?:s-(?:(?:arei|lago)a|man(?:gue|ta)|penacho)|-(?:(?:arei|lago)a|man(?:gue|ta)|penacho))|os?-chumbo)|r(?:r(?:ete(?:s-(?:clérigo|eleitor|padre)|-(?:clérigo|eleitor|padre))|ig(?:udas?-espinho|as?-freira))|ba(?:-(?:(?:chib|timã)o|pa(?:ca|u)|lagoa)|s-(?:(?:chib|timã)o|lagoa|boi|pau)))|b(?:osa(?:s-(?:árvore|espiga|pau)|-(?:árvore|espiga|pau))|a(?:-(?:(?:camel|sap)o|boi)|s-(?:sapo|boi)))|c(?:u(?:r(?:aus?-(?:lajea|ban)do|is?-cerca)|(?:paris?-capoei|s?-ped)ra)|abas?-(?:azeit|lequ)e)|mbu(?:s-(?:(?:espinh|caniç)o|pescador|mobília)|-(?:(?:espinh|caniç)o|pescador|mobília))|leia(?:s-(?:b(?:arbatana|ico)|corcova|gomo)|-(?:b(?:arbatana|ico)|corcova|gomo))|i(?:acu(?:s-(?:espinho|chifre)|-(?:espinho|chifre))|nhas?-(?:espad|fac)a)|st(?:(?:i(?:ões|ão)-arrud|ardos?-rom)a|ões-velho)|d(?:ianas?-cheiro|ejos?-lista)|unilhas?-auacuri|únas?-fogo)|i(?:c(?:h(?:o(?:-(?:c(?:(?:a(?:rpintei|chor)r|est)o|o(?:nta|co)|hifre)|(?:(?:ester|bura)c|ouvid|rum)o|(?:(?:gali|u)nh|taquar|sed)a|p(?:a(?:rede|u)|orco|ena|é)|m(?:(?:edranç|osc)a|ato)|v(?:areja|eludo)|f(?:rade|ogo))|s-(?:c(?:(?:a(?:rpintei|chor|nast)r|est)o|o(?:nta|co)|hifre)|(?:m(?:edranç|osc)|(?:gali|u)nh|taquar|sed)a|(?:(?:ester|bura)c|ouvid|rum)o|p(?:a(?:rede|u)|orco|ena|é)|v(?:areja|eludo)|f(?:rade|ogo)))|eiros?-conta)|udas?-corso)|ribás?-pernambuco|telos?-gente)|o(?:r(?:boleta(?:s-(?:p(?:êssego|iracema)|a(?:moreira|lface)|(?:carvalh|band)o|gás)|-(?:p(?:êssego|iracema)|a(?:moreira|lface)|(?:carvalh|band)o|gás))|d(?:ões|ão)-(?:santiag|macac)o)|i(?:s-(?:carro|guará|deus)|-(?:carro|guará|deus)|tas?-bigodes)|a(?:is|l)-alicante|fes?-burro|tos-óculos)|r(?:edo(?:s-(?:(?:namor(?:ad)?|porc|vead|mur)o|espi(?:nho|ga)|cabeça|jardim)|-(?:(?:namor(?:ad)?|porc|vead|mur)o|espi(?:nho|ga)|cabeça|jardim))|inco(?:s-(?:s(?:a(?:guim?|uim)|urubim)|passarinho)|-(?:sa(?:guim?|uim)|passarinho))|(?:ucos?-salvaterr|ancos?-barit)a|ocas?-raiz)|e(?:s(?:ouro(?:s-(?:(?:limeir|águ)a|chifre|maio)|-(?:(?:limeir|águ)a|chifre|maio))|ugos?-ovas)|l(?:droega(?:s-(?:inverno|cuba)|-(?:inverno|cuba))|a(?:s-felgueiras?|-felgueiras?))|ngalas?-camarão|tónicas?-água|ijus?-potó)|álsamo(?:s-(?:c(?:a(?:rtagena|nudo)|heiro)|(?:arce|tol)u|enxofre)|-(?:c(?:a(?:rtagena|nudo)|heiro)|(?:arce|tol)u|enxofre))|u(?:ch(?:o(?:s-(?:veado|boi|rã)|-(?:veado|boi|rã))|as?-purga)|t(?:iás?-vinagre|uas?-corvo)|xos?-holanda))|a(?:l(?:f(?:a(?:vaca(?:s-(?:c(?:(?:abocl|heir)o|obra)|vaqueiro)|-(?:c(?:(?:abocl|heir)o|obra)|vaqueiro))|ce(?:s-(?:(?:c(?:ordeir|ã)|porc)o|alger)|-(?:(?:c(?:ordeir|ã)|porc)o|alger))|zemas?-caboclo|fas?-provença)|inete(?:s-(?:toucar|dama)|-toucar))|m(?:a(?:s-(?:c(?:a(?:(?:boc|va)lo|çador)|(?:hichar|ânta)ro)|(?:tapui|pomb|gat)o|biafada|mestre)|-(?:c(?:a(?:(?:boc|va)lo|çador)|(?:hichar|ânta)ro)|(?:tapui|pomb|gat)o|biafada))|ecegueira(?:s-(?:cheiro|minas)|-(?:cheiro|minas)))|e(?:cri(?:ns-(?:c(?:ampina|heiro)|angola)|m-(?:c(?:ampina|heiro)|angola))|trias?-pau)|ho(?:s-(?:espanha|cheiro)|-(?:espanha|cheiro))|ba(?:troz(?:es)?-sobrancelha|coras?-laje)|g(?:odoeiros?-pernambuco|ibeiras?-dama)|cachofras?-jerusalém|amandas?-jacobina)|r(?:a(?:ç(?:á(?:s-(?:c(?:o(?:mer|roa)|heiro)|(?:umbig|vead)o|(?:pomb|ant)a|tinguijar|minas)|-(?:c(?:o(?:mer|roa)|heiro)|(?:umbig|vead)o|(?:pomb|ant)a|tinguijar|minas))|aris?-minhoca)|ticu(?:ns-(?:(?:espinh|cheir)o|(?:jangad|pac)a|boia?)|m-(?:(?:espinh|cheir)o|(?:jangad|pac)a|boia?))|nha(?:s-(?:água|coco)|-(?:água|coco))|(?:pocas?-cheir|rutas?-porc)o)|r(?:aia(?:s-(?:coroa|fogo)|-(?:coroa|fogo))|ozes-(?:telhad|rat)o|udas?-campinas)|oeira(?:s-(?:(?:goiá|mina)s|capoeira|bugre)|-(?:(?:goiá|mina)s|capoeira|bugre))|(?:lequi(?:ns|m)-caien|cos?-pip)a)|n(?:g(?:ico(?:s-(?:m(?:onte|ina)s|banhado|curtume)|-(?:m(?:onte|ina)s|banhado|curtume))|eli(?:ns|m)-(?:espinh|morceg)o|élicas?-rama)|a(?:n(?:ases-(?:caraguatá|agulha)|ás-(?:caraguatá|agulha))|mbés?-capuz)|dorinha(?:s-(?:bando|casa)|-(?:bando|casa))|ingas?-(?:espinh|macac)o|u(?:n?s|m)?-enchente|z(?:óis|ol)-lontra)|m(?:or(?:e(?:ira(?:s-(?:espinho|árvore)|-(?:espinho|árvore))|s-(?:(?:(?:vaquei|bur)r|hortelã)o|moça))|-(?:(?:(?:vaquei|bur)r|hortelã)o|moça))|e(?:ndo(?:i(?:ns-(?:árvore|veado)|m-(?:árvore|veado))|eiras?-coco)|ixa(?:s-(?:madagascar|espinho)|-(?:madagascar|espinho)))|êndoas?-(?:espinh|coc)o)|b(?:elha(?:s-(?:c(?:(?:achorr|hã)o|upim)|(?:rein|fog|our|sap)o|p(?:urga|au))|-(?:(?:rein|fog|our|sap)o|p(?:urga|au)|cupim))|(?:utuas?-batat|óbora-coro)a|r(?:icós?-macaco|aços?-vide))|s(?:a(?:s-(?:pa(?:pagaio|lha)|(?:barat|telh)a|sabre)|-(?:pa(?:pagaio|lha)|(?:barat|telh)a|sabre))|pargo(?:s-(?:jardim|sala)|-(?:jardim|sala))|so[bv]ios?-(?:cobr|folh)a)|ça(?:f(?:ate(?:s-(?:o[iu]ro|prata)|-(?:o[iu]ro|prata))|roeiras?-pernambuco)|ís?-caatinga)|g(?:ulh(?:(?:ões|ão)-(?:(?:trombe|pra)t|vel)a|as?-pastor)|rílicas?-rama)|zed(?:inha(?:s-(?:corumbá|goiás)|-(?:corumbá|goiás))|as-ovelha)|ve(?:nca(?:s-(?:espiga|minas)|-(?:espiga|minas))|s?-crocodilo)|(?:ipos?-montevid|carás?-v)éu|tu(?:ns|m)-galha)|m(?:a(?:r(?:acujá(?:s-(?:c(?:a(?:iena|cho)|o(?:rtiç|br)a|heiro)|(?:ga(?:rap|vet)|mochil)a|pe(?:riquito|dra)|est(?:rada|alo)|(?:alh|rat)o)|-(?:c(?:a(?:iena|cho)|o(?:rtiç|br)a|heiro)|(?:ga(?:rap|vet)|mochil)a|pe(?:riquito|dra)|est(?:rada|alo)|(?:alh|rat)o))|m(?:el(?:adas?-(?:ca(?:chorr|val)|invern|verã)o|(?:eir)?os?-bengala)|itas?-macaco)|reco(?:s-(?:pequim|ruão)|-(?:pequim|ruão))|imbondos?-chapéu|quesas?-belas)|c(?:a(?:co(?:s-(?:(?:cheir|band)o|noite|sabá)|-(?:(?:cheir|band)o|noite|sabá))|mbira(?:s-(?:(?:flech|pedr)a|serrote)|-(?:(?:flech|pedr)a|serrote))|quinhos?-bambá)|ieira(?:s-(?:(?:anáfeg|coro)a|boi)|-(?:(?:anáfeg|coro)a|boi))|elas?-(?:tabuleir|botã)o|ucus?-paca)|n(?:gue(?:s-(?:(?:(?:pend|bot)ã|sapateir|espet)o|obó)|-(?:(?:(?:pend|bot)ã|sapateir|espet)o|obó))|t(?:imento(?:s-(?:araponga|pobre)|-(?:araponga|pobre))|as?-bretão)|jeric(?:ões|ão)-(?:ceilã|molh)o|d(?:ibis?-juntas|acarus?-boi))|çã(?:s-(?:c(?:(?:[au]c|rav)o|ipreste|obra)|a(?:náfega|rrátel)|(?:espelh|prat)o|rosa|vime|boi)|-(?:c(?:(?:[au]c|rav)o|ipreste|obra)|a(?:náfega|rrátel)|(?:espelh|prat)o|rosa|vime|boi))|t(?:inho(?:s-(?:agulhas|lisboa|sargo)|-(?:agulhas|lisboa|sargo))|o(?:s-(?:engodo|salema)|-(?:engodo|salema)))|m(?:(?:icas?-(?:ca(?:chorr|del)|porc)|(?:ões|ão)-cord)a|oeiro(?:s-(?:espinho|corda)|-(?:espinho|corda)))|lva(?:s-(?:(?:cheir|pendã)o|marajó)|-(?:marajó|pendão)|íscos?-pernambuco)|d(?:ressilvas?-cheiro|eiras?-rei)|itacas?-maximiliano|parás?-cametá)|o(?:s(?:ca(?:s-(?:b(?:a(?:nheir|gaç)o|ich(?:eira|o))|e(?:lefante|stábulo)|ca(?:valos?|sa)|f(?:reira|ogo)|(?:madei|u)ra|inverno)|-(?:b(?:a(?:nheir|gaç)o|ich(?:eira|o))|e(?:lefante|stábulo)|ca(?:valos?|sa)|(?:madei|u)ra|fogo)|t(?:éis-(?:setúbal|jesus)|el-(?:setúbal|jesus)))|quitos?-parede)|ela(?:s-(?:mutum|ema)|-(?:mutum|ema))|n(?:stros?-gila|cos?-peru|tes?-ouro)|(?:uriscos?-sement|reias?-mangu)e|c(?:itaíbas?-leite|hos?-orelhas)|longós?-colher)|u(?:r(?:ici(?:s-(?:(?:tabuleir|porc)o|lenha)|-(?:(?:tabuleir|porc)o|lenha))|uré(?:s-(?:canudo|pajés)|-(?:canudo|pajé))|ta(?:s-(?:cheiro|parida)|-parida))|s(?:go(?:s-(?:irlanda|perdão)|-(?:irlanda|perdão))|aranhos?-água)|tu(?:ns-(?:asso[bv]io|fava)|m-(?:asso[bv]io|fava))|çambés?-espinhos|ngunzás?-cortar)|i(?:lh(?:o(?:s-(?:cobr|águ)|-águ)a|ãs?-pendão)|mos(?:as?-vereda|os?-cacho)|neiras?-petrópolis|cos?-topete|jos?-cavalo|olos-capim)|el(?:(?:(?:ões|ão)-(?:cabocl|morceg|soldad)|oeiros?-soldad)o|(?:ros?-(?:coleir|águ)|ancias?-cobr)a))|e(?:rv(?:a(?:s-(?:m(?:a(?:l(?:eitas|aca)|caé)|u(?:lher|ro)|o[iu]ra|endigo)|p(?:a(?:(?:rid|in)a|ssarinho)|(?:ântan|iolh)o|ontada)|a(?:n(?:(?:dorinh|t)a|jinho|il)|l(?:finete|ho)|mor)|b(?:(?:(?:ascul|ic)h|otã)o|(?:esteir|álsam)os|ugre)|c(?:(?:abr(?:it)?|obr)a|h(?:eir|umb)o)|sa(?:n(?:t(?:iago|ana)|gue)|(?:le)?po)|l(?:a(?:(?:vadeir|c)a|garto)|ouco)|g(?:o(?:[mt]|iabeir)a|uiné|elo)|f(?:(?:og|um|i)o|ebra)|(?:r(?:ober|a)t|our)o|ja(?:raraca|buti)|impingem|esteira)|-(?:m(?:a(?:l(?:eitas|aca)|caé)|u(?:lher|ro)|o[iu]ra|endigo)|p(?:a(?:(?:rid|in)a|ssarinho)|(?:ântan|iolh)o|ontada)|a(?:l(?:finete|míscar|ho)|n(?:(?:dorinh|t)a|il)|mor)|b(?:(?:(?:ascul|ic)h|otã)o|(?:esteir|álsam)os|ugre)|sa(?:n(?:t(?:iago|ana)|gue)|(?:le)?po)|c(?:(?:abr(?:it)?|obr)a|(?:humb|ã)o)|l(?:a(?:(?:vadeir|c)a|garto)|ouco)|g(?:o(?:[mt]|iabeir)a|uiné|elo)|f(?:(?:og|um|i)o|ebra)|(?:r(?:ober|a)t|our)o|ja(?:raraca|buti)|impingem|esteira))|i(?:lha(?:s-(?:(?:cheir|pomb)o|(?:árvo|leb)re|(?:angol|vac)a)|-(?:(?:cheir|pomb)o|(?:árvo|leb)re|(?:angol|vac)a))|nhas?-parida))|s(?:p(?:i(?:n(?:h(?:o(?:s-(?:c(?:a(?:(?:chor|rnei)ro|çada)|r(?:isto|uz)|erca)|(?:bananeir|agulh|roset)a|(?:ladrã|tour|urs)o|j(?:erusalém|udeu)|mari(?:ana|cá)|vintém|deus)|-(?:c(?:a(?:(?:chor|rnei)ro|çada)|r(?:isto|uz)|erca)|(?:bananeir|agulh|roset)a|(?:ladrã|tour|urs)o|j(?:erusalém|udeu)|mari(?:ana|cá)|vintém|deus))|eiro(?:s-(?:c(?:a(?:rneiro|iena)|risto|erca)|j(?:erusalém|udeu)|a(?:gulh|meix)a|vintém)|-(?:c(?:a(?:rneiro|iena)|risto|erca)|j(?:erusalém|udeu)|a(?:gulh|meix)a|vintém))|as?-(?:carneir|vead)o)|afres?-cuba)|ga(?:s-(?:(?:sangu|leit)e|ferrugem|água)|-(?:(?:sangu|leit)e|ferrugem|água)))|onjas?-raiz)|c(?:a(?:móneas?-alepo|das?-jabuti)|ovas?-macaco|umas?-sangue)|tercos?-jurema)|mbira(?:s-(?:ca(?:rrapato|çador)|(?:porc|sap)o)|-(?:ca(?:rrapato|çador)|(?:porc|sap)o))|n(?:xertos?-passarinho|redadeiras?-borla))|g(?:r(?:a(?:m(?:a(?:s-(?:p(?:(?:ernambuc|ast)o|onta)|(?:forquilh|sananduv)a|c(?:oradouro|idade)|ja(?:cobina|rdim)|ma(?:rajó|caé)|adorno)|-(?:p(?:(?:ernambuc|ast)o|onta)|(?:forquilh|sananduv)a|c(?:oradouro|idade)|ja(?:cobina|rdim)|ma(?:rajó|caé)|adorno))|inha(?:s-(?:campinas|jacobina|raiz)|-(?:campinas|jacobina|raiz)))|vatá(?:s-(?:(?:moquec|agulh)a|c(?:o[iu]ro|erca)|(?:ganch|lajed)o|r(?:aposa|ede)|árvore|tingir)|-(?:(?:moquec|agulh)a|c(?:o[iu]ro|erca)|(?:ganch|lajed)o|r(?:aposa|ede)|árvore|tingir))|lhas?-crista)|ão(?:s-(?:(?:c(?:aval|humb)|(?:malu|bi)c|gal)o|p(?:orco|ulha))|-(?:(?:(?:malu|bi)c|(?:cav|g)al)o|p(?:orco|ulha))|zinhos?-galo)|inaldas?-viúva)|a(?:l(?:o(?:s-(?:p(?:enacho|luma)|b(?:ando|riga)|rebanho|fita|ebó)|-(?:p(?:enacho|luma)|b(?:ando|riga)|rebanho|fita|ebó))|inha(?:s-(?:bugre|faraó|água)|-(?:bugre|faraó|água)))|fanhoto(?:s-(?:(?:(?:marmel|coqu)eir|arribaçã)o|(?:jurem|prag)a)|-(?:(?:(?:marmel|coqu)eir|arribaçã)o|(?:jurem|prag)a))|vi(?:ões-(?:(?:(?:colei|ser)r|queimad)a|a(?:nta|ruá)|penacho)|ão-(?:(?:(?:colei|ser)r|queimad)a|a(?:nta|ruá)|penacho))|meleira(?:-(?:(?:lombrigueir|p(?:in|ur)g)a|(?:cansaç|venen)o)|s-(?:(?:cansaç|venen)o|lombrigueiras|p(?:in|ur)ga))|to(?:-(?:madagáscar|algália)|s-algália)|r(?:oupas?-segunda|gantas-ferro))|u(?:a(?:birob(?:eira(?:s-(?:cachorro|minas)|-(?:cachorro|minas))|a(?:s-(?:cachorro|minas)|-(?:cachorro|minas)))|ricangas?-bengala)|iratãs?-coqueiro)|o(?:iab(?:a(?:s-(?:(?:espinh|macac)o|anta)|-(?:(?:espinh|macac)o|anta))|eiras?-(?:cuti|pac)a)|meiros?-minas|gós?-guariba|elas?-lobo)|e(?:rgeli(?:ns|m)-laguna|ngibres?-dourar)|irass(?:óis|ol)-batatas)|t(?:r(?:e(?:vo(?:s-(?:c(?:ar(?:retilha|valho)|heiro)|(?:se[ar]r|águ)a)|-(?:c(?:ar(?:retilha|valho)|heiro)|(?:se[ar]r|águ)a))|moço(?:s-(?:cheiro|jardim|minas)|-(?:cheiro|jardim|minas)))|i(?:go(?:s-(?:p(?:rioste|erdiz)|milagre|israel|verão)|-(?:p(?:rioste|erdiz)|milagre|israel|verão))|colino(?:s-c(?:hifre|rista)|-c(?:hifre|rista))|nca(?:is|l)-pau)|(?:aças?-bibliotec|épanos?-coro)a|omb(?:as?-elefante|etas?-arauto)|utas?-lago)|a(?:i(?:uiá(?:s-(?:c(?:omer|ipó)|pimenta|jardim|quiabo|goiás)|-(?:c(?:omer|ipó)|pimenta|jardim|quiabo|goiás))|nhas?-(?:cors|ri)o)|r(?:taruga(?:s-(?:couro|pente)|-(?:couro|pente))|umã(?:s-espinhos?|-espinhos?))|m(?:b(?:etarus?-espinh|ori[ls]-brav)o|anqueiras?-leite)|j(?:ujás?-(?:cabacinh|quiab)o|ás?-cobra)|(?:xizeiros?-tint|tus?-folh)a|b(?:ocas?-marajó|acos?-cão)|quaris?-cavalo)|i(?:n(?:gui(?:s-(?:c(?:(?:aien|ol)a|ipó)|(?:leit|peix)e)|-(?:c(?:(?:aien|ol)a|ipó)|(?:leit|peix)e))|hor(?:ões|ão)-lombriga)|mbó(?:s-(?:boticário|caiena|jacaré|peixe|raiz)|-(?:boticário|caiena|jacaré|peixe|raiz))|gres?-bengala)|o(?:m(?:at(?:e(?:s-(?:princesa|árvore)|-(?:princesa|árvore))|inhos?-capucho)|ilhos?-creta)|(?:rós?-espinh|adas-cour)o|petes?-cardeal)|u(?:c(?:u(?:ns-(?:carnaúba|redes)|m-(?:carnaúba|redes))|anos?-cinta)|bar(?:ões|ão)-focinho|lipas?-jardim|ias?-areia)|e(?:m(?:betarus?-espinho|porãos?-coruche)|rebintina-quio)|úberas?-(?:invern|verã)o)|r(?:a(?:to(?:s-(?:p(?:a(?:lmatória|iol)|entes|raga)|(?:es(?:pinh|got)|algodã)o|(?:t(?:aquar|romb)|águ)a|c(?:ouro|asa)|fa(?:raó|va)|bambu)|-(?:p(?:a(?:lmatória|iol)|entes|raga)|(?:es(?:pinh|got)|algodã)o|(?:t(?:aquar|romb)|águ)a|c(?:ouro|asa)|fa(?:raó|va)|bambu))|ízes-(?:c(?:(?:edr|urv)o|o(?:bra|rvo)|h(?:eiro|á)|âmaras|ana)|b(?:(?:ar?beir|randã)o|ugre)|(?:angélic|mostard|quin)a|l(?:agarto|opes)|sol(?:teira)?|t(?:ucano|iú)|f(?:rade|el)|guiné|pipi)|iz-(?:c(?:(?:edr|urv)o|o(?:bra|rvo)|h(?:eiro|á)|âmaras|ana)|b(?:(?:ar?beir|randã)o|ugre)|(?:angélic|mostard|quin)a|l(?:agarto|opes)|sol(?:teira)?|t(?:ucano|iú)|f(?:rade|el)|guiné|pipi)|b(?:uge(?:ns|m)-cachorr|anetes?-caval)o|m(?:as?-bezerro|os?-seda)|pés?-saci)|o(?:s(?:a(?:-(?:(?:c(?:a(?:chorr|bocl)|h?ã)|[bl]ob|defunt|o[iu]r|musg)o|p(?:áscoa|au)|jericó|toucar)|s-(?:(?:c(?:a(?:chorr|bocl)|h?ã)|[bl]ob|defunt|o[iu]r|musg)o|jericó|páscoa|toucar))|ário(?:s-(?:jamb[ou]|ifá)|-(?:jamb[ou]|ifá))|e(?:tas?-pernambu|iras?-damas)co)|uxin(?:óis-(?:m(?:uralha|anaus)|(?:espadan|jav)a|caniços)|ol-(?:m(?:uralha|anaus)|(?:espadan|jav)a|caniços))|(?:balos?-(?:arei|galh)|az(?:es)?-bandeir)a|ca(?:s-(?:flores|eva)|-(?:flores|eva)))|(?:e(?:sedás?-cheir|des?-leã)|ábanos?-caval)o|inocerontes?-Java)|s(?:a(?:l(?:sa(?:s-(?:c(?:a(?:stanheiro|valos)|heiro|upim)|(?:roch|águ)a|burro)|-(?:c(?:a(?:stanheiro|valos?)|upim)|(?:roch|águ)a|burro)|parrilhas?-lisboa)|va(?:s-(?:pernambuco|marajó)|-(?:pernambuco|marajó))|amandras?-água)|r(?:a(?:ndis?-(?:(?:carangu|gargar)ej|espinh)o|(?:magos?-águ|s?-pit)a)|dinha(?:s-(?:ga(?:lha|to)|laje)|-(?:ga(?:lha|to)|laje))|go(?:s-(?:beiço|dente)|-(?:beiço|dente))|ros?-pito)|n(?:haç(?:o(?:s-(?:(?:(?:coqu|mamo)eir|fog)o|encontros)|-(?:(?:(?:coqu|mamo)eir|fog)o|encontros))|us?-(?:encont|mamoei)ro)|ãs?-samambaia)|p(?:(?:ucaias?-castanh|és?-capoeir)a|o(?:-chifres?|s-chifre))|gui(?:n?s|m)?-bigode|mambaias?-penacho|[bv]acus?-coroa)|u(?:rucucu(?:s-(?:p(?:ati|ind)oba|fogo)|-(?:p(?:ati|ind)oba|fogo))|ma(?:umeiras?-macaco|gres?-provença|rés?-pedras))|orgo(?:s-(?:(?:vassour|espig)a|pincel|alepo)|-(?:(?:vassour|espig)a|pincel|alepo))|iris?-coral)|j(?:a(?:ca(?:r(?:andá(?:s-(?:campinas|espinho|sangue)|-(?:campinas|espinho|sangue))|és?-óculos)|(?:tir(?:ões|ão)-capot|s?-pobr)e)|smi(?:ns-(?:c(?:a(?:chorro|iena)|erca)|soldado|leite)|m-(?:c(?:a(?:chorro|iena)|erca)|soldado|leite))|(?:mb(?:eir)?os?-malac|lapas?-lisbo|puçá-coleir)a|tobá(?:s-(?:porco|anta)|-(?:porco|anta))|buticab(?:eiras?-campinas|as?-cipó)|r(?:aracas?-agosto|rinhas?-franja))|u(?:n(?:co(?:s-(?:c(?:a(?:ngalh|br)|obr)a|banhado)|-(?:c(?:a(?:ngalh|br)|obr)a|banhado))|ta(?:s-c(?:alangro|obra)|-c(?:alangro|obra))|ças-c(?:heiro|onta))|á(?:s-c(?:apote|omer)|-c(?:apote|omer))|rubebas?-espinho|ciris?-comer|quis?-cerca)|o(?:ões-(?:santarém|barros?|leite|puça)|ão-(?:santarém|barro|leite|puça))|e(?:quitibás?-agulheir|taís?-pernambuc)o|i(?:queranas?-goiás|tiranas?-leite))|l(?:i(?:m(?:(?:a(?:s-(?:cheir|umbig|bic)|-(?:umbig|bic))|eiras?-umbig)o|ões-(?:c(?:aiena|heiro)|galinha)|ão-(?:c(?:aiena|heiro)|galinha)|os?-manta)|n(?:ho(?:s-(?:raposa|cuco)|-(?:raposa|cuco))|gu(?:eir(?:ões|ão)-canud|ados?-ri)o)|x(?:a(?:s-(?:lei|pau)|-(?:lei|pau))|inhas?-fundura))|a(?:ranj(?:a(?:s-(?:(?:terr|onç)a|umbigo)|-(?:umbigo|onça))|eiras?-vaqueiro)|g(?:art(?:as?-(?:vidr|fog)o|os?-água)|ostas?-espinho)|lás?-cintura)|e(?:it(?:e(?:s-(?:ga(?:meleir|linh)a|cachorro)|-(?:ga(?:meleir|linh)a|cachorro)|iras?-espinho)|ugas?-burro)|sma-conchinha)|o(?:ur(?:eiro(?:s-(?:jardim|apolo)|-(?:jardim|apolo))|os?-cheiro)|ireiros?-apolo)|u(?:(?:tos-quaresm|vas-pastor)a|zernas?-sequeiro)|írios?-petrópolis)|v(?:a(?:sso(?:urinha(?:s-(?:(?:relógi|botã)o|varrer)|-(?:(?:relógi|botã)o|varrer))|ira(?:s-(?:fe(?:iticeira|rro)|bruxa)|-(?:feiticeir|brux)a))|ra(?:s-(?:foguete|o[iu]ro|canoa)|-o[iu]ro)|les?-arinto)|e(?:r(?:g(?:onhas?-estudante|as?-jabuti)|(?:melhinhas?-galh|ças?-cã)o)|spa(?:s-(?:rodeio|cobra)|-(?:rodeio|cobra))|l(?:ames?-cheiro|udos?-penca)|ados?-virgínia|nenos?-porco)|i(?:d(?:eiras?-enforcado|oeiros?-papel)|oletas?-(?:par|da)ma|nháticos?-espinho)|oador(?:es)?-pedra)|qu(?:i(?:n(?:a(?:s-(?:(?:per(?:nambuc|iquit)|vead)o|c(?:errado|aiena|ipó)|r(?:e(?:mígi|g)o|aiz)|goiás)|-(?:(?:per(?:nambuc|iquit)|vead)o|c(?:errado|aiena|ipó)|r(?:e(?:mígi|g)o|aiz)|goiás))|gombós?-(?:espinh|cheir)o)|ab(?:o(?:s-(?:c(?:aiena|heiro|ipó)|(?:angol|quin)a)|-(?:c(?:aiena|heiro|ipó)|(?:angol|quin)a)|ranas?-espinho)|eiros?-angola)|(?:gombós?-cheir|to-pernambuc)o|bondos?-água)|ati(?:s-(?:bando|vara)|-(?:bando|vara))|ássias?-caiena)|á(?:rvore(?:s-(?:(?:bálsam|incens|ranc?h|seb)o|(?:gra(?:lh|x)|orquíde)a|c(?:hocalho|oral|uia)|l(?:ótus|eite|ã)|(?:jud|vel)as|a(?:rr|n)oz|pagode|natal)|-(?:(?:bálsam|incens|ranc?h|seb)o|(?:gra(?:lh|x)|orquíde)a|c(?:hocalho|oral|uia)|l(?:ótus|eite|ã)|(?:jud|vel)as|a(?:rr|n)oz|pagode|natal))|(?:gu(?:as?-colóni|ias?-poup)|caros?-galinh)a)|i(?:n(?:ha(?:me(?:s-(?:c(?:oriolá|ão)|lagartixa|enxerto|benim)|-(?:c(?:oriolá|ão)|lagartixa|enxerto|benim))|íbas?-rego)|censos?-caiena|gás?-fogo)|mb(?:(?:ur(?:ana(?:s-(?:c(?:ambã|heir)|espinh)|-(?:espinh|cambã))|is?-cachorr)|aúbas?-(?:cheir|vinh))o|és?-(?:amarra|come)r)|p(?:ês?-impingem|ecas?-cuiabá)|xoras-cheiro|scas?-sola)|n(?:o(?:z(?:-(?:b(?:a(?:tauá|nda)|ugre)|co(?:(?:br|l)a|co)|(?:arec|galh)a)|es-(?:(?:co(?:br|l)|arec|galh)a|b(?:a(?:tauá|nda)|ugre)))|gueira(?:s-(?:cobra|pecã)|-(?:cobra|pecã)))|a(?:(?:rciso(?:-(?:invern|cheir)|s-cheir)|valhas?-macac)o|nás?-raposa)|iqui(?:ns-(?:areia|saco)|m-areia)|ené(?:ns|m)-galinha|ós-cachorro)|u(?:va(?:s-(?:(?:(?:espin|fac)h|g(?:enti|al)|c(?:heir|ã)|urs)o|r(?:ato|ei)|praia|obó)|-(?:(?:(?:espin|fac)h|g(?:enti|al)|urs|cã)o|praia|obó|rei))|(?:irapurus?-band|xis?-morceg|bás?-fach)o|queté(?:s-(?:água|obó)|-(?:água|obó))|m(?:baranas?-abelha|iris?-cheiro)|apuçás?-coleira|ntués?-obó)|h(?:ortelã(?:s-(?:c(?:a(?:mpina|valo)|heiro)|b(?:urro|oi)|leite)|-(?:c(?:a(?:mpina|valo)|heiro)|b(?:urro|oi)|leite))|idras?-água)|o(?:liveira(?:s-(?:marrocos|cheiro)|-(?:marrocos|cheiro))|iti(?:s-porcoóleo-copaíbaóleos-copaíba|-porco)|stras?-pobre)|ç(?:ana-áçúcar|or-Rosa)|ébanos?-zanzibar|xexéu-bananeira|Grão-Bico))\b</regexp>
+      <message>Esta expressão hifenizada é separada por '-de-'.</message>
+    <!--suggestion><match no='1' regexp_match='(.+?)-(.+?)' regexp_replace='$1-de-$2'/></suggestion-->
+      <url>http://www.portaldalinguaportuguesa.org/recursos.html?action=novoacordo</url>
+    <!--example correction='rato-de-água'>Vi um <marker>rato-água</marker> na casa.</example-->
+      <example type='incorrect'>Vi um <marker>rato-água</marker> na casa.</example>
+      <example type='correct'>Vi um <marker>rato-de-água</marker> na casa.</example>
+      <example>É um prato com feijão-frade.</example>
+    </rule>
+
+
  </category>
 
+
  <category id='DEVELOPMENT' name="Desenvolvimento" default='off'>
+
 
     <rule id="UNKNOWN_WORD" name="Desenvolvimento: palavra sem POS">
     <!-- Created by Tiago F. Santos, Portuguese rule, 2017-07-24 -->
@@ -45448,9 +45779,12 @@ O conflito ocorre além-mar.
       <example>Juros de 0,2% ao ano.</example>
     </rule>
 
+
  </category>
 
+
  <category id="CREATIVE_WRITING" name="Escrita Criativa" type="style" default='off'>
+
 
   <rulegroup id='WEAK_WORDS' name='Escrita Criativa: Termos frágeis' default='off'> <!-- test on wikipedia and then disable -->
     <!--      Localized from vim-wordy by Tiago F. Santos, Portuguese rule, 2017-08-24      -->
@@ -45466,6 +45800,7 @@ O conflito ocorre além-mar.
     </rule>
   </rulegroup>
 
+
   <rulegroup id='BIASED_OPINION_WORDS' name='Escrita Criativa: Termos opinativos' default='off'> <!-- test on wikipedia and then disable -->
     <!--      Localized from vim-wordy by Tiago F. Santos, Portuguese rule, 2017-08-23      -->
       <url>https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Palavras_a_evitar#Opini.C3.B5es</url>
@@ -45477,6 +45812,7 @@ O conflito ocorre além-mar.
       <example type='correct'>Penso que é um bom negócio.</example>
     </rule>
   </rulegroup>
+
 
   <rulegroup id='PUFFERY' name='Escrita Criativa: Termos espalhafatosos ou propagandísticos' default='off'> <!-- test on wikipedia and then disable -->
     <!--      Localized from vim-wordy by Tiago F. Santos, Portuguese rule, 2017-08-23      -->
@@ -45494,6 +45830,7 @@ O conflito ocorre além-mar.
     </rule>
   </rulegroup>
 
+
     <rule id='AVOID_PASSIVE_VOICE' name='Escrita Criativa: Evitar a Passiva (somente a analítica)' type='style' default='off'>
     <!-- Created by Tiago F. Santos , Portuguese rule, 2016-11-24 	-->
       <pattern>
@@ -45508,6 +45845,7 @@ O conflito ocorre além-mar.
       <example type='incorrect'>O trabalho <marker>foi feito</marker> por ele.</example>
       <example type='correct'>Ele <marker>fez</marker> o trabalho.</example>
     </rule>
+
 
   <rulegroup id='AVOID_ALL_PASSIVE_VOICE' name='Escrita Criativa: Evitar a Passiva (todas a formas)' type='style' default='off'>
     <!-- Created by Tiago F. Santos , Portuguese rule, 2016-11-24 	-->
@@ -45535,6 +45873,7 @@ O conflito ocorre além-mar.
       <example type='correct'>Todos <marker>conhecem</marker> o caso.</example>
     </rule>
   </rulegroup>
+
 
     <!-- ====================================================================== -->
     <!--         E-Prime        https://en.wikipedia.org/wiki/E-Prime           -->
@@ -45573,6 +45912,7 @@ O conflito ocorre além-mar.
       <example>This <marker>conforms</marker> with my current knowledge…</example>
     </rule -->
 
+
   <rulegroup id='STOP_WORDS' name='Escrita Criativa: Palavras vazias para motores de pesquisa' default='off'>
     <!--      Created by Tiago F. Santos, Portuguese rule, 2019-03-01      -->
     <!--      Word list from https://github.com/stopwords-iso/stopwords-pt -->
@@ -45589,5 +45929,9 @@ O conflito ocorre além-mar.
       <example type='correct'>pesquisa</example>
     </rule>
   </rulegroup>
+  
+
  </category>
+ 
+ 
 </rules>

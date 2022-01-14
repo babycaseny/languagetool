@@ -2,6 +2,23 @@
 # This does not add words to the spell checker, see hunspell/spelling.txt for that.
 # File Encoding: UTF-8
 # Format: three tab-separated fields: fullform baseform postags
+Glovo	Glovo	NPCNSP0
+Nursultán	Nursultán	NPCSG00
+enunciable	enunciable	AQ0CS0
+enunciables	enunciable	AQ0CP0
+flurona	flurona	NCFS000
+manifestable	manifestable	AQ0CS0
+manifestables	manifestable	AQ0CP0
+nursultaní	nursultaní	AQ0CS0
+nursultaníes	nursultaní	AQ0CP0
+nursultanís	nursultaní	AQ0CP0
+poscrisis	poscrisis	AQ0CN0
+postcrisis	postcrisis	AQ0CN0
+precrisis	precrisis	AQ0CN0
+sintiencia	sintiencia	NCFS000
+sintiencias	sintiencia	NCFP000
+sintiente	sintiente	AQ0CS0
+sintientes	sintiente	AQ0CP0
 superelitista	superelitista	AQ0CS0
 superelitistas	superelitista	AQ0CP0
 supernovedosa	supernovedoso	AQ0FS0
@@ -12,3 +29,5 @@ superparecida	superparecido	AQ0FS0
 superparecidas	superparecido	AQ0FP0
 superparecido	superparecido	AQ0MS0
 superparecidos	superparecido	AQ0MP0
+verbalizable	verbalizable	AQ0CS0
+verbalizables	verbalizable	AQ0CP0
