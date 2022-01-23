@@ -6,7 +6,7 @@ German Disambiguation Rules for LanguageTool
 Copyright © 2013 Markus Brenneis, Daniel Naber, Jan Schreiber
 -->
   <!DOCTYPE rules [
-    <!ENTITY zal_adj_ig "jähr|bänd|seit|monat|täg|köpf|tür|spur|geschoss|stöck|mal|teil|lag|stünd|minüt|sekünd|zeil|wöch|stell|räum|schicht|zähn|eck|arm">
+    <!ENTITY zal_adj_ig "jähr|bänd|seit|monat|täg|köpf|tür|spur|geschoss|stöck|mal|teil|lag|stünd|minüt|sekünd|zeil|wöch|stell|räum|schicht|zähn|eck|arm|karät">
     <!ENTITY zal_adj "(?-i)(\d+-|(ein|zw(ei|an)|dreiß?|vier|fünf|s(echs?|ieb(en)?)|acht|neun|zehn|elf|zwölf)(zehn|zig)?)(&zal_adj_ig;)">
     <!ENTITY apostrophe "['’`´‘]">
     <!ENTITY genderzeichen "[:_*]">
@@ -4654,7 +4654,7 @@ Copyright © 2013 Markus Brenneis, Daniel Naber, Jan Schreiber
         </rule>
         <rule>
             <pattern case_sensitive="yes">
-                <token regexp="yes">Advanced|Automatic|Authori[sz]ed|Astronomical|Certified|United|Active|Electronic|Economic|Scientific|Electric|Federal|Dynamic|Black|White|Blue|Green|Big|Little|World|Travel|Director|Social|My|Deep|Dead|Dark|European|American|Australian|English|Asian|Austrian|Swiss|German|Central|Medical|Custom|Consumer|Energy|Dragon|Child|Technology|Intelligence|Conference|Communication|Freedom|Magic|Direct|Autonomous|Californian?|Climate|Managed|Sponsored|Independent|Technical|Extended|Educational|Deluxe|Public|Safety|Ultimate|Local|Heavy|Diamond|Capital</token>
+                <token regexp="yes">Advanced|Automatic|Authori[sz]ed|Astronomical|Certified|United|Active|Electronic|Economic|Scientific|Electric|Federal|Dynamic|Black|White|Blue|Green|Big|Little|World|Travel|Director|Social|My|Deep|Dead|Dark|European|American|Australian|English|Asian|Austrian|Swiss|German|Central|Medical|Custom|Consumer|Energy|Dragon|Child|Technology|Intelligence|Conference|Communication|Freedom|Magic|Direct|Autonomous|Californian?|Climate|Managed|Sponsored|Independent|Technical|Extended|Educational|Deluxe|Public|Safety|Ultimate|Local|Heavy|Diamond|Capital|Industrial|Biomedical|Confidential</token>
                 <token postag="UNKNOWN|SUB:.+" postag_regexp="yes" regexp="yes" min="0">[A-Z][a-z]+|[A-Z]+</token>
                 <token postag="UNKNOWN|SUB:.+" postag_regexp="yes" regexp="yes">[A-Z][a-z]+|[A-Z]+</token>
             </pattern>
@@ -4662,7 +4662,7 @@ Copyright © 2013 Markus Brenneis, Daniel Naber, Jan Schreiber
         </rule>
         <rule>
             <pattern case_sensitive="yes">
-                <token regexp="yes">Advanced|Automatic|Authori[sz]ed|Astronomical|Certified|United|Active|Electronic|Economic|Scientific|Electric|Federal|Dynamic|Black|White|Blue|Green|Big|Little|World|Travel|Director|Social|My|Deep|Dead|Dark|European|American|Australian|English|Asian|Austrian|Swiss|German|Central|Medical|Custom|Consumer|Energy|Dragon|Child|Technology|Intelligence|Conference|Communication|Freedom|Magic|Direct|Autonomous|Californian?|Climate|Managed|Sponsored|Independent|Technical|Extended|Educational|Deluxe|Public|Safety|Ultimate|Local|Heavy|Diamond|Capital</token>
+                <token regexp="yes">Advanced|Automatic|Authori[sz]ed|Astronomical|Certified|United|Active|Electronic|Economic|Scientific|Electric|Federal|Dynamic|Black|White|Blue|Green|Big|Little|World|Travel|Director|Social|My|Deep|Dead|Dark|European|American|Australian|English|Asian|Austrian|Swiss|German|Central|Medical|Custom|Consumer|Energy|Dragon|Child|Technology|Intelligence|Conference|Communication|Freedom|Magic|Direct|Autonomous|Californian?|Climate|Managed|Sponsored|Independent|Technical|Extended|Educational|Deluxe|Public|Safety|Ultimate|Local|Heavy|Diamond|Capital|Industrial|Biomedical|Confidential</token>
                 <token postag="UNKNOWN|SUB:.+" postag_regexp="yes" regexp="yes">[A-Z][a-z]+|[A-Z]+</token>
                 <token regexp="yes">and|or|&amp;</token>
                 <token postag="UNKNOWN|SUB:.+" postag_regexp="yes" regexp="yes">[A-Z][a-z]+|[A-Z]+</token>
@@ -5479,6 +5479,126 @@ Copyright © 2013 Markus Brenneis, Daniel Naber, Jan Schreiber
             </marker>
         </pattern>
         <disambig action="ignore_spelling"/>
+    </rule>
+
+    <rule id="SANKT_KEIN_VERB" name="'Sankt' kein Verb">
+        <pattern>
+            <marker>
+                <token case_sensitive="yes">Sankt</token>
+            </marker>
+            <token case_sensitive="yes" regexp="yes" postag="UNKNOWN|EIG.*|SUB.*" postag_regexp="yes">[A-Z].+</token>
+        </pattern>
+        <disambig action="remove" postag="VER.*"/>
+    </rule>
+
+    <rule id="RED_KEIN_VERB" name="'Red' kein Verb">
+        <pattern>
+            <marker>
+                <token case_sensitive="yes">Red</token>
+            </marker>
+            <token case_sensitive="yes" regexp="yes" postag="UNKNOWN|EIG.*|SUB.*" postag_regexp="yes">[A-Z].+</token>
+        </pattern>
+        <disambig action="remove" postag="VER.*"/>
+    </rule>
+
+    <rule id="NUETZE_KEIN_VERB" name="'nütze' kein Verb">
+        <!-- "Er ist zu nichts nütze"-->
+        <pattern>
+            <token>zu</token>
+            <token postag="ADV.*" postag_regexp="yes" min="0" />
+            <token regexp="yes">(irgend)?was|(irgend)?etwas|nix|nichts</token>
+            <marker>
+                <token case_sensitive="yes" regexp="yes">n[üu]tze</token>
+            </marker>
+        </pattern>
+        <disambig action="remove" postag="VER.*"/>
+    </rule>
+
+    <rule id="NULLTE_KEIN_VERB" name="'nullte' kein Verb">
+        <!-- "Das nullte Gesetz"-->
+        <pattern>
+            <token postag="ART.*|PRO:POS" postag_regexp="yes" />
+            <marker>
+                <token case_sensitive="yes">nullte</token>
+            </marker>
+            <token postag="SUB.*" postag_regexp="yes" />
+        </pattern>
+        <disambig action="remove" postag="VER.*"/>
+    </rule>
+
+    <rule id="FRANZ_KEIN_VERB" name="'franz.' kein Verb">
+        <!-- "Auf franz. heißt es Liebe"-->
+        <pattern>
+            <marker>
+                <token case_sensitive="yes">franz</token>
+            </marker>
+            <token spacebefore="no">.</token>
+        </pattern>
+        <disambig action="remove" postag="VER.*"/>
+    </rule>
+
+    <rule id="UNTER_FERNER_LIEFEN" name="'unter ferner liefen' kein Verb">
+        <pattern>
+            <token>unter</token>
+            <token>ferner</token>
+            <marker>
+                <token>liefen</token>
+            </marker>
+        </pattern>
+        <disambig action="remove" postag="VER.*"/>
+    </rule>
+
+    <rule id="MAL_KEIN_VERB" name="'mal' kein Verb">
+        <antipattern>
+            <token skip="1">mal</token>
+            <token>ich</token>
+        </antipattern>
+        <antipattern>
+            <token>mal</token>
+            <token>und</token>
+            <token postag="VER:IMP.*" postag_regexp="yes" />
+        </antipattern>
+        <pattern>
+            <token regexp="yes">schon|zunächst|(vor)?erst|noch|kein</token>
+            <marker>
+                <token>mal</token>
+            </marker>
+        </pattern>
+        <disambig action="remove" postag="VER.*"/>
+    </rule>
+
+    <rule id="DE_LAS_KEIN_VERB" name="'de las' kein Verb">
+        <pattern>
+            <token>de</token>
+            <marker>
+                <token>las</token>
+            </marker>
+        </pattern>
+        <disambig action="remove" postag="VER.*"/>
+    </rule>
+
+    <rule id="ON_TOUR_KEIN_VERB" name="'on tour' kein Verb">
+        <pattern>
+            <token>on</token>
+            <marker>
+                <token>tour</token>
+            </marker>
+        </pattern>
+        <disambig action="remove" postag="VER.*"/>
+    </rule>
+
+    <rule id="VIERTEL_NACH_VOR_KEIN_VERB" name="'viertel nach' kein Verb">
+        <antipattern>
+            <token>ich</token>
+            <token>viertel</token>
+        </antipattern>
+        <pattern>
+            <marker>
+                <token>viertel</token>
+            </marker>
+            <token regexp="yes">nach|vor</token>
+        </pattern>
+        <disambig action="remove" postag="VER.*"/>
     </rule>
 
     <!-- TODO: (ohne meine neue ..., durch eine alte ...)-->

@@ -149,6 +149,15 @@ public class FrenchWordTokenizer extends WordTokenizer {
           .replace("\u0001\u0001FR_DECIMALPOINT\u0001\u0001", ".")
           .replace("\u0001\u0001FR_DECIMALCOMMA\u0001\u0001", ",").replace("\u0001\u0001FR_SPACE\u0001\u0001", " ");
       boolean matchFound = false;
+      while (s.length() > 1 && s.startsWith("-")) {
+        l.add("-");
+        s = s.substring(1);
+      }
+      int hyphensAtEnd = 0;
+      while (s.length() > 1 && s.endsWith("-")) {
+        s = s.substring(0, s.length() - 1);
+        hyphensAtEnd++;
+      }
       int j = 0;
       while (j < maxPatterns && !matchFound) {
         matcher = patterns[j].matcher(s);
@@ -162,6 +171,10 @@ public class FrenchWordTokenizer extends WordTokenizer {
         }
       } else {
         l.addAll(wordsToAdd(s));
+      }
+      while (hyphensAtEnd > 0) {
+        l.add("-");
+        hyphensAtEnd--;
       }
     }
     return joinEMailsAndUrls(l);

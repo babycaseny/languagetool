@@ -24,6 +24,8 @@ antecedências	antecedência	NCMP000
 antípoda	antípoda	NCMS000
 antípodas	antípodas	NCMP000
 Arcos	Arcos	NPCSG00
+arriscámo	arriscar	VMIS1P0
+arriscávamo	arriscar	VMII1P0
 Arizona	Arizona	NPFSG00
 assalto	assalto	NCFS000
 assaltos	assalto	NCFP000
@@ -230,6 +232,8 @@ paralaxe	paralaxe	NCMS000
 paralaxes	paralaxe	NCMP000
 #passarão raro comparado com a forma verbal do verbo passar
 passarão	passarão	NCMS000
+percorremo	percorrer	VMIP1P0
+percorremo	percorrer	VMIS1P0
 perdoe	perdoe	NCFS000
 perita	pêra	NCFS00D
 peritas	pêra	NCFP00D
@@ -242,6 +246,8 @@ portuguesa	portuguesar	VMM02S0
 # Portuguesar - não é utilizado em linguagem formal
 posicionamento	posicionamento	NCFS000
 posicionamentos	posicionamento	NCFP000
+pudemo	poder	VMIS1P0
+pudéramo	poder	VMIM1P0
 puseste	pôr	VMIS2P0
 quentes	quentar	VMM02S0
 quentes	quentar	VMSP2S0
@@ -311,6 +317,7 @@ Uganda	Uganda	NPFSG00
 uma	umar	VMIP3S0
 uma	umar	VMM02S0
 umas	umar	VMIP2S0
+usamo	usar	VMIP1P0
 vagina	vagina	NCMS000
 vaginas	vagina	NCMP000
 vaginas	vaginas	NCFP000

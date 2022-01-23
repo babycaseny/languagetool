@@ -36,6 +36,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
 <!ENTITY dual "урока|брата|сына|cапога|курса|помощника|фактора|языка|парня|закона|сестры|жены|угла|дня|вопроса|звезды|телефона|любовника|зуба|переводчика|господина|типа|участка|фильма|яблока|вида|прогноза|вектора|села|представителя|вдоха|человека|корабля|спутника|пчелы|шара|билета|ответа|брака|канала|лицея|соседа|ресторана|скворечника|часа|вкуса|кабеля|вулкана|хребта|гиганта|варианта|пресса|обеда|рода|стула|взноса|слезы|приступа|отца|экзамена|стекла|игрока|писаки|военных|этапа|причины|коллеги|вагин|героя|друга|вождя|паек|телеканала|коридора|терминала|Венеры|маршрута|храма|юл|олушей|бедра|дубов|художника|полка|лозунга|законопроекта|органа|блока|заказника|банка|изолятора|департамента|говора|района|порта|символа|брокера|парка|стола|магазина"> <!-- два,двое,пара -->
 <!ENTITY prep_v "институте|кино|Крым|Крыму|мастерской|спортзале|театре|техникуме|университете|цехе|цирке|школе|экспедицию"> <!-- words that require 'в' instead of 'на' as a preposition -->
 <!ENTITY prep_na "балет|заводе|Кавказ|концерт|фабрике|факультете"> <!-- words that require 'на' instead of 'в' as a preposition  на почте, в почте #3026   -->
+<!ENTITY profession "директор|дипломат|врач|доктор|лаборант|музыкант|тренер|экспедитор"> <!-- TODO add words Masc/Fem -->
 <!ENTITY start_vvodnoe "по-видимому|по-моему|по-твоему|впрочем|итак|следовательно|во-первых|во-вторых|в-третьих|в-четвертых|в-пятых|к|видишь|понимаешь|конечно|несомненно|вероятно|может|кажется|однако|одним|несмотря|наверное|прежде"> <!-- First words for exceptions in other rules!!! Only for exceptions!!!-->
 <!ENTITY missing_yo "слез|жилье|белье|битье|щеткой|стерней|сырье|ружье|фоторужье|копье|чутье|офицерье|рытье|цевье|острие|вранье|дутье|нытье|звезды">
 <!ENTITY double_num "два|две|три|четыре|2|3|4">
@@ -7011,6 +7012,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             <suggestion>{suggestion} \2</suggestion>
             <short>Не согласуются по роду</short>
             <example>моё отношение</example>
+            <example>Он сам же тот пенальти реализовал.</example>
             <example>Сама кашу заварила, сама и расхлёбывай.</example>
             <example>Тем самым предложение обособляется.</example>
             <example>Он каждые полчаса бежит в лабораторию.</example>
@@ -7410,14 +7412,14 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                                 <feature id="case"/>
                                 <token postag="ADJ:.*" postag_regexp="yes">
                                     <exception scope="previous" regexp="yes">,|–|-|—</exception>
-                                    <exception postag="PT:.*|ADV|ADJ:Comp|ADJ:MPR:.*|ADJ:Short:.*|NN:.*" postag_regexp="yes" />
+                                    <exception postag="PT:.*|ADV|ADJ:Comp|ABR|ADJ:MPR:.*|ADJ:Short:.*|NN:.*" postag_regexp="yes" />
                                     <exception regexp="yes">р|онлайн|полн.*|выходн(ых|ые)|средн.*|арифметическ(ое|ие)|подобн.*|отличн.*|книжном|продуктовом|праздную|вещей|возможным|невозможным|собственн(ом|ый)|активн(ым|ыми)|сборной|большее|меньшее</exception>
                                     <exception postag="ADJ:Posit:Masc:.*" postag_regexp="yes" regexp="yes">&color;|мобильн.*</exception>
                                     <exception case_sensitive="yes">Божию</exception>
                                 </token>
                                 <token postag="NN:.*" postag_regexp="yes">
                                     <exception regexp="yes">друг|уже|уж|при|после|весь|мировой|молодой|куплю|байке|лажа|лазанью</exception>
-                                    <exception postag="VB:.*|CONJ|PREP|ADV|ADJ:.*|Ord:.*" postag_regexp="yes" />
+                                    <exception postag="VB:.*|CONJ|PREP|ADV|ABR|ADJ:.*|Ord:.*" postag_regexp="yes" />
                                     <!-- Слова без буквы ё имеют неправильный падеж -->
                                     <exception regexp="yes">&missing_yo;</exception>
                                     <exception case_sensitive="yes">Tом</exception>
@@ -7439,6 +7441,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <example correction="глупую женщину">Я терпеть не могу эту <marker>глупою женщину</marker>.</example>
                     <example>Временными правительства называли журналисты.</example>
                     <example>Эти добрые полчаса.</example>
+                    <example>Контактный тел.</example>
                     <example>Она позволяет сильным страны сей ситуативно решать.</example>
                     <example>Временной заплату считали недолго.</example>
                     <example>У них выше вероятность инфаркта, чем у довольных партнером.</example>
@@ -7817,8 +7820,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <!--           NN:Masc:Sin:Nom   VB:Past:.*:.*:Masc   -->
                     <token postag="SENT_START" skip="-1"><exception scope="next" postag="NN:.*:Fem:Sin:Nom" postag_regexp="yes"></exception><exception scope="next" postag="NN:.*:Neut:Sin:Nom" postag_regexp="yes"></exception> <exception scope="next" postag_regexp="yes" postag="PNN:.*"></exception></token>           
                     <marker>
-                        <token postag="NN:.*:Masc:Sin:Nom" postag_regexp="yes"><exception negate_pos="yes" postag="NN:.*:Masc:Sin:Nom" postag_regexp="yes"></exception></token>
-                        <token postag="VB:Past:.*" postag_regexp="yes" skip="-1"><exception postag_regexp="yes" postag="VB:Past:.*:.*:Masc"></exception><exception postag_regexp="yes" postag="VB:Past:.*:.*:PL"></exception><exception negate_pos="yes" postag_regexp="yes" postag="VB:Past:.*"></exception> <exception scope="next" postag="NN:.*:Fem:Sin:Nom" postag_regexp="yes"></exception><exception scope="next" postag="NN:.*:Neut:Sin:Nom" postag_regexp="yes"></exception></token>
+                        <token postag="NN:.*:Masc:Sin:Nom" postag_regexp="yes">
+                            <exception negate_pos="yes" postag="NN:.*:Masc:Sin:Nom" postag_regexp="yes"></exception>
+                            <exception regexp="yes">&profession;</exception>
+                        </token>
+                        <token postag="VB:Past:.*" postag_regexp="yes" skip="-1"><exception postag_regexp="yes" postag="VB:Past:.*:.*:Masc"></exception><exception postag_regexp="yes" postag="VB:Past:.*:.*:PL"></exception><exception negate_pos="yes" postag_regexp="yes" postag="VB:Past:.*"></exception><exception scope="next" postag="NN:.*:Fem:Sin:Nom" postag_regexp="yes"></exception><exception scope="next" postag="NN:.*:Neut:Sin:Nom" postag_regexp="yes"></exception></token>
                     </marker>
                     <token regexp="yes">[.;]</token>
                 </pattern>         
@@ -7826,6 +7832,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <url>http://ru.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B3%D0%BE%D0%BB_%D0%B2_%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%BC_%D1%8F%D0%B7%D1%8B%D0%BA%D0%B5</url>
                 <short>Ошибка в согласовании по роду</short>
                 <example>Во дворе кот грелся на солнышке.</example>
+                <example>Тренер посоветовала мне это.</example>
                 <example correction="кот грелся">Во дворе <marker>кот грелась</marker> на солнышке.</example>
             </rule>
             
@@ -7924,7 +7931,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <!-- <example>около 75% объёма поставляемой воды приходится на компанию X.</example> -->
                 <example>Сыр и сливочное масло делаются из молока.</example>
                 <example>Учащиеся всё время сидели неподвижно.</example>
-                <example>Эти легенды следует передать нашим потомкам.</example> 
+                <example>Эти легенды следует передать нашим потомкам.</example>
+                <example>Тренер посоветовала мне это.</example> 
                 <example>Вода превращается в лёд.</example>
                 <example>Сайт в последние два года считается достоверным источником.</example>
                 <example>Для работы программы требуется Java.</example>
@@ -10383,24 +10391,32 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             <example>Все хотят встретиться с вами, вы знаменитость!</example>
             <example correction="относится">Но вот мой друг очень положительно <marker>относиться</marker> к спорту.</example>
         </rule>
-       
+        </rulegroup>
+        <rulegroup  id="Verb_INF_OR_3P_3" default="on"  name="Инфинитив вместо личной формы глагола (3)" >
         <rule>
             <pattern>
-                <token postag="NN:.*:Nom|PNN:.*:Nom:.*"  postag_regexp="yes"  ><exception postag_regexp="yes" negate_pos="yes" postag="NN:.*:.*|PNN:.*:Nom:.*" /></token> 
+                <token postag="SENT_START" skip="-1" ><exception regexp="yes" scope="next">какой|если|какая|какие|какое|искушение|должен|должна|должны|должно</exception>
+                    <exception postag_regexp="yes" scope="next" postag="VB:.*" />
+                </token>
+                <token postag="NN:.*:Nom|PNN:.*:Nom:.*"  postag_regexp="yes"  ><exception postag_regexp="yes" negate_pos="yes" postag="NN:.*:.*|PNN:.*:Nom:.*" />
+                <exception postag_regexp="yes" scope="previous" postag="VB:.*|NN:.*:Nom|PNN:.*:Nom:.*" />
+                <exception postag_regexp="yes" postag="NN:Inanim:.*:Sin:R" />
+                <exception regexp="yes" scope="previous" >было|стало|можно|сложно|нужно|трудно|надо|нелегко|легко|лучше|хуже|невозможно|успешно|чтобы|сильно|слабо|непросто|небрежно|вовремя|разрешено|&verb;|искушение|должен|должна|должны|должно</exception> <!-- check word, maybe set POStag? -->
+                </token> 
                 <marker>
                     <token postag="VB:INF:.*" postag_regexp="yes" regexp="yes" >[а-яё]*ться<exception negate_pos="yes" postag="VB:INF:.*" postag_regexp="yes"/></token>
                 </marker>
-                <token postag="ADV"  skip="-1"></token>    
+                <token postag="ADV"  skip="-1"><exception postag_regexp="yes" scope="next" postag="VB:.*" /><exception postag_regexp="yes" postag="VB:.*" /></token>    
                 <token regexp="yes">[.;,!?]</token>
             </pattern>
        <!--     <filter class="org.languagetool.rules.ru.RussianPartialPosTagFilter" 
                 args="no:1 regexp:(.*)ься postag_regexp:UNKNOWN   negate_pos:yes"/>    --> <!-- Test if word without "ь" exist --> 
-            <message suppress_misspelled="yes" >Глагол должен быть в личной форме, мягкий знак не нужен: <suggestion><match no="2" postag="VB:INF:.*" postag_regexp="yes" postag_replace="VB:.*:.*:Sin:P3"/></suggestion></message>
+            <message suppress_misspelled="yes" >Глагол должен быть в личной форме, мягкий знак не нужен: <suggestion><match no="3" postag="VB:INF:.*" postag_regexp="yes" postag_replace="VB:.*:.*:Sin:P3"/></suggestion></message>
             <url>http://tsya.ru/</url>
             <short>Глагол должен быть в личной форме</short>
-
+            <example>У меня нет никакого желания оставаться здесь.</example>
+            <example correction="решится">Эта проблема <marker>решиться</marker> после установки данной системы.</example>
             <example correction="пятится">Рак <marker>пятиться</marker> назад.</example>
-
         </rule>
         </rulegroup>
 

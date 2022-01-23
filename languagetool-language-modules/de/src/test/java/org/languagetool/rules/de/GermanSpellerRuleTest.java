@@ -576,6 +576,8 @@ public class GermanSpellerRuleTest {
     ruleCH.addIgnoreWords("Fußelmappse/N");
     assertCorrect("Fusselmappse", ruleCH, lt);
     assertCorrect("Fusselmappsen", ruleCH, lt);
+    assertCorrect("Coronapatienten", rule, lt);
+    assertCorrect("Coronapatienten.", rule, lt);
   }
 
   private void assertCorrect(String word, MyGermanSpellerRule rule, JLanguageTool lt) throws IOException {
@@ -711,6 +713,21 @@ public class GermanSpellerRuleTest {
     
     assertEquals(0, rule.match(lt.getAnalyzedSentence("Die blablaxx.mp3 und das sdifguds.avi bzw. die XYZXYZ.AVI")).length);
     assertEquals(0, rule.match(lt.getAnalyzedSentence("Ausgestrahlt von 3sat")).length);
+    assertEquals(0, rule.match(lt.getAnalyzedSentence("Ein 32stel eines Loses")).length);
+    assertEquals(0, rule.match(lt.getAnalyzedSentence("Der Verlust eines 32stels eines Loses")).length);
+    assertEquals(0, rule.match(lt.getAnalyzedSentence("Ein 5tel eines Loses")).length);
+    assertEquals(0, rule.match(lt.getAnalyzedSentence("Der Verlust eines 5tels eines Loses")).length);
+    assertEquals(0, rule.match(lt.getAnalyzedSentence("ein 100stel-Millimeter")).length);
+    assertEquals(0, rule.match(lt.getAnalyzedSentence("ein 5tel-Gramm")).length);
+    assertEquals(1, rule.match(lt.getAnalyzedSentence("ein 100stel-Milimeter")).length);
+    assertEquals(1, rule.match(lt.getAnalyzedSentence("ein 5tel-Grömm")).length);
+    assertEquals(1, rule.match(lt.getAnalyzedSentence("ein 5tl-Gramm")).length);
+    assertEquals(1, rule.match(lt.getAnalyzedSentence("ein 100stl-Millimeter")).length);
+    assertEquals(1, rule.match(lt.getAnalyzedSentence("ein tl-Gramm")).length);
+    assertEquals(1, rule.match(lt.getAnalyzedSentence("ein stl-Millimeter")).length);
+    assertEquals(1, rule.match(lt.getAnalyzedSentence("ein tel-Gramm")).length);
+    assertEquals(1, rule.match(lt.getAnalyzedSentence("ein stel-Millimeter")).length);
+    assertEquals(1, rule.match(lt.getAnalyzedSentence("Bitte stel dich dazu")).length);
   }
 
   @Test

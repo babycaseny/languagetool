@@ -5089,3 +5089,25 @@ ITV Weekend News	NNP
 Chrome Web Store	NNP
 Ann Arbor	NNP
 Myanmar National Airlines	NNP
+Jim Farley	NNP
+MSCI Emerging Markets	NNP
+MSCI ACWI	NNP
+Hikaru Utada	NNP
+Porfirio Díaz	NNP
+Parras de la Fuente	NNP
+Bone Thugs-N-Harmony	NNP
+Wu-Tang Clan	NNP
+Three 6 Mafia	NNP
+Paige VanZant	NNP
+Leroy Merlin	NNP
+Martin Bormann	NNP
+Sergey Lavrov	NNP
+James Cleverly	NNP
+Jean-Yves Le Drian	NNP
+Trinity College	NNP
+Walter Gropius	NNP
+Marcel Breuer	NNP
+Gardasil 9	NNP
+Peggy Sue	NNP
+Meat Loaf	NNP
+Banach–Tarski	NNP

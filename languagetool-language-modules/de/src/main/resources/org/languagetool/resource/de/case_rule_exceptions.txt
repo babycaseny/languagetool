@@ -4,6 +4,7 @@ Abdel Nasser
 Absolut Vodka
 Ärzt*innen
 Adele
+Ägyptische[sn]? Museums?
 Air International
 Alta Via
 Asiatische? Elefant(en)?
@@ -14,7 +15,7 @@ Amerikanische[srnm] (Bisons?|Revolution)
 Archäologische[nms] Landesmuseums?|Museums?
 Asiatische[rnm] Elefant(en)?
 Asiatischen? Entwicklungsbank
-Agile Coach(es)?|Coachings?|Consultants?|Atlas|Frameworks?
+Agile Coach(es)?|Coachings?|Consultants?|Atlas|Frameworks?|Masters?
 Akademische[nrm]? Austauschdienst
 Akademie der Bildenden Künste
 Akademie der Schönen Künste
@@ -58,6 +59,7 @@ Atlantische[rnm] Regenwalds?
 Atlanta Braves
 Aufschnitte
 Auf und Ab
+Autoimmune Diseases?
 Autonomen? Österreichischen? Frauenhäusern?
 August Horch
 Auswärtige[mns]? Amte?s?
@@ -79,7 +81,7 @@ Brave Browsers?
 Brave New World
 Badische[nsm]? Wörterbuchs?
 Barmherzigen? Brüder
-Baye?rische[nrsm]? Staats.+|Verdienst(medaillen?|ordens?)|Rundfunks?|Ministerpräsident(en)?|Motorenwerken?|Ver(waltungsgericht|fassung).*|Hof|Walds?|Land(tag|esamte?)s?|Landesärztekammer|Fußball-Verbands?|Fußballverbands?|Fussball-Verbands?|Rhön|Justizministeriums?
+Baye?rische[nrsm]? Staats.+|Verdienst(medaillen?|ordens?)|Rundfunks?|Ministerpräsident(en)?|Motorenwerken?|Ver(waltungsgericht|fassung).*|Hof|Walds?|Land(tag|esamte?)s?|Landesärztekammer|Fußball-Verbands?|Fußballverbands?|Fussball-Verbands?|Rhön|Justizministeriums?|Pflegeakademie
 Baye?rische[nrsm]? Rundfunk(s)?|Fernsehen(s)?|Börse
 Baye?rische[nr]? Ehrenamtskarte
 Baye?rische[nr]? Landesstiftung
@@ -134,12 +136,14 @@ Chirurgische[nms]? Klinikum München
 Christliche?n? Demokratischen? Union
 Christdemokratische[nms]? (Union|Partei|Internationalen?)
 Civil Wars?
+Clubs? Rotes Kliff
 Cooperative for .*
 Cold Wars?
 Crunch Fit
 Cultural Fit
 das Hier und Heute
 DA Direkts?
+Da Silvas?
 David Lahm
 Dänischen? Staatsbahn(en)?
 Dänische[snm]? Bettenlagers?
@@ -157,7 +161,7 @@ Director of Legal
 Die Toten Hosen
 Die Leiden des jungen Werthers
 [Dd]ie Schöne und das Biest
-Digital IQ|Garage|Cockpits?|Community|Analyst|Leader[ns]?|Consultants?|Equipments?|Onboarding|Transformations?|Learnings?|Events?|Hubs?|Masterings?|Marketers?|Radios?|Experiences?
+Digital IQ|Garage|Cockpits?|Content|Community|Detox|Analyst|Leader[ns]?|Consultants?|Equipments?|Onboarding|Transformations?|Learnings?|Events?|Hubs?|Masterings?|Marketers?|Radios?|Experiences?
 Digital Film Productions?
 Demokratischen? Republik|Partei|Volksrepublik
 ([Dd]e[rnsm]|[Ii]m) Englische[rn]? Gartens?
@@ -180,7 +184,7 @@ Deutsche[rnm] Jagdterrier[sn]?
 Deutschen? Interdisziplinären? Vereinigung
 Deutschen? Gesetzlichen? Unfallversicherung
 Deutsch Langhaars?
-Digital (Video|Natives?|Audio|Marketing|Guides?|Games?|Publishings?|Sales?|Services?|Art|Business)
+Digital (Video|Natives?|Audio|Marketing|Guides?|Games?|Publishings?|Sales?|Services?|Art|Business|Marketer(in|s)?)
 Digitale[rnm]? Beirats?
 Digital und Print
 Digital & Print
@@ -194,7 +198,7 @@ Dritte[nsm]? Welt|Reiche?s?|Oktober|Bürgermeisters?
 Drum und Dran
 Dragon Hold
 Dragons' Den
-Dual (Drives?|Screens?)
+Dual (Drives?|Screens?|Bodys?)
 Dualen? Hochschule [A-ZÄÖÜ].+
 Duisburger
 Dunklen? Materie|Energie
@@ -222,7 +226,7 @@ Essener
 Es Castells?
 Eurasischen? Wirtschaftsunion
 Eurasische[mns]? Eichhörnchens?
-Europäische[mnrs]? Charta|Fussball-Union|Journalistenkollegs?|Fußball-Union|Fonds|Sozialfonds|(Atomg|G)emeinschaft|Parlamente?s?|Union|Gerichtshof(es|s)?|Patentamt(es|s)?|Weltraumagentur|Wirtschaftsgemeinschaft|Wirtschaftsraum(es|s)?|Kommission|Rat(es|s)?|Zentralbank|Freiwilligendienst|Menschenrechtskonvention|Agentur|Arzneimittel-?[aA]gentur|Volkspartei|Haftbefehls?|Kulturhauptstadt|Währungsunion|Währungsfonds|Freihandelsassoziation|Rechnungshof(es)?|Datenschutzbeauftragte[rn]|Staatsanwaltschaft|Datenschutzgrundverordnung|Investitionsbank|Emissionshandels?|Arzneimittelbehörde|Filmpreis(es)?|Impfpass(es)?|Emissionshandels?|Emissionshandelssystems?|Verteidigungsagentur|Hochschulschriften|Wertpapieraufsichtsbehörde|Datenschutz-Grundverordnung|Fernhochschule|Eichhörnchens?|Weltraumbahnhofs?|Krankenversicherungskarten?
+Europäische[mnrs]? Charta|Fussball-Union|Journalistenkollegs?|Fußball-Union|Fonds|Sozialfonds|(Atomg|G)emeinschaft|Parlamente?s?|Union|Gerichtshof(es|s)?|Patentamt(es|s)?|Weltraumagentur|Wirtschaftsgemeinschaft|Wirtschaftsraum(es|s)?|Kommission|Rat(es|s)?|Zentralbank|Freiwilligendienst|Menschenrechtskonvention|Agentur|Arzneimittel-?[aA]gentur|Volkspartei|Haftbefehls?|Kulturhauptstadt|Währungsunion|Währungsfonds|Freihandelsassoziation|Rechnungshof(es)?|Datenschutzbeauftragte[rn]|Staatsanwaltschaft|Datenschutzgrundverordnung|Investitionsbank|Emissionshandels?|Arzneimittelbehörde|Filmpreis(es)?|Impfpass(es)?|Emissionshandels?|Emissionshandelssystems?|Verteidigungsagentur|Hochschulschriften|Wertpapieraufsichtsbehörde|Datenschutz-Grundverordnung|Fernhochschule|Eichhörnchens?|Weltraumbahnhofs?|Krankenversicherungskarten?|Schule
 Europäischen? (Zentrums?|Organisation|Vereinigung|Institute?s?|Behörde) für .*
 Europäischen? Akademie (Berlin|für|der)
 Europäischen? (Systems?|Instituts?) (für|der|des)
@@ -284,11 +288,14 @@ Gears of Wars?
 Geeintes Russland
 Geheimen? Staatspolizei
 Gemeinsame[ernm]? Ausschuss(es)?|Bundesausschuss
+Gemeinschaft Unabhängige[nr]? Staaten
+Gemeine[rn]? Lauchs?
 Gelben? Karten?|Trikots?|Rüben?|Meer(e?s)?
 Gelbe[nr]? Fluss(es)?|Engel[ns]?|Seiten?|Sacks?|Säcken?|Tonnen?|Knollenblätterpilze?s?|Günsels?|Zentners?|Zwerg|Zwergsterne?n?
 Gelobten? Lands?
 Geteilten? Kirchen?
 Gewerbetreibende[rn]?
+Gewerbliche Schule [A-Z][a-zäöüß\-]+
 Geoghegan Hart
 Glazialen? Serien?
 Gleich und Gleich
@@ -298,8 +305,8 @@ Global Goals?
 Global Site Tag
 Global Business|Pension|Geoparks?|News|Hubs?|Managements?|Junior|Senior|Head|Vice|President|Player[ns]?|Locations?|Targets?|Pass|Funds?|Sales?|Channels?|City|Times|Navigation|Offensive|Investors?|Real|Values?|Grade|Minimum
 Global(er|en|em)? Süden|Norden
-Golden (Globes?|Delicious|Retrievers?|Goals?|Gates?|Tulip|Boys?|Age|Lager|Masters?)
-Goldene[nrsm]? Schnitte?s?|Bullen?|Palme|Bär(en)?|Spatz(en)?|Hirsch|Löwen?|Himbeeren?|Laus|Windbeuteln?|Chlorellas?|Zeitalters?|(Ehren|Verdienst)zeichens?|Zwanzigern?|Schallplatten?|Buchs?|Stadt|Vlies(es)?
+Golden (Globes?|Delicious|Retrievers?|Goals?|Gates?|Tulip|Boys?|Age|Lager|Masters?|Eagles?|State)
+Goldene[nrsm]? Schnitte?s?|Bullen?|Palme|Bär(en)?|Spatz(en)?|Hirsch|Löwen?|Himbeeren?|Laus|Windbeuteln?|Chlorellas?|Zeitalters?|(Ehren|Verdienst)zeichens?|Zwanzigern?|Schallplatten?|Buchs?|Stadt|Vlies(es)?|Kamera
 Googles? Fits?
 Gordische[nrm]? Knotens?
 Gotischen? Bibliothek
@@ -311,6 +318,7 @@ Gro(ß|ss)herzoglich Hessische[rn]?
 Gro(ß|ss)e[nrsm]? Antillen|Preis|Koalition|Kreisstadt|Mauer|Wagens?|Zapfenstreichs?|Belts?|Bär(en)?|Kurfürst(en)?|Teich(e?s)?|(Bundesv|V)erdienstkreuz|Depression|Wegschnecken?|Walachei|Leuchtkäfers?
 Gro(ß|ss)en (Bundesv|V)erdienstkreuzes
 Gro(ß|ss) Wasserburg
+Gro(ß|ss) Kummerfeld
 Gro(ß|ss) (und|&) Klein
 Gro(ß|ss)wild
 Gro(ß|ss)e[n]? Freiheit
@@ -319,6 +327,7 @@ Gro(ß|ss)e[rnm]? Buddha von Leshan
 Gro(ß|ss)e[rnm]? Nordische[rn]? Kriege?s?
 Gro(ß|ss)e[nrm] Brachvogels?
 Gro(ß|ss)e[nrm]? Koblenzer Karnevalsgesellschaft
+Gro(ß|ss)e[nrm]? Feldbergs?
 Grüne[mnrs]? Veltliners?|Punkts?|Woche|Gewölbes?|Star|Tee
 Gymnasium Am Kothen
 Hängenden Gärten
@@ -344,6 +353,8 @@ Hessischen? Ministeriums? für
 Hessischen? Zentrale für
 Hessischen? Brandversicherungsanstalt
 Hessische[nsm] Ärzteblatte?s?
+Hessisch Oldendorfs?
+Hey (Siri|Google|Mercedes|BMW)
 High Intensive
 Hin und Her
 Hoang An
@@ -363,7 +374,7 @@ Huawei Watch Fit
 Hoang Dang
 Hohen? Salve
 Hohen Neuendorfs?
-Holländische[rnm]? (Sauce|So(ß|ss)e)
+Holländische[rnm]? (Sauce|So(ß|ss)e|Reihe|Stra(ß|ss)e)
 Historische[snm]? Museums? (Frankfurt|Berlin|Speyer|Bremerhaven|Basel|Hannover|Luzern|Leipzig)
 IHK Mittleres Ruhrgebiet
 IHK Mittlerer Niederrhein
@@ -375,7 +386,7 @@ IHK Mittlerer Niederrhein
 I, Robot
 Ideal Speaker[sn]?
 Imperial (Colleges?|War|Brands)
-Immersive Expierence
+Immersive Experience
 Indian Wars?
 Indische[nrm]? Ozeans?|Elefant(en)?|Gazellen?
 Infinity War
@@ -387,8 +398,9 @@ Innere[nrm]? Stadtgrabens?|Medizin|Gürtel|Mongolei
 Inoffizielle[rnm]? Mitarbeiter[sn]?
 Instituts? für .*
 Institutes für .*
+Instituts? Österreichischer? (Wirtschaftsprüfer|Steuerberater)
 Internationale Verband für .*
-International Air|Airlines|Airport|Schools?|Business|Offices?|Admission|Journal|Standard|Migration
+International Air|Airlines|Airport|Schools?|Business|Offices?|Admission|Journal|Standard|Migration|Family
 International Bank Account
 Internationalen? Filmfestspielen?|Atomenergie(-Organisation|behörde|organisation)|Fernmeldeunion|Komitees?|.*tag|Raumstation|Energieagentur
 Internationale[mnr]? Währungsfonds|(Seeg|Strafg|Sportg|Militärg|G)erichtshof(e?s)?|Fonds|Klassifikation|Flughafen|Zivilluftfahrtorganisation|Automobil(-Ausstellung|ausstellung)|Kinder-Friedenspreis(es)?|Militärgerichtshof(es|s)?|Handwerksmesse|Hochschule|Schule
@@ -466,6 +478,7 @@ Legal & Compliance
 Legal & Finance
 Legal und Finance
 Legal und Compliance
+Legal (Departments?|Abteilung)
 Legend of Zelda
 Les Miserables
 Letzte[nrm]? Wille(n|ns)?
@@ -524,7 +537,7 @@ MTV Immensen
 Nordamerikanischen? Platte
 Nahe[nrm]? Ostens?
 Nassauischen? (Sparkassen?|Stra(ß|ss)e|Heimstätte|Neue)
-National (Institute|Library|Center|Account|Park|Academy|Bank|Forest|Monument|Theatre|Airline)s?
+National (Institute|Library|Center|Account|Park|Academy|Bank|Forest|Monument|Theatre|Airline|Museum)s?
 Nationale[nrm]? Sicherheitsrat(e?s)?|Volksarmee|Volkskongress(es)?
 Nationales (Zentrum|Institute?s) für
 Nationale (Zentrum|Institute?s) für
@@ -581,6 +594,7 @@ Ohmsche[snm]? Gesetz(es)?
 Österreichische[nr]? Frauenrings?
 Olympische[nrsm]? Komitees?|Dorf(e?s)?|Sommerspielen?|Flagge|Winterspielen?|Museums?|Spielen?|Sportbunds?|Charta
 Oliver Bäte
+On Hold
 Organic Textile
 Osmanischen? Reich(es|s)?
 Ökumenische[nrm]? Patriarch(en)?
@@ -599,6 +613,7 @@ Pan Am
 Paperback
 Paritätischen? NRW
 Paritätische[rnm]? Wohlfahrtsverbands?
+Paritätische[rnm]? Lebenshilfe
 Parlamentarische[rnm]? Rats?|Rates|Kontrollgremiums?|Versammlung|Untersuchungsausschuss(es)?|Geschäftsführer[sn]?|Geschäftsführerin|Staatssekretär(s|e|en)?
 Passauer Neuen? Presse
 Pazifischen? Platte
@@ -655,6 +670,7 @@ Römische Reich Deutscher Nation
 Rote[nmrs]? Kreuz(es)?|Johannisbeeren?|Barons?|Burg|Riesen?|Milans?|Planet(en)?|Ruhr|Halbmonds?|Meer(es)?|Grütze|Rathaus(es)?|Beete|Karten?|Khmer|Liste|Armee|Platz|Rüben?|Kapelle|Tode?s?|Fabrik
 Rote[nr]? Bete
 Rote[nr]? Flora
+Rote[mns]? Klosters?
 Royal National Theatre
 Royal National Theater
 Rumänischen? Akademie
@@ -706,6 +722,7 @@ S[Ii][Gg] Sauer
 Shin Megami
 Sibirische[rnm]? Trakts?
 Single Malt
+Sizilianischen? (Vespern?|Bernsteins?|Regionalversammlung|Zwergelefant(e[sn])?)
 Ski Alpin
 Skandinavische[nsm]? Gebirge
 Skinny Fit
@@ -715,6 +732,7 @@ Schutzgemeinschaft Deutsches Wild
 Selfmade Man
 Self-Made Man
 Silberne[rnm] Bär(en)?
+Sigmund Raschers?
 Slim Fit
 Smart Cit(y|ies)|Cards?|Cabrios?|Homes?|Phones?|Watch(es)?|Meters?|Money|Tarif|TVs?
 SK Rapid
@@ -723,7 +741,7 @@ Soziale[nrm]? (Arbeit|Jahre?s?)
 Sozialistischen? Sowjetrepublik(en)?|(Einheits|Arbeiter)?[pP]artei
 Sozialdemokratischen? Arbeiterpartei
 Sozialistischen? Föderativen? Republik
-Spanischen? Grippe|Erbfolgekriegs?|Bürgerkriegs?|Niederlanden?|Treppe|Fliege|Reitschule|Inquisition
+Spanische[nr]? Grippe|Erbfolgekriegs?|Bürgerkriegs?|Niederlanden?|Treppe|Fliege|Reitschule|Inquisition|Lauch
 Speis und Trank
 Sportback
 Spring Boots?
@@ -740,6 +758,7 @@ Statistische[mns]? Bundesamt(s|es)?|Landesamt(s|es)?
 Statistische[rnm]?|Theoretische[rn]? Physik
 Stiftung Preußischer?
 Stephan Weil
+Stramme[rn]? Max
 Ministerpräsident Weil
 Steinerne[sn]? Meers?|Brücke|Manns?
 Steinhart Watch(es)?|Uhr(en)?
@@ -797,6 +816,7 @@ Vegan Beauty
 Verbande?s? der ([A-ZÄÖÜ][a-zäöüß\-]+)
 Verlobten?
 Vereinigte[mns]? Staaten|Königreiche?s?|Bühnen|Arabischen?|Stadtwerken?|Republik
+Vereinigten? Bonner Wohnungsbaus?
 Vereinte[ns]? Nationen
 Via Alpina|San
 Vila Reals?

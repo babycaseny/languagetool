@@ -220,6 +220,8 @@ public class AgreementRuleTest {
     assertGood("Es ist noch unklar, wann und für wen Impfungen vorgenommen werden könnten.");
     assertGood("Macht dir das Hoffnung?");
     assertGood("Mich fasziniert Macht.");
+    assertGood("Der solchen Einsätzen gegenüber kritische Hitler wurde nicht im Voraus informiert.");
+    assertGood("Gregor wählte die Gestalt des wenige Jahrzehnte zuvor verstorbenen Klostergründers.");
 
     assertGood("Wir machen das Januar.");
     assertGood("Wir teilen das Morgen mit.");
@@ -584,6 +586,7 @@ public class AgreementRuleTest {
     assertGood("George Lucas 1999 über seine sechsteilige Star Wars Saga.");
     assertGood("… und von denen mehrere Gegenstand staatsanwaltlicher Ermittlungen waren.");
     assertGood("Natürlich ist das Quatsch!");
+    assertGood("Die Xi Jinping Ära ist …");
     assertGood("Die letzte unter Windows 98 lauffähige Version ist 5.1.");
     assertGood("Die südlichste Düsseldorfer Rheinbrücke ist die Fleher Brücke, eine Schrägseilbrücke mit dem höchsten Brückenpylon in Deutschland und einer Vielzahl von fächerförmig angeordneten Seilen.");
     // TODO: not yet detected:

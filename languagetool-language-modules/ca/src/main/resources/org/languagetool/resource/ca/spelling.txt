@@ -1,6 +1,9 @@
 # Words that extend the spell checker. See ignore.txt for words that should be
 # completely ignored (i.e. not used to create suggestions).
+Anecoop
+Clausewitz
 Glovo
+Lao
 Leo
 Nur-Sultan
 Valtònyc
@@ -8,8 +11,12 @@ amoixamada
 amoixamades
 amoixamat
 amoixamats
+cibercrim
+cibercrims
 enunciable
 enunciables
+houthi
+houthis
 jonqui
 jonquis
 kit
@@ -21,6 +28,9 @@ kremlinòleg
 kremlinòlegs
 kremlinòloga
 kremlinòlogues
+multipaquet
+pack
+packs
 politicoperiodístic
 politicoperiodística
 politicoperiodístics

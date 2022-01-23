@@ -36,6 +36,21 @@ class AgreementRuleAntiPatterns1 {
       posRegex("SUB:.*")
     ),
     Arrays.asList(
+      tokenRegex("der|die|das"),   // "Der solchen Einsätzen gegenüber kritische Müller ..."
+      tokenRegex("solche[mn]|diese[mn]"),
+      posRegex("SUB:.*"),
+      token("gegenüber"),
+      posRegex("ADJ:.*"),
+      posRegex("SUB:.*|EIG.*")
+    ),
+    Arrays.asList(
+      tokenRegex("des|der"),   // "des wenige Jahrzehnte zuvor verstorbenen Klostergründers"
+      new PatternTokenBuilder().posRegex("ADJ:.*").min(0).build(),
+      posRegex("SUB:.*|EIG.*"),
+      token("zuvor"),
+      posRegex("PA2:.*")
+    ),
+    Arrays.asList(
       token("Ehre"),  // "Ehre, wem Ehre gebührt"
       token(","),
       token("wem"),
@@ -776,6 +791,11 @@ class AgreementRuleAntiPatterns1 {
       token("das"),
       token("Quatsch")
     ),
+    Arrays.asList( // Eine Maßnahme die Vertrauen schafft
+      tokenRegex("der|die"),
+      token("Vertrauen"),
+      new PatternTokenBuilder().matchInflectedForms().tokenRegex("schaffen").build()
+    ),
     Arrays.asList(
       token("des"),
       token("Lied"),
@@ -1028,9 +1048,21 @@ class AgreementRuleAntiPatterns1 {
       csToken("Boostern")
     ),
     Arrays.asList(
+      // Das Zeit.de-CMS / Das Zeit.de CMS
+      token("das"),
+      new PatternTokenBuilder().posRegex("(ADJ|PA[12]).+").min(0).build(),
+      csToken("Zeit"),
+      csToken("."),
+      tokenRegex("de.*")
+    ),
+    Arrays.asList(
       token("das"),
       csToken("verlangte"),
       tokenRegex("Ruhe|Zeit|Geduld")
+    ),
+    Arrays.asList(
+      csToken("BMW"),
+      token("ConnectedDrive")
     ));
 
 }

@@ -49,6 +49,11 @@ public class ProhibitedCompoundRule extends Rule {
   private static final List<Pair> lowercasePairs = Arrays.asList(
           // NOTE: words here must be all-lowercase
           // NOTE: no need to add words from confusion_sets.txt, they will be used automatically (if starting with uppercase char)
+          new Pair("ass", "Spielkarte", "pass", "Reisepass; Übergang durch ein Gebirge"),
+          new Pair("türmer", "Turmwächter", "türme", "Plural von 'Turm' (Bauwerk)"),
+          new Pair("soge", "ziehende Strömungen", "sorge", "bedrückendes Gefühl"),
+          new Pair("panne", "technischer Defekt", "spanne", "Zeitraum"),
+          new Pair("elfer", "Elfmeter", "helfer", "Person, die hilft"),
           new Pair("bau", "Bauwerk, Baustelle", "baum", "Pflanze"),
           new Pair("gase", "Plural von 'Gas' (Aggregatzustand)", "gasse", "kleine Straße"),
           new Pair("ekel", "Abscheu", "enkel", "Kind eines eigenen Kindes"),
@@ -115,7 +120,8 @@ public class ProhibitedCompoundRule extends Rule {
   private static LinguServices linguServices;
   private static final List<String> ignoreWords = Arrays.asList("Die", "De");
   private static final List<String> blacklistRegex = Arrays.asList(
-    "Model(vertrags?|verträgen?|erfahrung|erfahrungen)",
+    "stromkreis",  // vs. reis/reise
+    "Model(vertrags?|verträgen?|erfahrung|erfahrungen|szene)",
     "(Raum|Surf|Jazz|Herbst|Gymnastik|Normal)schuhen?",
     "preis",  // Getränkepreis etc.
     "reisähnlich(e|e[nmrs])?",
@@ -131,6 +137,47 @@ public class ProhibitedCompoundRule extends Rule {
     "Gra(ph|f)it"   // Grafit/Graphit
   );
   private static final Set<String> blacklist = new HashSet<>(Arrays.asList(
+          "Kontenvorgänge",  // vs. Kosten
+          "Militärbunker",  // vs. funker
+          "Gemüseboxen",  // vs. boden
+          "Suchwunsch",  // vs. Buch
+          "Pflanzerden",  // vs. enden
+          "Kriegsflucht", // vs. frucht
+          "Reisekabel",  // vs. fabel
+          "Schutzboxen",
+          "Wandbeschichtung",  // vs. Band
+          "Maschinenbrand",  // vs. bank
+          "Badehilfe",  // vs. Lade
+          "Badehilfen",  // vs. Lade
+          "Backprogramm",  // vs. Pack
+          "Backprogramme",
+          "Backprogrammen",
+          "Backfunktion",
+          "Backleistung",
+          "Winterblues",
+          "Klickverbindung",
+          "Klickverbindungen",
+          "Traumschuhe",  // vs Schule
+          "Traumschuhen",  // vs Schule
+          "Schulware",  // vs Schuh
+          "Schulwaren",  // vs krisen
+          "Konzernkreisen",  // vs krisen
+          "Strandmotiv",  // vs stand
+          "Strandmotive",  // vs stand
+          "Strandmotiven",  // vs stand
+          "Tiersammelstelle",  // vs eier
+          "Tiersammelstellen",  // vs eier
+          "Verkaufserlebnis",  // vs verlauf
+          "Eisgenuss",  // vs ess
+          "Oberhardt",  // vs eber
+          "Hundebett",  // vs fett
+          "Artengesetz",  // vs arm
+          "Mietpartner",  // vs mit
+          "Mietpartners",  // vs mit
+          "Mietpartnern",  // vs mit
+          "Mieterlebnis",  // vs mit
+          "Paketkasten",  // vs karten
+          "Ausnahmefirmen",  // vs formen
           "Schreibraten",  // vs bart
           "Treppentransport",  // vs truppen
           "Treppentransports",  // vs truppen
@@ -1011,7 +1058,8 @@ public class ProhibitedCompoundRule extends Rule {
           "Rasenwurzel", // vs nasen
           "Rasenwurzeln", // vs nasen
           "Wandlungskapital", // vs Handlungskapital
-          "Wandlungskapitals" // vs Handlungskapital
+          "Wandlungskapitals", // vs Handlungskapital
+          "Themenboxen" // vs bogen
   ));
 
   // have per-class static list of these and reference that in instance

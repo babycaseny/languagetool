@@ -1,4 +1,7 @@
 #separatorRegExp=[\t;]
+von Clausewitz;NPCNSP0
+Alí Babá;NPMSSP0
+Leroy Merlin;NPCNO00
 40dB.;NPCSO00
 Nursultán Nazarbáyev;NPMSSP0
 cara o cruz;NCMS000

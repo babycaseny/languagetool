@@ -1,12 +1,29 @@
 # Words that extend the spell checker. See ignore.txt for words that should be
 # completely ignored (i.e. not used to create suggestions).
+Clausewitz
 Glovo
 Nursultán
+biopic
+biopics
+cibercrimen
+cibercriminal
+cibercriminales
+cibercriminalidad
+cibercriminalidades
+cibercrímenes
+ciberdelito
+ciberdelitos
+crudité
+crudités
 enunciable
 enunciables
 flurona
+hutí
+hutíes
+hutís
 manifestable
 manifestables
+multipaquete
 nursultaní
 nursultaníes
 nursultanís
@@ -29,3 +46,4 @@ superparecido
 superparecidos
 verbalizable
 verbalizables
+weblog

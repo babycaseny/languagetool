@@ -114,7 +114,7 @@ title="Easy editing stylesheet" ?>
     <!ENTITY art_detecao_M "(?:(?:[mts](?:eu)|[nv]osso)|(?:d|n|pel)?(?:outr)?o|ao)s?|(alg|d|n)?(?:um|uns)">
 
 	<!ENTITY cores_invariaveis "açafrão|água|alizarina|âmbar|ameixa|amêndoa|ametista|aspargo|bordô|borgonha|brasil|bronze|caqui|caramelo|cardo|carmesim|carmim|cenoura|cereja|chocolate|ciano|cinza|cobre|concha|creme|dainise|ébano|eminência|esmeralda|eucalipto|feldspato|ferrugem|fúchsia|fuligem|gainsboro|gelo|glitter|goiaba|grená|heliotrópio|independência|índigo|iris|jade|jambo|jasmine|kiwi|kobi|kobicha|laranja|lavanda|lemon|lilás|lima|linho|madeira|magenta|malva|mamão|maná|marfim|milho|mocassim|mostarda|neve|nyanza|ocre|oliva|orquídea|ouro|pêssego|prata|púrpura|quantum|quartz|renda|rosa|salmão|sépia|siena|tangerina|terracota|tijolo|tomate|triássico|trigo|turquesa|ube|urucum|vinho|violeta|xanadu|zaffre">
-	<!ENTITY cores "açafrão|água|alizarina|amarelo|âmbar|ameixa|amêndoa|ametista|aspargo|azul|bege|bordô|borgonha|branco|branco|brasil|bronze|caqui|caramelo|cardo|carmesim|carmim|castanho|cenoura|cereja|chocolate|ciano|cinza|cobre|concha|coral|creme|dainise|dourado|ébano|eminência|encarnado|escarlate|esmeralda|eucalipto|fandango|feldspato|ferrugem|flerte|fúchsia|fuligem|gainsboro|gelo|glitter|goiaba|grená|heliotrópio|herbal|independência|índigo|iris|jade|jambo|jasmine|kiwi|kobi|kobicha|laranja|lavanda|lemon|lilás|lima|linho|madeira|magenta|malva|mamão|maná|marfim|marrom|milho|mocassim|mostarda|naval|neve|nyanza|ocre|oliva|orquídea|ouro|pardo|pêssego|prata|preto|púrpura|quantum|quartz|renda|rosa|roxo|rútilo|salmão|sépia|siena|tangerina|terracota|tijolo|tomate|triássico|trigo|turquesa|ube|urucum|verde|vermelho|vinho|violeta|xanadu|zaffre">
+	<!ENTITY cores "açafrão|água|alizarina|amarelo|âmbar|ameixa|amêndoa|ametista|aspargo|azul|bege|bordô|borgonha|branco|brasil|bronze|caqui|caramelo|cardo|carmesim|carmim|castanho|cenoura|cereja|chocolate|ciano|cinza|cobre|concha|coral|creme|dainise|dourado|ébano|eminência|encarnado|escarlate|esmeralda|eucalipto|fandango|feldspato|ferrugem|flerte|fúchsia|fuligem|gainsboro|gelo|glitter|goiaba|grená|heliotrópio|herbal|independência|índigo|iris|jade|jambo|jasmine|kiwi|kobi|kobicha|laranja|lavanda|lemon|lilás|lima|linho|madeira|magenta|malva|mamão|maná|marfim|marrom|milho|mocassim|mostarda|naval|neve|nyanza|ocre|oliva|orquídea|ouro|pardo|pêssego|prata|preto|púrpura|quantum|quartz|renda|rosa|roxo|rútilo|salmão|sépia|siena|tangerina|terracota|tijolo|tomate|triássico|trigo|turquesa|ube|urucum|verde|vermelho|vinho|violeta|xanadu|zaffre">
     <!-- Taken from: https://pt.wikipedia.org/wiki/Lista_de_cores -->
 
     <!ENTITY arcaismos "(?:a(?:bominábil|borrimento|bsentar|bsumir|ceiro|chacar|coiteza|contista|có|dvogacia|guazil|H|lacrão|lantíase|lbora|lfaça|lgibebe|lguazil|lgur|lmeida|lmenara|lvazir|mictório|morar|mículo|nrique|ntigüidade|ntão|periente|quessa|quesse|questa|queste|questo|rcocentro|tá|utopse|çucre)|b(?:andir|anguê|enção|oa-venturança|odalha|ofé|ródio|uliço)|Brazil|c(?:afofo|alendairo|arpinteiragem|assar|ham|hara|oidar|omest[ao]|ommummente|omua|oncassor|onvescote|recimento|relgo|réligo|ã|ôvado)|d(?:esemparar|esnobre|evisar|iabro|iese|ino|iésis|olor|orosamente|oroso|íesis)|e(?:mpacar|ngrês|ntonce|ntrelocutor|sto|xprimentava)|f(?:acha|atexa|enestra|imatíase|imia|logose)|g(?:alactooligossacarídeo|alripo|asista|iolhos|odalho|odeme|ramasso|uanabarense|uanabarino)|heréu|i(?:migo|mpida|ngrês|nté)|j(?:au|avaril|ericocim|ugadar|órnea)|l(?:eixar|erpe|oar|oeste|ucivelo|ucivéu|umiar|üa)|Lixboa|m(?:armeluta|eadade|ecê|olher|oínho|uitieramá|uxica)|n(?:ace|am|aom|aqueste|osomania)|o(?:bfirmar|bseqüente|cisão|nte|urinol)|p(?:aje|ascigo|assal|harmácia|ortuguez|roditor)|querena|r(?:eferta|oldar|uidento)|s(?:ainho|alhar|alvanor|apanga|apaão|ene|ilvano|oer|upresso|uso|énio)|t(?:artamelar|aubateense|avolagem|eed.+|ábula|ávola)|unun-héxio|v(?:ascongadas|assuncê|iado|itando|osco|osmecê|ossancê))">
@@ -123,7 +123,7 @@ title="Easy editing stylesheet" ?>
     <!ENTITY barbarismos3 "abstracts?|applets?|apps?|backbones?|baconburgers?|banners?|bitcoins?|bits?|blue|bluetooth|bogie|boids?|boost|bottom[-]up|brainstorms?|bullying|burnouts?|cameraman|carjacking|chairman|contactless|crackers?|cracking|crashes|cyberbullying|czar|czares|debugging|demand|developers?|dildos?|downgrades?|downtime|drones?|e[-]bullying|e[-]commerce|e[-]learning|e[-]manuals?|e[-]newsletters?|e[-]readers?|exabits?|exabytes?|fair[-]play|faxes|feeders?|flats?|flyers?|forward|führers?|gaming|gangbang|geeks?|gigabits?|gigabytes?|goals?|gold|homebanking|homepages?|idem|jiu[-]jitsu|kilobits?|kilobytes?|know[-]how|KO|layers?|lob|loops?|lossless|marketeers?|maydays?|megabits?|megabytes?|milkshakes?|nerds?|netiquette|newsgroups?|off[-]label|offside|on[-]label|overflows?|p[-]values?|papers?|patch|patches|pens?|petabits?|petabytes?|players?|preview|ransomware|reboot|red|roadmaps?|royalty|royalties|scams?|scammers?|screenshots?|scroll|seals?|shell|shelters?|smartphones?|sockets?|stalking|strings?|swarms?|tablets?|tagging|takeovers?|terabits?|terabytes?|thresholds?|tips?|toolkits?|tracking|triggers?|trolls?|tweeters?|underscores?|Unicode|updates?|upgrades?|uptime|Usenet|wargames?|warm[-]up|webinar|webinares|webmasters?|webpages?|wireless|woofers?|yes[-]man|yottabits?|yottabytes?|zettabits?|zettabytes?">
 
     <!ENTITY infantil "(?:b[aá]bá|bichano|bilau|bobalhão|bumbum|caca|cachorrês|cocó|cocô|cuti|dodói|escapulir|flango|formiguês|lelé|mamã|maminha|miau|mimir|nananinanão|nana[rs]|oba|oiê|ohoh|olhinho|papá|Papai|pap(?:ar|ei|aste|ou)|peixa|pepeta|pipi|piu|pum|susu|titi[ao]|totó|totô|vovô|xixi)|memés?|pilocas?|pirilaus?">
-    <!ENTITY informal "chaval[ao]s?|porreiros?|(?:a(?:bafar|dultescente|ham|nh.+)|b(?:abado|adalhoc[ao]|adalo|adamec[ao]|adana|agarai|agunça|aita|aixinh[ao]|alof[ao]|ate-papo|atelada|eiço|ejeca|elê|ichan[ao]|ichinh[ao]|iscate|itaite|js|lablablá|ófia|orrachão|otequeir[ao]|razuca|reaco|rega)|c(?:abaço|acilda|adê|adé|alhamaço|apar|arago|arango|asinha|asório|Dcê|ertinh[ao]|hantar|huninha|huto|obrão|ocó|ocô|oisar|opião|ornear|utucar)|d(?:anad[ao]|anar|aonde|esmiolad[ao]|ocinh[ao]|oíd[ao])|e(?:spertalh(?:ão|ona)|spigadote|strilho|strovenga)|f(?:ilar|ixe|loripa|of[ao]|uxicar|uxiqueir[ao])|g(?:agá|aj[ao]|alera|atunar|elô|oró|osma|ranel|uit[ao]|una|urizada)|herman[ao]|irad[ao]|j(?:avardice|ola)|l(?:aivo|aracha|elé|ogar|ulopetismo)|m(?:acarrone|agrel[ao]|amaã|anda-chuva|ânfi[ao]|an[ao]|atraca|eia-boca|itra|oçada|oina|orcão|otoqueir[oa]|uvuca)|n(?:intendinho|op|ovat[ao])|o(?:i|iê|lhômetro|lh[ôó]metro)|p(?:andeiro|apão|apo|atada|eixão|ejada|elar|epeta|erua|etiz|indaíba|ixulé|ixuleco|orn[oô]|orrad[ao]|orre|r[áoó]|romo|rum|ruma|runs)|q(?:uebra-galho|ueca)|r(?:acha|anho|apaziada|emexer|emexida|icardão|olê)|s(?:acana|ave|elinho|úper)|surripi.+|t(?:abefe|antã|ascar|ime|ótil|rampar|rampo|ransar|reta|rocentos|rouxa|rucid.+|uga.+)|v(?:acil.+|aquinha|egetar|elhot[ae]|ó|ô)|x(?:i|ixi)|z(?:en|i[il]h(ão|ões)))|bacanos?|baril|borliú|barracadas?|camandros?|caraças|caxamolas?|chachas?|chilindrós?|chinocas?|chungas?|chungaria|chunguice|contigo|cuscar|drunfos?|esbardalhar|estrambóticas?|estrambóticos?|fartazanas?|festarolas?|fezadas?|gentinhas?|janados?|maradas?|marados?|maralhas?|maricadas?|milhentas?|morcão|morcões|nhurro|piegas|pindéricos?|porreiraços?|poucochinhos?|regabofes?|sandochas?|tanas|tintol|tintóis">
+    <!ENTITY informal "chaval[ao]s?|porreiros?|(?:a(?:bafar|dultescente|ham|nh.+)|b(?:abado|adalhoc[ao]|adalo|adamec[ao]|adana|agarai|agunça|aita|aixinh[ao]|alof[ao]|ate-papo|atelada|eiço|ejeca|elê|ichan[ao]|ichinh[ao]|iscate|itaite|js|lablablá|ófia|orrachão|otequeir[ao]|razuca|reaco|rega)|c(?:abaço|acilda|adê|adé|alhamaço|apar|arago|arango|asinha|asório|Dcê|ertinh[ao]|hantar|huninha|huto|obrão|ocó|ocô|oisar|opião|ornear|utucar)|d(?:anad[ao]|anar|aonde|esmiolad[ao]|ocinh[ao]|oíd[ao])|e(?:spertalh(?:ão|ona)|spigadote|strilho|strovenga)|f(?:ilar|ixe|loripa|of[ao]|uxicar|uxiqueir[ao])|g(?:agá|aj[ao]|alera|atunar|elô|oró|osma|ranel|uit[ao]|una|urizada)|herman[ao]|irad[ao]|j(?:avardice|ola)|l(?:aivo|aracha|elé|ogar|ulopetismo)|m(?:acarrone|agrel[ao]|amaã|anda-chuva|ânfi[ao]|an[ao]|atraca|eia-boca|itra|oçada|oina|orcão|otoqueir[oa]|uvuca)|n(?:intendinho|op|ovat[ao])|o(?:i|iê|lhômetro|lh[ôó]metro)|p(?:andeiro|apão|apo|atada|eixão|ejada|elar|epeta|erua|etiz|indaíba|ixulé|ixuleco|orn[oô]|orrad[ao]|orre|r[áoó]|romo|rum|ruma|runs)|q(?:uebra-galho|ueca)|r(?:acha|anho|apaziada|emexer|emexida|icardão|olê)|s(?:acana|ave|elinho|úper)|surripi.+|t(?:abefe|antã|ascar|ime|ótil|rampar|rampo|ransar|reta|rocentos|rouxa|rucid.+|uga.+)|v(?:acil.+|aquinha|egetar|elhot[ae]|ó|ô)|x(?:i|ixi)|z(?:en|i[il]h(ão|ões)))|bacanos?|baril|borliú|barracadas?|camandros?|caraças|caxamolas?|chachas?|chilindrós?|chinocas?|chungas?|chungaria|chunguice|contigo|cuscar|drunfos?|esbardalhar|estrambóticas?|estrambóticos?|fartazanas?|festarolas?|fezadas?|gentinhas?|janados?|maradas?|marados?|maralhas?|maricadas?|milhentas?|morcão|morcões|nhurro|piegas|pindéricos?|porreiraços?|poucochinhos?|rabiosques?|regabofes?|sandochas?|tanas|tintol|tintóis">
     <!ENTITY obscenidades "(?:b(?:abaca|acanal|acorinha|acurinha|adalo|adamerda|aranga|ardamerda|edamerda|eita|enga|erdamerda|ichana|ilha|imba|imbada|oceta|oiola|olagato|roche|ruaca|uceta)|c(?:[uú]|abaço|abrão|abrões|acete|adela|agada|agalh(ão|ões)|agar|aralhada|aralho|atatau|atraia|havasca|huchu|huleta|hupeta|omua|ona|onaça|onanas|onsolo|oxanga|rica|roquete|unete|uzão)|f(?:iote|od.+|orunf.+|uampa|ufa|urico|urunf.+)|g(?:aita|relo|rutinha|ulosa)|j(?:eba)|l(?:angonha|ola)|m(?:amado|angalho|armelar|einha|erda|erdeiro|essalina|inete|oca)|nhonhoca|p(?:andeiro|aneleiro|assaralho|atolar|eid.+|ene|entelho|iça|ind?oc.+|intudo|iroca|irrola|ito|iupiu|ixa|otranca|unheta|unheteiro|uta|utada|utaria|utedo|utice)|q(?:ueca|uenga|uirica)|(qui|co)lh(ão|ões)|r(?:abeta|acha|apidinha|ata)|s(?:apatão|apatona|iririca|uruba|urubandê)|t(?:abaca|anajura|esão|esud[ao]|eta|oba|repada|roca-troca)|x(?:ana|arifa|arol[ao]|ereca|ibungo|imbica|iranha|iri|o(?:xo)ta))|cagalhão|cagalhões|caganças?|cagão|cagões|cagãozinho|cagueiros?|caguinchas|caralhão|caralhões|enconadas?|enconados?|esporradelas?|esporras?|merdices?|merdilheiro|merdosas?|merdosos?|pachachas?|panascas?|peidas?|piças?|pichas?|putanheiros?|putazinhas?|putéfias?|putinhas?|putonas?">
 
 	<!ENTITY languages "açoriano|baiano|balcânico|bordalês|eslavo|latino|maia|islâmico|judeu|bárbaro|muçulmano|afro[-]americano|afro[-]brasileiro|anglo[-]afegã|franco[-]prussiana|luso[-]brasileira|russo[-]persa|russo[-]turca|sino[-]japonesa|abancaino|abcásio|abcázio|abecásio|abecázio|abexim|abissínio|acrense|adigueu|afegã|afegane|afegânico|afegão|africano|alamão|alandês|alasquense|alasquiano|albanense|albanês|albânio|albano|alemanisco|alemão|alemânico|algeriano|alpino|alsaciano|americano|amesterdamês|amesterdanês|amsterdamês|anamês|anamita|ancarense|andorrano|andorrenho|andorrense|andorriano|angelino|anglicano|ânglico|anglo|angolano|angolense|angolês|angorá|anguilano|antiguano|antilhano|antioquenho|antofagastino|aqueu|árabe|árabe[-]saudita|arábico|arábigo|arábio|argeliano|argeliense|argelino|argentino|argivo|argoviano|ariquenho|armeniano|arménico|armênico|arménio|armênio|arubanense|arubano|arubenho|asiático|assuncionenho|ateniense|atlanticense|australês|australiano|austrálio|austríaco|austro[-]africano|austro[-]áfrico|austro[-]húngaro|axumita|azerbaidjanês|azerbaidjano|azerbaijanês|azerbaijano|azeri|baamense|baamês|baamiano|babilônico|bagdali|bahamense|bahamiano|balinês|bangladechiano|bangladense|bangladês|bangladeshiano|bangladexiano|baramês|barbadense|barbadiano|bareinita|baremense|baremês|baremita|barenita|basileiense|batávico|batávio|batavo|bechuana|bechuano|belarusso|belemita|belenense|belga|bélgico|belgradino|belizenho|belizense|bengala|bengalense|bengalês|bengáli|bengali|bengalim|beninense|beninês|bermá|bermã|bermano|bermudense|bermudês|bernense|bernês|bexuana|bexuano|bielo[-]russo|bielorrusso|bife|birmã|birmane|birmanense|birmanês|birmaniano|birmano|bissanense|bissauense|bizantino|boche|boêmio|boémio|bogotano|boliviano|bonaerense|borgonhês|bosnense|bosníaco|bosniano|bosniense|bósnio|bostoniano|botsuanense|botsuanês|botsuano|botswanense|botswanês|botswano|brabanção|bramá|brasileiro|brasilense|brasilês|brasiliano|brasílico|brasiliense|brasílio|brasilista|bretão|britânico|britano|bruneano|bruneíno|bruxelense|bruxelês|bucarestense|bucarestino|budapestense|budapestino|buenairense|bulgarês|búlgaro|burkinense|burquinabê|burquinense|burquinês|burquino|burundiano|burundiense|burundinês|burúndio|butanense|butanês|butani|butâni|butânico|cabo[-]verdense|cabo[-]verdiano|caienense|caimanês|calamenho|calenho|californiano|calmuco|camaronense|camaronês|camberrano|cambodjano|cambojano|cambojiano|camerunense|camerunês|cameruniano|campucheano|canadense|canadiano|canadiense|cantonês|capitalino|caraquenho|carélio|caribenho|cartageneiro|cartaginense|cartaginês|casaco|casáquio|casaquistano|catarense|catari|catariano|caucasiano|cazaque|cazaquistanês|ceilonense|centrafricano|centro[-]africano|centro[-]americano|chadiano|chadiense|checheno|checo|checoslovaco|chicagüense|chileno|chiloense|chilote|chim|china|chinês|chingalá|chino|chinoca|chiprense|cingalá|cingalês|cipreno|cipríaco|cíprico|cíprio|cipriota|colombense|colombiano|colombino|colombo|comi|comorense|comoriano|concepcionense|congo|congolense|congolês|conguense|conguês|cookense|copenhaguense|coquense|cordobense|cordovês|coríntio|córnico|cornualês|corso|cosovano|cossovano|cossovar|costa[-]marfinense|costa[-]marfiniano|costa[-]ricense|costa[-]riquenho|costa[-]riquense|costarricense|costarriquenho|costarriquense|couaitiano|coveitiano|cretense|Crimeano|Crimeu|croaciano|croácio|croata|cuaitiano|cubano|curaçauense|curdo|cusquenho|cuvaiti|cuvaitiano|cuwaitiano|dacarense|daguestanês|dálmata|damanense|damasceno|damasquino|danês|dânio|dano|diense|dinamarquês|dioense|diuense|djibutiano|djibutiense|dominicano|domínico|dominiquense|dominiquês|dublinense|ebúrneo|edokko|egipcíaco|egipciano|egipcião|egípcio|egiptanense|egiptano|egíptico|egiptino|eirense|emiradense|emirático|equato[-]guineense|equatoriano|erino|eritreu|escandinavo|escocês|esguíçaro|esguízaro|eslovaco|eslováquio|eslovénico|eslovênico|esloveno|espanhol|espartano|essuatiniano|estado[-]unidense|estadunidense|estoniano|estônico|estónico|estônio|estónio|esvalbardense|etíope|etiopês|etiopiano|etiópico|etiópio|europeu|falklandês|faroense|feroês|feroico|fidjiano|fijiano|filipino|finense|finês|fínico|finlandês|fino|flamengo|floridense|formosano|formosino|forro|francês|franciú|franco|frisão|frísio|gabonense|gabonês|galense|galês|galicano|gálico|gálio|galo|gambiano|gambiense|ganense|ganês|gascão|gaulês|gaulo|gazeu|gazita|genebrense|genebrês|genebrino|georgiano|geórgico|germânico|germano|giblita|gibraltarino|gibraltino|goano|goense|goês|grã[-]bretão|granadino|grecânico|greciano|grego|gregório|groenlandês|gronelandês|grúzico|gruzínico|gruzínio|grúzio|guadalupense|guadalupino|guajiro|guamês|guantanameiro|guatemalense|guatemalteco|guatemaltense|guernesiano|guianense|guianês|guiano|guineano|guineense|guinéu|guinéu[-]equatoriano|haitiano|hauaiano|havaiano|havaneiro|havanês|helene|helênico|helénico|heleno|helvécio|helvético|helveto|herzegovino|herzegóvino|hibérnico|hibérnio|hidrocálido|hiérnio|hierosolimita|hierosolimitano|hindu|hindustâni|hindustani|hispânico|hispaniense|hispano|holandês|hollywoodiano|holmiense|honconguês|hondurenho|hungarês|hungárico|húngaro|ianque|iemenense|iemenês|iemênico|ieménico|iemenita|Ilhas|indiano|indiático|índico|índio|indochinês|indonésio|inglês|iraniano|irânico|irânio|iraquenho|iraquense|iraquiano|irlandês|irlândes|islandense|islandês|islândico|israelense|israeliano|israelita|israelítico|italiano|itálico|italiota|ítalo|jamaicano|jamaicense|japão|japona|japonense|japonês|japônico|japónico|jau|javanês|jerosolimita|jerosomilitano|jersiano|jerusalemita|jibutiano|jibutiense|jordaniano|jordânico|jordano|kiribatiano|kiribatino|kosovar|kossovar|kowaitiano|koweitiano|kuwaiti|kuwaitiano|kuweitiano|kwaitiano|lacedemônio|lao|laociano|laosiano|lapão|latino[-]americano|lau|lausiano|lesotense|lesotiano|lesoto|letão|lético|letónico|letônico|letônio|letónio|libanês|liberiano|libério|líbico|líbio|liechtensteinense|liechtensteinês|liechtensteiniano|liechtensteiniense|limenho|lionense|lionês|listenstainense|listenstainês|listenstainiano|listenstainiense|listenstaino|lituânico|lituânio|lituano|liverpuldiano|loíno|londrino|luandense|lusíada|lusitaniano|lusitânico|lusitano|luso|luxemburguês|macaense|macaísta|macau|macauense|mácedo|macedoniano|macedônico|macedónico|macedônio|macedónio|madagascarense|madgiar|magiar|maiotense|malaico|malaio|malasiano|malásio|malaui|malauiano|malauiense|malauista|malauita|malaviano|malavita|malawiano|malawiense|maldivano|maldivense|maldiviano|maldívio|maldivo|malês|malgaxe|malgaxo|maliano|malinês|maltês|malvinense|malvinês|malvino|managuenho|managuense|manchu|mancuniano|manês|manquês|manx|maputense|marechalês|marechaliniano|marfinense|marfiniano|mari|marroquino|marselhês|marshallês|marshallino|martinicano|maubere|mauriciano|mauritaniano|mauritânico|mauritano|mecano|medelhinense|mediterrâneo|mediterrânico|mejilhonino|melanésio|mendocino|meroíta|meroítico|mesopotâmico|mexicano|mexilhonino|mianmarense|micênico|michigânder|micronésio|milésio|Miquelon|moçambicano|moçambique|moçambiquenho|moçambiquense|mogol|mogor|mogore|moldávico|moldávio|moldavo|monagasco|monegasco|mongol|mongólico|mongolino|mongolita|monserratense|montenegrino|moraviano|mordóvio|mordovo|moscovita|mouro|namibiano|namíbio|napatense|narbonense|narbonês|natalense|nauruano|nauruense|nazareno|nederlandês|neerlandês|neocaledónio|neocaledônio|neozelandense|neozelandês|neozelandiense|nepalês|nepali|nicaraguano|nicaraguense|nigerense|nigeriano|nigerino|ninivita|nipão|nipo|niponense|nipónico|nipônico|niueano|niuiano|norfolkino|norfolquino|normando|norte[-]americano|norte[-]chiprense|norte[-]cíprico|norte[-]ciprino|norte[-]cíprio|norte[-]cipriota|norte[-]coreano|norte[-]irlandês|norte[-]marianense|norte[-]osseta|noruego|norueguense|norueguês|nova[-]iorquino|núbio|oceânico|olímpico|omanense|omani|omaniano|oriental|orleniano|osmandi|osmânico|osmanli|osseta|otomano|otomão|pacenho|palauano|palauense|palestinense|palestiniano|palestino|panamaense|panamenho|panamense|panamiano|panamista|papua|papuásio|paquistanense|paquistanês|paquistani|paquistânico|paraguaiano|paraguaio|parisiense|párseo|pársio|pascoense|patagão|patagónio|penquista|pequinês|persa|pérseo|persiano|pérsico|pérsio|peruano|peruviano|perúvio|picardiano|pinheiro|piquenho|pitcairnês|platino|poblano|polaco|polinésico|polinésio|polonês|Polónia|polônico|polónico|polónio|polônio|polono|portenho|porto[-]riquenho|porto[-]riquense|portucalense|portuga|portugalense|portugalês|português|praguense|praiense|provençal|prussiano|púnico|puntarenense|quaitiano|queniano|quermano|quindiano|quirguistanês|quirguiz|quirguize|quirguizistanês|quiribatiano|quitenho|régio|regiomontano|reunionense|romaico|romenho|roménico|romênico|romeno|ruandense|ruandês|russiano|russo|russo[-]branco|sã[-]tomense|saaraui|saarauí|saarense|saariano|saárico|salomonense|salomónico|salomônico|salônico|salvadorenho|salvatoriano|samarinês|samoano|samoense|san[-]marinense|sanandresano|santa[-]helenense|santa[-]lucense|santa[-]luciense|santanderiano|santiagueiro|santiaguense|santiaguino|santo[-]antoniense|santomense|são[-]bartolomeense|são[-]cristovense|são[-]marinense|são[-]marinhense|são[-]martinhense|são[-]nicolauense|são[-]pedrense|são[-]tomense|são[-]vicentino|sarauí|saraui|sarauita|sarense|sariano|sárico|saudi[-]árabe|saudi[-]arábico|saudita|seattleíta|seichelense|senegalense|senegalês|senegalesco|senegaliano|senegálico|serra[-]leonense|serra[-]leonês|serra[-]leonino|sérvio|seychellense|siame|siamense|siamês|siberiano|sidônio|silesiano|singala|singalense|singalês|singalibense|singapurano|singapurense|singapuriano|sínico|sino|siríaco|siriano|sírio|siro|socotorino|somali|somáli|somaliano|somaliense|somalilandense|somalilandês|soviético|srilankês|srilankesa|suázi|suazi|suazilandense|suazilandês|suazilandiense|sudanês|suécio|sueco|suíço|sul[-]africanista|sul[-]africano|sul[-]americano|sul[-]coreano|sul[-]osseta|sul[-]sudanês|sumério|surinamense|surinamês|svalbardense|tadjique|tadjiquistanês|tagal|tagalar|tagalo|tailandês|taitiano|taiuanês|taiwanês|tajique|tajiquistanês|tanzaniano|tapatio|tártaro|tasmaniano|tchadiano|tchadiense|tcheco|tchecoslovaco|tchetcheno|tebano|tedesco|tegucigalpenho|tessalônico|teucro|teutão|teuto|teutónico|texano|tibetano|timor|timorense|timorino|tírio|tirolês|tocopilhano|togolês|toguês|tonganês|toquelauano|trácio|transdniestriano|transdnistriano|transdnístrio|transilvano|transnistriano|transnístrio|trinitário|trinitário[-]tobagense|tripolitano|tristanita|troiano|tudesco|tuga|tunesino|tunetano|tunisiano|tunisino|túrcico|turco|turco[-]caicense|turcomeno|turquemenistanês|turquemeno|turquês|turquesco|tuvalês|tuvaluano|ucraniano|ucrânio|ugandense|ugandês|uruguaiano|uruguaio|usbeque|usbequistanês|uzbeque|uzbequistanês|valão|vanuatense|vanuatuense|varsoviano|vaticano|venezolano|venezuelano|veracruzano|vienense|vietnamense|vietnamês|vietnamiano|vietnamita|vinhamarino|virginense|wallisense|washingtoniano|wellingtoniano|xangaiense|yankee|zagrebino|zairense|zambiano|zambiense|zâmbio|zamorano[-]chinchipense|zanzibar|zanzibarita|zelandês|zimbabuano|zimbabuense|zimbabwense|zimbabwiano|zuriquenho|zuriquense">
@@ -336,6 +336,91 @@ title="Easy editing stylesheet" ?>
 
 
  <category id='GRAMMAR' name="Gramática Geral" type="grammar">
+ 
+ 
+  <!-- ELE/ELA/NELE/NELA PRÓPRIO PRÓPRIA concordância de género -->
+  <rulegroup id='ELE_ELA_NELE_NELA_PRÓPRIO_PRÓPRIA' name="Concordância de género: El[ae](s)/Nel[ae](s) própri[ao](s)">
+  <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-21 (Checked/Enhanced) (1-JAN-2022+)      -->
+  <!--
+Elas próprios fizeram a comida. → Elas próprias fizeram a comida.
+Ele própria fê-lo. → Ele próprio fê-lo.
+A fé está nela próprio. → A fé está nela própria.
+A fé está neles próprias. → A fé está neles próprios.
+  -->
+		<rule>
+			<pattern>	
+				<token regexp="yes">eles?|neles?</token>
+				<marker>
+					<token regexp="yes">próprias?</token>
+				</marker>
+			</pattern>
+			<message>&MSG_ECG;</message>
+			<suggestion>próprio<match no='2' regexp_match='(própria)(s?)' regexp_replace='$2'/></suggestion>
+			<example correction="próprio">Ele <marker>própria</marker> escolheu.</example>
+			<example correction="próprios">Eles <marker>próprias</marker> escolheram.</example>
+        </rule>
+		<rule>
+			<pattern>				
+				<token regexp="yes">elas?|nelas?</token>
+				<marker>
+					<token regexp="yes">próprios?</token>
+				</marker>
+			</pattern>
+			<message>&MSG_ECG;</message>
+			<suggestion>própria<match no='2' regexp_match='(próprio)(s?)' regexp_replace='$2'/></suggestion>
+			<example correction="própria">Ela <marker>próprio</marker> escolheu.</example>
+			<example correction="próprias">Elas <marker>próprios</marker> escolheram.</example>
+		</rule>
+  </rulegroup>
+
+
+	<!-- A À -->
+    <rulegroup id='ERROS_DE_CRASE_MARCOAGPINTO' name="Erros de crase (Marco A.G.Pinto)">
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-17 (1-JAN-2022+)      -->
+	<!--
+Logo a noite vou experimentar novamente. → Logo à noite vou experimentar novamente.
+	-->
+		<rule>
+	<!--
+Logo a noite vou experimentar novamente. → Logo à noite vou experimentar novamente.
+Logo a noite ela vai experimentar novamente. → Logo à noite ela vai experimentar novamente.
+	-->
+	
+<!-- MARCOAGPINTO 2022-01-17 (1-JAN-2022+) *START* -->
+<!--
+Por que a Maria resolveu ficar aqui?
+Por que a senhora resolveu ficar aqui?
+-->
+      <antipattern>
+		<token>por</token>
+		<token>que</token>
+      </antipattern>
+<!-- MARCOAGPINTO 2022-01-17 (1-JAN-2022+) *END* -->
+
+			<pattern>
+				<token postag='RG' postag_regexp='no'/>
+				<marker>
+					<token>a</token>
+				</marker>
+				<token postag='NC.+|AQ.+' postag_regexp='yes'>
+					<exception postag_regexp='yes' postag='NP.+'/>
+				</token>
+				<token min="0" max="1" postag='PP.+' postag_regexp='yes'/>
+				<token postag='V.+' postag_regexp='yes'/>
+				<token postag='VMN0000' postag_regexp='no'/>
+				<token postag='RG' postag_regexp='no'>
+					<exception postag_regexp='yes' postag='CS|NC.+|AQ.+'/>
+					<exception>à</exception>
+				</token>
+			</pattern>
+			<message>Possível erro de crase.</message>
+			<suggestion>à</suggestion>
+			<example correction="à">Logo <marker>a</marker> noite vou experimentar novamente.</example>
+			
+			<example>Por que a Maria resolveu ficar aqui?</example>
+			<example>Por que a senhora resolveu ficar aqui?</example>
+		</rule>	
+    </rulegroup>
 
 
     <!--          Tiago F. Santos Rules Start         ****START**** -->
@@ -1957,55 +2042,8 @@ O pai cujo filha fez anos. → O pai cuja filha fez anos.
 		</rule>	
 
 	</rulegroup>
-  
-  <rulegroup id='ELE_ELA_PROPRIO_PROPRIA' name="Ele(s)/Ela(s) próprio(s)/própria(s)">
-		<!--      Created by Marco A.G.Pinto, Portuguese rule - 2020-03-03   -->
-		<rule>
-			<pattern>				
-				<token>ele</token>
-				<marker>
-					<token>própria</token>
-				</marker>
-			</pattern>
-			<message>&MSG_ECG;</message>
-			<suggestion>próprio</suggestion>
-			<example correction="próprio">Ele <marker>própria</marker> escolheu.</example>
-        </rule>
-        <rule>
-			<pattern>				
-				<token>eles</token>
-				<marker>
-					<token>próprias</token>
-				</marker>
-			</pattern>
-			<message>&MSG_ECG;</message>
-			<suggestion>próprios</suggestion>
-			<example correction="próprios">Eles <marker>próprias</marker> escolheram.</example>
-		</rule>
-		<rule>
-			<pattern>				
-				<token>ela</token>
-				<marker>
-					<token>próprio</token>
-				</marker>
-			</pattern>
-			<message>&MSG_ECG;</message>
-			<suggestion>própria</suggestion>
-			<example correction="própria">Ela <marker>próprio</marker> escolheu.</example>
-		</rule>
-		<rule>
-			<pattern>				
-				<token>elas</token>
-				<marker>
-					<token>próprios</token>
-				</marker>
-			</pattern>
-			<message>&MSG_ECG;</message>
-			<suggestion>próprias</suggestion>
-			<example correction="próprias">Elas <marker>próprios</marker> escolheram.</example>
-		</rule>
-  </rulegroup>
-	
+
+
     <!-- Specific gender concordance errors - A > Masculine Noun -->
     <!-- Created by Tiago F. Santos, Portuguese rule, 2016-10-24 -->
     <rule default='off' id='ERRO_DE_CONCORDNCIA_DO_GÉNERO_FEMININO_A' name="Concordância de género: A + Masculino">
@@ -2933,86 +2971,7 @@ Difere da guerra porque os conflitos são uma luta entre radicais. → Difere da
 	  <example correction="por os conflitos serem">Difere da guerra <marker>porque os conflitos são</marker> uma luta entre radicais.</example>
     </rule>
 
-	<!-- QUE SER/ESTAR PART_PASSADO part_passado -->
-    <rule id='QUE_SER_ESTAR_PARTPASSADO' name="Que + ser/estar + particípio passado → Particípio passado" type='style'>
-    <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-08-19 + 2021-08-20 (25-JUN-2021+)      -->
-	<!--
-A quantidade que é estimada denomina-se 'estimativa'. → A quantidade estimada denomina-se 'estimativa'.
-	-->
-<!-- 
-São os seus filhos que estão atrasados.
--->
-      <antipattern>
-	    <token postag='DP.+' postag_regexp='yes'/>
-		<token postag='AQ0.+|NC.+' postag_regexp='yes'/>
-		<token regexp='no'>que</token>
-		<token postag='VMIP.+' postag_regexp='yes'/>
-		<token postag='VMP.+' postag_regexp='yes'/>	
-      </antipattern>
-<!-- 
-Os pais ensinam aos filhos que é errado mentir.
--->
-      <antipattern>
-	    <token postag='SPS.+' postag_regexp='yes'/>
-		<token postag='AQ0.+|NC.+' postag_regexp='yes'/>
-		<token regexp='no'>que</token>
-		<token postag='VMIP.+' postag_regexp='yes'/>
-		<token postag='VMP.+' postag_regexp='yes'/>	
-		<token postag='VMN0000' postag_regexp='no'/>
-      </antipattern>
-<!-- 
-O montante em fichas necessário para as apostas que serão feitas no decorrer do jogo.
--->
-      <antipattern>
-	    <token postag='DA.+' postag_regexp='yes'/>
-		<token postag='AQ0.+|NC.+' postag_regexp='yes'/>
-		<token regexp='no'>que</token>
-		<token postag='VMIF.+' postag_regexp='yes'/>
-		<token postag='VMP.+' postag_regexp='yes'/>	
-      </antipattern>
-<!-- 
-Tom acha que está apaixonado.
-Isso evita que sejam produzidos erros gramaticais em certas línguas.
--->
-      <antipattern>
-	    <token postag='NP.+|PD.+' postag_regexp='yes'>
-            <exception postag_regexp='yes' postag='DA0.+'/>
-		</token>
-		<token postag='VMIP3S0' postag_regexp='no'/>
-		<token regexp='no'>que</token>
-		<token postag='V.+' postag_regexp='yes'/>
-		<token postag='VMP.+' postag_regexp='yes'/>	
-      </antipattern>	  
-      <pattern>
-		<token postag='AQ0.+|NC.+' postag_regexp='yes'/>
-		<marker>
-			<token regexp='no'>que</token>
-			<and>
-				<token regexp='yes' inflected='yes'>ser|estar</token>
-				<token negate_pos="yes" postag='VMIP1.+|VMII3.+|VMIF3.+|VMSI3.+' postag_regexp='yes'/>
-			</and>
-			<token postag='VMP.+' postag_regexp='yes'/>			
-		</marker>
-      </pattern>
-	  <message>Em certos contextos, esta perífrase pode ser simplificada.</message>
-	  <suggestion>\4</suggestion>
-      <example correction="estimada">A quantidade <marker>que é estimada</marker> denomina-se 'estimativa'.</example>
-	  <example>A pauta é a seleção dos assuntos que serão abordados.</example>
-	  <example>Esta licença informará quais os direitos que o autor estará transferindo e quais as condições que serão aplicadas.</example>
-	  <example>Os pais têm prioridade de direito na escolha do tipo de educação que será ministrada a seus filhos.</example>
-	  <example>O estádio que será usado será o Estádio Nacional de Brasília, que no momento esta construção.</example>
-	  <example>Uma casa que será feita por um homem.</example>
-	  
-	  <example>São os seus filhos que estão atrasados.</example>
-	  
-	  <example>Os pais ensinam aos filhos que é errado mentir.</example>
-	  
-	  <example>O montante em fichas necessário para as apostas que serão feitas no decorrer do jogo.</example>
-	  
-	  <example>Tom acha que está apaixonado.</example>
-	  <example>Isso evita que sejam produzidos erros gramaticais em certas línguas.</example>
-    </rule>
-	
+
 	<!-- QUE FORAM/FOI/SÃO/É sendo -->
     <rulegroup id='QUE_FORAM_FOI_SÃO_É_SENDO' name="Que foram/foi/são/é → Sendo">
     <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-05-20 + 2021-07-12 + 2021-07-13 + 2021-07-14 + 2021-07-30 + 2021-08-18  (17-MAR-2021+)      -->
@@ -4651,7 +4610,7 @@ António Gonçalves Dias nasceu em 10 de agosto de 1823, no sítio Boa Vista, em
       </antipattern>
 <!-- MARCOAGPINTO 2021-09-21 (25-JUN-2021+) *END* -->
 
-<!-- MARCOAGPINTO 2022-01-05 (1-JAN-2022+) *START* -->
+<!-- MARCOAGPINTO 2022-01-05/15 (1-JAN-2022+) *START* -->
 <!--
 Estou de férias e regresso de sábado a oito.
 Estou de férias e regresso de segunda-feira a oito.
@@ -4660,7 +4619,7 @@ THIS ANTIPATTERN APPEARS ONCE IN THE GRAMMAR.
 IT SHOWS NO HITS AGAINST A 900 000 CORPORA.
 -->
       <antipattern>
-		<token regexp='yes'>segunda|terça|quarta|quinta|sexta|sábado|domingo</token>
+		<token regexp='yes'>ontem|hoje|amanhã|segunda|terça|quarta|quinta|sexta|sábado|domingo</token>
 		<token>a</token>
 		<token postag='Z0.+' postag_regexp='yes'/>
       </antipattern>
@@ -4671,7 +4630,7 @@ IT SHOWS NO HITS AGAINST A 900 000 CORPORA.
 		<token>a</token>
 		<token postag='Z0.+' postag_regexp='yes'/>
       </antipattern>	  
-<!-- MARCOAGPINTO 2022-01-05 (1-JAN-2022+) *END* -->
+<!-- MARCOAGPINTO 2022-01-05/15 (1-JAN-2022+) *END* -->
 
 <!-- MARCOAGPINTO 2022-01-07 (1-JAN-2022+) *START* -->
 <!--
@@ -11802,65 +11761,8 @@ Vamos minorar a dor.
 		<message>Substitua por <suggestion>devida</suggestion>.</message>
 		<example correction="devida">Não vos posso dar a atenção <marker>que merecem</marker>.</example>  
 	</rule>
-	
-    <!-- 	CADA VEZ MAIOR/MENOR crescente/decrescente -->	
-	<!--      Created by Marco A.G.Pinto, Portuguese rule 2020-10-31 (21-OCT-2020+)     -->
-    <rulegroup id='CADA_VEZ_MAIOR_MENOR_CRESCENTE_DECRESCENTE' name="Cada vez maior/menor > crescente/decrescente">
-	
-	  <!-- CRESCENTE -->
-	  <rule>
-		<pattern>
-	      <token regexp='yes'>a|e|é|o|um|uma</token>
-		  <marker>
-			<token>cada</token>
-			<token>vez</token>
-			<token>maior</token>
-		  </marker>
-		</pattern>
-		<message>Substitua por <suggestion>crescente</suggestion>.</message>
-		<example correction="crescente">O <marker>cada vez maior</marker> número de cometas descobertos tornou o processo problemático.</example>
-	  </rule>
-	  <rule>
-		<pattern>
-	      <token postag='AQ0[CFM]S0|NC[CFM]S000' postag_regexp='yes'/>
-		  <marker>
-			<token>cada</token>
-			<token>vez</token>
-			<token>maior</token>
-		  </marker>
-		</pattern>
-		<message>Substitua por <suggestion>crescente</suggestion>.</message>
-		<example correction="crescente">O número <marker>cada vez maior</marker> de cometas descobertos tornou o processo problemático.</example>
-	  </rule>
-	  
-	  <!-- DECRESCENTE -->
-	  <rule>
-		<pattern>
-	      <token regexp='yes'>a|e|é|o|um|uma</token>
-		  <marker>
-			<token>cada</token>
-			<token>vez</token>
-			<token>menor</token>
-		  </marker>
-		</pattern>
-		<message>Substitua por <suggestion>decrescente</suggestion>.</message>
-		<example correction="decrescente">O <marker>cada vez menor</marker> número de cometas descobertos tornou o processo problemático.</example>
-	  </rule>
-	  <rule>
-		<pattern>
-	      <token postag='AQ0[CFM]S0|NC[CFM]S000' postag_regexp='yes'/>
-		  <marker>
-			<token>cada</token>
-			<token>vez</token>
-			<token>menor</token>
-		  </marker>
-		</pattern>
-		<message>Substitua por <suggestion>decrescente</suggestion>.</message>
-		<example correction="decrescente">O número <marker>cada vez menor</marker> de cometas descobertos tornou o processo problemático.</example>
-	  </rule>
-	  
-    </rulegroup>
-	
+
+
 	<!-- CHEGAR AO FIM findar/terminar -->
     <rule id='CHEGAR_AO_FIM_FINDAR_TERMINAR' name="Chegar ao fim → findar/terminar " type="style">
     <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-11-21 (25-JUN-2021+)      -->
@@ -14709,29 +14611,6 @@ Eu comprei-a quando fui à loja.
       <example correction="mostra">Quero ver a <marker>amostra</marker> de arte.</example>
     </rule>
 
-	<!-- E É/SÃO/FOI/FORAM sendo/sido verbo -->
-    <rule id='E_É_SÃO_FOI_FORAM_SENDO_SIDO' name="E é/são/foi/foram + Verbo → Sendo/Sido + Verbo" type="style">
-    <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-07-10 + 2021-07-12 (25-JUN-2021+)      -->
-	<!--
-Ele escondeu-se e foi capturado em maio. → Ele escondeu-se sendo capturado em maio.
-Einstein é um génio e é considerado o pai da relatividade. → Einstein é um génio e considerado o pai da relatividade.
-	-->
-      <pattern>
-		<marker>
-			<token>e</token>
-			<token regexp='yes'>é|são|foi|foram</token>
-		</marker>
-		<token postag='V.+' postag_regexp='yes'>
-			<exception postag_regexp='yes' postag='NP.+'/>
-		</token>		
-      </pattern>
-	  <message>Em certos contextos, esta perífrase pode ser simplificada.</message>
-	  <suggestion>sendo</suggestion>
-	  <suggestion>sido</suggestion>
-	  <suggestion>e</suggestion>
-      <example correction="sendo|sido|e">Einstein é um génio <marker>e é</marker> considerado o pai da relatividade.</example>
-	  <example>Ele escondeu-se sendo capturado em maio.</example>	  
-    </rule>
 
 	<!-- QUE [NÃO] HÁ [não] haver -->
     <rulegroup id='QUE_HÁ_QUE_NÃO_HÁ' name="Que [não] há → [Não] haver" type="style">
@@ -19131,6 +19010,47 @@ O quê?!
 
 
  <category id='REDUNDANCY' name="Redundância">
+
+
+    <!-- 	CADA VEZ MAIOR/MENOR crescente/decrescente -->	
+    <rulegroup id='CADA_VEZ_MAIOR_MENOR_CRESCENTE_DECRESCENTE' name="Cada vez maior/menor → crescente/decrescente">
+	<!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-14 (Checked/Enhanced) (1-JAN-2022+)      -->
+
+	  <!-- CRESCENTE -->
+	  <rule>
+		<pattern>
+		  <or>
+			<token negate_pos="yes" postag='V.+' postag_regexp='yes'/>
+			<token>é</token>
+		  </or>
+		  <marker>
+			<token>cada</token>
+			<token>vez</token>
+			<token>maior</token>
+		  </marker>
+		</pattern>
+		<message>Substitua por <suggestion>crescente</suggestion>.</message>
+		<example correction="crescente">O número <marker>cada vez maior</marker> de cometas descobertos tornou o processo problemático.</example>
+	  </rule>
+
+	  <!-- DECRESCENTE -->
+	  <rule>
+		<pattern>
+		  <or>
+			<token negate_pos="yes" postag='V.+' postag_regexp='yes'/>
+			<token>é</token>
+		  </or>
+		  <marker>
+			<token>cada</token>
+			<token>vez</token>
+			<token>menor</token>
+		  </marker>
+		</pattern>
+		<message>Substitua por <suggestion>decrescente</suggestion>.</message>
+		<example correction="decrescente">O número <marker>cada vez menor</marker> de cometas descobertos tornou o processo problemático.</example>
+	  </rule>
+
+    </rulegroup>
 
 
     <rule id='ANTES_PREFIRO' name="Prefiro">
@@ -25363,6 +25283,30 @@ THIS ANTIPATTERN WAS BASED ON TIAGO SANTO'S RULE WHICH WAS REPLACED BY MY OWN RU
 			<example>Nos cerca de 100 eventos organizados entre Setembro de 2006 e Outubro de 2012, estiveram contabilizados os feridos.</example>	
 		</rule>
 	</rulegroup>
+
+
+	<!-- TER estar -->
+    <rule id='CONFUSÃO_TER_ESTAR' name="Confusão: ter/estar">
+	<!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-17 (Checked/Enhanced) (1-JAN-2022+)      -->
+	<!--
+Eu tive com a Ana ontem. → Eu estive com a Ana ontem.
+Eu tive com dores de cabeça. → Eu estive com dores de cabeça.
+	-->	
+      <pattern>
+		  <token negate_pos="yes" postag='V.+|CS|RG|PE.+|PR.+|PT.+|I' postag_regexp='yes'/>
+		  <marker>
+			<and>
+				<token inflected='yes'>ter</token>			
+				<token postag='VMIS[123].+|VMIM3P0' postag_regexp='yes'/>
+			</and>
+		  </marker>
+		  <token>com</token>
+		  <token postag='DA.+|DI.+|Z0.+|PP.+|NC.+|AQ.+' postag_regexp='yes'/>
+      </pattern>
+	  <message>Possível confusão de termos.</message>
+      <suggestion><match no='2' postag='V.+' postag_regexp='yes'>estar</match></suggestion>
+      <example correction="estive">Eu <marker>tive</marker> com a Ana ontem.</example>
+    </rule>
 
 
 	<!-- VESTIR calçar -->
@@ -37861,6 +37805,7 @@ O Rui esteve lá no período 2013 –2021. → O Rui esteve lá no período 2013
     </rule>
   </rulegroup>
 
+
     <rule default="on" id='SENT_START_NUM' name="Número no início da frase">
     <!--  Based on English CAPITALIZATION rule, by Tiago F. Santos, 2017-05-09      -->
       <antipattern>
@@ -37878,60 +37823,51 @@ O Rui esteve lá no período 2013 –2021. → O Rui esteve lá no período 2013
           <token postag="SENT_START"/>
           <token regexp="yes">(?:\d{2}|\d{4})\.\d{2}\.(?:\d{2}|\d{4})</token>
       </antipattern>
-<!-- MARCOAGPINTO 2021-07-08 + 2021-07-12 (25-JUN-2021+) *START* -->
+	  
+<!-- MARCOAGPINTO 2022-01-21 (Checked/Enhanced) (1-JAN-2022+) *START* -->
 <!--
 27 de janeiro de 1974.
+Acesso em: 10 set 2007.
+André 23:07, 14 nov 2004 (UTC).
+2 jul 1605.
 -->
       <antipattern>
-		<token postag="SENT_START"/>
-		<token postag='Z0.+' postag_regexp='yes'/>
+		<token regexp='yes'>0?[1-9]|[12][0-9]|3[01]</token>
 		<token min="0" max="1">de</token>
-		<token regexp='yes'>janeiro|fevereiro|março|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro</token>
+		<token regexp='yes'>&meses_ano_abrev;|&meses_ano;</token>
 	  </antipattern>
-<!-- MARCOAGPINTO 2021-07-08 + 2021-07-12 (25-JUN-2021+) *END* -->	
-<!-- MARCOAGPINTO 2021-07-12 (25-JUN-2021+) *START* -->
+<!-- MARCOAGPINTO 2022-01-21 (Checked/Enhanced) (1-JAN-2022+) *END* -->
+
+<!-- MARCOAGPINTO 2022-01-21 (Checked/Enhanced) (1-JAN-2022+) *START* -->
 <!--
 4 a.C.
 4 d.C.
 -->
       <antipattern>
-		<token postag="SENT_START"/>
 		<token postag='Z0.+' postag_regexp='yes'/>
 		<token regexp='yes'>a|d</token>
 		<token regexp='yes'>[.]</token>
 		<token case_sensitive='yes'>C</token>
 		<token regexp='yes'>[.]</token>
 	  </antipattern>
-<!-- MARCOAGPINTO 2021-07-12 (25-JUN-2021+) *END* -->
-<!-- MARCOAGPINTO 2021-07-13 (25-JUN-2021+) *START* -->
+<!-- MARCOAGPINTO 2022-01-21 (Checked/Enhanced) (1-JAN-2022+) *END* -->
+
+<!-- MARCOAGPINTO 2022-01-21 (Checked/Enhanced) (1-JAN-2022+) *START* -->
 <!--
 10 A.D.
 -->
       <antipattern>
-		<token postag="SENT_START"/>
 		<token postag='Z0.+' postag_regexp='yes'/>
 		<token case_sensitive='yes'>A</token>
 		<token regexp='yes'>[.]</token>
 		<token case_sensitive='yes'>D</token>
 		<token regexp='yes'>[.]</token>
 	  </antipattern>
-<!-- MARCOAGPINTO 2021-07-13 (25-JUN-2021+) *END* -->
-<!-- MARCOAGPINTO 2021-12-17 (25-JUN-2021+) *START* -->
-<!--
-Acesso em: 10 set 2007.
-André 23:07, 14 nov 2004 (UTC).
-2 jul 1605.
-USED IN ABBREVIATIONS, BARBARISMS AND ALSO IN SENTENCES STARTING WITH A NUMBER.
--->
-      <antipattern>
-		<token regexp='yes'>0?[1-9]|[12][0-9]|3[01]</token>
-		<token regexp='yes'>&meses_ano_abrev;</token>
-		<token postag='Z0.+' postag_regexp='yes'/>
-      </antipattern>
-<!-- MARCOAGPINTO 2021-12-17 (25-JUN-2021+) *END* -->
+<!-- MARCOAGPINTO 2022-01-21 (Checked/Enhanced) (1-JAN-2022+) *END* -->
+
       <pattern>
-          <phraseref idref="ALL_SENT_START"/>
-        <marker>
+        <phraseref idref="ALL_SENT_START"/>
+		<marker>
           <token regexp="yes">[\d,.]+</token>
         </marker>
           <token>
@@ -37954,16 +37890,16 @@ USED IN ABBREVIATIONS, BARBARISMS AND ALSO IN SENTENCES STARTING WITH A NUMBER.
       <example>25.12.2017 às 12h00</example>
 	  
 	  <example>27 de janeiro de 1974.</example>
-	  
+      <example>Acesso em: 10 set 2007.</example>
+	  <example>André 23:07, 14 nov 2004 (UTC).</example>
+	  <example>2 jul 1605.</example>
+
 	  <example>4 a.C.</example>
 	  <example>4 d.C.</example>
 	  
-	  <example>10 A.D.</example>
-
-      <example>Acesso em: 10 set 2007.</example>
-	  <example>André 23:07, 14 nov 2004 (UTC).</example>
-	  <example>2 jul 1605.</example>	  
+	  <example>10 A.D.</example>	  
     </rule>
+
 
   <rulegroup id='CERCA_DE_NR' name="Aproximação excessivamente precisa">
     <!-- Created by Tiago F. Santos, 2017-02-28 -->
@@ -41310,23 +41246,6 @@ Elas têm umas sextas de vime. → Elas têm umas cestas de vime.
       </rule>	  
 	</rulegroup>
 
-    <rule id='QUE_TEM-TÊM' name="Que tem/têm">
-    <!--      Created by Marco A.G.Pinto, Portuguese rule - 2020-09-29 (2-JUL-2020+)     -->
-      <pattern>
-	      <token postag='NC[CFM][SP]000|NP[FM]S[0G]00|AQ0[CFM][SP]0' postag_regexp='yes'/>
-		  <token min="0" max="1" regexp='yes' spacebefore='yes'>[)"'’]</token>
-		  <token min="0" max="1" regexp='yes' spacebefore='no'>[,]</token>
-		  <marker>
-			<token>que</token>
-			<token regexp="yes">tem|têm</token>		  
-		  </marker>
-		  <token postag='NC[CFM][SP]000|AQ0[CFM][SP]0' postag_regexp='yes'>
-	  	  <exception regexp='yes'>lá|são|disponível</exception></token>
-      </pattern>
-      <message>Substitua por <suggestion>com</suggestion>.</message>
-      <example correction="com">São dicionários <marker>que têm</marker> milhões de palavras.</example>
-	  <example type='correct'>São dicionários <marker>com</marker> milhões de palavras.</example>
-    </rule>
 
     <rule id='UM_BAIXO-ASSINADO' name="Calinada: Um abaixo-assinado">
     <!-- Created by Marco A.G. Pinto, Portuguese rule -->
@@ -41370,6 +41289,456 @@ Elas têm umas sextas de vime. → Elas têm umas cestas de vime.
 
 
  <category id='REDACTION_TIPS' name='Dicas de redação' type='style'>
+
+
+	<!-- CORRER O RISCO arriscar-->
+    <rulegroup id='CORRER_RISCO_ARRISCAR' name="Simplificar: Correr o risco → arriscar" type='style'>
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-20/21 (Checked/Enhanced) (1-JAN-2022+)      -->
+	<!--
+O Rui vai correr o risco de perder o carro. → O Rui vai arriscar perder o carro.
+O Rui corre o risco de perder o carro. → O Rui arrisca perder o carro.
+	-->
+	<rule>
+      <pattern>
+		<marker>
+			<token regexp='no' inflected='yes'>correr</token>
+			<token min="0" max="1" regexp='yes'>os?</token>
+			<token regexp='yes'>riscos?</token>
+			<token>de</token>
+		</marker>
+		<or>
+			<token postag='V.+' postag_regexp='yes'/>
+			<token regexp='yes'>se|ser</token>
+		</or>
+      </pattern>
+	  <message>Esta perífrase poderá ser simplificada.</message>
+	  <suggestion><match no='1' postag='V.+' postag_regexp='yes'>arriscar</match></suggestion>
+      <example correction="arriscar">O Rui vai <marker>correr o risco de</marker> perder o carro.</example>
+    </rule>
+
+	<!--
+O Rui vai correr o risco para tentar vencer. → O Rui vai arriscar para tentar vencer.
+	-->
+	<rule>
+      <pattern>
+		<marker>
+			<token regexp='no' inflected='yes'>correr</token>
+			<token min="0" max="1" regexp='yes'>os?</token>
+			<token regexp='yes'>riscos?</token>			
+		</marker>
+		<or>
+			<token postag='_PUNCT' postag_regexp='no'/>
+			<token regexp='yes'>às?|aos?|e|ou|n[ao]s?|para|por</token>	
+		</or>
+      </pattern>
+	  <message>Esta perífrase poderá ser simplificada.</message>
+	  <suggestion><match no='1' postag='V.+' postag_regexp='yes'>arriscar</match></suggestion>
+      <example correction="arriscar">O Rui vai <marker>correr o risco</marker> para tentar vencer.</example>
+    </rule>
+	
+	</rulegroup>
+
+
+	<!-- PARA SABER QUAL A para delinear/determinar a -->
+    <rule id='DELINEAR_DETERMINAR' name="Saber qual a → delinear/determinar a">
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-19 (Checked/Enhanced) (1-JAN-2022+)      -->
+      <pattern>
+		<token regexp='yes'>para|permitem?|permitir</token>	
+		<marker>
+			<token>saber</token>
+			<token regexp='yes'>qual|quais</token>			
+		</marker>
+		<token regexp='yes'>[ao]s?</token>
+		<token></token>
+      </pattern>
+      <message>Melhore a redação.</message>
+	  <suggestion>delinear</suggestion>
+	  <suggestion>determinar</suggestion>
+      <example correction="delinear|determinar">Isto para <marker>saber qual</marker> a melhor técnica de ataque.</example>
+    </rule>
+
+
+	<!-- E QUE que -->
+    <rule id='E_QUE_QUE' name="Simplificar: E que → que" type="style">
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-19 (Checked/Enhanced) (1-JAN-2022+)      -->
+	<!--
+São regras muito simples e que permitem agir corretamente. → São regras muito simples que permitem agir corretamente.
+	-->
+      <pattern>
+		<token negate_pos="yes" postag='SPS.+|Z0.+|RG|DA.+|CS|I|V.+' postag_regexp='yes'/>
+		<token postag='AQ.+|NC.+' postag_regexp='yes'/>
+		<marker>
+			<token>e</token>
+			<token>que</token>
+		</marker>
+		<token postag='V.+' postag_regexp='yes'/>
+		<token postag='V.+|DA.+|SPS.+|CC' postag_regexp='yes'/>
+      </pattern>
+      <message>Poderá omitir a conjunção 'e' para simplificar a parafrase.</message>
+	  <suggestion>que</suggestion>
+      <example correction="que">São regras muito simples <marker>e que</marker> permitem agir corretamente.</example>
+	  <example>É uma definição relativamente aberta que deverá ser especificada para cada grupo cultural por meio do embate político.</example>
+	  <example>Obras que custaram cerca de mil contos e que foram inauguradas a 21 de Outubro de 1951.</example>
+	  <example>Além disso, havia duas tribos que provavelmente eram relacionadas com os godos e que permaneceram na Escandinávia, os gotlanders e os gautas.</example>
+	  <example>O imperador ordenou a construção de hospedarias para os viajantes e que fosse proporcionado tratamento médico não só aos humanos, mas também aos animais.</example>
+    </rule>
+
+
+	<!-- E É/SÃO/FOI/FORAM VERBO sendo/sido/e verbo -->
+    <rule id='E_É_SÃO_FOI_FORAM_SENDO_SIDO' name="Simplificar: E é/são/foi/foram + V. → sendo/sido/e + V." type="style">
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-18 (Checked/Enhanced) (1-JAN-2022+)      -->
+	<!--
+Ele escondeu-se e foi capturado em maio. → Ele escondeu-se sendo capturado em maio.
+Einstein é um génio e é considerado o pai da relatividade. → Einstein é um génio e considerado o pai da relatividade.
+	-->
+      <pattern>
+		<marker>
+			<token>e</token>
+			<token regexp='yes'>é|são|foi|foram</token>
+		</marker>
+		<token postag='V.+' postag_regexp='yes'>
+			<exception postag_regexp='yes' postag='NP.+|SPS00.PD0NN00|VMG0000'/>
+		</token>		
+      </pattern>
+	  <message>Em certos contextos, esta perífrase pode ser simplificada.</message>
+	  <suggestion>sendo</suggestion>
+	  <suggestion>sido</suggestion>
+	  <suggestion>e</suggestion>
+      <example correction="sendo|sido|e">Einstein é um génio <marker>e é</marker> considerado o pai da relatividade.</example>
+	  <example>Ele escondeu-se sendo capturado em maio.</example>
+	  <example>Começou tímido, e foi soltando uma lista que parecia não acabar, de tanto assunto.</example>
+    </rule>
+
+
+	<!-- DO INIMIGO/ADVERSÁRIO/ALIADO inimiga/adversário/aliada -->
+    <rule id='INIMIGO_ADVERSÁRIO_ALIADO' name="Simplificar: D[ao](s) + inimig[ao](s)/adversári[ao](s)/aliad[ao](s) → inimig[ao](s)/adversári[ao](s)/aliad[ao](s)" type="style">
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-18 (Checked/Enhanced) (1-JAN-2022+)      -->
+	<!--
+O objetivo é alcançar a bandeira do inimigo. → O objetivo é alcançar a bandeira inimiga.
+O objetivo é alcançar o terreno do inimigo. → O objetivo é alcançar o terreno inimigo.
+	-->
+      <pattern>
+		<token regexp='yes'>[ao]s?</token>
+		<token postag='NC.+' postag_regexp='yes'>
+			<exception postag_regexp='yes' postag='V.+|DI.+|Z0.+'/>
+		</token>
+		<marker>
+			<token regexp='yes'>d[ao]s?</token>
+			<token regexp='yes'>inimig[ao]s?|adversári[ao]s?|aliad[ao]s?</token>
+		</marker>		
+      </pattern>      
+	  <filter class="org.languagetool.rules.pt.AdvancedSynthesizerFilter" args="lemmaFrom:4 lemmaSelect:NC.* postagFrom:2 postagSelect:NC.*"/>
+	  <message>Esta perífrase poderá ser simplificada.</message>
+	  <suggestion>{suggestion}</suggestion>	
+      <example correction="inimiga">O objetivo é alcançar a bandeira <marker>do inimigo</marker>.</example>
+	  <example>Sabiam localizar os rastros dos animais e as trilhas inimigas.</example>
+	  <example>No mês de Abril de 1945, durante a invasão aliada, a cidade foi tomada sem grande resistência pelos americanos.</example>
+	  <example>Os exércitos inimigos foram vencidos.</example>
+    </rule>
+
+
+	<!-- PERDER A VIDA A morrer/falecer/perecer -->
+    <rule id='PERDER_A_VIDA' name="perder a vida → morrer/falecer/perecer">
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-16 (Checked/Enhanced) (1-JAN-2022+)      -->
+      <pattern>
+		<token regexp='no' inflected='yes'>perder</token>	
+		<token regexp='yes'>as?</token>
+		<token min="0" max="1" postag='DP.+' postag_regexp='yes'/>
+		<token regexp='yes'>vidas?</token>
+      </pattern>
+      <message>Melhore a redação.</message>
+	  <suggestion><match no='1' postag='V.+' postag_regexp='yes'>morrer</match></suggestion>
+	  <suggestion><match no='1' postag='V.+' postag_regexp='yes'>falecer</match></suggestion>
+	  <suggestion><match no='1' postag='V.+' postag_regexp='yes'>perecer</match></suggestion>
+      <example correction="morreu|faleceu|pereceu">Ele <marker>perdeu a vida</marker> num acidente.</example>	  
+	  <example correction="morreram|faleceram|pereceram">Um milhão de pessoas <marker>perderam as suas vidas</marker> na guerra.</example>
+    </rule>
+
+
+	<!-- QUE SER/ESTAR PART_PASSADO part_passado -->
+    <rule id='QUE_SER_ESTAR_PARTPASSADO' name="Simplificar: Que + ser/estar + part. passado → Particípio passado" type='style'>
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-19/20 (Checked/Enhanced) (1-JAN-2022+)      -->
+	<!--
+A quantidade que é estimada denomina-se 'estimativa'. → A quantidade estimada denomina-se 'estimativa'.
+	-->
+<!-- 
+São os seus filhos que estão atrasados.
+-->
+      <antipattern>
+	    <token postag='DP.+' postag_regexp='yes'/>
+		<token postag='AQ.+|NC.+' postag_regexp='yes'/>
+		<token regexp='no'>que</token>
+		<token postag='VMIP.+' postag_regexp='yes'/>
+		<token postag='VMP.+' postag_regexp='yes'/>	
+      </antipattern>
+
+<!-- 
+Os pais ensinam aos filhos que é errado mentir.
+-->
+      <antipattern>
+	    <token postag='SPS.+' postag_regexp='yes'/>
+		<token postag='AQ.+|NC.+' postag_regexp='yes'/>
+		<token regexp='no'>que</token>
+		<token postag='VMIP.+' postag_regexp='yes'/>
+		<token postag='VMP.+' postag_regexp='yes'/>	
+		<token postag='VMN0000|AQ.+|NC.+' postag_regexp='yes'>
+            <exception postag_regexp='yes' postag='RG|SPS.+'/>
+		</token>
+      </antipattern>
+
+<!--
+O montante em fichas necessário para as apostas que serão feitas no decorrer do jogo.
+-->
+      <antipattern>
+	    <token postag='DA.+|DI.+' postag_regexp='yes'/>
+		<token postag='AQ.+|NC.+' postag_regexp='yes'/>
+		<token regexp='no'>que</token>
+		<token postag='VMIF.+' postag_regexp='yes'/>
+		<token postag='VMP.+' postag_regexp='yes'/>
+      </antipattern>
+
+<!--
+Tom acha que está apaixonado.
+Isso evita que sejam produzidos erros gramaticais em certas línguas.
+-->
+      <antipattern>
+	    <token postag='NP.+|PD.+' postag_regexp='yes'>
+            <exception postag_regexp='yes' postag='DA0.+'/>
+		</token>
+		<token postag='VMI.+' postag_regexp='yes'/>
+		<token regexp='no'>que</token>
+		<token postag='V.+' postag_regexp='yes'>
+            <exception postag_regexp='yes' postag='VMIS3.+'/>
+		</token>
+		<token postag='VMP.+' postag_regexp='yes'/>	
+      </antipattern>
+
+      <pattern>
+		<token postag='AQ0.+|NC.+' postag_regexp='yes'/>
+		<marker>
+			<token regexp='no'>que</token>
+			<and>
+				<token regexp='yes' inflected='yes'>ser|estar</token>
+				<token negate_pos="yes" postag='VMIP1.+|VMII3.+|VMIF3.+|VMSI3.+' postag_regexp='yes'/>
+			</and>
+			<token postag='VMP.+' postag_regexp='yes'/>			
+		</marker>
+      </pattern>
+	  <message>Em certos contextos, esta perífrase pode ser simplificada.</message>
+	  <suggestion>\4</suggestion>
+      <example correction="estimada">A quantidade <marker>que é estimada</marker> denomina-se 'estimativa'.</example>
+	  <example>A pauta é a seleção dos assuntos que serão abordados.</example>
+	  <example>Esta licença informará quais os direitos que o autor estará transferindo e quais as condições que serão aplicadas.</example>
+	  <example>Os pais têm prioridade de direito na escolha do tipo de educação que será ministrada a seus filhos.</example>
+	  <example>O estádio que será usado será o Estádio Nacional de Brasília, que no momento esta construção.</example>
+	  <example>Uma casa que será feita por um homem.</example>
+
+	  <example>São os seus filhos que estão atrasados.</example>
+
+	  <example>Os pais ensinam aos filhos que é errado mentir.</example>
+
+	  <example>O montante em fichas necessário para as apostas que serão feitas no decorrer do jogo.</example>
+
+	  <example>Tom acha que está apaixonado.</example>
+	  <example>Isso evita que sejam produzidos erros gramaticais em certas línguas.</example>
+    </rule>
+
+
+    <!-- QUE TEM/TÊM com -->
+    <rule id='QUE_TEM_TÊM' name="Simplificar: Que tem/têm → com">
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-21 (Checked/Enhanced) (1-JAN-2022+)      -->
+	<!--
+É uma empresa séria, que tem marcas que acompanham a história da família. → É uma empresa séria, com marcas que acompanham a história da família.
+As unhas são uma das partes do corpo que têm mais contacto com tudo. → As unhas são uma das partes do corpo com mais contacto com tudo.
+	-->
+      <pattern>
+	      <token postag='NC.+|AQ.+|NP.+' postag_regexp='yes'/>
+		  <token min="0" max="1" postag='_PUNCT|_QUOT' postag_regexp='yes'/>
+		  <marker>
+			<token>que</token>
+			<token regexp="yes">t[eê]m</token>
+		  </marker>
+		  <token postag='NC.+|AQ.+' postag_regexp='yes'>
+			<exception regexp='yes'>disponível|disponíveis|lá|nel[ae]s?|são|sobre</exception>
+		  </token>
+      </pattern>
+	  <message>Esta perífrase poderá ser simplificada.</message>
+	  <suggestion>com</suggestion>
+      <example correction="com">São dicionários <marker>que têm</marker> milhões de palavras.</example>
+	  <example type='correct'>São dicionários <marker>com</marker> milhões de palavras.</example>
+    </rule>
+
+
+	<!-- QUE ATUA/ATUAM a atuar -->
+    <rule id='QUE_VERBO_A_VERBOINFINITIVO' name="Simplificar: Que + V. → A + V. Infinitivo" type="style">
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-19 (Checked/Enhanced) (1-JAN-2022+)      -->
+	<!--
+Isto resume todas as forças que atuam sobre o objeto. → Isto resume todas as forças a atuar sobre o objeto.
+	-->
+      <pattern>
+		<token postag='NC.+|AQ.+|DD.+' postag_regexp='yes'/>
+		<marker>
+			<token>que</token>
+			<token postag='VMIP3.+' postag_regexp='yes'>
+				<exception postag_regexp='yes' postag='VMM02.+'/>
+				<exception inflected='yes' regexp='yes'>haver|estar|existir|ser</exception>
+			</token>
+		</marker>
+		<and>
+			<token postag='NC.+|AQ.+' postag_regexp='yes'/>
+			<token postag='SPS.+' postag_regexp='yes'/>
+		</and>
+      </pattern>
+      <message>Esta perífrase poderá ser simplificada.</message>
+	  <suggestion>a <match no='3' postag='VMIP3.+' postag_regexp="yes" postag_replace='VMN0000'/></suggestion>
+      <example correction="a atuar">Isto resume todas as forças <marker>que atuam</marker> sobre o objeto.</example>
+	  <example>O disco vermelho representa o sol a nascer sobre Bengala e também simboliza o sangue dos que tombaram pela independência do Bangladesh.</example>
+	  <example>É a parte da Física que analisa o movimento, as variações de energia e as forças a atuar sobre um corpo.</example>
+    </rule>
+
+
+	<!-- VER observar/constatar -->
+    <rule id='VER_OBSERVAR_CONSTATAR' name="Ver → Observar/Constatar" type="style">
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-22 (Checked/Enhanced) (1-JAN-2022+)      -->
+	<!--
+É fácil como podem ver na figura. → É fácil como podem constatar na figura.
+
+TESTED AGAINST 600000 SENTENCES:
+BEFORE:2859
+ AFTER:2473
+	-->
+
+<!--
+Ela não pode ter me visto na festa.
+Você se importaria em vir e me ver no sábado?
+Quantas cores você vê no arco-íris?
+Por que não deu para você vir no sábado?
+Deixe-me ver o seu pulso.
+Do topo podia-se ver o rio.
+Deixe-me ver a lista.
+Estava muito nublado para ver o avião.
+Eu gostaria de ver o senhor Kosugi.
+Eu gostaria de ver o mundo antigo.
+Dá para ver a diferença?
+Acabei de ver o seu amigo.
+-->
+      <antipattern>
+		<token postag='V.+|CC' postag_regexp='yes'/>
+		<token min="0" max="1" regexp='yes' spacebefore='no'>&tracos_de_separacao;</token>
+		<token postag='PP.+|DA.+|PD.+|SPS00' postag_regexp='yes'/>
+		<token regexp='no' inflected='yes'>ver</token>
+	  </antipattern>
+
+<!--
+Veja a palavra no dicionário.
+A ver a liberdade que lhes era retirada.
+Na forma como via o curso que o panorama cultural português levava.
+Eu não consigo ver as palavras no quadro.
+Muitos canadenses valorizam o multiculturalismo e veem o Canadá como sendo inerentemente multicultural.
+Esta noite pode-se ver a Lua cheia.
+Eu vi o John na biblioteca.
+Tom planeja ver a Mary na segunda.
+Você já viu a figura pintada por Picasso?
+Veja os cursos avaliados!
+Podemos ver o porto inteiro do prédio.
+Não vejo o porquê precisarmos disso.
+Acho pouco provável que alienígenas parecidos com os que vemos nos filmes já tenham visitado nosso planeta.
+-->
+      <antipattern>
+		<token regexp='no' inflected='yes'>ver</token>
+		<token postag='DA.+|DI.+|DP.+|PP.+' postag_regexp='yes'/>
+		<token postag='AQ.+|NC.+|NP.+' postag_regexp='yes'/>
+		<token postag='SPS00.DA|CS|V.+' postag_regexp='yes'/>
+	  </antipattern>	
+
+<!--
+Com você é verão o ano inteiro.
+Aproveitamos e almoçamos em um restaurante ali na praça, a dica aqui é ver os pratos do dia.
+Foram ver o amigo defunto pela última vez no velório.
+O Tom foi ver a Mary três dias depois daquilo.
+Tu foste ver o Tom?
+-->
+      <antipattern>
+		<token regexp='no' inflected='yes'>ser</token>
+		<token regexp='yes'>ver|verão</token>
+	  </antipattern>	  	
+
+<!--
+O estilo de combate assemelha-se ao de guerrilha visto os radicais estarem entrincheirados.
+Era visto pela ditadura militar que se instalou no país, em 1964, como um elemento subversivo.
+Kennedy também foi mal-visto pelos comandantes militares dos Estados Unidos.
+Ou o nativo visto pelo prisma do etnógrafo?
+Ninguém tem visto o Tom por um tempo.
+Pensei que já tivesse visto o Tom em algum lugar.
+Disposto a desfazer o mal entendido entre a ciência e a religião, conseguiu ser mal visto pelos representantes de ambas.
+Era visto nas mãos de todos os japoneses em paradas.
+-->
+      <antipattern>
+		<token negate="yes" regexp='no' inflected='yes'>ser</token>
+		<token regexp='yes'>vist[ao]s?</token>
+		<token negate_pos="yes" postag='SPS00.DA' postag_regexp='yes'/>
+		<token min="1" max="2" postag='NP.+|AQ.+|NC.+|V.+' postag_regexp='yes'>
+			<exception postag_regexp='yes' postag='CS|RG'/>
+		</token>
+		<token postag='SPS.+|CS|V.+|CC|RM|RG' postag_regexp='yes'/>
+	  </antipattern>	 	  
+
+      <pattern>
+		<marker>
+			<token regexp='no' inflected='yes'>ver
+				<exception regexp='yes' inflected='yes'>vestir|ir</exception>
+			</token>
+		</marker>
+		<token postag='DA.+|SPS00.DA' postag_regexp='yes'/>
+		<token negate_pos="yes" postag='AQ.+|AO.+' postag_regexp='yes'/>
+      </pattern>
+      <message>Num contexto formal ou académico, é preferível escrever 'observar' ou 'constatar'.</message>
+	  <suggestion><match no='1' postag='V.+' postag_regexp='yes'>observar</match></suggestion>
+	  <suggestion><match no='1' postag='V.+' postag_regexp='yes'>constatar</match></suggestion>
+      <example correction="observar|constatar">É fácil como podem <marker>ver</marker> na figura.</example>
+
+	  <example>Ela não pode ter me visto na festa.</example>
+	  <example>Você se importaria em vir e me ver no sábado?</example>
+	  <example>Quantas cores você vê no arco-íris?</example>
+	  <example>Por que não deu para você vir no sábado?</example>
+	  <example>Deixe-me ver o seu pulso.</example>
+	  <example>Do topo podia-se ver o rio.</example>
+	  <example>Deixe-me ver a lista.</example>
+	  <example>Estava muito nublado para ver o avião.</example>
+	  <example>Eu gostaria de ver o senhor Kosugi.</example>
+	  <example>Eu gostaria de ver o mundo antigo.</example>
+	  <example>Dá para ver a diferença?</example>
+	  <example>Acabei de ver o seu amigo.</example>
+
+	  <example>Veja a palavra no dicionário.</example>
+	  <example>A ver a liberdade que lhes era retirada.</example>
+	  <example>Na forma como via o curso que o panorama cultural português levava.</example>
+	  <example>Eu não consigo ver as palavras no quadro.</example>
+	  <example>Muitos canadenses valorizam o multiculturalismo e veem o Canadá como sendo inerentemente multicultural.</example>
+	  <example>Esta noite pode-se ver a Lua cheia.</example>
+	  <example>Eu vi o John na biblioteca.</example>
+	  <example>Tom planeja ver a Mary na segunda.</example>
+	  <example>Você já viu a figura pintada por Picasso?</example>
+	  <example>Veja os cursos avaliados!</example>
+	  <example>Podemos ver o porto inteiro do prédio.</example>
+	  <example>Não vejo o porquê precisarmos disso.</example>
+	  <example>Acho pouco provável que alienígenas parecidos com os que vemos nos filmes já tenham visitado nosso planeta.</example>
+
+	  <example>Com você é verão o ano inteiro.</example>
+	  <example>Aproveitamos e almoçamos em um restaurante ali na praça, a dica aqui é ver os pratos do dia.</example>
+	  <example>Foram ver o amigo defunto pela última vez no velório.</example>
+	  <example>O Tom foi ver a Mary três dias depois daquilo.</example>
+	  <example>Tu foste ver o Tom?</example>
+
+	  <example>O estilo de combate assemelha-se ao de guerrilha visto os radicais estarem entrincheirados.</example>
+	  <example>Era visto pela ditadura militar que se instalou no país, em 1964, como um elemento subversivo.</example>
+	  <example>Kennedy também foi mal-visto pelos comandantes militares dos Estados Unidos.</example>
+	  <example>Ou o nativo visto pelo prisma do etnógrafo?</example>
+	  <example>Ninguém tem visto o Tom por um tempo.</example>
+	  <example>Pensei que já tivesse visto o Tom em algum lugar.</example>
+	  <example>Disposto a desfazer o mal entendido entre a ciência e a religião, conseguiu ser mal visto pelos representantes de ambas.</example>
+	  <example>Era visto nas mãos de todos os japoneses em paradas.</example>
+    </rule>
 
 
 	<!-- ATRAVÉS DE por -->
@@ -41454,74 +41823,6 @@ A bactéria do carbúnculo mata-os através de uma toxina.
 	
 	</rulegroup>
 
-	<!-- CORRER O RISCO arriscar-->
-    <rule id='CORRER_RISCO_ARRISCAR' name="Correr o risco → Arriscar" type='style'>
-    <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-09-01 (25-JUN-2021+)      -->
-	<!--
-O Rui vai correr o risco de perder o carro. → O Rui vai arriscar perder o carro.
-O Rui corre o risco de perder o carro. → O Rui arrisca perder o carro.
-	-->
-      <pattern>
-		<marker>
-			<token regexp='no' inflected='yes'>correr</token>
-			<token>o</token>
-			<token>risco</token>
-			<token postag='SPS.+' postag_regexp='yes'/>
-		</marker>
-      </pattern>
-	  <message>Em certos contextos, esta perífrase pode ser simplificada.</message>
-	  <suggestion><match no='1' postag='V.+' postag_regexp='yes'>arriscar</match></suggestion>
-      <example correction="arriscar">O Rui vai <marker>correr o risco de</marker> perder o carro.</example>
-    </rule>
-
-	<!-- E QUE que -->
-    <rule id='E_QUE_QUE' name="E que → que" type="style">
-    <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-10-03 (25-JUN-2021+)      -->
-	<!--
-São regras muito simples e que permitem agir corretamente. → São regras muito simples que permitem agir corretamente.
-	-->
-      <pattern>
-		<token negate_pos="yes" postag='SPS.+|Z0.+|RG|DA.+|CS|I|V.+' postag_regexp='yes'/>
-		<token postag='AQ.+|NC.+' postag_regexp='yes'/>
-		<marker>
-			<token>e</token>
-			<token>que</token>
-		</marker>
-		<token postag='V.+' postag_regexp='yes'/>
-		<token postag='V.+|DA.+|SPS.+' postag_regexp='yes'/>
-      </pattern>
-      <message>Poderá omitir a conjunção 'e' para simplificar a parafrase.</message>
-	  <suggestion>que</suggestion>
-      <example correction="que">São regras muito simples <marker>e que</marker> permitem agir corretamente.</example>
-	  <example>É uma definição relativamente aberta que deverá ser especificada para cada grupo cultural por meio do embate político.</example>
-	  <example>Obras que custaram cerca de mil contos e que foram inauguradas a 21 de Outubro de 1951.</example>
-	  <example>Além disso, havia duas tribos que provavelmente eram relacionadas com os godos e que permaneceram na Escandinávia, os gotlanders e os gautas.</example>
-	  <example>O imperador ordenou a construção de hospedarias para os viajantes e que fosse proporcionado tratamento médico não só aos humanos, mas também aos animais.</example>
-    </rule>
-
-	<!-- DO INIMIGO/ADVERSÁRIO/ALIADO inimiga/adversário/aliada -->
-    <rule id='INIMIGO_ADVERSÁRIO_ALIADO' name="Do(s) + inimigo(s)/adversário(s)/aliado(s) → inimiga(s)/adversária(s)/aliada(s)" type="style">
-    <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-10-07 (25-JUN-2021+)      -->
-	<!--
-O objetivo é alcançar a bandeira do inimigo. → O objetivo é alcançar a bandeira inimiga.
-	-->
-      <pattern>
-		<token regexp='yes'>as?</token>
-		<token postag='NC.+' postag_regexp='yes'>
-			<exception postag_regexp='yes' postag='V.+|DI.+|Z0.+'/>
-		</token>
-		<marker>
-			<token regexp='yes'>dos?</token>
-			<token regexp='yes'>inimigos?|adversários?|aliados?</token>
-		</marker>		
-      </pattern>      
-	  <filter class="org.languagetool.rules.pt.AdvancedSynthesizerFilter" args="lemmaFrom:4 lemmaSelect:NC.* postagFrom:2 postagSelect:NC.*"/>
-	  <message>Esta perífrase poderá ser simplificada.</message>
-	  <suggestion>{suggestion}</suggestion>	
-      <example correction="inimiga">O objetivo é alcançar a bandeira <marker>do inimigo</marker>.</example>
-	  <example>Sabiam localizar os rastros dos animais e as trilhas inimigas.</example>
-	  <example>No mês de Abril de 1945, durante a invasão aliada, a cidade foi tomada sem grande resistência pelos americanos.</example>
-    </rule>
 
 	<!-- VÁRI[AO]S VEZES vári[ao]s -->
     <rule id='VARIAS_VEZES_VARIAS' name="Simplificar: Vári[ao]s vezes → Vári[ao]s" type="style">
@@ -41544,56 +41845,7 @@ Apagaram várias vezes comentários meus. → Apagaram vários comentários meus
       <example correction="várias">Apagaram <marker>várias vezes</marker> publicações minhas.</example>
     </rule>
 
-	<!-- PARA SABER QUAL A para delinear/determinar a -->
-    <rule id='DELINEAR_DETERMINAR' name="saber qual a → delinear/determinar a">
-    <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-03-09 + 2021-03-10 + 2021-03-11 (1-JAN-2021+)      -->
-      <pattern>
-	  <token regexp='yes'>para|permite</token>	
-		<marker>
-			<token>saber</token>
-			<token regexp='yes'>qual|quais</token>			
-		</marker>
-		<token regexp='yes'>[ao]s?</token>
-		<token></token>
-		<token postag='NC.+|AQ0.+|V.+' postag_regexp='yes'/>
-      </pattern>
-      <message>Melhore a redação.</message>
-	  <suggestion>delinear</suggestion>
-	  <suggestion>determinar</suggestion>
-      <example correction="delinear|determinar">Isto para <marker>saber qual</marker> a melhor técnica de ataque.</example>
-    </rule>
-	
-	<!-- QUE ATUA/ATUAM a atuar -->
-    <rule id='QUE_VERBO_A_VERBOINFINITIVO' name="Que + Verbo → A + Verbo Infinitivo" type="style">
-    <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-10-05 (25-JUN-2021+)      -->
-	<!--
-Isto resume todas as forças que atuam sobre o objeto. → Isto resume todas as forças a atuar sobre o objeto.
-	-->
-      <pattern>
-		<token postag='DA.+' postag_regexp='yes'/>
-		<token postag='NC.+|AQ.+' postag_regexp='yes'/>
-		<marker>
-			<token>que</token>
-			<token postag='VM..3.+' postag_regexp='yes'>
-				<exception postag_regexp='yes' postag='VM..1.+'/>
-			</token>			
-		</marker>
-		<and>
-			<token postag='NC.+|AQ.+' postag_regexp='yes'/>
-			<token postag='SPS.+' postag_regexp='yes'/>
-		</and>
-		<token negate_pos="yes" postag='DP.+|AP.+|V.+' postag_regexp='yes'/>
-      </pattern>
-      <message>Esta perífrase poderá ser simplificada.</message>
-	  <suggestion>a <match no='4' postag='VM..3.+' postag_regexp="yes" postag_replace='VMN0000'/></suggestion>
-      <example correction="a atuar">Isto resume todas as forças <marker>que atuam</marker> sobre o objeto.</example>
-	  <example>O disco vermelho representa o sol a nascer sobre Bengala e também simboliza o sangue dos que tombaram pela independência do Bangladesh.</example>
-	  <example>É a parte da Física que analisa o movimento, as variações de energia e as forças a atuar sobre um corpo.</example>	  
-    </rule>	
-	
-	
-	
-	
+
 	<!-- QUE ESTÁ/ESTÃO CONTRAÇÃO/PREPOSIÇÃO contração/preposição -->
     <rule id='QUE_ESTAR_CONTRACAO_PREPOSICAO' name="Que + estar + contração/preposição → contração/preposição" type="style">
     <!--      Created by Marco A.G.Pinto, Portuguese 2021-10-14 (25-JUN-2021+)      -->
@@ -41722,6 +41974,24 @@ Isto deve ser feito com precisão científica. → Isto deve ser feito com rigor
 	<!-- FEITA efetuada/realizada/conduzida/concretizada/elaborada -->
     <rulegroup id='FAZER_EFETUAR_REALIZAR_CONDUZIR_CONCRETIZAR_ELABORAR' name="Fazer → efetuar/realizar/conduzir/concretizar/elaborar" type="style" tags="picky">
     <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-06-29/30 + 2021-07-02 + 2021-10-31 (25-JUN-2021+)      -->
+
+<!-- MARCOAGPINTO 2022-01-16 (1-JAN-2022+) *START* -->
+<!--
+Hoje faz 21 anos que entrei para a empresa.
+Faz quatro anos que eu estudo francês.
+Faz uma semana que a gente se encontrou.
+Você não sabia que ele morreu faz dois anos?
+Sempre faz um tempo tão horrível em abril?
+Não falo com Tom já faz um tempo.
+-->
+      <antipattern>
+	    <token regexp='no' inflected='yes'>fazer</token>
+		<token postag='Z0.+' postag_regexp='yes'/>
+		<token regexp='yes'>&expressoes_de_tempo;</token>
+		<token postag='CS|RG|_PUNCT' postag_regexp='yes'/>
+      </antipattern>
+<!-- MARCOAGPINTO 2022-01-16 (1-JAN-2022+) *END* -->
+
 <!--
 Ele a fez sua esposa.
 Ele me fez seu assistente.
@@ -41947,21 +42217,6 @@ Estou determinado a levar a cabo este plano. → Estou determinado a realizar es
       <example>Isto deve ser feito <marker>dentro do possível</marker>.</example>
     </rule>
 
-	<!-- PERDER A VIDA A morrer/falecer/perecer -->
-    <rule id='PERDER_A_VIDA' name="perder a vida → morrer/falecer/perecer">
-    <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-03-15 (1-JAN-2021+)      -->
-      <pattern>
-		<token regexp='no' inflected='yes'>perder</token>	
-		<token>a</token>
-		<token>vida</token>
-      </pattern>
-      <message>Melhore a redação.</message>
-	  <suggestion><match no='1' postag='V.+' postag_regexp='yes'>morrer</match></suggestion>
-	  <suggestion><match no='1' postag='V.+' postag_regexp='yes'>falecer</match></suggestion>
-	  <suggestion><match no='1' postag='V.+' postag_regexp='yes'>perecer</match></suggestion>
-      <example correction="morreu|faleceu|pereceu">Ele <marker>perdeu a vida</marker> num acidente.</example>
-    </rule>
-
     <!-- QUE TER COMO/POR NOME/ADJETIVO cujo(a) Nome/Adjetivo ser -->
     <rulegroup id='QUE_TER_COMO_POR_NOME_ADJ' name="cujo(a) + Nome/Adjetivo + Ser">
     <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-03-19 (Enhanced) (17-MAR-2021+)      -->
@@ -42062,139 +42317,6 @@ A primeira função de Carvalho em Londres foi obter ajuda para as forças portu
 	  <example>A primeira função de Carvalho em Londres foi obter ajuda para as forças portuguesas na Índia.</example>	 
 	</rule>
    </rulegroup>
-   
-	<!-- VER observar/constatar -->
-    <rule id='VER_OBSERVAR_CONSTATAR' name="Ver → Observar/Constatar" type="style" tags="picky">
-    <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-06-27 (25-JUN-2021+)      -->
-	<!--
-É fácil como podem ver na figura.  → É fácil como podem constatar na figura.
-	-->
-<!-- MARCOAGPINTO 2021-06-27 (25-JUN-2021+) *START* -->
-<!--
-Ela não pode ter me visto na festa.
-Você se importaria em vir e me ver no sábado?
-Quantas cores você vê no arco-íris?
-Por que não deu para você vir no sábado?
--->
-      <antipattern>
-		<token postag='V.+|CC' postag_regexp='yes'/>
-		<token postag='PP.+' postag_regexp='yes'/>
-		<token regexp='no' inflected='yes'>ver</token>
-	  </antipattern>
-<!--
-Ele viu-me a comer.
--->
-      <antipattern>
-		<token regexp='no' inflected='yes'>ver</token>
-		<token min="0" max="1" regexp='yes' spacebefore='no'>&hifen;</token>
-		<token postag='PP.+' postag_regexp='yes'/>
-		<token postag='DA.+|SPS00.DA' postag_regexp='yes'/>
-	  </antipattern>	  
-<!--
-Veja a palavra no dicionário.
-A ver a liberdade que lhes era retirada.
-Na forma como via o curso que o panorama cultural português levava.
-Eu não consigo ver as palavras no quadro.
--->
-      <antipattern>
-		<token regexp='no' inflected='yes'>ver</token>
-		<token postag='DA.+' postag_regexp='yes'/>
-		<token postag='AQ0.+|NC.+' postag_regexp='yes'/>
-		<token postag='SPS00.DA|CS' postag_regexp='yes'/>
-	  </antipattern>	 
-<!--
-Muitos canadenses valorizam o multiculturalismo e veem o Canadá como sendo inerentemente multicultural.
-Esta noite pode-se ver a Lua cheia.
--->
-      <antipattern>
-		<token regexp='no' inflected='yes'>ver</token>
-		<token postag='DA.+' postag_regexp='yes'/>
-		<token postag='NP.+' postag_regexp='yes'/>
-		<token postag='V.+' postag_regexp='yes'/>
-	  </antipattern>
-<!--
-Com você é verão o ano inteiro.
--->
-      <antipattern>
-		<token regexp='no' inflected='yes'>ser</token>
-		<token>verão</token>
-	  </antipattern>	  	  	  
-<!-- MARCOAGPINTO 2021-06-27 (25-JUN-2021+) *END* -->
-<!-- MARCOAGPINTO 2021-07-08 + 2021-07-22 + 2021-07-26 (25-JUN-2021+) *START* -->
-<!--
-O estilo de combate assemelha-se ao de guerrilha visto os radicais estarem entrincheirados.
-Era visto pela ditadura militar que se instalou no país, em 1964, como um elemento subversivo.
-Kennedy também foi mal-visto pelos comandantes militares dos Estados Unidos.
-Ou o nativo visto pelo prisma do etnógrafo?
-Ninguém tem visto o Tom por um tempo.
-Pensei que já tivesse visto o Tom em algum lugar.
-Disposto a desfazer o mal entendido entre a ciência e a religião, conseguiu ser mal visto pelos representantes de ambas.
-Era visto nas mãos de todos os japoneses em paradas.
--->
-      <antipattern>
-		<token negate="yes" regexp='no' inflected='yes'>ser</token>
-		<token>visto</token>
-		<token/>		
-		<token postag='NP.+|AQ0.+|NC.+|V.+' postag_regexp='yes'>
-			<exception postag_regexp='yes' postag='CS|RG'/>
-		</token>
-		<token postag='SPS.+|CS|V.+|CC|RM|RG' postag_regexp='yes'/>
-	  </antipattern>
-<!-- Below for min="1" max="2" 2021-07-26 -->
-      <antipattern>
-		<token negate="yes" regexp='no' inflected='yes'>ser</token>
-		<token>visto</token>
-		<token/>		
-		<token postag='NP.+|AQ0.+|NC.+|V.+' postag_regexp='yes'>
-			<exception postag_regexp='yes' postag='CS|RG'/>
-		</token>
-		<token postag='NP.+|AQ0.+|NC.+|V.+' postag_regexp='yes'>
-			<exception postag_regexp='yes' postag='CS|RG'/>
-		</token>		
-		<token postag='SPS.+|CS|V.+|CC|RM|RG' postag_regexp='yes'/>
-	  </antipattern>	  
-<!-- MARCOAGPINTO 2021-07-08 + 2021-07-22 + 2021-07-26 (25-JUN-2021+) *END* -->
-      <pattern>
-		<marker>
-			<token regexp='no' inflected='yes'>ver</token>	
-		</marker>
-		<token postag='DA.+|SPS00.DA' postag_regexp='yes'/>
-		<token negate_pos="yes" postag='AQ0.+|AO.+' postag_regexp='yes'/>
-      </pattern>
-      <message>Num contexto formal ou académico, é preferível escrever 'observar' ou 'constatar'.</message>
-	  <suggestion><match no='1' postag='V.+' postag_regexp='yes'>observar</match></suggestion>
-	  <suggestion><match no='1' postag='V.+' postag_regexp='yes'>constatar</match></suggestion>
-      <example correction="observar|constatar">É fácil como podem <marker>ver</marker> na figura.</example>
-	  <example>Ela não pode ter me visto na festa.</example>
-	  <example>Você se importaria em vir e me ver no sábado?</example>
-	  <example>Quantas cores você vê no arco-íris?</example>
-	  <example>Por que não deu para você vir no sábado?</example>
-	  
-	  <example>Ele viu-me a comer.</example>
-
-	  <example>Veja a palavra no dicionário.</example>
-	  <example>A ver a liberdade que lhes era retirada.</example>
-	  <example>Na forma como via o curso que o panorama cultural português levava.</example>
-	  <example>Eu não consigo ver as palavras no quadro.</example>
-	  
-	  <example>Muitos canadenses valorizam o multiculturalismo e veem o Canadá como sendo inerentemente multicultural.</example>
-	  <example>Esta noite pode-se ver a Lua cheia.</example>
-	  
-	  <example>Com você é verão o ano inteiro.</example>
-	    
-	  <example>A Itália viu as primeiras lutas entre anarquistas e fascistas.</example>
-	  <example>Após os comerciais, veremos o segundo estágio da luta.</example>
-	  <example>Tom e Maria acordaram cedo para ver a primeira alvorada do ano.</example>
-	  
-	  <example>O estilo de combate assemelha-se ao de guerrilha visto os radicais estarem entrincheirados.</example>
-	  <example>Era visto pela ditadura militar que se instalou no país, em 1964, como um elemento subversivo.</example>
-	  <example>Kennedy também foi mal-visto pelos comandantes militares dos Estados Unidos.</example>
-	  <example>Ou o nativo visto pelo prisma do etnógrafo?</example>
-	  <example>Ninguém tem visto o Tom por um tempo.</example>
-	  <example>Pensei que já tivesse visto o Tom em algum lugar.</example>
-	  <example>Disposto a desfazer o mal entendido entre a ciência e a religião, conseguiu ser mal visto pelos representantes de ambas.</example>
-	  <example>Era visto nas mãos de todos os japoneses em paradas.</example>	  
-    </rule>
 
 
  </category>
@@ -45786,67 +45908,6 @@ O conflito ocorre além-mar.
  <category id="CREATIVE_WRITING" name="Escrita Criativa" type="style" default='off'>
 
 
-  <rulegroup id='WEAK_WORDS' name='Escrita Criativa: Termos frágeis' default='off'> <!-- test on wikipedia and then disable -->
-    <!--      Localized from vim-wordy by Tiago F. Santos, Portuguese rule, 2017-08-24      -->
-      <url>https://pt.wikipedia.org/wiki/Vagueza</url>
-      <short>Termo vago, fraco, impreciso, aborrecido ou prolixo</short>
-    <rule>
-      <regexp>\b(a fim de|a maioria sente|a qualquer moment[ao]s?|a séri[ao]s?|absolut.+|ac?titude|ac?tualmente|ach[ao]s?|acho que|acordos?|acredit.+|adequaç.+|adequad.+|adivinhação|adivinh.+|adoc?ç(ão|ões)|adop?t.+|agora|agradáv(el|eis)|ainda|alavancagem|aleatóri.+|alegremente|além diss[ao]s?|alguém|alguma coisa|alguns|almas?|altamente|alternativas?|altos?|amplos?|ansiosamente|anteriormente|antes de|aparec.+|aparente.+|apenas|apesar|apropriad.+|aproximad.+|aquele|áreas?|às vezes|aspec?to?|assim com[ao]s?|assim send[ao]s?|assustador|até parece|atraente|aventuras?|baixa|basicamente|bastante|belezas?|bem|benefici.+|benéfic.+|bizarr[ao]s?|boas?|bobas?|bo(m|ns)|bonit[ao]s?|brevemente|capacitação|capaz|mais tarde ou mais ced[ao]s?|mais cedo ou mais tarde|carradas de|certamente|cert[ao]s?|certamente|chat[ao]s?|cheg(a|ando|ar|o|ou) à percepção diss[ao]s?|cheg(a|ando|ar|o|ou) a uma conclusão satisfatória|claramente|clar[ao]s?|coisas?|com problemas|começa a|começ.+|começou a|com[ao]s?|como (você )?est(á|ão) cientes?|como muito desejáv(el|eis)|como um|compartilh.+|comunidades?|conec?tado a|conec?t.+|conhec.+|considerad[ao]s? com[ao]s?|consideráv(el|eis)|contextos?|contínu[ao]s?|contrastand[ao]s?|contud[ao]s?|criativ[ao]s?|crític[ao]s?|cruz.+|culturas?|curiosamente|curt[ao]s?|da opinião que|dar as bases para|dar origem a|dar ou pegar|de alguma forma|de fat[ao]s?|de forma significativa|de outros|de qualquer forma|de repente|de uma vez só|de várias|decid.+|definid.+|definitivamente|descobr.+|desempenh[ao]r? um papel de destaque na|desempenh[ao]r? um papel importante na|desvantag(em|ens)|devemos|devido ao fac?to de|devolvid[ao]s?|diferenças?|diferentes?|dificuldades?|disse|divers(ão|ões)|diz[eê]?(r|es|mos|m)?|durante o curso de|e assim por diante|é capaz de|e também|eficaz(es)?|el[ae]s|em breve|em forma|em segundo lugar|em toda parte|em todos os casos|em vez de|então|entre em contac?t[ao]s?|envolv.+|épic[ao]s?|equilibra.*|esperava|essencialmente|está relacionad[ao]s?|estamos|estar|estilos? de vida|est(ás?|ão|ou) a tentar|est(ás?|ão|ou) tentand[ao]s?|estúpid.+|etc|eu|eventualmente|exatamente|exibem uma tendência para|existem?|existir|experiências?|fác(il|eis)|faç[ao]s?|factos?|fascinantes?|faz|feitos?|feliz(es)?|felizmente|fez|finalmente|finos?|fiquei|foi|fora de|forneceu|frequentemente|freqüentemente|fri[ao].+|fui|fund[ao]s?|funil|geralmente|gostar|grande quantidade|há sim|habilitad[ao]s?|havia|horríve(l|is)|horrivelmente|houve|igualmente com[ao]s?|impactad.+|impactantes?|impactos?|importantes?|impressionantes?|inapropriadamente|inapropriados?|independentemente do fato de que|ind[ao]s?|iniciand[ao]s?|inícios?|intenç(ão|ões)|interessados?|interessante|interesses?|irritantemente|irritantes?|isso foi|ist[ao]s?|isto é|legal|lembre-se|lentamente|levantou|levemente|lida com|lide com|ligad[ao]s?|literalmente|lúcid[ao]s?|mais ced[ao]s?|mais ou menos|mal|marca|mas ainda|mau|meio ambiente|merecendo consideração séria|montantes?|montes? de|muitas|muit[ao]s?|muitos|na conta de|na hipótese diss[ao]s?|na maioria das vezes|na realidade|não é|não obstante|não pode ser deixado de fora da conta|naquele moment[ao]s?|natureza|necessidade|nenhu[mn]a?s?|nesse cas[ao]s?|ninguém|no evento que|no fim do dia|no interesse de|no processo de|nós|nota|nunca|o fato de que|o públic[ao]s?|obtém|obter|obteve|obtid[ao]s?|obviamente|oh|olhand[ao]s?|olhou|opost[ao]s?|ótim[ao]s?|outr[ao]s?|ouve|ouvir|ouviu|para o propósito de|para todos os efeitos|como se fosse|parec.+|passam a|passou a ser visto com[ao]s?|pensand[ao]s?|pensa[msr]?|pequen[ao]s?|percebi iss[ao]s?|personag(em|ens)|perto de|pessoas dizem|plataformas?|poderes|poderia de|por aí|por força de|por meio de|por pouc[ao]s?|possivelmente|pouc[ao]s?|pouco também|praticamente|primeiramente|problema com|prosseguiu|prováv(el|eis)|provavelmente|providenciar|próxim[ao]s?|pur[ao]s?|qualquer coisa|quase com[ao]s?|quente|quest(ão|ões)|rapidamente|realidade|realmente|repentinamente|respeitad[ao]s?|ressoa|ressoou|robust[ao]s?|sabia|sem nome|sempre|sendo com[ao]s?|sendo que|senso comum|sente|sentindo-me|sentir-se|sentiu|sentou-se|ser sujeito a|será|seriamente|servir a finalidade de|significad[ao]s?|significativ[ao]s?|simplesmente|sinalização|sinergia|sint[ao]s?|situaç(ão|ões)|só então|só iss[ao]s?|sobre o assunto de|sobre se|sociedade|somente|sou|suavemente|suficiente|supost[ao]s?|surtir efeit[ao]s?|talvez|tem a capacidade de|têm estad[ao]s?|têm o efeito de|tem problema com|t[eê][mr] talento para|tend[ao]s?|tendo em conta|tendo em vista|tendo estad[ao]s?|terrivelmente|teve|tinha começado a|tinha sabid[ao]s?|tinha tid[ao]s?|tipos? de|todo mundo sabe|todos?|tonetaladas de|tornando-se|tornar inoperante|tornar-se|tu|um bocad[ao]s?|um dia|um homem que|um par de|um pouc[ao]s?|um pouco parecid[ao]s?|um problema com|uma pessoa|uma mulher que|uma pessoa que|unidade|vantage(m|ns)?|vê|vei[ao]s?|veja|vej[ao]s?|venha a perceber iss[ao]s?|viag(em|ens)|vivendo com|vocês?|vós)\b</regexp>
-      <message>Palavras de uso potencialmente problemático. Para melhorar o texto, tente evitá-las. Estas palavras podem ser frágeis, estranhas, simplistas, vulgares, de enchimento, imprecisas, aborrecidas, redundante, vagas, etc.</message>
-      <example type='incorrect'>A <marker>realidade</marker>…</example>
-      <example type='incorrect'>...é que as <marker>coisa</marker>!</example>
-      <example type='incorrect'>...tem que ter em conta as <marker>situações</marker>…</example>
-      <example type='correct'>Aqui aplica-se o cliché "Cada caso é um caso".</example>
-    </rule>
-  </rulegroup>
-
-
-  <rulegroup id='BIASED_OPINION_WORDS' name='Escrita Criativa: Termos opinativos' default='off'> <!-- test on wikipedia and then disable -->
-    <!--      Localized from vim-wordy by Tiago F. Santos, Portuguese rule, 2017-08-23      -->
-      <url>https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Palavras_a_evitar#Opini.C3.B5es</url>
-      <short>Expressões opinativas</short>
-    <rule>
-      <regexp>\b(afortunadamente|alegremente|basicamente|certamente|claramente|claro|curiosamente|deve ser notado|deve-se ter em mente|é claro|essencialmente|felizmente|fundamentalmente|infelizmente|interessantemente|na realidade|naturalmente|notavelmente|obviamente|precocemente|sem dúvidas?|sem sombra para dúvidas?|tragicamente)\b</regexp>
-      <message>Esta palavra é uma palavra de ostentação ou propaganda. Reconsidere o seu uso.</message>
-      <example type='incorrect'><marker>Obviamente</marker> que é um bom negócio.</example>
-      <example type='correct'>Penso que é um bom negócio.</example>
-    </rule>
-  </rulegroup>
-
-
-  <rulegroup id='PUFFERY' name='Escrita Criativa: Termos espalhafatosos ou propagandísticos' default='off'> <!-- test on wikipedia and then disable -->
-    <!--      Localized from vim-wordy by Tiago F. Santos, Portuguese rule, 2017-08-23      -->
-      <url>https://pt.wiktionary.org/wiki/espalhafato</url>
-      <short>Termo espalhafatoso (“Puffery”)</short>
-    <rule>
-      <regexp>\b(um presente|autêntic[ao]s?|achado|aclamad[ao]s?|antiquíssim[ao]s?|surpreendente|surpreendentemente|melhor.+|antigos? regimes?|autêntic[ao]s?|autenticamente|autenticidade|premiad[ao]s?|impressionante|maravilhos[ao]s?|básic[ao]s?|segredos? mais bem guardados?|grandes?|tirar o fôlego|de uma forma incrivel|brilhantes?|brilhantemente|capaz|categóric[ao]s?|categoricamente|célebres?|clandestin[ao]s?|clar(ão|ões)|competentes?|confiantes?|constituir|porreir[ao]s?|criativ[ao]s?|becos? sem saída|deus ex machina|perturbador(es)?|não perca|a não perder|dinâmic[ao]s?|eficaz(es)?|energétic[ao]s?|enormes?|enormemente|épic[ao]s?|confec?ção da época|excelentes?|sublimes?|emocionantes?|exposiç(ão|ões)|exótic[ao]s?|aceler.+|explor.+|estranh[ao]s?|extraordinário|famos[ao]s?|famosamente|fascinantes?|dotad[ao]s?|mais grandios[ao]s?|grandezas?|óp?timos?|altamente qualificad[ao]s?|históric[ao]s?|ic[óô]nic[ao]s?|impact[ao]s?|impactantes?|individu(al|ais)|inevitáv(el|eis)|inexoráv(el|eis)|interessantes?|curiosamente|marcos?|maior(es)?|lendári[ao]s?|liquid.+|envio no correio|magistr(al|ais)|magistralmente|devem?-se ver|devem?-se notar|mutatis mutandis|notáv(el|eis)|notavelmente|objec?tivo|livres?|excep?cion(al|ais)|excepcionalmente|perfeit[ao]s?|fen[óô]menos?|prever|de prestígio|prestigiad[ao]s?|primári[ao]s?|profission(al|ais)|promov.+|qualificad[ao]s?|radic(al|ais)|notáv(el|eis)|notavelmente|renomead[ao]s?|respeitad[ao]s?|espetacular(es)?|espetacularmente|status quo|estrelas?|estelar(es)?|instigantes?|progress.+|provocantes?|bem sucedid[ao]s?|com sucesso|talentos?|talentos[ao]s?|provocador[ae]?s?|emocionantes?|tocantes?|transformativ[ao]s?|transform.+|transformador(es)?|tridente|triunfantes?|inesquecív(el|eis)|únic[ao]s?|unicamente|verdadeir[ao]s?|virtu(al|ais)|virtuos[ao]s?|visionári[ao]s?|maravilhos[ao]s?|maravilhosamente|classe mundial|impossív(el|eis)|barat[ao]s?|[ao]s? melhor(es|.+?íssim[ao]s?)?)\b</regexp>
-      <message>Esta palavra é uma palavra de ostentação ou propaganda. Reconsidere o seu uso.</message>
-      <example type='incorrect'>Um jogador de <marker>classe mundial</marker>…</example>
-      <example type='incorrect'>…é um <marker>autêntico</marker>…</example>
-      <example type='incorrect'>…<marker>achado</marker>!</example>
-      <example type='incorrect'><marker>Impossível</marker></example>
-      <example type='incorrect'>…encontrar mais <marker>barato</marker>!</example>
-      <example type='correct'>Um bom jogador não é fácil de encontrar. Não há muitos negócios como este.</example>
-    </rule>
-  </rulegroup>
-
-
-    <rule id='AVOID_PASSIVE_VOICE' name='Escrita Criativa: Evitar a Passiva (somente a analítica)' type='style' default='off'>
-    <!-- Created by Tiago F. Santos , Portuguese rule, 2016-11-24 	-->
-      <pattern>
-    <!--  Do not include 'estar' in order to limit positives
-                TODO Make this a percentage based rule [java?]          -->
-          <token inflected='yes'>ser</token>
-          <token postag='V.P.+' postag_regexp='yes'/>
-      </pattern>
-      <message>Evite a voz passiva.</message>
-      <url>https://pt.wikipedia.org/wiki/Voz_verbal#Voz_passiva</url>
-      <example type='incorrect'><marker>Era integrada</marker> por navegadores experientes, como Bartolomeu…</example>
-      <example type='incorrect'>O trabalho <marker>foi feito</marker> por ele.</example>
-      <example type='correct'>Ele <marker>fez</marker> o trabalho.</example>
-    </rule>
-
-
   <rulegroup id='AVOID_ALL_PASSIVE_VOICE' name='Escrita Criativa: Evitar a Passiva (todas a formas)' type='style' default='off'>
     <!-- Created by Tiago F. Santos , Portuguese rule, 2016-11-24 	-->
     <!-- 			Synthetic Passive Voice			-->
@@ -45871,6 +45932,35 @@ O conflito ocorre além-mar.
       <url>https://portugues-fcr.blogspot.pt/2010/12/funcoes-sintacticas-complemento-agente.html</url>
       <example type='incorrect'>Caso <marker>conhecido</marker> de todos.</example>
       <example type='correct'>Todos <marker>conhecem</marker> o caso.</example>
+    </rule>
+  </rulegroup>
+
+
+    <rule id='AVOID_PASSIVE_VOICE' name='Escrita Criativa: Evitar a Passiva (somente a analítica)' type='style' default='off'>
+    <!-- Created by Tiago F. Santos , Portuguese rule, 2016-11-24 	-->
+      <pattern>
+    <!--  Do not include 'estar' in order to limit positives
+                TODO Make this a percentage based rule [java?]          -->
+          <token inflected='yes'>ser</token>
+          <token postag='V.P.+' postag_regexp='yes'/>
+      </pattern>
+      <message>Evite a voz passiva.</message>
+      <url>https://pt.wikipedia.org/wiki/Voz_verbal#Voz_passiva</url>
+      <example type='incorrect'><marker>Era integrada</marker> por navegadores experientes, como Bartolomeu…</example>
+      <example type='incorrect'>O trabalho <marker>foi feito</marker> por ele.</example>
+      <example type='correct'>Ele <marker>fez</marker> o trabalho.</example>
+    </rule>
+
+
+  <rulegroup id='BIASED_OPINION_WORDS' name='Escrita Criativa: Termos opinativos' default='off'> <!-- test on wikipedia and then disable -->
+    <!--      Localized from vim-wordy by Tiago F. Santos, Portuguese rule, 2017-08-23      -->
+      <url>https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Palavras_a_evitar#Opini.C3.B5es</url>
+      <short>Expressões opinativas</short>
+    <rule>
+      <regexp>\b(afortunadamente|alegremente|basicamente|certamente|claramente|claro|curiosamente|deve ser notado|deve-se ter em mente|é claro|essencialmente|felizmente|fundamentalmente|infelizmente|interessantemente|na realidade|naturalmente|notavelmente|obviamente|precocemente|sem dúvidas?|sem sombra para dúvidas?|tragicamente)\b</regexp>
+      <message>Esta palavra é uma palavra de ostentação ou propaganda. Reconsidere o seu uso.</message>
+      <example type='incorrect'><marker>Obviamente</marker> que é um bom negócio.</example>
+      <example type='correct'>Penso que é um bom negócio.</example>
     </rule>
   </rulegroup>
 
@@ -45913,6 +46003,23 @@ O conflito ocorre além-mar.
     </rule -->
 
 
+  <rulegroup id='PUFFERY' name='Escrita Criativa: Termos espalhafatosos ou propagandísticos' default='off'> <!-- test on wikipedia and then disable -->
+    <!--      Localized from vim-wordy by Tiago F. Santos, Portuguese rule, 2017-08-23      -->
+      <url>https://pt.wiktionary.org/wiki/espalhafato</url>
+      <short>Termo espalhafatoso (“Puffery”)</short>
+    <rule>
+      <regexp>\b(um presente|autêntic[ao]s?|achado|aclamad[ao]s?|antiquíssim[ao]s?|surpreendente|surpreendentemente|melhor.+|antigos? regimes?|autêntic[ao]s?|autenticamente|autenticidade|premiad[ao]s?|impressionante|maravilhos[ao]s?|básic[ao]s?|segredos? mais bem guardados?|grandes?|tirar o fôlego|de uma forma incrivel|brilhantes?|brilhantemente|capaz|categóric[ao]s?|categoricamente|célebres?|clandestin[ao]s?|clar(ão|ões)|competentes?|confiantes?|constituir|porreir[ao]s?|criativ[ao]s?|becos? sem saída|deus ex machina|perturbador(es)?|não perca|a não perder|dinâmic[ao]s?|eficaz(es)?|energétic[ao]s?|enormes?|enormemente|épic[ao]s?|confec?ção da época|excelentes?|sublimes?|emocionantes?|exposiç(ão|ões)|exótic[ao]s?|aceler.+|explor.+|estranh[ao]s?|extraordinário|famos[ao]s?|famosamente|fascinantes?|dotad[ao]s?|mais grandios[ao]s?|grandezas?|óp?timos?|altamente qualificad[ao]s?|históric[ao]s?|ic[óô]nic[ao]s?|impact[ao]s?|impactantes?|individu(al|ais)|inevitáv(el|eis)|inexoráv(el|eis)|interessantes?|curiosamente|marcos?|maior(es)?|lendári[ao]s?|liquid.+|envio no correio|magistr(al|ais)|magistralmente|devem?-se ver|devem?-se notar|mutatis mutandis|notáv(el|eis)|notavelmente|objec?tivo|livres?|excep?cion(al|ais)|excepcionalmente|perfeit[ao]s?|fen[óô]menos?|prever|de prestígio|prestigiad[ao]s?|primári[ao]s?|profission(al|ais)|promov.+|qualificad[ao]s?|radic(al|ais)|notáv(el|eis)|notavelmente|renomead[ao]s?|respeitad[ao]s?|espetacular(es)?|espetacularmente|status quo|estrelas?|estelar(es)?|instigantes?|progress.+|provocantes?|bem sucedid[ao]s?|com sucesso|talentos?|talentos[ao]s?|provocador[ae]?s?|emocionantes?|tocantes?|transformativ[ao]s?|transform.+|transformador(es)?|tridente|triunfantes?|inesquecív(el|eis)|únic[ao]s?|unicamente|verdadeir[ao]s?|virtu(al|ais)|virtuos[ao]s?|visionári[ao]s?|maravilhos[ao]s?|maravilhosamente|classe mundial|impossív(el|eis)|barat[ao]s?|[ao]s? melhor(es|.+?íssim[ao]s?)?)\b</regexp>
+      <message>Esta palavra é uma palavra de ostentação ou propaganda. Reconsidere o seu uso.</message>
+      <example type='incorrect'>Um jogador de <marker>classe mundial</marker>…</example>
+      <example type='incorrect'>…é um <marker>autêntico</marker>…</example>
+      <example type='incorrect'>…<marker>achado</marker>!</example>
+      <example type='incorrect'><marker>Impossível</marker></example>
+      <example type='incorrect'>…encontrar mais <marker>barato</marker>!</example>
+      <example type='correct'>Um bom jogador não é fácil de encontrar. Não há muitos negócios como este.</example>
+    </rule>
+  </rulegroup>
+
+
   <rulegroup id='STOP_WORDS' name='Escrita Criativa: Palavras vazias para motores de pesquisa' default='off'>
     <!--      Created by Tiago F. Santos, Portuguese rule, 2019-03-01      -->
     <!--      Word list from https://github.com/stopwords-iso/stopwords-pt -->
@@ -45929,9 +46036,24 @@ O conflito ocorre além-mar.
       <example type='correct'>pesquisa</example>
     </rule>
   </rulegroup>
-  
+
+
+  <rulegroup id='WEAK_WORDS' name='Escrita Criativa: Termos frágeis' default='off'> <!-- test on wikipedia and then disable -->
+    <!--      Localized from vim-wordy by Tiago F. Santos, Portuguese rule, 2017-08-24      -->
+      <url>https://pt.wikipedia.org/wiki/Vagueza</url>
+      <short>Termo vago, fraco, impreciso, aborrecido ou prolixo</short>
+    <rule>
+      <regexp>\b(a fim de|a maioria sente|a qualquer moment[ao]s?|a séri[ao]s?|absolut.+|ac?titude|ac?tualmente|ach[ao]s?|acho que|acordos?|acredit.+|adequaç.+|adequad.+|adivinhação|adivinh.+|adoc?ç(ão|ões)|adop?t.+|agora|agradáv(el|eis)|ainda|alavancagem|aleatóri.+|alegremente|além diss[ao]s?|alguém|alguma coisa|alguns|almas?|altamente|alternativas?|altos?|amplos?|ansiosamente|anteriormente|antes de|aparec.+|aparente.+|apenas|apesar|apropriad.+|aproximad.+|aquele|áreas?|às vezes|aspec?to?|assim com[ao]s?|assim send[ao]s?|assustador|até parece|atraente|aventuras?|baixa|basicamente|bastante|belezas?|bem|benefici.+|benéfic.+|bizarr[ao]s?|boas?|bobas?|bo(m|ns)|bonit[ao]s?|brevemente|capacitação|capaz|mais tarde ou mais ced[ao]s?|mais cedo ou mais tarde|carradas de|certamente|cert[ao]s?|certamente|chat[ao]s?|cheg(a|ando|ar|o|ou) à percepção diss[ao]s?|cheg(a|ando|ar|o|ou) a uma conclusão satisfatória|claramente|clar[ao]s?|coisas?|com problemas|começa a|começ.+|começou a|com[ao]s?|como (você )?est(á|ão) cientes?|como muito desejáv(el|eis)|como um|compartilh.+|comunidades?|conec?tado a|conec?t.+|conhec.+|considerad[ao]s? com[ao]s?|consideráv(el|eis)|contextos?|contínu[ao]s?|contrastand[ao]s?|contud[ao]s?|criativ[ao]s?|crític[ao]s?|cruz.+|culturas?|curiosamente|curt[ao]s?|da opinião que|dar as bases para|dar origem a|dar ou pegar|de alguma forma|de fat[ao]s?|de forma significativa|de outros|de qualquer forma|de repente|de uma vez só|de várias|decid.+|definid.+|definitivamente|descobr.+|desempenh[ao]r? um papel de destaque na|desempenh[ao]r? um papel importante na|desvantag(em|ens)|devemos|devido ao fac?to de|devolvid[ao]s?|diferenças?|diferentes?|dificuldades?|disse|divers(ão|ões)|diz[eê]?(r|es|mos|m)?|durante o curso de|e assim por diante|é capaz de|e também|eficaz(es)?|el[ae]s|em breve|em forma|em segundo lugar|em toda parte|em todos os casos|em vez de|então|entre em contac?t[ao]s?|envolv.+|épic[ao]s?|equilibra.*|esperava|essencialmente|está relacionad[ao]s?|estamos|estar|estilos? de vida|est(ás?|ão|ou) a tentar|est(ás?|ão|ou) tentand[ao]s?|estúpid.+|etc|eu|eventualmente|exatamente|exibem uma tendência para|existem?|existir|experiências?|fác(il|eis)|faç[ao]s?|factos?|fascinantes?|faz|feitos?|feliz(es)?|felizmente|fez|finalmente|finos?|fiquei|foi|fora de|forneceu|frequentemente|freqüentemente|fri[ao].+|fui|fund[ao]s?|funil|geralmente|gostar|grande quantidade|há sim|habilitad[ao]s?|havia|horríve(l|is)|horrivelmente|houve|igualmente com[ao]s?|impactad.+|impactantes?|impactos?|importantes?|impressionantes?|inapropriadamente|inapropriados?|independentemente do fato de que|ind[ao]s?|iniciand[ao]s?|inícios?|intenç(ão|ões)|interessados?|interessante|interesses?|irritantemente|irritantes?|isso foi|ist[ao]s?|isto é|legal|lembre-se|lentamente|levantou|levemente|lida com|lide com|ligad[ao]s?|literalmente|lúcid[ao]s?|mais ced[ao]s?|mais ou menos|mal|marca|mas ainda|mau|meio ambiente|merecendo consideração séria|montantes?|montes? de|muitas|muit[ao]s?|muitos|na conta de|na hipótese diss[ao]s?|na maioria das vezes|na realidade|não é|não obstante|não pode ser deixado de fora da conta|naquele moment[ao]s?|natureza|necessidade|nenhu[mn]a?s?|nesse cas[ao]s?|ninguém|no evento que|no fim do dia|no interesse de|no processo de|nós|nota|nunca|o fato de que|o públic[ao]s?|obtém|obter|obteve|obtid[ao]s?|obviamente|oh|olhand[ao]s?|olhou|opost[ao]s?|ótim[ao]s?|outr[ao]s?|ouve|ouvir|ouviu|para o propósito de|para todos os efeitos|como se fosse|parec.+|passam a|passou a ser visto com[ao]s?|pensand[ao]s?|pensa[msr]?|pequen[ao]s?|percebi iss[ao]s?|personag(em|ens)|perto de|pessoas dizem|plataformas?|poderes|poderia de|por aí|por força de|por meio de|por pouc[ao]s?|possivelmente|pouc[ao]s?|pouco também|praticamente|primeiramente|problema com|prosseguiu|prováv(el|eis)|provavelmente|providenciar|próxim[ao]s?|pur[ao]s?|qualquer coisa|quase com[ao]s?|quente|quest(ão|ões)|rapidamente|realidade|realmente|repentinamente|respeitad[ao]s?|ressoa|ressoou|robust[ao]s?|sabia|sem nome|sempre|sendo com[ao]s?|sendo que|senso comum|sente|sentindo-me|sentir-se|sentiu|sentou-se|ser sujeito a|será|seriamente|servir a finalidade de|significad[ao]s?|significativ[ao]s?|simplesmente|sinalização|sinergia|sint[ao]s?|situaç(ão|ões)|só então|só iss[ao]s?|sobre o assunto de|sobre se|sociedade|somente|sou|suavemente|suficiente|supost[ao]s?|surtir efeit[ao]s?|talvez|tem a capacidade de|têm estad[ao]s?|têm o efeito de|tem problema com|t[eê][mr] talento para|tend[ao]s?|tendo em conta|tendo em vista|tendo estad[ao]s?|terrivelmente|teve|tinha começado a|tinha sabid[ao]s?|tinha tid[ao]s?|tipos? de|todo mundo sabe|todos?|tonetaladas de|tornando-se|tornar inoperante|tornar-se|tu|um bocad[ao]s?|um dia|um homem que|um par de|um pouc[ao]s?|um pouco parecid[ao]s?|um problema com|uma pessoa|uma mulher que|uma pessoa que|unidade|vantage(m|ns)?|vê|vei[ao]s?|veja|vej[ao]s?|venha a perceber iss[ao]s?|viag(em|ens)|vivendo com|vocês?|vós)\b</regexp>
+      <message>Palavras de uso potencialmente problemático. Para melhorar o texto, tente evitá-las. Estas palavras podem ser frágeis, estranhas, simplistas, vulgares, de enchimento, imprecisas, aborrecidas, redundante, vagas, etc.</message>
+      <example type='incorrect'>A <marker>realidade</marker>…</example>
+      <example type='incorrect'>...é que as <marker>coisa</marker>!</example>
+      <example type='incorrect'>...tem que ter em conta as <marker>situações</marker>…</example>
+      <example type='correct'>Aqui aplica-se o cliché "Cada caso é um caso".</example>
+    </rule>
+  </rulegroup>
+
 
  </category>
- 
- 
+
+
 </rules>

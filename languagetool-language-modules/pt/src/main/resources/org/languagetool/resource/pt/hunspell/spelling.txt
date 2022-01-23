@@ -3610,6 +3610,8 @@ mentorias
 mentos
 MEO
 Mercalli
+mercantilidade
+mercantilidades
 Mercedes-Benz
 Mercês
 merdice
@@ -4173,6 +4175,8 @@ oligossacarídeo
 oligossacarídeos
 Olívia
 OLX
+ómicron
+omícrones
 Ondjiva
 OnePlus
 ONGs
@@ -10004,6 +10008,8 @@ dez
 #########################
 # KARATE/MARTIAL ARTS ###
 #########################
+aikidoka
+aikidokas
 aiquidô
 Budokan
 Chojun
@@ -10013,6 +10019,8 @@ Goju-Ryu
 IOGKF
 Higaonna
 karategi
+karateka
+karatekas
 Karate-Do
 kata
 Kenwa
@@ -10306,6 +10314,7 @@ Cíntia
 Citius
 Claudia
 Clausewitz
+CNPD
 Colbert
 Conan
 Constantina
@@ -10403,6 +10412,7 @@ Gary
 Gevaerd
 Giovanna
 Glenn
+Globo
 Goes
 Golias
 Goodman
@@ -10524,6 +10534,7 @@ Luana
 Luiz
 Lula
 Madeira
+Manaia
 Marcelina
 Mariazinha
 Maricá

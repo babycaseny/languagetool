@@ -100,7 +100,7 @@ class CaseRuleAntiPatterns {
     ),
     Arrays.asList(
       // Er arbeitet im Bereich Präsidiales.
-      csRegex("Bereich|Departement|Stabsstelle"),
+      csRegex("Bereich|Departement|Stabsstellen?|Dienststellen?"),
       csRegex("[A-ZÄÖÜ].+es")
     ),
     Arrays.asList(
@@ -845,7 +845,7 @@ class CaseRuleAntiPatterns {
     ),
     Arrays.asList(
       // Trennzeichen https://github.com/languagetool-org/languagetool/issues/1515
-      regex("▶︎|▶|▶️|→|•|★|⧪|⮞|✔︎|✓|✔️|✅|➡️|➔|☛|◆|▪|■|☞|❤|✒︎|☑️|✗|✘|✖|➢|=|>|❏|›|❖|·|⬢|\\|"),
+      regex("▶︎|▶|▶️|→|•|★|⧪|⮞|✔︎|✓|✔️|✅|➡️|➔|☛|◼|◆|▪|■|☞|❤|✒︎|☑️|✗|✘|✖|➢|=|>|❏|›|❖|·|⬢|\\|"),
       regex(".*")
     ),
     Arrays.asList(
@@ -1196,11 +1196,21 @@ class CaseRuleAntiPatterns {
     Arrays.asList( // Etwas anderes Lebendiges
       csRegex("anderes"),
       csRegex("[A-ZÄÖÜ].+es"),
-      csRegex("[a-zäöü…\\.!,\\?…].*")
+      csRegex("[a-zäöü…\\.!:;,\\?…\\)].*")
     ),
     Arrays.asList( // Ich habe noch Dringendes mitzuteilen
-      csRegex("Dringendes|Bares|Vertrautes|Positives|Negatives|Gelerntes"),
-      csRegex("[a-zäöü…\\.!,\\?…].*")
+      csRegex("Dringendes|Bares|Vertrautes|Positives|Negatives|Gelerntes|Neues|Altes|Besseres|Schlechteres|Schöneres|Schlimmeres"),
+      csRegex("[a-zäöü…\\.!,\\?…\\)].*")
+    ),
+    Arrays.asList( // Immer mehr Ältere erkranken daran
+      csRegex("[a-zäöü…\\.,:;0-9\\/].*"),
+      csRegex("Ältere[rn]?|Jüngere[rn]?|Verwirrte[rn]?|Zuschauende[rn]?|Angeklagte[rn]?|Befragte[rn]?|Beschuldigte[rn]?|Referierende[rn]?|Moderierende[rn]?|Dunkelhäutige[rn]?|Verantwortliche[rn]?|Alleinlebende[rn]?"),
+      csRegex("[a-zäöü…\\.!:;,\\?…\\)\\*\\(].*")
+    ),
+    Arrays.asList( // Im Folgenden soll 
+      token("im"),
+      csRegex("Folgenden"),
+      csRegex("[a-zäöü…\\.!:;,\\?…\\)\\*\\(].*")
     ),
     Arrays.asList( // § 12 Die Pflichtversicherung
       csToken("§"),
@@ -1235,6 +1245,10 @@ class CaseRuleAntiPatterns {
     Arrays.asList( // Ein Haus // Eine Villa
       token(">"),
       token(">"),
+      csRegex("[A-ZÄÖÜ].+")
+    ),
+    Arrays.asList( // [Weiterlesen]
+      token("["),
       csRegex("[A-ZÄÖÜ].+")
     )
   );

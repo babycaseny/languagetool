@@ -1836,6 +1836,8 @@ grená	grená	AQ0CN0
 grená	grená	NCMS000
 grenás	grená	AQ0CN0
 grenás	grená	NCMP000
+guedelha	guedelha	NCMS000
+guedelhas	guedelha	NCMP000
 hail	hail	I
 hambúrgueres	hambúrguer	NCMP000
 haploide	haploide	AQ0CS0
@@ -2377,6 +2379,8 @@ mentideiro	mentideiro	NCMS000
 mentideiros	mentideiro	NCMP000
 mento	mento	NCMS000
 mentos	mento	NCMP000
+mercantilidade	mercantilidade	NCFS000
+mercantilidades	mercantilidade	NCFP000
 merdice	merdice	NCFS000
 merdices	merdice	NCFP000
 merdilheiro	merdilheiro	NCMS000
@@ -2610,6 +2614,8 @@ odontólogos	odontólogo	NCMP000
 offside	offside	AQ0CN0
 offside	offside	NCMS000
 olhadinha	olhada	NCFS000
+ómicron	ómicron	NCMS000
+omícrones	ómicron	NCMP000
 omissa	omitir	VMP00SF
 omissas	omitir	VMP00PF
 omisso	omitir	VMP00SM
@@ -3926,6 +3932,8 @@ estepe	estepe	NCMS000
 estepes	estepe	NCMP000
 freqüência	freqüência	NCFS000
 freqüências	freqüência	NCFP000
+ômicron	ômicron	NCMS000
+ômicrons	ômicron	NCMP000
 sanduíche	sanduíche	NCMS000
 sanduíches	sanduíche	NCMP000
 time	time	NCMS000
@@ -4771,6 +4779,8 @@ raëlianos	raëliano	NCMP000
 #########################
 # KARATE/MARTIAL ARTS ###
 #########################
+aikidoka	aikidoka	NCCS000
+aikidokas	aikidoka	NCCP000
 aiquidô	aiquidô	NPMS000
 Chojun	Chojun	NPMS000
 dan	dan	NCMS000
@@ -4781,6 +4791,8 @@ Goju-Ryu	Goju-Ryu	NPMS000
 Higaonna	Higaonna	NPMS000
 IOGKF	IOGKF	NPFS000
 Karate-Do	Karate-Do	NPMS000
+karateka	karateka	NCCS000
+karatekas	karateka	NCCP000
 kata	kata	NCFS000
 kata	kata	NCMS000
 kyu	kyu	NCMS000
@@ -5088,6 +5100,7 @@ CITES	CITES	NPFS000
 Citius	Citius	NPMS000
 Claudia	Claudia	NPFS000
 Clausewitz	Clausewitz	NPMS000
+CNPD	CNPD	NPFS000
 Coentrão	Coentrão	NPCS000
 Colbert	Colbert	NPMS000
 Conan	Conan	NPMS000
@@ -5181,6 +5194,7 @@ Gevaerd	Gevaerd	NPMS000
 Giovanna	Giovanna	NPFS000
 Gleiser	Gleiser	NPMS000
 Glenn	Glenn	NPMS000
+Globo	Globo	NPFS000
 Goes	Goes	NPMS000
 Gotardo	Gotardo	NPMS000
 Graciete	Graciete	NPFS000
@@ -5257,6 +5271,7 @@ Luiz	Luiz	NPMS000
 Lula	Lula	NPMS000
 Madeira	Madeira	NPFSG00
 Maláui	Maláui	NCMSG00
+Manaia	Manaia	NPMS000
 Marcelina	Marcelina	NPFS000
 Marco	Marco	NPMS000
 Mariazinha	Mariazinha	NPFS000

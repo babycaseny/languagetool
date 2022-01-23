@@ -1083,6 +1083,7 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
     putRepl("[wW]idersprüchig(e[mnrs]?)?", "ig", "lich");
     putRepl("[fF]austig(e[mnrs]?)?", "austig", "austdick");
     putRepl("Belastungsekgs?", "ekg", "-EKG");
+    putRepl("Flektion(en)?", "Flektion", "Flexion");
     put("Bingerloch", "Binger Loch");
     put("[nN]or[dt]rh?einwest(f|ph)alen", "Nordrhein-Westfalen");
     put("abzusolvieren", "zu absolvieren");
@@ -1246,6 +1247,14 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
     put("hbat", "habt");
     put("ichs", "ich es");
     put("folgendermassen", "folgendermaßen");
+    put("Adon", "Add-on");
+    put("Adons", "Add-ons");
+    put("vertraggt", w -> Arrays.asList("vertagt", "getaggt"));
+    put("Angehensweise", "Vorgehensweise");
+    put("Angehensweisen", "Vorgehensweisen");
+    put("Neudefinierung", "Neudefinition");
+    put("Definierung", "Definition");
+    put("Definierungen", "Definitionen");
     putRepl("[Üü]bergrifflich(e[mnrs]?)?", "lich", "ig");
   }
 
@@ -1437,11 +1446,12 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
         && !s.matches("[\\wöäüÖÄÜß]+ [a-zöäüß]-[\\wöäüÖÄÜß]+")   // e.g. "Mediation s-Background"
         && !s.matches("[\\wöäüÖÄÜß]+- [\\wöäüÖÄÜß]+")   // e.g. "Pseudo- Rebellentum"
         && !s.matches("[A-ZÄÖÜ][a-zäöüß]+-[a-zäöüß]+-[a-zäöüß]+")   // e.g. "Kapuze-over-teil"
+        && !s.matches("[A-ZÄÖÜ][a-zäöüß]+- [a-zäöüßA-ZÄÖÜ\\-]+")   // e.g. "Tuchs-N-Harmonie"
         && !s.matches("[\\wöäüÖÄÜß]+ -[\\wöäüÖÄÜß]+")   // e.g. "ALT -TARIF"
         && !s.endsWith("-s")   // https://github.com/languagetool-org/languagetool/issues/4042
         && !s.endsWith(" de")   // https://github.com/languagetool-org/languagetool/issues/4042
-        && !s.matches("[a-zöäüß] .+")
-        && !s.matches(".+ [a-zöäüß]");  // z.B. nicht "rauchen e" für "rauche ne" vorschlagen
+        && !s.matches("[A-ZÖÄÜa-zöäüß] .+") // z.B. nicht "I Tand" für "IT and Services"
+        && !s.matches(".+ [a-zöäüßA-ZÖÄÜ]");  // z.B. nicht "rauchen e" für "rauche ne" vorschlagen
   }
 
   @NotNull
@@ -1637,7 +1647,12 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
     boolean ignoreHyphenatedCompound = false;
     if (!ignore && !ignoreUncapitalizedWord) {
       if (word.contains("-")) {
-        ignoreByHyphen = word.endsWith("-") && ignoreByHangingHyphen(words, idx);
+        if (idx > 0 && "".equals(words.get(idx-1)) && StringUtils.startsWithAny(word, "stel-", "tel-") ) {
+          // accept compounds such as '100stel-Millimeter' or '5tel-Gramm'
+          return !isMisspelled(StringUtils.substringAfter(word, "-"));
+        } else {
+          ignoreByHyphen = word.endsWith("-") && ignoreByHangingHyphen(words, idx);
+        }
       }
       ignoreHyphenatedCompound = !ignoreByHyphen && ignoreCompoundWithIgnoredWord(word);
     }
@@ -1681,8 +1696,8 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
       }
     }
     if ((idx+1 < words.size() && (word.endsWith(".mp") || word.endsWith(".woff")) && words.get(idx+1).equals("")) ||
-        (idx > 0 && "sat".equals(word) && "".equals(words.get(idx-1)))) {
-      // e.g. ".mp3" or "3sat" - the check for the empty string is because digits were removed during
+        (idx > 0 && "".equals(words.get(idx-1)) && StringUtils.equalsAny(word, "sat", "stel", "tel", "stels", "tels") )) {
+      // e.g. ".mp3", "3sat", "100stel", "5tel" - the check for the empty string is because digits were removed during
       // hunspell-style tokenization before
       return true;
     }
@@ -2165,6 +2180,7 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
       }
       String ignoredWord = word.substring(0, end);
       String partialWord = word.substring(end);
+      partialWord = partialWord.endsWith(".") ? partialWord.substring(0, partialWord.length()-1) : partialWord;
       boolean isCandidateForNonHyphenatedCompound = !StringUtils.isAllUpperCase(ignoredWord) && (StringUtils.isAllLowerCase(partialWord) || ignoredWord.endsWith("-"));
       boolean needFugenS = isNeedingFugenS(ignoredWord);
       if (isCandidateForNonHyphenatedCompound && !needFugenS && partialWord.length() > 2) {
@@ -2265,6 +2281,10 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
   protected List<SuggestedReplacement> getOnlySuggestions(String word) {
     if (word.matches("[Aa]utentisch(e[nmsr]?|ste[nmsr]?|ere[nmsr]?)?")) {
       return topMatch(word.replaceFirst("utent", "uthent"));
+    }
+    switch (word) {
+      case "daß": return topMatch("dass");
+      case "Daß": return topMatch("Dass");
     }
     return Collections.emptyList();
   }
