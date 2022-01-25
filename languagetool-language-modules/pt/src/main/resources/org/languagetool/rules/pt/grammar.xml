@@ -8769,28 +8769,6 @@ Isto observa-se quando as forças avaliam mal o cenário.
       <example correction='vêmos'>Escreve-se 'vemos', e não '<marker>vê-mos</marker>'.</example>
     </rule>
 
-	<!-- POR ISSO aí/assim/daí -->
-    <rule id='POR_ISSO_AÍ_ASSIM_DAÍ' name="Por isso → aí/assim/daí">
-    <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-05-06 (17-MAR-2021+)      -->
-	<!--
-E por isso ter informado a chefe. → E daí ter informado a chefe.
-E por isso eu ter informado a chefe. → E daí eu ter informado a chefe.
-	-->
-		<pattern>
-			<marker>
-				<token>por</token>
-				<token>isso</token>
-			</marker>
-			<token min="0" max="1" postag='PP.+' postag_regexp='yes'/>
-			<token postag='VMN0000|VMN03P0|VMIS2.+' postag_regexp='yes'/>
-		</pattern>		
-		<message>Esta perífrase pode ser simplificada.</message>
-		<suggestion>aí</suggestion>
-		<suggestion>assim</suggestion>
-		<suggestion>daí</suggestion>
-		<example correction="aí|assim|daí">E <marker>por isso</marker> ter informado a chefe.</example>
-		<example>Quero assim saber a verdade.</example>
-    </rule>
 
     <rule id='PRONOMIAL_COLOCATIONS_ADJUSTMENT_NOS' name='Colocações pronomiais: ênclise de formas nasais (no, na, nos, nas)'>
     <!-- Created by Tiago F. Santos, 2017-03-10 -->
@@ -41437,8 +41415,22 @@ O objetivo é alcançar o terreno do inimigo. → O objetivo é alcançar o terr
     </rule>
 
 
+	<!-- NÃO VÁLIDA inválida -->
+    <rule id='NÃO_VÁLIDA_INVÁLIDA' name="Não válid[ao](s) → inválid[ao](s)">
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-23 (1-JAN-2022+)      -->
+      <pattern>
+		<token>não</token>
+		<token regexp='yes' inflected='yes'>estar|ser</token>	
+		<token regexp='yes'>válid[ao]s?</token>
+      </pattern>
+      <message>Melhore a redação podendo usar a negação em alguns casos.</message>
+	  <suggestion>\2 in\3</suggestion>
+      <example correction="está inválida">A identificação do Rui <marker>não está válida</marker>.</example>	  
+    </rule>
+
+
 	<!-- PERDER A VIDA A morrer/falecer/perecer -->
-    <rule id='PERDER_A_VIDA' name="perder a vida → morrer/falecer/perecer">
+    <rule id='PERDER_A_VIDA' name="Perder a vida → morrer/falecer/perecer">
     <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-16 (Checked/Enhanced) (1-JAN-2022+)      -->
       <pattern>
 		<token regexp='no' inflected='yes'>perder</token>	
@@ -41453,6 +41445,61 @@ O objetivo é alcançar o terreno do inimigo. → O objetivo é alcançar o terr
       <example correction="morreu|faleceu|pereceu">Ele <marker>perdeu a vida</marker> num acidente.</example>	  
 	  <example correction="morreram|faleceram|pereceram">Um milhão de pessoas <marker>perderam as suas vidas</marker> na guerra.</example>
     </rule>
+
+
+	<!-- POR ISSO aí/assim/daí/isso -->
+    <rulegroup id='POR_ISSO_AÍ_ASSIM_DAÍ_ISSO' name="Simplificar: por isso → aí/assim/daí/isso">
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-24 (Checked/Enhanced) (1-JAN-2022+)      -->
+	<!--
+Queria por isso ter informado a chefe. → Queria daí ter informado a chefe.
+Deveria por isso eu ter informado a chefe. → Deveria aí eu ter informado a chefe.
+Lamento por isso ter acontecido. → Lamento isso ter acontecido.
+Lamento muito por isso ter acontecido. → Lamento muito isso ter acontecido.
+	-->
+
+<!--
+Queria por isso ter informado a chefe. → Queria daí ter informado a chefe.
+Deveria por isso eu ter informado a chefe. → Deveria aí eu ter informado a chefe.
+-->
+	  <rule>
+		<pattern>
+			<token negate_pos="yes" postag='VMIP.+|NC.+|AQ.+|DI.+|PI.+|RG' postag_regexp='yes'/>
+			<marker>
+				<token>por</token>
+				<token>isso</token>
+			</marker>
+			<token min="0" max="1" negate_pos="yes" postag='V.+' postag_regexp='yes'/>
+			<token postag='VMN0000|VMN03.+|VMIS2.+' postag_regexp='yes'/>
+		</pattern>		
+		<message>Esta perífrase poderá ser simplificada.</message>
+		<suggestion>aí</suggestion>
+		<suggestion>assim</suggestion>
+		<suggestion>daí</suggestion>
+		<example correction="aí|assim|daí">Queria <marker>por isso</marker> ter informado a chefe.</example>
+		<example>Quero assim saber a verdade.</example>
+	  </rule>
+	  
+<!--
+Lamento por isso ter acontecido. → Lamento isso ter acontecido.
+Lamento muito por isso ter acontecido. → Lamento muito isso ter acontecido.
+-->
+	  <rule>
+		<pattern>
+			<token postag='VMIP.+|NC.+|AQ.+|DI.+|PI.+|RG' postag_regexp='yes'/>
+			<marker>
+				<token>por</token>
+				<token>isso</token>
+			</marker>
+			<token min="0" max="1" negate_pos="yes" postag='V.+' postag_regexp='yes'/>
+			<token postag='VMN0000' postag_regexp='no'/>
+		</pattern>		
+		<message>Esta perífrase poderá ser simplificada.</message>
+		<suggestion>isso</suggestion>
+		<example correction="isso">Lamento <marker>por isso</marker> ter acontecido.</example>
+		<example correction="isso">Lamento muito <marker>por isso</marker> ter acontecido.</example>
+		<example>Lamento isso ter acontecido.</example>		
+	  </rule>
+    </rulegroup>
 
 
 	<!-- QUE SER/ESTAR PART_PASSADO part_passado -->
@@ -41597,6 +41644,29 @@ Isto resume todas as forças que atuam sobre o objeto. → Isto resume todas as 
     </rule>
 
 
+	<!-- VÁRIAS VEZES vári[ao]s -->
+    <rule id='VÁRIAS_VEZES_VÁRIAS' name="Simplificar: Várias vezes → Vári[ao]s" type="style">
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-23 (Checked/Enhanced) (1-JAN-2022+)      -->
+	<!--
+Apagaram várias vezes publicações minhas. → Apagaram várias publicações minhas.
+Apagaram várias vezes comentários meus. → Apagaram vários comentários meus.
+Apagaram várias vezes comentários do Rui. → Apagaram vários comentários do Rui.
+	-->
+      <pattern>
+		<token postag='V.+' postag_regexp='yes'/>
+		<marker>
+			<token>várias</token>
+			<token>vezes</token>
+		</marker>
+		<token postag='NC.P.+' postag_regexp='yes'/>
+		<token postag='DP.+|SPS.+' postag_regexp='yes'/>
+      </pattern>
+	  <message>Esta perífrase poderá ser simplificada.</message>
+	  <suggestion><match no='4' postag='NC(.)P000' postag_replace='DI0$1P0'>vários</match></suggestion>
+      <example correction="várias">Apagaram <marker>várias vezes</marker> publicações minhas.</example>
+    </rule>
+
+
 	<!-- VER observar/constatar -->
     <rule id='VER_OBSERVAR_CONSTATAR' name="Ver → Observar/Constatar" type="style">
     <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-22 (Checked/Enhanced) (1-JAN-2022+)      -->
@@ -41605,7 +41675,7 @@ Isto resume todas as forças que atuam sobre o objeto. → Isto resume todas as 
 
 TESTED AGAINST 600000 SENTENCES:
 BEFORE:2859
- AFTER:2473
+ AFTER:2215
 	-->
 
 <!--
@@ -41681,7 +41751,60 @@ Era visto nas mãos de todos os japoneses em paradas.
 			<exception postag_regexp='yes' postag='CS|RG'/>
 		</token>
 		<token postag='SPS.+|CS|V.+|CC|RM|RG' postag_regexp='yes'/>
-	  </antipattern>	 	  
+	  </antipattern>
+
+<!-- MARCOAGPINTO 2022-01-24 (1-JAN-2022+) *START* -->
+<!--
+TESTS WITH 600000 SENTENCES:
+BEFORE:2473
+ AFTER:2452
+-->
+<!--
+Para mais informações, veja a página número 16.
+Você viu o livro de receitas que eu escrevi?
+Veja a nota de rodapé na página 5.
+Veja na linha seguinte.
+-->
+      <antipattern>
+		<token regexp='no' inflected='yes'>ver</token>
+		<token regexp='yes'>[ao]s?|d[ao]s?|n[ao]s?</token>
+		<token regexp='yes'>abstracts?|anexos?|assuntos?|capítulos?|conclusão|conclusões|folhas?|índices?|introdução|linhas?|livros?|notas?|páginas?|parágrafos?|resumos?|secção|secções|subcapítulos?|títulos?|tópicos?</token>
+      </antipattern>
+<!-- MARCOAGPINTO 2022-01-24 (1-JAN-2022+) *END* -->
+
+<!-- MARCOAGPINTO 2022-01-24 (1-JAN-2022+) *START* -->
+<!--
+TESTS WITH 600000 SENTENCES:
+BEFORE:2452
+ AFTER:2215
+-->
+<!--
+Você já viu o Monte Fuji? É indescritivelmente lindo.
+Também quero ver o Sam, curto algumas musicas dele.
+Eu não deveria ter ido ver o Tom.
+Há quatro meses que não vejo a Maria.
+-->
+      <antipattern>
+		<token regexp='no' inflected='yes'>ver</token>
+		<token min="0" max="1" negate="yes" regexp='yes'>[ao]s?|de|d[ao]s?|n[ao]s?|em</token>
+		<token regexp='yes'>[ao]s?|de|d[ao]s?|n[ao]s?|em</token>
+		<token postag='NP.+' postag_regexp='yes'/>
+      </antipattern>
+
+<!--
+Você viu o que o Tom fez à Mary?
+Deus vê o que o Diabo esconde.
+Veja o que o Tom tem a dizer sobre tudo isso.
+-->
+      <antipattern>
+		<token regexp='no' inflected='yes'>ver</token>
+		<token regexp='yes'>[ao]s?</token>
+		<token>que</token>
+		<token min="0" max="1" negate="yes" regexp='yes'>[ao]s?|de|d[ao]s?|n[ao]s?|em</token>
+		<token regexp='yes'>[ao]s?|de|d[ao]s?|n[ao]s?|em</token>
+		<token postag='NP.+' postag_regexp='yes'/>
+      </antipattern>
+<!-- MARCOAGPINTO 2022-01-24 (1-JAN-2022+) *END* -->
 
       <pattern>
 		<marker>
@@ -41738,6 +41861,20 @@ Era visto nas mãos de todos os japoneses em paradas.
 	  <example>Pensei que já tivesse visto o Tom em algum lugar.</example>
 	  <example>Disposto a desfazer o mal entendido entre a ciência e a religião, conseguiu ser mal visto pelos representantes de ambas.</example>
 	  <example>Era visto nas mãos de todos os japoneses em paradas.</example>
+
+	  <example>Para mais informações, veja a página número 16.</example>
+	  <example>Você viu o livro de receitas que eu escrevi?</example>
+	  <example>Veja a nota de rodapé na página 5.</example>
+	  <example>Veja na linha seguinte.</example>
+
+	  <example>Você já viu o Monte Fuji? É indescritivelmente lindo.</example>
+	  <example>Também quero ver o Sam, curto algumas musicas dele.</example>
+	  <example>Eu não deveria ter ido ver o Tom.</example>
+	  <example>Há quatro meses que não vejo a Maria.</example>
+
+	  <example>Você viu o que o Tom fez à Mary?</example>
+	  <example>Deus vê o que o Diabo esconde.</example>
+	  <example>Veja o que o Tom tem a dizer sobre tudo isso.</example>
     </rule>
 
 
@@ -41822,28 +41959,6 @@ A bactéria do carbúnculo mata-os através de uma toxina.
     </rule>	
 	
 	</rulegroup>
-
-
-	<!-- VÁRI[AO]S VEZES vári[ao]s -->
-    <rule id='VARIAS_VEZES_VARIAS' name="Simplificar: Vári[ao]s vezes → Vári[ao]s" type="style">
-    <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-12-15 (25-JUN-2021+)      -->
-	<!--
-Apagaram várias vezes publicações minhas. → Apagaram várias publicações minhas.
-Apagaram várias vezes comentários meus. → Apagaram vários comentários meus.
-	-->
-      <pattern>
-		<token postag='V.+' postag_regexp='yes'/>
-		<marker>
-			<token regexp='yes'>vári[ao]s</token>
-			<token regexp='no'>vezes</token>
-		</marker>
-		<token postag='NC.P.+' postag_regexp='yes'/>
-		<token postag='DP.+' postag_regexp='yes'/>
-      </pattern>      
-	  <message>Esta perífrase poderá ser simplificada.</message>
-	  <suggestion><match no='4' postag='NC(.)P000' postag_replace='DI0$1P0'>vários</match></suggestion>
-      <example correction="várias">Apagaram <marker>várias vezes</marker> publicações minhas.</example>
-    </rule>
 
 
 	<!-- QUE ESTÁ/ESTÃO CONTRAÇÃO/PREPOSIÇÃO contração/preposição -->
@@ -41971,6 +42086,7 @@ Isto deve ser feito com precisão científica. → Isto deve ser feito com rigor
      </rule> 
 	</rulegroup>
 
+
 	<!-- FEITA efetuada/realizada/conduzida/concretizada/elaborada -->
     <rulegroup id='FAZER_EFETUAR_REALIZAR_CONDUZIR_CONCRETIZAR_ELABORAR' name="Fazer → efetuar/realizar/conduzir/concretizar/elaborar" type="style" tags="picky">
     <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-06-29/30 + 2021-07-02 + 2021-10-31 (25-JUN-2021+)      -->
@@ -41992,6 +42108,69 @@ Não falo com Tom já faz um tempo.
       </antipattern>
 <!-- MARCOAGPINTO 2022-01-16 (1-JAN-2022+) *END* -->
 
+<!-- MARCOAGPINTO 2022-01-23 (1-JAN-2022+) *START* -->
+<!--
+TESTS WITH 600000 SENTENCES:
+BEFORE:9643
+ AFTER:9087
+-->
+
+<!--
+Faço parte do clube de natação.
+Estou feliz em fazer parte desse projeto.
+Segundo a TV, fará tempo bom hoje.
+Eu tive de fazer hora extra ontem.
+Faz um tempão que não a vejo.
+Faz algumas horas que eu estou lendo isso.
+Este celular é feito de papel eletrônico.
+-->
+      <antipattern>
+	    <token regexp='no' inflected='yes'>fazer</token>
+		<token min="0" max="1" negate="yes" regexp='yes'>horas?|papel|papéis|parte|pausas?|sentido|tempão|tempos?</token>
+		<token regexp='yes'>horas?|papel|papéis|parte|pausas?|sentido|tempão|tempos?</token>
+      </antipattern>
+
+<!--
+Eles sempre fazem piadas sobre o chefe.
+E não esqueça de fazer seguro de viagem.
+Tornou-se o primeiro coreano a entrar na parada, feito conquistado antes da sua primeira turnê mundial.
+Fiz esse vestido sozinha.
+Eu mesmo fiz esta comida.
+Você está fazendo isso errado.
+Está com um cheiro meio desagradável, mas tenho medo de mexer e fazer algo errado.
+Sendo assim, vamos fazer algo divertido.
+Esta resposta a fez ficar zangada.
+-->
+      <antipattern>
+		<token regexp='no' inflected='yes'>fazer</token>
+		<token min="0" max="1" negate_pos="yes" postag='VMP.+' postag_regexp='yes'/>
+		<token postag='VMP.+' postag_regexp='yes'/>
+      </antipattern>
+<!-- MARCOAGPINTO 2022-01-23 (1-JAN-2022+) *END* -->
+
+<!-- MARCOAGPINTO 2022-01-24 (1-JAN-2022+) *START* -->
+<!--
+TESTS WITH 600000 SENTENCES:
+BEFORE:9087
+ AFTER:8627
+-->
+<!--
+Fora da pista os dois fizeram crescer o incidente com entrevistas provocantes.
+Faça vir o médico, porque estou doente.
+O gelo fez cair as flores dos damasqueiros.
+Selecione apenas itens com a mesma finalidade para fazer e finalizar o seu pedido.
+Saiba como fazer para lavar o veículo corretamente e evitar danos ao seu veículo.
+Os humanos não foram feitos para viver para sempre.
+Como faço para atualizar meu cadastro?
+Tenho de fazer o jantar hoje.
+-->
+      <antipattern>
+		<token regexp='no' inflected='yes'>fazer</token>
+		<token min="0" max="1" negate_pos="yes" postag='VMN0000' postag_regexp='no'/>
+		<token postag='VMN0000' postag_regexp='no'/>
+      </antipattern>
+<!-- MARCOAGPINTO 2022-01-24 (1-JAN-2022+) *END* -->
+
 <!--
 Ele a fez sua esposa.
 Ele me fez seu assistente.
@@ -42004,7 +42183,7 @@ O que você faz é mais importante do que o que você diz.
       <antipattern>
 		<token postag='PD.+|PI.+|PP.+|RN|CS|V.+' postag_regexp='yes'/>
 		<token regexp='no' inflected='yes'>fazer</token>
-		<token postag='PP.+|DP.*|V.+' postag_regexp='yes'/>
+		<token postag='PP.+|DP.+|V.+' postag_regexp='yes'/>
 	  </antipattern>
 <!--
 O que você fez neste verão?
@@ -42176,6 +42355,7 @@ Vou fazer uma pesquisa. → Vou realizar uma pesquisa.
 	  <example>Um acaso fez descobrir a cilada e Vasco da Gama pôde continuar.</example>
 	</rule>
     </rulegroup>
+
 
 	<!-- LEVADA A CABO efetuada/realizada/conduzida/concretizada/elaborada -->
     <rule id='LEVAR_A_CABO' name="Levar a cabo → efetuar/realizar/conduzir/concretizar/elaborar">

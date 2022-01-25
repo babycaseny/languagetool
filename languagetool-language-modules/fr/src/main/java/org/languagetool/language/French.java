@@ -251,6 +251,7 @@ public class French extends Language implements AutoCloseable {
       case "J_N2": return 100; // greater than J_N
       case "CEST_A_DIRE": return 100; // greater than A_A_ACCENT
       case "FAIRE_VPPA": return 100; // greater than A_ACCENT_A
+      case "GENS_ACCORD": return 100; // greater than AGREEMENT_POSTPONED_ADJ
       case "VIRGULE_EXPRESSIONS_FIGEES": return 100; // greater than agreement rules
       case "TRAIT_UNION": return 100; // greater than other rules for trait d'union
       case "PLURIEL_AL2": return 100; // greater than other rules for pluriel al
@@ -280,6 +281,8 @@ public class French extends Language implements AutoCloseable {
       //case "ACCORD_COULEUR": return 1; // needs to have higher priority than agreement postponed adj
       case "R_VAVOIR_VINF": return 10; // needs higher priority than A_INFINITIF
       case "AN_EN": return 10; // needs higher priority than AN_ANNEE
+      case "APOS_M": return 10; // needs higher priority than APOS_ESPACE
+      case "ACCORD_PLURIEL_ORDINAUX": return 10; // needs higher priority than D_J
       case "SE_CE": return -10; // needs higher priority than ELISION
       case "SYNONYMS": return -10; // less than ELISION
       case "PAS_DE_SOUCIS": return 10; // needs higher priority than PAS_DE_PB_SOUCIS (premium)
