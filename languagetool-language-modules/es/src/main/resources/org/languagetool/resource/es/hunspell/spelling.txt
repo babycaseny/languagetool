@@ -2,7 +2,7 @@
 # completely ignored (i.e. not used to create suggestions).
 Clausewitz
 Derrida
-Fullbright
+Fulbright
 Glovo
 Lacan
 Nursultán
@@ -30,6 +30,10 @@ multipaquete
 nursultaní
 nursultaníes
 nursultanís
+perseguida
+perseguidas
+perseguido
+perseguidos
 poscrisis
 postcrisis
 precrisis
