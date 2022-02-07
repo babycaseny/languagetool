@@ -2395,7 +2395,13 @@ oh la la; I
 Robert de Niro; Z e sp
 Porto Vecchio; Z e sp
 Miley Cyrus; Z f sp
+Johnson & Johnson; Z e sp
+Sinovac Biotech; Z e sp
+pass vaccinal; N m s
 Scarlett Johansson; Z e sp
+Cécile Borne; Z e sp
+Joint European Disruptive Initiative; Z f sp
+Cloud Security Alliance; Z f sp
 on line; A
 J&R Savard; Z e sp
 Hôpital d'Instruction des Armées; Z e sp

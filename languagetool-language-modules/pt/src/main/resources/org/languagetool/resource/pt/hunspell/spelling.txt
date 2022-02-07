@@ -3278,6 +3278,7 @@ laplaciano
 lapouço
 lapouços
 Lara
+larguinhos
 lastimavelmente
 Launchy
 Laurissilva
@@ -4609,6 +4610,7 @@ póquer
 porreiraço
 porreiraços
 Porsche
+porta-moedas
 portefólio
 portefólios
 portossantense
@@ -4617,6 +4619,8 @@ Portucel
 portuguesmente
 posologia
 posologias
+postagem
+postagens
 póster
 pósteres
 potamódroma
@@ -10732,6 +10736,7 @@ add-on
 add-ons
 AI
 AmigaOS
+Android
 app
 applet
 applets

@@ -104,7 +104,7 @@
         <!-- #### End Updated Block -->
 
         <at.favre.lib.bcrypt.version>0.6.0</at.favre.lib.bcrypt.version>
-        <ch.qos.logback.version>1.2.3</ch.qos.logback.version>
+        <ch.qos.logback.version>1.2.10</ch.qos.logback.version>
 
         <com.auth0.java-jwt.version>3.12.0</com.auth0.java-jwt.version>
         <com.carrotsearch.hppc.version>0.8.2</com.carrotsearch.hppc.version>
@@ -164,7 +164,7 @@
         <lombok.version>1.18.22</lombok.version>
         <lucene.version>5.5.5</lucene.version>
         <morfologik.version>2.1.7</morfologik.version>
-        <morfologik-ukrainian-lt.version>5.6.1</morfologik-ukrainian-lt.version>
+        <morfologik-ukrainian-lt.version>5.6.2</morfologik-ukrainian-lt.version>
         <optimaize.languagedetector.language-detector.version>0.6</optimaize.languagedetector.language-detector.version>
         <!-- see https://github.com/languagetool-org/languagetool/issues/4088 before you upgrade this -->
         <spanish-pos-dict.version>1.5</spanish-pos-dict.version>

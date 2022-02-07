@@ -588,7 +588,9 @@ public class AgreementRuleTest {
     assertGood("Natürlich ist das Quatsch!");
     assertGood("Die Xi Jinping Ära ist …");
     assertGood("Die letzte unter Windows 98 lauffähige Version ist 5.1.");
+    assertGood("Das veranlasste Bürgermeister Adam, selbst tätig zu werden, denn er wollte es nicht zulassen, dass in seiner Stadt Notleidende ohne Hilfe dastehen.");
     assertGood("Die südlichste Düsseldorfer Rheinbrücke ist die Fleher Brücke, eine Schrägseilbrücke mit dem höchsten Brückenpylon in Deutschland und einer Vielzahl von fächerförmig angeordneten Seilen.");
+    assertGood("Ein zeitweise wahres Stakkato an einschlägigen Patenten, das Benz & Cie.");
     // TODO: not yet detected:
     //assertBad("Erst recht wir fleißiges Arbeiter.");
     //assertBad("Erst recht ich fleißiges Arbeiter.");
@@ -680,6 +682,8 @@ public class AgreementRuleTest {
     assertGood("...damit diese ausreichend Sauerstoff geben.");
     assertGood("...als auch die jedem zukommende Freiheit.");
     assertGood("...als auch die daraus jedem zukommende Freiheit.");
+    assertGood("Damit zeigen wir, wie bedeutungsreich manche deutsche Begriffe sein können.");  // http://mediawiki.ids-mannheim.de/VarGra/index.php/Starke_/_schwache_Flexion_des_Adjektivs_und_Substantivs_nach_Artikelw%C3%B6rtern,_artikelartigen_W%C3%B6rtern_und_Pronomen
+    assertGood("Damit zeigen wir, wie bedeutungsreich manche deutschen Begriffe sein können.");
 
     // incorrect sentences:
     assertBad("Er hatte ein anstrengenden Tag",

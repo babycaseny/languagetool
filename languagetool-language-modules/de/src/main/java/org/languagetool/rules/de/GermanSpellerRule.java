@@ -1244,6 +1244,7 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
     put("Entäuschung", "Enttäuschung");
     put("Entäuschungen", "Enttäuschungen");
     put("kanns", "kann es");
+    put("funktionierts", "funktioniert es");
     put("hbat", "habt");
     put("ichs", "ich es");
     put("folgendermassen", "folgendermaßen");
@@ -1678,20 +1679,20 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
             !firstPart.matches(".{3,25}(tum|ing|ling|heit|keit|schaft|ung|ion|tät|at|um)") &&
             isOnlyNoun(firstPart) &&
             !isMisspelled(firstPart + "test")) {  // does hunspell accept this? takes infex-s into account automatically
-          System.out.println("will accept: " + word);
+          //System.out.println("will accept: " + word);
           return true;
         } else if (!isMisspelled(firstPart) &&
                    !firstPart.matches(".{3,25}(tum|ing|ling|heit|keit|schaft|ung|ion|tät|at|um)")) {
-                   System.out.println("will not accept: " + word);
+                   //System.out.println("will not accept: " + word);
         } else if (firstPart.endsWith("s") && !isMisspelled(firstPart.replaceFirst("s$", "")) &&
                    firstPart.matches(".{3,25}(tum|ing|ling|heit|keit|schaft|ung|ion|tät|at|um)s") &&   // "handlungsartig"
                    isOnlyNoun(firstPart.replaceFirst("s$", "")) &&
                    !isMisspelled(firstPart + "test")) {  // does hunspell accept this? takes infex-s into account automatically
-          System.out.println("will accept: " + word);
+          //System.out.println("will accept: " + word);
           return true;
         } else if (firstPart.endsWith("s") && !isMisspelled(firstPart.replaceFirst("s$", "")) &&
                    firstPart.matches(".{3,25}(tum|ing|ling|heit|keit|schaft|ung|ion|tät|at|um)s")) {
-          System.out.println("will not accept: " + word);
+          //System.out.println("will not accept: " + word);
         }
       }
     }
@@ -2285,6 +2286,8 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
     switch (word) {
       case "daß": return topMatch("dass");
       case "Daß": return topMatch("Dass");
+      case "bescheid": return topMatch("Bescheid");
+      case "Triologie": return topMatch("Trilogie", "Werk (z.B. Film), das aus drei Teilen besteht");
     }
     return Collections.emptyList();
   }

@@ -535,3 +535,33 @@ Moon Boots;Moon Boots; Z e sp
 gens;gens; N m p
 gens;gens; N f s
 blanco;blanco; N m sp
+Ana;Ana; Z f sp
+M3;M3; Z f sp
+Abrams;Abrams; Z e sp
+Worcestershire;Worcestershire; Z e sp
+Wenger;Wenger; Z e sp
+Ronda;Ronda; Z e sp
+Priscus;Priscus; Z e sp
+Motorola;Motorola; Z e sp
+Mattarella;Mattarella; Z e sp
+Kendrick;Kendrick; Z e sp
+Janssen;Janssen; Z e sp
+Audacity;Audacity; Z e sp
+Pierre-Alain;Pierre-Alain; Z m sp
+CoronaVac;CoronaVac; Z e sp
+PiCoVacc;PiCoVacc; Z e sp
+AstraZeneca;AstraZeneca; Z e sp
+BioNTech;BioNTech; Z e sp
+Janssen;Janssen; Z e sp
+Sinovac;Sinovac; Z e sp
+Sinopharm;Sinopharm; Z e sp
+TousAntiCovid;TousAntiCovid; Z e sp
+StopCovid;StopCovid; Z e sp
+FFP2;FFP2; Z e sp
+N95;N95; Z e sp
+Zoomapéro;Zoomapéro;Z e sp
+Skypéro;Skypéro;Z e sp
+vaccinophile;vaccinophile; N e s
+vaccinophiles;vaccinophile; N e p
+vaccinodrome;vaccinodrome; N m s
+vaccinodromes;vaccinodrome; N m p

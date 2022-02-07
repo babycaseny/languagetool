@@ -45557,3 +45557,283 @@ um_münzen
 Annalisa/S #name
 Gustavo/S #name
 Wolfgang Grupp/S #name
+One-Hit-Wonder/S
+Supportleiter/SN
+Supportleiterin
+Supportleiterinnen
+Supportfachkraft
+Supportfachkräfte/N
+Pseudoephedrin
+Dosierungsabstand/S
+Dosierungsabstände/N
+Überdosierungserscheinung
+Überdosierungserscheinungen
+Engwinkelglaukom/S
+Engwinkelglaukome/N
+Blutungszeit
+Blutungszeiten
+Teerstuhl/S
+Teerstühle/N
+ingwerhaltig/A
+Erkältungscoronavirus
+Erkältungscoronaviren
+kreuzreagierend/A
+immunverstärkend/A
+Erregerfragment/S
+Erregerfragmente/SN
+kreuzreaktiv/A
+nichtimmun/A
+Universitätsklinikum
+Universitätsklinika
+trackst
+trackt
+trackte
+trackten
+rein_nehmen
+mitrein_nehmen
+Wolframstraße
+Wolframstr.
+Isolationsanordnung
+Isolationsanordnungen
+Oxyfuel-Verfahren/S
+Oxyfuel-Technologie/N
+meistgehandelt/A
+emporrecken
+emporreckt
+emporreckst
+emporreckte
+emporreckten
+emporrecktest
+Bezahlseite/N
+Boxentauscher/SN
+Desktopvirtualisierung
+Desktopvirtualisierungen
+Eingruppierungsfaktor/S
+Eingruppierungsfaktoren
+Einmaltaschentuch/S
+Einmaltaschentücher/N
+Imaginationsfähigkeit
+Imaginationsfähigkeiten
+Kesselsdorf/S #name
+Probandenversuch/S
+Probandenversuche/SN
+Teamleiterbereich/S
+Teamleiterbereiche/SN
+Zielerreichungsgespräch/S
+Zielerreichungsgespräche/SN
+semi-industriell/A
+ingwerartig/A
+Kesselsdorfer/SN
+Steuerbevollmächtigter
+Wetzelsdorf/S #name
+easy-peasy #eng #ugs
+Brezelkönig/S
+Brezelkönige/N
+inhaltstief/A
+Papierschredder/SN
+Lautsprecherbuchse/N
+sonnenbedingt/A
+Ableitungsmorphem/S
+Ableitungsmorpheme/N
+Agenturbriefing/S
+Abgrundsensor/S
+Abgrundsensoren
+Arsène Wenger/S
+Entleerungsstation
+Entleerungsstationen
+Mark Benecke/S #name
+Lydia Benecke/S #name
+Bramstedt/S #name
+Dinkelvollkornbrot/S
+Dinkelvollkornbrotes
+Redaktions-Team/S
+Redaktionsteam/S
+Heinz-Christian Strache/S #name
+Wärmestarre
+Achtsamkeitslehre/N
+Anouschka/S #name
+Beutelsbach/S #name
+Bohrerei
+Buildnummer/N
+Großheppach/S
+Großheppacher/SN
+Großheppacherin
+Großheppacherinnen
+Heidenkampsweg/S #name
+Linearwirtschaft
+Lizzy/S #name
+Minzgeschmack/S
+Nacktkatze/N
+Starkzehrer/SN
+Mittelzehrer/SN
+Schwachzehrer/SN
+Sockeldämmung
+Sockeldämmungen
+TAN-Nummer/N
+unbewilligt/A
+Yasmina/S #name
+transfeindlich/A
+Jean-Paul/S #name
+Schufa-Auskunft
+SCHUFA-Auskunft
+Start-up-Bubble/S
+Marliese/S #name
+fledermausgeeignet/A
+Wirkraum/S
+Wirkräume/N
+Landhabitat/S
+Landhabitate/NS
+Jagdhabitat/S
+Jagdhabitate/SN
+Fledermauserfassung
+Fledermauserfassungen
+Gehölzrodung
+Gehölzrodungen
+Gehölzrückschnitt/S
+Gehölzrückschnitte/SN
+Gehölzbrüter/SN
+Gehölzbestand/S
+Gehölzbestände/N
+stakkatoartig/A
+staccatoartig/A
+Influenzafall/S
+Influenzafälle/N
+Synzytialvirus
+Synzytialviren
+Konsultationsinzidenz
+Konsultationsinzidenzen
+Influenzameldung
+Influenzameldungen
+Gnadensee/S #name
+Reichenaufähre/N
+Commonwealth Realm/S #eng
+royalblau/A
+Ernie/S #name
+retweete
+retweetet
+retweetest
+retweeten
+mit_managen
+highlighte
+highlightete
+highlighteten
+highlightet
+highlightest
+highlighten
+Cape Cod/S #name
+Cape Canaveral/S #name
+Cape Coral/S #name
+Donauschlinge/N
+Elbebahnhof/S
+Elbebogen/S
+Elbeniederung
+Elbeniederungen
+Elbepark/S
+Elbeschwimmhalle/N
+Elbestraße/N
+Elbestr.
+Mainbogen/S
+Mainburg
+Maindamm/S
+Mainkreis
+Mainkreises
+Mainschleife/N
+Mainviereck/S
+Malzgeschmack/S
+Malzgeschmäcker/N
+Moselaufstieg/S
+Moselblick/S
+Moselblickes
+Moselgegend
+Moselpromenade/N
+Moselschleife/N
+Moseltherme/N
+Rheineck/S
+Spreefahrt
+Spreefahrten
+Spreehotel/S
+Spreemündung
+Spreemündungen
+Spreepark/S
+Spreetunnel/S
+Spreewälder/SN
+Weserbogen/S
+Weserbahn
+Weserklinik
+Weserkliniken
+Weserfähre/N
+Wesermühle/N
+Wesermündung
+Wesermündungen
+Weserschleuse/N
+Weserterrasse/N
+Weserzeitung
+Weserzeitungen
+iranfeindlich/A
+sonnengetankt/A
+rum_züngeln
+gehighlightet/A
+Miss Universe #name
+swipen
+swipe
+swipt
+swipte
+swipten
+geswipt/A
+blechverkleidet/A
+holzverkleidet/A
+stahlverkleidet/A
+metallverkleidet/A
+Twistetal/S #name
+Bad Arolsen/S
+bankaufsichtlich/A
+Videoshooting/S
+Maurermeisterin
+Maurermeisterinnen
+Digital Wallet/S #eng
+Einzeilerfrage/N
+Einzeilerantwort
+Einzeilerantworten
+emporrecken
+emporrecke
+emporreckt
+emporreckst
+emporrecktest
+emporreckte
+emporreckten
+emporgereckt/A
+Headhunter/NS
+Bitcoin-Miner/NS
+Ukrainekonflikt/S
+Kremlnähe
+Anlandehafen/S
+Anlandehäfen
+Sanktionsfrage/N
+Rapallo/S
+Pipelineprojekt/S
+Pipelineprojekte/N
+Pipelinegeschäft/S
+Pipelinegeschäfte/N
+Twistetal-Twiste/S #name
+Reflektorwirkung
+Reflektorwirkungen
+Reflektorgröße/N
+Reflektorband/S
+Reflektorbänder/N
+Reflektorblatt/S
+Reflektorblätter/N
+staugeregelt/A
+Leinenknoten/S
+Elbbahnhof/S
+Elbstraße/N
+Elbstr.
+Valentin Stalf/S #name
+verlagsunabhängig/A
+Groupwareplattform
+Groupwareplattformen
+Abschn. #abk
+Dieseln
+sommerblühend/A
+herbstblühend/A
+winterblühend/A
+frühlingsblühend/A

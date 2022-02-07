@@ -7,6 +7,7 @@ Adele
 Ägyptische[sn]? Museums?
 Air International
 Alta Via
+Alpin \d+
 Asiatische? Elefant(en)?
 Association International
 Association National
@@ -104,7 +105,7 @@ Bildenden? Kunst
 Bin Ladens?
 Bismarckschen? Reichsverfassung
 Bitter Lemon
-Blaue[nrm]? Reiters?|Band(s|es)?|Planet(en)?|Brief[es]?|Moschee|Enzians?|Tonnen?
+Blaue[nrm]? Reiters?|Band(s|es)?|Planet(en)?|Brief[es]?|Moschee|Enzians?|Tonnen?|Grotte
 Blind Dates?|Spots?
 Bobb?a Fett
 Bochumer
@@ -119,6 +120,7 @@ Booz, Allen & Hamiltons?
 Braune[rnm]? Zwerge?s?
 Brandenburgische[nm]? Konzert[es]n?
 Britischen? Inseln
+Britische[sn]? Weltreichs?
 Bruce Allmächtig
 Bundeskanzlers? Kurz
 Bundesminister(s?|iums?|in) für Arbeit und Soziales
@@ -126,6 +128,7 @@ Bundesverbands? Digitale Wirtschaft
 Bürgerliche[mns]? Gesetzbuche?s?
 Buy and Hold
 Buy & Hold
+Buddhistische[snrm]? Dachverband(e?s)?|Zeitrechnung|Zentrums?|Union
 Byzantinische[nsm]? Reich(s|es)?
 Shabby Chic
 Café Imperial
@@ -161,7 +164,7 @@ Director of Legal
 Die Toten Hosen
 Die Leiden des jungen Werthers
 [Dd]ie Schöne und das Biest
-Digital IQ|Garage|Cockpits?|Content|Community|Detox|Analyst|Leader[ns]?|Consultants?|Equipments?|Onboarding|Transformations?|Learnings?|Events?|Hubs?|Masterings?|Marketers?|Radios?|Experiences?|Kits?
+Digital IQ|Garage|Cockpits?|Content|Community|Detox|Analyst|Leader[ns]?|Consultants?|Equipments?|Onboarding|Transformations?|Learnings?|Events?|Hubs?|Masterings?|Marketers?|Radios?|Experiences?|Kits?|Wallets?
 Digital Film Productions?
 Demokratischen? Republik|Partei|Volksrepublik
 ([Dd]e[rnsm]|[Ii]m) Englische[rn]? Gartens?
@@ -377,7 +380,7 @@ Hohen? Salve
 Hohen Neuendorfs?
 Holländische[rnm]? (Sauce|So(ß|ss)e|Reihe|Stra(ß|ss)e)
 Hotel Maritim
-Historische[snm]? Museums? (Frankfurt|Berlin|Speyer|Bremerhaven|Basel|Hannover|Luzern|Leipzig)
+Historische[snm]? Museums?
 IHK Mittleres Ruhrgebiet
 IHK Mittlerer Niederrhein
 [iI]m Großen und Ganzen
@@ -461,7 +464,10 @@ kaum Neues
 Kessel Buntes
 Kitchen Impossible
 Klein Nordendes?
+Kleinen? Weser|Donau
 Groß Nordendes?
+Großen? Elbstraße
+Großen? Elbstr.
 Kleine[nrm]? Bär|Tiergarten|Perkins|Antillen|Anfragen?|Zeitung|Belts?|Walachei|Leuchtkäfers?|Bergstra(ß|ss)e
 (Kommunist|Sozialdemokrat)ischen? Partei
 Kommunalen? Ordnungsdienst(es?|s)?
@@ -564,6 +570,7 @@ Nationale[rmn]? Sicherheitsbeirate?s?
 Native Advertisings?|Instruments|Apps?|Ads?|Speaker[sn]?
 Naturparks? Westliche Wälder
 Netzwerk Linkes Zentrum
+Neuen? Donau
 Neuen? Medien
 Neuen? Rechten?
 Neuen? Berliner Illustrierten?
@@ -585,6 +592,7 @@ Norddeutsche[nrm]? Bund(e?s)?|Rundfunks?|Bank
 Nördlichen? Kalkalpen
 Nuklearen? Planungsgruppe
 OB Jung
+Obere[rn]? Donau
 Oberste[nrsm]? Gericht(shofe?)?s?|Heeresleitung|Bundesgerichts?
 Orthopädischen? Klinik [A-Z].+
 of Modern
@@ -671,8 +679,8 @@ Römischen Reiche?s|Verträgen?
 Römischen Reiches Deutscher Nation
 Römische[nsm]? Reich
 Römische Reich Deutscher Nation
-Rote[nmrs]? Kreuz(es)?|Johannisbeeren?|Barons?|Burg|Riesen?|Milans?|Planet(en)?|Ruhr|Halbmonds?|Meer(es)?|Grütze|Rathaus(es)?|Beete|Karten?|Khmer|Liste|Armee|Platz|Rüben?|Kapelle|Tode?s?|Fabrik
-Rote[nr]? Bete
+Rote[nmrs]? Kreuz(es)?|Johannisbeeren?|Barons?|Burg|Riesen?|Milans?|Planet(en)?|Ruhr|Halbmonds?|Meer(es)?|Grütze|Rathaus(es)?|Beete|Karten?|Khmer|Liste|Armee|Platz|Rüben?|Kapelle|Tode?s?|Fabrik|Sees?
+Rote[nr]? Bete|Mains?
 Rote[nr]? Flora
 Rote[mns]? Klosters?
 Royal National Theatre
@@ -688,6 +696,7 @@ RTL Explosiv
 (Großdeutsch|Russisch|Tausendjährig)e[nsm]? Reiche?s?
 Sächsische[nrm]? Schweiz|Staats.+|Aufbaubank|Bauordnung
 Sächsische[nrm]? Schweiz-Osterzgebirge
+Sächsischen? Corona-Notfall-Verordnung
 Salvenach
 Samaritanische[nrm]? Pentateuchs?
 San Blas
@@ -705,7 +714,7 @@ Schön Klinik
 Schriftgelehrter?
 Schwäbisch Halls?
 Schwäbische[nmr]? Alb|Jura|Post
-Schwäbische[nsm]? Schnapsmuseums?|Zeitung|Turnerbunde?s?
+Schwäbische[nsmr]? Schnapsmuseums?|Zeitung|Turnerbunde?s?|Reichskreis(es)?
 Schwarzer? Bretter|Löcher|Körper|Kontinent|Witwe|Johannisbeeren?|Holunder|Peter|Freitag
 Schwarzen Brettern?|Brette?s|Meere?s|Körpers?|Kontinents?|Lochs|Löchern|Witwen?|Johannisbeeren?|Freitags
 Schwarze[mns]? Brett|Meer|Loch
@@ -794,6 +803,7 @@ The Nun
 Theodor Litt
 Theologischen? Fakultät
 Thüringischen? Landeszeitung
+Thüringer Allgemeinen?
 Thorsten Lahm
 Tiger Global
 Tote[nsm] Meer
@@ -822,6 +832,7 @@ Verlobten?
 Vereinigte[mns]? Staaten|Königreiche?s?|Bühnen|Arabischen?|Stadtwerken?|Republik
 Vereinigten? Bonner Wohnungsbaus?
 Vereinte[ns]? Nationen
+Vereinigten? Volksbank(en)?
 Via Alpina|San
 Vila Reals?
 Virtual Private Network

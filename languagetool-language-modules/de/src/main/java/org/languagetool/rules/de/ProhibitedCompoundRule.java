@@ -49,6 +49,7 @@ public class ProhibitedCompoundRule extends Rule {
   private static final List<Pair> lowercasePairs = Arrays.asList(
           // NOTE: words here must be all-lowercase
           // NOTE: no need to add words from confusion_sets.txt, they will be used automatically (if starting with uppercase char)
+          new Pair("lande", null, "landes", null),
           new Pair("ass", "Spielkarte", "pass", "Reisepass; Übergang durch ein Gebirge"),
           new Pair("türmer", "Turmwächter", "türme", "Plural von 'Turm' (Bauwerk)"),
           new Pair("soge", "ziehende Strömungen", "sorge", "bedrückendes Gefühl"),
@@ -121,6 +122,7 @@ public class ProhibitedCompoundRule extends Rule {
   private static final List<String> ignoreWords = Arrays.asList("Die", "De");
   private static final List<String> blacklistRegex = Arrays.asList(
     "stromkreis",  // vs. reis/reise
+    "Lande(basis|basen|region|gebiets?|gebieten?|regionen|betriebs?|betrieben?|offizieren?|bereichs?|bereichen?|einrichtung|einrichtungen|massen?|plans?|versuchs?|versuchen?)",  // vs. Landes
     "Model(vertrags?|verträgen?|erfahrung|erfahrungen|szene)",
     "(Raum|Surf|Jazz|Herbst|Gymnastik|Normal)schuhen?",
     "preis",  // Getränkepreis etc.
@@ -137,6 +139,9 @@ public class ProhibitedCompoundRule extends Rule {
     "Gra(ph|f)it"   // Grafit/Graphit
   );
   private static final Set<String> blacklist = new HashSet<>(Arrays.asList(
+          "Investitionsbetrug",  // vs. betrag
+          "Investitionsbetruges",  // vs. betrag
+          "Investitionsbetrugs",  // vs. betrag
           "Luftwert",  // vs. Lust
           "Luftwerte",  // vs. Lust
           "Luftwerts",  // vs. Lust
@@ -1065,7 +1070,8 @@ public class ProhibitedCompoundRule extends Rule {
           "Rasenwurzeln", // vs nasen
           "Wandlungskapital", // vs Handlungskapital
           "Wandlungskapitals", // vs Handlungskapital
-          "Themenboxen" // vs bogen
+          "Themenboxen", // vs bogen
+          "Superyacht" // vs macht
   ));
 
   // have per-class static list of these and reference that in instance

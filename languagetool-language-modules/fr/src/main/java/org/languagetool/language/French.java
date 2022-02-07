@@ -260,6 +260,7 @@ public class French extends Language implements AutoCloseable {
       case "MOTS_INCOMP": return 50; // greater than PRONSUJ_NONVERBE and DUPLICATE_DETERMINER
       case "PRIME-TIME": return 50; //  // greater than agreement rules
       case "A_VERBE_INFINITIF": return 20; // greater than PRONSUJ_NONVERBE
+      case "VOIR_VOIRE": return 20; // greater than PLACE_DE_LA_VIRGULE
       case "CAT_TYPOGRAPHIE": return 20; // greater than PRONSUJ_NONVERBE or agreement rules
       case "CAT_HOMONYMES_PARONYMES": return 20;
       case "CAT_TOURS_CRITIQUES": return 20;
@@ -310,12 +311,10 @@ public class French extends Language implements AutoCloseable {
       case "AGREEMENT_POSTPONED_ADJ": return -50;
       case "MULTI_ADJ": return -50;
       case "POINTS_SUSPENSIONS_SPACE": return -50; // lesser than grammar rules
-      case "MOT_TRAIT_MOT": return -50; // lesser than grammar rules
       case "ESSENTIEL": return -50; // lesser than grammar rules
       case "CONFUSION_AL_LA": return -50; // lesser than AUX_AVOIR_VCONJ
       case "IMPORTANT": return -50; // lesser than grammar rules
       case "SOUHAITER": return -50; // lesser than grammar rules
-      case "SYNONYMES": return -50; // lesser than grammar rules
       case "CAR": return -50; // lesser than grammar rules
       case "AIMER": return -50; // lesser than grammar rules
       case "CONFUSION_RULE_PREMIUM": return -50; // lesser than PRONSUJ_NONVERBE
@@ -324,9 +323,12 @@ public class French extends Language implements AutoCloseable {
       case "MAIS_SENT_START": return -151; // lower than grammalecte rules
       case "ELISION": return -200; // should be lower in priority than spell checker
       case "POINT": return -200; // should be lower in priority than spell checker
+      case "REPETITIONS_STYLE": return -250;  // repetition style rules, usually with prefix REP_
       case "UPPERCASE_SENTENCE_START": return -300;
       case "FRENCH_WHITESPACE_STRICT": return -350; // picky; if on, it should overwrite FRENCH_WHITESPACE
       case "FRENCH_WHITESPACE": return -400; // lesser than UPPERCASE_SENTENCE_START and FR_SPELLING_RULE
+      case "MOT_TRAIT_MOT": return -400; // lesser than UPPERCASE_SENTENCE_START and FR_SPELLING_RULE
+
 
     }
     if (id.startsWith("grammalecte_")) {
@@ -360,4 +362,15 @@ public class French extends Language implements AutoCloseable {
     return ruleMatches;
   }
 
+
+  @Override
+  public List<Rule> getRelevantRemoteRules(ResourceBundle messageBundle, List<RemoteRuleConfig> configs, GlobalConfig globalConfig, UserConfig userConfig, Language motherTongue, List<Language> altLanguages, boolean inputLogging) throws IOException {
+    List<Rule> rules = new ArrayList<>(super.getRelevantRemoteRules(
+      messageBundle, configs, globalConfig, userConfig, motherTongue, altLanguages, inputLogging));
+
+    // no description needed - matches based on automatically created rules with descriptions provided by remote server
+    rules.addAll(GRPCRule.createAll(this, configs, inputLogging,
+      "AI_FR_", "INTERNAL - dynamically loaded rule supported by remote server"));
+    return rules;
+  }
 }

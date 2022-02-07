@@ -107,6 +107,7 @@ public class AgreementRule extends Rule {
     "fast",
     "ganz",
     "geradezu",
+    "zeitweise",
     "halbwegs",
     "höchst",
     "komplett",
@@ -126,6 +127,7 @@ public class AgreementRule extends Rule {
   ));
 
   private static final Set<String> VIELE_WENIGE_LOWERCASE = new HashSet<>(Arrays.asList(
+    "manche",
     "jegliche",
     "jeglicher",
     "andere",

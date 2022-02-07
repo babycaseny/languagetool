@@ -5113,3 +5113,48 @@ Meat Loaf	NNP
 Banach–Tarski	NNP
 L'Équipe	NNP
 Robin Thick	NNP
+Need for Speed Underground	NNP
+Number One Observatory Circle	NNP
+LittleBigPlanet	NNP
+LittleBIGPlanet	NNP
+Little BIG Planet	NNP
+Little Big Planet	NNP
+Carl von Ossietzky	NNP
+Carl von Clausewitz	NNP
+dos Santos	NNP
+Sergio Mattarella	NNP
+Matteo Renzi	NNP
+Ronda Rousey	NNP
+Gina Raimondo	NNP
+Lindsay Lohan	NNP
+Ron DeSantis	NNP
+Cincinnati Bengals	NNPS
+Greg Abbott	NNP
+Gustave Le Bon	NNP
+Gustave Eiffel	NNP
+Centrale des Arts	NNP
+Arsène Wenger	NNP
+Alex Ferguson	NNP
+Sean McVay	NNP
+Zac Taylor	NNP
+SoFi Stadium	NNP
+Taylor Rapp	NNP
+Jalen Ramsey	NNP
+Cam Akers	NNP
+Tyler Higbee	NNP
+Cooper Kupp	NNP
+Eric Weddle	NNP
+Matt Gay	NNP
+Ja'Marr Chase	NNP
+Joe Mixon	NNP
+Evan McPherson	NNP
+Tyler Boyd	NNP
+Jared Goff	NNP
+Matthew Stafford	NNP
+Joe Burrow	NNP
+Sienna Miller	NNP
+Kendrick Lamar	NNP
+Kalmius River	NNP
+Dizzy Gillespie	NNP
+Royal Caribbean Cruises	NNP
+Royal Caribbean Group	NNP

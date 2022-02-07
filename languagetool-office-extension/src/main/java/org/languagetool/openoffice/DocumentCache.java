@@ -23,8 +23,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.languagetool.openoffice.DocumentCursorTools.DocumentText;
-import org.languagetool.openoffice.FlatParagraphTools.ParagraphContainer;
-import org.languagetool.openoffice.OfficeDrawTools.ImpressParagraphContainer;
+import org.languagetool.openoffice.FlatParagraphTools.FlatParagraphContainer;
+import org.languagetool.openoffice.OfficeDrawTools.ParagraphContainer;
+import org.languagetool.openoffice.OfficeTools.DocumentType;
 
 import com.sun.star.lang.Locale;
 import com.sun.star.lang.XComponent;
@@ -60,27 +61,27 @@ public class DocumentCache implements Serializable {
   private final List<int[]> footnotes = new ArrayList<int[]>(); // stores the footnotes of the paragraphs;
   private final List<TextParagraph> toTextMapping = new ArrayList<>(); // Mapping from FlatParagraph to DocumentCursor
   private final List<List<Integer>> toParaMapping = new ArrayList<>(); // Mapping from DocumentCursor to FlatParagraph
-  private final boolean isImpress;
+  private final DocumentType docType;
   private int defaultParaCheck;
   private boolean isReset = false;
 
-  DocumentCache(boolean isImpress) {
+  DocumentCache(DocumentType docType) {
     debugMode = OfficeTools.DEBUG_MODE_DC;
-    this.isImpress = isImpress;
+    this.docType = docType;
   }
 
   DocumentCache(DocumentCursorTools docCursor, FlatParagraphTools flatPara, int defaultParaCheck, Locale docLocale,
-      XComponent xComponent, boolean isImpress) {
+      XComponent xComponent, DocumentType docType) {
     debugMode = OfficeTools.DEBUG_MODE_DC;
     this.defaultParaCheck = defaultParaCheck;
-    this.isImpress = isImpress;
+    this.docType = docType;
     refresh(docCursor, flatPara, docLocale, xComponent, 0);
   }
 
   DocumentCache(DocumentCache in) {
     debugMode = OfficeTools.DEBUG_MODE_DC;
     add(in);
-    isImpress = in.isImpress;
+    docType = in.docType;
   }
 
   /**
@@ -104,14 +105,15 @@ public class DocumentCache implements Serializable {
   /**
    * Refresh the cache
    */
-  public synchronized void refresh(DocumentCursorTools docCursor, FlatParagraphTools flatPara, Locale docLocale, XComponent xComponent, int fromWhere) {
+  public synchronized void refresh(DocumentCursorTools docCursor, FlatParagraphTools flatPara
+      , Locale docLocale, XComponent xComponent, int fromWhere) {
     if (debugMode) {
       MessageHandler.printToLogFile("DocumentCache: refresh: Called from: " + fromWhere);
     }
-    if (isImpress) {
-      refreshImpressCache(xComponent);
+    if (docType != DocumentType.WRITER) {
+      refreshImpressCalcCache(xComponent);
     } else {
-      refreshWriterCache(docCursor, flatPara, docLocale);
+      refreshWriterCache(docCursor, flatPara, docLocale, fromWhere);
     }
   }
 
@@ -119,7 +121,7 @@ public class DocumentCache implements Serializable {
    * reset the document cache load the actual state of the document into the cache
    * is only used for writer documents
    */
-  private void refreshWriterCache(DocumentCursorTools docCursor, FlatParagraphTools flatPara, Locale docLocale) {
+  private void refreshWriterCache(DocumentCursorTools docCursor, FlatParagraphTools flatPara, Locale docLocale, int fromWhere) {
     try {
       long startTime = System.currentTimeMillis();
       isReset = true;
@@ -146,7 +148,7 @@ public class DocumentCache implements Serializable {
           }
         }
       }
-      ParagraphContainer paragraphContainer = null;
+      FlatParagraphContainer paragraphContainer = null;
       List<List<String>> textParas = new ArrayList<>();
       if (documentTexts.get(CURSOR_TYPE_TEXT) != null) {
         for (DocumentText documentText : documentTexts) {
@@ -173,8 +175,10 @@ public class DocumentCache implements Serializable {
         return;
       }
       mapParagraphs(textParas);
-      long endTime = System.currentTimeMillis();
-      MessageHandler.printToLogFile("Time to generate cache: " + (endTime - startTime));
+      if (fromWhere != 2) { //  do not write time to log for text level queue
+        long endTime = System.currentTimeMillis();
+        MessageHandler.printToLogFile("Time to generate cache(" + fromWhere + "): " + (endTime - startTime));
+      }
     } finally {
       isReset = false;
     }
@@ -310,8 +314,15 @@ public class DocumentCache implements Serializable {
   /**
    * reset the document cache for impress documents
    */
-  private void refreshImpressCache(XComponent xComponent) {
-    ImpressParagraphContainer container = OfficeDrawTools.getAllParagraphs(xComponent);
+  private void refreshImpressCalcCache(XComponent xComponent) {
+    ParagraphContainer container;
+    if (docType == DocumentType.IMPRESS) {
+      container = OfficeDrawTools.getAllParagraphs(xComponent);
+    } else if (docType == DocumentType.CALC) {
+      container = OfficeSpreadsheetTools.getAllParagraphs(xComponent);
+    } else {
+      return;
+    }
     clear();
     paragraphs.addAll(container.paragraphs);
     for (int i = 0; i < NUMBER_CURSOR_TYPES - 1; i++) {
