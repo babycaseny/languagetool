@@ -141,6 +141,45 @@ RB => Règles Brutes
         </pattern>
         <disambig action="remove" postag="J e s"/>
     </rule>
+    <rulegroup id="CEUX_QUI_L_ECOUTE" name="ceux qui l'écoute">
+        <rule>
+        <pattern>
+            <token><exception postag="P"/></token>
+            <token regexp="yes">ceux|celles?|celui</token>
+            <token>qui</token>
+            <marker>
+                <token postag="D e s">l'</token>
+            </marker>
+            <and>
+            <token postag="N.*" postag_regexp="yes"/>
+            <token postag="V.*" postag_regexp="yes"/>
+            </and>
+        </pattern>
+        <disambig action="replace" postag="R pers obj e s"/>
+        </rule>
+        <rule>
+            <pattern>
+                <token><exception postag="P"/></token>
+                <token regexp="yes">ceux|celles?|celui</token>
+                <token>qui</token>
+                <token>l'</token>
+                <marker>
+                    <token postag="N.*" postag_regexp="yes"/>
+                </marker>
+            </pattern>
+            <disambig action="replace" postag="V ind pres 3 s"/>
+        </rule>
+    </rulegroup>
+    <rule id="JE" name="je">
+        <pattern>
+            <token>je</token>
+            <token postag="R pers obj.*" postag_regexp="yes"/>
+            <marker>
+                <token>permets</token>
+            </marker>
+        </pattern>
+        <disambig action="remove" postag="V ind pres 2 s"/>
+    </rule>
     <rule id="STEAK_FRITES" name="steak frites">
         <pattern>
             <token regexp="yes">steaks?</token>
@@ -184,13 +223,15 @@ RB => Règles Brutes
             <marker>
                 <token regexp="yes">niveaux?</token>
             </marker>
-            <token regexp="yes">portières</token>
+            <token regexp="yes">portières?</token>
         </pattern>
         <disambig action="filter" postag="V.* ppa.*"/>
     </rule>
     <rule id="INTERDIT" name="interdit">
         <pattern>
-            <token postag="N.*" postag_regexp="yes"/>
+            <token postag="N.*" postag_regexp="yes">
+                <exception postag="V (avoir|etre).*|A" postag_regexp="yes"/>
+            </token>
             <marker>
                 <token>interdit</token>
             </marker>
@@ -2361,6 +2402,16 @@ RB => Règles Brutes
     </rule>
     <!-- END: proper nouns -->
     <!-- CATEGORY: nouns, nominal groups (particular cases) -->
+    <rule id="ORANGE" name="orange">
+        <!-- It could be useful for other color names? -->
+        <pattern>
+            <token regexp="yes" inflected="yes">un|ce</token>
+            <marker>
+                <token postag="N.*" postag_regexp="yes" inflected="yes">orange</token>
+            </marker>
+        </pattern>
+        <disambig action="filter" postag="N.*"></disambig>
+    </rule>
     <rule id="BROSSE" name="brosse">
         <!-- with agreement error -->
         <pattern>
@@ -3615,6 +3666,29 @@ RB => Règles Brutes
     </rulegroup>
     <!-- CATEGORY: verbs (particular cases) -->
     <!-- TODO: move down -->
+    <rulegroup id="FAIS_ATTENTION" name="fais attention">
+        <rule>
+        <pattern>
+            <token postag="SENT_START|M nonfin" postag_regexp="yes"/>
+            <marker>
+                <token regexp="yes">faisons|fais|faites</token>
+            </marker>
+            <token>attention</token>
+        </pattern>
+        <disambig action="remove" postag="V ind pres.*"/>
+        </rule>
+        <rule>
+            <pattern>
+                <token postag="[ZT].*" postag_regexp="yes"/>
+                <marker>
+                    <token regexp="yes">faisons|fais|faites</token>
+                </marker>
+                <token skip="-1">attention</token>
+                <token>!</token>
+            </pattern>
+            <disambig action="remove" postag="V ind pres.*"/>
+        </rule>
+    </rulegroup>
     <rulegroup id="SEMBLE_T_IL" name="semble-t-il">
         <rule>
         <pattern>
@@ -5990,6 +6064,11 @@ RB => Règles Brutes
     </rulegroup>
     <rulegroup id="not_imperative" name="not imperative">
         <rule>
+            <antipattern>
+                <token>ne</token>
+                <token postag="R pers obj.*" postag_regexp="yes"/>
+                <token postag="V .*" postag_regexp="yes"/>
+            </antipattern>
             <pattern>
                 <token postag="R pers.*" postag_regexp="yes">
                     <exception regexp="yes">-.*</exception></token>

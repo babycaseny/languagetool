@@ -574,6 +574,7 @@ AppleCare
 watchOS
 tvOS
 Pokémon
+Pokémon Go
 Björk
 Charles de Gaulle
 The Globe and Mail
@@ -3912,3 +3913,16 @@ Royal Caribbean Cruises
 Royal Caribbean Group
 3-D Secure
 3D Secure
+René Benko
+Peter Benchley
+Ferdinand Porsche
+iRobot Roomba
+Charlie Munger
+Keir Starmer
+Miss Piggy
+Ned Flanders
+Union Pacific
+Union Pacific Railroad
+MGM Resorts
+Digital Turbine
+Supercar Blondie

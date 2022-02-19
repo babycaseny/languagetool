@@ -62,7 +62,6 @@ public class DocumentCache implements Serializable {
   private final List<TextParagraph> toTextMapping = new ArrayList<>(); // Mapping from FlatParagraph to DocumentCursor
   private final List<List<Integer>> toParaMapping = new ArrayList<>(); // Mapping from DocumentCursor to FlatParagraph
   private final DocumentType docType;
-  private int defaultParaCheck;
   private boolean isReset = false;
 
   DocumentCache(DocumentType docType) {
@@ -70,10 +69,9 @@ public class DocumentCache implements Serializable {
     this.docType = docType;
   }
 
-  DocumentCache(DocumentCursorTools docCursor, FlatParagraphTools flatPara, int defaultParaCheck, Locale docLocale,
+  DocumentCache(DocumentCursorTools docCursor, FlatParagraphTools flatPara, Locale docLocale,
       XComponent xComponent, DocumentType docType) {
     debugMode = OfficeTools.DEBUG_MODE_DC;
-    this.defaultParaCheck = defaultParaCheck;
     this.docType = docType;
     refresh(docCursor, flatPara, docLocale, xComponent, 0);
   }
@@ -234,8 +232,8 @@ public class DocumentCache implements Serializable {
                 : paragraphs.get(i);
             int j = nText.get(CURSOR_TYPE_TEXT) + 1;
             if (debugMode) {
-              MessageHandler.printToLogFile("Not mapped Paragraph(" + i + "): " + flatPara);
-              MessageHandler.printToLogFile("firstText: " + firstText + "; j = " + j);
+              MessageHandler.printToLogFile("DocumentCache: mapParagraphs: Not mapped Paragraph(" + i + "): " + flatPara);
+              MessageHandler.printToLogFile("DocumentCache: mapParagraphs: firstText: " + firstText + "; j = " + j);
             }
             if (j < textParas.get(CURSOR_TYPE_TEXT).size()) {
               String textPara = hasFootnote ? SingleCheck.removeFootnotes(textParas.get(CURSOR_TYPE_TEXT).get(j), footnotes.get(i))
@@ -269,6 +267,7 @@ public class DocumentCache implements Serializable {
                 "WARNING: DocumentCache: Could not map Paragraph(" + i + "): '" + paragraphs.get(i) + "'");
           }
           if (debugMode) {
+            MessageHandler.printToLogFile("DocumentCache: mapParagraphs:");
             for (int k = 0; k < NUMBER_CURSOR_TYPES; k++) {
               MessageHandler.printToLogFile("Actual Cursor Paragraph (Type " + k + "): "
                   + (nText.get(k) < textParas.get(k).size() ? "'" + textParas.get(k).get(nText.get(k)) + "'"
@@ -453,7 +452,6 @@ public class DocumentCache implements Serializable {
     footnotes.addAll(in.footnotes);
     toTextMapping.addAll(in.toTextMapping);
     toParaMapping.addAll(in.toParaMapping);
-    defaultParaCheck = in.defaultParaCheck;
   }
   
   /**
@@ -622,7 +620,7 @@ public class DocumentCache implements Serializable {
     }
     int endPos = textParagraph.number + 1 + parasToCheck;
     if (!checkOnlyParagraph) {
-      endPos += defaultParaCheck;
+      endPos += parasToCheck * OfficeTools.CHECK_MULTIPLIKATOR;
     }
     if (addParas) {
       endPos += parasToCheck;

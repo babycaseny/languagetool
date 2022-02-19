@@ -4131,21 +4131,22 @@
 
     <rule id="num_gen" name="dopełniacz po liczbach > 5">
         <pattern>
-            <token regexp="yes">\d*[5-9]|\d+0|1[1-9]
+            <token regexp="yes">\d*[5-9]\d*|\d+0\d*|1[1-9]\d*
                 <exception scope="previous" inflected="yes">rok</exception>
                 <exception regexp="yes">1\d{3}</exception>
             </token>
             <marker>
-                <token postag="(?:adj|ger|subst|pact|ppas):pl.*gen.*|brev.*" postag_regexp="yes"/>
+                <token postag="(?:adj|ger|subst|pact|ppas):pl.*gen.*|brev.*" postag_regexp="yes"><exception>gram</exception></token>
             </marker>
         </pattern>
         <disambig action="filterall"/>
         <example type="untouched">Do teorii ruchów Browna wiele wniósł w latach 1906–1917 Marian Smoluchowski.</example>
+        <example type="untouched">Kupił 100 gram amfetaminy.</example>
     </rule>
 
     <rule id="num_tys_gen" name="dopełniacz po liczbach > 5 ze skrótem tys.">
         <pattern>
-            <token regexp="yes">\d*[5-9]|\d+0|1[1-9]</token>
+            <token regexp="yes">\d*[5-9]\d*|\d+0\d*|1[1-9]\d*</token>
             <token>tys</token>
             <token>.</token>
             <marker>
@@ -7419,17 +7420,19 @@
     <rule name="mianownik + jest + mianownik" id="nom_jest_nom">
         <pattern>
             <unify>
-                <feature id="number"/>
+                <feature id="number"/><feature id="gender"/>
                 <marker>
                     <token postag="(?:adj|pact|subst|ger|ppas).*nom[:\.].*" postag_regexp="yes"/>
-                    <token postag="verb:fin.*:ter:imperf:nonrefl" inflected="yes" postag_regexp="yes">być</token>
+                    <unify-ignore>
+                        <token postag="verb:fin.*:ter:imperf:nonrefl" inflected="yes" postag_regexp="yes">być</token>
+                    </unify-ignore>
                     <token postag="(?:adj|pact|subst|ger|ppas).*nom[:\.].*" postag_regexp="yes"/>
                 </marker>
             </unify>
         </pattern>
         <disambig action="unify"/>
         <example type="ambiguous" inputform="niewielkie[niewielki/adj:pl:acc:m2.m3.f.n1.n2.p2.p3:pos,niewielki/adj:pl:nom.voc:m2.m3.f.n1.n2.p2.p3:pos,niewielki/adj:sg:acc:n1.n2:pos,niewielki/adj:sg:nom.voc:n1.n2:pos]"
-                 outputform="niewielkie[niewielki/adj:sg:nom.voc:n1.n2:pos]">Zasadne jest <marker>niewielkie</marker> podtopienie.</example>
+                 outputform="niewielkie[niewielki/adj:pl:nom.voc:m2.m3.f.n1.n2.p2.p3:pos,niewielki/adj:sg:nom.voc:n1.n2:pos]">Zasadne jest <marker>niewielkie</marker> podtopienie.</example>
     </rule>
 
     <rule name="mianownik + conj + jest + mianownik" id="nom_conj_jest_nom">
@@ -13532,6 +13535,24 @@
                 <token>masz</token>
         </pattern>
         <disambig action="ignore_spelling"/>
+    </rule>
+
+    <rule id="wezej" name="wężej">
+        <pattern>
+            <marker>
+                <token>wężej</token>
+            </marker>
+        </pattern>
+        <disambig action="ignore_spelling"></disambig>
+    </rule>
+
+    <rule id="austryjacki" name="austryjacki">
+        <pattern>
+            <marker>
+                <token regexp="yes">austryjack.*|Austryja.*</token>
+            </marker>
+        </pattern>
+        <disambig action="ignore_spelling"></disambig>
     </rule>
 
 </rules>

@@ -85,6 +85,7 @@ class OfficeTools {
   public static final int MAX_SUGGESTIONS = 15;  // Number of suggestions maximal shown in LO/OO
   public static final int NUMBER_TEXTLEVEL_CACHE = 4;  // Number of caches for matches of text level rules
   public static final String MULTILINGUAL_LABEL = "99-";  // Label added in front of variant to indicate a multilingual paragraph (returned is the main language)
+  public static final int CHECK_MULTIPLIKATOR = 40;   //  Number of minimum checks for a first check run
   
   public static int DEBUG_MODE_SD = 0;            //  Set Debug Mode for SingleDocument
   public static int DEBUG_MODE_SC = 0;            //  Set Debug Mode for SingleCheck
@@ -97,7 +98,7 @@ class OfficeTools {
   public static boolean DEBUG_MODE_LD = false;    //  Activate Debug Mode for LtDictionary
   public static boolean DEBUG_MODE_CD = false;    //  Activate Debug Mode for SpellAndGrammarCheckDialog
   public static boolean DEBUG_MODE_IO = false;    //  Activate Debug Mode for Cache save to file
-  public static boolean DEBUG_MODE_SR = false;    //  Activate Debug Mode for Cache save to file
+  public static boolean DEBUG_MODE_SR = false;    //  Activate Debug Mode for SortedTextRules
   public static boolean DEVELOP_MODE = false;     //  Activate Development Mode
 
   public  static final String CONFIG_FILE = "Languagetool.cfg";
@@ -147,8 +148,7 @@ class OfficeTools {
    * Returns the current XComponent 
    * Returns null if it fails
    */
-  @Nullable    String version = System.getProperty("java.version");
-
+  @Nullable
   static XComponent getCurrentComponent(XComponentContext xContext) {
     try {
       XDesktop xdesktop = getDesktop(xContext);
@@ -183,11 +183,11 @@ class OfficeTools {
   static void printPropertySet (Object o) {
     XPropertySet propSet = UnoRuntime.queryInterface(XPropertySet.class, o);
     if (propSet == null) {
-      MessageHandler.printToLogFile("XPropertySet == null");
+      MessageHandler.printToLogFile("OfficeTools: printPropertySet: XPropertySet == null");
       return;
     }
     XPropertySetInfo propertySetInfo = propSet.getPropertySetInfo();
-    MessageHandler.printToLogFile("PropertySet:");
+    MessageHandler.printToLogFile("OfficeTools: printPropertySet: PropertySet:");
     for (Property property : propertySetInfo.getProperties()) {
       MessageHandler.printToLogFile("Name: " + property.Name + ", Type: " + property.Type.getTypeName());
     }
@@ -297,39 +297,41 @@ class OfficeTools {
   public static boolean dispatchCmd(String cmd, PropertyValue[] props, XComponentContext xContext) {
     try {
       if (xContext == null) {
+        MessageHandler.printToLogFile("OfficeTools: dispatchCmd: xContext == null");
         return false;
       }
       XMultiComponentFactory xMCF = UnoRuntime.queryInterface(XMultiComponentFactory.class,
               xContext.getServiceManager());
       if (xMCF == null) {
+        MessageHandler.printToLogFile("OfficeTools: dispatchCmd: xMCF == null");
         return false;
       }
       Object desktop = xMCF.createInstanceWithContext("com.sun.star.frame.Desktop", xContext);
       if (desktop == null) {
+        MessageHandler.printToLogFile("OfficeTools: dispatchCmd: desktop == null");
         return false;
       }
       XDesktop xdesktop = UnoRuntime.queryInterface(XDesktop.class, desktop);
       if (xdesktop == null) {
+        MessageHandler.printToLogFile("OfficeTools: dispatchCmd: xdesktop == null");
         return false;
       }
-      
       Object helper = xMCF.createInstanceWithContext("com.sun.star.frame.DispatchHelper", xContext);
       if (helper == null) {
+        MessageHandler.printToLogFile("OfficeTools: dispatchCmd: helper == null");
         return false;
       }
       XDispatchHelper dispatchHelper = UnoRuntime.queryInterface(XDispatchHelper.class, helper);
       if (dispatchHelper == null) {
+        MessageHandler.printToLogFile("OfficeTools: dispatchCmd: dispatchHelper == null");
         return false;
       }
-  
       XDispatchProvider provider = UnoRuntime.queryInterface(XDispatchProvider.class, xdesktop.getCurrentFrame());
       if (provider == null) {
-        MessageHandler.printToLogFile("Dispatch: provider == null");
+        MessageHandler.printToLogFile("OfficeTools: dispatchCmd: provider == null");
         return false;
       }
-
       dispatchHelper.executeDispatch(provider, cmd, "", 0, props);
-
       return true;
     } catch (Throwable t) {
       MessageHandler.printException(t);     // all Exceptions thrown by UnoRuntime.queryInterface are caught
@@ -514,7 +516,6 @@ class OfficeTools {
     if (o instanceof Boolean) {
       return ((Boolean) o).booleanValue();
     }
-//    MessageHandler.printToLogFile("Object is not an expected boolean!");
     return false;
   }
   

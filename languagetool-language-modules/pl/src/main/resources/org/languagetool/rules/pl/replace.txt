@@ -6,6 +6,14 @@
 # korektor pisowni.
 #
 
+akcesorii=akcesoriów
+akwarii=akwariów
+akuku=a kuku
+apropo=à propos
+apropos=à propos
+centr=centrów
+jurz=już
+poraz=po raz
 piaty=piąty
 dojąć=dojść
 dzieję=dzieje

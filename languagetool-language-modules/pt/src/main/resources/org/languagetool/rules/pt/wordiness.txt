@@ -284,6 +284,8 @@ possíveis cursos de ação=escolhas
 possíveis cursos de acção=escolhas
 possível curso de ação=escolha
 possível curso de acção=escolha
+pouco éticas=reprováveis
+pouco ético=reprovável
 pouco mais ou menos=aproximadamente
 pra além disso=além disso
 pra efeitos de=para
@@ -347,6 +349,9 @@ vidas reais=realidades
 vimos solicitar=solicitamos
 vítima que morreu=vítima mortal
 vítimas que morreram=vítimas mortais
+voltamos a repetir que=reforçamos que
+voltámos a repetir que=reforçámos que
+volto a repetir que=reforço que
 #
 #######################
 # GRUPOS DE  REGRAS ###
@@ -370,12 +375,16 @@ andaram para a frente=avançaram
 caminharam para a frente=avançaram
 # AVANÇAR/RECUAR *END*
 #
-# CAPACIDADE(S) ATAQUE/DEFESA *START*
+# CAPACIDADE(S)/ESTRATÉGIA(S) ATAQUE/DEFESA *START*
 capacidade de ataque=capacidade ofensiva
 capacidades de ataque=capacidades ofensivas
 capacidade de defesa=capacidade defensiva
 capacidades de defesa=capacidades defensivas
-# CAPACIDADE(S) ATAQUE/DEFESA *END*
+estratégia de ataque=estratégia ofensiva
+estratégias de ataque=estratégias ofensivas
+estratégia de defesa=estratégia defensiva
+estratégias de defesa=estratégias defensivas
+# CAPACIDADE(S)/ESTRATÉGIA(S) ATAQUE/DEFESA *END*
 #
 # DAR UMA +ÇÃO → VERBO_INFINITIVO *START*
 dar uma explicação da=explicar a

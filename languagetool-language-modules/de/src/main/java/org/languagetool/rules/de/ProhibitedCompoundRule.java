@@ -49,6 +49,8 @@ public class ProhibitedCompoundRule extends Rule {
   private static final List<Pair> lowercasePairs = Arrays.asList(
           // NOTE: words here must be all-lowercase
           // NOTE: no need to add words from confusion_sets.txt, they will be used automatically (if starting with uppercase char)
+          new Pair("beine", "Körperteil", "biene", "Insekt"),
+          new Pair("rebe", "Weinrebe", "reibe", "Küchenreibe"),
           new Pair("lande", null, "landes", null),
           new Pair("ass", "Spielkarte", "pass", "Reisepass; Übergang durch ein Gebirge"),
           new Pair("türmer", "Turmwächter", "türme", "Plural von 'Turm' (Bauwerk)"),
@@ -139,6 +141,28 @@ public class ProhibitedCompoundRule extends Rule {
     "Gra(ph|f)it"   // Grafit/Graphit
   );
   private static final Set<String> blacklist = new HashSet<>(Arrays.asList(
+          "Bankangabe",  // vs. band
+          "Bankangaben",  // vs. band
+          "Lehrbecken",  // vs. ecken
+          "Strohseide",  // vs. seile
+          "Filtermaschine",  // vs. Folter
+          "Filtermaschinen",  // vs. Folter
+          "Kenncode",  // vs. ode
+          "Kenncodes",  // vs. ode
+          "Sicherheitshalt",  // vs. haft
+          "Sicherheitshalts",  // vs. haft
+          "Sicherheitshalte",  // vs. haft
+          "Wandschalter",  // vs. hand
+          "Wandschalters",  // vs. hand
+          "Wildgericht",  // vs. wald
+          "Wildgerichte",  // vs. wald
+          "Haltungskonzept",  // vs. haft
+          "Schenkelbiene",  // vs. beine
+          "Schenkelbienen",  // vs. beine
+          "Felsenbiene",  // vs. beine
+          "Felsenbienen",  // vs. beine
+          "Killerbiene",  // vs. beine
+          "Killerbienen",  // vs. beine
           "Investitionsbetrug",  // vs. betrag
           "Investitionsbetruges",  // vs. betrag
           "Investitionsbetrugs",  // vs. betrag
@@ -1250,7 +1274,7 @@ public class ProhibitedCompoundRule extends Rule {
       long variantCount = lm.getCount(variant);
       //float factor = variantCount / (float)Math.max(wordCount, 1);
       //System.out.println("word: " + wordPart + " (" + wordCount + "), variant: " + variant + " (" + variantCount + "), factor: " + factor + ", pair: " + pair);
-      if (variantCount > 0 && wordCount == 0 && !blacklist.contains(wordPart) && !isMisspelled(variant) && blacklistRegex.stream().noneMatch(k -> wordPart.matches(".*" + k + ".*"))) {
+      if (variantCount > getThreshold() && wordCount == 0 && !blacklist.contains(wordPart) && !isMisspelled(variant) && blacklistRegex.stream().noneMatch(k -> wordPart.matches(".*" + k + ".*"))) {
         String msg;
         if (pair.part1Desc != null && pair.part2Desc != null) {
           msg = "Möglicher Tippfehler. " + uppercaseFirstChar(pair.part1) + ": " + pair.part1Desc + ", " + uppercaseFirstChar(pair.part2) + ": " + pair.part2Desc;
@@ -1271,6 +1295,10 @@ public class ProhibitedCompoundRule extends Rule {
     }
     partsStartPos += wordPart.length() + 1;
     return partsStartPos;
+  }
+
+  int getThreshold() {
+    return 0;
   }
 
   private String cleanId(String id) {

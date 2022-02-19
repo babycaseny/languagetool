@@ -98,29 +98,28 @@ public class MultiDocumentsHandler {
   private Configuration config = null;
   private LinguisticServices linguServices = null;
   private SortedTextRules sortedTextRules;
-  private Set<String> disabledRulesUI;        //  Rules disabled by context menu or spell dialog
-  private final List<Rule> extraRemoteRules;  //  store of rules supported by remote server but not locally
-  private final LtDictionary dictionary;      //  internal dictionary of LT defined words 
-  private LtCheckDialog ltDialog = null;      //  LT spelling and grammar check dialog
-  private boolean dialogIsRunning = false;    //  The dialog was started     
+  private Map<String, Set<String>> disabledRulesUI; //  Rules disabled by context menu or spell dialog
+  private final List<Rule> extraRemoteRules;        //  store of rules supported by remote server but not locally
+  private final LtDictionary dictionary;            //  internal dictionary of LT defined words 
+  private LtCheckDialog ltDialog = null;            //  LT spelling and grammar check dialog
+  private boolean dialogIsRunning = false;          //  The dialog was started     
   
-  private XComponentContext xContext;         //  The context of the document
-  private final List<SingleDocument> documents;  //  The List of LO documents to be checked
-//  private XComponent goneComponent = null;      //  save component of closed document
+  private XComponentContext xContext;               //  The context of the document
+  private final List<SingleDocument> documents;     //  The List of LO documents to be checked
   private boolean isDisposed = false;
-  private boolean recheck = true;             //  if true: recheck the whole document at next iteration
-  private int docNum;                         //  number of the current document
+  private boolean recheck = true;                   //  if true: recheck the whole document at next iteration
+  private int docNum;                               //  number of the current document
   
-  private int numSinceHeapTest = 0;           //  number of checks since last heap test
-  private boolean heapLimitReached = false;   //  heap limit is reached
+  private int numSinceHeapTest = 0;                 //  number of checks since last heap test
+  private boolean heapLimitReached = false;         //  heap limit is reached
 
-  private boolean noBackgroundCheck = false;  //  is LT switched off by config
-  private boolean useQueue = true;            //  will be overwritten by config
+  private boolean noBackgroundCheck = false;        //  is LT switched off by config
+  private boolean useQueue = true;                  //  will be overwritten by config
 
-  private String menuDocId = null;            //  Id of document at which context menu was called 
+  private String menuDocId = null;                  //  Id of document at which context menu was called 
   private TextLevelCheckQueue textLevelQueue = null; // Queue to check text level rules
   
-  private boolean useOrginalCheckDialog = false;  // use original spell and grammar dialog (LT check dialog does not work for OO)
+  private boolean useOrginalCheckDialog = false;    // use original spell and grammar dialog (LT check dialog does not work for OO)
   private boolean isNotTextDodument = false;
   private int heapCheckInterval = HEAP_CHECK_INTERVAL;
   private boolean testMode = false;
@@ -136,7 +135,7 @@ public class MultiDocumentsHandler {
     oldConfigFile = OfficeTools.getOldConfigFile();
     MessageHandler.init();
     documents = new ArrayList<>();
-    disabledRulesUI = new HashSet<>();
+    disabledRulesUI = new HashMap<>();
     extraRemoteRules = new ArrayList<>();
     dictionary = new LtDictionary();
   }
@@ -182,7 +181,7 @@ public class MultiDocumentsHandler {
       setJavaLookAndFeel();
     }
     if (!hasLocale(locale)) {
-      MessageHandler.printToLogFile("Sorry, don't have locale: " + OfficeTools.localeToString(locale));
+      MessageHandler.printToLogFile("MultiDocumentsHandler: getCheckResults: Sorry, don't have locale: " + OfficeTools.localeToString(locale));
       return paRes;
     }
     if (!noBackgroundCheck) {
@@ -209,18 +208,18 @@ public class MultiDocumentsHandler {
       }
     }
     if (debugMode) {
-      MessageHandler.printToLogFile("Start getNumDoc!");
+      MessageHandler.printToLogFile("MultiDocumentsHandler: getCheckResults: Start getNumDoc!");
     }
     docNum = getNumDoc(paRes.aDocumentIdentifier, propertyValues);
     if (noBackgroundCheck) {
       return paRes;
     }
     if (debugMode) {
-      MessageHandler.printToLogFile("Start testHeapSpace!");
+      MessageHandler.printToLogFile("MultiDocumentsHandler: getCheckResults: Start testHeapSpace!");
     }
     testHeapSpace();
     if (debugMode) {
-      MessageHandler.printToLogFile("Start getCheckResults!");
+      MessageHandler.printToLogFile("MultiDocumentsHandler: getCheckResults: Start getCheckResults at single document!");
     }
     paRes = documents.get(docNum).getCheckResults(paraText, locale, paRes, propertyValues, docReset, lt);
     if (lt.doReset()) {
@@ -235,7 +234,7 @@ public class MultiDocumentsHandler {
       resetDocument();
     }
     if (debugMode) {
-      MessageHandler.printToLogFile("return to LO/OO!");
+      MessageHandler.printToLogFile("MultiDocumentsHandler: getCheckResults: return to LO/OO!");
     }
     return paRes;
   }
@@ -265,7 +264,7 @@ public class MultiDocumentsHandler {
           try {
             xComponent.addEventListener(xEventListener);
           } catch (Throwable t) {
-            MessageHandler.printToLogFile("Error: Document (ID: " + docID + ") has no XComponent -> Internal space will not be deleted when document disposes");
+            MessageHandler.printToLogFile("MultiDocumentsHandler: getCurrentDocument: Error: Document (ID: " + docID + ") has no XComponent -> Internal space will not be deleted when document disposes");
             xComponent = null;
           }
           SingleDocument newDocument = new SingleDocument(xContext, config, docID, xComponent, this);
@@ -273,7 +272,7 @@ public class MultiDocumentsHandler {
           MessageHandler.printToLogFile("Document " + (documents.size() - 1) + " created; docID = " + docID);
           return newDocument;
         }
-        MessageHandler.printToLogFile("Is document, but not a text document!");
+        MessageHandler.printToLogFile("MultiDocumentsHandler: getCurrentDocument: Is document, but not a text document!");
         isNotTextDodument = true;
       }
     }
@@ -360,11 +359,6 @@ public class MultiDocumentsHandler {
         if (config.saveLoCache()) {
           document.writeCaches();
         }
-        if (useQueue && textLevelQueue != null) {
-          MessageHandler.printToLogFile("Interrupt text level queue for document " + document.getDocID());
-          textLevelQueue.interruptCheck(document.getDocID(), true);
-          MessageHandler.printToLogFile("Interrupt done");
-        }
         document.setXComponent(xContext, null);
         if (document.getDocumentCache().hasNoContent()) {
           //  The delay seems to be necessary as workaround for a GDK bug (Linux) to stabilizes
@@ -379,15 +373,21 @@ public class MultiDocumentsHandler {
       }
     }
     if (!found) {
-      MessageHandler.printToLogFile("Error: Disposed Document not found - Cache not deleted");
+      MessageHandler.printToLogFile("MultiDocumentsHandler: setContextOfClosedDoc: Error: Disposed Document not found - Cache not deleted");
     }
   }
   
   /**
    *  Add a rule to disabled rules by context menu or spell dialog
    */
-  void addDisabledRule(String ruleId) {
-    disabledRulesUI.add(ruleId);
+  void addDisabledRule(String langCode, String ruleId) {
+    if (disabledRulesUI.containsKey(langCode)) {
+      disabledRulesUI.get(langCode).add(ruleId);
+    } else {
+      Set<String >rulesIds = new HashSet<>();
+      rulesIds.add(ruleId);
+      disabledRulesUI.put(langCode, rulesIds);
+    }
   }
   
   /**
@@ -401,23 +401,43 @@ public class MultiDocumentsHandler {
    *  remove all disabled rules by context menu or spell dialog
    */
   void resetDisabledRules() {
-    disabledRulesUI = new HashSet<>();
+    disabledRulesUI = new HashMap<>();
   }
   
   /**
-   *  get all disabled rules by context menu or spell dialog
+   *  get disabled rules for a language code by context menu or spell dialog
    */
-  Set<String> getDisabledRules() {
+  Set<String> getDisabledRules(String langCode) {
+    if (langCode == null || !disabledRulesUI.containsKey(langCode)) {
+      return new HashSet<String>();
+    }
+    return disabledRulesUI.get(langCode);
+  }
+  
+  /**
+   *  get all disabled rules
+   */
+  Map<String, Set<String>> getAllDisabledRules() {
     return disabledRulesUI;
   }
   
   /**
+   *  get all disabled rules
+   */
+  void setAllDisabledRules(Map<String, Set<String>> disabledRulesUI) {
+    this.disabledRulesUI = disabledRulesUI;
+  }
+  
+  /**
    *  get all disabled rules by context menu or spell dialog
    */
-  Map<String, String> getDisabledRulesMap() {
+  Map<String, String> getDisabledRulesMap(String langCode) {
+    if (langCode == null) {
+      langCode = OfficeTools.localeToString(locale);
+    }
     Map<String, String> disabledRulesMap = new HashMap<>();
     List<Rule> allRules = lt.getAllRules();
-    for (String disabledRule : disabledRulesUI) {
+    for (String disabledRule : getDisabledRules(langCode)) {
       String ruleDesc = null;
       for (Rule rule : allRules) {
         if (disabledRule.equals(rule.getId())) {
@@ -447,8 +467,8 @@ public class MultiDocumentsHandler {
   /**
    *  set disabled rules by context menu or spell dialog
    */
-  void setDisabledRules(Set<String> ruleIds) {
-    disabledRulesUI = new HashSet<>(ruleIds);
+  void setDisabledRules(String langCode, Set<String> ruleIds) {
+    disabledRulesUI.put(langCode, new HashSet<>(ruleIds));
   }
   
   /**
@@ -612,12 +632,10 @@ public class MultiDocumentsHandler {
     this.config = config;
     this.lt = lt;
     if (textLevelQueue != null && (heapLimitReached || config.getNumParasToCheck() == 0)) {
-//      MessageHandler.printToLogFile("textLevelQueue.setStop"); 
       textLevelQueue.setStop();
       textLevelQueue = null;
     }
     useQueue = noBackgroundCheck || heapLimitReached || testMode || config.getNumParasToCheck() == 0 ? false : config.useTextLevelQueue();
-//    MessageHandler.printToLogFile("textLevelQueue.setStop"); 
     for (SingleDocument document : documents) {
       if (!document.isDisposed()) {
         document.setConfigValues(config);
@@ -647,21 +665,20 @@ public class MultiDocumentsHandler {
   private int getNumDoc(String docID, PropertyValue[] propertyValues) {
     for (int i = 0; i < documents.size(); i++) {
       if (documents.get(i).getDocID().equals(docID)) {  //  document exist
-//        MessageHandler.printToLogFile("Document exists (ID: " + docID + ")");
         if (!testMode && documents.get(i).getXComponent() == null) {
           XComponent xComponent = OfficeTools.getCurrentComponent(xContext);
           if (xComponent == null) {
-            MessageHandler.printToLogFile("Error: Document (ID: " + docID + ") has no XComponent -> Internal space will not be deleted when document disposes");
+            MessageHandler.printToLogFile("MultiDocumentsHandler: getNumDoc: Error: Document (ID: " + docID + ") has no XComponent -> Internal space will not be deleted when document disposes");
           } else {
             try {
               xComponent.addEventListener(xEventListener);
             } catch (Throwable t) {
-              MessageHandler.printToLogFile("Error: Document (ID: " + docID + ") has no XComponent -> Internal space will not be deleted when document disposes");
+              MessageHandler.printToLogFile("MultiDocumentsHandler: getNumDoc: Error: Document (ID: " + docID + ") has no XComponent -> Internal space will not be deleted when document disposes");
               xComponent = null;
             }
             if (xComponent != null) {
               documents.get(i).setXComponent(xContext, xComponent);
-              MessageHandler.printToLogFile("Fixed: XComponent set for Document (ID: " + docID + ")");
+              MessageHandler.printToLogFile("MultiDocumentsHandler: getNumDoc: Fixed: XComponent set for Document (ID: " + docID + ")");
             }
           }
         }
@@ -679,20 +696,19 @@ public class MultiDocumentsHandler {
     if (!testMode) {              //  xComponent == null for test cases 
       xComponent = OfficeTools.getCurrentComponent(xContext);
       if (xComponent == null) {
-        MessageHandler.printToLogFile("Error: Document (ID: " + docID + ") has no XComponent -> Internal space will not be deleted when document disposes");
+        MessageHandler.printToLogFile("MultiDocumentsHandler: getNumDoc: Error: Document (ID: " + docID + ") has no XComponent -> Internal space will not be deleted when document disposes");
       } else {
-//        MessageHandler.printToLogFile("New Doc ID: " + docID);
         for (int i = 0; i < documents.size(); i++) {
           //  work around to compensate a bug at LO
           if (xComponent.equals(documents.get(i).getXComponent())) {
             MessageHandler.printToLogFile("Different Doc IDs, but same xComponents!");
             String oldDocId = documents.get(i).getDocID();
             documents.get(i).setDocID(docID);
-            MessageHandler.printToLogFile("Document ID corrected: old: " + oldDocId + ", new: " + docID);
+            MessageHandler.printToLogFile("MultiDocumentsHandler: getNumDoc: Document ID corrected: old: " + oldDocId + ", new: " + docID);
             if (useQueue && textLevelQueue != null) {
-              MessageHandler.printToLogFile("Interrupt text level queue for old document ID: " + oldDocId);
+              MessageHandler.printToLogFile("MultiDocumentsHandler: getNumDoc: Interrupt text level queue for old document ID: " + oldDocId);
               textLevelQueue.interruptCheck(oldDocId, true);
-              MessageHandler.printToLogFile("Interrupt done");
+              MessageHandler.printToLogFile("MultiDocumentsHandler: getNumDoc: Interrupt done");
             }
             if (documents.get(i).isDisposed()) {
               documents.get(i).dispose(false);;
@@ -701,25 +717,22 @@ public class MultiDocumentsHandler {
           }
         }
         try {
-//          MessageHandler.printToLogFile("Set event listener for Doc ID: " + docID);
           xComponent.addEventListener(xEventListener);
         } catch (Throwable t) {
-          MessageHandler.printToLogFile("Error: Document (ID: " + docID + ") has no XComponent -> Internal space will not be deleted when document disposes");
+          MessageHandler.printToLogFile("MultiDocumentsHandler: getNumDoc: Error: Document (ID: " + docID + ") has no XComponent -> Internal space will not be deleted when document disposes");
           xComponent = null;
         }
       }
     }
     SingleDocument newDocument = new SingleDocument(xContext, config, docID, xComponent, this);
     documents.add(newDocument);
-//    testFootnotes(propertyValues);
     if (!testMode) {              //  xComponent == null for test cases 
       newDocument.setLanguage(docLanguage);
     }
     if (isDisposed) {
-//      MessageHandler.printToLogFile("Remove Doc");
       removeDoc(docID);
     }
-    MessageHandler.printToLogFile("Document " + (documents.size() - 1) + " created; docID = " + docID);
+    MessageHandler.printToLogFile("MultiDocumentsHandler: getNumDoc: Document " + (documents.size() - 1) + " created; docID = " + docID);
     return documents.size() - 1;
   }
 
@@ -733,9 +746,9 @@ public class MultiDocumentsHandler {
         if (!docID.equals(documents.get(i).getDocID())) {
           if (documents.get(i).isDisposed()) {
             if (useQueue && textLevelQueue != null) {
-              MessageHandler.printToLogFile("Interrupt text level queue for document " + documents.get(i).getDocID());
+              MessageHandler.printToLogFile("MultiDocumentsHandler: removeDoc: Interrupt text level queue for document " + documents.get(i).getDocID());
               textLevelQueue.interruptCheck(documents.get(i).getDocID(), true);
-              MessageHandler.printToLogFile("Interrupt done");
+              MessageHandler.printToLogFile("MultiDocumentsHandler: removeDoc: Interrupt done");
             }
             MessageHandler.printToLogFile("Disposed document " + documents.get(i).getDocID() + " removed");
             documents.remove(i);
@@ -762,7 +775,7 @@ public class MultiDocumentsHandler {
         if (docComponent != null && xComponent.equals(docComponent)) { //  disposed document found
           documents.get(i).getLtMenu().removeListener();
           if (debugMode) {
-            MessageHandler.printToLogFile("Menu listener of document " + documents.get(i).getDocID() + " removed");
+            MessageHandler.printToLogFile("MultiDocumentsHandler: removeMenuListener: Menu listener of document " + documents.get(i).getDocID() + " removed");
           }
           break;
         }
@@ -803,8 +816,6 @@ public class MultiDocumentsHandler {
         currentLanguage = docLanguage;
       }
       // not using MultiThreadedSwJLanguageTool here fixes "osl::Thread::Create failed", see https://bugs.documentfoundation.org/show_bug.cgi?id=90740:
-//      lt = new SwJLanguageTool(currentLanguage, config.getMotherTongue(),
-//          new UserConfig(config.getConfigurableValues(), linguServices), config, extraRemoteRules, testMode);
       lt = new SwJLanguageTool(currentLanguage, config.getMotherTongue(),
           new UserConfig(config.getConfigurableValues(), linguServices), config, extraRemoteRules, testMode);
       config.initStyleCategories(lt.getAllRules());
@@ -817,7 +828,7 @@ public class MultiDocumentsHandler {
         if (ngramLangDir.exists()) {  // user might have ngram data only for some languages and that's okay
           lt.activateLanguageModelRules(ngramDirectory);
           if (debugMode) {
-            MessageHandler.printToLogFile("ngram Model activated for language: " + currentLanguage.getShortCode());
+            MessageHandler.printToLogFile("MultiDocumentsHandler: initLanguageTool: ngram Model activated for language: " + currentLanguage.getShortCode());
           }
         }
       }
@@ -873,8 +884,9 @@ public class MultiDocumentsHandler {
         lt.enableRule(ruleName);
       }
     }
-    if (disabledRulesUI != null) {
-      for (String id : disabledRulesUI) {
+    Set<String> disabledLocaleRules = getDisabledRules(lt.getLanguage().getShortCodeWithCountryAndVariant());
+    if (disabledLocaleRules != null) {
+      for (String id : disabledLocaleRules) {
         lt.disableRule(id);
       }
     }
@@ -885,12 +897,9 @@ public class MultiDocumentsHandler {
    * Initialize single documents, prepare text level rules and start queue
    */
   void initDocuments() {
-//    MessageHandler.printToLogFile("Start setConfigValues!");
     setConfigValues(config, lt);
-//    MessageHandler.printToLogFile("Start sortedTextRules!");
-    sortedTextRules = new SortedTextRules(lt, config, disabledRulesUI);
-//    MessageHandler.printToLogFile("Start resetCache!");
-//    MessageHandler.printToLogFile("Start textLevelQueue!");
+    String langCode = lt.getLanguage().getShortCodeWithCountryAndVariant();
+    sortedTextRules = new SortedTextRules(lt, config, getDisabledRules(langCode));
     if (useQueue && !noBackgroundCheck) {
       if (textLevelQueue == null) {
         textLevelQueue = new TextLevelCheckQueue(this);
@@ -1093,7 +1102,7 @@ public class MultiDocumentsHandler {
         }
         confg.saveConfiguration(docLanguage);
         if (debugMode) {
-          MessageHandler.printToLogFile("Rule Disabled: " + (ruleId == null ? "null" : ruleId));
+          MessageHandler.printToLogFile("MultiDocumentsHandler: deactivateRule: Rule Disabled: " + (ruleId == null ? "null" : ruleId));
         }
       } catch (IOException e) {
         MessageHandler.printException(e);
@@ -1105,7 +1114,8 @@ public class MultiDocumentsHandler {
    * reset sorted text level rules
    */
   public void resetSortedTextRules() {
-    sortedTextRules = new SortedTextRules(lt, config, disabledRulesUI);
+    String langCode = lt.getLanguage().getShortCodeWithCountryAndVariant();
+    sortedTextRules = new SortedTextRules(lt, config, getDisabledRules(langCode));
   }
 
   /**
@@ -1368,7 +1378,7 @@ public class MultiDocumentsHandler {
           resetCheck();
         }
         if (debugMode) {
-          MessageHandler.printToLogFile("Start Spell And Grammar Check Dialog");
+          MessageHandler.printToLogFile("MultiDocumentsHandler: trigger: Start Spell And Grammar Check Dialog");
         }
         checkDialog.start();
       } else if ("nextError".equals(sEvent)) {
@@ -1394,7 +1404,7 @@ public class MultiDocumentsHandler {
           MessageHandler.showMessage(messages.getString("loRemoteInfoDefaultServer"));
         }
       } else {
-        MessageHandler.printToLogFile("Sorry, don't know what to do, sEvent = " + sEvent);
+        MessageHandler.printToLogFile("MultiDocumentsHandler: trigger: Sorry, don't know what to do, sEvent = " + sEvent);
       }
     } catch (Throwable e) {
       MessageHandler.showError(e);
@@ -1414,7 +1424,7 @@ public class MultiDocumentsHandler {
         if (showMessage) {
           MessageHandler.showMessage("LinguisticServices failed! LanguageTool can not be started!");
         } else {
-          MessageHandler.printToLogFile("LinguisticServices failed! LanguageTool can not be started!");
+          MessageHandler.printToLogFile("MultiDocumentsHandler: testDocLanguage: LinguisticServices failed! LanguageTool can not be started!");
         }
         return false;
       }
@@ -1452,7 +1462,7 @@ public class MultiDocumentsHandler {
         while (locale == null && n < 100) {
           Thread.sleep(500);
           if (debugMode) {
-            MessageHandler.printToLogFile("Try to get locale: n = " + n);
+            MessageHandler.printToLogFile("MultiDocumentsHandler: testDocLanguage: Try to get locale: n = " + n);
           }
           if (docType == DocumentType.IMPRESS) {
             locale = OfficeDrawTools.getDocumentLocale(xComponent);
@@ -1470,7 +1480,7 @@ public class MultiDocumentsHandler {
         if (showMessage) {
           MessageHandler.showMessage("No Locale! LanguageTool can not be started!");
         } else {
-          MessageHandler.printToLogFile("No Locale! LanguageTool can not be started!");
+          MessageHandler.printToLogFile("MultiDocumentsHandler: testDocLanguage: No Locale! LanguageTool can not be started!");
         }
         return false;
       } else if (!hasLocale(locale)) {
@@ -1479,13 +1489,13 @@ public class MultiDocumentsHandler {
         return false;
       }
       if (debugMode) {
-        MessageHandler.printToLogFile("locale: " + locale.Language + "-" + locale.Country);
+        MessageHandler.printToLogFile("MultiDocumentsHandler: testDocLanguage: locale: " + locale.Language + "-" + locale.Country);
       }
       if (!linguServices.setLtAsGrammarService(xContext, locale)) {
         if (showMessage) {
           MessageHandler.showMessage("Can not set LT as grammar check service! LanguageTool can not be started!");
         } else {
-          MessageHandler.printToLogFile("Can not set LT as grammar check service! LanguageTool can not be started!");
+          MessageHandler.printToLogFile("MultiDocumentsHandler: testDocLanguage: Can not set LT as grammar check service! LanguageTool can not be started!");
         }
         return false;
       }
@@ -1617,8 +1627,7 @@ public class MultiDocumentsHandler {
    * Called when "Ignore" is selected e.g. in the context menu for an error.
    */
   public void ignoreRule(String ruleId, Locale locale) {
-    /* TODO: config should be locale-dependent */
-    addDisabledRule(ruleId);
+    addDisabledRule(OfficeTools.localeToString(locale), ruleId);
     setRecheck();
   }
 
@@ -1650,7 +1659,7 @@ public class MultiDocumentsHandler {
     //  to finish checking thread without crashing
     XComponent goneComponent = UnoRuntime.queryInterface(XComponent.class, source.Source);
     if (goneComponent == null) {
-      MessageHandler.printToLogFile("xComponent of closed document is null");
+      MessageHandler.printToLogFile("MultiDocumentsHandler: disposing: xComponent of closed document is null");
     } else {
       setContextOfClosedDoc(goneComponent);
     }

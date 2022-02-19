@@ -260,6 +260,7 @@ public class French extends Language implements AutoCloseable {
       case "MOTS_INCOMP": return 50; // greater than PRONSUJ_NONVERBE and DUPLICATE_DETERMINER
       case "PRIME-TIME": return 50; //  // greater than agreement rules
       case "A_VERBE_INFINITIF": return 20; // greater than PRONSUJ_NONVERBE
+      case "EMPLOI_EMPLOIE": return 20; // greater than MOTS_INCOMP
       case "VOIR_VOIRE": return 20; // greater than PLACE_DE_LA_VIRGULE
       case "CAT_TYPOGRAPHIE": return 20; // greater than PRONSUJ_NONVERBE or agreement rules
       case "CAT_HOMONYMES_PARONYMES": return 20;
@@ -284,6 +285,7 @@ public class French extends Language implements AutoCloseable {
       case "AN_EN": return 10; // needs higher priority than AN_ANNEE
       case "APOS_M": return 10; // needs higher priority than APOS_ESPACE
       case "ACCORD_PLURIEL_ORDINAUX": return 10; // needs higher priority than D_J
+      case "ADJ_ADJ_SENT_END": return 10; // needs higher priority than ACCORD_COULEUR
       case "SE_CE": return -10; // needs higher priority than ELISION
       case "SYNONYMS": return -10; // less than ELISION
       case "PAS_DE_SOUCIS": return 10; // needs higher priority than PAS_DE_PB_SOUCIS (premium)
@@ -292,11 +294,15 @@ public class French extends Language implements AutoCloseable {
       case "CONFUSION_PAR_PART": return -5;  // turn off completely when PART_OU_PAR is activated
       case "SONT_SON": return -5; // less than ETRE_VPPA_OU_ADJ
       case "FR_SIMPLE_REPLACE": return -10;
+      case "J_N": return -10; // needs lesser priority than D_J
       case "TE_NV": return -20; // less than SE_CE, SE_SA and SE_SES
       case "TE_NV2": return -10; // less than SE_CE, SE_SA and SE_SES
       case "PLURIEL_AL": return -10; // less than AGREEMENT_POSTPONED_ADJ
       case "INTERROGATIVE_DIRECTE": return -10; // less than OU
       case "D_J_N": return -10; // less than J_N
+      case "FAMILIARITES": return -10; // less than grammar rules
+      case "V_J_A_R": return -10; // less than grammar rules
+      case "TRES_TRES_ADJ": return -10; // less than grammar rules
       case "IMP_PRON": return -10; // less than D_N
       case "TOO_LONG_PARAGRAPH": return -15;
       case "PREP_VERBECONJUGUE": return -20;
@@ -310,7 +316,6 @@ public class French extends Language implements AutoCloseable {
       case "ILS_VERBE": return -50; // greater than FR_SPELLING_RULE
       case "AGREEMENT_POSTPONED_ADJ": return -50;
       case "MULTI_ADJ": return -50;
-      case "POINTS_SUSPENSIONS_SPACE": return -50; // lesser than grammar rules
       case "ESSENTIEL": return -50; // lesser than grammar rules
       case "CONFUSION_AL_LA": return -50; // lesser than AUX_AVOIR_VCONJ
       case "IMPORTANT": return -50; // lesser than grammar rules
@@ -324,16 +329,26 @@ public class French extends Language implements AutoCloseable {
       case "ELISION": return -200; // should be lower in priority than spell checker
       case "POINT": return -200; // should be lower in priority than spell checker
       case "REPETITIONS_STYLE": return -250;  // repetition style rules, usually with prefix REP_
+      case "FR_REPEATEDWORDS_EXIGER": return -250;  // repetition style rules,
+      case "POINTS_SUSPENSIONS_SPACE": return -250;  // should be lower in priority than ADJ_ADJ_SENT_END
       case "UPPERCASE_SENTENCE_START": return -300;
       case "FRENCH_WHITESPACE_STRICT": return -350; // picky; if on, it should overwrite FRENCH_WHITESPACE
       case "FRENCH_WHITESPACE": return -400; // lesser than UPPERCASE_SENTENCE_START and FR_SPELLING_RULE
       case "MOT_TRAIT_MOT": return -400; // lesser than UPPERCASE_SENTENCE_START and FR_SPELLING_RULE
-
-
+      case "FRENCH_WORD_REPEAT_BEGINNING_RULE": return -350; // less than REPETITIONS_STYLE
     }
+
     if (id.startsWith("grammalecte_")) {
       return -150;
     }
+
+    if (id.startsWith("AI_FR_HYDRA_LEO")) { // prefer more specific rules (also speller)
+      if (id.startsWith("AI_FR_HYDRA_LEO_MISSING_COMMA")) {
+        return -51; // prefer comma style rules.
+      }
+      return -11;
+    }
+
     return super.getPriorityForId(id);
   }
   

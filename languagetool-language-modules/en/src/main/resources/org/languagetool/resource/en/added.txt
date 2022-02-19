@@ -32422,3 +32422,14 @@ validator	validator	NN
 validators	validator	NNS
 zeugma	zeugma	NN
 zeugmas	zeugma	NNS
+Vitalii	Vitalii	NNP
+CARICOM	CARICOM	NNP
+Caymans	Cayman	NNPS
+Zlatan	Zlatan	NNP
+Yurii	Yurii	NNP
+Centauri	Centauri	NNP
+Clementi	Clementi	NNP
+Kazakhstani	Kazakhstani	JJ
+Kazakhstani	Kazakhstani	NNP
+Kazakhstanis	Kazakhstani	NNPS
+Alberti	Alberti	NNP

@@ -8801,6 +8801,7 @@ on-label
 physalis
 pouf
 poufes
+reggaeton
 startup
 startups
 tablet
@@ -10341,6 +10342,7 @@ Daguerre
 Dalí
 Dana
 Danielle
+Dawkins
 Defense Advanced Research Projects Agency
 Delpierre
 Dempster
