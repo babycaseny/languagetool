@@ -1,3 +1,8 @@
+arcidianat|arcedianat=ardiaconat|arxidiaconat
+Jenakijeve|Jenakijewe|Yenákieve|Yenákievo|Yenakiieve|Yenákiievo=Ienàkieve
+pelma=pesat|pesada|corcó|borinot|plom
+pelmes=pesats|pesades|corcó|borinot|plom
+cin=cinc|cine|con
 caladura|catadura=qualitat|aspecte|pinta
 carraspera=raspera|rautija|rutija|irritació
 gatillazo=arronsada|misto
@@ -2517,3 +2522,4 @@ estupents=estupends
 # errors in tagger dictionary; unnecessary after dictionary update
 ionqui=jonqui
 ionquis=jonquis
+Kharkiv=Khàrkiv

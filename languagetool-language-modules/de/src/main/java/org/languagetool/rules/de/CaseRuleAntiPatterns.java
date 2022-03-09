@@ -133,7 +133,7 @@ class CaseRuleAntiPatterns {
       token("Roll")
     ),
     Arrays.asList(
-      regex("Vitamin-[A-Z][0-9]?-reich(e|en|em|es)?")
+      regex("Vitamin-[A-Z][0-9]?-reich(e|e[nms])?")
     ),
     Arrays.asList(
       // Auflistung
@@ -752,7 +752,7 @@ class CaseRuleAntiPatterns {
       csToken("So")
     ),
     Arrays.asList( // "Sa. oder So."
-      csRegex("Mo|Di|Mi|Do|Fr|Sa"),
+      csRegex("M[io]|D[io]||Fr|Sa"),
       token("."),
       csRegex("&|und|oder|-|,"),
       csToken("So"),
@@ -1033,14 +1033,14 @@ class CaseRuleAntiPatterns {
       // "3.) Ein Listenpunkt"
       SENT_START,
       regex("\\d{1,3}[a-z]?"),
-      token("."),
+      csToken("."),
       regex("[\\]\\)\\}]"),
       csRegex("[A-ZÄÜÖ].*")
     ),
     Arrays.asList(
       // "Es besteht aus Schülern, Arbeitstätigen und Studenten."
       posRegex("SUB:.+"),
-      token(","),
+      csToken(","),
       posRegex("SUB:.+"),
       csRegex("und|oder|&"),
       posRegex("SUB:.+:(MAS|FEM|NEU)")
@@ -1125,11 +1125,26 @@ class CaseRuleAntiPatterns {
       csRegex("[a-zäöü…\\.!\\?…].*")
     ),
     Arrays.asList(
-      regex("im"),
+      token("im"),
       csRegex("Wesentlichen")
     ),
     Arrays.asList(
-      regex("im"),
+      token("im"),
+      csRegex("Allgemeinen"),
+      csRegex("[a-zäöü…\\.!\\?…].*")
+    ),
+    Arrays.asList(
+      token("im"),
+      csRegex("Allgemeinen"),
+      posRegex("SUB.*FEM.*")
+    ),
+    Arrays.asList(
+      token("im"),
+      csRegex("Allgemeinen"),
+      posRegex("SUB.*PLU.*")
+    ),
+    Arrays.asList(
+      token("im"),
       csRegex("Stillen|Dunkeln|Dunklen|Trocke?nen|Hellen|Trüben|Kalten|Warmen|Geringsten|Entferntesten"),
       csRegex("[a-zäöü…\\.!\\?…].*")
     ),
@@ -1204,7 +1219,7 @@ class CaseRuleAntiPatterns {
     ),
     Arrays.asList( // Immer mehr Ältere erkranken daran
       csRegex("[a-zäöü…\\.,:;0-9\\/].*"),
-      csRegex("Ältere[rn]?|Jüngere[rn]?|Verwirrte[rn]?|Zuschauende[rn]?|Angeklagte[rn]?|Befragte[rn]?|Beschuldigte[rn]?|Referierende[rn]?|Moderierende[rn]?|Dunkelhäutige[rn]?|Verantwortliche[rn]?|Alleinlebende[rn]?|Ungeübte[rn]?|Außerirdische[rn]?|Berittene[rn]?|Heranwachsende[rn]?"),
+      csRegex("Ältere[rn]?|Jüngere[rn]?|Verwirrte[rn]?|Zuschauende[rn]?|Angeklagte[rn]?|Befragte[rn]?|Beschuldigte[rn]?|Referierende[rn]?|Moderierende[rn]?|Dunkelhäutige[rn]?|Verantwortliche[rn]?|Alleinlebende[rn]?|Ungeübte[rn]?|Außerirdische[rn]?|Berittene[rn]?|Heranwachsende[rn]?|Ganze[sn]?"),
       csRegex("[a-zäöü…\\.!:;,\\?…\\)\\*\\(].*")
     ),
     Arrays.asList( // Im Folgenden soll 

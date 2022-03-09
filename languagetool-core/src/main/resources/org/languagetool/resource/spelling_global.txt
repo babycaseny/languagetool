@@ -580,6 +580,7 @@ Charles de Gaulle
 The Globe and Mail
 Madame Tussauds
 Microsoft Teams
+Microsoft Ads
 Firebase
 JavaScript
 TypeScript
@@ -3926,3 +3927,76 @@ Union Pacific Railroad
 MGM Resorts
 Digital Turbine
 Supercar Blondie
+Peres Center for Peace
+Wolfgang Ischinger
+Panera Bread
+Natasha Bassett
+NFT
+Simply Red
+Nord Stream
+Venice Beach
+Bored Ape Yacht Club
+Bored Ape
+Boardwalk Empire
+Henri Nannen
+Dmytro Kuleba
+Village People
+Edvard Munch
+DK Metcalf
+Dikembe Mutombo
+Jimmy Kimmel
+Jimmy Fallon
+Stephen Colbert
+Seth Meyers
+David Letterman
+Conan O'Brien
+Wintershall Dea
+StatusCake
+App Tracking Transparency
+La Stampa
+Uncle Kracker
+Timothy Snyder
+Real Sociedad
+Butch Cassidy
+Sundance Kid
+Jesse James
+Sauli Niinistö
+Jeremy Renner
+Mitsubishi Motors
+Priscilla Presley
+Jean Ribault
+Rod Serling
+Trevor Noah
+Katie Price
+Vitalik Buterin
+Hannibal Lecter
+Kevin Costner
+Dnipro
+Westinghouse
+Zoë Kravitz
+Elden Ring
+Paco Rabanne
+State Street
+State Street Corporation
+Fidelity Investments
+Thiago Alcântara
+Anna Netrebko
+Laura Ingraham
+Oleg Deripaska
+Lukoil
+Rosneft
+Surgutneftegas
+TurkStream
+Waldorf Astoria
+Jeffrey Epstein
+Jeff Epstein
+WebGPU
+Murasaki Shikibu
+CNY
+Kaja Kallas
+Ingrida Šimonytė
+Arturs Krišjānis Kariņš
+Matteo Salvini
+Dunnhumby
+John Bolton
+Clive Myrie

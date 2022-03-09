@@ -260,6 +260,7 @@ public class French extends Language implements AutoCloseable {
       case "MOTS_INCOMP": return 50; // greater than PRONSUJ_NONVERBE and DUPLICATE_DETERMINER
       case "PRIME-TIME": return 50; //  // greater than agreement rules
       case "A_VERBE_INFINITIF": return 20; // greater than PRONSUJ_NONVERBE
+      case "DE_OU_DES": return 20; // greater than PAS_ADJ
       case "EMPLOI_EMPLOIE": return 20; // greater than MOTS_INCOMP
       case "VOIR_VOIRE": return 20; // greater than PLACE_DE_LA_VIRGULE
       case "CAT_TYPOGRAPHIE": return 20; // greater than PRONSUJ_NONVERBE or agreement rules
@@ -307,6 +308,7 @@ public class French extends Language implements AutoCloseable {
       case "TOO_LONG_PARAGRAPH": return -15;
       case "PREP_VERBECONJUGUE": return -20;
       case "LA_LA2": return -20; // less than LA_LA
+      case "FRENCH_WORD_REPEAT_RULE": return -20; // less than TRES_TRES_ADJ
       case "CROIRE": return -20; // less than JE_CROIS_QUE
       case "PAS_DE_VERBE_APRES_POSSESSIF_DEMONSTRATIF": return -20;
       case "VIRGULE_VERBE": return -20; // less than grammar rules
@@ -326,6 +328,10 @@ public class French extends Language implements AutoCloseable {
       case "FR_SPELLING_RULE": return -100;
       case "ET_SENT_START": return -151; // lower than grammalecte rules
       case "MAIS_SENT_START": return -151; // lower than grammalecte rules
+      case "EN_CE_QUI_CONCERNE": return -152;  // less than MAIS_SENT_START + ET_SENT_START
+      case "EN_MEME_TEMPS": return -152;  // less than MAIS_SENT_START + ET_SENT_START
+      case "ET_AUSSI": return -152;  // less than CONFUSION_EST_ET + ET_SENT_START
+      case "MAIS_AUSSI": return -152;  // less than MAIS_SENT_START
       case "ELISION": return -200; // should be lower in priority than spell checker
       case "POINT": return -200; // should be lower in priority than spell checker
       case "REPETITIONS_STYLE": return -250;  // repetition style rules, usually with prefix REP_
@@ -333,6 +339,7 @@ public class French extends Language implements AutoCloseable {
       case "POINTS_SUSPENSIONS_SPACE": return -250;  // should be lower in priority than ADJ_ADJ_SENT_END
       case "UPPERCASE_SENTENCE_START": return -300;
       case "FRENCH_WHITESPACE_STRICT": return -350; // picky; if on, it should overwrite FRENCH_WHITESPACE
+      case "TOUT_MAJUSCULES": return -400;
       case "FRENCH_WHITESPACE": return -400; // lesser than UPPERCASE_SENTENCE_START and FR_SPELLING_RULE
       case "MOT_TRAIT_MOT": return -400; // lesser than UPPERCASE_SENTENCE_START and FR_SPELLING_RULE
       case "FRENCH_WORD_REPEAT_BEGINNING_RULE": return -350; // less than REPETITIONS_STYLE

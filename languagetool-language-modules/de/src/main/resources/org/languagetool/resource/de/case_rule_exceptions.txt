@@ -24,7 +24,7 @@ Akademie für Europäische
 Aktuellen? Stunde
 Almuth Schult
 Allgemeinen? (Geschäftsbedingungen|Zeitung|Datenschutzerklärung(en)?|Nutzungsbedingung(en)?|Ortskrankenkasse)
-Allgemeine[nrm]? Deutsche[nr]? (Automobilclub|Automobil-Club)
+Allgemeine[nrm]? Deutsche[nr]? (Automobilclubs?|Automobil-Clubs?|Gewerkschaftsbunde?s?)
 Allgemeine[nrm]? Soziale[rn]? Dienst(e?s)?
 All [Ii]s Lost
 Allen & Unwin
@@ -61,7 +61,9 @@ Atlanta Braves
 Aufschnitte
 Auf und Ab
 Autoimmune Diseases?
+Autonomen? Republik Krims?
 Autonomen? Österreichischen? Frauenhäusern?
+Autonome[rn]? Südtiroler Gewerkschaftsbund
 August Horch
 Auswärtige[mns]? Amte?s?
 AutoCAD Plant
@@ -213,6 +215,7 @@ Eidgenössischen? Technischen? Hochschule
 Eidgenössische[snm]? Departements?
 Eidgenössischen? Zollverwaltung
 Eidgenössischen? Finanz.*
+Einiges Russland
 ein absolutes Muss
 ein paar Zerquetschte
 [eE]ine (gute|glatte|schlechte) Eins|Zwei|Drei|Vier|Fünf|Sechs
@@ -224,7 +227,7 @@ Englischen? Bulldoggen?
 Epische[rnm]? Zyklus(es)?
 Erich Fromms?
 Erste[rn]? Mai|Liga
-Erste[rnm]? (Weltkriege?s?|Bürgermeisters?|Offizier[es]?|Vorsitzenden?)
+Erste[rnm]? (Weltkriege?s?|Bürgermeisters?|Offizier[es]?|Vorsitzenden?|Opiumkriege?s?)
 Erste[rnm]?|Zweite[rnm]?|Senats?|Dritten[rnm]?|Vierte[rnm]? Kreuzzug(es|s)?
 Essener
 Es Castells?
@@ -310,7 +313,7 @@ Global Site Tag
 Global Business|Pension|Geoparks?|News|Hubs?|Managements?|Junior|Senior|Head|Vice|President|Player[ns]?|Locations?|Targets?|Pass|Funds?|Sales?|Channels?|City|Times|Navigation|Offensive|Investors?|Real|Values?|Grade|Minimum
 Global(er|en|em)? Süden|Norden
 Golden (Globes?|Delicious|Retrievers?|Goals?|Gates?|Tulip|Boys?|Age|Lager|Masters?|Eagles?|State)
-Goldene[nrsm]? Schnitte?s?|Bullen?|Palme|Bär(en)?|Spatz(en)?|Hirsch|Löwen?|Himbeeren?|Laus|Windbeuteln?|Chlorellas?|Zeitalters?|(Ehren|Verdienst)zeichens?|Zwanzigern?|Schallplatten?|Buchs?|Stadt|Vlies(es)?|Kamera
+Goldene[nrsm]? Schnitte?s?|Bullen?|Palme|Bär(en)?|Spatz(en)?|Hirsch|Löwen?|Himbeeren?|Laus|Windbeuteln?|Chlorellas?|Zeitalters?|(Ehren|Verdienst)zeichens?|Zwanzigern?|Schallplatten?|Buchs?|Stadt|Vlies(es)?|Kamera|Horden?
 Googles? Fits?
 Gordische[nrm]? Knotens?
 Gotischen? Bibliothek
@@ -468,6 +471,7 @@ Kleinen? Weser|Donau
 Groß Nordendes?
 Großen? Elbstraße
 Großen? Elbstr.
+Große[rnm]? Löfflers?
 Kleine[nrm]? Bär|Tiergarten|Perkins|Antillen|Anfragen?|Zeitung|Belts?|Walachei|Leuchtkäfers?|Bergstra(ß|ss)e
 (Kommunist|Sozialdemokrat)ischen? Partei
 Kommunalen? Ordnungsdienst(es?|s)?
@@ -476,6 +480,7 @@ Königliche[nmr]? Palaste?s?
 Koreanischen? Halbinsel
 Kölnisch Wasser
 Kölnische[rnm]? Illustrierte[mrn]? Zeitung
+Königlich(en?)? Norwegischen? Societät
 Kriminaltechnische[smn]? Institute?s?
 Kurdischen? Arbeiterpartei
 Kürnach
@@ -567,6 +572,8 @@ Nationalsozialistischen? Freiheits(bewegung|partei)
 Nationalsozialistischen? Untergrunde?s?
 Nationalsozialistischen? Volkswohlfahrt
 Nationale[rmn]? Sicherheitsbeirate?s?
+Nationalen? Akademie der Wissenschaften
+National Rugby League
 Native Advertisings?|Instruments|Apps?|Ads?|Speaker[sn]?
 Naturparks? Westliche Wälder
 Netzwerk Linkes Zentrum
@@ -613,6 +620,7 @@ Osmanischen? Reich(es|s)?
 Österreichische[mnrs]? Klimaschutzpreis|Nationalbibliothek|Rundfunks?|Volkspartei|Post|Ärztekammer|Ärztekammertags?|Bauernbunds?
 Österreichischen? Gesundheitskasse
 Österreichische[snm]? Archäologische[sn]? Instituts?
+Osteuropäische[rnm]? Ebene
 Östliche[nrm]? Gorillas?
 Ostfriesische[nr]? (Inseln?|Landschaft|Geschichte)
 Ostpreu(ß|ss)ische[nmns]? Landesmuseums?
@@ -687,7 +695,7 @@ Royal National Theatre
 Royal National Theater
 Rumänischen? Akademie
 Runde[rnm]? Tisch
-Russischen? Föderation|Revolution
+Russischen? Föderation|Revolution|Bürgerkriegs?|Kaiserreichs?
 Russische[rnm]? Terrier[sn]?
 Russische[rnm]? Schwarze[rn]? Terrier[sn]?
 Russische[rnm]? Zupfkuchens?
@@ -710,6 +718,7 @@ Schiefen? Ebene
 Schiefen? Schlachtordnung
 Schlesische[rnm]? Krieg
 Schlesische[snm]? Tor
+Schnellen? Eingreiftruppe
 Schön Klinik
 Schriftgelehrter?
 Schwäbisch Halls?
@@ -727,6 +736,7 @@ Schweizerische[nrm]? Verband für
 Schweizerische[nrm]? Gehörlosenbund
 Schweizerische[nrm]? Fu(ss|ß)ballverband
 Schweizer Illustrierten?
+Schweizerischen? Akademischen? Gesellschaft für Germanistik
 Seiner? Exzellenz
 .+ischen? Akademie der
 (Senior|Junior) Inhouse Berater[sn]?
@@ -747,7 +757,7 @@ Self-Made Man
 Silberne[rnm] Bär(en)?
 Sigmund Raschers?
 Slim Fit
-Smart Cit(y|ies)|Cards?|Cabrios?|Homes?|Phones?|Watch(es)?|Meters?|Money|Tarif|TVs?
+Smart Cit(y|ies)|Cards?|Cabrios?|Homes?|Phones?|Watch(es)?|Meters?|Money|Tarif|TVs?|Living
 SK Rapid
 Skodas? Superbs?
 Soziale[nrm]? (Arbeit|Jahre?s?)
@@ -827,6 +837,7 @@ Vanity Fair
 van Dick
 Vaterländische[nmr]? Kriege?s?
 Vegan Beauty
+Venezianischen? (Periode|Messe|Markte?s?)
 Verbande?s? der ([A-ZÄÖÜ][a-zäöüß\-]+)
 Verlobten?
 Vereinigte[mns]? Staaten|Königreiche?s?|Bühnen|Arabischen?|Stadtwerken?|Republik
@@ -847,6 +858,7 @@ Weh und Ach
 Wen Zhuos?
 Weil am Rhein
 Weiße[nrm]? Zwerge?|Sonntags?|Tod
+(WELT|Welt) Digital
 Wenn und Aber
 Werd Verlag
 Westliche[nrm]? Gorillas?
@@ -867,7 +879,7 @@ Zentrums? Innere Führung
 Zoologische[nrm]? (Garten|Museum|Gesellschaft)s?
 Zusammenfassende[nr]? Meldung(en)?
 Zugewandte[rn]? Orts?
-Zweite[mnr]? (Weltkrieg(e?s)?|Offizier[es]?|Liga|Bundesliga)
+Zweite[mnr]? (Weltkrieg(e?s)?|Offizier[es]?|Liga|Bundesliga|Opiumkriege?s?)
 Zweite[nsm]? Deutsche[ns]? Fernsehen
-Red Hats?
+(Red|Black|White) Hats?
 Europäischen? Südsternwarte

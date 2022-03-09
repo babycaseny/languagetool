@@ -8766,3 +8766,10 @@ info-graphics?
 true-hearted?
 gentle-hearted?
 inter-regional$
+blood-thirsty?
+slam-dunking*
+slam-dunked*
+saber-rattling*
+sabre-rattling*
+bio-lab?
+bio-labs?

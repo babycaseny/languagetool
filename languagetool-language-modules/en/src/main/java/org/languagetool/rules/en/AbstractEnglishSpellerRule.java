@@ -359,6 +359,7 @@ public abstract class AbstractEnglishSpellerRule extends MorfologikSpellerRule {
                    !k.getReplacement().toLowerCase().startsWith("de ") &&
                    !k.getReplacement().toLowerCase().startsWith("ex ") &&
                    !k.getReplacement().toLowerCase().startsWith("es ") &&
+                   !k.getReplacement().toLowerCase().startsWith("ab ") &&
                    !k.getReplacement().toLowerCase().startsWith("mid ") &&
                    !k.getReplacement().toLowerCase().startsWith("non ") &&
                    !k.getReplacement().toLowerCase().startsWith("bio ") &&
@@ -370,6 +371,7 @@ public abstract class AbstractEnglishSpellerRule extends MorfologikSpellerRule {
                    !k.getReplacement().toLowerCase().startsWith("multi ") &&
                    !k.getReplacement().toLowerCase().startsWith("retro ") &&
                    !k.getReplacement().toLowerCase().startsWith("extra ") &&
+                   !k.getReplacement().toLowerCase().startsWith("mega ") &&
                    !k.getReplacement().toLowerCase().startsWith("meta ") &&
                    !k.getReplacement().toLowerCase().startsWith("uni ") &&
                    !k.getReplacement().toLowerCase().startsWith("anti ") &&
@@ -419,6 +421,7 @@ public abstract class AbstractEnglishSpellerRule extends MorfologikSpellerRule {
                    !k.getReplacement().toLowerCase().startsWith("k ") &&
                    !k.getReplacement().toLowerCase().startsWith("e ") &&
                    !k.getReplacement().toLowerCase().startsWith("c ") &&
+                   !k.getReplacement().toLowerCase().startsWith("p ") &&
                    !k.getReplacement().toLowerCase().startsWith("v ") &&
                    !k.getReplacement().toLowerCase().startsWith("s ") &&
                    !k.getReplacement().toLowerCase().startsWith("h ") &&
@@ -440,6 +443,7 @@ public abstract class AbstractEnglishSpellerRule extends MorfologikSpellerRule {
                    !k.getReplacement().endsWith(" ward") &&
                    !k.getReplacement().endsWith(" ability") && // interruptability
                    !k.getReplacement().endsWith(" ware") && // drinkware
+                   !k.getReplacement().endsWith(" logy") && // volcanology
                    !k.getReplacement().endsWith(" ting") && // someting
                    !k.getReplacement().endsWith(" ion") && // presention
                    !k.getReplacement().endsWith(" ions") && // sealions
@@ -461,6 +465,7 @@ public abstract class AbstractEnglishSpellerRule extends MorfologikSpellerRule {
                    !k.getReplacement().endsWith(" de") &&
                    !k.getReplacement().endsWith(" ea") &&
                    !k.getReplacement().endsWith(" ge") &&
+                   !k.getReplacement().endsWith(" ab") &&
                    !k.getReplacement().endsWith(" tar") &&
                    !k.getReplacement().endsWith(" re") &&
                    !k.getReplacement().endsWith(" e") &&
@@ -607,6 +612,10 @@ public abstract class AbstractEnglishSpellerRule extends MorfologikSpellerRule {
 
   protected static Map<String, List<String>> getTopSuggestions() {
     Map<String, List<String>> s = new HashMap<>();
+    s.put("megatonne", Arrays.asList("megaton"));
+    s.put("Megatonne", Arrays.asList("Megaton"));
+    s.put("megatonnes", Arrays.asList("megatons"));
+    s.put("Megatonnes", Arrays.asList("Megatons"));
     s.put("retd", Arrays.asList("retd.", "retired"));
     s.put("Retd", Arrays.asList("Retd.", "Retired"));
     s.put("intransparent", Arrays.asList("non-transparent", "lacking transparency"));

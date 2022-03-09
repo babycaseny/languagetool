@@ -186,6 +186,7 @@ public class AgreementRule extends Rule {
     "irgendwer",
     "was",
     "wer",
+    "wem",
     "jenen",      // "...und mit jenen anderer Arbeitsgruppen verwoben"
     "diejenigen",
     "irgendjemand", "irgendjemandes",
@@ -607,7 +608,7 @@ public class AgreementRule extends Rule {
       if (compoundMatch != null) {
         return compoundMatch;
       }
-      if (token3.hasPartialPosTag("ABK")) {
+      if (token3.hasPosTagStartingWith("ABK")) {
         return null;
       }
       ruleMatch = new RuleMatch(this, sentence, token1.getStartPos(), token3.getEndPos(), MSG, SHORT_MSG);
@@ -629,7 +630,7 @@ public class AgreementRule extends Rule {
       if (compoundMatch != null) {
         return compoundMatch;
       }
-      if (token4.hasPartialPosTag("ABK")) {
+      if (token4.hasPosTagStartingWith("ABK")) {
         return null;
       }
       ruleMatch = new RuleMatch(this, sentence, token1.getStartPos(), token4.getEndPos(), MSG2, SHORT_MSG);

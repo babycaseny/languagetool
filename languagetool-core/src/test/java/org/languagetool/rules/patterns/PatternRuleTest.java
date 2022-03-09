@@ -220,8 +220,14 @@ public class PatternRuleTest extends AbstractPatternRuleTest {
       if (rule.getId().equalsIgnoreCase("ID")) {
         System.err.println("WARNING: " + lang.getShortCodeWithCountryAndVariant() + " has a rule with id 'ID', this should probably be changed");
       }
+      if (rule.getId().startsWith("DB_")) {
+        fail("Rule ID must not start with 'DB_', this prefix is reserved for internal use: " + rule.getId());
+      }
       if (rule.getId().contains("[") || rule.getId().contains("]")) {
         fail("Rule ID must not contain '[...]': " + rule.getId());
+      }
+      if (rule.getId().contains(" ")) {
+        fail("Rule ID must not contain a space: '" + rule.getId() + "'");
       }
       if (rule.getId().length() > 79) {  // limit needed so the Grafana import script works
         fail("Rule ID too long, keep it <= 79 chars: " + rule.getId());
@@ -420,10 +426,14 @@ public class PatternRuleTest extends AbstractPatternRuleTest {
           continue;
       }
       
-      String marker = origBadSentence.substring(expectedMatchStart+"<marker>".length(), origBadSentence.indexOf("</marker>"));
-      if (marker.startsWith(", ") && origBadExample.getCorrections().stream().anyMatch(k -> !k.startsWith(" ") && !k.startsWith(",") && !k.startsWith("?") && !k.startsWith(".") && !k.startsWith(";") && !k.startsWith("…"))) {
-        System.err.println("*** WARNING: " + lang.getName() + " rule " + rule.getFullId() + " removes ', ' but " +
-          "doesn't have a space, comma, semicolon, or dot at the start of the suggestion: " + origBadSentence + " => " + origBadExample.getCorrections());
+      String marker = origBadSentence.substring(expectedMatchStart + "<marker>".length(),
+          origBadSentence.indexOf("</marker>"));
+      if (marker.startsWith(", ") && origBadExample.getCorrections().stream()
+          .anyMatch(k -> !k.startsWith(" ") && !k.startsWith(",") && !k.startsWith("?") && !k.startsWith(".")
+              && !k.startsWith(":") && !k.startsWith(";") && !k.startsWith("…"))) {
+        System.err.println("*** WARNING: " + lang.getName() + " rule " + rule.getFullId() + " removes ', ' but "
+            + "doesn't have a space, comma, colon, semicolon, or dot at the start of the suggestion: " + origBadSentence
+            + " => " + origBadExample.getCorrections());
       }
 
       // necessary for XML Pattern rules containing <or>

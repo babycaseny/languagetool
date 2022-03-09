@@ -1084,6 +1084,7 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
     putRepl("[fF]austig(e[mnrs]?)?", "austig", "austdick");
     putRepl("Belastungsekgs?", "ekg", "-EKG");
     putRepl("Flektion(en)?", "Flektion", "Flexion");
+    putRepl("Off-[Ss]hore-[A-Z].+", "Off-[Ss]hore-", "Offshore");
     put("Bingerloch", "Binger Loch");
     put("[nN]or[dt]rh?einwest(f|ph)alen", "Nordrhein-Westfalen");
     put("abzusolvieren", "zu absolvieren");
@@ -1232,6 +1233,12 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
     put("gäng", w -> Arrays.asList("ging", "gang"));
     put("di", w -> Arrays.asList("du", "die", "Di.", "der", "den"));
     put("Di", w -> Arrays.asList("Du", "Die", "Di.", "Der", "Den"));
+    put("Aufn", w -> Arrays.asList("Auf den", "Auf einen", "Auf"));
+    put("aufn", w -> Arrays.asList("auf den", "auf einen", "auf"));
+    put("Aufm", w -> Arrays.asList("Auf dem", "Auf einem", "Auf"));
+    put("aufm", w -> Arrays.asList("auf dem", "auf einem", "auf"));
+    put("Ausm", w -> Arrays.asList("Aus dem", "Aus einem", "Aus"));
+    put("ausm", w -> Arrays.asList("aus dem", "aus einem", "aus"));
     put("mußt", "musst");
     put("müßtest", "müsstest");
     put("müßten", "müssten");
@@ -1250,7 +1257,9 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
     put("folgendermassen", "folgendermaßen");
     put("Adon", "Add-on");
     put("Adons", "Add-ons");
+    put("ud", "und");
     put("vertaggt", w -> Arrays.asList("vertagt", "getaggt"));
+    put("keinsten", w -> Arrays.asList("keinen", "kleinsten"));
     put("Angehensweise", "Vorgehensweise");
     put("Angehensweisen", "Vorgehensweisen");
     put("Neudefinierung", "Neudefinition");
@@ -1444,6 +1453,7 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
         && !s.matches(".+[*_:]innen")
         && !s.contains("--")
         && !s.endsWith("roulett")
+        && !s.matches(".+\\szigste[srnm]") // do not suggest "ein zigste" for "einzigste"
         && !s.matches("[\\wöäüÖÄÜß]+ [a-zöäüß]-[\\wöäüÖÄÜß]+")   // e.g. "Mediation s-Background"
         && !s.matches("[\\wöäüÖÄÜß]+- [\\wöäüÖÄÜß]+")   // e.g. "Pseudo- Rebellentum"
         && !s.matches("[A-ZÄÖÜ][a-zäöüß]+-[a-zäöüß]+-[a-zäöüß]+")   // e.g. "Kapuze-over-teil"
@@ -1451,6 +1461,7 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
         && !s.matches("[\\wöäüÖÄÜß]+ -[\\wöäüÖÄÜß]+")   // e.g. "ALT -TARIF"
         && !s.endsWith("-s")   // https://github.com/languagetool-org/languagetool/issues/4042
         && !s.endsWith(" de")   // https://github.com/languagetool-org/languagetool/issues/4042
+        && !s.endsWith(" en")   // https://github.com/languagetool-org/languagetool/issues/4042
         && !s.matches("[A-ZÖÄÜa-zöäüß] .+") // z.B. nicht "I Tand" für "IT and Services"
         && !s.matches(".+ [a-zöäüßA-ZÖÄÜ]");  // z.B. nicht "rauchen e" für "rauche ne" vorschlagen
   }
@@ -2284,8 +2295,14 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
       return topMatch(word.replaceFirst("utent", "uthent"));
     }
     switch (word) {
+      case "Reiszwecke": return topMatch("Reißzwecke", "kurzer Nagel mit flachem Kopf");
+      case "Reiszwecken": return topMatch("Reißzwecken", "kurzer Nagel mit flachem Kopf");
+      case "up-to-date": return topMatch("up to date");
       case "daß": return topMatch("dass");
       case "mußt": return topMatch("musst");
+      case "mußten": return topMatch("mussten");
+      case "mußte": return topMatch("musste");
+      case "mußtest": return topMatch("musstest");
       case "müßtest": return topMatch("müsstest");
       case "müßen": return topMatch("müssen");
       case "müßten": return topMatch("müssten");
@@ -2293,6 +2310,19 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
       case "Daß": return topMatch("Dass");
       case "bescheid": return topMatch("Bescheid");
       case "ausversehen": return topMatch("aus Versehen");
+      case "Stückweit": return topMatch("Stück weit");
+      case "Uranium": return topMatch("Uran");
+      case "Uraniums": return topMatch("Urans");
+      case "Luxenburg": return topMatch("Luxemburg");
+      case "Luxenburgs": return topMatch("Luxemburgs");
+      case "Lichtenstein": return topMatch("Liechtenstein");
+      case "Lichtensteins": return topMatch("Liechtensteins");
+      case "immernoch": return topMatch("immer noch");
+      case "Rechtshcreibfehler": return topMatch("Rechtschreibfehler"); // for demo text on home page
+      case "markirt": return topMatch("markiert"); // for demo text on home page
+      case "Johannesbeere": return topMatch("Johannisbeere");
+      case "Johannesbeeren": return topMatch("Johannisbeeren");
+      case "Endgeld": return topMatch("Entgeld");
       case "Entäuschung": return topMatch("Enttäuschung");
       case "Entäuschungen": return topMatch("Enttäuschungen");
       case "Triologie": return topMatch("Trilogie", "Werk (z.B. Film), das aus drei Teilen besteht");

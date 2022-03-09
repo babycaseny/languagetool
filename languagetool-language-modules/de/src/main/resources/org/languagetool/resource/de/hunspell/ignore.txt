@@ -343,7 +343,6 @@ CJ #abk
 León/S #name
 Outreach #name
 Rodrigo/S #name
-Selenskyj/S #name
 Teichmann/S #name
 Tumorquerschnitt/S
 Tumorquerschnitte/SN
@@ -407,3 +406,77 @@ Poschardt/S #name
 IPO/S #abk
 Hakim/S #name
 Stacy/S #name
+Geisenberger/S #name
+Ischinger/S #name
+Oleksii/S #name
+Valerii/S #name
+Eberharter/S #name
+Brixlegg/S #name
+Ziller/S #name
+Wildeck/S #name
+Wildecker/SN
+Wildeckerin
+Wildeckerinnen
+Richelsdorf/S #name
+Richelsdorfer/SN
+Richelsdorferin
+Richelsdorferinnen
+Hönebach/S #name
+Poroschenko/S #name
+Petro/S #name
+Kramatorsk/S #name
+Fuchsberger/S #name
+Jovanovic/S #name
+RV #abk
+BJ #abk
+Alkalose/N
+Ev. #abk
+Füllinsdorf/S #name
+Kamila/S #name
+Pfaff/S #name
+SpeedOn #name #eng
+Babista-Kundenservice/S #name
+Moda-Kundenservice/S
+SHEIN-Kundendienst/S
+Vamos-Kundenservice/S #name
+Wenz-Kundenservice/S #name
+MIAMODA-Kundenservice/S #name
+Diemer-Kundenservice/S #name
+Size-Kundenservice/S #name
+KISS #abk
+Pfeiffer/S #name
+Steingruber/S #name
+ErbStDV #abk
+IAB #abk
+BestüVAbfV #abk
+Lurup/S
+Luruper/SN
+Luruperin
+Luruperinnen
+Bengaluru/S #name
+Diessenhofen/S #name
+OPC #abk
+ital. #abk
+eTIN #abk
+Electronic Taxpayer Identification Number #name
+IBF #abk
+Filippo/S #name
+Lindberg/S #name
+Engelberger/S #name
+Gonzalo/S #name
+Katie/S #name
+Sberbank/S #name
+en
+LNG #abk
+KYC #abk
+ATTN #abk
+FX #abk
+Iwanow/S #name
+Ivanow/S #name
+McCormack/S #name
+SJ #abk
+Kadyrow/S #name
+GoB #abk
+Barilla/S #name
+Lambertz #name
+Enercom/S #name

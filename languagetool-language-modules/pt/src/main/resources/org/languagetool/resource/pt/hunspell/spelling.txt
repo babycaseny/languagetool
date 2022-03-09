@@ -8804,6 +8804,7 @@ poufes
 reggaeton
 startup
 startups
+stealth
 tablet
 tablets
 tawnie
@@ -10642,6 +10643,7 @@ Snow
 Snowden
 Sommerville
 Sotero
+Sputnik
 Steckling
 Suméria
 Surrey
@@ -11229,6 +11231,7 @@ Cooper
 Bernard
 Cynthia
 Campbell
+CPF
 Fred
 Ryan
 Brown

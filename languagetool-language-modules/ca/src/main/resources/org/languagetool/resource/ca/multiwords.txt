@@ -1,5 +1,21 @@
 #Catalan multiwords file used for chunking
 #separatorRegExp=[\t;]
+Maurice Maeterlinck;NPMSSP0
+Maurice Ravel;NPMSSP0
+Jean Cocteau;NPMSSP0
+Camille Saint-Saëns;NPMSSP0
+Claudio Monteverdi;NPMSSP0
+Jean-Philippe Rameau;NPMSSP0
+Narendra Modi;NPMSSP0
+Recep Tayyip Erdoğan;NPMSSP0
+Recep Tayyip Erdogan;NPMSSP0
+Dmitri Medvédev;NPMSSP0
+Borís Ieltsin;NPMSSP0
+Víktor Ianukóvitx;NPMSSP0
+Volodímir Zelenski;NPMSSP0
+Bernard Shaw;NPMSSP0
+Madame Pompadour;NPFSSP0
+Madame de Pompadour;NPFSSP0
 Rodrigo Rato;NPMSSP0
 Josep Maria de Sagarra;NPMSSP0
 Ansu Fati;NPMSSP0

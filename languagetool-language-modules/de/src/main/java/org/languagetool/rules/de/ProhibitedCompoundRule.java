@@ -27,6 +27,7 @@ import org.languagetool.language.GermanyGerman;
 import org.languagetool.languagemodel.BaseLanguageModel;
 import org.languagetool.languagemodel.LanguageModel;
 import org.languagetool.rules.*;
+import org.languagetool.tools.StringTools;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -104,7 +105,7 @@ public class ProhibitedCompoundRule extends Rule {
           new Pair("wieder", "erneut, wiederholt, nochmal (Wiederholung, Wiedervorlage, ...)", "wider", "gegen, entgegen (Widerwille, Widerstand, Widerspruch, ...)"),
           new Pair("leer", "ohne Inhalt", "lehr", "bezogen auf Ausbildung und Wissen"),
           new Pair("gewerbe", "wirtschaftliche Tätigkeit", "gewebe", "gewebter Stoff; Verbund ähnlicher Zellen"),
-          new Pair("schuh", "Fußbekleidung", "schul", "auf die Schule bezogen"),
+          //new Pair("schuh", "Fußbekleidung", "schul", "auf die Schule bezogen"),  // tends to have false alarms
           new Pair("klima", "langfristige Wetterzustände", "lima", "Hauptstadt von Peru"),
           new Pair("modell", "vereinfachtes Abbild der Wirklichkeit", "model", "Fotomodell"),
           new Pair("treppen", "Folge von Stufen (Mehrzahl)", "truppen", "Armee oder Teil einer Armee (Mehrzahl)"),
@@ -141,6 +142,20 @@ public class ProhibitedCompoundRule extends Rule {
     "Gra(ph|f)it"   // Grafit/Graphit
   );
   private static final Set<String> blacklist = new HashSet<>(Arrays.asList(
+          "Turmbewegung",  // vs. Turn
+          "Turmbewegungen",  // vs. Turn
+          "Turmwart",  // vs. Turn
+          "Turmwarts",  // vs. Turn
+          "Reisblatt",  // vs. Kreis
+          "Reisblatts",  // vs. Kreis
+          "Reisblätter",  // vs. Kreis
+          "Reisblättern",  // vs. Kreis
+          "Reisgetränk",  // vs. Eis
+          "Reisgetränks",  // vs. Eis
+          "Reisgetränke",  // vs. Eis
+          "Reisgetränken",  // vs. Eis
+          "Reiszwecke",  // vs. Reise -- handled by speller
+          "Reiszwecken",  // vs. Reise -- handled by speller
           "Bankangabe",  // vs. band
           "Bankangaben",  // vs. band
           "Lehrbecken",  // vs. ecken
@@ -1095,7 +1110,9 @@ public class ProhibitedCompoundRule extends Rule {
           "Wandlungskapital", // vs Handlungskapital
           "Wandlungskapitals", // vs Handlungskapital
           "Themenboxen", // vs bogen
-          "Superyacht" // vs macht
+          "Superyacht", // vs macht
+          "Testbestellung", // vs fest
+          "Testbestellungen" // vs fest
   ));
 
   // have per-class static list of these and reference that in instance
@@ -1213,8 +1230,14 @@ public class ProhibitedCompoundRule extends Rule {
   @Override
   public RuleMatch[] match(AnalyzedSentence sentence) throws IOException {
     List<RuleMatch> ruleMatches = new ArrayList<>();
+    AnalyzedTokenReadings prevReadings = null;
     for (AnalyzedTokenReadings readings : sentence.getTokensWithoutWhitespace()) {
       String tmpWord = readings.getToken();
+      if (prevReadings != null && prevReadings.hasAnyPartialPosTag("EIG:") && StringTools.startsWithUppercase(tmpWord) &&
+        (readings.hasAnyPartialPosTag("EIG:") || readings.isPosTagUnknown())) {
+        // assume name, e.g. "Bianca Baalhorn" (avoid: Baalhorn => Ballhorn)
+        continue;
+      }
       List<String> wordsParts = new ArrayList<>(Arrays.asList(tmpWord.split("-")));
       int partsStartPos = 0;
       for (String wordPart : wordsParts) {
@@ -1224,6 +1247,7 @@ public class ProhibitedCompoundRule extends Rule {
       if (noHyphens != null) {
         getMatches(sentence, ruleMatches, readings, 0, noHyphens, tmpWord.length()-noHyphens.length());
       }
+      prevReadings = readings;
     }
     return toRuleMatchArray(ruleMatches);
   }
@@ -1274,7 +1298,9 @@ public class ProhibitedCompoundRule extends Rule {
       long variantCount = lm.getCount(variant);
       //float factor = variantCount / (float)Math.max(wordCount, 1);
       //System.out.println("word: " + wordPart + " (" + wordCount + "), variant: " + variant + " (" + variantCount + "), factor: " + factor + ", pair: " + pair);
-      if (variantCount > getThreshold() && wordCount == 0 && !blacklist.contains(wordPart) && !isMisspelled(variant) && blacklistRegex.stream().noneMatch(k -> wordPart.matches(".*" + k + ".*"))) {
+
+      if (variantCount > getThreshold() && wordCount == 0 && !blacklist.contains(wordPart) && !isMisspelled(variant) &&
+          blacklistRegex.stream().noneMatch(k -> wordPart.matches(".*" + k + ".*"))) {
         String msg;
         if (pair.part1Desc != null && pair.part2Desc != null) {
           msg = "Möglicher Tippfehler. " + uppercaseFirstChar(pair.part1) + ": " + pair.part1Desc + ", " + uppercaseFirstChar(pair.part2) + ": " + pair.part2Desc;
@@ -1284,7 +1310,8 @@ public class ProhibitedCompoundRule extends Rule {
         int fromPos = readings.getStartPos() + partsStartPos;
         int toPos = fromPos + wordPart.length() + toPosCorrection;
         String id = getId() + "_" + cleanId(pair.part1) + "_" + cleanId(pair.part2);
-        RuleMatch match = new RuleMatch(new SpecificIdRule(id, pair.part1, pair.part2, messages, isPremium()), sentence, fromPos, toPos, msg);
+        SpecificIdRule idRule = new SpecificIdRule(id, pair.part1, pair.part2, messages, isPremium(), getTags());
+        RuleMatch match = new RuleMatch(idRule, sentence, fromPos, toPos, msg);
         match.setSuggestedReplacement(variant);
         weightedMatches.add(new WeightedRuleMatch(variantCount, match));
       }
@@ -1366,11 +1393,12 @@ public class ProhibitedCompoundRule extends Rule {
   static private class SpecificIdRule extends Rule {  // don't extend ProhibitedCompoundRule for performance reasons (speller would get re-initialized a lot)
     private final String id;
     private final String desc;
-    SpecificIdRule(String id, String part1, String part2, ResourceBundle messages, boolean isPremium) {
+    SpecificIdRule(String id, String part1, String part2, ResourceBundle messages, boolean isPremium, List<Tag> tags) {
       this.setPremium(isPremium);
       this.id = Objects.requireNonNull(id);
       this.desc = "Markiert wahrscheinlich falsche Komposita mit Teilwort '" + uppercaseFirstChar(part1) + "' statt '" + uppercaseFirstChar(part2) + "' und umgekehrt";
       setCategory(Categories.TYPOS.getCategory(messages));
+      setTags(tags);
     }
     @Override
     public String getId() {

@@ -367,6 +367,7 @@ public class German extends Language implements AutoCloseable {
       case "FALSCHES_RELATIVPRONOMEN": return -1; // prefer dass/das rules
       case "AKZENT_STATT_APOSTROPH": return -1;  // lower prio than PLURAL_APOSTROPH
       case "BEENDE_IST_SENTEND": return -1; // prefer more specific rules
+      case "ICH_GEHE_DU_BLEIBST": return -2; // prefer ICH_GLAUBE_FUER_EUCH
       case "ICH_GLAUBE_FUER_EUCH": return -2; // prefer agreement rules
       case "OBJECT_AGREEMENT": return -2; // less prio than DE_AGREEMENT
       case "ICH_INF_PREMIUM": return -2; // prefer more specific rules that offer a suggestion (e.g. SUBJECT_VERB_AGREEMENT)
@@ -390,6 +391,7 @@ public class German extends Language implements AutoCloseable {
       case "DE_PHRASE_REPETITION": return -4;  // lower prio than spell checker
       case "PUNCTUATION_PARAGRAPH_END": return -4;  // don't hide spelling mistakes
       case "TEST_F_ANSTATT_PH": return -4;  // don't hide spelling mistakes
+      case "SATZBAU_AN_DEN_KOMMT": return -5;  // lower prio than rules that give a suggestion
       case "SUBJECT_VERB_AGREEMENT": return -5; // prefer more specific rules that offer a suggestion (e.g. DE_VERBAGREEMENT)
       case "SAGT_SAGT": return -9; // higher pro than KOMMA_ZWISCHEN_HAUPT_UND_NEBENSATZ_2 and GERMAN_WORD_REPEAT_RULE
       case "PUNKT_ENDE_ABSATZ": return -10;  // should never hide other errors, as chance for a false alarm is quite high
@@ -400,25 +402,30 @@ public class German extends Language implements AutoCloseable {
       case "BEI_VERB": return -14; // prefer case, spelling and AI rules
       case "MODALVERB_FLEKT_VERB": return -14; // prefer case, spelling and AI rules
       case "TOO_LONG_PARAGRAPH": return -15;
-      // Category ids - make sure style issues don't hide overlapping "real" errors:
-      case "COLLOQUIALISMS": return -15;
-      case "STYLE": return -15;
-      case "REDUNDANCY": return -15;
-      case "GENDER_NEUTRALITY": return -15;
-      case "TYPOGRAPHY": return -15;
       case "ALL_UPPERCASE": return -15;
+      case "ANFUEHRUNGSZEICHEN_CH_FR": return -49; // prefer over AT/DE quote conventions (is in CH grammar)
       case "COMMA_BEHIND_RELATIVE_CLAUSE": return -52; // less prio than AI_DE_HYDRA_LEO
       case "DOPPELUNG_MODALVERB": return -52; // prefer comma rules (DOPPELUNG_MODALVERB, AI)
       case "VER_DOPPELUNG": return -52; // prefer comma rules (including AI)
       case "DEF_ARTIKEL_INDEF_ADJ": return -52; // less prio than DE_AGREMEENT and less prio than most comma rules
       case "PRP_ADJ_AGREEMENT": return -52; // less prio than DE_AGREMEENT and less prio than most comma rules
+      case "SIE_WOLLTEN_SIND": return -52;
+      case "ART_ADJ_SOL": return -52; // prefer comma rules
+      case "WURDEN_WORDEN_1": return -52; // prefer comma rules
       case "KOMMA_ZWISCHEN_HAUPT_UND_NEBENSATZ": return -53;
       case "VERB_IST": return -53; // less prio than comma rules and spell checker
       case "WAR_WERDEN": return -53; // less prio than comma rules
       case "INF_VER_MOD": return -53; // prefer case, spelling and AI rules
       case "VERB_FEM_SUBST": return -54; // prefer comma rules (including AI)
       case "SUBJUNKTION_KOMMA_2": return -54; // lower prio than KOMMA_ZWISCHEN_HAUPT_UND_NEBENSATZ and KOMMA_ZWISCHEN_HAUPT_UND_NEBENSATZ_2
+      case "DOPPELUNG_GLEICHES_VERB": return -55; // prefer comma rules
       case "REPETITIONS_STYLE": return -60;
+      // Category ids - make sure style issues don't hide overlapping "real" errors:
+      case "COLLOQUIALISMS": return -15;
+      case "STYLE": return -15;
+      case "REDUNDANCY": return -15;
+      case "GENDER_NEUTRALITY": return -15;
+      case "TYPOGRAPHY": return -15;
     }
     if (id.startsWith("CONFUSION_RULE_")) {
       return -1;
