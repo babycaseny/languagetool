@@ -578,6 +578,7 @@ Pokémon Go
 Björk
 Charles de Gaulle
 The Globe and Mail
+Madame Tussaud
 Madame Tussauds
 Microsoft Teams
 Microsoft Ads
@@ -4000,3 +4001,84 @@ Matteo Salvini
 Dunnhumby
 John Bolton
 Clive Myrie
+Christopher Walken
+Barnes & Noble
+Barnes and Noble
+Mac Studio
+Matt Reeves
+Apache NiFi
+M1 Ultra
+M1 Max
+M1 Pro
+Dyson Airwrap
+Dyson Airblade
+Gaspar Noé
+Yoon Seok-youl
+Ritz-Carlton
+John McWhorter
+Rishi Sunak
+ID.Buzz
+SBB Cargo
+SBB Cargo International
+Billy Bob Thornton
+Melanie Thornton
+Nasdaq Composite
+NASDAQ Composite
+Mario Draghi
+Adobe InCopy
+Novo Nordisk
+Jyske Bank
+Yvan Colonna
+Benedict Cumberbatch
+Eduard Heger
+Zuzana Čaputová
+Borut Pahor
+Janez Janša
+Petr Fiala
+Susanne Klatten
+Stefan Quandt
+Mevlüt Çavuşoğlu
+Real Betis
+Real Betis Balompié
+Camp Nou
+Karim Khan
+Memphis Depay
+Francis Ford Coppola
+Ford Coppola
+Ted Lieu
+Google Meet
+Signa Holding
+Khaby Lame
+Khabane Lame
+Fresenius Medical Care
+Mar-a-Lago
+Clarence Thomas
+Clarence Seedorf
+Ketanji Brown Jackson
+Brown Jackson
+George Russell
+Lando Norris
+Raiffeisen Bank
+Vistaprint
+Marie-Philip Poulin
+Alexanderplatz
+van Gogh
+Vincent van Gogh
+Ebenezer Scrooge
+Saint-Exupéry
+Jan Bytnar
+BSE SENSEX
+BSE Sensex
+Chloé Zhao
+Amazon Logistics
+Zoe Wees
+Chloe Ting
+Zoe Saldaña
+Simon Pegg
+Vanessa Kirby
+Ving Rhames
+Wolf Blitzer
+Michelle Monaghan
+Gracenote
+Robert Habeck
+Juventus Stadium

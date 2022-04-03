@@ -1247,6 +1247,11 @@ dildo	dildo	NCMS000
 dildos	dildo	NCMP000
 direcionamento	direcionamento	NCMS000
 direcionamentos	direcionamento	NCMP000
+dirimir	dirimir	VMN0000
+dirimir	dirimir	VMN01S0
+dirimir	dirimir	VMN03S0
+dirimir	dirimir	VMSF1S0
+dirimir	dirimir	VMSF3S0
 discalculia	discalculia	NCFS000
 discalculias	discalculia	NCFP000
 discricionariamente	discricionariamente	RG
@@ -3160,6 +3165,7 @@ reencaminhamento	reencaminhamento	NCMS000
 reencaminhamentos	reencaminhamento	NCMP000
 reenquadramento	reenquadramento	NCMS000
 reenquadramentos	reenquadramento	NCMP000
+refazer	refazer	VMN0000
 refletância	refletância	NCFS000
 refletâncias	refletância	NCFP000
 reflexologia	reflexologia	NCFS000
@@ -3200,9 +3206,11 @@ relaxe	relaxar	VMSP1S0
 relaxe	relaxar	VMSP3S0
 relaxes	relaxar	VMM02S0
 relaxes	relaxar	VMSP2S0
+reler	reler	VMN0000
 reli	reler	VMIS1S0
 relocalização	relocalização	NCFS000
 remediação	remediação	NCFS000
+remediar	remediar	VMN0000
 remover	remover	VMN01S0
 remover	remover	VMN03S0
 reparatória	reparatório	AQ0FS0
@@ -5171,6 +5179,7 @@ Ekberg	Ekberg	NPMS000
 Elizabeth	Elizabeth	NPFS000
 Elliot	Elliot	NPMS000
 Elwood	Elwood	NPMS000
+Elza	Elza	NPFS000
 Émile	Émile	NPMS000
 Emily	Emily	NPFS000
 Enrique	Enrique	NPMS000
@@ -5190,6 +5199,8 @@ Fénix	Fénix	NPMS000
 FIA	FIA	NPFSO00
 Firetrust	Firetrust	NPFS000
 Fisher	Fisher	NPMS000
+Florianópolis	Florianópolis	NPFSG00
+Flórida	Flórida	NPFSG00
 Floyd	Floyd	NPMS000
 Fonseca	Fonseca	NPCSS00
 Fortaleza	Fortaleza	NPFSG00

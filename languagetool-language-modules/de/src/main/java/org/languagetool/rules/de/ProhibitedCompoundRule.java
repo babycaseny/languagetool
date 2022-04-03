@@ -50,6 +50,10 @@ public class ProhibitedCompoundRule extends Rule {
   private static final List<Pair> lowercasePairs = Arrays.asList(
           // NOTE: words here must be all-lowercase
           // NOTE: no need to add words from confusion_sets.txt, they will be used automatically (if starting with uppercase char)
+          new Pair("gelände", "Gebiet", "geländer", "Konstruktion zum Festhalten entlang von Treppen"),
+          new Pair("tropen", "feuchtwarme Gebiete am Äquator", "tropfen", "kleine Menge Flüssigkeit"),
+          new Pair("enge", "Mangel an Platz", "menge", "Anzahl an Einheiten"),
+          new Pair("ritt", "Reiten", "tritt", "Aufsetzen eines Fußes"),
           new Pair("beine", "Körperteil", "biene", "Insekt"),
           new Pair("rebe", "Weinrebe", "reibe", "Küchenreibe"),
           new Pair("lande", null, "landes", null),
@@ -142,6 +146,29 @@ public class ProhibitedCompoundRule extends Rule {
     "Gra(ph|f)it"   // Grafit/Graphit
   );
   private static final Set<String> blacklist = new HashSet<>(Arrays.asList(
+          "Mietdiskussion",  // vs. Mit
+          "Mietdiskussionen",  // vs. Mit
+          "Mietverwalter",  // vs. Mit
+          "Mietverwaltern",  // vs. Mit
+          "Mietverwalters",  // vs. Mit
+          "Handfilter",  // vs. Sand
+          "Handfiltern",  // vs. Sand
+          "Handfilters",  // vs. Sand
+          "Fellpartie",  // vs. Fels
+          "Fellpartien",  // vs. Fels
+          "Reservesitz",  // vs. satz
+          "Energiekonten",  // vs. kosten
+          "Steingelände",  // vs. geländer
+          "Marktengen",  // vs. menge
+          "Stromernte",  // vs. Stroh
+          "Stromernten",  // vs. Stroh
+          "Plastikspitze",  // vs. Spritze
+          "Plastikspitzen",  // vs. Spritze
+          "Speichenmuster",  // vs. Speicher
+          "Ticketverlauf",  // vs. verkauf
+          "Ticketverlaufs",  // vs. verkauf
+          "Immobilienwelt",  // vs. wert
+          "Rheinruhr",  // vs. ohr (eigentlich "Rhein-Ruhr")
           "Turmbewegung",  // vs. Turn
           "Turmbewegungen",  // vs. Turn
           "Turmwart",  // vs. Turn
@@ -1236,6 +1263,10 @@ public class ProhibitedCompoundRule extends Rule {
       if (prevReadings != null && prevReadings.hasAnyPartialPosTag("EIG:") && StringTools.startsWithUppercase(tmpWord) &&
         (readings.hasAnyPartialPosTag("EIG:") || readings.isPosTagUnknown())) {
         // assume name, e.g. "Bianca Baalhorn" (avoid: Baalhorn => Ballhorn)
+        continue;
+      }
+      if (prevReadings != null && prevReadings.getToken().matches("Herrn?|Frau")) {
+        // assume name, e.g. "Herr Eiswert" (avoid: Eiswert -> Eiswelt)
         continue;
       }
       List<String> wordsParts = new ArrayList<>(Arrays.asList(tmpWord.split("-")));
