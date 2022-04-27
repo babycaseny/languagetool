@@ -196,6 +196,7 @@ guerra dels Sis Dies
 guerra dels Set Anys
 guerra de Bòsnia
 guerra del Golf
+guerra del golf Pèrsic
 guerra civil de Somàlia
 guerra freda
 guerra del cava
@@ -336,3 +337,7 @@ pacte d'estat
 raó d'estat
 raons d'estat
 Jocs Olímpics d'hivern
+els Emirats Àrabs
+els Emirats Àrabs Units
+diada de Sant Jordi
+dia de Sant Jordi

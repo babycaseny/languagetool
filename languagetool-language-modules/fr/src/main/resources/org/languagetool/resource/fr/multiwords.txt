@@ -1,5 +1,40 @@
 #French multiwords file used for chunking
 #separatorRegExp=[\t;]
+point presse; N m s
+points presse; N m p
+The American Weekly; Z e sp
+Europe News Weekly; Z e sp
+US Weekly; Z e sp
+capture d'écran; N f s
+Affective sciences; Z e sp
+Cultural Perspectives; Z e sp
+Super Finale; Z e sp
+Fédéral Archives; Z e sp
+Orchestral Version; Z e sp
+Territorial Division Act; Z e sp
+native digital;Z e sp
+Global offensive;Z e sp
+Call of Duty;Z e sp
+World of Warcraft; Z e sp
+Grand Theft Auto; Z e sp
+The Elder Scrolls; Z e sp
+League of Legends;Z e sp
+Far Cry; Z e sp
+Allo Resto;Z e sp
+dirt bike;N m s
+dirt bikes;N m p
+food truck;N m s
+food trucks;N m p
+street food; N e sp
+The Legend of Zelda; Z e sp
+Animal Crossing; Z e sp
+Mario Kart; Z e sp
+Annamie Paul; Z e sp
+Omar Sy;Z e sp
+Four Seasons;Z e sp
+captures d'écran; N f p
+appareil photo; N m s
+appareils photo; N m p
 zinc pyrithione; N m sp
 Abd Rabbo Mansour Hadi; Z e sp
 Via Campesina; Z f sp

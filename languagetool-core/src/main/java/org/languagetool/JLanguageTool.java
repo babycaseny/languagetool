@@ -230,7 +230,11 @@ public class JLanguageTool {
 
   public enum Level {
     DEFAULT,
-    PICKY
+    PICKY,
+    ACADEMIC,
+    CLARITY,
+    PROFESSIONAL,
+    CREATIVE
   }
 
   private static final List<File> temporaryFiles = new ArrayList<>();
@@ -932,7 +936,9 @@ public class JLanguageTool {
     annotatedText = cleanText(annotatedText);
     List<String> sentences = getSentences(annotatedText, tokenizeText);
     List<AnalyzedSentence> analyzedSentences = analyzeSentences(sentences);
-    return checkInternal(annotatedText, paraMode, listener, mode, level, textSessionID, sentences, analyzedSentences);
+    CheckResults checkResults = checkInternal(annotatedText, paraMode, listener, mode, level, textSessionID, sentences, analyzedSentences);
+    checkResults.setSentenceRanges(sentences);
+    return checkResults;
   }
 
   private List<String> getSentences(AnnotatedText annotatedText, boolean tokenizeText) {

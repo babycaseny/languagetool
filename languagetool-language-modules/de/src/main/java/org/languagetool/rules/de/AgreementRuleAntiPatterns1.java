@@ -911,6 +911,13 @@ class AgreementRuleAntiPatterns1 {
       token("die")
     ),
     Arrays.asList(
+      // Wir sind immer offen für Mitarbeiter die Teil eines der traditionellsten Malerbetriebe auf dem Platz Zürich werden möchten.
+      posRegex("PRP.*"),
+      posRegex("SUB.*PLU.*"),
+      token("die"),
+      posRegex("SUB.*SIN.*")
+    ),
+    Arrays.asList(
       posRegex("SUB.*MAS.*|EIG.*MAS.*|UNKNOWN"),
       token("("),
       token("de[rm]")
@@ -1100,6 +1107,7 @@ class AgreementRuleAntiPatterns1 {
     Arrays.asList(
       csToken("BMW"),
       token("ConnectedDrive")
-    ));
+    )
+  );
 
 }

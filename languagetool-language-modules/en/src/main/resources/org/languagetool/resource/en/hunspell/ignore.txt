@@ -26,7 +26,6 @@ mightnt
 mustve
 mustnt
 neednt
-double check
 oclock
 shant
 shes
@@ -245,3 +244,22 @@ OTP
 OTPs
 proc
 procs
+FpML
+Brainard
+SPSS
+Hermia
+Olena
+CSM
+CSMs
+Tigray
+UberXL
+GSTIN
+GSTINs
+ISV
+ISVs
+EHR
+EHRs
+Suomi
+ANSA
+Schäfer
+Hauke

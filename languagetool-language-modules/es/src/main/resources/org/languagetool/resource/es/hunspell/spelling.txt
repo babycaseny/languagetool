@@ -1,6 +1,9 @@
 # Words that extend the spell checker. See ignore.txt for words that should be
 # completely ignored (i.e. not used to create suggestions).
 Abramovich
+Borodianka
+Bucha
+CaixaForum
 Eli
 FreeHand
 Gloucester
@@ -12,11 +15,18 @@ Minnelli
 Scholz
 TC
 W3C
+Wembley
+Wesley
 ecofeminismo
 ecofeminista
 ecofeministas
 gigafactoría
 gigafactorías
 lacrosse
+marsopeo
+pódcast
 quiche
 quiches
+supermicrobio
+supermicrobios
+viacrucis

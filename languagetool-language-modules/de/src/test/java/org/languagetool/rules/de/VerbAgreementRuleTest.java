@@ -72,12 +72,10 @@ public class VerbAgreementRuleTest {
     assertThat(match3.length, is(1));
     assertThat(match3[0].getFromPos(), is(97));
     assertThat(match3[0].getToPos(), is(107));
-    
-    //TODO: This is a FP to be fixed
+
+    //Was a FP, now fixed
     RuleMatch[] match4 = rule.match(lt.analyzeText("Mir ist bewusst, dass viele Menschen wie du empfinden."));
-    assertThat(match4.length, is(1));
-    assertThat(match4[0].getFromPos(), is(41));
-    assertThat(match4[0].getToPos(), is(53));
+    assertThat(match4.length, is(0));
   }
   
   @Test
@@ -179,6 +177,8 @@ public class VerbAgreementRuleTest {
     assertGood("Der Bescheid lasse im übrigen die Abwägungen vermissen, wie die Betriebsprüfung zu den Sachverhaltsbeurteilungen gelange, die den von ihr bekämpften Bescheiden zugrundegelegt worden seien.");
     assertGood("Die Bildung des Samens erfolgte laut Alkmaion im Gehirn, von wo aus er durch die Adern in den Hoden gelange.");
     assertGood("Michael Redmond (geb. 1963, USA).");
+    assertGood("Würd mich sehr freuen drüber.");
+    assertGood("Es würd' ein jeder Doktor sein, wenn's Wissen einging wie der Wein.");
     // incorrect sentences:
     assertBad("Als Borcarbid weißt es eine hohe Härte auf.");
     assertBad("Das greift auf Vorläuferinstitutionen bist auf die Zeit von 1234 zurück.");

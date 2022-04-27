@@ -8772,3 +8772,11 @@ old-timiness*
 pseudo-clefting*
 air-liner?
 air-liners?
+one-liner*
+one-liners*
+mission-critical*
+counter-strike?
+counter-strikes?
+counter-striked?
+crypto-friendly*
+time-barred*
