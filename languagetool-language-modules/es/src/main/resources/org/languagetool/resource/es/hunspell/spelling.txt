@@ -14,6 +14,7 @@ Leicester
 MWC
 Minnelli
 Obélix
+Pegasus
 Prokófiev
 Scarlatti
 Scholz
@@ -26,6 +27,10 @@ anacrúsica
 anacrúsicas
 anacrúsico
 anacrúsicos
+antirrusa
+antirrusas
+antirruso
+antirrusos
 deambulante
 deambulantes
 ecofeminismo
@@ -36,6 +41,8 @@ gigafactorías
 jedi
 jedis
 lacrosse
+macroplan
+macroplanes
 marsopeo
 metronómica
 metronómicas
@@ -435,6 +442,8 @@ semifrase
 semifrases
 sobreesfuerzo
 sobreesfuerzos
+subcaso
+subcasos
 subfrase
 subfrases
 supermicrobio
