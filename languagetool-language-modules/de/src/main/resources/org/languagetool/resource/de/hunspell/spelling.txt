@@ -37046,6 +37046,22 @@ En-suite-Bäder/N
 IVD
 Sharing #eng
 Endkund_in
+Neukund_in
+Privatkund_in
+Erstkund_in
+Altkund_in
+Kabelkund_in
+Industriekund_in
+Bahnkund_in
+Geschäftskund_in
+Unternehmenskund_in
+Bankkund_in
+Bestandskund_in
+Firmenkund_in
+Stammkund_in
+Tarifkund_in
+Großkund_in
+Anzeigenkund_in
 Businesskund_in
 Business-Kund_in
 Abc-Schütz_in
@@ -47565,6 +47581,7 @@ dazu_gehören
 mit_lesen
 herum_plagen
 hinein_leben
+drin_bleiben
 klein_halten
 Asiamarkt/S
 Asiamärkte/N
@@ -47581,6 +47598,7 @@ weg_flutschen
 wettbewerbsstark/A
 Solarpanel/S
 resilienter/A
+resistenter/A
 vorwettbewerblich/A
 wettbewerbsfähiger/A
 Transformationsherausforderung
@@ -47602,3 +47620,139 @@ Ermöglicherinnen
 vorüber_schleichen
 vorüber_schlendern
 vorüber_schlüpfen
+Stilunsicherheit
+Stilunsicherheiten
+urkundenecht/A
+verurkunden
+verurkunde
+verurkundete
+verurkundeten
+Genderbewegung
+Genderbewegungen
+Sudden Death #eng
+Vertical Farming #eng
+Schweinkram
+rum_überlegen #ugs
+Gendertheorie/N
+herum_ärgern
+Biersommelière/N
+Touchscreenfunktion
+Touchscreenfunktionen
+Gender-Gap/S
+Gendergap/S
+Genderlücke/N
+Hampden Park/S #name
+Scottish Premiership #name
+van Bronckhorst/S #name
+Sassenheim/S #name
+Bettemburg/S #name
+Schifflingen/S #name
+Käerjeng/S #name
+Reality-Sternchen/S
+Shopübersicht
+Shopübersichten
+drauf_schauen
+weg_naschen
+weg_husten
+Sharm el Sheikh/S #name
+drauf_kloppen
+drauf_kritzeln
+drauf_gehen
+drauf_kommen
+drauf_hüpfen
+Semmelrogge/S #name
+Full-Stack-Webentwickler/SN
+Full-Stack-Webentwicklerin
+Full-Stack-Webentwicklerinnen
+Full-Stack-Entwickler/SN
+Full-Stack-Entwicklerin
+Full-Stack-Entwicklerinnen
+Allround-Entwickler/SN
+Allround-Entwicklerin
+Allround-Entwicklerinnen
+Full Stack Developer/SN
+offenlegungspflichtig/A
+Publizitätsgesetz
+Publizitätsgesetzes
+rechtsformspezifisch/A
+rechtsformabhängig/A
+Publikationsentgelt/S
+Publikationsentgelte/NS
+Androhungsverfügung
+Androhungsverfügungen
+drauf_hämmern
+mit_heulen
+auf_sägen
+drauf_klopfen
+Partylinse/N
+Bernsteinlinse/N
+drauflos_arbeiten
+drauflos_fabulieren
+drauflos_feuern
+drauflos_schwatzen
+drauflosschießen
+drauflosschieße
+drauflosschießt
+drauflosschoss
+drauflosschossen
+drauflosgeschossen
+drauflos_rennen
+drauflos_schwimmen
+drauflos_laufen
+drauflos_schlagen
+drauflos_bauen
+drauflos_sprechen
+drauflos_hämmern
+drauflos_watscheln
+drauflos_wirtschaften
+drauflos_gehen
+drauflos_raten
+drauflos_starten
+drauflos_klicken
+drauflos_posten
+drauflos_malen
+drauflos_plappern
+FREE NOW/S #name
+Share Now/S #name
+rechtefrei/A
+Kratersuche/N
+Marsmond/S
+Marsmonde/SN
+Daniela Cavallo/S #name
+jungdynamisch/A
+manövrierbar/A
+Windjammer/NS
+Stagflationsszenario/S
+Holunderblütensirup/S
+Knappentätigkeit
+Knappentätigkeiten
+Aufwartedienste/N
+an_mustern
+Genossenschaftliche FinanzGruppe #name
+Genossenschaftlichen FinanzGruppe #name
+Bernsteininsel/N
+Partypizza/S
+Partypizzen
+Kletterschaukel/N
+Front-End/S
+Back-End/S
+Autorenfilmer/SN
+applauswürdig/A
+klatschwürdig/A
+Orthopoxvirus
+Orthopoxviren
+naturgeprägt/A
+Anfallsrate/N
+Postnasal-Drip-Syndrom/S
+nachtröpfelnd/A
+sinubronchial/A
+Säurerückfluss
+Säurerückflusses
+Säurerückflüsse/N
+Allergiemittel/NS
+Glukokortikoide/N
+Zuführungsgang/S
+Zuführungsgänge/N
+Inkognitofenster/SN
+Inkognitomodus
+Fynn Kliemann/S #name

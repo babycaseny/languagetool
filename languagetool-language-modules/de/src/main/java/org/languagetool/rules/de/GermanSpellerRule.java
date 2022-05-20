@@ -76,7 +76,8 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
     "rassejude", "rassejuden", "rassejüdin", "rassejüdinnen",
     "möse", "mösen", "fotze", "fotzen",
     "judenfrei", "judenfreie", "judenfreier", "judenfreies", "judenfreien", "judenfreiem",
-    "judenrein", "judenreine", "judenreiner", "judenreines", "judenreinen", "judenreinem"
+    "judenrein", "judenreine", "judenreiner", "judenreines", "judenreinen", "judenreinem",
+    "judenmord", "judenmorden", "judenmörder"
   ));
   
   // some exceptions for changes to the spelling in 2017 - just a workaround so we don't have to touch the binary dict:
@@ -1070,7 +1071,7 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
     put("Oster", w -> Arrays.asList("Ostern", "Osten"));
     put("richen", w -> Arrays.asList("riechen", "reichen", "richten"));
     put("deien", w -> Arrays.asList("deine", "dein"));
-    put("meien", w -> Arrays.asList("meine", "mein"));
+    put("meien", w -> Arrays.asList("meine", "mein", "meinen"));
     put("berüht", w -> Arrays.asList("berühmt", "berührt", "bemüht"));
     put("herlich", w -> Arrays.asList("ehrlich", "herrlich"));
     put("erzeiht", w -> Arrays.asList("erzieht", "verzeiht"));
@@ -1125,7 +1126,27 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
     put("schein", w -> Arrays.asList("scheine", "Schein", "scheint", "schien"));
     put("wil", w -> Arrays.asList("will", "wie", "weil", "wir"));
     put("Ihen", w -> Arrays.asList("Ihren", "Ihnen", "Ihn", "Iren"));
+    put("Iher", w -> Arrays.asList("Ihre", "Ihr"));
+    put("neunen", w -> Arrays.asList("neuen", "neunten"));
+    put("wiel", w -> Arrays.asList("weil", "wie", "viel"));
+    put("brauchts", w -> Arrays.asList("braucht es", "brauchst", "braucht"));
+    put("schöen", w -> Arrays.asList("schönen", "schön"));
+    put("ihne", w -> Arrays.asList("ihn", "ihnen"));
+    put("af", w -> Arrays.asList("auf", "an", "an", "als"));
+    put("mächte", w -> Arrays.asList("möchte", "Mächte"));
+    put("öffen", w -> Arrays.asList("öffnen", "offen"));
+    put("Biite", "Bitte");
+    put("Gutn", "Guten");
+    put("gutn", "guten");
+    put("Ettiket", "Etikett");
+    put("iht", "ihr");
+    put("ligt", "liegt");
+    put("gester", "gestern");
+    put("veraten", "verraten");
+    put("dienem", "deinem");
     put("Bite", "Bitte");
+    put("Serh", "Sehr");
+    put("serh", "sehr");
     put("fargen", "fragen");
     put("abrechen", "abbrechen");
     put("aufzeichen", "aufzeichnen");
@@ -1255,6 +1276,7 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
     put("Refelektionen", "Reflexionen");
     put("[sS]chanse", "Chance");
     put("nich", w -> Arrays.asList("nicht", "noch"));
+    put("Nich", w -> Arrays.asList("Nicht", "Noch"));
     put("wat", "was");
     put("[Ee][Ss]ports", "E-Sports");
     put("gerelaunch(ed|t)", "relauncht");
@@ -2506,6 +2528,33 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
       case "Weissheitszähne": return topMatch("Weisheitszähne");
       case "Weißheitszähnen": return topMatch("Weisheitszähnen");
       case "Weissheitszähnen": return topMatch("Weisheitszähnen");
+      case "raufschauen": return topMatch("draufschauen");
+      case "raufzuschauen": return topMatch("draufzuschauen");
+      case "raufgeschaut": return topMatch("draufgeschaut");
+      case "raufschaue": return topMatch("draufschaue");
+      case "raufschaust": return topMatch("draufschaust");
+      case "raufschaut": return topMatch("draufschaut");
+      case "raufschaute": return topMatch("draufschaute");
+      case "raufschauten": return topMatch("draufschauten");
+      case "raufgucken": return topMatch("draufgucken");
+      case "raufzugucken": return topMatch("draufzugucken");
+      case "raufgeguckt": return topMatch("draufgeguckt");
+      case "raufgucke": return topMatch("draufgucke");
+      case "raufguckst": return topMatch("draufguckst");
+      case "raufguckt": return topMatch("draufguckt");
+      case "raufguckte": return topMatch("draufguckte");
+      case "raufguckten": return topMatch("draufguckten");
+      case "raufhauen": return topMatch("draufhauen");
+      case "raufzuhauen": return topMatch("draufzuhauen");
+      case "raufgehaut": return topMatch("draufgehaut");
+      case "raufhaue": return topMatch("draufhaue");
+      case "raufhaust": return topMatch("draufhaust");
+      case "raufhaut": return topMatch("draufhaut");
+      case "raufhaute": return topMatch("draufhaute");
+      case "raufhauten": return topMatch("draufhauten");
+      case "Click": return topMatch("Klick");
+      case "Clicks": return topMatch("Klicks");
+      case "jenachdem": return topMatch("je nachdem");
     }
     return Collections.emptyList();
   }

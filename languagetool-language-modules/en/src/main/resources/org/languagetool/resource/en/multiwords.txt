@@ -2340,7 +2340,6 @@ Eddie Van Halen	NNP
 Edgar Allan Poe	NNP
 Edmund Husserl	NNP
 Edward Snowden	NNP
-Eintracht Frankfurt	NNP
 #ejusdem generis	NNP
 El Banco	NNP
 El Berrendo	NNP
@@ -5442,3 +5441,17 @@ Qatar Telecom	NNP
 Qatar Holding	NNP
 Best Western	NNP
 Karine Jean-Pierre	NNP
+Tôn Thất Tùng	NNP
+Hampden Park	NNP
+Giovanni van Bronckhorst	NNP
+Ibrox Stadium	NNP
+Intel NUC	NNP
+Eddy Cue	NNP
+Phil Schiller	NNP
+Air Baltic	NNP
+Malik Harris	NNP
+Ava Max	NNP
+Patrick Vieira	NNP
+Michael Burry	NNP
+Bill Ackmann	NNP
+Erin Brockovich	NNP

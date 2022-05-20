@@ -660,7 +660,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                             <token>będzie</token>
                         </antipattern>
                         <pattern>
-                            <token postag="pred|verb:.*(sg|pl).*|verb:imps.*|pcon:imperf.*|pant:perf.*" postag_regexp="yes" skip="-1"><exception postag="subst:.*|adj.*|ppron.*|adv:.*|prep.*|qub|conj|comp|verb:praet.*imperf.*|verb:inf.*|&lt;/TO_(ZNACZY|JEST)&gt;" postag_regexp="yes" scope="current"></exception><exception regexp="yes" scope="current">może|dość</exception><exception postag="SENT_END|&lt;ELLIPSIS&gt;|interp:comma|comp:comma" postag_regexp="yes" scope="next"></exception></token>
+                            <token postag="pred|verb:.*(sg|pl).*|verb:imps.*|pcon:imperf.*|pant:perf.*" postag_regexp="yes" skip="-1"><exception postag="subst:.*|adj.*|ppron.*|adv:.*|prep.*|qub|conj|comp|verb:praet.*imperf.*|verb:inf.*|&lt;/TO_(ZNACZY|JEST)&gt;" postag_regexp="yes" scope="current"></exception><exception regexp="yes" scope="current">może|dość</exception><exception postag="SENT_END|&lt;ELLIPSIS&gt;|interp:comma|comp:comma" postag_regexp="yes" scope="next"/></token>
                             <token postag="verb:bedzie.*|pcon:imperf.*" postag_regexp="yes" regexp="yes" skip="-1">będ.*</token>
                             <token regexp="yes">&interp_conj;</token>
                         </pattern>
@@ -674,6 +674,171 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                         <example correction="">Analiza, która <marker>zignorowała stronę doświadczeniową będzie jedynie analizą czegoś nieistotnego.</marker></example>
                         <example>Telefon to coś, bez czego nie sposób będzie się obejść.</example>
                         <example>Na bazie rozmów telefonicznych podczas przerw lunchowych (samochodem pod McDonald’s i potem w przerwach pomiędzy kęsami dzwonienie z zeszytem przed sobą) selekcjonowałem te, które uznałem, że warto będzie zobaczyć.</example>
+                    </rule>
+                    <rule id="PRZYSLOWKI_PREDYKATYWNE_BEZ_PRZECINKOW">
+                    <antipattern>
+                         <token regexp="yes">trudno|łatwo|dobrze|ciężko|miło|przyjemnie|niełatwo|wygodnie|nietrudno|prosto|bezpiecznie|fajnie|korzystnie|tanio|źle|przykro|rozsądnie|niebezpiecznie|próżno|cudownie|pięknie|niedobrze|wspaniale|dziwnie|ciekawie|głupio|niezręcznie|praktycznie|zdrowo|zabawnie|smutno|mądrze</token>
+                        <marker>
+                        <token postag="verb:inf.*" postag_regexp="yes"/>
+                        <token min="0">nie</token>                         
+                         <token regexp="yes">jest|było(?:by)?|można</token>
+                        </marker>      
+                    </antipattern>
+                        <pattern>
+                          <token regexp="yes">trudno|łatwo|dobrze|ciężko|miło|przyjemnie|niełatwo|wygodnie|nietrudno|prosto|bezpiecznie|fajnie|korzystnie|tanio|źle|przykro|rozsądnie|niebezpiecznie|próżno|cudownie|pięknie|niedobrze|wspaniale|dziwnie|ciekawie|głupio|niezręcznie|praktycznie|zdrowo|zabawnie|smutno|mądrze</token>
+                          <marker>
+                          <token postag="verb:inf.*" postag_regexp="yes" skip="-1">
+                            <exception scope="current">widać</exception>
+                            <exception postag="SENT_END|&lt;ELLIPSIS&gt;|interp:comma|comp:comma" postag_regexp="yes" scope="next"/>
+                            <exception scope="next" regexp="yes">&interp;</exception>
+                          </token>
+                          <token postag="verb:.*(sg|pl).*|verb:imps.*|pcon:imperf.*|pant:perf.*|pred" postag_regexp="yes">
+                              <exception postag="subst:.*|adj.*|ppron.*|verb:inf.*|verb:bedzie.*|adv:com|prep.*|qub|adv.*|conj|comp" postag_regexp="yes" scope="current"/>
+                              <exception inflected="yes">gotów</exception>
+                          </token>
+                          </marker>
+                        </pattern>
+                        <message>Prawdopodobnie brak przecinka w zdaniu złożonym.</message>
+                        <short>Błąd interpunkcyjny</short>
+                        <example correction="">Trudno <marker>stwierdzić co miałoby</marker> dać włączenie jej do naszego grona.</example>
+                        <example correction="">Przekonaniu, że tak ciężko <marker>zacząć wszystko od nowa towarzyszyło</marker> uczucie zagubienia.</example>
+                    </rule>
+                    <rule id="PRZYSLOWKI_PREDYKATYWNE_BEZ_PRZECINKOW_2">
+                    <antipattern> <!-- reguła BRAK_PRZECINKA_ZEBY -->
+		                <token inflected="yes" skip="-1" postag="comp">by
+                        <exception scope="previous" regexp="yes" inflected="yes">rad|który|co</exception>
+                        <exception scope="previous">należało</exception>
+                        <exception scope="previous" postag="SENT_START|conj|comp|pred|adv.*|verb:imps:.*" postag_regexp="yes"/>
+                        <exception inflected="yes" regexp="yes" scope="next">bądź|czy|ani|lub|albo|oraz|i|kiedy|gdy|który|jaki|że|iż|bo|gdyż|a|jeśli|jeżeli|gdyby|aby|żeby|ażeby|zanim|dopóki</exception>
+                        <exception postag="&lt;ELLIPSIS&gt;|verb:praet:.*|interp:comma|pred" postag_regexp="yes" scope="next"></exception></token>
+                    <marker>
+										  <token postag="verb:inf.*" postag_regexp="yes"/>
+										</marker>
+                    </antipattern>
+                    <antipattern>
+                         <token skip="10" regexp="yes">jest|było(?:by)?|być|można|warto|trzeba|należy|należało(?:by)?|widać|wolno|wystarczy(?:ło(?:by)?)?|wydaj[eą]|okazuj[eą]|pozosta(?:ło|je)
+                            <exception scope="next" postag="SENT_END|&lt;ELLIPSIS&gt;|interp:comma|comp:comma|verb:.*(sg|pl).*|verb:(imps|inf).*|pcon:imperf.*|pant:perf.*|pred"/>
+                            <exception scope="next" regexp="yes">&interp;</exception>                         
+                         </token>
+                         <marker>
+                         <token regexp="yes">trudno|łatwo|dobrze|ciężko|miło|przyjemnie|niełatwo|wygodnie|nietrudno|prosto|bezpiecznie|fajnie|korzystnie|tanio|źle|przykro|rozsądnie|niebezpiecznie|próżno|cudownie|pięknie|niedobrze|wspaniale|dziwnie|ciekawie|głupio|niezręcznie|praktycznie|zdrowo|zabawnie|smutno|mądrze</token>
+                        </marker>
+                    </antipattern>
+                    <antipattern>
+                          <token>nie</token>                    
+                         <token skip="10">sposób
+                            <exception scope="next" postag="SENT_END|&lt;ELLIPSIS&gt;|interp:comma|comp:comma|verb:.*(sg|pl).*|verb:(imps|inf).*|pcon:imperf.*|pant:perf.*|pred"/>
+                            <exception scope="next" regexp="yes">&interp;</exception>                         
+                         </token>
+                         <marker>
+                         <token regexp="yes">trudno|łatwo|dobrze|ciężko|miło|przyjemnie|niełatwo|wygodnie|nietrudno|prosto|bezpiecznie|fajnie|korzystnie|tanio|źle|przykro|rozsądnie|niebezpiecznie|próżno|cudownie|pięknie|niedobrze|wspaniale|dziwnie|ciekawie|głupio|niezręcznie|praktycznie|zdrowo|zabawnie|smutno|mądrze</token>
+                        </marker>
+                    </antipattern>
+                    <antipattern>
+                        <unify>
+                            <feature id="number"/><feature id="gender"/>
+                            <token skip="7" inflected="yes">powinien<exception scope="next" postag="verb:(?:pot|fin|bedzie|imp[st]|pred|winien).*|verb:imps.*|pcon:imperf.*|pant:perf.*" postag_regexp="yes"/><exception postag="SENT_END|&lt;ELLIPSIS&gt;|comp:comma|interp:comma" postag_regexp="yes" scope="next"/><exception scope="next" regexp="yes">&interp;</exception></token>
+                            <marker>
+                                <token inflected="yes" postag_regexp="yes" postag="verb:praet.*">być</token>
+                            </marker>
+                        </unify>
+                        <marker>
+                         <token regexp="yes">trudno|łatwo|dobrze|ciężko|miło|przyjemnie|niełatwo|wygodnie|nietrudno|prosto|bezpiecznie|fajnie|korzystnie|tanio|źle|przykro|rozsądnie|niebezpiecznie|próżno|cudownie|pięknie|niedobrze|wspaniale|dziwnie|ciekawie|głupio|niezręcznie|praktycznie|zdrowo|zabawnie|smutno|mądrze</token>
+                          <token postag="verb:inf.*" postag_regexp="yes"/>
+                        </marker>
+                    </antipattern>                        
+                    <antipattern>
+                      <token skip="2" inflected="yes">powinien</token>
+                        <marker>
+                         <token regexp="yes">trudno|łatwo|dobrze|ciężko|miło|przyjemnie|niełatwo|wygodnie|nietrudno|prosto|bezpiecznie|fajnie|korzystnie|tanio|źle|przykro|rozsądnie|niebezpiecznie|próżno|cudownie|pięknie|niedobrze|wspaniale|dziwnie|ciekawie|głupio|niezręcznie|praktycznie|zdrowo|zabawnie|smutno|mądrze</token>
+                          <token postag="verb:inf.*" postag_regexp="yes"/>
+                        </marker>
+                    </antipattern>
+                    <antipattern>
+                         <token inflected="yes" regexp="yes" skip="10">umieć|móc|musieć|chcieć|pozw(?:alać|olić)|potrafić|zacząć|lubić|mieć|pójść|zaczynać|śmieć|poczynać|kazać|zapomnieć|rozkazać|począć|zdążyć|radzić|usiłować|(?:na|wy)uczyć|przyzwyczajać|polecać|silić|zdawać|starać|jąć|postanowić|pomagać|udać|pomóc|zdołać|przesta(?:wa)?ć|uda(?:wa)?ć|przeszkadzać|przestać|postarać|próbować|proponować|przyjść|uczyć|umieć
+                            <exception scope="next" postag="SENT_END|&lt;ELLIPSIS&gt;|interp:comma|comp:comma|verb:.*(sg|pl).*|verb:(imps|inf).*|pcon:imperf.*|pant:perf.*|pred" postag_regexp="yes"/>
+                            <exception scope="next" regexp="yes">&interp;</exception>                             
+                         </token>
+                         <marker>
+                         <token regexp="yes">trudno|łatwo|dobrze|ciężko|miło|przyjemnie|niełatwo|wygodnie|nietrudno|prosto|bezpiecznie|fajnie|korzystnie|tanio|źle|przykro|rozsądnie|niebezpiecznie|próżno|cudownie|pięknie|niedobrze|wspaniale|dziwnie|ciekawie|głupio|niezręcznie|praktycznie|zdrowo|zabawnie|smutno|mądrze</token>
+                        </marker>
+                    </antipattern>
+                    <antipattern>
+                          <token skip="2">proszę</token>
+                          <marker><token regexp="yes">dobrze|rozsądnie|praktycznie</token></marker> 
+                    </antipattern>
+                    <antipattern>
+                          <token>się</token>
+                          <token min="0">nie</token>
+                          <token skip="2" inflected="yes" regexp="yes">d(?:aw)?ać</token>
+                          <marker>
+                          <token regexp="yes">źle|głupio|łatwo|wygodnie|prosto|dobrze|praktycznie|tanio|rozsądnie|bezpiecznie</token>
+                          </marker>
+                    </antipattern>
+                    <antipattern>
+                          <token inflected="yes" regexp="yes">d(?:aw)?ać</token>
+                          <token skip="2">się</token>
+                          <token min="0" regexp="yes">nawet|tak</token>
+                          <marker>
+                          <token regexp="yes">źle|głupio|łatwo|wygodnie|prosto|dobrze|praktycznie|tanio|rozsądnie|bezpiecznie</token>
+                          </marker>
+                    </antipattern>
+                    <antipattern>
+                          <token inflected="yes" regexp="yes">d(?:aw)?ać</token>
+                          <token min="0" regexp="yes">nawet|tak</token>
+                          <marker>
+                          <token regexp="yes">źle|głupio|łatwo|wygodnie|prosto|dobrze|praktycznie|tanio|rozsądnie|bezpiecznie</token>                          
+                          </marker>
+                          <token postag="verb:inf.*[\.:]refl.*" postag_regexp="yes"/> 
+                          <token>się</token>
+                    </antipattern>
+                    <antipattern>
+                          <marker>
+                            <token regexp="yes">daje|da(?:wa)?ł[oay]?</token>
+                          </marker>
+                          <token>o</token>
+                          <token>sobie</token>
+                          <token regexp="yes">trudno|łatwo|dobrze|ciężko|niełatwo|nietrudno|prosto|bezpiecznie|niebezpiecznie|niedobrze|dziwnie|głupio|niezręcznie|praktycznie|zdrowo</token>
+                          <token regexp="yes">znać|zapomnieć</token>
+                    </antipattern>
+                    <antipattern>
+                      <marker>
+                        <token inflected="yes">być</token>
+                      </marker>
+                      <token min="0" max="2" postag="qub"/>
+                      <token>w</token>
+                      <token>stanie</token>
+                    </antipattern>
+                        <pattern>
+                          <marker>
+                          <token postag="verb:.*(sg|pl).*|verb:imps.*|pcon:imperf.*|pant:perf.*|pred" postag_regexp="yes" skip="-1">
+                              <exception postag="subst:.*|adj.*|ppron.*|verb:inf.*|verb:bedzie.*|adv:com|prep.*|qub|adv.*|conj|comp" postag_regexp="yes" scope="current"/>
+                              <exception inflected="yes">gotów</exception>
+                              <exception>je</exception>
+                              <exception postag="SENT_END|&lt;ELLIPSIS&gt;|interp:comma|comp:comma" postag_regexp="yes" scope="next"/>
+                              <exception scope="next" regexp="yes">&interp;</exception>
+                          </token>
+                          <token regexp="yes">trudno|łatwo|dobrze|ciężko|miło|przyjemnie|niełatwo|wygodnie|nietrudno|prosto|bezpiecznie|fajnie|korzystnie|tanio|źle|przykro|rozsądnie|niebezpiecznie|próżno|cudownie|pięknie|niedobrze|wspaniale|dziwnie|ciekawie|głupio|niezręcznie|praktycznie|zdrowo|zabawnie|smutno|mądrze</token>
+                          </marker>
+                          <token postag="verb:inf.*" postag_regexp="yes" skip="-1"> 
+                            <exception scope="current">widać</exception>
+                          </token>
+                        </pattern>
+                        <message>Prawdopodobnie brak przecinka w tym zdaniu złożonym.</message>
+                        <short>Błąd interpunkcyjny</short>
+                        <example correction="">Co <marker>miałoby dać włączenie jej do naszego grona trudno</marker> stwierdzić.</example>
+                        <example>Dodać żółtka, jajko, aromat i tyle śmietany, aby ciasto dało się dobrze zagnieść i było w miarę elastyczne.</example>
+                        <example>Jednakże nie sposób tak łatwo ogłosić sukces.</example>
+                        <example>Wydaje się trudno ubrać w taką pogodę.</example>
+                        <example>Dziesiąty rok wyobrażam sobie, że musi być pioruńsko przyjemnie śmiać się głośno, płakać cicho, uprawiać seks na plaży, pić zimne piwo wieczorową porą, snuć się nocą miastem pełnym zapachów i dźwięków.</example>
+                        <example>Tego typu poradniki pozwalają dość wygodnie przyswoić sobie podstawy.</example>
+                        <example>Pozostało już tylko je dobrze obsmażyć z każdej strony na małym ogniu.</example>
+                        <example>A i potem ta historia długo siedzi w czytelniku, nie daje o sobie łatwo zapomnieć.</example>
+                        <example>Tego się nie da łatwo opowiedzieć, bo jak opowiedzieć tyle przeszłych trudnych historii.</example>
+                        <example>A pani konsultantka nie była w stanie tego dobrze wyartykułować.</example>
+                        <example>Inaczej mówiąc, nie da się go źle podłączyć.</example>
+                        <example>Rozwódka z traumatycznymi przejściami nie da tak łatwo zbliżyć się do siebie kolejnemu mężczyźnie.</example>
+                        <example>Nie jestem już w stanie rozsądnie myśleć.</example>
                     </rule>
                 </rulegroup>
                 <rule id="BRAK_PRZECINKA_PRZED_IMIESLOWEM_PRZYSLOWKOWYM" name="Brak przecinka przed imiesłowem -ąc lub -wszy">
@@ -2126,6 +2291,23 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                       <example>Tworzą mimo to jak gdyby rodzinę.</example>
                   </rule>
                 </rulegroup>
+                <rulegroup id="WIEDZIEC_CO" name="Brak przecinka w „wiedzieć, co…”">
+                    <rule>
+                      <pattern>
+                      <marker>
+                          <token inflected="yes" regexp="yes">(?:po|podpo)?wiedzieć|wiadomo|zastanawia?ć|[dp]oradzić|myśleć|zobaczyć|(?:s|za|pod)pytać</token>
+                          <token skip="-1" regexp="yes">co|jak
+                           <exception postag="SENT_END|&lt;ELLIPSIS&gt;|interp:comma|comp:comma|verb:.*(sg|pl).*|verb:imps.*|pcon:imperf.*|pant:perf.*" postag_regexp="yes"/>
+                          </token>
+                      </marker>
+                          <token postag="verb:inf.*" postag_regexp="yes"></token>
+                      </pattern>
+                      <message>Prawdopodobnie brak przecinka. Powinno być: <suggestion>\1, \2</suggestion>.</message>
+                      <short>Błąd interpunkcyjny</short>
+                      <example correction="wiem, co">Nie <marker>wiem co</marker> robić.</example>
+                      <example correction="Spytam, jak"><marker>Spytam jak</marker> to zrobić.</example>
+                    </rule>                
+                </rulegroup>
             <rule id="BRAK_PRZECINKA_PRZED_GDZIE" name="Brak przecinka przed „gdzie”">
              <pattern>
               <marker>
@@ -2170,7 +2352,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
 				<rulegroup id="BRAK_PRZECINKA_KTORY" name="Brak przecinka przed „który” i „jaki”">
             <antipattern>
                 <unify>
-                    <feature id="case"/><feature id="gender"/><feature id="number"/>
+                    <feature id="case">
+                      <type id="acc"/><type id="gen"/><type id="dat"/><type id="inst"/><type id="loc"/><type id="voc"/>
+                    </feature>
+                    <feature id="gender"/><feature id="number"/>
                     <marker>
                         <token inflected="yes" postag="adj.*" postag_regexp="yes" regexp="yes">jaki|który</token>
                     </marker>
@@ -2207,7 +2392,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
 								<example>Nie wiedziałem, do którego rozporządzenia zgłosił on uwagę.</example>
 								<example>Istnieją dwa powody, z uwagi na które może on tak myśleć.</example>
 								<example correction="wiedziałem, do którego">Nie <marker>wiedziałem do którego</marker> rozporządzenia zgłosił on uwagę.</example>
-                                <example>Gdzie tam, w lada jakiej sprawie musi jeszcze nieborak dawać.</example>
+                <example>Gdzie tam, w lada jakiej sprawie musi jeszcze nieborak dawać.</example>
 						</rule>
 						<rule>
                                 <antipattern>
@@ -2229,7 +2414,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                                 </antipattern>
                                 <antipattern>
                                     <unify>
-                                    <feature id="case"/>
+                                    <feature id="case">
+                                      <type id="acc"/><type id="gen"/><type id="dat"/><type id="inst"/><type id="loc"/><type id="voc"/>
+                                    </feature>
                                     <feature id="gender"/>
                                     <feature id="number"/>
                                     <marker>
@@ -2274,6 +2461,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example>1 Jakie mam prawo mówić o opiniach i życzeniach tych nie do końca jeszcze świadomych przodków?</example>
                 <example correction="Wybierz, który"><marker>Wybierz który</marker> chcesz.</example>
                 <example correction="wyobrazić, jakie">Łatwo jest sobie <marker>wyobrazić jakie</marker> to musiało dla nich być – choć z różnicami zapożyczonymi z naszego własnego doświadczenia.</example>
+                <example correction="zbadać, jaka">Aby w zadowalający sposób <marker>zbadać jaka</marker> relacja łączy wnioskowania z percepcją, należy zanalizować pojęcie percepcji.</example>
 						</rule>
 						<rule>
                                <antipattern>
@@ -6544,6 +6732,236 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 </rule>
 		</category>
 		<category id="SYNTAX" name="Błędy składniowe" type="grammar">
+		<rulegroup id="ZE_INF_IMPT" name="Błędna forma czasownika w zdaniu podrzędnym z „że”">
+        <rule>
+        <antipattern>
+        <marker>
+          <token>stać</token>
+        </marker>
+          <token postag=".*gen.*" postag_regexp="yes"/>
+        </antipattern>
+        <antipattern>
+          <token skip="1" postag="adv:(?:com|sup)" postag_regexp="yes"/>
+          <token>nie</token>
+          <marker>
+            <token postag="verb:inf.*" postag_regexp="yes"/>
+          </marker>        
+        </antipattern>
+        <antipattern>
+          <marker>
+            <token postag="verb:inf.*" postag_regexp="yes"/>
+          </marker>
+          <token regexp="yes">[,i]</token>
+          <token postag="verb:inf.*" postag_regexp="yes"/>
+        </antipattern>
+        <antipattern>
+        <marker>
+          <token>być</token>
+        </marker>
+          <token>może</token>
+        </antipattern>
+        <antipattern>
+          <token>może</token>
+          <token skip="-1">by</token>
+          <marker>
+          <token postag="verb:inf.*" postag_regexp="yes"/>
+          </marker>
+        </antipattern>
+        <antipattern> <!-- idiom o funkcji predykatywnej -->
+            <token>boki</token>
+            <marker>
+              <token>zrywać</token>            
+            </marker>        
+        </antipattern>
+        <antipattern>
+          <token skip="-1">czas</token>
+          <marker>
+            <token postag="verb:inf.*" postag_regexp="yes"/>
+          </marker>
+        </antipattern>
+        <antipattern>
+            <token>za</token>
+            <token skip="-1">wcześnie</token>
+            <marker>
+            <token postag="verb:inf.*" postag_regexp="yes"/>
+          </marker>
+        </antipattern>
+        <antipattern>
+            <token>aż</token>
+            <token>się</token>
+            <token>prosi</token>
+            <marker>
+              <token postag="verb:inf.*" postag_regexp="yes"/>
+          </marker>        
+        </antipattern>
+        <antipattern>
+          <token>palce</token>
+          <token>lizać</token>
+        </antipattern>
+          <pattern>
+            <token skip="-1" regexp="yes" inflected="yes">że|iż
+            <exception scope="previous" regexp="yes">prawie|tyle</exception>
+            <exception scope="next" regexp="yes">lepiej|najlepiej|trudno|łatwo|dobrze|ciężko|miło|przyjemnie|niełatwo|wygodnie|nietrudno|prosto|bezpiecznie|fajnie|korzystnie|tanio|źle|przykro|rozsądnie|niebezpiecznie|próżno|cudownie|pięknie|niedobrze|wspaniale|dziwnie|ciekawie|głupio|niezręcznie|praktycznie|zdrowo|zabawnie|smutno|mądrze</exception>
+            <exception scope="next" postag="conj|comp.*|interp:comma|pred|verb:(?:fin.*|praet.*|bedzie.*|winien.*|imps.*|pot.*)|pcon.*|adv:(?:com|sup)" postag_regexp="yes"></exception>            
+            </token>
+            <marker>
+            <token skip="-1" postag="verb:inf.*" postag_regexp="yes">
+            <exception postag="subst.*" postag_regexp="yes"/>
+            <exception scope="next" regexp="yes">trudno|łatwo|dobrze|ciężko|miło|przyjemnie|niełatwo|wygodnie|nietrudno|prosto|bezpiecznie|fajnie|korzystnie|tanio|źle|przykro|rozsądnie|niebezpiecznie|próżno|cudownie|pięknie|niedobrze|wspaniale|dziwnie|ciekawie|głupio|niezręcznie|praktycznie|zdrowo|zabawnie|smutno|mądrze</exception>
+            <exception scope="next" postag="conj|comp.*|interp:comma|pred|verb:(?:fin.*|praet.*|bedzie.*|winien.*|imps.*|pot.*)" postag_regexp="yes"></exception>            
+            </token>
+            </marker>
+            <token regexp="yes">&interp_conj;</token>
+          </pattern>
+          <message>W tym zdaniu podrzędnym występuje tylko bezokolicznik „\2”. Prawdopodobnie to błąd gramatyczny.</message>
+          <short>Błąd gramatyczny</short>
+          <example correction="">Wiem, że <marker>przeczytać</marker> książkę.</example>
+          <example>Wiem, że trzeba przeczytać książkę.</example>
+          <example>Uważam, że lepiej mieć sprawdzonego kierownika budowy.</example>
+          <example>Wszystkie damy są zainteresowane pańskimi cierpieniami i założę się, że niejedna chciałaby odegrać rolę pocieszycielki.</example>
+          <example>Stróż był w kuchni po jedzenie dla psów i powiada, że go musiał prawie że zanieść do mieszkania.</example>
+          <example>O Widziu, Widziu, ty mi niebo na ziemi ukazujesz i czuję sama, wiem, że na nie zapracować, zasłużyć powinnam!</example>
+          <example>Trener odpowiedział, że za wcześnie jeszcze stawiać krzyżyk na jego drużynie.</example>
+        </rule>
+         <rule>
+         <antipattern>
+            <token regexp="yes">[\-–−—―]</token>
+            <marker>
+              <token>powiedzmy</token>            
+            </marker>
+         </antipattern>
+          <pattern>
+            <token skip="-1" regexp="yes" inflected="yes">że|iż
+            <exception scope="previous" regexp="yes">prawie|tyle</exception>
+            <exception scope="next" postag="conj|comp.*|interp:comma|pred|verb:(?:fin.*|praet.*|bedzie.*|winien.*|imps.*|pot.*)|pcon.*" postag_regexp="yes"></exception>            
+            </token>
+            <marker>
+            <token skip="-1" postag="verb:impt.*" postag_regexp="yes">
+            <exception postag="subst.*|adv:com" postag_regexp="yes"/>
+            <exception regexp="yes">bądź|mial|mniejszej</exception>
+            <exception scope="next" postag="conj|comp.*|interp:comma|pred|verb:(?:fin.*|praet.*|bedzie.*|winien.*|imps.*|pot.*)" postag_regexp="yes"></exception>            
+            </token>
+            </marker>
+            <token regexp="yes">&interp_conj;</token>
+          </pattern>
+          <message>W tym zdaniu podrzędnym występuje tylko czasownik w trybie rozkazującym „\2”. Prawdopodobnie to błąd gramatyczny.</message>
+          <short>Błąd gramatyczny</short>
+          <example correction="">Wiem, że <marker>przeczytaj</marker> książkę.</example>
+          <example>Jestem zwolenniczką tej starej teorii, która mówi, że kucharz, gotując, przekazuje swoje złe lub dobre emocje.</example>
+          </rule>
+		</rulegroup>
+		<rulegroup id="ZEBY_IMPT" name="Błędna forma czasownika po spójniku „żeby”">
+      <rule>
+        <pattern>
+            <token skip="-1" regexp="yes" inflected="yes">(?:że|a)?by
+            <exception scope="next" postag="conj|comp.*|interp:comma|pred|verb:(?:fin.*|praet.*|bedzie.*|winien.*|imps.*|pot.*|inf.*)|pcon.*" postag_regexp="yes"></exception>            
+            </token>
+            <marker>
+            <token skip="-1" postag="verb:impt.*" postag_regexp="yes">
+            <exception postag="subst.*|adv:com|verb:inf.*" postag_regexp="yes"/>
+            <exception regexp="yes">bądź|mial|mniejszej</exception>
+            <exception scope="next" postag="conj|comp.*|interp:comma|pred|verb:(?:fin.*|praet.*|bedzie.*|winien.*|imps.*|pot.*)" postag_regexp="yes"></exception>            
+            </token>
+            </marker>
+            <token regexp="yes">&interp_conj;</token>
+          </pattern>
+          <message>W tym zdaniu podrzędnym występuje tylko czasownik w trybie rozkazującym „\2”. Prawdopodobnie to błąd gramatyczny lub literówka.</message>
+          <short>Błąd gramatyczny</short>
+          <example correction="">Prosił, żebyś <marker>przeczytaj</marker> tę książkę.</example>
+      </rule>
+      <rule>
+        <pattern>
+        <token regexp='yes' skip='-1'>(?:że|a)?by<exception postag='comp:comma|interp:comma|verb:inf.*|verb:praet.*:ter:.*' postag_regexp='yes' scope='next'></exception></token>
+        <token postag='verb:pot:sg.*:pri:.*' postag_regexp='yes'></token>
+        </pattern>
+        <message>Błędna forma spójnika i czasownika (lub literówka). Powinno prawdopodobnie być: <suggestion><match no="1"/>m <match no="1" include_skipped="following"/> <match no="2" regexp_match="bym$" regexp_replace=""/></suggestion>.</message>
+        <short>Błąd gramatyczny</short>
+        <example correction='żebym je także umieścił'>Szymon nalegał, <marker>żeby je także umieściłbym</marker>.</example>
+        <example>Szymon nalegał, żebyśmy je także umieścili.</example>
+      </rule>
+      <rule>
+        <pattern>
+        <token regexp='yes' skip='-1'>(?:że|a)?by<exception postag='comp:comma|interp:comma|verb:inf.*|verb:praet.*:ter:.*' postag_regexp='yes' scope='next'></exception></token>
+        <token postag='verb:pot:pl.*:pri:.*' postag_regexp='yes'></token>
+        </pattern>
+        <message>Błędna forma spójnika i czasownika (lub literówka). Powinno prawdopodobnie być: <suggestion><match no="1"/>śmy <match no="1" include_skipped="following"/> <match no="2" regexp_match="byśmy$" regexp_replace=""/></suggestion>.</message>
+        <short>Błąd gramatyczny</short>
+        <example correction='żebyśmy je także umieścili'>Szymon nalegał, <marker>żeby je także umieścilibyśmy</marker>.</example>
+        <example>Szymon nalegał, żebyśmy je także umieścili.</example>
+      </rule>
+       <rule>
+        <pattern>
+        <token regexp='yes' skip='-1'>(?:że|a)?by<exception postag='comp:comma|interp:comma|verb:inf.*|verb:praet.*:ter:.*' postag_regexp='yes' scope='next'></exception></token>
+        <token postag='verb:pot:sg.*:sec:.*' postag_regexp='yes'></token>
+        </pattern>
+        <message>Błędna forma spójnika i czasownika (lub literówka). Powinno prawdopodobnie być: <suggestion><match no="1"/>ś <match no="1" include_skipped="following"/> <match no="2" regexp_match="byś$" regexp_replace=""/></suggestion>.</message>
+        <short>Błąd gramatyczny</short>
+        <example correction='żebyś je także umieścił'>Szymon nalegał, <marker>żeby je także umieściłbyś</marker>.</example>
+        <example>Szymon nalegał, żebyśmy je także umieścili.</example>
+      </rule>
+      <rule>
+        <pattern>
+        <token regexp='yes' skip='-1'>(?:że|a)?by<exception postag='comp:comma|interp:comma|verb:inf.*|verb:praet.*:ter:.*' postag_regexp='yes' scope='next'></exception></token>
+        <token postag='verb:pot:pl.*:sec:.*' postag_regexp='yes'></token>
+        </pattern>
+        <message>Błędna forma spójnika i czasownika (lub literówka). Powinno prawdopodobnie być: <suggestion><match no="1"/>ście <match no="1" include_skipped="following"/> <match no="2" regexp_match="byście$" regexp_replace=""/></suggestion>.</message>
+        <short>Błąd gramatyczny</short>
+        <example correction='żebyście je także umieścili'>Szymon nalegał, <marker>żeby je także umieścilibyście</marker>.</example>
+        <example>Szymon nalegał, żebyśmy je także umieścili.</example>
+      </rule>
+		</rulegroup>
+		<rulegroup id="ZEBY_PRI_SEC" name="Błędna forma spójnika „żeby” z czasownikiem w pierwszej lub drugiej osobie">
+		<antipattern>
+        <token skip="1">czy</token>
+        <marker>
+          <token>aby</token>
+        </marker>
+		</antipattern>
+		<antipattern> <!-- inna reguła -->
+        <token inflected="yes">ten</token>
+        <token inflected="yes">co</token>
+		</antipattern>
+		  <rule>
+        <pattern>
+        <token regexp='yes' skip='-1'>(?:że|a)?by<exception postag='comp:comma|interp:comma|verb:inf.*|verb:praet.*:ter:.*' postag_regexp='yes' scope='next'></exception></token>
+        <token postag='verb:praet:sg.*:pri:.*' postag_regexp='yes'></token>
+        </pattern>
+        <message>Błędna forma spójnika i czasownika (lub literówka). Powinno prawdopodobnie być: <suggestion><match no="1"/>m <match no="1" include_skipped="following"/> <match no="2" regexp_match="e?m$" regexp_replace=""/></suggestion>.</message>
+        <short>Błąd gramatyczny</short>
+        <example correction='żebym je także umieścił'>Szymon nalegał, <marker>żeby je także umieściłem</marker>.</example>
+        <example>Szymon nalegał, żebyśmy je także umieścili.</example>
+      </rule>
+      <rule>
+        <pattern>
+        <token regexp='yes' skip='-1'>(?:że|a)?by<exception postag='comp:comma|interp:comma|verb:inf.*|verb:praet.*:ter:.*' postag_regexp='yes' scope='next'></exception></token>
+        <token postag='verb:praet:pl.*:pri:.*' postag_regexp='yes'></token>
+        </pattern>
+        <message>Błędna forma spójnika i czasownika (lub literówka). Powinno prawdopodobnie być: <suggestion><match no="1"/>śmy <match no="1" include_skipped="following"/> <match no="2" regexp_match="śmy$" regexp_replace=""/></suggestion>.</message>
+        <short>Błąd gramatyczny</short>
+        <example correction='żebyśmy je także umieścili'>Szymon nalegał, <marker>żeby je także umieściliśmy</marker>.</example>
+        <example>Szymon nalegał, żebyśmy je także umieścili.</example>
+      </rule>
+       <rule>
+        <pattern>
+        <token regexp='yes' skip='-1'>(?:że|a)?by<exception postag='comp:comma|interp:comma|verb:inf.*|verb:praet.*:ter:.*' postag_regexp='yes' scope='next'></exception></token>
+        <token postag='verb:praet:sg.*:sec:.*' postag_regexp='yes'></token>
+        </pattern>
+        <message>Błędna forma spójnika i czasownika (lub literówka). Powinno prawdopodobnie być: <suggestion><match no="1"/>ś <match no="1" include_skipped="following"/> <match no="2" regexp_match="e?ś$" regexp_replace=""/></suggestion>.</message>
+        <short>Błąd gramatyczny</short>
+        <example correction='żebyś je także umieścił'>Szymon nalegał, <marker>żeby je także umieściłeś</marker>.</example>
+        <example>Szymon nalegał, żebyśmy je także umieścili.</example>
+      </rule>
+      <rule>
+        <pattern>
+        <token regexp='yes' skip='-1'>(?:że|a)?by<exception postag='comp:comma|interp:comma|verb:inf.*|verb:praet.*:ter:.*' postag_regexp='yes' scope='next'></exception></token>
+        <token postag='verb:praet:pl.*:sec:.*' postag_regexp='yes'></token>
+        </pattern>
+        <message>Błędna forma spójnika i czasownika (lub literówka). Powinno prawdopodobnie być: <suggestion><match no="1"/>ście <match no="1" include_skipped="following"/> <match no="2" regexp_match="ście$" regexp_replace=""/></suggestion>.</message>
+        <short>Błąd gramatyczny</short>
+        <example correction='żebyście je także umieścili'>Szymon nalegał, <marker>żeby je także umieściliście</marker>.</example>
+        <example>Szymon nalegał, żebyśmy je także umieścili.</example>
+      </rule>
+		</rulegroup>
 		<rule id="ADJ_SUBST_ADJ_UNIFY" name="Naruszenie związku zgody">
       <antipattern>
             <unify>
@@ -7631,6 +8049,25 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
           <example>Powierzchnia Ziemi to w 70% woda.</example>
           <example>Szampon to RENE FURTERER OKARA przedłużający o 80% trwałość koloru włosów farbowanych.</example>
         </rule>
+        <rule>
+        <pattern>
+        <token regexp="yes">\d+</token>
+          <token regexp="yes">ml[dn]
+            <exception postag='adv.*|qub|num.*:congr' postag_regexp='yes'></exception>
+            <exception scope="previous" regexp="yes">1|temu|lat|godzin|chwil|n?ich|nas</exception>            
+          </token>
+          <token postag='(subst|ger|adj|pact|ppas).*nom.*' postag_regexp='yes'>
+            <exception postag='.*:pl:gen.*' postag_regexp='yes'/>
+            <exception postag='prep.*|num.*|adv.*' postag_regexp='yes'/>
+            <exception regexp="yes">to|plus|emerytury|fot|\p{Lu}+</exception>
+            <exception regexp="yes" inflected="yes">&numord;</exception>
+          </token>
+         </pattern>
+         <message>Po tym liczebniku (<match no="1"/> <match no="2"/>) powinien prawdopodobnie występować dopełniacz.</message>
+         <url>http://grzegorj.w.interiowo.pl/gram/pl/liczeb02.html</url>
+         <short>Błąd składniowy</short>
+         <example correction="">Mam <marker>5 mld złoty</marker>.</example>
+          </rule>
         </rulegroup>
         
         <rule id="IMIESLOW_POMYLONY_PODMIOT" name="Imiesłów przysłówkowy z innym podmiotem niż orzeczenie główne">        
@@ -10837,7 +11274,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
               </rule>
               <rule id="PREP_WG"> <!-- wg -->
               	<pattern>
-										<token regexp="yes">wg<exception case_sensitive="yes">WG</exception></token>
+										<token>wg<exception case_sensitive="yes">WG</exception></token>
 										<marker>
 												<token postag="(subst:|ppron).*" postag_regexp="yes"><exception postag=".*gen.*|conj|comp|adv.*|num:.*" postag_regexp="yes"></exception><exception regexp="yes">minus|plus|lada|(?-iu)Don|Los|GUS|CMYK</exception><exception postag="&lt;/?ADV&gt;" postag_regexp="yes"></exception></token>
 										</marker>
@@ -13725,22 +14162,56 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 </rule>
 		</category>
 		<category id="REDUNDANCY" name="Pleonazmy" type="style">
-                <rule id="DOBRA_RENOMA" name="„dobra renoma” (renoma)">
-                    <pattern>
-                        <unify>
-                            <feature id="number"></feature>
-                            <feature id="gender"></feature>
-                            <feature id="case"></feature>
-                            <token inflected="yes">dobry</token>
-                            <token inflected="yes">renoma</token>
-                        </unify>
-                    </pattern>
-                    <message>To pleonazm. Renoma jest zawsze dobra. Wystarczy: <suggestion>\2</suggestion>.</message>
-                    <short>Pleonazm</short>
-                    <example>Nadszarpnięta została renoma saabów jako wozów w pełni niezawodnych i bezpiecznych.</example>
-                    <example correction="renoma">Nadszarpnięta została <marker>dobra renoma</marker> saabów jako wozów w pełni niezawodnych i bezpiecznych.</example>
-                </rule>
-				<rule id="EFEKT_KONCOWY" name="„efekt końcowy” (efekt)">
+		<rulegroup id="adaptacja_i_przystosowanie" name="„adaptacja i przystosowanie” (adaptacja)">
+      <rule>
+      <pattern>
+        <marker>
+          <unify><feature id="number"></feature><feature id="case"/>
+          <token inflected="yes">adaptacja</token>
+          <unify-ignore>
+              <token regexp="yes">i|oraz</token>          
+          </unify-ignore>
+          <token inflected="yes" regexp="yes">(?:do|przy)stosować</token>
+          </unify>
+        </marker>
+          <token><exception regexp="yes">do|się</exception></token>      
+      </pattern>
+      <message>To pleonazm. Wystarczy: <suggestion>\1</suggestion>.</message>
+      <short>Pleonazm</short>
+      <example correction="adaptacji">Pierwsza z nich obejmuje koszt <marker>adaptacji i przystosowania</marker> lokalu, który uzależniony jest od jego wielkości i standardu wykończenia.</example>
+      <example>Zajmuje się również dystrybucją projektów powtarzalnych wraz z ich adaptacją i przystosowaniem do miejscowych warunków zabudowy.</example>
+      </rule>
+      <rule>
+      <pattern>
+          <unify><feature id="number"></feature><feature id="case"/>
+          <token inflected="yes" regexp="yes">(?:do|przy)stosować</token>                    
+          <unify-ignore>
+              <token regexp="yes">i|oraz</token>          
+          </unify-ignore>
+          <token inflected="yes">adaptacja</token>
+          </unify>
+      </pattern>
+      <message>To pleonazm. Wystarczy: <suggestion>\1</suggestion>.</message>
+      <short>Pleonazm</short>
+      <example correction="przystosowania">W polskiej normalizacji podjęto szerokie działania w kierunku <marker>przystosowania i adaptacji</marker> swojego systemu wewnętrznego do zasad, jakie obowiązują w krajach UE.</example>
+      </rule>
+		</rulegroup>
+    <rule id="DOBRA_RENOMA" name="„dobra renoma” (renoma)">
+        <pattern>
+            <unify>
+                <feature id="number"></feature>
+                <feature id="gender"></feature>
+                <feature id="case"></feature>
+                <token inflected="yes">dobry</token>
+                <token inflected="yes">renoma</token>
+            </unify>
+        </pattern>
+        <message>To pleonazm. Renoma jest zawsze dobra. Wystarczy: <suggestion>\2</suggestion>.</message>
+        <short>Pleonazm</short>
+        <example>Nadszarpnięta została renoma saabów jako wozów w pełni niezawodnych i bezpiecznych.</example>
+        <example correction="renoma">Nadszarpnięta została <marker>dobra renoma</marker> saabów jako wozów w pełni niezawodnych i bezpiecznych.</example>
+    </rule>
+      <rule id="EFEKT_KONCOWY" name="„efekt końcowy” (efekt)">
 						<pattern>
 								<unify>
 										<feature id="number"></feature>
@@ -14725,6 +15196,17 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
 						<example>Jak będziesz w szpitalu wariatów, pozdrów Antoniego od Aleksandra!</example>
 						<example correction="od|odę">Jak będziesz w szpitalu wariatów, pozdrów Antoniego <marker>ode</marker> Aleksandra!</example>
 				</rule>
+				<rule id="PRZEZ_MNIE" name="„przez mnie” (przeze mnie)">
+          <pattern>
+              <marker>
+                <token>przez</token>              
+              </marker>
+              <token>mnie</token>     
+          </pattern>
+          <message>Ten przyimek należy zapisać tak: <suggestion>przeze</suggestion>.</message>
+          <short>Błąd fonetyczny</short>
+					<example correction="przeze">To wszystko <marker>przez</marker> mnie.</example>	
+				</rule>
 				<rule id="SPOD_LBA" name="„spod łba” (spode łba)">
 						<pattern>
 								<marker>
@@ -14740,7 +15222,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
 				<rule id="SPODE_CZEGO" name="„spode/znade czego” (spod/znad czego)">
 						<pattern>
 								<marker>
-										<token regexp="yes">spode|znade</token>
+										<token regexp="yes">spode|znade|przeze</token>
 								</marker>
 								<token><exception regexp="yes">mnie|łba</exception></token>
 						</pattern>
@@ -14762,17 +15244,19 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
 						<example>Kopał dołki pode mną.</example>
 						<example correction="pod">Włazł <marker>pode</marker> kamień.</example>
 				</rule>
-				<rule id="BEZE_CZEGO" name="„beze czego” (bez czego)">
+				<rule id="BEZE_CZEGO" name="„beze/przeze czego” (bez czego)">
 						<pattern>
 								<marker>
-										<token>beze</token>
+										<token regexp="yes">(?:b|prz)eze</token>
 								</marker>
 								<token><exception>mnie</exception></token>
 						</pattern>
-						<message>Ten przyimek należy zapisać tak: <suggestion>bez</suggestion>.</message>
+						<message>Ten przyimek należy zapisać tak: <suggestion><match no="1" regexp_match="e$" regexp_replace=""/></suggestion>.</message>
 						<short>Błąd fonetyczny</short>
 						<example correction="bez">Teraz nie mogę dnia zacząć <marker>beze</marker> tego</example>
 						<example>Teraz nie mogę dnia zacząć bez tego.</example>
+						<example>To przeze mnie.</example>
+						<example correction="przez">To wszystko działo się <marker>przeze</marker> cały wrzesień.</example>
 				</rule>
 				<rule id="PRZEDE_CZYM" name="„przede czym” (przed czym)">
 						<pattern>
@@ -16858,7 +17342,79 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </rulegroup>
 		</category>
 		<category id="SPELLING" name="Błędy ortograficzne" type="misspelling">
-		<rule id="WIERZ_WIEZ" name="„wierz” (wież)">
+    <rule id="nie_mniej_jednak" name="„nie mniej jednak” (niemniej jednak)">
+      <pattern>
+        <marker>
+          <token>nie</token>
+          <token>mniej</token>
+        </marker>
+          <token>jednak</token>        
+          <token><exception>niż</exception></token>
+      </pattern>
+      <message>Ten wyraz prawdopodobnie należy zapisać łącznie: <suggestion>\1\2</suggestion>.</message>
+      <url>https://jaksiepisze.pl/niemniej-jednak-czy-nie-mniej-jednak/</url>        
+      <short>Błąd ortograficzny</short>
+      <example correction="Niemniej"><marker>Nie mniej</marker> jednak Kołakowski był filozofem.</example>
+      <example>Skazany w pierwszej instancji na karę grzywny obowiązany jest uiścić opłatę w wysokości 10%, nie mniej jednak niż 30 zł.</example>
+    </rule>
+		<rule id="ZEBYS_MY_ZEBYSMY" name="„żebyś my” (żebyśmy)">
+      <pattern>
+      <token regexp='yes'>(?:że|a)byś</token>
+      <token regexp='yes'>my|cie</token>
+      </pattern>
+      <message>Ten wyraz piszemy łącznie: <suggestion><match no="1"/><match no="2"/></suggestion>.</message>
+      <short>Błąd ortograficzny</short>
+      <example correction='żebyśmy'>Szymon nalegał, <marker>żebyś my</marker> je także umieścili.</example>
+      <example>Szymon nalegał, żebyśmy je także umieścili.</example>
+    </rule>
+    <rule id="NIE_TRUDNO_NIETRUDNO" name="„nie trudno” (nietrudno)">
+    <antipattern>
+        <marker>
+          <token regexp="yes">trudno|jasno</token>
+        </marker>
+        <token>,</token>
+        <token regexp="yes">lecz|ale</token>
+    </antipattern>
+     <pattern>
+      <token>Nie</token>
+      <token regexp='yes'>trudno|jasno|mile|drogo</token>
+     </pattern>
+     <message>Partykułę nie jako wykładnik zaprzeczenia piszemy łącznie z tym przysłówkiem: <suggestion><match no="1"/><match no="2"/></suggestion></message>
+     <url>https://sjp.pwn.pl/zasady/169-45-4-Z-przyslowkami-utworzonymi-od-przymiotnikow;629517</url>
+     <short>Błąd ortograficzny</short>
+     <example correction='Nietrudno'><marker>Nie trudno</marker> dostrzec, że rodzeństwo jest nam potrzebne.</example>
+     <example>Nietrudno dostrzec, że rodzeństwo jest nam potrzebne.</example>
+     <example>Szło nie trudno, lecz całkiem łatwo.</example>
+    </rule>
+		<rulegroup id="BYL_OBY_BYLOBY" name="„był oby, był o by” (byłoby)">
+		<rule>
+		<antipattern>
+        <marker><token>oby</token></marker>
+        <token>na</token>
+        <token>pewno</token>
+		</antipattern>
+    <pattern>
+    <token postag="verb:praet:sg:m1.m2.m3:ter:.*" postag_regexp="yes"/>
+    <token>oby</token>
+    </pattern>
+    <message>Ten wyraz piszemy łącznie: <suggestion><match no="1"/><match no="2"/></suggestion></message>
+    <short>Błąd ortograficzny</short>
+    <example correction='byłoby'>Autor badał jedynie objawy depresyjne, co warto <marker>był oby</marker> rozróżnić.</example>
+    <example>Autor badał jedynie objawy depresyjne, co warto byłoby rozróżnić.</example>
+    </rule>
+    <rule>
+		<pattern>
+    <token postag="verb:praet:sg:m1.m2.m3:ter:.*" postag_regexp="yes"/>
+    <token>o</token>    
+    <token>by</token>
+    </pattern>
+    <message>Ten wyraz piszemy łącznie: <suggestion><match no="1"/><match no="2"/><match no="3"/></suggestion></message>
+    <short>Błąd ortograficzny</short>
+    <example correction='byłoby'>Autor badał jedynie objawy depresyjne, co warto <marker>był o by</marker> rozróżnić.</example>
+    <example>Autor badał jedynie objawy depresyjne, co warto byłoby rozróżnić.</example>
+    </rule>
+    </rulegroup>
+    <rule id="WIERZ_WIEZ" name="„wierz” (wież)">
          <pattern>
           <token postag='prep:gen.*|num:pl:gen.*:congr|(adj|pact):pl:gen.*' postag_regexp='yes'></token>
           <marker>
@@ -20992,10 +21548,20 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
 						<example correction="Hongkongu">Całe terytorium <marker>Hong Kongu</marker> stało się jednym obszarem miejskim.</example>
 				</rule>
 				<rule id="ZAGRANICA-ZA_GRANICA" name="„zagranicą” (za granicą)">
+				    <antipattern>
+              <token postag="prep:.*inst(:n?wok)?" postag_regexp="yes"/>
+              <token postag="subst:.*inst.*" postag_regexp="yes"></token>
+              <token regexp="yes">[ia]|lub|oraz</token>
+              <marker>
+                <token>zagranicą</token>
+              </marker>
+				    </antipattern>
 						<pattern>
-								<token postag="SENT_START" skip="-1"><exception postag="prep:.*inst(:n?wok)?" postag_regexp="yes" scope="next"></exception><exception inflected="yes" regexp="yes">zainteresowanie|zainteresowany|nazywany</exception></token>
+								<token postag="SENT_START|comp:comma" postag_regexp="yes" skip="-1">
+								  <exception postag="prep:.*inst(:n?wok)?" postag_regexp="yes" scope="next"></exception><exception inflected="yes" regexp="yes">zainteresowanie|zainteresowany|nazywany</exception></token>
 								<marker>
-										<token>zagranicą</token>
+										<token>zagranicą
+										<exception scope="previous" postag="adj:sg:inst:f.*" postag_regexp="yes"/></token>
 								</marker>
 						</pattern>
 						<message>W tym wypadku prawdopodobnie należy napisać rozłącznie: <suggestion>za granicą</suggestion> (gdzie? za granicą! czym? zagranicą!).</message>
@@ -21003,7 +21569,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
 						<example>Polacy za granicą</example>
 						<example>Nie ma różnicy między krajem a zagranicą.</example>
 						<example>To człowiek od kontaktów z zagranicą</example>
+						<example>My jesteśmy bliską zagranicą dla Rosji i Rosja dla nas jest bliską zagranicą.</example>
+						<example>Co pięćdziesiąty badany wiąże działalność mafijną tylko z obcokrajowcami i zagranicą.</example>
 						<example correction="za granicą">Polacy <marker>zagranicą</marker></example>
+						<example correction="za granicą">To dobrze, że wydajemy pieniądze na różnego typu imprezy polskie czy z polskim akcentem, które odbywają się <marker>zagranicą</marker>, ale to nie może być główna działalność tego typu agencji — mówił wicepremier.</example>
 				</rule>
 				<rule id="ZA_GRANICA-ZAGRANICA" name="„za granicą” (zagranicą)">
 						<pattern>
@@ -21250,6 +21819,121 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
 				</rule>
 		</category>
     <category id="TYPOS" name="Prawdopodobne literówki" type="misspelling">
+    <rulegroup id="MNIE_MNIEJ" name="„mnie więcej” (mniej więcej)">
+      <rule>
+      <pattern>
+        <marker>
+        <token>mnie
+          <exception scope="previous" regexp="yes">(?:sp)?ode|(?:prze|be)?ze</exception>
+          </token>
+        </marker>
+        <token>więcej</token>
+        <token regexp="yes" inflected="yes">\d+|rok|godzina|połowa</token>
+      </pattern>
+      <message>Prawdopodobna literówka. Czy chodziło o <suggestion>mniej</suggestion>?</message>
+      <short>Literówka</short>
+      <example correction="mniej">Dostałem <marker>mnie</marker> więcej 1000 zł.</example>
+      <example>Dostał ode mnie więcej niż 5 zł.</example>
+      </rule>   
+      <rule>
+      <pattern>
+        <marker>
+        <token>mnie
+          <exception scope="previous" regexp="yes">(?:sp)?ode|(?:prze|be)?ze</exception>
+         </token>
+        </marker>
+        <token>więcej</token>
+        <token postag_regexp="yes" postag="num.*"/>
+      </pattern>
+      <message>Prawdopodobna literówka. Czy chodziło o <suggestion>mniej</suggestion>?</message>
+      <short>Literówka</short>
+      <example correction="mniej">Dostałem <marker>mnie</marker> więcej tysiąc zł.</example>
+      <example>Dostał ode mnie więcej niż 5 zł.</example>
+      </rule>    
+    </rulegroup>
+    <rulegroup id="MNIEJ_MNIE" name="„nie mnie niż” (nie mniej niż)">
+      <rule>
+        <pattern>
+            <token>nie</token>
+            <marker>
+              <token>mnie</token>            
+            </marker>
+            <token min="0">jednak</token>
+            <token>niż</token>
+        </pattern>
+        <message>Prawdopodobna literówka. Czy chodziło o <suggestion>mniej</suggestion>?</message>
+        <short>Literówka</short>
+        <example correction="mniej">Nie <marker>mnie</marker> niż 100 g.</example>           
+      </rule>    
+    </rulegroup>
+    <rulegroup id="BOJE_BOJĘ" name="„boje się” (boję się">
+        <rule>
+            <pattern>
+                <token skip="-1">się<exception postag="interp:comma|comp:comma|verb.*" postag_regexp="yes"/></token>
+                <marker>
+                  <token>boje</token>                
+                </marker>
+            </pattern>
+            <message>Prawdopodobna literówka. Czy chodziło o <suggestion>boję</suggestion>?</message>
+            <short>Literówka</short>
+            <example correction="boję">Ja się tego właśnie <marker>boje</marker>.</example>
+        </rule>
+        <rule>
+            <pattern>
+                <marker>
+                  <token skip="-1">boje<exception postag="interp:comma|comp:comma|verb.*" postag_regexp="yes"/></token>                
+                </marker>
+                <token>się</token>
+            </pattern>
+            <message>Prawdopodobna literówka. Czy chodziło o <suggestion>boję</suggestion>?</message>
+            <short>Literówka</short>
+            <example correction="boję">Dzisiaj <marker>boje</marker> się o Ciebie.</example>
+        </rule>
+        <rule>
+            <pattern>
+                <token>nie</token>
+                <marker>
+                  <token>boje</token>                
+                </marker>
+            </pattern>
+            <message>Prawdopodobna literówka. Czy chodziło o <suggestion>boję</suggestion>?</message>
+            <short>Literówka</short>
+            <example correction="boję">Ja się, proszę pana, nie <marker>boje</marker>.</example>
+        </rule>
+         <rule>
+            <pattern>
+                <token skip="-1">się<exception postag="interp:comma|comp:comma|verb.*" postag_regexp="yes"/></token>
+                <marker>
+                  <token>boja</token>                
+                </marker>
+            </pattern>
+            <message>Prawdopodobna literówka. Czy chodziło o <suggestion>boją</suggestion>?</message>
+            <short>Literówka</short>
+            <example correction="boją">Oni się tego właśnie <marker>boja</marker>.</example>
+        </rule>
+        <rule>
+            <pattern>
+                <marker>
+                  <token skip="-1">boja<exception postag="interp:comma|comp:comma|verb.*" postag_regexp="yes"/></token>                
+                </marker>
+                <token>się</token>
+            </pattern>
+            <message>Prawdopodobna literówka. Czy chodziło o <suggestion>boją</suggestion>?</message>
+            <short>Literówka</short>
+            <example correction="boją">Dzisiaj <marker>boja</marker> się o Ciebie.</example>
+        </rule>
+        <rule>
+            <pattern>
+                <token>nie</token>
+                <marker>
+                  <token>boja</token>                
+                </marker>
+            </pattern>
+            <message>Prawdopodobna literówka. Czy chodziło o <suggestion>boją</suggestion>?</message>
+            <short>Literówka</short>
+            <example correction="boją">Oni się, proszę pana, nie <marker>boja</marker>.</example>
+        </rule>
+    </rulegroup>
     <rulegroup id="LUBIA_LUBA" name="„lubą” (lubią)">
     <rule>
         <pattern>

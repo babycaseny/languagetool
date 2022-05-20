@@ -45,16 +45,22 @@ class CaseRuleAntiPatterns {
       csRegex("Gestern|Vorgestern")
     ),
     Arrays.asList(
-      csRegex("im|ins|ans?"),
+      csRegex("im|ins|ans?|das"),
       csRegex("Gestern|Vorgestern"),
       csRegex("und|&"),
       csRegex("Gestern|Vorgestern")
     ),
     Arrays.asList(
-      csRegex("im|ins"),
+      csRegex("[Ii]m|[Dd]as|[Dd]em|[Ii]ns"),
       csRegex("Hier"),
       csRegex("und|&"),
       csRegex("Jetzt")
+    ),
+    Arrays.asList(
+      csRegex("[Dd]ieses|das|k?ein"),
+      csRegex("Rein"),
+      csRegex("und|&"),
+      csRegex("Raus")
     ),
     Arrays.asList(
       csRegex("Private[snm]|Familiäre[snm]"),
@@ -849,13 +855,13 @@ class CaseRuleAntiPatterns {
     ),
     Arrays.asList(
       // Straßenname: "Neue Kantstraße 6"
-      csRegex("Neuen?|Gro(ß|ss)en?|Alten?"),
+      csRegex("Neuen?|Gro(ß|ss)en?|Alten?|Oberen?|Unteren?"),
       csRegex("[A-Z].+stra(ss|ß)e"),
       csRegex("\\d{1,3}[a-hA-H]?|in")
     ),
     Arrays.asList(
       // Straßenname: "Neue Kantstr. 6"
-      csRegex("Neuen?|Gro(ß|ss)en?|Alten?"),
+      csRegex("Neuen?|Gro(ß|ss)en?|Alten?|Oberen?|Unteren?"),
       csRegex("[A-Z].+str"),
       token("."),
       csRegex("\\d{1,3}[a-hA-H]?|in")
@@ -1237,8 +1243,8 @@ class CaseRuleAntiPatterns {
       csRegex("[a-zäöü…\\.!:;,\\?…\\)].*")
     ),
     Arrays.asList( // Ich habe noch Dringendes mitzuteilen
-      csRegex("Dringendes|Bares|Vertrautes|Positives|Negatives|Gelerntes|Neues|Altes|Besseres|Schlechteres|Schönes|Schöneres|Schlimmeres|Zutreffendes|Gesehenes|Abgerissenes|Versoffenes|Entnommenes|Sü(ß|ss)es|Saures|Gegenteiliges|Wegweisendes|Hochprozentiges|Erlerntes|Vergangenes|Unglaubliches|Schlimmes|Eingemachtes|Rares|Brauchbares|Unbrauchbares|Gesehenes|Erlebtes|Privates|Berufliches|Ungeheuerliches|Veganes|Vegetarisches|Eingemachtes"),
-      csRegex("(?!(und|oder))[a-zäöü…\\.!,\\?…\\)].*")
+      csRegex("Dringendes|Bares|Vertrautes|Positives|Negatives|Gelerntes|Neues|Altes|Besseres|Schlechteres|Schönes|Schöneres|Schlimmeres|Zutreffendes|Gesehenes|Abgerissenes|Versoffenes|Entnommenes|Sü(ß|ss)es|Saures|Gegenteiliges|Wegweisendes|Hochprozentiges|Erlerntes|Vergangenes|Unglaubliches|Schlimmes|Eingemachtes|Rares|Brauchbares|Unbrauchbares|Gesehenes|Erlebtes|Privates|Berufliches|Ungeheuerliches|Veganes|Vegetarisches|Eingemachtes|Erwünschtes|Innerstes|Äußerstes|Inhaltliches|Vernichtendes|Salziges|Sü(ß|ss)es|Selbstgemachtes"),
+      csRegex("(?!(und|oder))[a-zäöü…\\.!,\\?…\\)“\"»«–\\-].*")
     ),
     Arrays.asList(
       // Already caught by SEIT_LAENGEREN
@@ -1247,13 +1253,12 @@ class CaseRuleAntiPatterns {
     ),
     Arrays.asList( // Immer mehr Ältere erkranken daran
       csRegex("[a-zäöü…\\.,:;0-9\\/$%].*"),
-      csRegex("Ältere[rn]?|Jüngere[rn]?|Verwirrte[rn]?|Zuschauende[rn]?|Angeklagte[rn]?|Befragte[rn]?|Beschuldigte[rn]?|Referierende[rn]?|Moderierende[rn]?|Dunkelhäutige[rn]?|Verantwortliche[rn]?|Alleinlebende[rn]?|Alleinstehende[rn]?|Ungeübte[rn]?|Au(ß|ss)erirdische[rn]?|Berittene[rn]?|Heranwachsende[rn]?|Ganze[sn]?|Pflegebedürftige[rn]?|Gefangene[rn]?|Steuerpflichtige[rn]?|Geschädigte[rn]?|Heimatvertriebenen?|Schwerverletzte[rn]?|Werbenden?|Au(ß|ss)enstehenden?|Forschenden?|Prominenten?|Pflegenden?|Beklagten?|Geistlichen?|Pflegebedürftigen?|(Teil|Voll)zeitbeschäftigten?|Fortgeschrittenen?|Promovierenden?|Schreibenden?|Ungeimpfte[nr]?|Geimpfte[nr]?|Tatverdächtige[nr]?|Pubertären?|Flüchtende[nr]?|Vortragende[nr]?|Besuchenden?|Vortragenden?|Verantwortliche[rn]?|Vertraute[rn]?|Verurteilte[rn]?|Geflohene[rn]?|Sterbende[nr]?"),
-      csRegex("(?!(und|oder))[a-zäöü…\\.!:;,\\?…\\)\\*\\(].*")
+      csRegex("Ältere[rn]?|Jüngere[rn]?|Verwirrte[rn]?|Zuschauende[rn]?|Angeklagte[rn]?|Befragte[rn]?|Beschuldigte[rn]?|Referierende[rn]?|Moderierende[rn]?|Dunkelhäutige[rn]?|Verantwortliche[rn]?|Alleinlebende[rn]?|Alleinstehende[rn]?|Ungeübte[rn]?|Au(ß|ss)erirdische[rn]?|Berittene[rn]?|Heranwachsende[rn]?|Ganze[sn]?|Pflegebedürftige[rn]?|Gefangene[rn]?|Steuerpflichtige[rn]?|Geschädigte[rn]?|Heimatvertriebenen?|Schwerverletzte[rn]?|Werbenden?|Au(ß|ss)enstehenden?|Forschenden?|Prominenten?|Pflegenden?|Beklagten?|Geistlichen?|Pflegebedürftigen?|(Teil|Voll)zeitbeschäftigten?|Fortgeschrittenen?|Promovierenden?|Schreibenden?|Ungeimpfte[nr]?|Geimpfte[nr]?|Tatverdächtige[nr]?|Pubertären?|Flüchtende[nr]?|Vortragende[nr]?|Besuchenden?|Vortragenden?|Verantwortliche[rn]?|Vertraute[rn]?|Verurteilte[rn]?|Geflohene[rn]?|Sterbende[nr]?|Werbende[nr]?|Vortragende[nr]?|Alliierte[nr]?|Bedürftige[rn]?"),
+      csRegex("(?!(und|oder))[a-zäöü…\\.!:;,\\?…\\)\\*\\(“\"»«–\\-].*")
     ),
-    Arrays.asList( // Im Folgenden soll 
+    Arrays.asList( // Im Folgenden Kunde genannt
       token("im"),
-      csRegex("Folgenden"),
-      csRegex("[a-zäöü…\\.!:;,\\?…\\)\\*\\(].*")
+      csRegex("Folgenden|Nachfolgenden")
     ),
     Arrays.asList( // § 12 Die Pflichtversicherung
       csToken("§"),
@@ -1345,6 +1350,22 @@ class CaseRuleAntiPatterns {
       csToken("das"),
       csToken("neue"),
       csToken("Normal")
+    ),
+    Arrays.asList( // ... des vierten Offiziellen …
+      csRegex("de[mrs]"),
+      csRegex("vierten?"),
+      csRegex("Offiziellen?")
+    ),
+    Arrays.asList(
+      // Bei der Fülle an Vorgaben kann das schnell vergessen werden.
+      csToken("das"),
+      csRegex("halt|schnell|gar|sicher|bitte|gleich"),
+      posRegex("VER:INF.*")
+    ),
+    Arrays.asList(
+      // Hashtags
+      token("#"),
+      new PatternTokenBuilder().tokenRegex("[A-Z].*").setIsWhiteSpaceBefore(false).build()
     )
   );
 }
