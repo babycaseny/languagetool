@@ -37,6 +37,12 @@
                 <role>Maintainer</role>
             </roles>
         </developer>
+        <developer>
+            <name>Tom K. C. Chiu</name>
+            <roles>
+                <role>Maintainer</role>
+            </roles>
+        </developer>
     </developers>
 
     <dependencies>
