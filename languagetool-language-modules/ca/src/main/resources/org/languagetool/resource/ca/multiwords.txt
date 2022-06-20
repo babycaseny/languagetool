@@ -1,5 +1,21 @@
 #Catalan multiwords file used for chunking
 #separatorRegExp=[\t;]
+Nikola Mirotic;NPMSSP0
+Sarunas Jasikevicius;NPMSSP0
+dades massives;NCFP000
+Times Square;NPCSG00
+Antònia Vicens;NPFSSP0
+mocador de fer farcells;NCMS000
+mocadors de fer farcells;NCMP000
+Pier Paolo;NCMSSP0
+Top Gun;NPCNO00
+Tony Soprano;NPMSSP0
+Rolling Stone;NPCNO00
+Rolling Stones;NPMPO00
+The Rolling Stones;NPMPO00
+García Lorca;NPMSSP0
+Federico García Lorca;NPMSSP0
+Freddie Mercury;NPMSSP0
 Alex Salmond;NPMSSP0
 Verds-Equo;NPMPO00
 Fran Ferri;NPMSSP0

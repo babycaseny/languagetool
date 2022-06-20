@@ -71,6 +71,9 @@ public abstract class AbstractEnglishSpellerRule extends MorfologikSpellerRule {
     "double check",
     "hard coded",
     "hands free",
+    "client side",
+    "server side",
+    "in house",
     "faggot",
     "faggots",
     "fuckable",
@@ -357,6 +360,7 @@ public abstract class AbstractEnglishSpellerRule extends MorfologikSpellerRule {
       .filter(k -> !k.getReplacement().startsWith("re ") &&
                    !k.getReplacement().startsWith("en ") &&
                    !k.getReplacement().toLowerCase().startsWith("co ") &&
+                   !k.getReplacement().toLowerCase().startsWith("cl ") &&
                    !k.getReplacement().toLowerCase().startsWith("de ") &&
                    !k.getReplacement().toLowerCase().startsWith("ex ") &&
                    !k.getReplacement().toLowerCase().startsWith("es ") &&
@@ -420,6 +424,7 @@ public abstract class AbstractEnglishSpellerRule extends MorfologikSpellerRule {
                    !k.getReplacement().toLowerCase().startsWith("ma ") &&
                    !k.getReplacement().toLowerCase().startsWith("la ") &&
                    !k.getReplacement().toLowerCase().startsWith("bis ") &&
+                   !k.getReplacement().toLowerCase().startsWith("ger ") &&
                    !k.getReplacement().toLowerCase().startsWith("tar ") &&
                    !k.getReplacement().toLowerCase().startsWith("f ") &&
                    !k.getReplacement().toLowerCase().startsWith("k ") &&

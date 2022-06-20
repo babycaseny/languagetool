@@ -40,6 +40,8 @@ abdominoplastias
 abetarda
 abetardas
 Abidjan
+abrolho
+abrolhos
 abrótea
 abróteas
 abutre-do-egipto
@@ -109,6 +111,7 @@ afrodescendente
 afrodescendentes
 agitadíssimo
 agitadíssimos
+agravação
 agrião-do-pará
 agriões-do-pará
 agrofloresta
@@ -342,6 +345,7 @@ aplicador
 aplicadores
 apneia
 apneias
+apocalipse
 ápode
 ápodes
 apolítica
@@ -459,6 +463,10 @@ atracamento
 atracamentos
 atrapalhadíssima
 atrapalhadíssimas
+atrasadinha
+atrasadinhas
+atrasadinho
+atrasadinhos
 atrator
 atratores
 atreita
@@ -973,7 +981,7 @@ caxamolas
 Caxito
 CCAMLR
 CCDR
-CCTV # Estrangeirismo
+CCTV
 CDs
 cearense
 cearenses
@@ -1089,6 +1097,8 @@ ciprinídeo
 ciprinídeos
 circadiano
 circadianos
+circunlóquio
+circunlóquios
 circunstancialmente
 cística
 císticas
@@ -1792,6 +1802,8 @@ epigenética
 epigenéticas
 epigenético
 epigenéticos
+epitalâmio
+epitalâmios
 epítome
 epítomes
 equinoderme
@@ -2890,6 +2902,10 @@ interbancária
 interbancárias
 interbancário
 interbancários
+interconectividade
+interconectividades
+interconetividade
+interconetividades
 interdentária
 interdentárias
 interdentário
@@ -3637,6 +3653,7 @@ morenaça
 morenaças
 morfogénese
 morfogéneses
+morosos
 moscatéis
 motivacional
 motoclube
@@ -3970,6 +3987,8 @@ orgástico
 orgásticos
 orofaciais
 orofacial
+orogenital
+orogenitais
 orquite
 orquites
 ortodontia
@@ -4075,6 +4094,8 @@ paralisadoras
 paralisadores
 parangona
 parangonas
+paranoide
+paranoides
 paraolimpíada
 paraolimpíadas
 paraolímpica
@@ -4150,7 +4171,8 @@ pellets
 pelotões
 Pemba
 Pencil
-Peneda-Gerês
+pensinho
+pensinhos
 pentaneta
 pentanetas
 pentaneto
@@ -4196,6 +4218,7 @@ peristilo
 peristilos
 permacultura
 Pérmico
+perplexamente
 peteiro
 peteiros
 petrolato
@@ -4429,6 +4452,8 @@ probóscide
 probóscides
 procarionte
 procariontes
+procrastinatório
+procrastinatórios
 proctoscopia
 proibicionismo
 proibicionista
@@ -4684,6 +4709,7 @@ restruturantes
 resveratrol
 retail
 retoricamente
+retroalimentação
 retroescavadora
 retroescavadoras
 retroiluminação
@@ -4893,8 +4919,11 @@ sesquizigótica
 sesquizigóticas
 sesquizigótico
 sesquizigóticos
+seviciada
+seviciadas
 seviciado
 seviciados
+seviciar
 sex-appeal
 sex-shop
 sex-shops
@@ -5020,7 +5049,7 @@ SSDs
 stakeholder
 stakeholders
 stalking
-stall # Estrangeirismo
+stall
 stand-up
 Standvirtual
 Stanford
@@ -5568,6 +5597,8 @@ VHS
 víbora-de-Seoane
 víboras-de-Seoane
 Vidal
+videochamada
+videochamadas
 videogénica
 videogénicas
 videogénico
@@ -5610,6 +5641,7 @@ vossência
 vossências
 voyeurista
 voyeuristas
+vozerio
 Vrazhdebna
 vulgarismo
 vulgarismos
@@ -8473,11 +8505,11 @@ zooms
 ##############################
 ########Estrangeirismos 2#####
 ##############################
-abstract # Estrangeirismo
-abstracts # Estrangeirismo
+abstract
+abstracts
 alien
 aliens
-ASMR # Estrangeirismo
+ASMR
 ayurveda
 banner
 banners
@@ -8487,6 +8519,8 @@ carjacking
 chef
 chefs
 clipart
+commodity
+commodities
 cyberbullying
 debugging
 decanter
@@ -8500,36 +8534,39 @@ flute
 flutes
 flyer
 flyers
-geek # Estrangeirismo
-geeks # Estrangeirismo
-goal # Estrangeirismo
-goals # Estrangeirismo
-half-pipe # Estrangeirismo
-half-pipes # Estrangeirismo
-hatchback # Estrangeirismo
-hatchbacks # Estrangeirismo
+geek
+geeks
+goal
+goals
+half-pipe
+half-pipes
+hatchback
+hatchbacks
 hockey
 hostel
 hostels
-LED # Estrangeirismo
+LED
+legacy
 malware
-millennial # Estrangeirismo
-millennials # Estrangeirismo
+millennial
+millennials
 mindfulness
-mocassins # Estrangeirismo
-nerd # Estrangeirismo
-nerds # Estrangeirismo
-notch # Estrangeirismo
-nugget # Estrangeirismo
-nuggets # Estrangeirismo
+mocassins
+nerd
+nerds
+notch
+nugget
+nuggets
 off-label
 on-label
+paper
+papers
 physalis
 pouf
 poufes
 reggaeton
-revanche # Estrangeirismo
-revanches # Estrangeirismo
+revanche
+revanches
 startup
 startups
 stealth
@@ -8539,6 +8576,8 @@ tawnie
 tawnies
 tweet
 tweets
+webcam
+webcams
 # Países e Capitais
 # https://pt.wikipedia.org/wiki/Lista_de_capitais_nacionais
 # Selecionados apenas os que tem grafias relativamente consensuais
@@ -9961,6 +10000,7 @@ Actuel
 Adamski
 ADSE
 Aerosmith
+Agripina
 Airport
 Akira
 al-Assad
@@ -9984,6 +10024,7 @@ Alibaba
 AliExpress
 Alisson
 Allison
+Almoçageme
 Altice
 Alvão
 Alyson
@@ -10008,6 +10049,7 @@ Aquileia
 Aracaju
 Armagedão
 Armanda
+Arnaut
 Arthur
 Ashley
 Ashtar
@@ -10033,6 +10075,7 @@ Barrett
 Bashar
 Batista
 Batman
+Bayer
 Bayer Leverkusen
 Bayern Munich
 Bayes
@@ -10230,6 +10273,7 @@ Floyd
 FNAC
 Forbes
 Ford
+Forêt
 Fortaleza
 Foundation
 Fouto
@@ -10258,6 +10302,7 @@ Giovanna
 Glastonbury
 Glenn
 Globo
+Glovo
 Goes
 Goldfeld-Quandt
 Golias
@@ -10324,6 +10369,7 @@ Idanha
 Ideiafix
 Iémen
 Ifigénia
+Ignatieff
 Ikea
 Ilachinski
 INE
@@ -10337,6 +10383,7 @@ Interpol
 IPAM
 Ipatinga
 Ipiranga
+IRA
 Iracema
 Isaltina
 ISCTE
@@ -10475,6 +10522,7 @@ Mickey
 Middlesbrough
 Mikhail
 Milão-Malpensa
+Milhazes
 Milheiro
 Millenium BCP
 Milosevic
@@ -10563,6 +10611,7 @@ Pandures
 Panoramix
 Paulinha
 Paulo-Guarulhos
+Peneda-Gerês
 Penedo
 Pescanova
 Peterson
@@ -10629,6 +10678,7 @@ Ruhollah
 Ruzyne
 Ryanair
 Sabino
+Sacadura
 Saint-Étienne
 Saint-Exupéry
 Saladino
@@ -10847,7 +10897,7 @@ CTCP
 DALnet
 Dark Web
 DCC
-DDoS # Estrangeirismo
+DDoS
 Deep Web
 default
 desenvolvedor
@@ -10898,6 +10948,7 @@ fps
 framework
 FreeBSD
 FTP
+Galaxy
 gateway
 gateways
 gigabit

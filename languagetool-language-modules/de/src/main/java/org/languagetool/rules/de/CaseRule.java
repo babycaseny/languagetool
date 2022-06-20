@@ -89,6 +89,12 @@ public class CaseRule extends Rule {
    * workaround to avoid false alarms, these words can be added here.
    */
   private static final String[] exceptions = {
+    "Verantwortlicher",
+    "Verantwortliche",
+    "Verantwortlichen",
+    "Hingerichtete",
+    "Lehrende",
+    "Lehrender",
     "Vertrauter",
     "Out", // eng
     "Packet", // misspelling of "Paket" (caught by spell checker)
@@ -711,13 +717,13 @@ public class CaseRule extends Rule {
     substVerbenExceptions.add("bedeuten");
   }
 
-  private final GermanTagger tagger;
   private final GermanSpellerRule speller;
   private final Supplier<List<DisambiguationPatternRule>> antiPatterns;
+  private German language;
 
   public CaseRule(ResourceBundle messages, German german) {
+    language = german;
     super.setCategory(Categories.CASING.getCategory(messages));
-    tagger = (GermanTagger) german.getTagger();
     speller = new GermanSpellerRule(JLanguageTool.getMessageBundle(), german);
     antiPatterns = cacheAntiPatterns(german, ANTI_PATTERNS);
     addExamplePair(Example.wrong("<marker>Das laufen</marker> fällt mir schwer."),
@@ -807,7 +813,7 @@ public class CaseRule extends Rule {
       if (analyzedToken.matchesPosTagRegex("VER:(MOD|AUX):[1-3]:.*")) {
         isPrecededByModalOrAuxiliary = true;
       }
-      AnalyzedTokenReadings lowercaseReadings = tagger.lookup(token.toLowerCase());
+      AnalyzedTokenReadings lowercaseReadings = ((GermanTagger) language.getTagger()).lookup(token.toLowerCase());
       if (hasNounReading(analyzedToken)) { // it's the spell checker's task to check that nouns are uppercase
         if (!isPotentialUpperCaseError(i, tokens, lowercaseReadings, isPrecededByModalOrAuxiliary)) {
           continue;
@@ -960,6 +966,7 @@ public class CaseRule extends Rule {
         !isCaseTypo(tokens[i].getToken()) &&
         !followedByGenderGap(tokens, i) &&
         !isNounWithVerbReading(i, tokens) &&
+        //!isInvisibleSepatator(i-1, tokens) &&
         !speller.isMisspelled(lcWord)) {
       if (":".equals(tokens[i - 1].getToken())) {
         AnalyzedTokenReadings[] subarray = new AnalyzedTokenReadings[i];
@@ -995,6 +1002,10 @@ public class CaseRule extends Rule {
     return tokens[i].hasPosTagStartingWith("SUB") &&
     		tokens[i].hasPosTagStartingWith("VER:INF");
 	}
+
+  //private boolean isInvisibleSepatator(int i, AnalyzedTokenReadings[] tokens) {
+  //  return i >= 0 && tokens[i].getToken().length() > 0 && tokens[i].getToken().charAt(0) == '\u2063';
+  // }
 
 	private boolean isVerbFollowing(int i, AnalyzedTokenReadings[] tokens, AnalyzedTokenReadings lowercaseReadings) {
     AnalyzedTokenReadings[] subarray = new AnalyzedTokenReadings[ tokens.length - i ];
@@ -1213,7 +1224,7 @@ public class CaseRule extends Rule {
 
   private AnalyzedTokenReadings lookup(String word) {
     try {
-      return tagger.lookup(word);
+      return ((GermanTagger) language.getTagger()).lookup(word);
     } catch (IOException e) {
       throw new RuntimeException("Could not lookup '" + word + "'.", e);
     }

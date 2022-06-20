@@ -875,7 +875,6 @@ Lane County	NNP
 Allen County	NNP
 Osceola County	NNP
 Brazoria County	NNP
-Madison County	NNP
 Stark County	NNP
 Lehigh County	NNP
 Washtenaw County	NNP
@@ -5249,6 +5248,7 @@ lo mein	NN:U
 Laura Ingraham	NNP
 Oleg Deripaska	NNP
 Lakhta Center	NNP
+Lakhta Centre	NNP
 Gazprom Neft	NNP
 Ramzan Kadyrov	NNP
 Akhmad Kadyrov	NNP
@@ -5455,3 +5455,119 @@ Patrick Vieira	NNP
 Michael Burry	NNP
 Bill Ackmann	NNP
 Erin Brockovich	NNP
+Le Cordon Bleu	NNP
+Adobe Captivate	NNP
+Adobe Presenter	NNP
+Anthony Albanese	NNP
+Ron Weasley	NNP
+Patrick Dempsey	NNP
+Nick Clegg	NNP
+Renate Nyborg	NNP
+Robb Elementary School	NNP
+Salvador Ramos	NNP
+Steve Kerr	NNP
+Air Max	NNP
+Air Astana	NNP
+Machine Gun Kelly	NNP
+Sandy Hook Elementary School	NNP
+Tech Mahindra	NNP
+NTT Data	NNP
+Sopra Steria	NNP
+HP Spectre	NNP
+Sadio Mané	NNP
+Billie Jean	NNP
+John Strelecky	NNP
+Madison Square Garden	NNP
+Madison Square	NNP
+Madison Square Park	NNP
+Barclays Center	NNP
+Jean-Pierre Léaud	NNP
+Paige VanZant	NNP
+Krauss-Maffei	NNP
+Krauss-Maffei Wegmann	NNP
+Berlin Ostbahnhof	NNP
+Javier Olivan	NNP
+Motorola ROKR	NNP
+Chico Flores	NNP
+Phil Mickelson	NNP
+MacBook Airs	NNPS
+Ace Ventura	NNP
+Chesa Boudin	NNP
+Ken Paxton	NNP
+Letitia James	NNP
+Ashley Moody	NNP
+Bob Ferguson	NNP
+Josh Shapiro	NNP
+Kwame Raoul	NNP
+Dave Yost	NNP
+Max Levchin	NNP
+Premal Shah	NNP
+Luke Nosek	NNP
+Ken Howery	NNP
+Keith Rabois	NNP
+Roelof Botha	NNP
+Jared Kopf	NNP
+Jack Selby	NNP
+Fairchild Semiconductor	NNP
+Renault Twingo	NNP
+Li Shufu	NNP
+Vanessa Hudgens	NNP
+Audi e-tron	NNP
+Académie Française	NNP
+Agence France-Presse	NNP
+Mario Strikers	NNP
+Carlos Tavares	NNP
+Anna Cavazzini	NNP
+Vostok Tower	NNP
+Rönesans Holding	NNP
+Course Hero	NNP
+Alan Shepard	NNP
+Friedrich von Weech	NNP
+Hugh Laurie	NNP
+Ben Shapiro	NNP
+Grigor Dimitrov	NNP
+Bienville Parish	NNP
+Tomales Bay	NNP
+Dexfield Park	NNP
+Oak Ridge	NNP
+Florian Wirtz	NNP
+Uwe Seeler	NNP
+Franz Beckenbauer	NNP
+Rudi Völler	NNP
+Lothar Matthäus	NNP
+Gerd Müller	NNP
+Meek Mill	NNP
+Rick Ross	NNP
+Kirstie Alley	NNP
+John McEnroe	NNP
+Pete Sampras	NNP
+Björn Borg	NNP
+Ivan Lendl	NNP
+Andy Murray	NNP
+Siverskyi Donets River	NNP
+picture alliance	NNP
+Picture Alliance	NNP
+Stanley Yelnats	NNP
+Anders Celsius	NNP
+Feng shui	NNP
+Feng Shui	NNP
+Lex Luthor	NNP
+Romero Britto	NNP
+Young Jeezy	NNP
+Air Cairo	NNP
+Air Arabia	NNP
+Black+Decker	NNP
+Black + Decker	NNP
+Black & Decker	NNP
+Nile Air	NNP
+St Germain	NNP
+St. Germain	NNP
+Mustang Mach-E	NNP
+Motown Records	NNP
+Bertelsmann Music Group	NNP
+Tiger Woods	NNP
+Nick Nolte	NNP
+Martin Lawrence	NNP
+Laurence Fishburne	NNP
+Peter Stuyvesant	NNP
+New Netherland	NNP

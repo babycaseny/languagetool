@@ -199,6 +199,7 @@ public class CaseRuleTest {
     assertGood("Das ist ein Satz !!! Das auch.");
     assertGood("Liebe Kund:in");
     assertGood("Wir sollten das mal labeln.");
+    assertGood("Teil 1: Der unaufhaltsame Aufstieg Bonapartes");
 
     // https://github.com/languagetool-org/languagetool/issues/1515:
     assertGood("▶︎ Dies ist ein Test");
@@ -217,6 +218,10 @@ public class CaseRuleTest {
     assertGood("mit U-Bahn-ähnlichen und günstigen Verkehrsmitteln");
     assertGood("mit Ü-Ei-großen, schweren Hagelkörnern");
     assertGood("mit E-Musik-artigen, komplizierten Harmonien");
+    assertGood("eBay International AG");
+    assertGood("Harald & Schön"); // Firmenname
+    assertGood("Nicholas and Stark"); // Eigenname
+    assertGood("Die Schweizerische Bewachungsgesellschaft"); // Eigenname
 
     //assertBad("Sie sind nicht Verständlich");
     assertBad("Das machen der Töne ist schwierig.");

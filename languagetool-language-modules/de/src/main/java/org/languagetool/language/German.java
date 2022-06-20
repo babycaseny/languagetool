@@ -290,6 +290,7 @@ public class German extends Language implements AutoCloseable {
       case "WRONG_SPELLING_PREMIUM_INTERNAL": return 10;
       case "OLD_SPELLING_INTERNAL": return 10;
       case "DE_COMPOUNDS": return 10;
+      case "TELEFON_NR": return 10;
       case "IRGEND_COMPOUND": return 10;
       case "DA_DURCH": return 2; // prefer over SUBSTANTIVIERUNG_NACH_DURCH and DURCH_SCHAUEN and DURCH_WACHSEN
       case "BEI_GOOGLE" : return 2;   // prefer over agreement rules and VOR_BEI
@@ -376,6 +377,7 @@ public class German extends Language implements AutoCloseable {
       case "FALSCHES_RELATIVPRONOMEN": return -1; // prefer dass/das rules
       case "AKZENT_STATT_APOSTROPH": return -1;  // lower prio than PLURAL_APOSTROPH
       case "BEENDE_IST_SENTEND": return -1; // prefer more specific rules
+      case "VER_ADJ_ZU_SCHLAFEN": return -1; // prefer ETWAS_GUTES
       case "UNPAIRED_BRACKETS": return -2;
       case "ICH_GEHE_DU_BLEIBST": return -2; // prefer ICH_GLAUBE_FUER_EUCH
       case "ICH_GLAUBE_FUER_EUCH": return -2; // prefer agreement rules
@@ -419,6 +421,7 @@ public class German extends Language implements AutoCloseable {
       case "GERMAN_WORD_REPEAT_RULE": return -14; // prefer SAGT_RUFT
       case "BEI_VERB": return -14; // prefer case, spelling and AI rules
       case "MODALVERB_FLEKT_VERB": return -14; // prefer case, spelling and AI rules
+      case "DATIV_NACH_PRP": return -14; // spelling and AI rules
       case "TOO_LONG_PARAGRAPH": return -15;
       case "ALL_UPPERCASE": return -15;
       case "COMMA_BEHIND_RELATIVE_CLAUSE": return -52; // less prio than AI_DE_HYDRA_LEO
@@ -459,8 +462,8 @@ public class German extends Language implements AutoCloseable {
       }
       return -11;
     }
-    if (id.startsWith("AI_DE_KOMMA")) { // TODO: A high priority for our initial testing, afterwards we will give it a smaller priority.
-      return 50;
+    if (id.startsWith("AI_DE_KOMMA")) {
+      return -52; // prefer comma style rules and AI_DE_HYDRA_LEO_MISSING_COMMA
     }
     return super.getPriorityForId(id);
   }

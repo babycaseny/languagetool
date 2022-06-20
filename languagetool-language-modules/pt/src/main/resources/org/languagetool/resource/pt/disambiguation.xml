@@ -135,7 +135,8 @@
   <rulegroup id="RARE_POS" name="rare POS tags">
     <rule>
       <pattern>
-        <token regexp="yes">amante|amantes|cinco|damos|dessa|estilo|feira|feiras|hora|horas|latina|latinas|li|linda|lindas|maluco|maluca|malucas|portuguesa|portuguesas|portugueses|quentes|uma|umas|vento</token>
+        <!-- removed: li -->
+        <token regexp="yes">amante|amantes|cinco|damos|dessa|estilo|feira|feiras|hora|horas|latina|latinas|linda|lindas|maluco|maluca|malucas|portuguesa|portuguesas|portugueses|quentes|uma|umas|vento</token>
       </pattern>
       <disambig action="remove" postag="V.[SIM].*"></disambig>
     </rule>
@@ -571,6 +572,16 @@
         </marker>
       </pattern>
       <disambig action="filter" postag="V.+"/>
+    </rule>
+    <rule>
+      <pattern>
+        <token>que</token>
+        <marker>
+          <token postag="P.*" postag_regexp="yes">o</token>
+          <token postag="V.*" postag_regexp="yes" inflected="yes" regexp="yes">tornar|deixar</token>
+        </marker>
+      </pattern>
+      <disambig action="filterall"/>
     </rule>
     <rule>
       <pattern>

@@ -338,6 +338,7 @@ public class English extends Language implements AutoCloseable {
       case "LIFE_COMPOUNDS":            return 1;
       case "DRIVE_THROUGH_HYPHEN":      return 1;   // higher prio than agreement rules
       case "CAUSE_COURSE":              return 1;   // higher prio than CAUSE_BECAUSE
+      case "THANK_YOUR":                return 1;   // higher prio than POSSESSIVE_DETERMINER_SENT_END
       case "AN_AND":                    return 1;   // higher prio than A_MY and DT_PRP
       case "HER_S":                     return 1;   // higher prio than THEIR_S
       case "ONE_TO_MANY_HYPHEN":        return 1;   // higher prio than TO_TOO
@@ -361,6 +362,7 @@ public class English extends Language implements AutoCloseable {
       case "OFF_OF":                    return 1;   // higher prio than ADJECTIVE_ADVERB
       case "SHELL_COMPOUNDS":           return 1;   // higher prio than HELL
       case "HANDS_ON_HYPHEN":           return 1;   // higher prio than A_NNS
+      case "PROFITS_WARNINGS":          return 1;   // higher prio than A_NNS
       case "QUIET_QUITE":               return 1;   // higher prio than A_QUITE_WHILE
       case "A_OK":                      return 1;   // prefer over A_AN
       case "I_A":                       return 1;   // higher prio than I_IF
@@ -452,6 +454,7 @@ public class English extends Language implements AutoCloseable {
       case "EN_DIACRITICS_REPLACE":     return -1;   // prefer over spell checker
       case "MISSING_COMMA_BETWEEN_DAY_AND_YEAR":     return -1;   // less priority than DATE_WEEKDAY
       case "FASTLY":                    return -1;   // higher prio than spell checker
+      case "WHO_NOUN":                    return -1;   // prefer SPECIFIC_CASE
       case "ANYWAYS":                   return -1;   // higher prio than spell checker
       case "MISSING_GENITIVE":          return -1;  // prefer over spell checker (like EN_SPECIFIC_CASE)
       case "EN_UNPAIRED_BRACKETS":      return -1;  // less priority than rules that suggest the correct brackets
@@ -568,11 +571,12 @@ public class English extends Language implements AutoCloseable {
       case "MORFOLOGIK_RULE_EN_ZA":     return -10;  // more specific rules (e.g. L2 rules) have priority
       case "MORFOLOGIK_RULE_EN_NZ":     return -10;  // more specific rules (e.g. L2 rules) have priority
       case "MORFOLOGIK_RULE_EN_AU":     return -10;  // more specific rules (e.g. L2 rules) have priority
-      case "BE_VBG_NN":                 return -11;  // prefer other more specific rules and speller
       case "BE_WITH_WRONG_VERB_FORM":   return -11;  // prefer HYDRA_LEO, BEEN_PART_AGREEMENT and other rules
+      case "BE_VBG_NN":                 return -12;  // prefer other more specific rules and speller
       case "THE_NNS_NN_IS":             return -12;  // prefer HYDRA_LEO
       case "PRP_MD_NN":                 return -12;  // prefer other more specific rules (e.g. MD_ABLE, WONT_WANT)
       case "TWO_CONNECTED_MODAL_VERBS": return -15;
+      case "MISSING_TO_BETWEEN_BE_AND_VB": return -15; // prefer AI and comma rules
       case "BE_MD":                     return -20;  // prefer other more specific rules (e.g. BEEN_PART_AGREEMENT, HYDRA_LEO)
       case "CONFUSION_RULE":            return -20;
       case "PRP_VB_IMPROVE":            return -24;  // higher prio than PRP_VB but prefer other rules (with suggestions, e.g. confusion rules)

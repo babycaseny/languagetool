@@ -4782,7 +4782,9 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
                 </token>
             </marker>
             <token postag="VBN" />
-            <token postag_regexp="yes" postag="NN:.*|NNS?" />
+            <token postag_regexp="yes" postag="NN:.*|NNS?">
+                <exception postag="IN" />
+            </token>
         </pattern>
         <disambig postag="JJ"/>
         <example type="untouched">He had been proven innocent.</example>
@@ -8824,7 +8826,7 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
                 <and>
                     <token postag="VBD"/>
                     <token postag="VBN">
-                        <exception regexp='yes'>crowded|tired</exception>
+                        <exception regexp='yes'>crowded|tired|forced</exception>
                     </token>
                 </and>
             </marker>
@@ -16018,5 +16020,16 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
             <token spacebefore="no">.</token>
         </pattern>
         <disambig action="ignore_spelling"/>
+    </rule>
+
+    <rule id="FAST_FOOD" name="'fast' no verb in 'fast food'">
+        <pattern>
+            <token postag="DT|PRP\$|JJ.*" postag_regexp="yes" chunk_re=".-NP.*" />
+            <marker>
+                <token>fast</token>
+            </marker>
+            <token>food</token>
+        </pattern>
+        <disambig action="remove" postag="VB.*" />
     </rule>
 </rules>

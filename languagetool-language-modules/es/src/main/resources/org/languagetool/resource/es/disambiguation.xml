@@ -30,6 +30,7 @@ Copyright (C) 2011 Juan Martorell
     <!ENTITY dias_semana "lunes|martes|miércoles|jueves|viernes|sábado|domingo">
     <!ENTITY partes_dia "madrugada|mañana|mediodía|tarde|atardecer|noche|medianoche">
     <!ENTITY meses_ano "enero|febrero|marzo|abril|mayo|junio|julio|agosto|sep?tiembre|octubre|noviembre|diciembre">
+    <!ENTITY meses_ano_abrv "ene|feb|mar|abr|may|jun|jul|ago|sep|set|oct|nov|dic">
     <!ENTITY estaciones_ano "primavera|verano|otoño|invierno">
     <!ENTITY unidades_tiempo "segundo|minuto|hora|día|semana|quincena|mes|bimestre|trimestre|cuatrimestre|semestre|año|lustro|década|siglo|centuria|milenio">
     <!ENTITY ordinales_decenas "décimo|vigésimo|trigésimo|cuadragésimo|quincuagésimo|sexagésimo|septuagésimo|nonagésimo">
@@ -182,7 +183,23 @@ Copyright (C) 2011 Juan Martorell
                 <wd pos="_QM_OPEN"/>
             </disambig>
         </rule>
+        <rule id="QM_OPEN2" name="comillas apertura">
+            <pattern>
+                <token postag="SENT_START"/>
+                <marker>
+                    <token spacebefore="no">"</token>
+                </marker>
+                <token spacebefore="no"/>
+            </pattern>
+            <disambig action="add">
+                <wd pos="_QM_OPEN"/>
+            </disambig>
+        </rule>
         <rule id="QM_CLOSE" name="comillas de cierre">
+            <antipattern>
+                <token postag="SENT_START"/>
+                <token spacebefore="no">"</token>
+            </antipattern>
             <pattern>
                 <marker>
                     <token regexp="yes" spacebefore="no">['"’”»]</token>
@@ -1604,6 +1621,18 @@ Copyright (C) 2011 Juan Martorell
             <wd lemma="ese" pos="NCFS000"/>
         </disambig>
     </rule>
+    <rulegroup id="telegraphic_writing0" name="escritura telegráfica">
+        <rule>
+            <pattern>
+                <token postag="SENT_START"/>
+                <marker>
+                    <token postag="NCMP000">apuntes</token>
+                </marker>
+                <token postag="N.*" postag_regexp="yes"/>
+            </pattern>
+            <disambig action="filter" postag="NCMP000"/>
+        </rule>
+    </rulegroup>
     <rulegroup id="nombre_aposicion" name="nombre en aposición">
         <rule>
             <pattern>
@@ -1809,6 +1838,26 @@ Copyright (C) 2011 Juan Martorell
                 </marker>
             </pattern>
             <disambig action="filter" postag="N.*"/>
+        </rule>
+    </rulegroup>
+    <rulegroup id="no_verbo" name="not verb">
+        <rule>
+            <pattern>
+                <marker>
+                    <token postag="NCFP000" regexp="yes">acciones|redes|cuestiones</token>
+                </marker>
+                <token regexp="yes">de|del</token>
+            </pattern>
+            <disambig action="filter" postag="NCFP000"/>
+        </rule>
+        <rule>
+            <pattern>
+                <marker>
+                    <token postag="NCFP000" regexp="yes">acciones|redes|cuestiones</token>
+                </marker>
+                <token postag="A..[FC][PN].|V.P..PF" postag_regexp="yes"/>
+            </pattern>
+            <disambig action="filter" postag="NCFP000"/>
         </rule>
     </rulegroup>
     <rulegroup id="causa_efecto" name="causa-efecto (noun not verb)">
@@ -5241,6 +5290,11 @@ Copyright (C) 2011 Juan Martorell
             <token regexp="yes">estas?</token>
             <token postag="AQ.*" postag_regexp="yes"/>
         </antipattern>
+        <antipattern>
+            <token regexp="yes">vivas?</token>
+            <token postag="CC"/>
+            <token postag="A.*|V.P.*" postag_regexp="yes"/>
+        </antipattern>
         <rule>
             <pattern>
                 <marker>
@@ -5471,7 +5525,7 @@ Copyright (C) 2011 Juan Martorell
                 <token postag="V.*[123].*" postag_regexp="yes"><exception postag="_GN_.*" postag_regexp="yes"/></token>
             </antipattern>
             <pattern>
-                <token><exception postag="D[^R]..S." postag_regexp="yes"/></token>
+                <token><exception postag="D[^R]..S.|V.N.*" postag_regexp="yes"/></token>
                 <marker>
                     <and>
                         <token postag="NC.*" postag_regexp="yes"><exception postag="_GN_.*" postag_regexp="yes"/></token>
@@ -5522,10 +5576,10 @@ Copyright (C) 2011 Juan Martorell
             <!--<token regexp="yes">\?|\.|que|porque</token>-->
         </antipattern>
         <pattern>
-            <token><exception postag="RG_before|LOC_ADV|_GV_|SPS00|CC|UNKNOWN|V.[SI].*|_PUNCT.*|&pronombre_personal_atono_POS;" postag_regexp="yes"/><exception inflected="yes" regexp="yes">ser|estar|parecer|considerar</exception><exception regexp="yes">super|súper</exception></token>
+            <token><exception postag="RG_before|LOC_ADV|_GV_|SPS00|CC|UNKNOWN|V.[SING].*|_PUNCT.*|&pronombre_personal_atono_POS;" postag_regexp="yes"/><exception inflected="yes" regexp="yes">ser|estar|parecer|considerar</exception><exception regexp="yes">super|súper</exception></token>
             <marker>
                 <and>
-                    <token postag="A.*" postag_regexp="yes"><exception postag="_GN_.*" postag_regexp="yes"/><exception regexp="yes">\p{Lu}+[\p{Ll}·]*</exception><exception regexp="yes">presentes?|antiguas?|llenas|libres?</exception></token>
+                    <token postag="A.*" postag_regexp="yes"><exception postag="_GN_.*" postag_regexp="yes"/><exception regexp="yes">\p{Lu}+[\p{Ll}·]*</exception><exception regexp="yes">presentes?|antiguas?|llenas|libres?|eficientes?</exception></token>
                     <token postag="V.*" postag_regexp="yes"><exception postag="V.P.*|_GV_|VM[IS]P1S0|V.G.*|VMM..V.*|V.+:P.*" postag_regexp="yes"/></token>
                 </and>
             </marker>
@@ -6683,6 +6737,28 @@ Copyright (C) 2011 Juan Martorell
                 <wd pos="LOC_ADV"/>
                 <wd pos="LOC_ADV"/>
             </disambig>
+        </rule>
+    </rulegroup>
+    <rulegroup id="IGNORE_SPELLING_MONHTS" name="ignorar meses abreviados">
+        <rule>
+            <pattern>
+                <marker>
+                    <token regexp="yes">&meses_ano;</token>
+                </marker>
+                <token regexp="yes" min="0">[\,/\-]</token>
+                <token regexp="yes">\d\d|\d\d\d\d</token>
+            </pattern>
+            <disambig action="ignore_spelling"/>
+        </rule>
+        <rule>
+            <pattern>
+                <token regexp="yes">\d+</token>
+                <token regexp="yes" min="0">[\,/\-]</token>
+                <marker>
+                    <token regexp="yes">&meses_ano;</token>
+                </marker>
+            </pattern>
+            <disambig action="ignore_spelling"/>
         </rule>
     </rulegroup>
     <rulegroup name="Ignore spelling numbers " id="IGNORE_NUMBERS">

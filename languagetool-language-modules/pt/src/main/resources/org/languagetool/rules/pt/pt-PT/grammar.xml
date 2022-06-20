@@ -66,15 +66,15 @@ title="Easy editing stylesheet" ?>
 
 	<!ENTITY gerundio_verbos "acabar|acontecer|afundar|ajudar|aumentar|criar|degradar|diminuir|disparar|elaborar|fazer|fluir|instalar|ir|lesar|quebrar|ser|travar|vir">
 
-	<!ENTITY gerundio_excecoes "abandonando|acelerando|acrescentando|acumulando|adicionando|aperfeiçoando|armazenando|aumentando|beneficiando|caindo|chegando|consolidando|crescendo|decrescendo|desaparecendo|emergindo|empregando|fazendo|ficando|ganhando|havendo|jogando|levantando|originando|perdendo|permitindo|procurando|progredindo|propagando|recorrendo|reduzindo|sabendo|saindo|sendo|surgindo|usando">
+	<!ENTITY gerundio_excecoes "abandonando|acelerando|acrescentando|acumulando|adicionando|aperfeiçoando|armazenando|aumentando|beneficiando|caindo|causando|chegando|conquistando|consolidando|crescendo|decrescendo|desaparecendo|emergindo|empregando|envolvendo|fazendo|ficando|ganhando|havendo|jogando|levantando|mudando|originando|perdendo|permitindo|procurando|progredindo|propagando|recorrendo|reduzindo|sabendo|saindo|sendo|surgindo|usando">
 
 	<!ENTITY cores_invariaveis "açafrão|água|alizarina|âmbar|ameixa|amêndoa|ametista|aspargo|bordô|borgonha|brasil|bronze|caqui|caramelo|cardo|carmesim|carmim|cenoura|cereja|chocolate|ciano|cinza|cobre|concha|creme|dainise|ébano|eminência|esmeralda|eucalipto|feldspato|ferrugem|fúchsia|fuligem|gainsboro|gelo|glitter|goiaba|grená|heliotrópio|independência|índigo|iris|jade|jambo|jasmine|kiwi|kobi|kobicha|laranja|lavanda|lemon|lilás|lima|linho|madeira|magenta|malva|mamão|maná|marfim|milho|mocassim|mostarda|neve|nyanza|ocre|oliva|orquídea|ouro|pêssego|prata|púrpura|quantum|quartz|renda|rosa|salmão|sépia|siena|tangerina|terracota|tijolo|tomate|triássico|trigo|turquesa|ube|urucum|vinho|violeta|xanadu|zaffre">
 	<!ENTITY cores "açafrão|água|alizarina|amarelo|âmbar|ameixa|amêndoa|ametista|aspargo|azul|bege|bordô|borgonha|branco|brasil|bronze|caqui|caramelo|cardo|carmesim|carmim|castanho|cenoura|cereja|chocolate|ciano|cinza|cobre|concha|coral|creme|dainise|dourado|ébano|eminência|encarnado|escarlate|esmeralda|eucalipto|fandango|feldspato|ferrugem|flerte|fúchsia|fuligem|gainsboro|gelo|glitter|goiaba|grená|heliotrópio|herbal|independência|índigo|iris|jade|jambo|jasmine|kiwi|kobi|kobicha|laranja|lavanda|lemon|lilás|lima|linho|madeira|magenta|malva|mamão|maná|marfim|marrom|milho|mocassim|mostarda|naval|neve|nyanza|ocre|oliva|orquídea|ouro|pardo|pêssego|prata|preto|púrpura|quantum|quartz|renda|rosa|roxo|rútilo|salmão|sépia|siena|tangerina|terracota|tijolo|tomate|triássico|trigo|turquesa|ube|urucum|verde|vermelho|vinho|violeta|xanadu|zaffre">
     <!-- Taken from: https://pt.wikipedia.org/wiki/Lista_de_cores -->
 
 	<!-- Estrangeirismos específicos pt_PT -->
-	<!ENTITY barbarismos_pt_pt "suspenses?">
-	
+	<!ENTITY barbarismos_pt_pt "bitcoins?|blockchain|pizzas?|réveillons?|slides?|softwares?|streaming|strogonoffs?|suspenses?|webcams?">
+
     <!ENTITY expressoes_invariaveis_pt_pt "(?:algema|afazere|alvíssara|anai|antolho|apetrecho|arra|arredore|boda|brócol[io]|cã|calça|calenda|ceroula|cócega|condolência|confin|endoença|esponsai|esposório|exéquia|fasto|féria|feze|finança|hemorróida|mane|matina|nádega|núpcia|óculo|olheira|pantalona|parabén|pêsame|petrecho|pi[ck]le|primícia|reticência|suspensório|treva|víscera|vívere)">
 	
 ]>
@@ -113,7 +113,21 @@ title="Easy editing stylesheet" ?>
     <!-- Unification rules retrieved from galician grammar.xml - END  -->
 
  <category id="EUROPEAN_PORTUGUESE" name="Português de Portugal">
-
+   
+   <rule id="ACEITO_ACEITE" name="aceito -> aceite" >
+     <pattern>
+       <token regexp='yes' inflected='yes'>ser|estar|ficar|permanecer|parecer
+         <exception>seres</exception></token>
+       <token min="0" max="3" postag_regexp='yes' postag='R.'/>
+       <token regexp='yes'>aceit[ao]s?</token>
+     </pattern>
+     <message>Em Portugal, a forma mais comum deste particípio é <match no='3' regexp_match='(.+)([ao])(s?)' regexp_replace='$1e$3'/>.</message>
+     <suggestion>\1 <match no='2' include_skipped='all'/> <match no='3' regexp_match='(.+)([ao])(s?)' regexp_replace='$1e$3'/></suggestion>
+     <!--suggestion>\1 <match no='2' include_skipped='all'/> <match no='3' regexp_match='(.+)ad([ao]s?)' regexp_replace='$1ue' suppress_misspelled='yes'/></suggestion-->
+     <example correction='foi aceite'>O projeto <marker>foi aceito</marker>.</example>
+     <example correction='foi aceite'>A China <marker>foi aceita</marker> na Organização Mundial do Comércio.</example>
+     <example correction='serem aceites'>Que ser de um certo tamanho e qualidade antes de <marker>serem aceitas</marker> pelos praticantes da MTC e consumidores.</example>
+   </rule>
 
   <rulegroup id='INVARIABLE_NOUNS' name="Substantivos invariáveis">
     <!-- Created by Tiago F. Santos, Portuguese rule, 2017-06-18 -->
@@ -1307,6 +1321,7 @@ O número de desenvolvedores vem aumentando.
           <token regexp='yes'>&gerundio_excecoes;</token>
       </antipattern>  
 <!-- MARCOAGPINTO 2021-03-17 (17-MAR-2021+) *END* -->
+
 <!-- MARCOAGPINTO 2021-03-19 (17-MAR-2021+) *START* -->
 <!--
 Com efeito, vinham-se acumulando estudos e testemunhos.
@@ -1317,8 +1332,17 @@ Com efeito, vinham-se acumulando estudos e testemunhos.
 		  <token regexp='yes' spacebefore='no'>&hifen;</token>
 		  <token/>
           <token regexp='yes'>&gerundio_excecoes;</token>
-      </antipattern>  
-<!-- MARCOAGPINTO 2021-03-19 (17-MAR-2021+) *END* -->	  
+      </antipattern>
+<!-- MARCOAGPINTO 2021-03-19 (17-MAR-2021+) *END* -->	 
+
+<!-- MARCOAGPINTO 2022-06-08 (5-JUN-2022+) *START* -->
+      <antipattern>
+			<token postag='NP.+|NC.+|AQ.+|VMP00.+' postag_regexp='yes'/>
+			<token regexp='yes'>&gerundio_excecoes;</token>
+			<example>Os terroristas agem contra os Estados recorrendo à força militar.</example>
+      </antipattern>
+<!-- MARCOAGPINTO 2022-06-08 (5-JUN-2022+) *END* -->
+
     <rule>
       <pattern>
           <token inflected='yes' regexp='yes'>estar|andar|ir|vir</token><!-- TODO Review all cases and confirm it can be safely expanded to more cases-->
@@ -1926,6 +1950,34 @@ Mordomos-mores do Reino de Portugal.
 		<token postag='SPS.+' postag_regexp='yes'/>
       </antipattern>
 <!-- MARCOAGPINTO 2021-08-10 (25-JUN-2021+) *END* -->
+
+<!-- MARCOAGPINTO 2022-06-05 (5-JUN-2022+) *START* -->
+      <antipattern>
+		<token postag='VMP00.+|[DP][ADIP].+|SPS00:D[ADIP].+' postag_regexp='yes'>
+		    <exception postag_regexp='yes' postag='RG|RN|CS|PP2.+'/>
+			<exception regexp='no'>me</exception>
+			<exception scope="previous" regexp='no'>por</exception>
+		</token>
+	    <token postag='SPS.+|RG' postag_regexp='yes'>
+			<exception regexp='no'>nunca</exception>
+		</token>
+		<token min="0" max="1" postag='[DP][ADIP].+|NC.+|AQ.+' postag_regexp='yes'>
+			<exception regexp='no'>me</exception>
+		</token>
+	    <token postag='VM[IS]P2S0' postag_regexp='yes'/>
+		<example>Se o Sol é uma estrela anã, imagine o tamanho das demais estrelas!</example>
+		<example>O que vos distingue das demais marcas?</example>
+		<example>As pessoas não gostam muito de mim aqui nas ruas.</example>
+		<example>Você está presente nos dias mais felizes da minha vida, mas também nos piores.</example>
+		<example>Mataram-se mais inocentes.</example>
+		<example>O êxito na vida não se mede pelo que você conquistou, mas sim pelas dificuldades que superou no caminho.</example>
+		<example>O tenista equivocou-se muito nos saques.</example>
+		<example>Pegam-se mais moscas com mel do que com vinagre.</example>
+		<example>Na época da feira construíam-se ali ruas inteiras de barracas.</example>
+		<example>Não há perguntas idiotas, mas sim idiotas que não fazem perguntas.</example>
+      </antipattern>
+<!-- MARCOAGPINTO 2022-06-05 (5-JUN-2022+) *END* -->
+
       <pattern case_sensitive="yes">
           <token min='0' regexp='yes'>tu|vós</token>
           <token postag="V...2S.+" postag_regexp='yes'>
@@ -2099,6 +2151,7 @@ Mordomos-mores do Reino de Portugal.
       <example>«<marker>Garanto-te</marker> que foi mesmo assim.»</example>
       <example>"<marker>Garanto-te</marker> que foi mesmo assim."</example>
     </rule>
+
     <rule>
 <!-- MARCOAGPINTO 2020-06-07 *START* -->
 <!-- "Isso dá-me uma sensação de paz." -->
@@ -2123,13 +2176,6 @@ Mordomos-mores do Reino de Portugal.
 		  <token regexp='yes'>lhe|lhes</token>
 		  <token postag="VMN0000" postag_regexp='no'/>
       </antipattern>
-<!-- "Falta-lhe talento para ser ator." -->
-      <antipattern>
-		  <token postag="NCFS000" postag_regexp='no'/>
-		  <token regexp='yes' spacebefore='no'>&hifen;</token>
-		  <token regexp='yes'>lhe|lhes</token>
-		  <token postag="VMN0000|NC[CFM]S000" postag_regexp='yes'/>
-      </antipattern>	  
 <!-- MARCOAGPINTO 2020-06-07 *END* -->
 <!-- MARCOAGPINTO 2020-10-23 (21-OCT-2020+) *START* --> 
 <!-- "E assim abri-me com ela." -->
@@ -2194,22 +2240,6 @@ A cerâmica oriental interessa-me.
       </antipattern> 
 <!-- MARCOAGPINTO 2021-04-29 + 2021-07-16 (Enhanced) (17-MAR-2021+) *END* -->
 
-<!-- MARCOAGPINTO 2021-07-16 (25-JUN-2021+) *START* -->
-<!--
-Ao pensar em AI, vem-nos à mente os robôs.
-Cabe-nos por tal entender as regras; e não impô-las à natureza.
-Ambrósio responde-lhe por um tratado "Sobre a fé para Graciano Augusto", em cinco livros.
--->
-      <antipattern>
-		<token postag='VMIP3S0|VMM0[23]S0|VMSP[13]S0' postag_regexp='yes'/>
-		<token regexp='yes' spacebefore='no'>&hifen;</token>
-		<token regexp='yes' spacebefore='no'>me|lhes?|nos</token>
-		<token postag='SPS.+' postag_regexp='yes'/>
-		<token postag='NC.+|AQ.+|DI.+' postag_regexp='yes'/>
-	    <token postag='DA.+|NC.+|AQ.+|V.+' postag_regexp='yes'/>	  
-	  </antipattern>
-<!-- MARCOAGPINTO 2021-07-16 (25-JUN-2021+) *END* -->
-
 <!-- MARCOAGPINTO 2022-01-26 (1-JAN-2022+) *START* -->
 <!--
 Dói-me o estômago.
@@ -2220,23 +2250,59 @@ Dói-me aqui.
       <antipattern>
 		  <token postag='VMIP3P0' postag_regexp='no'/>
 		  <token regexp='yes' spacebefore='no'>&tracos_de_separacao;</token>
-		  <token regexp='yes' spacebefore='no'>me|lhes?|nos</token>		  
+		  <token regexp='yes' spacebefore='no'>me|lhes?|nos</token>
       </antipattern>
-<!-- MARCOAGPINTO 2022-01-26 (1-JAN-2022+) *END* -->  
+<!-- MARCOAGPINTO 2022-01-26 (1-JAN-2022+) *END* -->
 
-<!-- MARCOAGPINTO 2022-02-24 (1-JAN-2022+) *START* -->
+<!-- MARCOAGPINTO 2022-05-29 (Checked/Enhanced) (24-MAY-2022+) *START* -->
 <!--
 Ela dá-me a chave.
 Ele dá-me a chave.
 Ele pergunta-me onde ela mora.
 Ele trata-me com rigor.
 Ele evita-me.
+Informação pessoal que é dada á Car Detail permite-nos contacta-lo e enviar facturação sempre que seja necessário.
 -->
       <antipattern>
-		  <token regexp='yes'>el[ae]</token>
+		  <token postag='P[ADIP][3N][FMN].+|D[ADIP].+' postag_regexp='yes'/>
 		  <token postag='VMIP3S0' postag_regexp='no'/>
       </antipattern>
-<!-- MARCOAGPINTO 2022-02-24 (1-JAN-2022+) *END* --> 
+<!-- MARCOAGPINTO 2022-05-29 (Checked/Enhanced) (24-MAY-2022+) *END* -->
+
+<!-- MARCOAGPINTO 2022-06-06 (Checked/Enhanced) (5-JUN-2022+) *START* -->
+      <antipattern>
+		<token postag='VMIP3S0|VMM0[23]S0|VMSP[13]S0' postag_regexp='yes'>
+            <exception scope="previous" postag="SENT_START|_PUNCT" postag_regexp='yes'/>
+		</token>
+		<token regexp='yes' spacebefore='no'>&tracos_de_separacao;</token>
+		<token regexp='yes' spacebefore='no'>lhes?|nos</token>
+		<token postag='SPS.+|CC|CS|[DP][ADIP].+|RG' postag_regexp='yes'/>
+		<token postag='NC.+|AQ.+|NP.+|[DP][ADI].+|CS|RG' postag_regexp='yes'/>
+		<example>Ambrósio responde-lhe por um tratado "Sobre a fé para Graciano Augusto", em cinco livros.</example>
+		<example>Oferteo fornece-lhe com as novas ferramentas, graças ao seu contacto com um cliente e vendas são ainda mais fácil.</example>
+		<example>Ainda não tendes fé?» Nesta tarde, Senhor, a tua Palavra atinge e toca-nos a todos.</example>
+		<example>Falta-lhes à vida um pouco de fantasia.</example>
+		<example>Lopo diz-lhe que se o cabelo for mesmo dela, Clarice terá de cumprir a promessa e beijá –lo.</example>
+		<example>Apesar de sua idade, seu enorme valor à vida devolve-lhe a mocidade.</example>
+		<example>A Rumbo oferece-lhe os melhores voos aos melhores preços.</example>
+		<example>Esteja em paz com Deus, que o criou e que quer-lhe bem.</example>		
+	  </antipattern>
+<!-- MARCOAGPINTO 2022-06-06 (Checked/Enhanced) (5-JUN-2022+) *END* -->
+
+<!-- MARCOAGPINTO 2022-06-06 (Checked/Enhanced) (5-JUN-2022+) *START* -->
+      <antipattern>
+		  <token postag="AQ..S.+|NC.S.+" postag_regexp='yes'/>
+		  <token regexp='yes' spacebefore='no'>&tracos_de_separacao;</token>
+		  <token regexp='yes'>lhes?</token>
+		  <token><exception postag='PP2CSN00|DA.+|_PUNCT|SPS00' postag_regexp='yes'/></token>
+		  <example>Falta-lhe talento para ser ator.</example>
+		  <example>À Mary, falta-lhe delicadeza.</example>
+		  <example>Falta-lhe motivação.</example>
+		  <example>Acho que deve-lhe uma explicação.</example>
+		  <example>Cláudia, maravilhada com a beleza de Lourenço manda-lhe imensos piropos.</example>
+		  <example>Falta-lhe um parafuso.</example>
+      </antipattern>
+<!-- MARCOAGPINTO 2022-06-06 (Checked/Enhanced) (5-JUN-2022+) *END* -->
 
       <pattern>
           <token min='0' regexp='yes'>tu|vós</token>
@@ -2272,10 +2338,6 @@ Ele evita-me.
 	  <example>Mas uma voz interior diz-me que ainda não é a teoria certa.</example>
 	  <example>A cerâmica oriental interessa-me.</example>
 
-	  <example>Ao pensar em AI, vem-nos à mente os robôs.</example>
-	  <example>Cabe-nos por tal entender as regras; e não impô-las à natureza.</example>
-	  <example>Ambrósio responde-lhe por um tratado "Sobre a fé para Graciano Augusto", em cinco livros.</example>
-
 	  <example>Dói-me o estômago.</example>
 	  <example>Dói-me a barriga.</example>
 	  <example>Dói-me um dente.</example>
@@ -2286,7 +2348,9 @@ Ele evita-me.
 	  <example>Ele pergunta-me onde ela mora.</example>
 	  <example>Ele trata-me com rigor.</example>
 	  <example>Ele evita-me.</example>
+	  <example>Informação pessoal que é dada á Car Detail permite-nos contacta-lo e enviar facturação sempre que seja necessário.</example>
     </rule>
+	
     <!--    <rule>
       <antipattern>
           <token postag='SENT_START'/>
