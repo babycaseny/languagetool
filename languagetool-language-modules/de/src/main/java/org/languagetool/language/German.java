@@ -30,6 +30,7 @@ import org.languagetool.rules.de.SentenceWhitespaceRule;
 import org.languagetool.rules.de.*;
 import org.languagetool.rules.neuralnetwork.NeuralNetworkRuleCreator;
 import org.languagetool.rules.neuralnetwork.Word2VecModel;
+import org.languagetool.rules.spelling.SpellingCheckRule;
 import org.languagetool.synthesis.GermanSynthesizer;
 import org.languagetool.synthesis.Synthesizer;
 import org.languagetool.tagging.Tagger;
@@ -49,8 +50,6 @@ import java.util.*;
  */
 public class German extends Language implements AutoCloseable {
 
-  private static final Language GERMANY_GERMAN = new GermanyGerman();
-
   private LanguageModel languageModel;
   private List<Rule> nnRules;
   private Word2VecModel word2VecModel;
@@ -65,7 +64,18 @@ public class German extends Language implements AutoCloseable {
   
   @Override
   public Language getDefaultLanguageVariant() {
-    return GERMANY_GERMAN;
+    return GermanyGerman.INSTANCE;
+  }
+
+  @Override
+  public SpellingCheckRule createDefaultSpellingRule(ResourceBundle messages) throws IOException {
+    return new GermanSpellerRule(messages, this);
+  }
+
+  @NotNull
+  @Override
+  public GermanSpellerRule getDefaultSpellingRule() {
+    return (GermanSpellerRule) Objects.requireNonNull(super.getDefaultSpellingRule());
   }
 
   @Override
@@ -294,12 +304,14 @@ public class German extends Language implements AutoCloseable {
       case "IRGEND_COMPOUND": return 10;
       case "DA_DURCH": return 2; // prefer over SUBSTANTIVIERUNG_NACH_DURCH and DURCH_SCHAUEN and DURCH_WACHSEN
       case "BEI_GOOGLE" : return 2;   // prefer over agreement rules and VOR_BEI
-      case "EINE_ORIGINAL_RECHNUNG_TEST" : return 2;   // prefer over EINE_ORIGINAL_RECHNUNG
+      case "EINE_ORIGINAL_RECHNUNG_TEST" : return 2;   // prefer over agreement rules
+      case "VONSTATTEN_GEHEN" : return 2;   // prefer over EINE_ORIGINAL_RECHNUNG
       case "VERWECHSLUNG_MIR_DIR_MIR_DIE": return 1; // prefer over MIR_DIR
       case "ERNEUERBARE_ENERGIEN": return 1; // prefer over VEREINBAREN
       case "VOR_BEI": return 1; // prefer over BEI_BEHALTEN
       case "VERWANDET_VERWANDTE": return 1; // prefer over DE_CASE
       case "SEIT_LAENGEREN": return 1; // prefer over DE_CASE
+      case "WO_VON": return 1; // prefer over most agreement rules
       case "EIN_LOGGEN": return 1; // prefer over most agreement rules
       case "ZU_GENÜGE" : return 1;   // prefer over ZU_KOENNE
       case "IMPFLICHT" : return 1;   // prefer over agreement rules DE_AGREEMENT
@@ -333,8 +345,10 @@ public class German extends Language implements AutoCloseable {
       case "DIESEN_JAHRES": return 1;
       case "WERT_SEIN": return 1; // prefer over DE_AGREEMENT
       case "EBEN_FALLS": return 1;
+      case "IN_UND_AUSWENDIG": return 1; // prefer over DE_CASE
       case "JEDEN_FALLS": return 1;
       case "UST_ID": return 1;
+      case "INS_FITNESS": return 1; // prefer over DE_AGREEMENT
       case "SEIT_VS_SEID": return 1; // prefer over some agreement rules (HABE_BIN from premium)
       case "ZU_KOMMEN_LASSEN": return 1; // prefer over INFINITIVGRP_VERMOD_PKT
       case "ZU_SCHICKEN_LASSEN": return 1; // prefer over INFINITIVGRP_VERMOD_PKT
@@ -378,6 +392,9 @@ public class German extends Language implements AutoCloseable {
       case "AKZENT_STATT_APOSTROPH": return -1;  // lower prio than PLURAL_APOSTROPH
       case "BEENDE_IST_SENTEND": return -1; // prefer more specific rules
       case "VER_ADJ_ZU_SCHLAFEN": return -1; // prefer ETWAS_GUTES
+      case "IM_ERSCHEINUNG": return -1; // prefer ZUM_FEM_NOMEN
+      case "SPACE_BEFORE_OG": return -1; // higher prio than spell checker
+      case "EINZELBUCHSTABE_PREMIUM": return -1;  // lower prio than "A_LA_CARTE"
       case "UNPAIRED_BRACKETS": return -2;
       case "ICH_GEHE_DU_BLEIBST": return -2; // prefer ICH_GLAUBE_FUER_EUCH
       case "ICH_GLAUBE_FUER_EUCH": return -2; // prefer agreement rules
@@ -385,7 +402,6 @@ public class German extends Language implements AutoCloseable {
       case "ICH_INF_PREMIUM": return -2; // prefer more specific rules that offer a suggestion (e.g. SUBJECT_VERB_AGREEMENT)
       case "MEHRERE_WOCHE_PREMIUM": return -2;  // less prio than DE_AGREEMENT
       case "DOPPELTER_NOMINATIV": return -2;  // give precedence to wie-wir-wird confusion rules
-      case "EINZELBUCHSTABE_PREMIUM": return -1;  // lower prio than "A_LA_CARTE"
       case "ALTERNATIVEN_FUER_ANGLIZISMEN" : return -2;   // overwrite spell checker
       case "ANGLIZISMUS_INTERNAL" : return -2;   // overwrite spell checker
       case "DOPPELUNG_VER_MOD_AUX": return -2;
@@ -393,7 +409,7 @@ public class German extends Language implements AutoCloseable {
       case "ANGLIZISMEN" : return -2;   // overwrite spell checker
       case "ANGLIZISMUS_PA_MIT_ED" : return -2;   // overwrite spell checker
       case "ZAHL_IM_WORT": return -2; //should not override rules like H2O
-      case "SPACE_BEFORE_OG": return -1; // higher prio than spell checker
+      case "ICH_LIEBS": return -2;  // higher prio than spell checker
       case "GERMAN_SPELLER_RULE": return -3;  // assume most other rules are more specific and helpful than the spelling rule
       case "AUSTRIAN_GERMAN_SPELLER_RULE": return -3;  // assume most other rules are more specific and helpful than the spelling rule
       case "SWISS_GERMAN_SPELLER_RULE": return -3;  // assume most other rules are more specific and helpful than the spelling rule
@@ -409,6 +425,7 @@ public class German extends Language implements AutoCloseable {
       case "FRAGEZEICHEN_NACH_DIREKTER_REDE": return -4;  // lower prio than spell checker
       case "PUNCTUATION_PARAGRAPH_END": return -4;  // don't hide spelling mistakes
       case "TEST_F_ANSTATT_PH": return -4;  // don't hide spelling mistakes
+      case "DAS_WETTER_IST": return -5; // lower prio than spell checker
       case "ANFUEHRUNG_VERSCHACHTELT": return -5;  // lower prio than speller and FALSCHES_ANFUEHRUNGSZEICHEN
       case "SATZBAU_AN_DEN_KOMMT": return -5;  // lower prio than rules that give a suggestion
       case "SUBJECT_VERB_AGREEMENT": return -5; // prefer more specific rules that offer a suggestion (e.g. DE_VERBAGREEMENT)

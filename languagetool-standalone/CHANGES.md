@@ -2,6 +2,10 @@
 
 ## 5.8-SNAPSHOT (release planned for 2022-06-28)
 
+#### Catalan
+  * added and improved rules
+  * updated dictionary (catalan-pos-dict-2.19)
+
 #### English
 * updated en_GB spellchecker dictionary from https://github.com/marcoagpinto/aoo-mozilla-en-dict (Version 2022.06.01, v.3.0.9)
 
@@ -13,6 +17,11 @@
   * added and improved rules
   * added words and POS data
   * fixed tons of false positives
+  * the tagger dictionary has been moved to an external dependency (portuguese-pos-dict)
+
+#### Spanish
+  * added and improved rules
+  * updated dictionary (spanish-pos-dict-1.7)
 
 #### Ukrainian
   * new words in the POS dictionary

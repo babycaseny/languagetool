@@ -126,9 +126,9 @@ title="Easy editing stylesheet" ?>
 	<!ENTITY barbarismos_pt_br "bitcoins?|blockchain|pizzas?|réveillons?|slides?|softwares?|streaming|strogonoffs?|suspenses?|webcams?">
 
     <!ENTITY infantil "(?:b[aá]bá|bichano|bilau|bobalhão|bumbum|caca|cachorrês|cocó|cocô|cuti|dodói|escapulir|flango|formiguês|lelé|mamã|maminha|miau|mimir|nananinanão|nana[rs]|oba|oiê|ohoh|olhinho|papá|Papai|pap(?:ar|ei|aste|ou)|peixa|pepeta|pipi|piu|pum|susu|titi[ao]|totó|totô|vovô|xixi)|memés?|pilocas?|pirilaus?">
-    <!ENTITY informal "chaval[ao]s?|porreiros?|(?:a(?:bafar|dultescente|ham|nh.+)|b(?:abado|adalhoc[ao]|adalo|adamec[ao]|adana|agarai|agunça|aita|aixinh[ao]|alof[ao]|ate-papo|atelada|eiço|ejeca|elê|ichan[ao]|ichinh[ao]|iscate|itaite|js|lablablá|ófia|orrachão|otequeir[ao]|razuca|reaco|rega)|c(?:abaço|acilda|adê|adé|alhamaço|apar|arago|arango|asinha|asório|Dcê|ertinh[ao]|hantar|huninha|huto|obrão|ocó|ocô|oisar|opião|ornear|utucar)|d(?:anad[ao]|anar|aonde|esmiolad[ao]|ocinh[ao]|oíd[ao])|e(?:spertalh(?:ão|ona)|spigadote|strilho|strovenga)|f(?:ilar|ixe|loripa|of[ao]|uxicar|uxiqueir[ao])|g(?:agá|aj[ao]|alera|atunar|elô|oró|osma|ranel|uit[ao]|una|urizada)|herman[ao]|irad[ao]|j(?:avardice|ola)|l(?:aivo|aracha|elé|ogar|ulopetismo)|m(?:acarrone|agrel[ao]|amaã|anda-chuva|ânfi[ao]|an[ao]|atraca|eia-boca|itra|oçada|oina|orcão|otoqueir[oa]|uvuca)|n(?:intendinho|op|ovat[ao])|o(?:i|iê|lhômetro|lh[ôó]metro)|p(?:andeiro|apão|apo|atada|eixão|ejada|elar|epeta|erua|etiz|indaíba|ixulé|ixuleco|orn[oô]|orrad[ao]|orre|r[áoó]|romo|rum|ruma|runs)|q(?:uebra-galho|ueca)|r(?:acha|anho|apaziada|emexer|emexida|icardão|olê)|s(?:acana|ave|elinho|úper)|surripi.+|t(?:abefe|antã|ascar|ime|ótil|rampar|rampo|ransar|reta|rocentos|rouxa|rucid.+|uga.+)|v(?:acil.+|aquinha|egetar|elhot[ae]|ó|ô)|x(?:i|ixi)|z(?:en|i[il]h(ão|ões)))|bacanos?|baril|borliú|barracadas?|camandros?|caraças|caxamolas?|chachas?|chilindrós?|chinocas?|chungas?|chungaria|chunguice|contigo|cuscar|drunfos?|encrencas?|esbardalhar|estrambóticas?|estrambóticos?|fartazanas?|festarolas?|fezadas?|gaj[ao]s?|gentinhas?|janados?|maradas?|marados?|maralhas?|maricadas?|milhentas?|morcão|morcões|nhurro|piegas|pindéricos?|porreiraços?|poucochinhos?|rabiosques?|regabofes?|sandochas?|tanas|tintol|tintóis">
-    <!ENTITY obscenidades "(?:b(?:abaca|acanal|acorinha|acurinha|adalo|adamerda|aranga|ardamerda|edamerda|eita|enga|erdamerda|ichana|ilha|imba|imbada|oceta|oiola|olagato|roche|ruaca|uceta)|c(?:[uú]|abaço|abrão|abrões|acete|adela|agada|agalh(ão|ões)|agar|aralhada|aralho|atatau|atraia|havasca|huchu|huleta|hupeta|omua|ona|onaça|onanas|onsolo|oxanga|rica|roquete|unete|uzão)|f(?:iote|od.+|orunf.+|uampa|ufa|urico|urunf.+)|g(?:aita|relo|rutinha|ulosa)|j(?:eba)|l(?:angonha|ola)|m(?:amado|angalho|armelar|einha|erda|erdeiro|essalina|inete|oca)|nhonhoca|p(?:andeiro|aneleiro|assaralho|atolar|eid.+|ene|entelho|iça|ind?oc.+|intudo|iroca|irrola|ito|iupiu|ixa|otranca|unheta|unheteiro|uta|utada|utaria|utedo|utice)|q(?:ueca|uenga|uirica)|(qui|co)lh(ão|ões)|r(?:abeta|acha|apidinha|ata)|s(?:apatão|apatona|iririca|uruba|urubandê)|t(?:abaca|anajura|esão|esud[ao]|eta|oba|repada|roca-troca)|x(?:ana|arifa|arol[ao]|ereca|ibungo|imbica|iranha|iri|o(?:xo)ta))|cagalhão|cagalhões|caganças?|cagão|cagões|cagãozinho|cagueiros?|caguinchas|caralhão|caralhões|enconadas?|enconados?|esporradelas?|esporras?|merdices?|merdilheiro|merdosas?|merdosos?|pachachas?|panascas?|peidas?|piças?|pichas?|putanheiros?|putazinhas?|putéfias?|putinhas?|putonas?">
-	<!ENTITY depreciativo "baianada|china|chinoca|ciganada|ciganagem|fufa|japa|monhé|negralhada|panasca|portuga|pretalhada|pretaria|rabeta|tuga">
+    <!ENTITY informal "chaval[ao]s?|porreiros?|(?:a(?:bafar|dultescente|ham|nh.+)|b(?:abado|adalhoc[ao]|adalo|adamec[ao]|adana|agarai|agunça|aita|aixinh[ao]|alof[ao]|ate-papo|atelada|eiço|ejeca|elê|ichan[ao]|ichinh[ao]|iscate|itaite|js|lablablá|ófia|orrachão|otequeir[ao]|razuca|reaco|rega)|c(?:abaço|acilda|adê|adé|alhamaço|apar|arago|arango|asinha|asório|Dcê|ertinh[ao]|hantar|huninha|huto|obrão|ocó|ocô|oisar|opião|ornear|utucar)|d(?:anad[ao]|anar|aonde|esmiolad[ao]|ocinh[ao]|oíd[ao])|e(?:spertalh(?:ão|ona)|spigadote|strilho|strovenga)|f(?:ilar|ixe|loripa|of[ao]|uxicar|uxiqueir[ao])|g(?:agá|aj[ao]|alera|atunar|elô|oró|osma|ranel|uit[ao]|una|urizada)|herman[ao]|irad[ao]|j(?:avardice|ola)|l(?:aivo|aracha|elé|ogar|ulopetismo)|m(?:acarrone|agrel[ao]|amaã|anda-chuva|ânfi[ao]|an[ao]|atraca|eia-boca|itra|oçada|oina|orcão|otoqueir[oa]|uvuca)|n(?:intendinho|op|ovat[ao])|o(?:i|iê|lhômetro|lh[ôó]metro)|p(?:andeiro|apão|apo|atada|eixão|ejada|elar|epeta|erua|etiz|indaíba|ixulé|ixuleco|orn[oô]|orrad[ao]|orre|r[áoó]|romo|rum|ruma|runs)|q(?:uebra-galho|ueca)|r(?:acha|anho|apaziada|emexer|emexida|icardão|olê)|s(?:acana|ave|elinho|úper)|surripi.+|t(?:abefe|antã|ascar|ime|ótil|rampar|rampo|ransar|reta|rocentos|rouxa|rucid.+|uga.+)|v(?:acil.+|aquinha|egetar|elhot[ae]|ó|ô)|x(?:i|ixi)|z(?:en|i[il]h(ão|ões)))|bacanos?|baril|borliú|barracadas?|camandros?|caraças|caxamolas?|chachas?|chilindrós?|contigo|cuscar|drunfos?|encrencas?|esbardalhar|estrambóticas?|estrambóticos?|fartazanas?|festarolas?|fezadas?|gaj[ao]s?|gentinhas?|janados?|maradas?|marados?|maralhas?|maricadas?|milhentas?|morcão|morcões|nhurro|piegas|pindéricos?|porreiraços?|poucochinhos?|rabiosques?|regabofes?|sandochas?|tanas|tintol|tintóis">
+    <!ENTITY obscenidades "(?:b(?:abaca|acanal|acorinha|acurinha|adalo|adamerda|aranga|ardamerda|edamerda|eita|enga|erdamerda|ichana|ilha|imba|imbada|oceta|oiola|olagato|roche|ruaca|uceta)|c(?:[uú]|abaço|abrão|abrões|acete|adela|agada|agalh(ão|ões)|agar|aralhada|aralho|atatau|atraia|havasca|huchu|huleta|hupeta|omua|ona|onaça|onanas|onsolo|oxanga|rica|roquete|unete|uzão)|f(?:iote|od.+|orunf.+|uampa|ufa|urico|urunf.+)|g(?:aita|relo|rutinha|ulosa)|j(?:eba)|l(?:angonha|ola)|m(?:amado|angalho|armelar|einha|erda|erdeiro|essalina|inete|oca)|nhonhoca|p(?:andeiro|aneleiro|assaralho|atolar|eid.+|ene|entelho|iça|ind?oc.+|intudo|iroca|irrola|ito|iupiu|ixa|otranca|unheta|unheteiro|uta|utada|utaria|utedo|utice)|q(?:ueca|uenga|uirica)|(qui|co)lh(ão|ões)|r(?:abeta|acha|apidinha|ata)|s(?:apatão|apatona|iririca|uruba|urubandê)|t(?:abaca|anajura|esão|esud[ao]|eta|oba|repada|roca-troca)|x(?:ana|arifa|arol[ao]|ereca|ibungo|imbica|iranha|iri|o(?:xo)ta))|cagalhão|cagalhões|caganças?|cagão|cagões|cagãozinho|cagueiros?|caralhão|caralhões|enconadas?|enconados?|esporradelas?|esporras?|merdices?|merdilheiro|merdosas?|merdosos?|pachachas?|peidas?|piças?|pichas?|putanheiros?|putazinhas?|putéfias?|putinhas?|putonas?">
+	<!ENTITY depreciativo "baianada|caguinchas|china|chinoca|chunga|chungaria|chunguice|ciganada|ciganagem|fufa|japa|larilas?|maricão|monhé|negralhada|panasca|panilas|portuga|pretalhada|pretaria|rabeta|tuga">
 
 	<!ENTITY languages "açoriano|baiano|balcânico|bordalês|eslavo|hebraico|latino|maia|islâmico|judeu|bárbaro|muçulmano|afro[-]americano|afro[-]brasileiro|anglo[-]afegã|franco[-]prussiana|luso[-]brasileira|russo[-]persa|russo[-]turca|sino[-]japonesa|abancaino|abcásio|abcázio|abecásio|abecázio|abexim|abissínio|acrense|adigueu|afegã|afegane|afegânico|afegão|africano|alamão|alandês|alasquense|alasquiano|albanense|albanês|albânio|albano|alemanisco|alemão|alemânico|algeriano|alpino|alsaciano|americano|amesterdamês|amesterdanês|amsterdamês|anamês|anamita|ancarense|andorrano|andorrenho|andorrense|andorriano|angelino|anglicano|ânglico|anglo|angolano|angolense|angolês|angorá|anguilano|antiguano|antilhano|antioquenho|antofagastino|aqueu|árabe|árabe[-]saudita|arábico|arábigo|arábio|argeliano|argeliense|argelino|argentino|argivo|argoviano|ariquenho|armeniano|arménico|armênico|arménio|armênio|arubanense|arubano|arubenho|asiático|assuncionenho|ateniense|atlanticense|australês|australiano|austrálio|austríaco|austro[-]africano|austro[-]áfrico|austro[-]húngaro|axumita|azerbaidjanês|azerbaidjano|azerbaijanês|azerbaijano|azeri|baamense|baamês|baamiano|babilônico|bagdali|bahamense|bahamiano|balinês|bangladechiano|bangladense|bangladês|bangladeshiano|bangladexiano|baramês|barbadense|barbadiano|bareinita|baremense|baremês|baremita|barenita|basileiense|batávico|batávio|batavo|bechuana|bechuano|belarusso|belemita|belenense|belga|bélgico|belgradino|belizenho|belizense|bengala|bengalense|bengalês|bengáli|bengali|bengalim|beninense|beninês|bermá|bermã|bermano|bermudense|bermudês|bernense|bernês|bexuana|bexuano|bielo[-]russo|bielorrusso|bife|birmã|birmane|birmanense|birmanês|birmaniano|birmano|bissanense|bissauense|bizantino|boche|boêmio|boémio|bogotano|boliviano|bonaerense|borgonhês|bosnense|bosníaco|bosniano|bosniense|bósnio|bostoniano|botsuanense|botsuanês|botsuano|botswanense|botswanês|botswano|brabanção|bramá|brasileiro|brasilense|brasilês|brasiliano|brasílico|brasiliense|brasílio|brasilista|bretão|britânico|britano|bruneano|bruneíno|bruxelense|bruxelês|bucarestense|bucarestino|budapestense|budapestino|buenairense|bulgarês|búlgaro|burkinense|burquinabê|burquinense|burquinês|burquino|burundiano|burundiense|burundinês|burúndio|butanense|butanês|butani|butâni|butânico|cabo[-]verdense|cabo[-]verdiano|caienense|caimanês|calamenho|calenho|californiano|calmuco|camaronense|camaronês|camberrano|cambodjano|cambojano|cambojiano|camerunense|camerunês|cameruniano|campucheano|canadense|canadiano|canadiense|cantonês|capitalino|caraquenho|carélio|caribenho|cartageneiro|cartaginense|cartaginês|casaco|casáquio|casaquistano|catarense|catari|catariano|caucasiano|cazaque|cazaquistanês|ceilonense|centrafricano|centro[-]africano|centro[-]americano|chadiano|chadiense|checheno|checo|checoslovaco|chicagüense|chileno|chiloense|chilote|chim|china|chinês|chingalá|chino|chinoca|chiprense|cingalá|cingalês|cipreno|cipríaco|cíprico|cíprio|cipriota|colombense|colombiano|colombino|colombo|comi|comorense|comoriano|concepcionense|congo|congolense|congolês|conguense|conguês|cookense|copenhaguense|coquense|cordobense|cordovês|coríntio|córnico|cornualês|corso|cosovano|cossovano|cossovar|costa[-]marfinense|costa[-]marfiniano|costa[-]ricense|costa[-]riquenho|costa[-]riquense|costarricense|costarriquenho|costarriquense|couaitiano|coveitiano|cretense|Crimeano|Crimeu|croaciano|croácio|croata|cuaitiano|cubano|curaçauense|curdo|cusquenho|cuvaiti|cuvaitiano|cuwaitiano|dacarense|daguestanês|dálmata|damanense|damasceno|damasquino|danês|dânio|dano|diense|dinamarquês|dioense|diuense|djibutiano|djibutiense|dominicano|domínico|dominiquense|dominiquês|dublinense|ebúrneo|edokko|egipcíaco|egipciano|egipcião|egípcio|egiptanense|egiptano|egíptico|egiptino|eirense|emiradense|emirático|equato[-]guineense|equatoriano|erino|eritreu|escandinavo|escocês|esguíçaro|esguízaro|eslovaco|eslováquio|eslovénico|eslovênico|esloveno|espanhol|espartano|essuatiniano|estado[-]unidense|estadunidense|estoniano|estônico|estónico|estônio|estónio|esvalbardense|etíope|etiopês|etiopiano|etiópico|etiópio|europeu|falklandês|faroense|feroês|feroico|fidjiano|fijiano|filipino|finense|finês|fínico|finlandês|fino|flamengo|floridense|formosano|formosino|forro|francês|franciú|franco|frisão|frísio|gabonense|gabonês|galense|galês|galicano|gálico|gálio|galo|gambiano|gambiense|ganense|ganês|gascão|gaulês|gaulo|gazeu|gazita|genebrense|genebrês|genebrino|georgiano|geórgico|germânico|germano|giblita|gibraltarino|gibraltino|goano|goense|goês|grã[-]bretão|granadino|grecânico|greciano|grego|gregório|groenlandês|gronelandês|grúzico|gruzínico|gruzínio|grúzio|guadalupense|guadalupino|guajiro|guamês|guantanameiro|guatemalense|guatemalteco|guatemaltense|guernesiano|guianense|guianês|guiano|guineano|guineense|guinéu|guinéu[-]equatoriano|haitiano|hauaiano|havaiano|havaneiro|havanês|helene|helênico|helénico|heleno|helvécio|helvético|helveto|herzegovino|herzegóvino|hibérnico|hibérnio|hidrocálido|hiérnio|hierosolimita|hierosolimitano|hindu|hindustâni|hindustani|hispânico|hispaniense|hispano|holandês|hollywoodiano|holmiense|honconguês|hondurenho|hungarês|hungárico|húngaro|ianque|iemenense|iemenês|iemênico|ieménico|iemenita|Ilhas|indiano|indiático|índico|índio|indochinês|indonésio|inglês|iraniano|irânico|irânio|iraquenho|iraquense|iraquiano|irlandês|irlândes|islandense|islandês|islândico|israelense|israeliano|israelita|israelítico|italiano|itálico|italiota|ítalo|jamaicano|jamaicense|japão|japona|japonense|japonês|japônico|japónico|jau|javanês|jerosolimita|jerosomilitano|jersiano|jerusalemita|jibutiano|jibutiense|jordaniano|jordânico|jordano|kiribatiano|kiribatino|kosovar|kossovar|kowaitiano|koweitiano|kuwaiti|kuwaitiano|kuweitiano|kwaitiano|lacedemônio|lao|laociano|laosiano|lapão|latino[-]americano|lau|lausiano|lesotense|lesotiano|lesoto|letão|lético|letónico|letônico|letônio|letónio|libanês|liberiano|libério|líbico|líbio|liechtensteinense|liechtensteinês|liechtensteiniano|liechtensteiniense|limenho|lionense|lionês|listenstainense|listenstainês|listenstainiano|listenstainiense|listenstaino|lituânico|lituânio|lituano|liverpuldiano|loíno|londrino|luandense|lusíada|lusitaniano|lusitânico|lusitano|luso|luxemburguês|macaense|macaísta|macau|macauense|mácedo|macedoniano|macedônico|macedónico|macedônio|macedónio|madagascarense|madgiar|magiar|maiotense|malaico|malaio|malasiano|malásio|malaui|malauiano|malauiense|malauista|malauita|malaviano|malavita|malawiano|malawiense|maldivano|maldivense|maldiviano|maldívio|maldivo|malês|malgaxe|malgaxo|maliano|malinês|maltês|malvinense|malvinês|malvino|managuenho|managuense|manchu|mancuniano|manês|manquês|manx|maputense|marechalês|marechaliniano|marfinense|marfiniano|mari|marroquino|marselhês|marshallês|marshallino|martinicano|maubere|mauriciano|mauritaniano|mauritânico|mauritano|mecano|medelhinense|mediterrâneo|mediterrânico|mejilhonino|melanésio|mendocino|meroíta|meroítico|mesopotâmico|mexicano|mexilhonino|mianmarense|micênico|michigânder|micronésio|milésio|Miquelon|moçambicano|moçambique|moçambiquenho|moçambiquense|mogol|mogor|mogore|moldávico|moldávio|moldavo|monagasco|monegasco|mongol|mongólico|mongolino|mongolita|monserratense|montenegrino|moraviano|mordóvio|mordovo|moscovita|mouro|namibiano|namíbio|napatense|narbonense|narbonês|natalense|nauruano|nauruense|nazareno|nederlandês|neerlandês|neocaledónio|neocaledônio|neozelandense|neozelandês|neozelandiense|nepalês|nepali|nicaraguano|nicaraguense|nigerense|nigeriano|nigerino|ninivita|nipão|nipo|niponense|nipónico|nipônico|niueano|niuiano|norfolkino|norfolquino|normando|norte[-]americano|norte[-]chiprense|norte[-]cíprico|norte[-]ciprino|norte[-]cíprio|norte[-]cipriota|norte[-]coreano|norte[-]irlandês|norte[-]marianense|norte[-]osseta|noruego|norueguense|norueguês|nova[-]iorquino|núbio|oceânico|olímpico|omanense|omani|omaniano|oriental|orleniano|osmandi|osmânico|osmanli|osseta|otomano|otomão|pacenho|palauano|palauense|palestinense|palestiniano|palestino|panamaense|panamenho|panamense|panamiano|panamista|papua|papuásio|paquistanense|paquistanês|paquistani|paquistânico|paraguaiano|paraguaio|parisiense|párseo|pársio|pascoense|patagão|patagónio|penquista|pequinês|persa|pérseo|persiano|pérsico|pérsio|peruano|peruviano|perúvio|picardiano|pinheiro|piquenho|pitcairnês|platino|poblano|polaco|polinésico|polinésio|polonês|Polónia|polônico|polónico|polónio|polônio|polono|portenho|porto[-]riquenho|porto[-]riquense|portucalense|portuga|portugalense|portugalês|português|praguense|praiense|provençal|prussiano|púnico|puntarenense|quaitiano|queniano|quermano|quindiano|quirguistanês|quirguiz|quirguize|quirguizistanês|quiribatiano|quitenho|régio|regiomontano|reunionense|romaico|romenho|roménico|romênico|romeno|ruandense|ruandês|russiano|russo|russo[-]branco|sã[-]tomense|saaraui|saarauí|saarense|saariano|saárico|salomonense|salomónico|salomônico|salônico|salvadorenho|salvatoriano|samarinês|samoano|samoense|san[-]marinense|sanandresano|santa[-]helenense|santa[-]lucense|santa[-]luciense|santanderiano|santiagueiro|santiaguense|santiaguino|santo[-]antoniense|santomense|são[-]bartolomeense|são[-]cristovense|são[-]marinense|são[-]marinhense|são[-]martinhense|são[-]nicolauense|são[-]pedrense|são[-]tomense|são[-]vicentino|sarauí|saraui|sarauita|sarense|sariano|sárico|saudi[-]árabe|saudi[-]arábico|saudita|seattleíta|seichelense|senegalense|senegalês|senegalesco|senegaliano|senegálico|serra[-]leonense|serra[-]leonês|serra[-]leonino|sérvio|seychellense|siame|siamense|siamês|siberiano|sidônio|silesiano|singala|singalense|singalês|singalibense|singapurano|singapurense|singapuriano|sínico|sino|siríaco|siriano|sírio|siro|socotorino|somali|somáli|somaliano|somaliense|somalilandense|somalilandês|soviético|srilankês|srilankesa|suázi|suazi|suazilandense|suazilandês|suazilandiense|sudanês|suécio|sueco|suíço|sul[-]africanista|sul[-]africano|sul[-]americano|sul[-]coreano|sul[-]osseta|sul[-]sudanês|sumério|surinamense|surinamês|svalbardense|tadjique|tadjiquistanês|tagal|tagalar|tagalo|tailandês|taitiano|taiuanês|taiwanês|tajique|tajiquistanês|tanzaniano|tapatio|tártaro|tasmaniano|tchadiano|tchadiense|tcheco|tchecoslovaco|tchetcheno|tebano|tedesco|tegucigalpenho|tessalônico|teucro|teutão|teuto|teutónico|texano|tibetano|timor|timorense|timorino|tírio|tirolês|tocopilhano|togolês|toguês|tonganês|toquelauano|trácio|transdniestriano|transdnistriano|transdnístrio|transilvano|transnistriano|transnístrio|trinitário|trinitário[-]tobagense|tripolitano|tristanita|troiano|tudesco|tuga|tunesino|tunetano|tunisiano|tunisino|túrcico|turco|turco[-]caicense|turcomeno|turquemenistanês|turquemeno|turquês|turquesco|tuvalês|tuvaluano|ucraniano|ucrânio|ugandense|ugandês|uruguaiano|uruguaio|usbeque|usbequistanês|uzbeque|uzbequistanês|valão|vanuatense|vanuatuense|varsoviano|vaticano|venezolano|venezuelano|veracruzano|vienense|vietnamense|vietnamês|vietnamiano|vietnamita|vinhamarino|virginense|wallisense|washingtoniano|wellingtoniano|xangaiense|yankee|zagrebino|zairense|zambiano|zambiense|zâmbio|zamorano[-]chinchipense|zanzibar|zanzibarita|zelandês|zimbabuano|zimbabuense|zimbabwense|zimbabwiano|zuriquenho|zuriquense">
 
@@ -898,11 +898,11 @@ Isto é boa. → Isto é bom.
 <!-- MARCOAGPINTO 2020-07-30 (2-JUL-2020+) *START* -->
 <!-- "Uma informação o mais simples e o mais rica." -->
       <antipattern>
-          <token postag='DA0MS0|PD0MS000|PP3MSA00' postag_regexp='yes'/>		  
+          <token postag='DA0MS0|PD0MS000|PP3MSA00' postag_regexp='yes'/>
           <token postag='NC[CM]S000|NC[CM]N000|RG' postag_regexp='yes'/>
           <token postag='AQ0[CF]S0|NC[CF]S000' postag_regexp='yes'/>
 		  <token negate="yes" regexp='yes'>em|da|do|que</token>
-      </antipattern>	
+      </antipattern>
 <!-- MARCOAGPINTO 2020-07-30 (2-JUL-2020+) *END* -->
 
 <!-- MARCOAGPINTO 2020-08-18 (2-JUL-2020+) *START* -->
@@ -924,7 +924,7 @@ Isto é boa. → Isto é bom.
 		  <token postag='V.+|NC[CM]S000|CS|I|RG|VMP00SM' postag_regexp='yes'/>
 	      <token postag='AQ0[CM]S0|NC[CF]S000' postag_regexp='yes'/>
 		  <token postag='NC[CF]P000' postag_regexp='yes'/>
-	  </antipattern>	  	  	  
+	  </antipattern>
 	  <!-- "Suspeita-se que tenham, em escalas de tempo, levado quantidades significativas de água." -->
       <antipattern>
 		  <token regexp='yes'>[,]|de|e</token>
@@ -932,27 +932,6 @@ Isto é boa. → Isto é bom.
 		  <token postag='NC[CF]P000' postag_regexp='yes'/>
 	  </antipattern>	  	  
 <!-- MARCOAGPINTO 2020-09-14 (2-JUL-2020+) *END* -->
-
-
-
-<!-- MARCOAGPINTO 2021-02-22 (1-JAN-2021+) *START* -->
-<!--
-O que o torna mais perigoso é haver civis inocentes.
-O que o torna perigoso é haver civis inocentes.
-
-BUG: TORNA APPEARS AS A NOUN WHEN IT SHOULD BE A VERB, USING NOUNS CAUSES FALSE POSITIVES.
-     2022-06-16
--->
-      <antipattern>
-		<token negate_pos="yes" postag='SENT_START' postag_regexp='no'/>
-        <token postag='DA0MS0' postag_regexp='no'/>
-		<token postag='NCFS000' postag_regexp='no'/>
-		<token min="0" max="1" postag='RG' postag_regexp='no'/>
-		<token postag='AQ0MS0' postag_regexp='no'/>
-      </antipattern> 
-<!-- MARCOAGPINTO 2021-02-22 (1-JAN-2021+) *END* -->
-
-
 
 <!-- MARCOAGPINTO 2021-04-15 (17-MAR-2021+) *START* -->
 <!--
@@ -972,7 +951,7 @@ A própria Jane escreveu a carta.
 		<token regexp='yes'>[.,!?;():]|à|as?|das?|destas?|pelas?|em|nas?</token>
 		<token postag='NCF.+|AQ0F.+' postag_regexp='yes'/>
 		<token postag='NP.+' postag_regexp='yes'/>
-      </antipattern>	  
+      </antipattern>
       <antipattern>
 		<token postag='DP.M.+|DI.M.+|DD.M.+|AQ0C.+' postag_regexp='yes'/>
 		<token postag='NCM.+|AQ0M.+' postag_regexp='yes'/>
@@ -982,7 +961,7 @@ A própria Jane escreveu a carta.
 		<token regexp='yes'>[.,!?;():]|os?|dos?|destes?|pelos?|em|nos?</token>
 		<token postag='NCM.+|AQ0M.+' postag_regexp='yes'/>
 		<token postag='NP.+' postag_regexp='yes'/>
-      </antipattern>	  
+      </antipattern>
 <!-- MARCOAGPINTO 2021-04-15 (17-MAR-2021+) *END* -->
 
 <!-- MARCOAGPINTO 2022-06-05/11/14/15 (5-JUN-2022+) *START* -->
@@ -1063,10 +1042,10 @@ A própria Jane escreveu a carta.
 		  <example>Precisa agora de estar em retiro 14 dias.</example>
 		  <example>Precisa agora de estar em retiro 14 horas.</example>
 		  <example>Antes de continuar vamos assistir um breve vídeo sobre o recrutador 24 horas.</example>
-		  <example>Além de que, continuei com este cuidado 3 semanas após o término da radioterapia.</example>		  
+		  <example>Além de que, continuei com este cuidado 3 semanas após o término da radioterapia.</example>
 		  <example>Estiveram presentes no chat 120 pessoas e agora você pode ler, na integra, como foi o bate-papo.</example>
 		  <example>A WNPower tem suporte sólido, incluindo suporte por chat ao vivo, telefone, e-mail e ticket 24 horas por dia, 7 dias por semana.</example>
-      </antipattern>  
+      </antipattern>
 <!-- MARCOAGPINTO 2022-06-15/16 (Checked/Enhanced) (5-JUN-2022+) *END* -->
 
 <!-- MARCOAGPINTO 2022-06-15/16 (Checked/Enhanced) (5-JUN-2022+) *START* -->
@@ -1186,9 +1165,6 @@ A própria Jane escreveu a carta.
 	  <example>Ele confundiu o rapaz com um borrego, <marker>seu tira</marker> moncos.</example>
 	  <example>Ele confundiu o rapaz com um borrego, sua tira moncos.</example>
 	  <example>Ele confundiu o rapaz com um borrego, teu tira moncos.</example>
-	  
-	  <example>O que <marker>o torna</marker> mais perigoso é haver civis inocentes.</example>
-	  <example>O que o torna perigoso é haver civis inocentes.</example>
   
 	  <example type='correct'>Autentifique-se com a <marker>sua conta LanguageTool</marker>.</example>
 	  <example type='correct'>Autentifique-se com o <marker>seu cartão MUFON</marker>.</example>
@@ -1286,77 +1262,7 @@ A própria Jane escreveu a carta.
           <token regexp='yes' min='0'>&adverbios_de_intensidade;</token>
     <!--token min='0' postag='(?:A..|Z.)C.+' postag_regexp='yes'-->
           <token postag='(?:[NZ].|A..)F[NP].+' postag_regexp='yes'/>
-      </antipattern>	  
-<!-- MARCOAGPINTO 2020-01-23 *START* -->
-<!-- "A soma não dá valores ordenados sequenciais crescentes." -->
-      <antipattern>
-		  <token postag='NCMP000' postag_regexp='no'/>
-		  <token postag='AQ0MP0' postag_regexp='no'/>
-      </antipattern>	
-<!-- MARCOAGPINTO 2020-01-23 *END* -->
-<!-- MARCOAGPINTO 2020-03-27 *START* -->
-<!-- "A colega dos supermercados mencionada anteriormente." -->
-      <antipattern>
-		  <token postag='DA0FS0' postag_regexp='no'/>
-		  <token postag='NCCS000' postag_regexp='no'/>
-		  <token regexp='no'>dos</token>
-		  <token postag='NCMP000' postag_regexp='no'/>
-		  <token postag='VMP00SF' postag_regexp='no'/>	  		  
-      </antipattern>	
-<!-- MARCOAGPINTO 2020-03-27 *END* -->
-<!-- MARCOAGPINTO 2020-05-22 *START* -->
-<!-- "Edificações erguidas por arquitetos índios centenas de anos antes da conquista europeia." -->
-<!-- "Surgiram no reino centenas de pequenas habitações." -->
-      <antipattern>
-		  <token postag='NCM[SP]000' postag_regexp='yes'/>
-		  <token postag='Z0FP0' postag_regexp='no'/>
-		  <token postag='SPS00' postag_regexp='no'/>	  		  
-      </antipattern>	
-<!-- MARCOAGPINTO 2020-05-22 *END* -->
-<!-- MARCOAGPINTO 2020-07-19 (2-JUL-2020+) *START* -->
-<!-- "De acordo com as equações por nós implementadas." -->
-      <antipattern>
-	      <token postag='NCFP000' postag_regexp='no'/>
-		  <token postag='CC|SPS00|DA0FS0' postag_regexp='yes'/>
-		  <token postag='PP1CP000|PP3CSO00|DI0[FM]P0' postag_regexp='yes'/>
-		  <token min="0" max="1" postag='DD0[FM]P0' postag_regexp='yes'/>
-		  <token postag='VMP00PF|AQ0[CF]P0' postag_regexp='yes'/>
       </antipattern>
-	  <!-- "De acordo com os comandos por nós implementados." -->
-      <antipattern>
-	      <token postag='NCMP000' postag_regexp='no'/>
-		  <token postag='CC|SPS00|DA0FS0' postag_regexp='yes'/>
-		  <token postag='PP1CP000|PP3CSO00|DI0[FM]P0' postag_regexp='yes'/>
-		  <token min="0" max="1" postag='DD0[FM]P0' postag_regexp='yes'/>
-		  <token postag='VMP00PM|AQ0[CM]P0' postag_regexp='yes'/>
-      </antipattern>
-	  <!-- "São por nós consideradas verdadeiras nações." -->
-      <antipattern>
-		  <token postag='CC|SPS00|DA0FS0' postag_regexp='yes'/>
-		  <token postag='PP1CP000|PP3CSO00|DI0[FM]P0' postag_regexp='yes'/>
-		  <token min="0" max="1" postag='DD0[FM]P0' postag_regexp='yes'/>
-		  <token postag='VMP00PF|AQ0FP0' postag_regexp='yes'/>
-		  <token postag='AQ0[CF]P0' postag_regexp='yes'/>
-	  </antipattern>
-	  <!-- "São por nós considerados verdadeiros países." -->
-      <antipattern>
-		  <token postag='CC|SPS00|DA0FS0' postag_regexp='yes'/>
-		  <token postag='PP1CP000|PP3CSO00|DI0[FM]P0' postag_regexp='yes'/>
-          <token min="0" max="1" postag='DD0[FM]P0' postag_regexp='yes'/>
-		  <token postag='VMP00PM|AQ0MP0' postag_regexp='yes'/>
-		  <token postag='AQ0[CM]P0' postag_regexp='yes'/>
-	  </antipattern>
-<!-- MARCOAGPINTO 2020-07-19 (2-JUL-2020+) *END* -->
-<!-- MARCOAGPINTO 2020-07-20 (2-JUL-2020+) *START* -->
-<!-- "O sexo sem procriação já foi considerado por muitos prostituição." -->
-<!-- "O sexo sem procriação já foi considerado por médicas prostituição." -->
-      <antipattern>
-	      <token postag='V.+' postag_regexp='yes'/>
-		  <token regexp='yes'>aos|por|para|entre</token>
-	      <token postag='DI0[FM]P0|AQ0[CFM]P0|NC[CFM]P000' postag_regexp='yes'/>
-	      <token postag='NC[CFM]S000' postag_regexp='yes'/>
-      </antipattern>
-<!-- MARCOAGPINTO 2020-07-20 (2-JUL-2020+) *END* -->
 
 <!-- MARCOAGPINTO 2020-08-01 (2-JUL-2020+) *START* -->
 <!-- "Foram muitos os portugueses vítimas da seca." -->
@@ -1374,20 +1280,8 @@ A própria Jane escreveu a carta.
 		<exception postag_regexp='no' postag='Z0MP0'/></token>
         <token postag='AQ0[CF]P0|NC[CF]P000' postag_regexp='yes'/>
 		<token postag='V.+' postag_regexp='yes'/>
-      </antipattern>	  
+      </antipattern>
 <!-- MARCOAGPINTO 2020-08-01 (2-JUL-2020+) *END* -->
-
-<!-- MARCOAGPINTO 2021-05-07 (17-MAR-2021+) *START* -->
-<!--
-A Ana anulou os talões duas ou três vezes.
-Ele acabou casando com uma mulher italiana dez anos mais nova.
-Ela deve ser uns cinco anos mais velha que ele.
--->
-      <antipattern>	  
-		<token postag='NP.+|NC.+|AQ0.+' postag_regexp='yes'/>
-		<token postag='Z0.+' postag_regexp='yes'/>
-      </antipattern>  
-<!-- MARCOAGPINTO 2021-05-07 (17-MAR-2021+) *END* -->
 
 <!-- MARCOAGPINTO 2022-05-07 (1-JAN-2022+) *START* -->
 <!--
@@ -1439,12 +1333,53 @@ Sujeito nojento, devia levar uns tapas.
       </antipattern>
 <!-- MARCOAGPINTO 2022-05-08 (1-JAN-2022+) *END* -->
 
+<!-- MARCOAGPINTO 2022-06-23 (Checked/Enhanced) (5-JUN-2022+) *START* -->
+      <antipattern>
+	      <token postag='V.+' postag_regexp='yes'/>
+		  <token postag='SPS00|CC|DA.M.+|SPS00:DA.M.+|CS' postag_regexp='yes'/>
+	      <token postag='D[ADI].+|SPS00:D[ADI].+|NC.+|AQ.+' postag_regexp='yes'>
+            <exception regexp='yes'>divers[ao]s</exception>
+		  </token>
+	      <token postag='NC.+|AQ.+|NP.+' postag_regexp='yes'/>
+		  <example>O sexo sem procriação já foi considerado por muitos prostituição.</example>
+		  <example>O sexo sem procriação já foi considerado por médicas prostituição.</example>
+		  <example>Índices são apenas uma média baseada em volume.</example>
+		  <example>O senhor Hirose ensina aos alunos gramática inglesa.</example>
+		  <example>Eles forneceram aos soldados água e comida em quantidade suficiente.</example>
+      </antipattern>
+<!-- MARCOAGPINTO 2022-06-23 (Checked/Enhanced) (5-JUN-2022+) *END* -->
 
-<!--		<token/>
-		<token regexp='yes'>várias?</token>
-		<token postag='AQ0[CF].+|NC[CF].+' postag_regexp='yes'/>
-      </antipattern>	  -->
-<!-- MARCOAGPINTO 2021-08-17 (25-JUN-2021+) *END* -->
+<!-- MARCOAGPINTO 2022-06-24 (Checked/Enhanced) (5-JUN-2022+) *START* -->
+      <antipattern>
+		<token postag='NP.+|NC.+|AQ0.+|[DP][ADIP].F.+|SPS00:[DP][ADIP].F.+|SPS00|CS|CC|V.+|RG' postag_regexp='yes'>
+			<exception postag_regexp='yes' postag='VMP00.M'/>
+		</token>
+		<token postag='Z0[CF].+' postag_regexp='yes'/>
+		<token postag='Z0[CF].+|AQ.[CF].+|NC[CF].+|V.+|CS|CC|SPS00' postag_regexp='yes'>
+			<exception postag_regexp='yes' postag='VMP00.M'/>
+		</token>
+		<example>A Ana anulou os talões duas ou três vezes.</example>
+		<example>O ônibus espacial Challenger levava em seus tanques duas mil toneladas de hidrogênio líquido.</example>
+		<example>Nós duas estamos na mesma aula.</example>
+		<example>Foram observadas pelos astrônomos sessenta e duas luas na órbita de Saturno.</example>
+		<example>Esta é uma variante cem por cento ganhadora.</example>
+		<example>Ele estuda os livros três horas por dia.</example>
+      </antipattern>
+<!-- MARCOAGPINTO 2022-06-24 (Checked/Enhanced) (5-JUN-2022+) *END* -->
+
+<!-- MARCOAGPINTO 2022-06-25 (Checked/Enhanced) (5-JUN-2022+) *START* -->
+      <antipattern>
+		  <token postag='NC[CM].+|AQ.[CM].+|V.+|[DP][ADIP].[CM].+|SPS00:[DP][ADIP].[CM].+|SPS00|CC|CS|RG' postag_regexp='yes'/>
+		  <token postag='NC[CM].+|AQ.[CM].+' postag_regexp='yes'/>
+		  <token postag='NC[CM].+|AQ.[CM].+' postag_regexp='yes'/>
+		  <example>A soma não dá valores ordenados sequenciais crescentes.</example>
+		  <example>...sde a menina de dois anos estuprada e morta a golpes de enxada no interior do Ceará à senhora de 76 anos estrangulada pelo companheiro no Rio de Janeiro.</example>
+		  <example>Depois da morte do marido, ela criou os seus dois filhos sozinha.</example>
+		  <example>Como de costume, ela chegou quinze minutos atrasada.</example>
+		  <example>Tom não sabia quantos anos Maria tinha.</example>
+      </antipattern>
+<!-- MARCOAGPINTO 2022-06-25 (Checked/Enhanced) (5-JUN-2022+) *END* -->
+
       <antipattern>
         <token postag="Z.*" postag_regexp="yes"/>
         <token regexp="yes" inflected="yes">&expressoes_de_tempo;</token>
@@ -1488,10 +1423,6 @@ Sujeito nojento, devia levar uns tapas.
 	  <example type='correct'>Eu vi-os <marker>juntos várias</marker> vezes e em diversos lugares.</example>
 <!--	  <example type='correct'>O Marco comeu <marker>duas sanduíches</marker> de queijo.</example> -->
 
-	  <example type='correct'>A Ana anulou os <marker>talões duas</marker> ou três vezes.</example>
-	  <example>Ele acabou casando com uma mulher italiana dez anos mais nova.</example>
-	  <example>Ela deve ser uns cinco anos mais velha que ele.</example>
-
 	  <example>Em outra publicação sua no mesmo ano, Einstein pôs em dúvida vários princípios do eletromagnetismo clássico.</example>
 	  <example>Como incentivo a este tipo de música, a Câmara Municipal de Braga criou no estádio 1.º de Maio várias salas de ensaio.</example>
 	  <example>Série 9xx Cada série foca um determinado mercado, possuindo os aparelhos várias semelhanças entre si.</example>
@@ -1521,7 +1452,7 @@ Sujeito nojento, devia levar uns tapas.
 		  <token postag='VMIP3S0' postag_regexp='no'/>
 		  <token postag='PP1CP000' postag_regexp='no'/>
 		  <token postag='VMP00SF' postag_regexp='no'/>
-      </antipattern>	
+      </antipattern>
 <!-- MARCOAGPINTO 2020-05-16 *END* -->
       <pattern>
           <token negate='yes' regexp='yes'>de|&hifen;</token>
@@ -1683,7 +1614,7 @@ Sujeito nojento, devia levar uns tapas.
 	      <token postag='NC[CM]S000' postag_regexp='yes'/>
 	      <token postag='NC[CF]P000' postag_regexp='yes'/>
 		  <token postag='NC[CF]P000|AQ0[CF]P0' postag_regexp='yes'/>
-      </antipattern>	  
+      </antipattern>
 <!-- MARCOAGPINTO 2020-07-21 (2-JUL-2020+) *END* -->
 <!-- MARCOAGPINTO 2020-08-26 (2-JUL-2020+) *START* -->
 <!-- "Apenas testemunhos sem fim recebidos de todo o mundo." -->
@@ -1757,7 +1688,7 @@ Sujeito nojento, devia levar uns tapas.
 		  <token postag='AQ0[CFM]S0|NC[CFM]S000' postag_regexp='yes'/>
 		  <token postag='NC[CFM]S000' postag_regexp='yes'/>
 		  <token postag='AQ0[CFM]P0|NC[CFM]P000' postag_regexp='yes'/>
-      </antipattern>	  
+      </antipattern>
 <!-- MARCOAGPINTO 2020-10-29 + 2020-10-30 (21-OCT-2020+) *END* -->
 <!-- MARCOAGPINTO 2020-11-01 (21-OCT-2020+) *START* -->
 <!-- "Penso que esta é uma foto mistério das mais lixadas." -->
@@ -1789,7 +1720,7 @@ O Isaac apanhou um escalda rabos tão grande.
           <token regexp='yes'>a?o|pelo|do|um|esse|aquele|àquele|tal|como|no|daquele|e</token>
 		  <token postag='NC[CF]S.+|AQ0[CF]S.+' postag_regexp='yes'/>
 		  <token postag='NC.P.+|AQ0.P.+' postag_regexp='yes'/>
-      </antipattern> 
+      </antipattern>
 <!-- MARCOAGPINTO 2021-01-21 (1-JAN-2021+) *END* -->
 <!-- MARCOAGPINTO 2021-01-21 (1-JAN-2021+) *START* -->
 <!--
@@ -1797,7 +1728,7 @@ Ele confundiu o rapaz com um borrego, seu tira moncos.
 Ele confundiu o rapaz com um borrego, sua tira moncos.
 Ele confundiu o rapaz com um borrego, teu tira moncos.
 -->
-      <antipattern>		  
+      <antipattern>
           <token min="0" max="1" regexp='yes'>[,]</token>
 		  <token postag='DP.+' postag_regexp='yes'/>
 		  <token postag='NC[CF]S.+|AQ0[CF]S.+' postag_regexp='yes'/>
@@ -1822,7 +1753,7 @@ A própria Jane escreveu a carta.
 		<token regexp='yes'>[.,!?;():]|à|as?|das?|destas?|pelas?|em|nas?</token>
 		<token postag='NCF.+|AQ0F.+' postag_regexp='yes'/>
 		<token postag='NP.+' postag_regexp='yes'/>
-      </antipattern>	  
+      </antipattern>
       <antipattern>
 		<token postag='DP.M.+|DI.M.+|DD.M.+|AQ0C.+' postag_regexp='yes'/>
 		<token postag='NCM.+|AQ0M.+' postag_regexp='yes'/>
@@ -1832,7 +1763,7 @@ A própria Jane escreveu a carta.
 		<token regexp='yes'>[.,!?;():]|os?|dos?|destes?|pelos?|em|nos?</token>
 		<token postag='NCM.+|AQ0M.+' postag_regexp='yes'/>
 		<token postag='NP.+' postag_regexp='yes'/>
-      </antipattern>	  
+      </antipattern>
 <!-- MARCOAGPINTO 2021-04-15 (17-MAR-2021+) *END* -->
 <!-- MARCOAGPINTO 2021-08-17 (25-JUN-2021+) *START* -->
 <!--
@@ -1996,13 +1927,13 @@ O homem é uma pobre criatura comparado com a mulher.
           <token postag='SPS00.*' postag_regexp='yes'/>
           <token>1</token>
 		  <token postag='NCMS000' postag_regexp='no'/>
-      </antipattern>	  
+      </antipattern>
       <antipattern>
           <token postag='SPS00.*' postag_regexp='yes'/>
           <token postag='Z0CN0' postag_regexp='no'>
 		  <exception>1</exception></token>
 		  <token postag='NCMP000' postag_regexp='no'/>
-      </antipattern>	  
+      </antipattern>
 <!-- MARCOAGPINTO 2020-02-09 *END* -->
 <!-- MARCOAGPINTO 2021-05-11 (17-MAR-2021+) *START* -->
 <!--
@@ -2060,7 +1991,7 @@ O atacante Gabriel Jesus, titular da equipe, foi decisivo na ate então inédita
       <example correction='Alguma tesoireira'><marker>Alguma tesoireiro</marker> está no pasto.</example>
       <example>Leonardo da Vinci e Rafael mostraram grande interesse sobre a estru…</example>
       <example>Bacalhau à lagareiro</example>
-	  
+
 	  <example type='correct'>Esta foi <marker>à Saramago</marker>!</example>
 	  <example>Tom perguntou à Mary onde John morava.</example>
 	  <example>O Tom fez à Mary muitas perguntas que ela não pôde responder.</example>
@@ -2162,7 +2093,7 @@ O atacante Gabriel Jesus, titular da equipe, foi decisivo na ate então inédita
 		  <token postag='VMP00PM|AQ0MP0' postag_regexp='yes'/>
 		  <token postag='AQ0[CM]P0' postag_regexp='yes'/>
 	  </antipattern>
-<!-- MARCOAGPINTO 2020-07-19 (2-JUL-2020+) *END* --> 
+<!-- MARCOAGPINTO 2020-07-19 (2-JUL-2020+) *END* -->
 <!-- MARCOAGPINTO 2021-01-13 (1-JAN-2021+) *START* -->
 <!--
 Dez funções da inteligência multifocal.
@@ -2190,7 +2121,7 @@ A própria Jane escreveu a carta.
 		<token regexp='yes'>[.,!?;():]|à|as?|das?|destas?|pelas?|em|nas?</token>
 		<token postag='NCF.+|AQ0F.+' postag_regexp='yes'/>
 		<token postag='NP.+' postag_regexp='yes'/>
-      </antipattern>	  
+      </antipattern>
       <antipattern>
 		<token postag='DP.M.+|DI.M.+|DD.M.+|AQ0C.+' postag_regexp='yes'/>
 		<token postag='NCM.+|AQ0M.+' postag_regexp='yes'/>
@@ -2342,10 +2273,10 @@ Basta colar uma lista de e-mails abaixo para enviar convites a todas elas.
     </rule>
 <!-- MARCOAGPINTO 2020-05-20 *END* -->
   </rulegroup>
-  
-  
-    <!-- 	CUJA(S) FILHA(S) CUJO(S) FILHOS(S) -->	
-	<!--      Created by Ricardo Joseh Lima and improved by Marco A.G.Pinto, Portuguese rule 2021-11-01/02 (25-JUN-2021+)      -->	
+
+
+    <!-- 	CUJA(S) FILHA(S) CUJO(S) FILHOS(S) -->
+	<!--      Created by Ricardo Joseh Lima and improved by Marco A.G.Pinto, Portuguese rule 2021-11-01/02 (25-JUN-2021+)      -->
     <rulegroup id='CUJA_CUJO_MASCULINO_FEMININO' name="Cuj(ao)(s) + Nome: Concordância de género" type="style">
 <!--
 A mãe cuja filho fez anos. → A mãe cujo filho fez anos.
@@ -2439,7 +2370,7 @@ Atribui-se a Newton as leis da mecânica clássica.
 A Portugal coube o setor oriental do continente.
 A César o que é de César.
 -->
-      <antipattern>		  
+      <antipattern>
 		  <token regexp="no">a</token>
 		  <token postag='NP.+|NCF.+|AQ0F.+' postag_regexp='yes'/>
 		  <token postag='V.+|PP.+|CC|I|RG|SPS.+|_PUNCT|DA0MS0' postag_regexp='yes'/>
@@ -2466,7 +2397,7 @@ A César o que é de César.
 	  <example type='correct'><marker>A Portugal coube</marker> o setor oriental do continente.</example>
 	  <example type='correct'><marker>A César o</marker> que é de César.</example>
 	  <example type='correct'>Atribuem-se <marker>a Newton as</marker> leis da mecânica clássica.</example>
-	  
+
 	  <example type='correct'>O termo refere-se a hardware ou <marker>a software</marker>.</example>
 	  <example>Ele refere-se a software bom.</example>
 	  <example>Atribui-se a Newton as leis da mecânica clássica.</example>
@@ -2610,7 +2541,7 @@ BEFORE:4586
 
 	  <example>O grande mal nos conflitos deve-se <marker>a inocentes</marker> serem lesados.</example>
 	  <example>Existem prejuízos graves e dispendiosos a instalações ou vantagens para os criminosos.</example>
-	  
+
 	  <example type='correct'>A campanha de vendas levou milhares deles <marker>a perdas</marker> de mais de 95%.</example>
 	  <example>A campanha de vendas levou eles a perdas de mais de 95%.</example>
 	  <example>A campanha de vendas levou estes a perdas de mais de 95%.</example>
@@ -2814,7 +2745,7 @@ O último período da Pré-Historia demarca o conjunto de transformações que d
 	  <example>Para isso existe a figura do conservador-restaurador, profissional responsável pela sobrevivência de documentos.</example>
 	  <example>Um exame detalhado mostra que a padronagem de seu pelo apresenta diferenças significativas em relação à do leopardo.</example>
 	  <example>Para isso existe o sistema de Telemetria, Rastreamento e Controle, que funciona como o cérebro do satélite.</example>
-	  
+
 	  <example>Espero revê-lo brevemente!</example>
 	  <example>Quero revê-lo.</example>
 	  <example>Quero revê-la.</example>
@@ -2857,7 +2788,7 @@ O último período da Pré-Historia demarca o conjunto de transformações que d
       <short>Construção dúbia</short>
       <example type='incorrect'>Ela estava <marker>ao ponto de</marker> perder o controlo emocional.</example>
     </rule>
-	
+
 	<!-- QUE EM NC SER VERBO NUM ser verbo em nc num -->
     <rule id='QUE_EM_NC_SER_VERBO_NUM' name="Que + Em + Nome + Ser + Verbo + Num → Verbo + em + Nome + num" type='style'>
     <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-08-22 (25-JUN-2021+)      -->
@@ -2879,7 +2810,7 @@ O Alexandre que em 2016 foi morto num ataque aéreo. → O Alexandre morto em 20
 	  <suggestion>\6 \3 \4 \7</suggestion>
       <example correction="morto em 2016 num">O Alexandre <marker>que em 2016 foi morto num</marker> ataque aéreo.</example>
     </rule>
-	
+
 	<!-- VIR A VERBO verbo -->
     <rule id='VIR_A_VERBO_VERBO' name="Vir + a + Verbo → Verbo" type='style'>
     <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-08-22 (25-JUN-2021+)      -->
@@ -2899,7 +2830,7 @@ O nosso estudo terá grande aplicabilidade caso esta ameaça se venha a concreti
       <example>Eu vi a professora Gómez ontem.</example>
       <example>Quando eles vieram a receita quiseram fazer logo.</example>
     </rule>
-	
+
 	<!-- CHAMAR/DENOMINAR DE chamar/denominar -->
     <rulegroup id='CHAMAR_DENOMINAR_DE' name="Chamar/Denominar de → Chamar/Denominar" type="style">
     <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-07-07 + 2021-07-08 + 2021-08-20 + 2021-08-21 (25-JUN-2021+)      -->
@@ -2958,7 +2889,7 @@ Queremos os chamares de Marco.
 	  <example>Chamaram-no de volta, em meio à sua viagem.</example>
 	  </rule>	  	  
     </rulegroup>
-	
+
 	<!-- HAVIA_PRESENTE_CONJUNTIVO_IMPESSOAL  Havia Pretérito Imp Con -->
     <rule id='HAVIA_PRESENTE_CONJUNTIVO_IMPESSOAL' name="Havia + Presente Conj/Imp → Havia + Pretérito Imp Con">
     <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-08-01 (25-JUN-2021+)      -->
@@ -2972,7 +2903,7 @@ Havia o receio que causem problemas. → Havia o receio que causassem problemas.
 		<token postag='NC.+|AQ.+' postag_regexp='yes'/>
 		<token>que</token>		
 		<marker>
-			<token postag='VMSP.+' postag_regexp='yes'/>			
+			<token postag='VMSP.+' postag_regexp='yes'/>
 		</marker>
 		<token postag='NC.+|AQ.+' postag_regexp='yes'/>
       </pattern>
@@ -3097,7 +3028,7 @@ Assim aparece no ecrã um número. → Assim aparece um número no ecrã.
 		<example>Dormimos numa cama muito grande.</example>
 		<example>Eu não gosto de viajar num grupo muito grande.</example>		
       </rule>
-	  
+
 	<!-- Token 2/3 -->
 	  <rule>
 	<!--
@@ -3126,7 +3057,7 @@ Assim aparece no ecrã um número grande. → Assim aparece um número grande no
 		<example correction="um número grande no ecrã">Assim aparece <marker>no ecrã um número grande</marker>.</example>
 		<example>Os pastores avistaram uma estrela luminosa no oriente.</example>
       </rule>
-	  
+
 	<!-- Token 3/3 -->
 	  <rule>
 	<!--
@@ -3155,7 +3086,7 @@ Assim aparece no ecrã um número muito grande. → Assim aparece um número mui
 		<suggestion>\4 \5 \6 \7 \2 \3</suggestion>
 		<example correction="um número muito grande no ecrã">Assim aparece <marker>no ecrã um número muito grande</marker>.</example>
       </rule>
-	  
+
 	</rulegroup>
 
 	<!-- PORQUE É por ser -->
@@ -3209,7 +3140,7 @@ Apresenta uma tela sensível ao toque que é o dispositivo de entrada principal.
 				<exception postag_regexp='yes' postag='V.+'/>
 			</token>
 			<token postag='CC|SPS.+' postag_regexp='yes'/>
-		</pattern>		
+		</pattern>
 		<message>Em certos contextos, esta perífrase pode ser simplificada.</message>
 		<suggestion>sendo</suggestion>
 		<example correction="sendo">Temos locais com árvores <marker>que são</marker> o ideal para o nosso modelo.</example>	
@@ -3230,7 +3161,7 @@ Ela não é a mesma que foi dez anos atrás.
 				<token regexp='yes'>foram|foi|são|é</token>
 			</marker>
 			<token postag='CC|DA.+|V.+|NC.+|AQ0.+' postag_regexp='yes'/>
-		</pattern>		
+		</pattern>
 		<message>Em certos contextos, esta perífrase pode ser simplificada.</message>
 		<suggestion>sendo</suggestion>
 		<example correction="sendo">Esta <marker>que foi</marker> a maior crítica ao trabalho de Ana.</example>
@@ -3249,8 +3180,8 @@ Suas obras contêm o primeiro estudo formal conhecido da lógica, que foi incorp
 				<token>que</token>
 				<token regexp='yes'>foram|foi|são|é</token>
 				<token postag='CC|DA.+|V.+|NC.+|AQ0.+' postag_regexp='yes'/>
-			</marker>			
-		</pattern>		
+			</marker>
+		</pattern>
 		<message>Em certos contextos, esta perífrase pode ser simplificada.</message>
 		<suggestion>\4</suggestion>
 		<example correction="elevado">Temos um número constante maior que zero e diferente de um,<marker>que é elevado</marker> a três.</example>
@@ -3425,22 +3356,11 @@ Ele tomou essa decisão visto só ser possível assim. → Ele tomou essa decis�
       <example correction="por">Ele tomou essa decisão <marker>visto</marker> só ser possível assim.</example>
     </rule>
 
+
     <!-- Specific gender concordance errors - O > Feminine Noun  -->
     <!-- Created by Tiago F. Santos, Portuguese rule, 2016-10-24 -->
     <rule id='ERRO_DE_CONCORDNCIA_DO_GÉNERO_MASCULINO_O' name="Concordância de género: O + Feminino">
-<!-- MARCOAGPINTO 2021-02-22 (1-JAN-2021+) *START* -->
-<!--
-O que o torna mais perigoso é haver civis inocentes.
-O que o torna perigoso é haver civis inocentes.
--->
-      <antipattern>
-		<token negate_pos="yes" postag='SENT_START' postag_regexp='no'/>
-        <token postag='DA0MS0' postag_regexp='no'/>
-		<token postag='NCFS000' postag_regexp='no'/>
-		<token min="0" max="1" postag='RG' postag_regexp='no'/>
-		<token postag='AQ0MS0' postag_regexp='no'/>
-      </antipattern> 
-<!-- MARCOAGPINTO 2021-02-22 (1-JAN-2021+) *END* -->
+
       <pattern>
         <marker>
           <token>o</token>
@@ -3456,10 +3376,8 @@ O que o torna perigoso é haver civis inocentes.
       <url>https://pt.wikipedia.org/wiki/Artigo_(gram%C3%A1tica)</url>
       <example correction='A cadela'><marker>O cadela</marker> está no pasto.</example>
       <example type='correct'>A cadela está no pasto.</example>
-	  
-	  <example>O que <marker>o torna</marker> mais perigoso é haver civis inocentes.</example>
-	  <example>O que o torna perigoso é haver civis inocentes.</example>
     </rule>
+
 
   <rulegroup id='GENERAL_NUMBER_AGREEMENT_ERRORS' name="Concordância de Número: Geral">
     <!--            General number concordance errors            -->
@@ -3573,7 +3491,7 @@ Para isso sou todo ouvidos.
       <antipattern>
           <token postag='AQ0MP0|DI0MP0' postag_regexp='yes'/>
           <token postag='NCMP000' postag_regexp='no'/>
-          <token postag='AQ0MS0' postag_regexp='no'/>		  
+          <token postag='AQ0MS0' postag_regexp='no'/>
       </antipattern>
 <!-- MARCOAGPINTO 2020-01-14 *END* -->
 <!-- MARCOAGPINTO 2020-05-23 *START* -->
@@ -3692,7 +3610,7 @@ Para isso sou todo ouvidos.
 		<token postag='NC[CFM]S000|AQ0[CFM]S0' postag_regexp='yes'/>
 		<token regexp='yes'>[.,(]</token>
 		<token negate_pos="yes" postag='SPS.+|V.+' postag_regexp='yes'/>
-      </antipattern>	  	  
+      </antipattern>
 <!-- MARCOAGPINTO 2020-11-18 (21-OCT-2020+) *END* -->
 <!-- MARCOAGPINTO 2020-12-03 (21-OCT-2020+) *START* -->
 <!-- "Foram substituídos em posteriores textos ecológicos um texto posterior." -->
@@ -11139,6 +11057,7 @@ Vamos minorar a dor.
       <example>Mande lembranças minhas para seus pais.</example>
       <example>A guerra trouxe a ruína para o país.</example>
       <example>Eu o acordo às 6 horas toda manhã.</example>
+      <example>Quem o ensina francês?</example>
     </rule>
 
   <rulegroup id='FRAGMENT_TWO_ARTICLES' name='Fragmento: dois artigos seguidos' default='on'>
@@ -12392,11 +12311,13 @@ Por isso é denominada como sendo a resiliência.
 	</rule>
 	
     <!-- DIFERENTES diferem	-->
-	<!--      Created by Marco A.G.Pinto, Portuguese rule 2020-10-11 (2-JUL-2020+)     -->
+	<!--      Created by Marco A.G.Pinto, Portuguese rule 2020-10-11 + 2022-06-23 (2-JUL-2020+)     -->
     <rule id='DIFERENTES' name="Diferir">
       <pattern>
 		  <marker>
-		    <token inflected='yes'>ser</token>
+		    <token inflected='yes'>ser
+				<exception postag_regexp='yes' postag='VMIP1.+'/>
+			</token>
 			<token regexp="yes">diferentes?</token>
 		  </marker>
 		  <and>
@@ -35259,7 +35180,7 @@ TODO Write better examples
       <pattern>
           <token>
             <exception regexp='yes'>&art_detecao_paronimos;</exception>
-            <exception postag='(?:A|D|SP|V).+|_PUNCT|SENT_START' postag_regexp='yes'/></token>
+            <exception postag='(?:A|D|SP).+|_PUNCT|SENT_START' postag_regexp='yes'/></token>
           <token regexp='yes'>profetisas?</token>
       </pattern>
       <message>Esta palavra refere-se à pessoa que faz afirmações sobre o futuro. Se pretende referir-se à ação de divulgar profecias, deve utilizar a forma com 'x'.</message>
@@ -42256,7 +42177,7 @@ O artesanato bracarense há muito tempo que ultrapassou as fronteiras do país. 
 	</rule>
 
     <rulegroup id='QUE_ADJ_NC_VERBO' name="Que + Adj/NC + Verbo" type="style">
-    <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-06-25 + 2022-04-26 (25-JUN-2021+)      -->
+    <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-06-25 + 2022-04-26 + 2022-06-23 (25-JUN-2021+)      -->
 	<!--
 Isto serve para vermos o resultado que traria. → Isto serve para vermos que resultado traria.
 	-->
@@ -42313,14 +42234,19 @@ Isto serve para vermos o resultado que isso traria. → Isto serve para vermos q
 			<token postag='DA.+' postag_regexp='yes'/>
 			<token postag='AQ0.+|NC.+' postag_regexp='yes'/>
 			<token>que</token>
-			<token negate_pos="yes" postag='SPS00.PP.+' postag_regexp='yes'/> <!-- It used to be <token/> now it is a negate to remove false positives, but zero hits in 600 000 sentences - 2022-04-26 -->
+			<token negate_pos="yes" postag='PP.+|SPS00:PP.+' postag_regexp='yes'/> <!-- It used to be <token/> now it is a negate to remove false positives, but zero hits in 600 000 sentences - 2022-04-26 --> <!-- Added some new POS code from Jaume's update of the morphological dictionary - 2022-06-23 -->
 			<token postag='V.+|AQ0.+|NC.+' postag_regexp='yes'/>
 		  </marker>
 		  <token postag='SPS.+|_PUNCT' postag_regexp='yes'/>
       </pattern>
       <message>Esta perífrase pode ser melhorada.</message>
 	  <suggestion>\5 \4 \6 \7</suggestion>
-      <example correction="que resultado isso traria">Isto serve para vermos <marker>o resultado que isso traria</marker>.</example>	  
+      <example correction="que resultado isso traria">Isto serve para vermos <marker>o resultado que isso traria</marker>.</example>	 
+	  <example>...o convenceu-se que devia fazer toda a campanha como se perfilhasse ideais de esquerda para mendigar os votos que lhe faltam.</example>
+	  <example>Tom ainda não tem bastante dinheiro para comprar o carro que ele quer.</example>
+	  <example>Eu acho que tenho quase o dinheiro suficiente para comprar o computador que eu quero.</example>
+	  <example>Ele disse para entregar o documento que me deram.</example>
+<!--	  <example>Você ainda não sabe usar o acusativo em Esperanto? Você deve se esforçar mais para assimilar as regras que o governam.</example> -->
     </rule>	
 	</rulegroup>
 	
@@ -44814,6 +44740,18 @@ O objetivo deste trabalho foi revisar a literatura referente ao tema.
       </antipattern> 	  
 <!-- MARCOAGPINTO 2021-03-04 + 2021-06-10 (1-JAN-2021+) *END* -->
 
+<!-- MARCOAGPINTO 2022-06-23 QUICK FIX (1-JAN-2021+) *START* -->
+<!--
+IT SEEMS I COULD ONLY TEST IT WITH THE VERB "TER", IT ONLY REMOVED ONE HIT IN 600 000 SENTENCES.
+(dois empregos, tentei ter vida normal);
+-->
+      <antipattern>
+		<token postag='VMIS1[SP]0' postag_regexp='yes'/>
+		<token regexp='no' inflected="yes">ter</token>
+		<token postag='NC.+|AQ.+|NP.+' postag_regexp='yes'/>
+      </antipattern>
+<!-- MARCOAGPINTO 2022-06-23 QUICK FIX (1-JAN-2021+) *END* -->
+
       <pattern>
         <and>
           <token regexp='yes' inflected="yes">procurar|buscar|pretender|tentar|ir</token>
@@ -44821,7 +44759,9 @@ O objetivo deste trabalho foi revisar a literatura referente ao tema.
              <exception postag_regexp='no' postag='VMIF1S0'/>
 		  </token>
         </and>
-        <token postag='VMN0000' postag_regexp='no'/>
+        <token postag='VMN0000' postag_regexp='no'>
+			<exception postag_regexp='no' postag='VMIF1S0'/>
+		</token>
       </pattern>
       <filter class="org.languagetool.rules.pt.AdvancedSynthesizerFilter" args="lemmaFrom:2 lemmaSelect:V(.)N.* postagFrom:1 postagSelect:V...(...*)  postagReplace:V\a1IS\b1"/>
       <message>Se for uma tese de doutoramento, verifique se o 'tom' de redação é o apropriado.</message>

@@ -3531,6 +3531,19 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </rule>
             <!--exclamativos-->
             <rule>
+                <pattern>
+                    <token postag="SENT_START|_PUNCT.*" postag_regexp="yes"/>
+                    <marker>
+                        <token>que</token>
+                    </marker>
+                    <token postag="N.*" postag_regexp="yes"/>
+                    <token>tan</token>
+                </pattern>
+                <message>Si es una exclamación, se escribe con tilde.</message>
+                <suggestion>qué</suggestion>
+                <example correction="Qué">—¡<marker>Que</marker> pregunta tan absurda!</example>
+            </rule>
+            <rule>
                 <antipattern>
                     <token>a</token>
                     <token>que</token>
@@ -3577,13 +3590,14 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                         <token>que</token>
                     </marker>
                     <token postag="AQ.*|NC.*" postag_regexp="yes"/>
-                    <token inflected="yes">ser</token>
+                    <token inflected="yes" regexp="yes">ser|tener</token>
                 </pattern>
                 <message>Si es una exclamación, se escribe con tilde.</message>
                 <!--<url>https://blog.lengua-e.com/2011/que-con-tilde-y-que-sin-tilde/</url>-->
                 <suggestion>qué</suggestion>
                 <example correction="Qué">¡<marker>Que</marker> estúpido es!</example>
                 <example correction="Qué">¡<marker>Que</marker> bonito es!</example>
+                <example correction="Qué">¡<marker>Que</marker> suerte tienes!</example>
             </rule>
             <rule>
                 <pattern>
@@ -3723,6 +3737,12 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example correction="qué">Quiero saber a cambio de <marker>que</marker>.</example>
             </rule>
             <rule>
+                <antipattern>
+                    <token inflected="yes">tener</token>
+                    <token regexp="yes">&pronombre_personal_sujeto;</token>
+                    <token>que</token>
+                    <example>¿Y bien, Antonio, qué tiene usted que decir?</example>
+                </antipattern>
                 <pattern>
                     <token regexp="yes">&pronombre_personal_sujeto;</token>
                     <marker>
@@ -3735,6 +3755,34 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <suggestion>qué</suggestion>
                 <example correction="qué">Yo <marker>que</marker> sé, no me gusta nada.</example>
                 <example correction="qué">¿I tú <marker>que</marker> cuentas?</example>
+            </rule>
+            <rule>
+                <antipattern>
+                    <token regexp="yes">el|la|lo|los|las</token>
+                    <token>que</token>
+                </antipattern>
+                <antipattern>
+                    <token inflected="yes" regexp="yes">haber|tener</token>
+                    <token>que</token>
+                    <token postag="V.N.*" postag_regexp="yes"/>
+                </antipattern>
+                <pattern>
+                    <marker>
+                        <token>que</token>
+                    </marker>
+                    <token postag="NC.*" postag_regexp="yes"><exception postag="RG.*" postag_regexp="yes"/></token>
+                    <token postag="V.N.*" postag_regexp="yes"/>
+                    <token regexp="yes">\p{P}</token>
+                </pattern>
+                <message>Como adjetivo interrogativo, se escribe con tilde.</message>
+                <suggestion>qué</suggestion>
+                <example correction="qué">Me preguntaba <marker>que</marker> medidas tomar.</example>
+                <example correction="qué">Debes ser prudente al elegir <marker>que</marker> camino seguir.</example>
+                <example>Tengo mi propia filosofía de vida, con muchos valores que intento potenciar (porque todavía me queda recorrido).</example>
+                <example>¿Por qué no logro acordarme del nombre de la chica que intento olvidar?</example>
+                <example>Más vale callar que mal hablar.</example>
+                <example>Nunca escucha lo que intento decirle.</example>
+                <example>Unos momentos que hay que saber capturar.</example>
             </rule>
         </rulegroup>
         <rulegroup id="QUE_SIN_TILDE" name="qué -> que">
@@ -10144,6 +10192,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token skip="4">n</token>
                     <token>m</token>
                 </antipattern>
+                <antipattern>
+                    <token spacebefore="no">'</token>
+                    <token spacebefore="no">n</token>
+                </antipattern>
                 <pattern>
                     <marker>
                         <token>n<exception inflected="yes" regexp="yes">rock.*</exception></token>
@@ -10212,7 +10264,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token regexp="yes">\.|’|'</token>
                 </antipattern>
                 <antipattern>
-                    <token regexp="yes">.</token>
+                    <token regexp="yes">.|letras?</token>
                     <token>l</token>
                 </antipattern>
                 <antipattern>
@@ -10221,6 +10273,14 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 </antipattern>
                 <antipattern>
                     <token regexp="yes">en|la</token>
+                    <token case_sensitive="yes">L</token>
+                </antipattern>
+                <antipattern>
+                    <token regexp="yes">\d[\d\.,]*</token>
+                    <token>l</token>
+                </antipattern>
+                <antipattern>
+                    <token regexp="yes">tallas?</token>
                     <token case_sensitive="yes">L</token>
                 </antipattern>
                 <pattern>
@@ -10232,6 +10292,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <suggestion>la</suggestion>
                 <example correction="el|la">Pero <marker>l</marker> coche no está preparado.</example>
                 <example>Cuatro Caballetes de chapa en L de 1,75x1,50 m.</example>
+                <example>MEGANE BIC 1.6 L PACK PLUS </example>
             </rule>
         </rulegroup>
         <rulegroup id="SUGERENCIAS_ANTE" name="error de ortografía: -ante">
@@ -13644,7 +13705,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </rule>
             <rule>
                 <pattern>
-                    <token regexp="yes" inflected="yes">saber|preguntar|pedir|explicar|contar|decir|comprender|entender|desconocer|ignorar</token>
+                    <token regexp="yes" inflected="yes">saber|preguntar|pedir|explicar|contar|decir|comprender|entender|desconocer|ignorar|imaginar</token>
                     <token min="0" max="3" postag="RG|LOC_ADV" postag_regexp="yes"/>
                     <marker>
                         <token>por</token>
@@ -13728,6 +13789,20 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example correction="por qué">No tienes <marker>por que</marker> preocuparte.</example>
             </rule>
             <rule>
+                <pattern>
+                    <token>no</token>
+                    <token inflected="yes">haber</token>
+                    <marker>
+                        <token>por</token>
+                        <token>que</token>
+                    </marker>
+                    <token postag="V.N.*" postag_regexp="yes"/>
+                </pattern>
+                <message>La expresión correcta es "no haber por qué".</message>
+                <suggestion>por qué</suggestion>
+                <example correction="por qué">No hay <marker>por que</marker> preocuparse.</example>
+            </rule>
+            <rule>
                 <antipattern>
                     <token regexp="yes">el|un|algún|del|al</token>
                     <token>porqué</token>
@@ -13741,6 +13816,40 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example correction="por qué|porque">No puedo comprender <marker>porqué</marker> no vino.</example>
                 <example>Quiero saber el porqué.</example>
                 <example>Aún no se sabe la razón del porqué no va.</example>
+            </rule>
+            <rule default="temp_off">
+                <pattern>
+                    <token regexp="yes" inflected="yes">de|ocurrir|entender|pensar</token>
+                    <marker>
+                        <token>por</token>
+                        <token>que</token>
+                    </marker>
+                </pattern>
+                <message>¿Quería decir <suggestion>por qué</suggestion> ('por qué motivo')?</message>
+                <example correction="por qué">No tengo la menor idea de <marker>por que</marker> ha venido.</example>
+                <example correction="por qué">No se me ocurre <marker>por que</marker> razón.</example>
+            </rule>
+            <rule>
+                <antipattern>
+                    <token regexp="yes" inflected="yes">ansioso|deseoso|optar|preocupación|preocupar|rezar</token>
+                    <token>por</token>
+                    <token skip="5">que</token>
+                    <token postag="V.S.*" postag_regexp="yes"/>
+                </antipattern>
+                <antipattern>
+                    <token regexp="yes" inflected="yes">motivo|razón|causa</token>
+                    <token>por</token>
+                    <token>que</token>
+                </antipattern>
+                <pattern>
+                    <marker>
+                        <token>por</token>
+                        <token skip="-1">que</token>
+                    </marker>
+                    <token>?</token>
+                </pattern>
+                <message>¿Quería decir <suggestion>por qué</suggestion> ('por qué motivo') o <suggestion>porque</suggestion> ('por razón de que')?</message>
+                <example correction="por qué|porque">¿Recuerda ya <marker>por que</marker> estamos aquí?</example>
             </rule>
             <rule>
                 <antipattern>
@@ -27216,6 +27325,16 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         </rule>
     </category>
     <category name="repeticiones" id="REPETITIONS" type="duplication">
+        <rule id="ES_NO_ES" name="*es no es">
+            <pattern raw_pos="yes">
+                <token postag="V.*" postag_regexp="yes"/>
+                <token>no</token>
+                <token><match no="0"/></token>
+            </pattern>
+            <message>Palabra repetida. Posible error.</message>
+            <suggestion>\2 \3</suggestion>
+            <example correction="no es">Esto <marker>es no es</marker> lo mejor.</example>
+        </rule>
         <rule id="QUE_QUE" name="que y que">
             <pattern>
                 <token>que</token>
@@ -27985,9 +28104,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token regexp="yes">31\.(11|0?[469])</token>
                     <example>31.4 Las modificaciones</example>
                 </antipattern>
-                <antipattern>
+                <antipattern case_sensitive="yes">
                     <token regexp="yes">31\.(11|0?[469])</token>
-                    <token regexp="yes">>%|€|\$|¥|MXN|%|millones|&unidades;</token>
+                    <token regexp="yes">%|€|\$|¥|MXN|millones|&unidades;</token>
                     <example>la cantidad de 31.6 millones</example>
                     <example>IMC: 31.6 kg/m²</example>
                     <example>30.4 x 11.4 x 31.4 cm.</example>
@@ -28042,9 +28161,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token regexp="yes">(30|31)\.(0?2)</token>
                     <example>31.02 Proyectos</example>
                 </antipattern>
-                <antipattern>
+                <antipattern case_sensitive="yes">
                     <token regexp="yes">(30|31)\.(0?2)</token>
-                    <token regexp="yes">>%|€|\$|¥|MXN|%|millones|puntos|&unidades;</token>
+                    <token regexp="yes">%|€|\$|¥|MXN|millones|puntos|&unidades;</token>
                     <example>peso: 31.2 kg</example>
                     <example>Ganó con 30.2 puntos.</example>
                 </antipattern>

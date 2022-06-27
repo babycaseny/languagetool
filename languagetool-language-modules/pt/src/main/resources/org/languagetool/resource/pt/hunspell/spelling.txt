@@ -948,6 +948,8 @@ carochos
 carquilha
 carquilhas
 carrosséis
+cartinha
+cartinhas
 carvalho-negral
 carvalhos-negral
 casuístico
@@ -3142,6 +3144,8 @@ laplaciano
 lapouço
 lapouços
 larguinhos
+larila
+larilas
 lastimavelmente
 Launchy
 Laurissilva
@@ -4071,6 +4075,7 @@ pandémica
 pandémicas
 pandémico
 pandémicos
+panilas
 panzer
 papanicolau
 papilar
@@ -11333,3 +11338,6 @@ Black Panther
 Black Sabbath
 Black Mirror
 Jack Black
+PicPay
+PIX
+cashback

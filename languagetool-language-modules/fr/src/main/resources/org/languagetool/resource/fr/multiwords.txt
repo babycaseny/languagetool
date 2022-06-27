@@ -15,9 +15,18 @@ Territorial Division Act; Z e sp
 native digital;Z e sp
 Global offensive;Z e sp
 Call of Duty;Z e sp
+purificateur d'air;N m s
 World of Warcraft; Z e sp
+motion design;N e sp
+gang blood;N e sp
+green zone;N f sp
+login page;N f s
+Royal Air; N f sp
 Grand Theft Auto; Z e sp
 The Elder Scrolls; Z e sp
+Catstair Canyon;Z e sp
+Super League;Z e sp
+Flavio Boltro;Z e sp
 League of Legends;Z e sp
 Far Cry; Z e sp
 Allo Resto;Z e sp
@@ -26,6 +35,12 @@ dirt bikes;N m p
 food truck;N m s
 food trucks;N m p
 Xperia Play; Z e sp
+Renault Trucks;Z e sp
+n'importe où;A
+n'importe comment;A
+n'importe qui;A
+n'importe quoi;A
+n'importe quand;A
 Death Note;Z e sp
 Chrono Crusade;Z e sp
 Black Cat;Z e sp

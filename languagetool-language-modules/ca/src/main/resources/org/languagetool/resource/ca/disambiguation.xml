@@ -762,6 +762,10 @@ Copyright (C) 2012 Jaume Ortolà i Font
         <disambig action="filter" postag="[^V].*"/>
     </rule>
     <rulegroup id="any_en_xifres" name="El + any (en xifres)">
+        <antipattern>
+            <token regexp="yes">\d+</token>
+            <token>%</token>
+        </antipattern>
         <rule>
             <pattern>
                 <token regexp="yes">en|d?els?|anys?|dècada</token>
@@ -1412,8 +1416,8 @@ Copyright (C) 2012 Jaume Ortolà i Font
                 <token><exception postag="NC[FC][SN].*" postag_regexp="yes"/><exception>ma</exception></token>
             </pattern>
             <disambig action="replace">
-                <wd lemma="en va" pos="LOC_ADV"/>
-                <wd lemma="en va" pos="LOC_ADV"/>
+                <wd lemma="de primera" pos="LOC_ADV"/>
+                <wd lemma="de primera" pos="LOC_ADV"/>
             </disambig>
         </rule>
         <rule id="per_fi" name="per fi (locució adverbial)">
@@ -15408,6 +15412,21 @@ Copyright (C) 2012 Jaume Ortolà i Font
                 <token>es</token>
                 <token>disposa</token>
                 <token regexp="yes">en|a</token>
+            </pattern>
+            <disambig action="add">
+                <wd pos="_no_relatiu"/>
+            </disambig>
+        </rule>
+        <rule>
+            <pattern>
+                <marker>
+                    <token postag="SPS00"/>
+                </marker>
+                <token min="0">a</token>
+                <token regexp="yes">l|el</token>
+                <token>que</token>
+                <token inflected="yes" regexp="yes">quedar|restar</token>
+                <token regexp="yes">de|d'</token>
             </pattern>
             <disambig action="add">
                 <wd pos="_no_relatiu"/>

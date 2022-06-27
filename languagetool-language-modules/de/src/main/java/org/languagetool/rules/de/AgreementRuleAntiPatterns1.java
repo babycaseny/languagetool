@@ -36,6 +36,17 @@ class AgreementRuleAntiPatterns1 {
       posRegex("SUB:.*")
     ),
     Arrays.asList(
+      posRegex("PRO.*"),  // "Es gibt viele Stock Screener."
+      posRegex("SUB:.*"),
+      new PatternTokenBuilder().pos("UNKNOWN").csTokenRegex("[A-ZÖÄÜ][a-zöäüß-]+").build()
+    ),
+    Arrays.asList(
+      posRegex("PRO.*"),  // "Es gibt viele verschiedene Stock Screener."
+      posRegex("(ADJ|PA2).*"),
+      posRegex("SUB:.*"),
+      new PatternTokenBuilder().pos("UNKNOWN").csTokenRegex("[A-ZÖÄÜ][a-zöäüß-]+").build()
+    ),
+    Arrays.asList(
       tokenRegex("[(\\[]"),   // "... (ich meine Pfeil, nicht Raute) ..."
       token("ich"),
       token("meine"),
@@ -1166,6 +1177,17 @@ class AgreementRuleAntiPatterns1 {
     Arrays.asList(
       csToken("BMW"),
       token("ConnectedDrive")
+    ),
+    Arrays.asList(
+      // https://www.jungewirtschaft.at/
+      token("die"),
+      csToken("Junge"),
+      csToken("Wirtschaft")
+    ),
+    Arrays.asList(
+      token("der"),
+      csToken("Jungen"),
+      csToken("Wirtschaft")
     ),
     Arrays.asList(
       // "Inwiefern soll denn das romantische Hoffnungen begründen?"

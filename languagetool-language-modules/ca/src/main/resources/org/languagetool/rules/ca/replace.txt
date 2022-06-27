@@ -1248,7 +1248,7 @@ descomposador=descomponedor
 descomposadores=descomponedores
 descomposadors=descomponedors
 desde=des de
-desencontre=desavinença|desacord|manca d'acord|manca de coincidència
+desencontre=desavinença|desacord|manca d'acord|manca de coincidència|discrepància
 desencontres=desavinences|desacords|manca d'acord|manca de coincidència
 deslumbrante|deslumbrant=enlluernador|enlluernadora
 deslumbrantes|deslumbrants=enlluernadors|enlluernadores
@@ -2534,8 +2534,4 @@ curdes=kurdes
 estupent=estupend
 estupents=estupends
 # errors in tagger dictionary; unnecessary after dictionary update
-podcastos=podcasts
-teba=teva
-tebes=teves
-metanàlisi=metaanàlisi
-metanàlisis=metaanàlisis
+

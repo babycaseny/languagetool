@@ -202,6 +202,7 @@ public class AgreementRule extends Rule {
     "Kilogramm",
     "Flippers", // Band, die Flippers
     "Standart", // Caught by speller
+    "Kündigungsscheiben", // Caught by speller
     "Piepen", // Die Piepen
     "Badlands",
     "Visual", // englisch
@@ -223,6 +224,7 @@ public class AgreementRule extends Rule {
     "km",
     "Nr",
     "KSC", // Abk
+    "ANC", // Abk
     "DJK", // Der DJK Schweinfurt
     "RP" // "Die RP (Rheinische Post)"
   ));
@@ -285,9 +287,11 @@ public class AgreementRule extends Rule {
       }
       if (i > 0) {
         String prevToken = tokens[i-1].getToken().toLowerCase();
-        if (StringUtils.equalsAny(tokens[i].getToken(), "eine", "einen")
-            && StringUtils.equalsAny(prevToken, "der", "die", "das", "des", "dieses")) {
+        if (StringUtils.equalsAny(prevToken, "der", "die", "das", "des", "dieses") &&
+            StringUtils.equalsAny(tokens[i].getToken(), "eine", "einen")) {
+          // z.B. "Auf der einen Seite endlose Dünen"
           // TODO: "der eine Polizist" -> nicht ignorieren, sondern "der polizist" checken; "auf der einen Seite"
+          // TODO: "Leute, die eine gewissen Sicherheit brauchen." -> nicht ignorieren
           continue;
         }
       }
@@ -631,6 +635,12 @@ public class AgreementRule extends Rule {
     RuleMatch ruleMatch = null;
     if (set.isEmpty()) {
       RuleMatch compoundMatch = getCompoundError(token1, token2, token3, token4, tokenPos, sentence);
+      if (tokenPos + 4 < sentence.getTokensWithoutWhitespace().length &&
+          token4.getToken().equals(sentence.getTokensWithoutWhitespace()[tokenPos+4].getToken())) {
+        // avoids a strange bug that suggests "Machtmach" in sentence like this:
+        // "Denn die einzelnen sehen sich einer sehr verschieden starken Macht des..."
+        return null;
+      }
       if (compoundMatch != null) {
         return compoundMatch;
       }

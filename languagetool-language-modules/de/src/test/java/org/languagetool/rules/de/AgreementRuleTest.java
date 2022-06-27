@@ -264,8 +264,10 @@ public class AgreementRuleTest {
     assertGood("Aller Kommunikation liegt dies zugrunde.");
     assertGood("Pragmatisch wählt man solche Formeln als Axiome.");
     assertGood("Der eine Polizist rief dem anderen zu...");
+    assertGood("Der eine große Polizist rief dem anderen zu...");
     assertGood("Das eine Kind rief dem anderen zu...");
     assertGood("Er wollte seine Interessen wahrnehmen.");
+    assertGood("Denn die einzelnen sehen sich einer sehr verschieden starken Macht des...");  // strange bug that suggests "Machtmacht"
 
     assertGood("... wo Krieg den Unschuldigen Leid und Tod bringt.");
     assertGood("Der Abschuss eines Papageien.");
@@ -598,6 +600,9 @@ public class AgreementRuleTest {
     assertGood("Wir sind immer offen für Mitarbeiter die Teil eines der traditionellsten Malerbetriebe auf dem Platz Zürich werden möchten.");
     assertGood("Gelingt das mit Erregern rechtzeitig, könnte das Infektionen sogar oft verhindern.");
     assertGood("In der aktuellen Niedrigzinsphase bedeutet das sehr geringe Zinsen, die aber deutlich ansteigen können.");
+    assertGood("Es gibt viele Stock Screener.");
+    assertBad("Auf dieser Website werden allerdings keine solche Daten weiterverxxx.");  // "weiterverxxx" = unbekanntes Wort
+    assertBad("Bei größeren Gruppen und/oder mehrere Tagen gibts einen nennenswerten Nachlass.");
     // TODO: not yet detected:
     //assertBad("Erst recht wir fleißiges Arbeiter.");
     //assertBad("Erst recht ich fleißiges Arbeiter.");
@@ -693,6 +698,7 @@ public class AgreementRuleTest {
     assertGood("Damit zeigen wir, wie bedeutungsreich manche deutschen Begriffe sein können.");
     assertGood("2009 gab es im Rathaus daher Bestrebungen ein leichter handhabbares Logo einzuführen.");
     assertGood("Das ist eine leichter handhabbare Situation.");
+    assertGood("Es gibt viele verschiedene Stock Screener.");
 
     // incorrect sentences:
     assertBad("Er hatte ein anstrengenden Tag",
@@ -716,6 +722,7 @@ public class AgreementRuleTest {
     assertBad("Dabei geht es um das altbekannte Frage der Dynamiken der Eigenbildung..");
     assertBad("Den neue Finanzierungsweg wollen sie daher Hand in Hand mit dem Leser gehen.");
     assertBad("Den neuen Finanzierungsweg wollen sie daher Hand in Hand mit dem Lesern gehen.");
+    //assertBad("Leute, die eine gewissen Sicherheit brauchen.");
     //assertBad("An der rot Ampel.");
   }
 

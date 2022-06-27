@@ -5574,3 +5574,31 @@ New Netherland	NNP
 Kurt Gerstein	NNP
 Hawaiian Airlines	NNP
 Ltda.	NNP
+Patrice Lumumba	NNP
+UEFA Youth League	NNP
+Tucai Group	NNP
+Nikolai Patrushev	NNP
+Sergei Shoigu	NNP
+Super League	NNP
+GitHub Copilot	NNP
+Teutoburg Forest	NNP
+Anna Wintour	NNP
+Met Gala	NNP
+Solange Knowles	NNP
+Thierry Mugler	NNP
+Lauda Air	NNP
+Opel Zafira	NNP
+Sepp Blatter	NNP
+Tom Jones	NNP
+Estée Lauder	NNP
+Kate Millett	NNP
+Giro d'Italia	NNP
+Triple Entente	NNP
+Villa Reale di Marlia	NNP
+mm/dd/yyyy	SYM
+MM/DD/YYYY	SYM
+dd/mm/yyyy	SYM
+DD/MM/YYYY	SYM
+Rudolf Caracciola	NNP
+Glastonbury Festival	NNP
+Hội An	NNP

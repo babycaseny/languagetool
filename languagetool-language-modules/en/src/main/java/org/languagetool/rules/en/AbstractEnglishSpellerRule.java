@@ -72,7 +72,7 @@ public abstract class AbstractEnglishSpellerRule extends MorfologikSpellerRule {
     "hard coded",
     "hands free",
     "in flight",
-    "in car#",
+    "in car",
     "client side",
     "server side",
     "in house",
@@ -440,6 +440,7 @@ public abstract class AbstractEnglishSpellerRule extends MorfologikSpellerRule {
                    !k.getReplacement().toLowerCase().startsWith("r ") &&
                    !k.getReplacement().toLowerCase().startsWith("s ") &&
                    !k.getReplacement().toLowerCase().startsWith("t ") &&
+                   !k.getReplacement().toLowerCase().startsWith("w ") &&
                    !k.getReplacement().toLowerCase().startsWith("um ") &&
                    !k.getReplacement().toLowerCase().startsWith("oft ") &&
                    !k.getReplacement().endsWith(" i") &&
@@ -1188,6 +1189,8 @@ public abstract class AbstractEnglishSpellerRule extends MorfologikSpellerRule {
     s.put("tarpits", Arrays.asList("tar pits"));
     s.put("Tarpit", Arrays.asList("Tar pit"));
     s.put("Tarpits", Arrays.asList("Tar pits"));
+    s.put("wheater", Arrays.asList("weather"));
+    s.put("Wheater", Arrays.asList("Weather"));
 
     return s;
   }
@@ -1262,6 +1265,7 @@ public abstract class AbstractEnglishSpellerRule extends MorfologikSpellerRule {
     if (word.matches("[Tt]ommorrows?")) return topMatch(word.replaceFirst("ommorrow", "omorrow"));
     if (word.matches("[Tt]ounges?")) return topMatch(word.replaceFirst("ounge", "ongue"));
     if (word.matches("[Ww]ierd")) return topMatch(word.replaceFirst("ierd", "eird"));
+    if (word.matches("[Ss]argent")) return topMatch(word.replaceFirst("argent", "ergeant"));
     if (word.matches("[Jj]ist")) {
       List<SuggestedReplacement> l = new ArrayList<>();
       l.add(new SuggestedReplacement("just"));
