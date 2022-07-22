@@ -459,6 +459,8 @@ atópica
 atópicas
 atópico
 atópicos
+atossegundo
+atossegundos
 atracamento
 atracamentos
 atrapalhadíssima
@@ -750,6 +752,7 @@ bolivariana
 bolivarianas
 bolivariano
 bolivarianos
+bombar
 bombril
 bonobo
 bonobos
@@ -1626,6 +1629,8 @@ ecler
 ecleres
 eclusa
 eclusas
+ecobatímetro
+ecobatímetros
 ecofisiologia
 ecógrafo
 ecógrafos
@@ -2164,6 +2169,8 @@ fenologia
 fenologias
 Fenprof
 FENSE
+fentossegundo
+fentossegundos
 ferino
 ferinos
 feromona
@@ -2369,6 +2376,8 @@ GeForce
 géis
 gelataria
 gelatarias
+generaleco
+generalecos
 Generalitat
 génica
 génicas
@@ -3362,6 +3371,8 @@ marfado
 marfados
 maricada
 maricadas
+mariconço
+mariconços
 mariscador
 mariscadores
 market
@@ -3867,6 +3878,7 @@ neva
 NFC
 NFL
 nham
+nhurrice
 nhurro
 nictúria
 nictúrias
@@ -4159,6 +4171,8 @@ pedopsiquiátrica
 pedopsiquiátricas
 pedopsiquiátrico
 pedopsiquiátricos
+pedrita
+pedritas
 Pedrógão
 pedroguense
 pedunculada
@@ -4167,6 +4181,8 @@ pedunculado
 pedunculados
 peida
 peidas
+peixinho
+peixinhos
 pelágica
 pelágicas
 pelágico
@@ -5309,6 +5325,7 @@ Tombali
 Tomboa
 Tomboco
 Tommy
+top-down
 tordonha
 tordonhas
 tordoveia
@@ -5390,6 +5407,7 @@ triatletas
 triatlo
 triatlos
 tricloroetileno
+tricoline
 tricomoníase
 tricóptero
 tricópteros
@@ -8526,6 +8544,7 @@ chefs
 clipart
 commodity
 commodities
+crossfit
 cyberbullying
 debugging
 decanter
@@ -9231,6 +9250,7 @@ Accenture
 AccuWeather
 Acxiom
 Adaptive
+Adobe
 Adobe Digital Government
 Aidin
 Alarm
@@ -10006,6 +10026,7 @@ Adamski
 ADSE
 Aerosmith
 Agripina
+Airbus
 Airport
 Akira
 al-Assad
@@ -10039,6 +10060,7 @@ Amparo
 Amy
 Anacleto
 Anacom
+Anakin
 Anaxágoras
 Andrea
 Andreas
@@ -10065,6 +10087,7 @@ Audi
 Auguste
 Augustin
 Austin
+AutoCad
 Autoeuropa
 Axtell
 Aylmer
@@ -10126,6 +10149,7 @@ Calcas
 Calouste
 Campolide
 Canelhas
+Capes
 Cáritas
 Carrefour
 Carregosa
@@ -10261,6 +10285,7 @@ Eustáquio
 Evola
 Expo 98
 Fabiana
+Fabiano
 Fabíola
 Faculdade
 Fagilde
@@ -10269,6 +10294,7 @@ Falagueira
 Feldman
 FIA
 Fiat
+Filho
 Firetrust
 Fisher
 Fisher-Snedecor
@@ -10358,6 +10384,7 @@ Holmes
 Holoceno
 Honda
 Honolulu
+Homem-Aranha
 Hosmer-Lemeshow
 Houston
 HP
@@ -10413,6 +10440,7 @@ Jimmy
 Jörg
 Jovino
 Juarez
+Juazeiro
 JUMBO
 Jumbo
 Juncker
@@ -10616,9 +10644,11 @@ Pandures
 Panoramix
 Paulinha
 Paulo-Guarulhos
+Pedrinho
 Peneda-Gerês
 Penedo
 Pescanova
+Peter
 Peterson
 Petrobrás
 Petrogal
@@ -10635,10 +10665,14 @@ Portucel
 Potsdam
 Priberam
 Princeton
+Print Express
 Prosegur
 PS-PCP-BE
 PSD-CDS
 PSV Eindhoven
+PT
+PUC
+Puma
 Putin
 Pyeongchang
 Qashqai
@@ -10697,6 +10731,7 @@ Sargan-Hansen
 Sarkozy
 Saussere
 Savimbi
+SciELO
 Schaffer
 Schiffer
 Schmid
@@ -10705,6 +10740,7 @@ Schumacher
 Schumpeter
 Seiceira
 SEIR
+Selma
 Senna
 Serrão
 Shakira
@@ -10734,11 +10770,14 @@ Skripal
 Snow
 Snowden
 Sommerville
+Star Wars
 Sotero
+Spartacus
 Sputnik
 Steckling
 Suméria
 Surrey
+SUS
 Tabatinga
 Tácito
 Talloires
@@ -10752,6 +10791,7 @@ Theodore
 Thom
 Thomaz
 Tirana
+Toninho
 Tom
 Tor
 Totta
@@ -10759,14 +10799,29 @@ Trotsky
 Trudeau
 Tzu
 Uber
+UERJ
+UFBH
+UFF
+UFPR
+UFRJ
+UFRGS
+UFRN
+UFSC
 Unabomber
+UnB
+UNESP
+UNICAMP
 Unilever
+UNINOVE
+UNIP
 Unity
 Universidade
+USP
 Valéria
 Valls
 ValPortugal
 Vargas
+Veiga
 Vélez
 Vestefália
 Viagra
@@ -10983,7 +11038,9 @@ https
 Hunspell
 infomercial
 Instagram
+Internet
 IOL
+IPs
 iPad
 iPads
 iPhone
@@ -11028,6 +11085,8 @@ nicks
 nickname
 nicknames
 NickServ
+notebook
+notebooks
 OEM
 off
 old school
@@ -11078,6 +11137,7 @@ scroll
 SeaMonkey
 SEO
 SimCity
+slave
 Spectrum
 SSL
 supercomputação
@@ -11339,5 +11399,71 @@ Black Sabbath
 Black Mirror
 Jack Black
 PicPay
-PIX
 cashback
+Pix # pt-BR
+NF
+OUVID
+Isabella
+Joyce
+Ben
+Mary
+Serasa
+Raphael
+Suellen
+Maicon
+ADM
+ADMs
+Emerson
+Nayara
+Stephen
+Luiz
+Junior
+Thais
+BO
+Thaís
+Taís
+HubSpot
+TED
+Allan
+Ben
+Juan
+Anvisa
+Gabriella
+Carl
+Darcy
+TEA
+Shirley
+Enzo
+Jordan
+Rezende
+Álvaro
+Gilson
+Adilson
+Cielo
+iOS
+javascript
+IST
+ISTs
+Samira
+TikTok
+Tinder
+GTA
+iFood
+Rappi
+Netshoes
+desktop
+Fleury
+Halloween
+fanfic
+Hernandez
+bioestimuladores
+PagSeguro
+Magalu
+minion
+minions
+bolsominion
+bolsominions
+bolsonarista
+bolsonarismo
+CTRL
+Corel

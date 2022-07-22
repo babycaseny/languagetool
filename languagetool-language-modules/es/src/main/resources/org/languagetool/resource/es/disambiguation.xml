@@ -535,6 +535,21 @@ Copyright (C) 2011 Juan Martorell
             <example type="untouched">Sobre todo hombre.</example>
             <example type="untouched">Sobre todo lo demás.</example>
         </rule>
+        <rule id="gota_a_gota" name="gota a gota (locución adverbial)">
+            <pattern>
+                <token><exception postag="D.*" postag_regexp="yes"/></token>
+                <marker>
+                    <token>gota</token>
+                    <token>a</token>
+                    <token>gota</token>
+                </marker>
+            </pattern>
+            <disambig action="replace">
+                <wd lemma="gota a gota" pos="LOC_ADV"/>
+                <wd lemma="gota a gota" pos="LOC_ADV"/>
+                <wd lemma="gota a gota" pos="LOC_ADV"/>
+            </disambig>
+        </rule>
         <rule id="lo_demás" name="lo demás">
             <pattern>
                 <token postag="DA0NS0">lo</token>
@@ -1522,7 +1537,7 @@ Copyright (C) 2011 Juan Martorell
         <rule>
             <pattern>
                 <marker>
-                    <token>vino<exception scope="previous" postag="D..MS.|SPS00|LOC_PREP" postag_regexp="yes"/></token>
+                    <token>vino<exception scope="previous" postag="D..MS.|SPS00|LOC_PREP|SP:DA" postag_regexp="yes"/></token>
                 </marker>
                 <token postag="D.*" postag_regexp="yes"/>
             </pattern>
@@ -1633,7 +1648,43 @@ Copyright (C) 2011 Juan Martorell
             <disambig action="filter" postag="NCMP000"/>
         </rule>
     </rulegroup>
+    <rulegroup id="telegraphic_writing" name="escritura telegráfica">
+        <rule>
+            <pattern>
+                <token regexp="yes">abierto|cerrado</token>
+                <token regexp="yes" inflected="yes">mañana|tarde|noche|víspera|festivo|&dias_semana;</token>
+            </pattern>
+            <disambig action="immunize"/>
+        </rule>
+        <rule>
+            <pattern>
+                <token postag="N.*" postag_regexp="yes" inflected="yes">solicitud</token>
+                <token postag="N.*" postag_regexp="yes" inflected="yes">certificado</token>
+            </pattern>
+            <disambig action="filterall"/>
+        </rule>
+    </rulegroup>
     <rulegroup id="nombre_aposicion" name="nombre en aposición">
+        <rule>
+            <pattern>
+                <token inflected="yes" regexp="yes">población|tarea|audiencia|función|conversión|criatura|fecha</token>
+                <marker>
+                    <token>objetivo</token>
+                </marker>
+            </pattern>
+            <disambig action="replace" postag="AQ0CN0"/>
+        </rule>
+        <rule>
+            <pattern>
+                <token inflected="yes">base</token>
+                <token>de</token>
+                <token>datos</token>
+                <marker>
+                    <token>objetivo</token>
+                </marker>
+            </pattern>
+            <disambig action="replace" postag="AQ0CN0"/>
+        </rule>
         <rule>
             <pattern>
                 <token inflected="yes">premio</token>
@@ -1946,6 +1997,15 @@ Copyright (C) 2011 Juan Martorell
             <token><exception>a</exception></token>
         </pattern>
         <disambig action="replace" postag="NCFS000"/>
+    </rule>
+    <rule id="amigo_n" name="amigo not adj">
+        <pattern>
+            <token regexp="yes" inflected="yes">bueno|malo|mal</token>
+            <marker>
+                <token inflected="yes" postag="N.*" postag_regexp="yes">amigo</token>
+            </marker>
+        </pattern>
+        <disambig action="filter" postag="N.*"/>
     </rule>
     <rule id="paso_pasa" name="paso,pasa not adj">
         <pattern>
@@ -2669,6 +2729,31 @@ Copyright (C) 2011 Juan Martorell
             </disambig>
         </rule>
     </rulegroup>
+    <rulegroup id="tomar_en_serio" name="tomar en serio (verb)">
+        <rule>
+            <pattern>
+                <marker>
+                    <token postag="V.*" postag_regexp="yes" inflected="yes">tomar</token>
+                    <token postag="SPS00">en</token>
+                    <token postag="AQ0MS0">serio</token>
+                </marker>
+            </pattern>
+            <disambig action="filterall"/>
+        </rule>
+        <rule>
+            <pattern>
+                <token postag="V.*" postag_regexp="yes" inflected="yes">tomar</token>
+                <marker>
+                    <token postag="SPS00">en</token>
+                    <token postag="AQ0MS0">serio</token>
+                </marker>
+            </pattern>
+            <disambig action="add">
+                <wd pos="_GV_"/>
+                <wd pos="_GV_"/>
+            </disambig>
+        </rule>
+    </rulegroup>
     <rulegroup id="traer_de_vuelta" name="traer de vuelta (verb)">
         <rule>
             <pattern>
@@ -2871,6 +2956,13 @@ Copyright (C) 2011 Juan Martorell
             <wd lemma="como" pos="SPS00"/>
             <wd lemma="resultado" pos="NCMS00"/>
         </disambig>
+    </rule>
+    <rule id="presentar" name="presentar reclamo">
+        <pattern>
+            <token postag="V.*" postag_regexp="yes" inflected="yes">presentar</token>
+            <token postag="N.*" postag_regexp="yes" inflected="yes">reclamo</token>
+        </pattern>
+        <disambig action="filterall"/>
     </rule>
     <rulegroup id="E_CONJ" name="e (conjunción)">
         <rule>
@@ -3672,7 +3764,7 @@ Copyright (C) 2011 Juan Martorell
                 <unify>
                     <feature id="numero"/>
                     <feature id="genero"/>
-                    <token postag="D.*" postag_regexp="yes"><exception postag="&pronombre_personal_atono_POS;" postag_regexp="yes"/></token>
+                    <token postag="D.*" postag_regexp="yes"><exception postag="&pronombre_personal_atono_POS;" postag_regexp="yes"/><exception>qué</exception></token>
                     <marker>
                         <token postag="[AN].*" postag_regexp="yes"><exception postag="V...3S." postag_regexp="yes"/></token>
                     </marker>
@@ -3959,7 +4051,7 @@ Copyright (C) 2011 Juan Martorell
         </antipattern>
         <rule>
             <pattern>
-                <token regexp="yes">me|te|se|nos|os</token>
+                <token regexp="yes" postag="P.*" postag_regexp="yes">me|te|se|nos|os</token>
                 <token regexp="yes" postag="P.*" postag_regexp="yes">&pronombre_personal_atono;</token>
                 <token postag="V.[^MNPG].*" postag_regexp="yes"><exception regexp="yes">\p{Lu}[\p{Ll}\-'·]+</exception></token>
             </pattern>
@@ -4159,7 +4251,7 @@ Copyright (C) 2011 Juan Martorell
     </rulegroup>
     <rule id="MADRUGADA" name="madurgada (no participio)">
         <pattern>
-            <token regexp="yes">madrugadas?|revistas?</token>
+            <token regexp="yes">madrugadas?|revistas?|validas?</token>
         </pattern>
         <disambig action="remove" postag="V.P.*"/>
     </rule>
@@ -4389,7 +4481,7 @@ Copyright (C) 2011 Juan Martorell
                 <unify>
                     <feature id="genero"/>
                     <feature id="numero"/>
-                    <token postag="D.*" postag_regexp="yes"/>
+                    <token postag="D.*" postag_regexp="yes"><exception>qué</exception></token>
                     <token postag="A.*|V.P.*" postag_regexp="yes"><exception inflected="yes">niño</exception></token>
                     <token postag="N.*" postag_regexp="yes"><exception postag="[DC].*" postag_regexp="yes"/><exception regexp="yes">de|son|era|solo</exception></token>
                 </unify>
@@ -4639,9 +4731,10 @@ Copyright (C) 2011 Juan Martorell
             <marker>
                 <token postag="D[^T].*" postag_regexp="yes"><exception inflected="yes">todo</exception><exception postag="R.*|P[IX].*" postag_regexp="yes"/></token>
             </marker>
-            <token postag="[PNA].*" postag_regexp="yes"><exception postag="V.*|P[IX].*|D.*" postag_regexp="yes"/></token>
+            <token postag="[NA].*|P[^R].*" postag_regexp="yes"><exception postag="V.*|P[IX].*|D.*" postag_regexp="yes"/></token>
         </pattern>
         <disambig action="filter" postag="D.*|_GN_.*"/>
+        <example type="untouched">Es cierto que otros sectores han crecido mucho.</example>
     </rule>
     <rule id="POS_N" name="possessive + noun: mi contra">
         <pattern>
@@ -4667,14 +4760,22 @@ Copyright (C) 2011 Juan Martorell
                 <token postag="N.*" postag_regexp="yes"/>
                 <token>tan</token>
             </antipattern>
+            <antipattern>
+                <marker>
+                    <token postag="N.*" postag_regexp="yes"/>
+                </marker>
+                <token min="0" max="2" postag_regexp="yes" postag="&pronombre_personal_atono_POS;"/>
+                <token postag="V.[SI].*" postag_regexp="yes"/>
+            </antipattern>
             <pattern>
                 <token postag="PR.*" postag_regexp="yes"><exception>como</exception><exception scope="previous" regexp="yes">para|por</exception></token>
                 <marker>
                     <and>
-                        <token postag="N.*" postag_regexp="yes"/>
+                        <token postag="N.*" postag_regexp="yes"><exception regexp="yes">disparates?|desgracias?|penas?</exception></token>
                         <token postag="VM[SI].*" postag_regexp="yes"><exception postag="VMIP1S0" postag_regexp="yes"/></token>
                     </and>
                 </marker>
+                <token><exception postag="V.[SI].*" postag_regexp="yes"/></token>
             </pattern>
             <disambig action="remove" postag="N.*"/>
         </rule>
@@ -4696,7 +4797,7 @@ Copyright (C) 2011 Juan Martorell
         <rule>
             <pattern>
                 <marker>
-                    <token>vía<exception postag="_GN_FS"/></token>
+                    <token>vía<exception postag="_GN_FS"/><exception scope="previous" postag="D..FS." postag_regexp="yes"/></token>
                 </marker>
                 <token postag="[NAD].*" postag_regexp="yes"/>
             </pattern>
@@ -5246,6 +5347,20 @@ Copyright (C) 2011 Juan Martorell
             </and>
         </pattern>
         <disambig action="remove" postag="V.[MSI].*"/>
+    </rule>
+    <rule id="no_verbo2" name="not verb">
+        <pattern>
+            <token postag="N.*" postag_regexp="yes" inflected="yes" regexp="yes">disparate|cosa|misión|grado|desgracia|pena</token>
+            <!-- destino? -->
+        </pattern>
+        <disambig action="filter" postag="N.*"/>
+    </rule>
+    <rule id="no_verbo3" name="not verb">
+        <pattern>
+            <token postag="A.*" postag_regexp="yes" inflected="yes">lindo</token>
+            <!-- destino? -->
+        </pattern>
+        <disambig action="filter" postag="A.*"/>
     </rule>
     <rulegroup id="not_adj_special" name="not adjective (special cases)">
         <rule>
@@ -6899,15 +7014,6 @@ Copyright (C) 2011 Juan Martorell
         </pattern>
         <disambig action="ignore_spelling"/>
     </rule>
-    <rulegroup id="telegraphic_writing" name="escritura telegráfica">
-        <rule>
-            <pattern>
-                <token regexp="yes">abierto|cerrado</token>
-                <token regexp="yes" inflected="yes">mañana|tarde|noche|víspera|festivo|&dias_semana;</token>
-            </pattern>
-            <disambig action="immunize"/>
-        </rule>
-    </rulegroup>
     <rulegroup id="IGNORE_SPELLING_OF_ABBREVIATIONS" name="Ignore spelling of some uppercase abbreviations">
         <rule>
             <!-- lowercase word + abbreviation with no vowels -->

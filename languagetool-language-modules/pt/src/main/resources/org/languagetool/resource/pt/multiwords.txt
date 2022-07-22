@@ -19,7 +19,11 @@
 # License along with this library; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 #
-#
+
+# IMPORTANT: This tagging removes all previous tags. It is not a good solution 
+# if the expression is ambiguous. If there is ambiguity, you probably need to
+# write rules in disambiguation.xml
+
 # Structure of this file:
 #  - Nomes próprios e comuns
 #  - Locuções
@@ -38,6 +42,7 @@
 #  - Universidades de Portugal
 #  - Universidades do Brasil
 #  - Interjeições
+#  - Conjunções coordenativas
 #
 #
 ####################################################
@@ -57,6 +62,8 @@ Free Software Foundation	NPFSO00
 WALL·E	NPMSO00
 Academia Militar	NPFS000
 Academia Militar Portuguesa	NPFS000
+Acrobat Reader	NPMS000
+Adobe Acrobat Reader	NPMS000
 Agência Central de Inteligência	NPFS000
 Agência Lusa	NPFS000
 Alegro Alfragide	NPMS000
@@ -77,6 +84,7 @@ beta testers	NCMP000
 Big Mac	NPMS000
 Bin Laden	NPMS000
 Bohemia Interactive	NPFS000
+Câmara Municipal	NPFS000
 Camilla Cabello	NPFS000
 Cartão Auchan	NPMS000
 Cartão JUMBO	NPMS000
@@ -12716,3 +12724,23 @@ xau xau	I
 Xau Xau	I
 xô pra lá	I
 Xô pra lá	I
+##########################################################################################
+###                              Conjunções coordenativas                              ###
+### https://www.educamaisbrasil.com.br/enem/lingua-portuguesa/conjuncoes-coordenativas ###
+##########################################################################################
+#à face do exposto   CC
+#ante o exposto  CC
+#à vista disso CC
+#em síntese	CC
+#diante do exposto   CC
+#diante do exposto acima CC
+#isto posto  CC
+#perante o exposto   CC
+#por isso	CC
+#por isto	CC
+#por conseguinte	CC
+#por consequência	CC
+#posto isto  CC
+#no entanto	CC
+#não obstante	CC
+#sendo assim   CC

@@ -295,6 +295,11 @@ public class AgreementRuleTest {
     assertGood("Ich habe deshalb allen Freund*innen Bescheid gegeben.");   // Gendersternchen, https://github.com/languagetool-org/languagetool/issues/2417
     assertGood("Ich habe deshalb allen Freund_innen Bescheid gegeben.");
     assertGood("Ich habe deshalb allen Freund:innen Bescheid gegeben.");
+    assertGood("Das betrifft auch eure Werkstudent:innen-Zielgruppe.");
+    assertBad("Das betrifft auch eure Werkstudent:innen-Xihfrisfgds.");
+    assertGood("Das betrifft auch eure Werkstudent:innenzielgruppe.");
+    assertGood("Das betrifft auch eure Jurist:innenausbildung.");
+    assertBad("Das betrifft auch eure Jurist:innenxyzdfsdf.");
     assertGood("Sein*e Mitarbeiter*in ist davon auch betroffen.");
     assertGood("Jede*r Mitarbeiter*in ist davon betroffen.");
     assertGood("Alle Professor*innen");
@@ -306,6 +311,9 @@ public class AgreementRuleTest {
     assertGood("Das macht jedem Angst.");
     assertGood("Dann macht das Sinn.");
     assertGood("Das sind beides Lichtschalter.");
+    assertGood("Spielst du vielleicht auf das Bordell neben unserm Hotel an?");
+    assertGood("Spielst du vielleicht auf das Bordell neben unsrem Hotel an?");
+    assertGood("Dieses ungeahnt prophetische Wort");
 
     // relative clauses:
     assertGood("Das Recht, das Frauen eingeräumt wird.");
@@ -603,6 +611,7 @@ public class AgreementRuleTest {
     assertGood("Es gibt viele Stock Screener.");
     assertBad("Auf dieser Website werden allerdings keine solche Daten weiterverxxx.");  // "weiterverxxx" = unbekanntes Wort
     assertBad("Bei größeren Gruppen und/oder mehrere Tagen gibts einen nennenswerten Nachlass.");
+    assertGood("Wir gehen zur Learning Academy.");
     // TODO: not yet detected:
     //assertBad("Erst recht wir fleißiges Arbeiter.");
     //assertBad("Erst recht ich fleißiges Arbeiter.");

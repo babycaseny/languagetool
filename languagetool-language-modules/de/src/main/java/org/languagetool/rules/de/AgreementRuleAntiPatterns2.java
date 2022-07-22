@@ -71,7 +71,7 @@ class AgreementRuleAntiPatterns2 {
       posRegex("VER:3:SIN.*")
     ),
     Arrays.asList( // "Es gibt viele solcher Bilder"
-      tokenRegex("viele|wenige|einige|mehrere"),
+      tokenRegex("viele|etliche|wenige|einige|mehrere"),
       csToken("solcher"),
       posRegex("SUB:GEN:PLU:.*")
     ),
@@ -443,7 +443,7 @@ class AgreementRuleAntiPatterns2 {
       new PatternTokenBuilder().tokenRegex("pdf|zip|jpe?g|gif|png|rar|mp[34]|mpe?g|avi|docx?|xlsx?|pptx?|html?").setIsWhiteSpaceBefore(false).build()
     ),
     Arrays.asList( // "Ich mache eine Ausbildung zur Junior Digital Marketing Managerin"
-      new PatternTokenBuilder().tokenRegex("Junior|Senior").setSkip(3).build(),
+      new PatternTokenBuilder().tokenRegex("Junior|Senior|Account").setSkip(3).build(),
       tokenRegex("Manager[ns]?|Managerin(nen)?|Developer(in)?")
     ),
     Arrays.asList(
@@ -531,7 +531,7 @@ class AgreementRuleAntiPatterns2 {
       pos("SUB:NOM:SIN:FEM")
     ),
     Arrays.asList( // "Wie viele Paar Schuhe braucht er?"
-      csRegex("vielen?|wenigen?|einigen?"),
+      csRegex("vielen?|etliche|wenigen?|einigen?"),
       csToken("Paar"),
       posRegex("SUB:NOM:PLU:...")
     ),

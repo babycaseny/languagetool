@@ -498,6 +498,8 @@ chausse-trape*
 chausse-trapes*
 sous-traitant*
 sous-traitants*
+couvre-caisse*
+couvre-caisses*
 sous-espèces*
 sous-espèce*
 sous-cutané*
@@ -507,6 +509,15 @@ morts-vivants*
 contre-amiral*
 contre-amiraux*
 ras-le-bol*
+Aigues-Mortes*
+Andernos-les-Bains*
+Canet-en-Roussillon*
+Chanteloup-les-Vignes*
+Fresnoy-le-Luat*
+Ivry-sur-Seine*
+Villiers-lès-Aprey*
+Notre-Dame des Naufragés*
+méta-description*
 contre-arguments*
 contre-argument*
 chausse-trappe

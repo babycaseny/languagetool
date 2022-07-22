@@ -43,6 +43,7 @@ import org.languagetool.tools.StringTools;
 import java.io.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -86,6 +87,7 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
           "Kollier|Kommunikee|Masurka|Negligee|Nessessär|Poulard|Varietee|Wandalismus|kalvinist|[Ff]ick).*");
   
   private static final int MAX_TOKEN_LENGTH = 200;
+  private static final Pattern GENDER_STAR_PATTERN = Pattern.compile("[A-ZÖÄÜ][a-zöäüß]{1,25}[*:][a-zöäüß]{1,25}");  // z.B. "Jurist:innenausbildung"
 
   private final Set<String> wordsToBeIgnoredInCompounds = new HashSet<>();
   private final Set<String> wordStartsToBeProhibited    = new HashSet<>();
@@ -1165,7 +1167,20 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
     put("vllt", w -> Arrays.asList("vielleicht", "vllt."));
     put("rauch", w -> Arrays.asList("Rauch", "rauche"));
     put("liebs", w -> Arrays.asList("liebe es", "liebes", "liebe"));
-    put("mags", w -> Arrays.asList("mag es"));
+    put("as", w -> Arrays.asList("aß", "das", "als"));
+    put("bekommste", w -> Arrays.asList("bekommst du", "bekommst"));
+    put("under", w -> Arrays.asList("unser", "unter"));
+    put("dis", w -> Arrays.asList("die", "dies"));
+    put("veil", w -> Arrays.asList("viel", "weil", "teil"));
+    put("mak", w -> Arrays.asList("mag", "mak", "lag"));
+    put("Wiso", "Wieso");
+    put("angefordet", "angefordert");
+    put("onlein", "online");
+    put("Studen", "Stunden");
+    put("weils", "weil es");
+    put("unterscheid", "Unterschied");
+    put("mags", "mag es");
+    put("abzügl", "abzgl");
     put("gefielts", "gefielt es");
     put("gefiels", "gefielt es");
     put("gefällts", "gefällt es");
@@ -1393,6 +1408,29 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
     putRepl("[Üü]bergrifflich(e[mnrs]?)?", "lich", "ig");
     put("löchen", w -> Arrays.asList("löschen", "löchern", "Köchen"));
     put("wergen",  w -> Arrays.asList("werfen", "werben", "werten"));
+  }
+
+  @Override
+  public RuleMatch[] match(AnalyzedSentence sentence) throws IOException {
+    RuleMatch[] matches = super.match(sentence);
+    return removeGenderCompoundMatches(sentence, matches);
+  }
+
+  // ":" and "*" are not in the tokenised text for the speller, so it's easier to remove matches for
+  // e.g. "Jurist:innenausbildung" as a cleanup step after the speller has run:
+  @NotNull
+  private RuleMatch[] removeGenderCompoundMatches(AnalyzedSentence sentence, RuleMatch[] matches) {
+    List<RuleMatch> filteredMatches = Arrays.asList(matches);
+    Matcher m = GENDER_STAR_PATTERN.matcher(sentence.getText());  // Jurist:innenausbildung -> 'Jurist', ':innenausbildung'
+    int pos = 0;
+    while (m.find(pos)) {
+      if (!isMisspelled(m.group().replaceFirst("[*:]", ""))) {  // "_" is not tokenized anyway, so no need to handle it here
+        // e.g. "Jurist:innenausbildung" with the ":" removed should be accepted:
+        filteredMatches = filteredMatches.stream().filter(k -> !(m.start() < k.getFromPos() && m.end() == k.getToPos())).collect(Collectors.toList());
+      }
+      pos = m.end();
+    }
+    return filteredMatches.toArray(RuleMatch.EMPTY_ARRAY);
   }
 
   private static void putRepl(String wordPattern, String pattern, String replacement) {
@@ -2426,6 +2464,8 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
       case "Mußt": return topMatch("Musst");
       case "müßt": return topMatch("müsst");
       case "Müßt": return topMatch("Müsst");
+      case "heisst": return topMatch("heißt");
+      case "heissen": return topMatch("heißen");
       case "mußten": return topMatch("mussten");
       case "mußte": return topMatch("musste");
       case "mußtest": return topMatch("musstest");
@@ -2674,6 +2714,16 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
       case "Wieviel": return topMatch("Wie viel");
       case "gets": return topMatch("gehts");
       case "Quillbot": return topMatch("QuillBot");
+      case "Ohje": return topMatch("Oje");
+      case "ohje": return topMatch("oje");
+      case "schwupps": return topMatch("schwups");
+      case "Schwupps": return topMatch("Schwups");
+      case "Massnahme": return topMatch("Maßnahme");
+      case "Massnahmen": return topMatch("Maßnahmen");
+      case "gehhrte": return topMatch("geehrte");
+      case "gehhrten": return topMatch("geehrten");
+      case "gehhrtes": return topMatch("geehrtes");
+      case "beispielweise": return topMatch("beispielsweise");
       case "umgangsprachlich": return topMatch("umgangssprachlich");
     }
     return Collections.emptyList();

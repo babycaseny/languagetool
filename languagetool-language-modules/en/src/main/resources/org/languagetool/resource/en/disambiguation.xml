@@ -9203,7 +9203,8 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
                 <marker>
                     <and>
                         <token postag="RB">
-                            <exception regexp="yes">supply|way</exception>
+                            <exception regexp="yes">supply|way|east|north|south|west|above</exception>
+                            <exception postag="IN" />
                             <exception scope="previous" postag="DT"/>
                             <exception scope="previous">the</exception><!-- matcing misspelled "THe" (which is not DT) -->
                         </token>
@@ -9628,6 +9629,12 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
             <token postag="DT"/>
             <token postag="CD"/>
             <token chunk="E-NP-plural" postag="NNS"/>
+        </antipattern>
+        <antipattern><!-- The dates the doctor had time -->
+            <token postag="DT|PRP\$" postag_regexp="yes" />
+            <token postag="JJ.*" postag_regexp="yes" min="0" />
+            <token postag="NNS" />
+            <token postag="DT" />
         </antipattern>
         <pattern>
             <marker>
@@ -16042,5 +16049,15 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
             </marker>
         </pattern>
         <disambig action="remove" postag="W.*" />
+    </rule>
+
+    <rule id="ING" name="ignore spelling of 'go(ing)'">
+        <pattern>
+            <token regexp="yes">\(|/</token>
+            <marker>
+                <token regexp="yes">ing|ed</token>
+            </marker>
+        </pattern>
+       <disambig action="ignore_spelling"/>
     </rule>
 </rules>

@@ -44,6 +44,7 @@ import org.languagetool.tokenizers.SRXSentenceTokenizer;
 import org.languagetool.tokenizers.SentenceTokenizer;
 import org.languagetool.tokenizers.Tokenizer;
 import org.languagetool.tokenizers.en.EnglishWordTokenizer;
+import org.languagetool.tools.Tools;
 
 import java.io.File;
 import java.io.IOException;
@@ -177,10 +178,11 @@ public class English extends Language implements AutoCloseable {
         new CommaWhitespaceRule(messages,
                 Example.wrong("We had coffee<marker> ,</marker> cheese and crackers and grapes."),
                 Example.fixed("We had coffee<marker>,</marker> cheese and crackers and grapes.")),
-        new DoublePunctuationRule(messages),
+        new DoublePunctuationRule(messages, Tools.getUrl("https://languagetool.org/insights/post/punctuation-guide/#what-are-periods")),
         new UppercaseSentenceStartRule(messages, this,
                 Example.wrong("This house is old. <marker>it</marker> was built in 1950."),
-                Example.fixed("This house is old. <marker>It</marker> was built in 1950.")),
+                Example.fixed("This house is old. <marker>It</marker> was built in 1950."),
+                Tools.getUrl("https://languagetool.org/insights/post/spelling-capital-letters/")),
         new MultipleWhitespaceRule(messages, this),
         new SentenceWhitespaceRule(messages),
         new WhiteSpaceBeforeParagraphEnd(messages, this),
@@ -321,6 +323,7 @@ public class English extends Language implements AutoCloseable {
       case "IF_YOU_FURTHER_QUESTIONS":  return 3;   // higher prio than agreement rules and AI
       case "EN_COMPOUNDS":              return 2;
       case "ABBREVIATION_PUNCTUATION":  return 2;
+      case "PRP_ABLE_TO":               return 1;   // higher prio than AI_HYDRA_LEO_CP_YOU.*
       case "FOR_THE_MOST_PART2":        return 1;   // higher prio than FOR_THE_MOST_PART
       case "FACE_TO_FACE_HYPHEN":       return 1;   // higher prio than THIS_NNS
       case "RUN_ON":                    return 1;   // higher prio than TOO_LONG_SENTENCE
@@ -541,7 +544,6 @@ public class English extends Language implements AutoCloseable {
       case "CANT_JJ":                   return -2;  // prefer other more specific rules
       case "WOULD_A":                   return -2;  // prefer other more specific rules
       case "I_AM_VB":                   return -2;  // prefer other rules
-      case "MD_PRP_QUESTION_MARK":      return -2;  // less prio than YOU_YOUR and YOU_YOUR_2
       case "BE_VBP_IN":                 return -2;  // prefer over BEEN_PART_AGREEMENT
       case "GONNA_TEMP":                return -3;
       case "A_INFINITIVE":              return -3;  // prefer other more specific rules (with suggestions, e.g. PREPOSITION_VERB, THE_TO)
@@ -572,6 +574,7 @@ public class English extends Language implements AutoCloseable {
       case "MORFOLOGIK_RULE_EN_ZA":     return -10;  // more specific rules (e.g. L2 rules) have priority
       case "MORFOLOGIK_RULE_EN_NZ":     return -10;  // more specific rules (e.g. L2 rules) have priority
       case "MORFOLOGIK_RULE_EN_AU":     return -10;  // more specific rules (e.g. L2 rules) have priority
+      case "MD_PRP_QUESTION_MARK":   return -11;  // speller needs higher priority
       case "BE_WITH_WRONG_VERB_FORM":   return -11;  // prefer HYDRA_LEO, BEEN_PART_AGREEMENT and other rules
       case "BE_VBG_NN":                 return -12;  // prefer other more specific rules and speller
       case "THE_NNS_NN_IS":             return -12;  // prefer HYDRA_LEO
@@ -596,6 +599,8 @@ public class English extends Language implements AutoCloseable {
       case "KNOW_AWARE_REDO":           return -60;
       case "EN_REDUNDANCY_REPLACE":     return -510;  // style rules should always have the lowest priority.
       case "EN_PLAIN_ENGLISH_REPLACE":  return -511;  // style rules should always have the lowest priority.
+      case "REP_PASSIVE_VOICE":         return -599;  // higher prio than PASSIVE_VOICE for testing purposes, but lower than other style rules
+      case "FOUR_NN":                   return -599;  // higher prio than THREE_NN for testing purposes, but lower than other style rules
       case "THREE_NN":                  return -600;  // style rules should always have the lowest priority.
       case "SENT_START_NUM":            return -600;  // style rules should always have the lowest priority.
       case "PASSIVE_VOICE":             return -600;  // style rules should always have the lowest priority.
@@ -613,11 +618,11 @@ public class English extends Language implements AutoCloseable {
       return -9; // higher than MORFOLOGIK_*, for testing
     }
     if (id.startsWith("AI_HYDRA_LEO")) { // prefer more specific rules (also speller)
+      if (id.startsWith("AI_HYDRA_LEO_CP_YOU_YOUARE")) {
+        return -1;
+      }
       if (id.startsWith("AI_HYDRA_LEO_CP")) {
         return 2;
-      }
-      if (id.startsWith("AI_HYDRA_LEO_CP_YOU")) {
-        return 1;
       }
       if (id.startsWith("AI_HYDRA_LEO_MISSING_A")) {
         return -8; // higher prio than BEEN_PART_AGREEMENT and HAVE_BEEN_AGREEMENT

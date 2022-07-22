@@ -1,4 +1,54 @@
 #separatorRegExp=[\t;]
+Guns N' Roses;NPMPO00
+Guns N’ Roses;NPMPO00
+Eagle Pass;NPCSG00
+Tlalnepantla de Baz;NPCSG00
+Sarandí del Yi;NPCSG00
+Led Zeppelin;NPMPO00
+puerto serie;NCMS000
+puertos serie;NCMP000
+in medias res;LOC_ADV
+Michel Houellebecq;NPMSSP0
+escape room;NCMS000
+escape rooms;NCMP000
+Escape Room;NCMS000
+Escape Rooms;NCMP000
+just in time;NCMS000
+just-in-time;NCMS000
+Shinzo Abe;NPMSSP0
+Olof Palme;NPMSSP0
+web beacon;NCMS000
+web beacons;NCMP000
+San Vicente de Tagua Tagua;NPCSG00
+Puerto Montt;NPCSG00
+Bell Ville;NPCSG00
+Bialet Massé;NPCSG00
+Cutral Có;NPCSG00
+Plaza Huincul;NPCSG00
+Curuzú Cuatiá;NPCSG00
+Gran Corrientes;NPCSG00
+Gran Posadas;NPCSG00
+Gran Río Cuarto;NPCSG00
+Tafí Viejo;NPCSG00
+Trenque Lauquen;NPCSG00
+Río Bravo;NPMSG00
+Tingo María;NPCSG00
+Prime Music;NCCNO00
+Amazon Prime Music;NCCNO00
+Prime Video;NCCNO00
+Amazon Prime Video;NCCNO00
+lean manufacturing;NCMS000
+mujer soldado;NCFS000
+mujeres soldado;NCFP000
+big tech;NPCN000
+Big Tech;NPCN000
+Ligue 1;NPFSO00
+data set;NCMS000
+data sets;NCMP000
+don nadie;NCMS000
+don nadies;NCMP000
+gota a gota;NCMS000
+Universidad del Magdalena;NPFSO00
 Echo Show;NPMSO00
 Echo Dot;NPMSO00
 Echo Studio;NPMSO00
@@ -1480,6 +1530,7 @@ allá se las haya	LOC_ADV
 allá se las hayan	LOC_ADV
 allá se van	LOC_ADV
 alma mater	NCFS000
+alma máter	NCFS000
 Almte.	Y
 alter ego	NCMN000
 ante diem	LOC_ADV

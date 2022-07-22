@@ -244,11 +244,12 @@ To ignore a remote rule match, set the <marker> so that it exactly covers the te
                 <pattern>
                     <token skip="1">weder</token>
                     <marker>
-                        <token regexp="yes">\w+</token>
+                        <token regexp="yes">[a-zäöüß\-]+</token>
                     </marker>
                     <token>noch</token>
                 </pattern>
                 <example correction="">Die Bereitstellung Ihrer Daten ist weder <marker>gesetzlich</marker> noch vertraglich vorgeschrieben.</example>
+                <example correction="">Folglich lassen sie sich weder <marker>löschen</marker> noch aktualisieren.</example>
             </rule>
             <rule>
                 <pattern>
@@ -526,6 +527,42 @@ To ignore a remote rule match, set the <marker> so that it exactly covers the te
             <rule>
                 <pattern>
                     <token postag="SENT_START"/>
+                    <token regexp="yes" case_sensitive="yes">@[A-ZÄÖÜ].*</token>
+                    <token regexp="yes">v[ao]n</token>
+                    <token regexp="yes" min="0">der?</token>
+                    <marker>
+                        <token regexp="yes" case_sensitive="yes">[A-ZÄÖÜ].*</token>
+                    </marker>
+                </pattern>
+                <example correction="">@Emanuel van der <marker>Vet</marker> trifft das auch auf dich zu?</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token postag="SENT_START"/>
+                    <token regexp="yes" case_sensitive="yes">@[A-ZÄÖÜ].*</token>
+                    <token regexp="yes" case_sensitive="yes">[A-ZÄÖÜ].*</token>
+                    <marker>
+                        <token regexp="yes">der|die|das</token>
+                    </marker>
+                </pattern>
+                <example correction="">@Emanuel Peter <marker>das</marker> trifft auch auf euch zu.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token postag="SENT_START"/>
+                    <token regexp="yes" case_sensitive="yes">@[A-ZÄÖÜ].*</token>
+                    <token regexp="yes">v[ao]n</token>
+                    <token regexp="yes" min="0">der?</token>
+                    <token regexp="yes" case_sensitive="yes">[A-ZÄÖÜ].*</token>
+                    <marker>
+                        <token regexp="yes">der|die|das</token>
+                    </marker>
+                </pattern>
+                <example correction="">@Emanuel van der Vet <marker>das</marker> trifft auch auf dich zu?</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token postag="SENT_START"/>
                     <marker>
                         <token postag="ADV:(MOD|TMP)" postag_regexp="yes"/>
                     </marker>
@@ -607,6 +644,15 @@ To ignore a remote rule match, set the <marker> so that it exactly covers the te
             </rule>
             <rule>
                 <pattern>
+                    <token regexp="yes">\u2063</token>
+                    <marker>
+                        <token />
+                    </marker>
+                </pattern>
+                <example correction="">Das Haus &#8291; <marker>das</marker> ist grün.</example>
+            </rule>
+            <rule>
+                <pattern>
                     <token postag="SENT_START" skip="6">
                         <exception scope="next" postag="VER.*|INJ" postag_regexp="yes" />
                         <exception scope="next" regexp="yes">,|Mensch|Ja|Nein|Hmm?|Achtung|Obacht|Vorsicht</exception>
@@ -646,6 +692,15 @@ To ignore a remote rule match, set the <marker> so that it exactly covers the te
                 </pattern>
                 <example correction="">Bei der Fülle an gesetzlichen <marker>Vorgaben</marker> kann man schnell etwas vergessen.</example>
                 <example correction="">Deutsch: Neben ausführlichem <marker>Schriftverkehr</marker> füllst du auch viele Formulare aus.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <marker>
+                        <token regexp="yes">hey|hi|moin|hallo|servus|gr[üu]e?zi</token>
+                    </marker>
+                    <token postag="EIG.*|UNKNOWN" postag_regexp="yes" />
+                </pattern>
+                <example correction=""><marker>Hey</marker> Lennart, wie gehts?</example>
             </rule>
         </rulegroup>
         <rulegroup id="AI_DE_HYDRA_LEO_CPT_DIE_CDIE" name="">

@@ -41,6 +41,23 @@ class AgreementRuleAntiPatterns1 {
       new PatternTokenBuilder().pos("UNKNOWN").csTokenRegex("[A-ZÖÄÜ][a-zöäüß-]+").build()
     ),
     Arrays.asList(
+      posRegex("PRP.*(DAT|AKK)"),  // "zur Learning Academy"
+      posRegex("SUB:.*"),
+      new PatternTokenBuilder().pos("UNKNOWN").csTokenRegex("[A-ZÖÄÜ][a-zöäüß-]+").build()
+    ),
+    Arrays.asList(
+      posRegex("PRP.*DAT"),  // "zur neuen Learning Academy"
+      posRegex("ADJ.*DAT.*"),  
+      posRegex("SUB:.*"),
+      new PatternTokenBuilder().pos("UNKNOWN").csTokenRegex("[A-ZÖÄÜ][a-zöäüß-]+").build()
+    ),
+    Arrays.asList(
+      posRegex("PRP.*AKK"),  // "zur neuen Learning Academy"
+      posRegex("ADJ.*AKK.*"),  
+      posRegex("SUB:.*"),
+      new PatternTokenBuilder().pos("UNKNOWN").csTokenRegex("[A-ZÖÄÜ][a-zöäüß-]+").build()
+    ),
+    Arrays.asList(
       posRegex("PRO.*"),  // "Es gibt viele verschiedene Stock Screener."
       posRegex("(ADJ|PA2).*"),
       posRegex("SUB:.*"),
@@ -193,7 +210,7 @@ class AgreementRuleAntiPatterns1 {
     ),
     Arrays.asList(
       posRegex("PRO:DEM:.*"),  // "Diese definiert einzelne Genres ..."
-      posRegex("VER:[23]:.*"),
+      new PatternTokenBuilder().posRegexWithStringException("VER:[23]:.*", "eine").build(),
       posRegex("ADJ:.*"),
       posRegex("SUB:.*")
     ),
@@ -219,7 +236,7 @@ class AgreementRuleAntiPatterns1 {
     Arrays.asList(
       token("von"),  // "von denen viele Open-Source-Software sind"
       token("denen"),
-      tokenRegex("viele|alle|einige|manche|mehrere|wenige"),
+      tokenRegex("viele|etliche|alle|einige|manche|mehrere|wenige"),
       new PatternTokenBuilder().posRegex("SUB:.*SIN:.*").setSkip(-1).build(),
       tokenRegex("sind|seien|sein|waren|wären")
     ),
@@ -697,7 +714,7 @@ class AgreementRuleAntiPatterns1 {
     ),
     Arrays.asList(
       tokenRegex("von|bei"),
-      csRegex("vielen|allen"),
+      csRegex("vielen|allen|etlichen"),
       posRegex("PA2:.*|ADJ:AKK:PLU:.*")  // "ein von vielen bewundertes Haus" / "Das weckte bei vielen ungute Erinnerungen."
     ),
     Arrays.asList(
@@ -713,7 +730,7 @@ class AgreementRuleAntiPatterns1 {
     ),
     Arrays.asList(
       token("für"),
-      csRegex("(viele|alle|[dm]ich|ihn|sie|uns|andere|jeden)"),
+      csRegex("(viele|etliche|alle|[dm]ich|ihn|sie|uns|andere|jeden)"),
       posRegex("ADJ:NOM:.*")  // "Ein für viele wichtiges Anliegen."
     ),
     Arrays.asList(
@@ -1075,35 +1092,34 @@ class AgreementRuleAntiPatterns1 {
       new PatternTokenBuilder().posRegex("ADV.*").min(0).max(2).build(),
       posRegex("VER:INF:.*")
     ),
-    // TODO: comment in
-    // Arrays.asList(
-    //   // die gegnerischen Shooting Guards
-    //   posRegex("ART.*NOM:PLU"),
-    //   posRegex("(ADJ|PA[12]).*NOM:PLU.*"),
-    //   posRegex("SUB.*SIN.*"),
-    //   new PatternTokenBuilder().posRegex("UNKNOWN").tokenRegex("(?i)[A-ZÄÖÜ].+").build()
-    // ),
-    // Arrays.asList(
-    //   // die gegnerischen Shooting Guards
-    //   posRegex("ART.*GEN:PLU"),
-    //   posRegex("(ADJ|PA[12]).*GEN:PLU.*"),
-    //   posRegex("SUB.*SIN.*"),
-    //   new PatternTokenBuilder().posRegex("UNKNOWN").tokenRegex("(?i)[A-ZÄÖÜ].+").build()
-    // ),
-    // Arrays.asList(
-    //   // die gegnerischen Shooting Guards
-    //   posRegex("ART.*DAT:PLU"),
-    //   posRegex("(ADJ|PA[12]).*DAT:PLU.*"),
-    //   posRegex("SUB.*SIN.*"),
-    //   new PatternTokenBuilder().posRegex("UNKNOWN").tokenRegex("(?i)[A-ZÄÖÜ].+").build()
-    // ),
-    // Arrays.asList(
-    //   // die gegnerischen Shooting Guards
-    //   posRegex("ART.*AKK:PLU"),
-    //   posRegex("(ADJ|PA[12]).*AKK:PLU.*"),
-    //   posRegex("SUB.*SIN.*"),
-    //   new PatternTokenBuilder().posRegex("UNKNOWN").tokenRegex("(?i)[A-ZÄÖÜ].+").build()
-    // ),
+    Arrays.asList(
+      // die gegnerischen Shooting Guards
+      posRegex("(ART|PRO:POS).*NOM:PLU"),
+      posRegex("(ADJ|PA[12]).*NOM:PLU.*"),
+      posRegex("SUB.*SIN.*"),
+      new PatternTokenBuilder().posRegex("UNKNOWN").csTokenRegex("[A-ZÖÄÜ][a-zöäüß-]+").build()
+    ),
+    Arrays.asList(
+      // die gegnerischen Shooting Guards
+      posRegex("(ART|PRO:POS).*GEN:PLU"),
+      posRegex("(ADJ|PA[12]).*GEN:PLU.*"),
+      posRegex("SUB.*SIN.*"),
+      new PatternTokenBuilder().posRegex("UNKNOWN").csTokenRegex("[A-ZÖÄÜ][a-zöäüß-]+").build()
+    ),
+    Arrays.asList(
+      // die gegnerischen Shooting Guards
+      posRegex("(ART|PRO:POS).*DAT:PLU"),
+      posRegex("(ADJ|PA[12]).*DAT:PLU.*"),
+      posRegex("SUB.*SIN.*"),
+      new PatternTokenBuilder().posRegex("UNKNOWN").csTokenRegex("[A-ZÖÄÜ][a-zöäüß-]+").build()
+    ),
+    Arrays.asList(
+      // die gegnerischen Shooting Guards
+      posRegex("(ART|PRO:POS).*AKK:PLU"),
+      posRegex("(ADJ|PA[12]).*AKK:PLU.*"),
+      posRegex("SUB.*SIN.*"),
+      new PatternTokenBuilder().posRegex("UNKNOWN").csTokenRegex("[A-ZÖÄÜ][a-zöäüß-]+").build()
+    ),
     // Arrays.asList(
     //   // den leidenschaftlichen Lobpreis der texanischen Gateway Church aus
     //   posRegex("ART.*DAT:SIN.*"),
@@ -1188,6 +1204,12 @@ class AgreementRuleAntiPatterns1 {
       token("der"),
       csToken("Jungen"),
       csToken("Wirtschaft")
+    ),
+    Arrays.asList(
+      // Das passiert, weil die Schiss haben.
+      token("die"),
+      csRegex("Schiss|Mut|Respekt"),
+      tokenRegex("haben|h[äa]tten?|zeigt?en|zollt?en")
     ),
     Arrays.asList(
       // "Inwiefern soll denn das romantische Hoffnungen begründen?"
