@@ -93,6 +93,7 @@ public class AgreementRule extends Rule {
   private static final String SHORT_MSG = "Evtl. keine Übereinstimmung von Kasus, Numerus oder Genus";
 
   private static final Set<String> MODIFIERS = new HashSet<>(Arrays.asList(
+    "zu",
     "überraschend",
     "ungeahnt",
     "absolut",
@@ -108,6 +109,7 @@ public class AgreementRule extends Rule {
     "extrem",
     "fast",
     "ganz",
+    "entschieden",
     "geradezu",
     "zeitweise",
     "halbwegs",
@@ -125,6 +127,10 @@ public class AgreementRule extends Rule {
     "völlig",
     "weit",
     "wirklich",
+    "gerade",
+    "überwiegend",
+    "gewollt",
+    "angestrengt",
     "ziemlich"
   ));
 
@@ -135,6 +141,7 @@ public class AgreementRule extends Rule {
     "andere",
     "anderer",
     "anderen",
+    "sämtliche",
     "sämtlicher",
     "etliche",
     "etlicher",
@@ -204,6 +211,7 @@ public class AgreementRule extends Rule {
     "Kilogramm",
     "Flippers", // Band, die Flippers
     "Standart", // Caught by speller
+    "Stellungsname", // Caught by speller
     "Kündigungsscheiben", // Caught by speller
     "Piepen", // Die Piepen
     "Badlands",
@@ -344,7 +352,7 @@ public class AgreementRule extends Rule {
             }
           } else if (tokenPos+1 < tokens.length && hasReadingOfType(tokens[tokenPos+1], POSType.NOMEN) && GermanHelper.hasReadingOfType(tokens[tokenPos], POSType.ADJEKTIV)) {
             RuleMatch ruleMatch = checkDetAdjAdjNounAgreement(maybePreposition, tokens[i],
-              nextToken, tokens[tokenPos], tokens[tokenPos+1], sentence, i, replMap);
+              nextToken, tokens[tokenPos], tokens[tokenPos+1], sentence, i, replMap, skippedStr);
             if (ruleMatch != null) {
               ruleMatches.add(ruleMatch);
             }
@@ -487,6 +495,11 @@ public class AgreementRule extends Rule {
     if (tokenPos != -1 && tokenPos + 2 < sentence.getTokensWithoutWhitespace().length) {
       AnalyzedTokenReadings nextToken = sentence.getTokensWithoutWhitespace()[tokenPos + 2];
       if (startsWithUppercase(nextToken.getToken())) {
+        if (token2.getStartPos() == nextToken.getStartPos()) {
+          // avoids a strange bug that suggests e.g. "Pflegende-Pflegende" in sentence like this:
+          // "Das passiert nur, wenn der zu Pflegende bereit ist."
+          return null;
+        }
         String potentialCompound = token2.getToken() + StringTools.lowercaseFirstChar(nextToken.getToken());
         String origToken1 = sentence.getTokensWithoutWhitespace()[tokenPos].getToken();  // before 'ins' etc. replacement
         String testPhrase = origToken1 + " " + potentialCompound;
@@ -505,6 +518,10 @@ public class AgreementRule extends Rule {
     if (tokenPos != -1 && tokenPos + 3 < sentence.getTokensWithoutWhitespace().length) {
       AnalyzedTokenReadings nextToken = sentence.getTokensWithoutWhitespace()[tokenPos + 3];
       if (startsWithUppercase(nextToken.getToken())) {
+        if (token3.getStartPos() == nextToken.getStartPos()) {
+          // avoids a strange bug, see above
+          return null;
+        }
         String potentialCompound = token3.getToken() + StringTools.lowercaseFirstChar(nextToken.getToken());
         String origToken1 = sentence.getTokensWithoutWhitespace()[tokenPos].getToken();  // before 'ins' etc. replacement
         String testPhrase = origToken1 + " " + token2.getToken() + " " + potentialCompound;
@@ -516,18 +533,25 @@ public class AgreementRule extends Rule {
     return null;
   }
 
-  // z.B. "die ganz neue Original Mail" -> "die ganz neue Originalmail"
+  // z.B. "die ganz neue Original Mail" -> "die ganz neue Originalmail",
+  // "Es ist ein sehr interessantes kostenloses Slot Spiel" -> "ein sehr interessantes kostenloses Slot-Spiel"
   @Nullable
   private RuleMatch getCompoundError(AnalyzedTokenReadings token1, AnalyzedTokenReadings token2, AnalyzedTokenReadings token3,
-                                     AnalyzedTokenReadings token4, int tokenPos, AnalyzedSentence sentence) {
-    if (tokenPos != -1 && tokenPos + 4 < sentence.getTokensWithoutWhitespace().length) {
-      AnalyzedTokenReadings nextToken = sentence.getTokensWithoutWhitespace()[tokenPos + 4];
+                                     AnalyzedTokenReadings token4, int tokenPos, AnalyzedSentence sentence, String skippedStr) {
+    int idx = tokenPos + 4 + (skippedStr != null ? 1 : 0);
+    if (tokenPos != -1 && idx < sentence.getTokensWithoutWhitespace().length) {
+      AnalyzedTokenReadings nextToken = sentence.getTokensWithoutWhitespace()[idx];
       String potentialCompound = token4.getToken() + StringTools.lowercaseFirstChar(nextToken.getToken());
       if (startsWithUppercase(token4.getToken()) && startsWithUppercase(nextToken.getToken())) {
+        if (token4.getStartPos() == nextToken.getStartPos()) {
+          // avoids a strange bug that suggests e.g. "Machtmach" in sentences like this:
+          // "Denn die einzelnen sehen sich einer sehr verschieden starken Macht des..."
+          return null;
+        }
         String origToken1 = sentence.getTokensWithoutWhitespace()[tokenPos].getToken();  // before 'ins' etc. replacement
-        String testPhrase = origToken1 + " " + token2.getToken() + " " + token3.getToken() + " " + potentialCompound;
+        String testPhrase = origToken1 + (skippedStr != null ? " " + skippedStr + " " : " ") + token2.getToken() + " " + token3.getToken() + " " + potentialCompound;
         String hyphenPotentialCompound = token4.getToken() + "-" + nextToken.getToken();
-        String hyphenTestPhrase = origToken1 + " " + token2.getToken() + " " + token3.getToken() + " " + hyphenPotentialCompound;
+        String hyphenTestPhrase = origToken1 + (skippedStr != null ? " " + skippedStr + " " : " ") + token2.getToken() + " " + token3.getToken() + " " + hyphenPotentialCompound;
         return getRuleMatch(token1, nextToken, sentence, testPhrase, hyphenTestPhrase);
       }
     }
@@ -609,7 +633,7 @@ public class AgreementRule extends Rule {
         RuleMatch compoundMatch = getCompoundError(sentence.getTokensWithoutWhitespace()[tokenPos],
                 sentence.getTokensWithoutWhitespace()[tokenPos+1],
                 sentence.getTokensWithoutWhitespace()[tokenPos+2],
-                sentence.getTokensWithoutWhitespace()[tokenPos+3], tokenPos, sentence);
+                sentence.getTokensWithoutWhitespace()[tokenPos+3], tokenPos, sentence, null);
         if (compoundMatch != null) {
           return compoundMatch;
         }
@@ -632,17 +656,11 @@ public class AgreementRule extends Rule {
 
   private RuleMatch checkDetAdjAdjNounAgreement(AnalyzedTokenReadings maybePreposition, AnalyzedTokenReadings token1,
                                              AnalyzedTokenReadings token2, AnalyzedTokenReadings token3, AnalyzedTokenReadings token4,
-                                             AnalyzedSentence sentence, int tokenPos, Map<Integer, ReplacementType> replMap) {
+                                             AnalyzedSentence sentence, int tokenPos, Map<Integer, ReplacementType> replMap, String skippedStr) {
     Set<String> set = retainCommonCategories(token1, token2, token3, token4);
     RuleMatch ruleMatch = null;
     if (set.isEmpty()) {
-      RuleMatch compoundMatch = getCompoundError(token1, token2, token3, token4, tokenPos, sentence);
-      if (tokenPos + 4 < sentence.getTokensWithoutWhitespace().length &&
-          token4.getToken().equals(sentence.getTokensWithoutWhitespace()[tokenPos+4].getToken())) {
-        // avoids a strange bug that suggests "Machtmach" in sentence like this:
-        // "Denn die einzelnen sehen sich einer sehr verschieden starken Macht des..."
-        return null;
-      }
+      RuleMatch compoundMatch = getCompoundError(token1, token2, token3, token4, tokenPos, sentence, skippedStr);
       if (compoundMatch != null) {
         return compoundMatch;
       }
@@ -653,6 +671,7 @@ public class AgreementRule extends Rule {
       if (replMap != null) {
         AgreementSuggestor2 suggestor = new AgreementSuggestor2(language.getSynthesizer(), token1, token2, token3, token4, replMap.get(tokenPos));
         suggestor.setPreposition(maybePreposition);
+        suggestor.setSkipped(skippedStr);
         ruleMatch.setSuggestedReplacements(suggestor.getSuggestions(true));
       }
     }

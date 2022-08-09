@@ -8802,3 +8802,9 @@ evil-doer?
 evil-doers?
 Kassym-Jomart*
 ultra-rare$
+sub-line?
+sub-lines?
+teary-eyed*
+nerve-shredding*
+wine-berry?
+wine-berries?

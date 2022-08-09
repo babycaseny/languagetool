@@ -50,12 +50,13 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
+
+import static java.util.Arrays.asList;
 
 /**
  * Support for English - use the sub classes {@link BritishEnglish}, {@link AmericanEnglish},
@@ -174,7 +175,7 @@ public class English extends Language implements AutoCloseable {
         allRules.addAll(cache.getUnchecked("/org/languagetool/rules/en/grammar-l2-fr.xml"));
       }
     }
-    allRules.addAll(Arrays.asList(
+    allRules.addAll(asList(
         new CommaWhitespaceRule(messages,
                 Example.wrong("We had coffee<marker> ,</marker> cheese and crackers and grapes."),
                 Example.fixed("We had coffee<marker>,</marker> cheese and crackers and grapes.")),
@@ -219,7 +220,7 @@ public class English extends Language implements AutoCloseable {
 
   @Override
   public List<Rule> getRelevantLanguageModelRules(ResourceBundle messages, LanguageModel languageModel, UserConfig userConfig) throws IOException {
-    return Arrays.asList(
+    return asList(
         new UpperCaseNgramRule(messages, languageModel, this, userConfig),
         new EnglishConfusionProbabilityRule(messages, languageModel, this),
         new EnglishNgramProbabilityRule(messages, languageModel, this)
@@ -228,27 +229,18 @@ public class English extends Language implements AutoCloseable {
 
   @Override
   public List<Rule> getRelevantLanguageModelCapableRules(ResourceBundle messages, @Nullable LanguageModel lm, GlobalConfig globalConfig, UserConfig userConfig, Language motherTongue, List<Language> altLanguages) throws IOException {
-    if (lm != null && motherTongue != null && "fr".equals(motherTongue.getShortCode())) {
-      return Arrays.asList(
-          new EnglishForFrenchFalseFriendRule(messages, lm, motherTongue, this)
-      );
+    if (lm != null && motherTongue != null) {
+      if ("fr".equals(motherTongue.getShortCode())) {
+        return asList(new EnglishForFrenchFalseFriendRule(messages, lm, motherTongue, this));
+      } else if ("de".equals(motherTongue.getShortCode())) {
+        return asList(new EnglishForGermansFalseFriendRule(messages, lm, motherTongue, this));
+      } else if ("es".equals(motherTongue.getShortCode())) {
+        return asList(new EnglishForSpaniardsFalseFriendRule(messages, lm, motherTongue, this));
+      } else if ("nl".equals(motherTongue.getShortCode())) {
+        return asList(new EnglishForDutchmenFalseFriendRule(messages, lm, motherTongue, this));
+      }
     }
-    if (lm != null && motherTongue != null && "de".equals(motherTongue.getShortCode())) {
-      return Arrays.asList(
-          new EnglishForGermansFalseFriendRule(messages, lm, motherTongue, this)
-      );
-    }
-    if (lm != null && motherTongue != null && "es".equals(motherTongue.getShortCode())) {
-      return Arrays.asList(
-          new EnglishForSpaniardsFalseFriendRule(messages, lm, motherTongue, this)
-      );
-    }
-    if (lm != null && motherTongue != null && "nl".equals(motherTongue.getShortCode())) {
-      return Arrays.asList(
-          new EnglishForDutchmenFalseFriendRule(messages, lm, motherTongue, this)
-      );
-    }
-    return Arrays.asList();
+    return asList();
   }
 
   @Override
@@ -330,12 +322,14 @@ public class English extends Language implements AutoCloseable {
       case "ON_THE_LOOK_OUT":           return 1;   // higher prio than VERB_NOUN_CONFUSION
       case "APOSTROPHE_IN_DAYS":        return 1;   // higher prio than A_NNS
       case "PICTURE_PERFECT_HYPHEN":    return 1;   // higher prio than some agreement rules
+      case "SEEM_SEEN":    return 1;   // higher prio than some agreement rules (e.g. PRP_HAVE_VB)
       case "SAVE_SAFE":                 return 1;   // higher prio than agreement rules
       case "FEDEX":                     return 2;   // higher prio than many verb rules (e.g. MD_BASEFORM)
       case "DROP_DEAD_HYPHEN":          return 1;   // higher prio than agreement rules (e.g. I_AM_VB)
       case "HEAR_HERE":                 return 1;   // higher prio than agreement rules (e.g. I_AM_VB)
       case "THE_FRENCH":                return 1;   // higher prio than agreement rules (e.g. I_AM_VB)
       case "A_HEADS_UP":                return 1;   // higher prio than some plural agreement rules (e.g. THERE_S_MANY)
+      case "UNITES_UNITED":             return 1;   // higher prio than IS_VBZ
       case "THIS_MISSING_VERB":         return 1;   // higher priority than A_MY
       case "YOURE":                     return 1;   // prefer over EN_CONTRACTION_SPELLING
       case "LIFE_COMPOUNDS":            return 1;
@@ -545,6 +539,7 @@ public class English extends Language implements AutoCloseable {
       case "WOULD_A":                   return -2;  // prefer other more specific rules
       case "I_AM_VB":                   return -2;  // prefer other rules
       case "BE_VBP_IN":                 return -2;  // prefer over BEEN_PART_AGREEMENT
+      case "VBP_VBP":                 return -2;  // prefer more specific rules
       case "GONNA_TEMP":                return -3;
       case "A_INFINITIVE":              return -3;  // prefer other more specific rules (with suggestions, e.g. PREPOSITION_VERB, THE_TO)
       case "HE_VERB_AGR":               return -3;  // prefer other more specific rules (e.g. PRP_VBG)

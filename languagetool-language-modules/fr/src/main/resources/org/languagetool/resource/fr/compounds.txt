@@ -494,12 +494,26 @@ chat-huant*
 chats-huants*
 chauffe-eau*
 chauffe-eaux*
+Cayeux-sur-Mer*
+Saint-Palais-sur-Mer*
+Sanary-sur-Mer*
+Batz-sur-Mer*
+La Seyne-sur-Mer*
+Fos-sur-Mer*
+Aiguillon-sur-mer*
+La Faute-sur-Mer*
+Cagnes-sur-Mer*
+Bretignolles-sur-Mer*
+Seyne-Sur-Mer*
 chausse-trape*
 chausse-trapes*
 sous-traitant*
 sous-traitants*
 couvre-caisse*
 couvre-caisses*
+Bouvigny-Boyeffles*
+je-m'en-foutiste*
+Rillieux-la-Pape*
 sous-espèces*
 sous-espèce*
 sous-cutané*

@@ -188,10 +188,10 @@ class SingleCheck {
           + ", docCache(Size) = " + (docCache == null ? "null" : docCache.size()) );
       return;
     }
-    if (lt == null) {
+    DocumentCache docCache = new DocumentCache(this.docCache);
+    if (lt == null && !docCache.isAutomaticGenerated(nFPara)) {
       MessageHandler.printToLogFile("SingleCheck: addParaErrorsToCache: return: lt is null");
     }
-    DocumentCache docCache = new DocumentCache(this.docCache);
     try {
 
       ResultCache oldCache = null;
@@ -223,7 +223,7 @@ class SingleCheck {
       List<Integer> nextSentencePositions = null;
       //  NOTE: lt == null if language is not supported by LT
       //        but empty proof reading errors have added to cache to satisfy text level queue
-      if (lt != null && mDocHandler.isSortedRuleForIndex(cacheNum)) {
+      if (lt != null && !docCache.isAutomaticGenerated(nFPara) && mDocHandler.isSortedRuleForIndex(cacheNum)) {
         paragraphMatches = lt.check(textToCheck, true, JLanguageTool.ParagraphHandling.ONLYPARA);
         if (cacheNum == 0) {
           nextSentencePositions = getNextSentencePositions(textToCheck, lt);
@@ -457,7 +457,7 @@ class SingleCheck {
         int parasToCheck = minToCheckPara.get(i);
         if (i == 0 || mDocHandler.isSortedRuleForIndex(i)) {
           mDocHandler.activateTextRulesByIndex(i, lt);
-          if (debugMode > 1) {
+          if (debugMode > 0) {
             MessageHandler.printToLogFile("SingleCheck: checkTextRules: Index: " + i + "/" + minToCheckPara.size() 
             + "; paraNum: " + paraNum + "; numParasToCheck: " + parasToCheck + "; useQueue: " + useQueue);
           }
@@ -543,9 +543,13 @@ class SingleCheck {
           startSentencePos = paragraphsCache.get(0).getStartSentencePosition(nFPara, sentencePos);
           endSentencePos = paragraphsCache.get(0).getNextSentencePosition(nFPara, sentencePos);
           pErrors = paragraphsCache.get(cacheNum).getFromPara(nFPara, startSentencePos, endSentencePos);
-          if (debugMode > 1 && pErrors != null) {
+          if (debugMode > 0 && pErrors != null) {
+            String eInfo = ", ";
+            for (SingleProofreadingError error : pErrors) {
+              eInfo += "(" + error.nErrorStart + "/" + error.nErrorLength + "), ";
+            }
             MessageHandler.printToLogFile("SingleCheck: checkParaRules: Para: " + nFPara + "; pErrors from cache(" + cacheNum + "): " + pErrors.length
-                + ", start = " + startSentencePos + ", end = " + endSentencePos);
+                + ", start = " + startSentencePos + ", end = " + endSentencePos + eInfo);
           }
         }
       } else if (sentencePos == 0) {
@@ -572,7 +576,7 @@ class SingleCheck {
         }
         List<Integer> nextSentencePositions = getNextSentencePositions(paraText, mLt);
         List<Integer> deletedChars = isTextParagraph ? docCache.getFlatParagraphDeletedCharacters(nFPara): null;
-        if (mLt == null) {
+        if (mLt == null || docCache.isAutomaticGenerated(nFPara)) {
           paragraphMatches = null;
         } else {
           paragraphMatches = mLt.check(removeFootnotes(paraText, footnotePos, deletedChars), true, JLanguageTool.ParagraphHandling.NORMAL);
@@ -765,6 +769,9 @@ class SingleCheck {
    * run cleanFootnotes if information about footnotes are not supported
    */
   static String removeFootnotes(String paraText, int[] footnotes, List<Integer> deletedChars) {
+    if (paraText == null) {
+      return null;
+    }
     if (deletedChars == null || deletedChars.isEmpty()) {
       if (footnotes == null) {
         return cleanFootnotes(paraText);

@@ -95,6 +95,7 @@ public class AgreementRuleTest {
     assertGood("Als Vorboten des Discounthandels sind die Ende der 50er Jahre in der Bundesrepublik Deutschland wiederauflebenden Erscheinungsformen des Beziehungs-, Betriebs- und Belegschaftshandels anzusehen.");
     assertGood("Die Anfang des letzten Monats umgestaltete Veranda ist schön.");
     assertGood("Der Mitte 2001 umgestaltete Garten ist schön.");
+    assertBad("Es ist ein sehr interessantes kostenloses Slot Spiel.", "ein sehr interessantes kostenloses Slot-Spiel");
     //assertBad("Die Bad Taste Party von Susi", "Die Bad-Taste-Party");   // not supported yet
     //assertBad("Die Update Liste.", "Die Updateliste");  // not accepted by speller
     List<RuleMatch> matches = lt.check("Er folgt damit dem Tipp des Autoren Michael Müller.");
@@ -267,7 +268,9 @@ public class AgreementRuleTest {
     assertGood("Der eine große Polizist rief dem anderen zu...");
     assertGood("Das eine Kind rief dem anderen zu...");
     assertGood("Er wollte seine Interessen wahrnehmen.");
-    assertGood("Denn die einzelnen sehen sich einer sehr verschieden starken Macht des...");  // strange bug that suggests "Machtmacht"
+    assertBad("Denn die einzelnen sehen sich einer sehr verschieden starken Macht des...");  // TODO
+    assertBad("Es birgt für mich ein zu hohes juristische Risiko.");
+    assertGood("Es birgt für mich ein zu hohes juristisches Risiko.");
 
     assertGood("... wo Krieg den Unschuldigen Leid und Tod bringt.");
     assertGood("Der Abschuss eines Papageien.");
@@ -510,6 +513,8 @@ public class AgreementRuleTest {
     assertBad("Ich gebe dir das kleinem Kaninchen.");
     assertBad("Ich gebe dir das kleiner Kaninchen.");
     assertBad("Geprägt ist der Platz durch einen 142 Meter hoher Obelisken", "einen 142 Meter hohen Obelisken");
+    assertBad("Es birgt für mich ein überraschend hohes juristische Risiko.", "ein überraschend hohes juristisches Risiko");
+    assertBad("Es birgt für mich ein zu hohes juristische Risiko.", "ein zu hohes juristisches Risiko");
     //assertBad("Ich gebe dir das kleines Kaninchen.");  // already detected by ART_ADJ_SOL
     //assertBad("Ich gebe dir das klein Kaninchen.");  // already detected by MEIN_KLEIN_HAUS
     assertGood("Ich gebe dir das kleine Kaninchen.");
@@ -609,9 +614,38 @@ public class AgreementRuleTest {
     assertGood("Gelingt das mit Erregern rechtzeitig, könnte das Infektionen sogar oft verhindern.");
     assertGood("In der aktuellen Niedrigzinsphase bedeutet das sehr geringe Zinsen, die aber deutlich ansteigen können.");
     assertGood("Es gibt viele Stock Screener.");
+    assertBad("So soll er etwa Texte des linken Literaturwissenschaftler Helmut Lethen mit besonderem Interesse gelesen haben.");  // "weiterverxxx" = unbekanntes Wort
     assertBad("Auf dieser Website werden allerdings keine solche Daten weiterverxxx.");  // "weiterverxxx" = unbekanntes Wort
     assertBad("Bei größeren Gruppen und/oder mehrere Tagen gibts einen nennenswerten Nachlass.");
     assertGood("Wir gehen zur Learning Academy.");
+    assertGood("Es ist ein stiller Bank Run.");
+    assertGood("Whirlpool Badewanne der europäische Marke SPAtec Modell Infinity.");
+    assertGood("1944 eroberte diese weite Teile von Südosteuropa.");
+    assertGood("Auch die Monopolstellung des staatlichen All India Radio, das in 24 Sprachen sendet");
+    assertGood("Das schwedischen Entwicklerstudio MachineGames hat uns vor drei Jahren mit Wolfenstein: The New Order positiv überrascht.");
+    assertGood("In einem normalen Joint habe es etwa ein halbes Gramm Hanf.");
+    assertGood("den leidenschaftlichen Lobpreis der texanischen Gateway Church aus");
+    assertGood("die gegnerischen Shooting Guards");
+    assertGood("Bald läppert sich das zu richtigem Geld zusammen.");
+    assertGood("Die Weimarer Parks laden ja förmlich ein zu Fotos im öffentlichen Raum.");
+    assertGood("Es is schwierig für mich, diese zu Sätzen zu verbinden.");
+    assertGood("Es kam zum einen zu technischen Problemen, zum anderen wurde es unübersichtlich.");
+    assertGood("Das Spiel wird durch den zu neuer Größe gewachsenen Torwart dominiert.");
+    assertGood("Dort findet sich schlicht und einfach alles & das zu sagenhafter Hafenkulisse.");
+    assertGood("Man darf gespannt sein, wen Müller für diese Aufgabe gewinnt.");
+    assertGood("Das Vereinslokal in welchem Zusammenkünfte stattfinden.");
+    assertGood("Er lässt niemanden zu Wort kommen.");
+    assertGood("Es war eine alles in allem spannende Geschichte.");
+    assertGood("Eine mehrere hundert Meter lange Startbahn.");
+    assertGood("Wir müssen jetzt um ein vielfaches höhere Preise zahlen.");
+    assertGood("Und eine von manchem geforderte Übergewinnsteuer.");
+    assertGood("Sie hat niemandem wirkliches Leid zugefügt.");
+    assertGood("Die Organe eines gerade Verstorbenen");
+    assertGood("Da wusste keiner Bescheid bezüglich dieser Sache.");
+    assertGood("Es braucht keiner Bescheid wissen.");
+    assertGood("Ein Haus für die weniger Glücklichen.");
+    assertGood("Wir können sowas Mittwoch machen.");
+    assertGood("Den schlechter Verdienenden geht es schlecht.");
     // TODO: not yet detected:
     //assertBad("Erst recht wir fleißiges Arbeiter.");
     //assertBad("Erst recht ich fleißiges Arbeiter.");
@@ -774,6 +808,12 @@ public class AgreementRuleTest {
     assertBad("Dies wurde durchgeführt um das moderne Charakter zu betonen.", "den modernen Charakter");
     assertBad("Nur bei Topfpflanzung ist eine regelmäßige Düngung wichtig, da die normalen Bodenbildungsprozessen nicht stattfinden.", "die normalen Bodenbildungsprozesse", "den normalen Bodenbildungsprozessen");
     assertBad("Die Höhe kommt oft darauf an, ob die richtigen Leuten gut mit einen können oder nicht.");
+  }
+
+  @Test
+  public void testBugFixes() throws IOException {
+    assertBad("Denn die einzelnen sehen sich einer sehr verschieden starken Macht des...", "einer sehr verschiedenen starken Macht");  // TODO: not actually a bug
+    assertGood("Das passiert nur, wenn der zu Pflegende bereit ist.");
   }
 
   private void assertGood(String s) throws IOException {

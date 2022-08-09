@@ -110,6 +110,9 @@ public class CaseRule extends Rule {
     "Apart", // eng
     "Smart", // eng
     "Different", // eng
+    "Light", // eng
+    "Legal", // eng
+    "Fit", // eng
     "Fair", // eng
     "Viral", // eng
     "Tough", // eng
@@ -679,7 +682,11 @@ public class CaseRule extends Rule {
     "Eure",
     "Eurem",
     "Euren",
-    "Eures"
+    "Eures",
+    "Eueren",
+    "Euerem",
+    "Eueres",
+    "Euerer"
   };
   
   private static final Set<StringMatcher[]> exceptionPatterns = CaseRuleExceptions.getExceptionPatterns();
@@ -731,6 +738,7 @@ public class CaseRule extends Rule {
   public CaseRule(ResourceBundle messages, German german) {
     language = german;
     super.setCategory(Categories.CASING.getCategory(messages));
+    setUrl(Tools.getUrl("https://languagetool.org/insights/de/beitrag/gross-klein-schreibung-rechtschreibung/#1-nomen-werden-gro%C3%9Falle-anderen-wortarten-kleingeschrieben"));
     antiPatterns = cacheAntiPatterns(german, ANTI_PATTERNS);
     addExamplePair(Example.wrong("<marker>Das laufen</marker> fällt mir schwer."),
                    Example.fixed("<marker>Das Laufen</marker> fällt mir schwer."));
