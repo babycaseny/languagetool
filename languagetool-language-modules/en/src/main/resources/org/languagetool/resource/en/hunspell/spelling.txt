@@ -16196,6 +16196,8 @@ thunderbirds
 fair-traded
 double-decker
 double-deckers
+triple-decker
+triple-deckers
 daymare
 daymares
 Cham
@@ -18996,6 +18998,8 @@ Sedaris
 Arnett
 double-decked
 double-deck
+triple-decked
+triple-deck
 ITN
 ringtone
 ringtones
@@ -33437,3 +33441,18 @@ cop-out
 cop-outs
 Isengard
 shoeboxlike
+broad-mindedness
+broad-mindednesses
+Newton-John
+Zaporizhzhia
+caracole
+caracoles
+caracoling
+caracoled
+Lahaina
+Kapolei
+stir-crazy
+read-only
+write-only
+prednisone
+clonidine

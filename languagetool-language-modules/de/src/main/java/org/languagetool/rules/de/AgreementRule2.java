@@ -53,9 +53,9 @@ import static org.languagetool.tools.StringTools.uppercaseFirstChar;
  */
 public class AgreementRule2 extends Rule {
 
-  private static final String ADJ_GRU = "Stilvoll|Link|Direkt|Gegenseitig|Offensichtlich|Weitgehend|Frei|Prinzipiell|Regelrecht|Kostenlos|Gleichzeitig|Ganzjährig|Überraschend|Entsprechend|Ordentlich|Gelangweilt";
+  private static final String ADJ_GRU = "Allgemein|Ausgiebig|Stilvoll|Link|Direkt|Gegenseitig|Offensichtlich|Weitgehend|Frei|Prinzipiell|Regelrecht|Kostenlos|Gleichzeitig|Ganzjährig|Überraschend|Entsprechend|Ordentlich|Gelangweilt";
   private static final List<List<PatternToken>> ANTI_PATTERNS = asList(
-    asList(csRegex("Diverse|Flächendeckend|Entsprechende|Angeblich|Gelegentlich|Antizyklisch|Unbedingt|Zusätzlich|Natürlich|Äußerlich|Erfolgreich|" +
+    asList(csRegex("Willkommen|Link|Aktuell|Diverse|Flächendeckend|Entsprechende|Angeblich|Gelegentlich|Antizyklisch|Unbedingt|Zusätzlich|Natürlich|Äußerlich|Erfolgreich|" +
       "Spät|Länger|Vorrangig|Rechtzeitig|Typisch|Allwöchentlich|Wöchentlich|Inhaltlich|Tagtäglich|Täglich|Komplett|" +
       "Genau|Gerade|Bewusst|Vereinzelt|Gänzlich|Ständig|Okay|Meist|Generell|Ausreichend|Genügend|Reichlich|" +
       "Regelmäßig(e|es)?|Unregelmäßig|Hauptsächlich"), posRegex("SUB:.*")),  // "Regelmäßig Kiwis und Ananas zu essen...", "Reichlich Inspiration bietet..."
@@ -65,6 +65,7 @@ public class AgreementRule2 extends Rule {
     asList(csRegex("Gut|Schlecht|Existenziell|Ganz|Gering|Viel|Wenig"), posRegex("SUB:.*ADJ")),  // "Existenziell Bedrohte kriegen..."
     asList(regex("Nachhaltig|Direkt"), posRegex("SUB:NOM:.*"), posRegex("VER:INF:(SFT|NON)")),  // 'nachhaltig Yoga praktizieren'
     asList(regex("\\d0er"), regex("Jahren?")),
+    asList(token("Liebe"), token("Mai")),   // Mai = auch Eigenname
     asList(token("Ganz"), token("Ohr")),
     asList(token("Klar"), token("Schiff")),
     asList(token("Echt"), tokenRegex("Scheiße|Mist")),
@@ -75,6 +76,7 @@ public class AgreementRule2 extends Rule {
     asList(token("Gut"), tokenRegex("Ding|Holz")),  // "Gut Ding will Weile haben"
     asList(token("Urban"), token("Mining")),
     asList(token("Responsive"), token("Design")),
+    asList(token("Dual"), token("Studierende")),
     asList(token("Deutsche"), csRegex("Grammophon|Wohnen")),
     asList(posRegex("ADJ.*"), tokenRegex(".+beamte")),  // "Alarmierte Polizeibeamte"
     asList(new PatternTokenBuilder().token("Anderen").setSkip(5).build(), posRegex("VER:INF:(SFT|NON)")),  // "Anderen Brot und Arbeit ermöglichen - ..."
@@ -216,8 +218,7 @@ public class AgreementRule2 extends Rule {
   private List<String> getSuggestions(AnalyzedTokenReadings[] tokens, int i) {
     List<String> suggestions = new ArrayList<>();
     AnalyzedToken adjToken = tokens[i].getAnalyzedToken(0);
-    for (int j = 0; j < tokens[i+1].getReadingsLength(); j++) {
-      AnalyzedToken nounToken = tokens[i+1].getAnalyzedToken(j);
+    for (AnalyzedToken nounToken : tokens[i+1].getReadings()) {
       if (nounToken.getPOSTag() == null) {
         continue;
       }
@@ -287,7 +288,9 @@ public class AgreementRule2 extends Rule {
   @NotNull
   private Set<String> retainCommonCategories(AnalyzedTokenReadings token1, AnalyzedTokenReadings token2) {
     Set<AgreementRule.GrammarCategory> categoryToRelaxSet = Collections.emptySet();
-    Set<String> set1 = AgreementTools.getAgreementSOLCategories(token1, categoryToRelaxSet);
+    // finds more error but also more false alarms? see commented out cases in testSuggestion():
+    //Set<String> set1 = AgreementTools.getAgreementSOLCategories(token1, categoryToRelaxSet);
+    Set<String> set1 = AgreementTools.getAgreementCategories(token1, categoryToRelaxSet, false);
     //System.out.println(token1 + " -> " + set1);
     Set<String> set2 = AgreementTools.getAgreementCategories(token2, categoryToRelaxSet, false);
     //System.out.println(token2 + " -> " + set2);

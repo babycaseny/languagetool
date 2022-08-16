@@ -475,9 +475,13 @@ casse-croûtes*
 casse-gueule*
 casse-gueules*
 casse-noix*
+Kosciusko-Morizet*
+Saint-Nectaire*
+Roi-Soleil*
 casse-pied*
 casse-pieds*
 casse-pipe*
+Saint-Esprit*
 casse-pipes*
 casse-tête*
 casse-têtes*

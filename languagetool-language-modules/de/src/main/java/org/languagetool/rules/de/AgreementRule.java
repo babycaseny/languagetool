@@ -240,7 +240,7 @@ public class AgreementRule extends Rule {
   ));
 
   private final static List<List<PatternToken>> allAntiPatterns =
-    Stream.of(AgreementRuleAntiPatterns1.ANTI_PATTERNS, AgreementRuleAntiPatterns2.ANTI_PATTERNS)
+    Stream.of(AgreementRuleAntiPatterns1.ANTI_PATTERNS, AgreementRuleAntiPatterns2.ANTI_PATTERNS, AgreementRuleAntiPatterns3.ANTI_PATTERNS)
       .flatMap(Collection::stream)
       .collect(Collectors.toList());
 
@@ -378,6 +378,9 @@ public class AgreementRule extends Rule {
   private int getPosAfterModifier(int startAt, AnalyzedTokenReadings[] tokens) {
     if (startAt + 1 < tokens.length && MODIFIERS.contains(tokens[startAt].getToken())) {
       startAt++;
+    }
+    if (startAt >= 1 && tokens[startAt-1].getToken().equals("weit") && startAt < tokens.length && tokens[startAt].getToken().equals("weniger")) {
+      startAt += 2;
     }
     if (startAt + 1 < tokens.length && (StringUtils.isNumeric(tokens[startAt].getToken()) || tokens[startAt].hasPosTag("ZAL"))) {
       int posAfterModifier = startAt + 1;

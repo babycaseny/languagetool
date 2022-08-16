@@ -110,6 +110,8 @@ Competitive Intelligence	NPFS000
 Computador Pessoal	NPMS000
 conhecimento contextual	NCMS000
 conhecimento contextualizado	NCMS000
+Coreia do Norte	NPFSG00
+Coreia do Sul	NPFSG00
 cover disc	NCFS000
 cover discs	NCFP000
 cover disk	NCFS000
@@ -181,6 +183,7 @@ Pan American World Airways	NPFS000
 Paradise Café	NPMS000
 pen drive	NPFS000
 pen drives	NPFP000
+Península Ibérica	NPFSG00
 Píxeis Por Polegada	NPMP000
 Planeta DeAgostini	NPMS000
 Polícia de Segurança Pública	NPFS000

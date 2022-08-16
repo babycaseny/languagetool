@@ -1431,6 +1431,20 @@ NUS;NUS;N f sp
 Fév;Fév;S
 Mar;Mar;Z e sp
 ISEOR;ISEOR;S
+Kiki;Kiki;Z e sp
+Méhari;Méhari;Z f sp
+download;download;N e sp
+anti;anti;A
+player;player;N e s
+name;name;N e s
+names;name;N e p
+is;is;S
+Morizet;Morizet;Z e sp
+Lingons;Lingons;Z e sp
+Hiis;Hiis;Z e sp
+Haisnes;Haisnes;Z e sp
+BOBD;BOBD;S
+players;player;N e p
 2de;2de;J e sp
 2ᵈ;2ᵈ;J e sp
 Lolo;Lolo;Z f sp
@@ -1495,3 +1509,14 @@ Aiguillon-sur-mer;Aiguillon-sur-mer;Z e sp
 La Faute-sur-Mer;La Faute-sur-Mer;Z e sp
 Bretignolles-sur-Mer;Bretignolles-sur-Mer;Z e sp
 Seyne-Sur-Mer;Seyne-Sur-Mer;Z e sp
+complet-veston;complet-veston;N m sp
+veston-cravate;veston-cravate;N m sp
+costard-cravate;costard-cravate;N m sp
+homemade;homemade;N e sp
+Saint-Nectaire;Saint-Nectaire;Z e sp
+Champaix;Champaix;Z e sp
+Grisolles;Grisolles;Z e sp
+arcanique;arcanique;J e s
+arcaniques;arcanique;J e p
+Liham;Liham;Z e sp
+Liam;Liam;Z e sp

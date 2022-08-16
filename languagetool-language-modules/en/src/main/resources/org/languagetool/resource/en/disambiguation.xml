@@ -1471,6 +1471,11 @@
         </rule>
     </rulegroup>
     <rule id="CD_VBZNNS_NNS" name="number + vbz/nns => nns">
+      <antipattern>
+        <token postag="NN:UN?|NNP?|UNKNOWN" postag_regexp="yes" chunk_re="[BI]-NP.*" />
+        <token regexp="yes" chunk_re="[EI]-NP.*">\d+</token>
+        <token postag="VBZ" />
+      </antipattern>
       <pattern>
           <token postag="CD"><exception>one</exception></token>
              <marker>
@@ -1484,6 +1489,7 @@
        <disambig postag="NNS"/>
        <example type="untouched">One minute.</example>
        <example type="untouched">Figure two <marker>shows</marker> the results.</example>
+       <example type="untouched">As pig 1 walks down</example>
        <example type="untouched">Although page 10 <marker>gives</marker> much information, it is incomplete.</example>
        <example type="untouched">If the number 5 <marker>shows</marker> on the display, stop the test.</example>
        <example type="untouched">Two and two <marker>makes</marker> four.</example>
@@ -6452,7 +6458,7 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
         </rule>
         <rule>
             <pattern>
-                <token><exception regexp="yes">\p{Ps}</exception></token>
+                <token><exception regexp="yes">\p{Ps}|\/</exception></token>
                 <marker>
                     <and>
                         <token postag="``" spacebefore="no">&quot;</token>
@@ -6482,7 +6488,7 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
         </rule>
         <rule>
             <pattern>
-                <token regexp="yes">\p{Ps}</token>
+                <token regexp="yes">\p{Ps}|\/</token>
                 <marker>
                     <and>
                         <token postag="``" spacebefore="no">&quot;</token>
@@ -9114,8 +9120,13 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
         </antipattern>
         <antipattern><!-- The dog has bark at me -->
             <token inflected="yes" regexp="yes">have|be</token>
-            <token regexp="yes">forward|bark|yell|build|open|change|notice|use|view|check|purchase|search|wire|gain|finish|wait|leave|talk|order|drill|find|think|ride|turn|say|tell|get|go</token>
-            <token postag="IN|TO|DT|PRP\$|PCT" postag_regexp="yes" />
+            <token regexp="yes">forward|bark|yell|build|change|open|notice|use|view|check|purchase|search|wire|gain|finish|wait|leave|talk|order|drill|find|think|ride|turn|say|get|go|show|kill|ask|play|launch|mention|tell</token>
+            <token postag="IN|TO|P?DT|PRP\$|PCT" postag_regexp="yes" />
+        </antipattern>
+        <antipattern><!-- I have contact my lawyer -->
+            <token inflected="yes" regexp="yes">have|be</token>
+            <token>contact</token>
+            <token postag="P?DT|PRP.*" postag_regexp="yes" />
         </antipattern>
         <pattern>
             <token regexp="yes" postag="VB[ZPG]?" postag_regexp="yes" inflected="yes">be|have</token>
@@ -9138,7 +9149,8 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
         <example type="untouched">Incorrect grammar. It is need for review.</example>
         <example type="untouched">Incorrect grammar. It's need for review.</example>
         <example type="untouched">Incorrect grammar. It's goes there.</example>
-        <example type="untouched">The dog has bark at me.</example>
+        <example type="untouched">Incorrect grammar. The dog has bark at me.</example>
+        <example type="untouched">Incorrect grammar. I have contact my lawyer</example>
         <example type="untouched">Incorrect grammar. It's works without problems.</example>
         <example type="untouched">Incorrect grammar. The technician has <marker>make</marker> about 20 errors this year.</example>
         <example type="untouched">I have <marker>notice</marker> LanguageTool doesn't find all errors.</example><!-- Possibly a noun (=somebody has told me (that)), but possibly incorrect verb form (should be 'noticed') -->
@@ -16150,4 +16162,41 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
         </pattern>
         <disambig action="remove" postag="VB.*" />
     </rule>
+
+    <rule id="NO_NO_DT" name="'no' is not DT">
+        <pattern>
+            <marker>
+                <token>no</token>
+            </marker>
+            <token spacebefore="no">.</token>
+            <token regexp="yes">\d+</token>
+        </pattern>
+        <disambig action="remove" postag="DT.*" />
+    </rule>
+
+    <rulegroup id="COMES_NO_NN" name="'comes' is not NN">
+        <rule>
+            <antipattern>
+                <token postag="P?DT|PRP\$" postag_regexp="yes" />
+                <token>comes</token>
+            </antipattern>
+            <pattern>
+                <marker>
+                    <token>comes</token>
+                </marker>
+                <token regexp="yes">from|by|to|into|(down|up)stairs</token>
+            </pattern>
+            <disambig action="remove" postag="NN" />
+        </rule>
+        <rule>
+            <pattern>
+                <token chunk="E-NP-singular" />
+                <token postag="RB" min="0" />
+                <marker>
+                    <token>comes</token>
+                </marker>
+            </pattern>
+            <disambig action="remove" postag="NN" />
+        </rule>
+    </rulegroup>
 </rules>

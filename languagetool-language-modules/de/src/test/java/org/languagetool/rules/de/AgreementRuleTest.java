@@ -646,6 +646,10 @@ public class AgreementRuleTest {
     assertGood("Ein Haus für die weniger Glücklichen.");
     assertGood("Wir können sowas Mittwoch machen.");
     assertGood("Den schlechter Verdienenden geht es schlecht.");
+    assertGood("Mit der weit weniger bekannten Horrorkomödie begann ihre Karriere.");
+    assertGood("Die Adelmanns wohnen in Herford.");
+    assertBad("Die Idee des Werbekaufmann kam gut an.");
+    assertGood("Die Idee des Werbekaufmanns kam gut an.");
     // TODO: not yet detected:
     //assertBad("Erst recht wir fleißiges Arbeiter.");
     //assertBad("Erst recht ich fleißiges Arbeiter.");

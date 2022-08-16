@@ -1085,3 +1085,11 @@ PVG #abk
 streck #ugs
 schieb #ugs
 editier #ugs
+kapital #ugs
+markier #ugs
+sorg #ugs
+bestimm #ugs
+entdeck #ugs
+Lahaina/S #name
+Lehfeldt/S #name
+gez. #abk

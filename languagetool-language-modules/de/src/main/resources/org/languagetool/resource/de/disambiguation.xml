@@ -6946,7 +6946,7 @@ Copyright © 2013 Markus Brenneis, Daniel Naber, Jan Schreiber
                 <token regexp="yes">ich|bitte|dann|daher|deswegen</token>
                 <marker>
                     <!-- verben, die großgeschrieben auch ein Substantiv sein könnten oder mit anderen Wörtern verwecheslt werden könnten -->
-                    <token case_sensitive="yes" regexp="yes">verrat|stimm|kontrollier|betreib|mail|rat|bau|besuch|stream|knutsch|schnall|strick</token>
+                    <token case_sensitive="yes" regexp="yes">verrat|stimm|kontrollier|betreib|mail|rat|bau|besuch|stream|knutsch|schnall|strick|ruh|futter</token>
                 </marker>
             </pattern>
             <disambig action="ignore_spelling"/>
@@ -6955,7 +6955,7 @@ Copyright © 2013 Markus Brenneis, Daniel Naber, Jan Schreiber
             <pattern>
                 <marker>
                     <!-- verben, die großgeschrieben auch ein Substantiv sein könnten oder mit anderen Wörtern verwecheslt werden könnten -->
-                    <token case_sensitive="yes" regexp="yes">verrat|stimm|kontrollier|betreib|mail|rat|bau|besuch|helf|stream|knutsch|schnall|strick</token>
+                    <token case_sensitive="yes" regexp="yes">verrat|stimm|kontrollier|betreib|mail|rat|bau|besuch|helf|stream|knutsch|schnall|strick|ruh|futter</token>
                 </marker>
                 <token>ich</token>
             </pattern>
@@ -7068,6 +7068,56 @@ Copyright © 2013 Markus Brenneis, Daniel Naber, Jan Schreiber
                 <token case_sensitive="yes">bitte</token>
             </marker>
             <token postag="VER.*" postag_regexp="yes" />
+        </pattern>
+        <disambig action="remove" postag="VER.*"/>
+    </rule>
+    <rule id="LANG_KEIN_VER" name="'lang' kein Verb">
+        <antipattern>
+            <token regexp="yes">ich|bitte|dann|deswegen</token>
+            <token>lang</token>
+        </antipattern>
+        <antipattern>
+            <token>lang</token>
+            <token regexp="yes">ich|zu|&apostrophe;</token>
+        </antipattern>
+        <pattern>
+            <marker>
+                <token case_sensitive="yes">lang</token>
+            </marker>
+        </pattern>
+        <disambig action="remove" postag="VER.*"/>
+    </rule>
+    <rule id="TROTZ_KEIN_VER" name="'trotz' kein Verb">
+        <antipattern>
+            <token regexp="yes">ich|bitte|dann|deswegen</token>
+            <token>trotz</token>
+        </antipattern>
+        <antipattern>
+            <token>trotz</token>
+            <token regexp="yes">ich|&apostrophe;</token>
+        </antipattern>
+        <pattern>
+            <marker>
+                <token>trotz</token>
+            </marker>
+            <token postag=".*(GEN|DAT).*" postag_regexp="yes" />
+        </pattern>
+        <disambig action="remove" postag="VER.*"/>
+    </rule>
+    <rule id="FAHRERLOSEN_KEIN_VER" name="'fahrerlosen' kein Verb">
+        <pattern>
+            <token regexp="yes">
+                .+losen?
+                <exception regexp="yes">.*(ver|aus|raus|heraus|herein|hinein|be)(zu)?losen?</exception>
+            </token>
+        </pattern>
+        <disambig action="remove" postag="VER.*"/>
+    </rule>
+    <rule id="DRAMATISCHEN_KEIN_VER" name="'trotz' kein Verb">
+        <pattern>
+            <marker>
+                <token regexp="yes">.*(drama|roman|elas|nazis|narziss)tisch(en?)?</token>
+            </marker>
         </pattern>
         <disambig action="remove" postag="VER.*"/>
     </rule>
