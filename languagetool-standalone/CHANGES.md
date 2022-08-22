@@ -2,7 +2,30 @@
 
 ## 5.9 (release planned for 2022-09-28)
 
-...
+#### Catalan
+  * added and improved rules
+
+#### English
+  * added and improved rules
+
+#### German
+  * added and improved rules
+  * extended dictionary
+
+#### French
+  * added and improved rules
+
+#### Polish
+  * added and improved rules
+
+#### Portuguese
+  * added and improved rules
+
+#### Spanish
+  * added and improved rules
+
+### General
+  * The `--word2vecModel` option has been deprecated
 
 
 ## 5.8 (2022-07-01)
@@ -1223,7 +1246,7 @@
     English, German, and Portuguese.
   * Neural network based rules for confusion pair disambiguation using the
     word2vec model are available for English, German, and Portuguese. The necessary
-    data must be downloaded separately from https://fscs.hhu.de/languagetool/word2vec.tar.gz.
+    data must be downloaded separately from https://languagetool.org/download/word2vec/.
     For details, please see:
     * Code: https://github.com/gulp21/languagetool-neural-network
     * Forum discussion: https://forum.languagetool.org/t/neural-network-rules/2225

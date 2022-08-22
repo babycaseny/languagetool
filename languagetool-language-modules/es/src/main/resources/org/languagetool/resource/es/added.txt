@@ -83,6 +83,8 @@ Biblián	Biblián	NPCSG00
 Biobío	Biobío	NPCSG00
 Biruaca	Biruaca	NPCSG00
 Biscucuy	Biscucuy	NPCSG00
+Blogger	Blogger	NPMSO00
+Blogspot	Blogspot	NPMSO00
 Bobures	Bobures	NPCSG00
 Boconoito	Boconoito	NPCSG00
 Boconó	Boconó	NPCSG00
@@ -122,6 +124,7 @@ Camatagua	Camatagua	NPCSG00
 Cambyretá	Cambyretá	NPCSG00
 Camejo	Camejo	NPCSG00
 Camiri	Camiri	NPCSG00
+Campari	Campari	NPCNO00
 Canindeyú	Canindeyú	NPCSG00
 Cantaura	Cantaura	NPCSG00
 Capatárida	Capatárida	NPCSG00
@@ -261,6 +264,7 @@ Esquel	Esquel	NPCSG00
 Esteller	Esteller	NPCSG00
 Estigarribia	Estigarribia	NPCSG00
 Ezeiza	Ezeiza	NPCSG00
+FIDE	FIDE	NPFSO00
 FP	FP	NCCN000
 Facatativá	Facatativá	NPCSG00
 Famatina	Famatina	NPCSG00
@@ -268,6 +272,7 @@ Farriar	Farriar	NPCSG00
 Fassardi	Fassardi	NPCSG00
 Febres	Febres	NPCSG00
 Ferreñafe	Ferreñafe	NPCSG00
+Fotolog	Fotolog	NPMSO00
 Fram	Fram	NPCSG00
 Freites	Freites	NPCSG00
 Funza	Funza	NPCSG00
@@ -600,6 +605,7 @@ Socopó	Socopó	NPCSG00
 Sogamoso	Sogamoso	NPCSG00
 Soldati	Soldati	NPCSG00
 Sotillo	Sotillo	NPCSG00
+Spaski	Spaski	NPCNSP0
 Sucúa	Sucúa	NPCSG00
 Sullana	Sullana	NPCSG00
 Sársfield	Sársfield	NPCSG00
@@ -687,6 +693,7 @@ Uribia	Uribia	NPCSG00
 Uruapan	Uruapan	NPCSG00
 Ushuaia	Ushuaia	NPCSG00
 Uyuni	Uyuni	NPCSG00
+VTC	VTC	NCCN000
 Vallarta	Vallarta	NPCSG00
 Vallegrande	Vallegrande	NPCSG00
 Vallenar	Vallenar	NPCSG00
@@ -813,6 +820,8 @@ ceilandés	ceilandés	AQ0MS0
 ceilandés	ceilandés	NCMS000
 chance	chance	NCCS000
 chances	chance	NCCP000
+clínic	clínic	NCMS000
+clínics	clínic	NCMP000
 crepe	crepe	NCCS000
 crepes	crepe	NCCP000
 destaque	destaque	NCMS000
@@ -829,10 +838,14 @@ esrilanqueses	esrilanqués	AQ0MP0
 esrilanqueses	esrilanqués	NCMP000
 esrilanqués	esrilanqués	AQ0MS0
 esrilanqués	esrilanqués	NCMS000
+facha	facha	AQ0CS0
+fachas	facha	AQ0CP0
 fallida	fallido	AQ0FS0
 fallidas	fallido	AQ0FP0
 fallido	fallido	AQ0MS0
 fallidos	fallido	AQ0MP0
+guinche	guinche	NCMS000
+guinches	guinche	NCMP000
 infoesfera	infoesfera	NCFS000
 mariquita	mariquita	NCCS000
 mariquitas	mariquita	NCCP000
@@ -897,6 +910,7 @@ tuvaluana	tuvaluano	AQ0FS0
 tuvaluanas	tuvaluano	AQ0FP0
 tuvaluano	tuvaluano	AQ0MS0
 tuvaluanos	tuvaluano	AQ0MP0
+wonton	wonton	AQ0CN0
 Áncash	Áncash	NPCSG00
 Ñacunday	Ñacunday	NPCSG00
 Ñancay	Ñancay	NPCSG00

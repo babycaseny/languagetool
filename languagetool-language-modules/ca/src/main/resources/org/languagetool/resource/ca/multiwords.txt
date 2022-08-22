@@ -1,5 +1,10 @@
 #Catalan multiwords file used for chunking
 #separatorRegExp=[\t;]
+Li Bai;NPMSSP0
+Li Po;NPMSSP0
+Li Tai Po;NPMSSP0
+mai dels mais;LOC_ADV
+pell amb pell;LOC_ADV
 os pedrer;NCMS000
 bus nit;NCMS000
 busos nit;NCMP000
@@ -1697,6 +1702,7 @@ del cert	LOC_ADV
 del tot	LOC_ADV
 delirium tremens	NCMN000
 delírium trémens	NCMN000
+delírium trèmens	NCMN000
 després d'	LOC_PREP
 després de	LOC_PREP
 deus ex machina	NCMN000
@@ -1852,7 +1858,7 @@ fins ara	LOC_ADV
 fins avui	LOC_ADV
 fins i tot	LOC_ADV
 foc amic	NCMS000
-foie gras	NCMS000
+foie gras	NCMN000
 fons voltor	NCMN000
 front a front	LOC_ADV
 fumata blanca	NCFS000

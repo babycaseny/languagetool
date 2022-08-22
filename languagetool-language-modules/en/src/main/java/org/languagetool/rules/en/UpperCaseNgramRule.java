@@ -480,6 +480,25 @@ public class UpperCaseNgramRule extends Rule {
       new PatternTokenBuilder().pos("DT").min(0).build(),
       csRegex("[A-Z].+"),
       csRegex("[A-Z].+")
+    ),
+    Arrays.asList( // PARENTHESES: (4 hrs/wk) Manage all IT affairs
+      token("\\)"),
+      csRegex("[A-Z].+")
+    ),
+    Arrays.asList( // PARENTHESES:  "The Abduction" (Alias)
+      token("\\("),
+      csRegex("[A-Z].+"),
+      token("\\)")
+    ),
+    Arrays.asList( // Arrows
+      token("-"),
+      token(">"),
+      csRegex("[A-Z].+")
+    ),
+    Arrays.asList( // Quotes
+      new PatternTokenBuilder().tokenRegex("[\"“”„]").setSkip(-1).build(),
+      new PatternTokenBuilder().tokenRegex("[A-Z].+").setSkip(-1).build(),
+      tokenRegex("[\"“”„]")
     )
   );
 

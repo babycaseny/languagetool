@@ -81,6 +81,8 @@ Biblián
 Biobío
 Biruaca
 Biscucuy
+Blogger
+Blogspot
 Bobures
 Boconoito
 Boconó
@@ -120,6 +122,7 @@ Camatagua
 Cambyretá
 Camejo
 Camiri
+Campari
 Canindeyú
 Cantaura
 Capatárida
@@ -259,6 +262,7 @@ Esquel
 Esteller
 Estigarribia
 Ezeiza
+FIDE
 FP
 Facatativá
 Famatina
@@ -266,6 +270,7 @@ Farriar
 Fassardi
 Febres
 Ferreñafe
+Fotolog
 Fram
 Freites
 Funza
@@ -597,6 +602,7 @@ Socopó
 Sogamoso
 Soldati
 Sotillo
+Spaski
 Sucúa
 Sullana
 Sársfield
@@ -684,6 +690,7 @@ Uribia
 Uruapan
 Ushuaia
 Uyuni
+VTC
 Vallarta
 Vallegrande
 Vallenar
@@ -794,6 +801,8 @@ ceilandeses
 ceilandés
 chance
 chances
+clínic
+clínics
 crepe
 crepes
 destaque
@@ -806,10 +815,14 @@ esrilanquesa
 esrilanquesas
 esrilanqueses
 esrilanqués
+facha
+fachas
 fallida
 fallidas
 fallido
 fallidos
+guinche
+guinches
 infoesfera
 mariquita
 mariquitas
@@ -872,6 +885,7 @@ tuvaluana
 tuvaluanas
 tuvaluano
 tuvaluanos
+wonton
 Áncash
 Ñacunday
 Ñancay

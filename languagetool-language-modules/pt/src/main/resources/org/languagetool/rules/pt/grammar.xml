@@ -62,7 +62,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     <!ENTITY divisas "bolívares|cêntimos|coroas|dinares|dólares|euros|florins|francos|ienes|iuanes|kwanzas|libras|meticais|patacas|pesos|rublos|zlótis|[€£¥$₽]">
     <!ENTITY vocativos "pai|papai|mãe|mamãe|irmão?s?|ti[oa]s?|titi[oa]s?|a?v[ôó]s?|vov[ôó]s?|prim[oa]s?|noiv[oa]s?|marido?|espos[ao]s?|namorad[oa]s?|net[oa]s?|netinh[oa]s?|cunhad[oa]s?|sogr[ao]s?|genros?|noras?|entead[oa]s?|padres?|pastora?e?s?|presidentes?|amig[ao]s?|filh[oa]s?|pessoal|povo|gente|família|man[oa]s?|maninh[ao]s?">
 
-    <!ENTITY separadores_de_oracoes "(?:[,;:…–—\(\)«“]|\-|\[)">
+    <!ENTITY separadores_de_oracoes "(?:[,;:…–—\(\)«“]|\-|\[\]\{\})">
     <!ENTITY separadores_de_abertura "(?:\(|\{|\[)">
     <!ENTITY separadores_de_fecho "(?:\)|\}|\])">
     <!ENTITY hifen "(?:[-‑])">
@@ -137,7 +137,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
     <!ENTITY languages "abancaino|abcásio|abcázio|abecásio|abecázio|abexim|abissínio|açoriano|acrense|adigueu|afegã|afegane|afegânico|afegão|africano|afro-americano|afro-brasileiro|alamão|alandês|alasquense|alasquiano|albanense|albanês|albânio|albano|alemânico|alemanisco|alemão|algeriano|alpino|alsaciano|americano|amesterdamês|amesterdanês|amsterdamês|anamês|anamita|ancarense|andorrano|andorrenho|andorrense|andorriano|angelino|anglicano|ânglico|anglo|anglo-afegã|angolano|angolense|angolês|angorá|anguilano|antiguano|antilhano|antioquenho|antofagastino|aqueu|árabe|árabe-saudita|arábico|arábigo|arábio|argeliano|argeliense|argelino|argentino|argivo|argoviano|ariquenho|armeniano|armênico|arménico|arménio|armênio|arubanense|arubano|arubenho|asiático|assuncionenho|ateniense|atlanticense|australês|australiano|austrálio|austríaco|austro-africano|austro-áfrico|austro-húngaro|axumita|azerbaidjanês|azerbaidjano|azerbaijanês|azerbaijano|azeri|baamense|baamês|baamiano|babilônico|bagdali|bahamense|bahamiano|baiano|balcânico|balinês|bangladechiano|bangladense|bangladês|bangladeshiano|bangladexiano|baramês|barbadense|barbadiano|bárbaro|bareinita|baremense|baremês|baremita|barenita|basileiense|batávico|batávio|batavo|bechuana|bechuano|belarusso|belemita|belenense|belga|bélgico|belgradino|belizenho|belizense|bengala|bengalense|bengalês|bengali|bengáli|bengalim|beninense|beninês|bermá|bermã|bermano|bermudense|bermudês|bernense|bernês|bexuana|bexuano|bielo-russo|bielorrusso|bife|birmã|birmane|birmanense|birmanês|birmaniano|birmano|bissanense|bissauense|bizantino|boche|boêmio|boémio|bogotano|boliviano|bonaerense|bordalês|borgonhês|bosnense|bosníaco|bosniano|bosniense|bósnio|bostoniano|botsuanense|botsuanês|botsuano|botswanense|botswanês|botswano|brabanção|bramá|brasileiro|brasilense|brasilês|brasiliano|brasílico|brasiliense|brasílio|brasilista|bretão|britânico|britano|bruneano|bruneíno|bruxelense|bruxelês|bucarestense|bucarestino|budapestense|budapestino|buenairense|bulgarês|búlgaro|burkinense|burquinabê|burquinense|burquinês|burquino|burundiano|burundiense|burundinês|burúndio|butanense|butanês|butâni|butani|butânico|cabo-verdense|cabo-verdiano|caienense|caimanês|calamenho|calenho|californiano|calmuco|camaronense|camaronês|camberrano|cambodjano|cambojano|cambojiano|camerunense|camerunês|cameruniano|campucheano|canadense|canadiano|canadiense|cantonês|capitalino|caraquenho|carélio|caribenho|cartageneiro|cartaginense|cartaginês|casaco|casáquio|casaquistano|catarense|catari|catariano|caucasiano|cazaque|cazaquistanês|ceilonense|centrafricano|centro-africano|centro-americano|chadiano|chadiense|checheno|checo|checoslovaco|chicagüense|chileno|chiloense|chilote|chim|china|chinês|chingalá|chino|chinoca|chiprense|cingalá|cingalês|cipreno|cipríaco|cíprico|cíprio|cipriota|colombense|colombiano|colombino|colombo|comi|comorense|comoriano|concepcionense|congo|congolense|congolês|conguense|conguês|cookense|copenhaguense|coquense|cordobense|cordovês|coríntio|córnico|cornualês|corso|cosovano|cossovano|cossovar|costa-marfinense|costa-marfiniano|costa-ricense|costa-riquenho|costa-riquense|costarricense|costarriquenho|costarriquense|couaitiano|coveitiano|cretense|Crimeano|Crimeu|croaciano|croácio|croata|cuaitiano|cubano|curaçauense|curdo|cusquenho|cuvaiti|cuvaitiano|cuwaitiano|dacarense|daguestanês|dálmata|damanense|damasceno|damasquino|danês|dânio|dano|diense|dinamarquês|dioense|diuense|djibutiano|djibutiense|dominicano|domínico|dominiquense|dominiquês|dublinense|ebúrneo|edokko|egipcíaco|egipciano|egipcião|egípcio|egiptanense|egiptano|egíptico|egiptino|eirense|emiradense|emirático|equato-guineense|equatoriano|erino|eritreu|escandinavo|escocês|esguíçaro|esguízaro|eslavo|eslovaco|eslováquio|eslovênico|eslovénico|esloveno|espanhol|espartano|essuatiniano|estado-unidense|estadunidense|estoniano|estónico|estônico|estônio|estónio|esvalbardense|etíope|etiopês|etiopiano|etiópico|etiópio|europeu|falklandês|faroense|feroês|feroico|fidjiano|fijiano|filipino|finense|finês|fínico|finlandês|fino|floridense|formosano|formosino|forro|francês|franciú|franco|franco-prussiana|frisão|frísio|gabonense|gabonês|galense|galês|galicano|gálico|gálio|gambiano|gambiense|ganense|ganês|gascão|gaulês|gaulo|gazeu|gazita|genebrense|genebrês|genebrino|georgiano|geórgico|germânico|germano|giblita|gibraltarino|gibraltino|goano|goense|goês|grã-bretão|granadino|grecânico|greciano|grego|gregório|groenlandês|gronelandês|grúzico|gruzínico|gruzínio|grúzio|guadalupense|guadalupino|guajiro|guamês|guantanameiro|guatemalense|guatemalteco|guatemaltense|guernesiano|guianense|guianês|guiano|guineano|guineense|guinéu|guinéu-equatoriano|haitiano|hauaiano|havaiano|havaneiro|havanês|hebraico|helene|helénico|helênico|heleno|helvécio|helvético|helveto|herzegóvino|herzegovino|hibérnico|hibérnio|hidrocálido|hiérnio|hierosolimita|hierosolimitano|hindu|hindustani|hindustâni|hispânico|hispaniense|hispano|holandês|hollywoodiano|holmiense|honconguês|hondurenho|hungarês|hungárico|húngaro|ianque|iemenense|iemenês|ieménico|iemênico|iemenita|Ilhas|indiano|indiático|índico|índio|indochinês|indonésio|inglês|iraniano|irânico|irânio|iraquenho|iraquense|iraquiano|irlandês|irlândes|islâmico|islandense|islandês|islândico|israelense|israeliano|israelita|israelítico|italiano|itálico|italiota|ítalo|jamaicano|jamaicense|japão|japona|japonense|japonês|japónico|japônico|jau|javanês|jerosolimita|jerosomilitano|jersiano|jerusalemita|jibutiano|jibutiense|jordaniano|jordânico|jordano|judeu|kiribatiano|kiribatino|kosovar|kossovar|kowaitiano|koweitiano|kuwaiti|kuwaitiano|kuweitiano|kwaitiano|lacedemônio|lao|laociano|laosiano|lapão|latino|latino-americano|lau|lausiano|lesotense|lesotiano|lesoto|letão|lético|letônico|letónico|letónio|letônio|libanês|liberiano|libério|líbico|líbio|liechtensteinense|liechtensteinês|liechtensteiniano|liechtensteiniense|limenho|lionense|lionês|listenstainense|listenstainês|listenstainiano|listenstainiense|listenstaino|lituânico|lituânio|lituano|liverpuldiano|loíno|londrino|luandense|lusíada|lusitaniano|lusitânico|lusitano|luso|luso-brasileira|luxemburguês|macaense|macaísta|macau|macauense|mácedo|macedoniano|macedônico|macedónico|macedónio|macedônio|madagascarense|madgiar|magiar|maia|maiotense|malaico|malaio|malasiano|malásio|malaui|malauiano|malauiense|malauista|malauita|malaviano|malavita|malawiano|malawiense|maldivano|maldivense|maldiviano|maldívio|maldivo|malês|malgaxe|malgaxo|maliano|malinês|maltês|malvinense|malvinês|malvino|managuenho|managuense|manchu|mancuniano|manês|manquês|manx|maputense|marechalês|marechaliniano|marfinense|marfiniano|mari|marroquino|marselhês|marshallês|marshallino|martinicano|mato-grossenses?|maubere|mauriciano|mauritaniano|mauritânico|mauritano|mecano|medelhinense|mediterrâneo|mediterrânico|mejilhonino|melanésio|mendocino|meroíta|meroítico|mesopotâmico|mexicano|mexilhonino|mianmarense|micênico|michigânder|micronésio|milésio|Miquelon|moçambicano|moçambique|moçambiquenho|moçambiquense|mogol|mogor|mogore|moldávico|moldávio|moldavo|monagasco|monegasco|mongol|mongólico|mongolino|mongolita|monserratense|montenegrino|moraviano|mordóvio|mordovo|moscovita|mouro|muçulmano|namibiano|namíbio|napatense|narbonense|narbonês|natalense|nauruano|nauruense|nazareno|nederlandês|neerlandês|neocaledônio|neocaledónio|neozelandense|neozelandês|neozelandiense|nepalês|nepali|nicaraguano|nicaraguense|nigerense|nigeriano|nigerino|ninivita|nipão|nipo|niponense|nipônico|nipónico|niueano|niuiano|norfolkino|norfolquino|normando|norte-african[ao]s?|norte-american[ao]s?|norte-americano|norte-chiprense|norte-cíprico|norte-ciprino|norte-cíprio|norte-cipriota|norte-corean[ao]s?|norte-coreano|norte-irlandês|norte-marianense|norte-osseta|noruego|norueguense|norueguês|nova-iorquino|núbio|oceânico|olímpico|omanense|omani|omaniano|oriental|orleniano|osmandi|osmânico|osmanli|osseta|otomano|otomão|pacenho|palauano|palauense|palestinense|palestiniano|palestino|pan-american[oa]s|panamaense|panamenho|panamense|panamiano|panamista|papua|papuásio|paquistanense|paquistanês|paquistani|paquistânico|paraguaiano|paraguaio|parisiense|párseo|pársio|pascoense|patagão|patagónio|penquista|pequinês|persa|pérseo|persiano|pérsico|pérsio|peruano|peruviano|perúvio|picardiano|pinheiro|piquenho|pitcairnês|platino|poblano|polaco|polinésico|polinésio|polonês|Polónia|polônico|polónico|polónio|polônio|polono|portenho|porto-riquenho|porto-riquense|portucalense|portuga|portugalense|portugalês|português|praguense|praiense|provençal|prussiano|púnico|puntarenense|quaitiano|queniano|quermano|quindiano|quirguistanês|quirguiz|quirguize|quirguizistanês|quiribatiano|quitenho|régio|regiomontano|reunionense|romaico|romenho|romênico|roménico|romeno|ruandense|ruandês|russiano|russo|russo-branco|russo-persa|russo-turca|sã-tomense|saaraui|saarauí|saarense|saariano|saárico|salomonense|salomônico|salomónico|salônico|salvadorenho|salvatoriano|samarinês|samoano|samoense|san-marinense|sanandresano|santa-helenense|santa-lucense|santa-luciense|santanderiano|santiagueiro|santiaguense|santiaguino|santo-antoniense|santomense|são-bartolomeense|são-cristovense|são-marinense|são-marinhense|são-martinhense|são-nicolauense|são-pedrense|são-tomense|são-vicentino|saraui|sarauí|sarauita|sarense|sariano|sárico|saudi-árabe|saudi-arábico|saudita|seattleíta|seichelense|senegalense|senegalês|senegalesco|senegaliano|senegálico|serra-leonense|serra-leonês|serra-leonino|sérvio|seychellense|siame|siamense|siamês|siberiano|sidônio|silesiano|singala|singalense|singalês|singalibense|singapurano|singapurense|singapuriano|sínico|sino|sino-japonesa|siríaco|siriano|sírio|siro|socotorino|somali|somáli|somaliano|somaliense|somalilandense|somalilandês|soviético|srilankês|srilankesa|suázi|suazi|suazilandense|suazilandês|suazilandiense|sudanês|suécio|sueco|suíço|sul-african[ao]s?|sul-africanista|sul-africano|sul-american[ao]s?|sul-americano|sul-corean[ao]s?|sul-coreano|sul-mato-grossenses?|sul-osseta|sul-sudanês|sumério|surinamense|surinamês|svalbardense|tadjique|tadjiquistanês|tagal|tagalar|tagalo|tailandês|taitiano|taiuanês|taiwanês|tajique|tajiquistanês|tanzaniano|tapatio|tártaro|tasmaniano|tchadiano|tchadiense|tcheco|tchecoslovaco|tchetcheno|tebano|tedesco|tegucigalpenho|tessalônico|teucro|teutão|teuto|teutónico|texano|tibetano|timor|timorense|timorino|tírio|tirolês|tocopilhano|togolês|toguês|tonganês|toquelauano|trácio|transdniestriano|transdnistriano|transdnístrio|transilvano|transnistriano|transnístrio|trinitário|trinitário-tobagense|tripolitano|tristanita|troiano|tudesco|tuga|tunesino|tunetano|tunisiano|tunisino|túrcico|turco|turco-caicense|turcomeno|turquemenistanês|turquemeno|turquês|turquesco|tuvalês|tuvaluano|ucraniano|ucrânio|ugandense|ugandês|uruguaiano|uruguaio|usbeque|usbequistanês|uzbeque|uzbequistanês|valão|vanuatense|vanuatuense|varsoviano|vaticano|venezolano|venezuelano|veracruzano|vienense|vietnamense|vietnamês|vietnamiano|vietnamita|vinhamarino|virginense|wallisense|washingtoniano|wellingtoniano|xangaiense|yankee|zagrebino|zairense|zambiano|zambiense|zâmbio|zamorano-chinchipense|zanzibar|zanzibarita|zelandês|zimbabuano|zimbabuense|zimbabwense|zimbabwiano|zuriquenho|zuriquense">
 
-    <!ENTITY nomes_de_instituicoes "Anuário|Conjuração|Inconfidência|Inquisição|Rede|Códigos?|Vale|Título|Plano|Frente|Vanguarda|tradutor[ae]s?|Lei|Indústria|Realismo|Conferência|Constituição|Colégio|Conselho|Comunidade|Estatuto|Serviço|Coletivo|Assuntos|Revoluções|Tabela|Encontro|Secretaria|Consulado|Comissão|Comitês?|Fórum|Núcleo|Posto|Jornal|Sistema|Lojas?|Tribunal|Cinemateca|Nacional|Sinfonia|Vila|Protocolos?|Grupos?|Peste|Gripe|Festival|Velódromo|Memorial|Programa|Expressionismo|Assembleias?|Forças?|Câmara|Impressionismo|Clubes?|Estudos|Regimentos?|Fundo|Banco|Campeonato|Conferência|Partido|Aliança|Seleção|Museu|Taça|Copa|Organização|Unidades?|Hospital|Campanha|Corporação|Correio|Marinha|Juventude|Sociedades?|Ligas?|Letras|Literaturas?|Línguas?|Revolta|Armada|Grêmio|Jogos|Academia|Associação|Centro|Companhia|Cultura|Congresso|Revista|Montanhas?|Morros?|Complexo|Ministério|Confederação|Coroa|Embaixada|Emirados?|Enciclopédia|Era|Escola|Exército|Circuito|Faculdade|Tesouro|Federação|Guerra|Igreja|Ilhas|Império|Torneios?|Índia|Instituição|Instituto|Mar|Repúblicas?|Revolução|União|Universidade|Superliga|Teatro">
+    <!ENTITY nomes_de_instituicoes "Anuário|Classificação|Fundação|Diretrize?s?|Península|Normas?|Consultoria|Empresa|Empirismo|Conjuração|Inconfidência|Inquisição|Rede|Códigos?|Vale|Título|Plano|Frente|Vanguarda|tradutor[ae]s?|Lei|Indústria|Realismo|Conferência|Constituição|Colégio|Conselho|Comunidade|Estatuto|Serviço|Coletivo|Assuntos|Revoluções|Tabela|Encontro|Secretaria|Consulado|Comissão|Comitês?|Fórum|Núcleo|Posto|Jornal|Sistema|Lojas?|Tribunal|Cinemateca|Nacional|Sinfonia|Vila|Protocolos?|Grupos?|Peste|Gripe|Festival|Velódromo|Memorial|Programa|Expressionismo|Assembleias?|Forças?|Câmara|Impressionismo|Clubes?|Estudos|Regimentos?|Fundo|Banco|Campeonato|Conferência|Partido|Aliança|Seleção|Museu|Taça|Copa|Organização|Unidades?|Hospital|Campanha|Corporação|Correio|Marinha|Juventude|Sociedades?|Ligas?|Letras|Literaturas?|Línguas?|Revolta|Armada|Grêmio|Jogos|Academia|Associação|Centro|Companhia|Cultura|Congressos?|Revista|Montanhas?|Morros?|Complexo|Ministério|Confederação|Coroa|Embaixada|Emirados?|Enciclopédia|Era|Escola|Exército|Circuito|Faculdade|Tesouro|Federação|Guerra|Igreja|Ilhas|Império|Torneios?|Índia|Instituição|Instituto|Mar|Repúblicas?|Revolução|União|Universidade|Superliga|Teatro">
 
     <!ENTITY livros_biblicos "Gênesis|Êxodo|Levítico|Deuteronômio|Josué|Juízes|Rute|Samuel|Reis|Crônicas|Esdras|Neemias|Ester|Jó|Salmos|Provérbios|Eclesiastes|Cânticos|Isaías|Jeremias|Lamentações|Ezequiel|Daniel|Oseias|Joel|Amós|Obadias|Jonas|Miqueias|Naum|Habacuque|Sofonias|Ageu|Zacarias|Malaquias|Tobias|Judite|Macabeus|Sabedoria|Eclesiástico|Baruque|Mateus|Marcos|Lucas|João|Apóstolos|Romanos|Coríntios|Gálatas|Efésios|Filipenses|Colossenses|Tessalonicenses|Timóteo|Tito|Filémon|Hebreus|Tiago|Pedro|Judas|Apocalipse">
 
@@ -3282,13 +3282,35 @@ O namorado dela era um ladrão.
           <token postag='VMN0000'/>
           <example>O evento acontece pontualmente, sendo recomendado não chegar tarde.</example>
         </antipattern>
+        <antipattern>
+          <token>,</token>
+          <token>sendo</token>
+          <token postag='DA.+|DD.+' postag_regexp='yes'/>
+          <token>mais</token>
+          <token postag='AQ.+' postag_regexp='yes'/>
+          <token min='0'>quando</token>
+          <token postag='DA.+|DD.+' postag_regexp='yes'/>
+          <token postag='N.+' postag_regexp='yes'/>
+          <example>Eram famosas, sendo a mais famosa a combinação de preto e branco.</example>
+        </antipattern>
+        <antipattern>
+          <token>,</token>
+          <token>sendo</token>
+          <token postag='DA.+|DD.+' postag_regexp='yes'/>
+          <token>mais</token>
+          <token postag='AQ.+' postag_regexp='yes'/>
+          <token postag='DA.+|DD.+' postag_regexp='yes'/>
+          <token regexp='yes'>d[aeo]s?</token>
+          <example>Houve várias adaptações, sendo a mais conhecida a de 1951.</example>
+        </antipattern>
 
         <pattern>
           <token>,</token>
           <marker>
             <token>sendo</token>
             <token postag='CC|DA.+|VMP.+|NC.+' postag_regexp='yes'>
-              <exception postag_regexp='yes' postag='NP.+|PP.+|RG'/>
+              <exception postag_regexp='yes' postag='NP.+|DI.+|PP.+|RG'/>
+              <exception>possível</exception>
             </token>
           </marker>
           <and>
@@ -4209,21 +4231,6 @@ O namorado dela era um ladrão.
           <token regexp='yes' min='0'>&adverbios_de_intensidade;</token>
           <token postag='(?:D[ADIP].|NC|A..|Z.)[FC]P.+' postag_regexp='yes'/>
         </antipattern>
-        <!-- MARCOAGPINTO 2021-05-31 (Enhanced) (17-MAR-2021+) *START* -->
-        <!--
-        As simulações deviam ser o mais realistas que há.
-        As simulações devem ser o mais realistas que há.
-        As simulações são o mais realistas que há.
-        As simulações são as mais realistas que há.
-        -->
-        <antipattern>
-          <token postag='V.+' postag_regexp='yes'/>
-          <token min="0" max="1" postag='VMN0000'/>
-          <token postag='DA.+|PD.+|PP.+|SPS.+' postag_regexp='yes'/>
-          <token postag='RG|CS' postag_regexp='yes'/>
-          <token postag='AQ0.P.+|NC.P.+' postag_regexp='yes'/>
-        </antipattern>
-        <!-- MARCOAGPINTO 2021-05-31 (17-MAR-2021+) *END* -->
 
         <!-- MARCOAGPINTO 2022-07-02 (Checked/Enhanced) (5-JUN-2022+) *START* -->
         <antipattern>
@@ -4492,6 +4499,25 @@ O namorado dela era um ladrão.
           <example>Com carinho alunos da Escola Municipal São José.</example>
         </antipattern>
         <!-- MARCOAGPINTO 2022-08-15 (Checked/Enhanced) (25-JUL-2022+) *END* -->
+
+        <!-- MARCOAGPINTO 2022-08-19 (Checked/Enhanced) (25-JUL-2022+) *START* -->
+        <antipattern>
+          <token postag='AQ..P.+|NC.P.+|V.+|CC' postag_regexp='yes'>
+            <exception postag_regexp='no' postag='SPS00'/>
+          </token>
+          <token postag='[DP][ADIPR]..S.+|SPS00:[DP][ADIPR]..S.+' postag_regexp='yes'/>
+          <token min="0" max="1" postag='_PUNCT' postag_regexp='no'/>
+          <token postag='SPS00|CC|CS|RG|I|RM|RN' postag_regexp='yes'>
+            <exception regexp='no'>mesmo</exception>
+          </token>
+          <token postag='AQ..P.+|NC.P.+|[DP][ADIPR]..P.+|SPS00:[DP][ADIPR]..P.+|V....P.+' postag_regexp='yes'/>
+          <example>Como pedagoga lido com a primeira infância e sei o quanto brinquedos, desenhos e jogos influenciam os pequenos.</example>
+          <example>Tom e Mary têm estado ocupado demais brigando para notar o quanto eles realmente se gostam.</example>
+          <example>... que trabalhava na equipe de um outro ministério de libertação até consegui falar com um líder, mas esse não quis me ministrar porque meu marido tinha passado por um divórcio.</example>
+          <example>As simulações deviam ser o mais realistas que há.</example>
+          <example>As simulações são o mais realistas que há.</example>
+        </antipattern>
+        <!-- MARCOAGPINTO 2022-08-19 (Checked/Enhanced) (25-JUL-2022+) *END* -->
 
         <pattern>
           <token negate='yes' regexp='yes'>e|ou|&hifen;</token>
@@ -9820,28 +9846,6 @@ O namorado dela era um ladrão.
       <example correction='muito poucos'>Tem <marker>muitos poucos</marker> incentivos.</example>
     </rule>
 
-    <rule id='SEQUER_WITHOUT_NEGATIVE' name='Sequer sem negativa'>
-      <!--      Created by Tiago F. Santos, 2017-03-05      -->
-      <antipattern>
-        <token regexp='yes' skip='-1'>&negacoes;</token>
-        <token>sequer</token>
-      </antipattern>
-      <antipattern>
-        <token>antes</token>
-        <token skip='-1'>de</token>
-        <token>sequer</token>
-      </antipattern>
-      <pattern>
-        <token>sequer
-          <exception scope='previous' regexp='yes'>antes|ou</exception></token>
-      </pattern>
-      <message>'Sequer' deve ser precedido de uma negação.</message>
-      <suggestion>nem <match no='1' case_conversion='alllower'/></suggestion>
-      <url>https://duvidas.dicio.com.br/sequer-ou-nem-sequer/</url>
-      <example correction='nem sequer'>Ele <marker>sequer</marker> cumprimentou.</example>
-      <example>Nem sequer vi o que estava a fazer.</example>
-    </rule>
-
     <rulegroup id='PHRASAL_VERBS_ERRORS' name='Erros de regência verbal'>
       <url>https://pt.wikipedia.org/wiki/Reg%C3%AAncia_verbal</url>
       <short>Erro de regência verbal</short>
@@ -13470,7 +13474,8 @@ O namorado dela era um ladrão.
         <token negate="yes">que</token>
       </pattern>
       <message>Substitua por <suggestion>em simultâneo</suggestion>.</message>
-      <example correction="em simultâneo">Tudo aconteceu <marker>ao mesmo tempo</marker>.</example>
+      <suggestion>simultaneamente</suggestion>
+      <example correction="em simultâneo|simultaneamente">Tudo aconteceu <marker>ao mesmo tempo</marker>.</example>
     </rule>
 	
     <!-- 	AS COISAS NÃO VÃO VERBO_INF nada vai Verb_info -->
@@ -13556,6 +13561,7 @@ O namorado dela era um ladrão.
     <!-- 	DENTRO DE/DA(S)/DO(S) em/na(s)/no(s) -->
     <!--      Created by Marco A.G.Pinto, Portuguese rule 2020-11-19 (21-OCT-2020+)     -->
     <rulegroup id='DENTRO_DE_DA_DAS_DO_DOS_EM_NA_NAS_NO_NOS' name="Dentro de/da(s)/do(s) > em/na(s)/no(s)" tags='picky'>
+
 	    <antipattern>
 	      <token>dentro</token>
           <token regexp='yes'>d[ao]s?</token>
@@ -13572,7 +13578,7 @@ O namorado dela era um ladrão.
 	    <antipattern>
 	      <token>dentro</token>
           <token regexp='yes'>d[oa]s?</token>
-	      <token regexp='yes'>assuntos?|programas?|campos?|perfi[ls]|prisão|prisões|médias?|possível</token>
+	      <token regexp='yes'>assuntos?|programas?|campos?|perfi[ls]|prisão|prisões|médias?|possível|normalidade|esperado</token>
           <example>O tema está dentro do assunto.</example>
 	    </antipattern>
       <!-- DE/EM -->
@@ -16570,6 +16576,13 @@ O namorado dela era um ladrão.
         <example correction="saberem">Isto é para <marker>que saibam</marker> o que acontece.</example>
       </rule>
       <rule>
+        <antipattern>
+          <token>para</token>
+          <token>que</token>
+          <token skip='-1'>temas</token>
+          <token postag='VMS.+' postag_regexp='yes'/>
+          <example>Isso é feito para que temas difíceis sejam resolvidos</example>
+        </antipattern>
         <pattern>
           <token postag='SPS00|CC' postag_regexp='yes'>
             <exception regexp='yes'>a|com|de|em|nem</exception>
@@ -17075,6 +17088,48 @@ O namorado dela era um ladrão.
       -->
       <rule>
         <antipattern>
+           <token>,</token>
+           <token>que</token>
+           <token regexp="yes">é|são</token>
+           <token postag='NP.+' postag_regexp='yes'/>
+           <token>,</token>
+           <example>Imagem formada na rocha, que é Jesus, e ela sabe disso.</example>
+        </antipattern>
+        <antipattern>
+           <token>,</token>
+           <token>que</token>
+           <token regexp="yes">é|são</token>
+           <token>de</token>
+           <token>,</token>
+           <example>Imagem formada na rocha, que é Jesus, e ela sabe disso.</example>
+        </antipattern>
+        <antipattern>
+           <token skip='-1'>que</token>
+           <token>;</token>
+           <token>que</token>
+           <token regexp="yes">é|são</token>
+           <token postag='VMP.+' postag_regexp='yes'/>
+           <example>Diz que não fala muito; que é calado; que não se impõe.</example>
+        </antipattern>
+        <antipattern>
+           <token postag='SENT_START'/>
+           <token postag='D.+|AQ.+' postag_regexp='yes'/>
+           <token postag='N.+' postag_regexp='yes'/>
+           <token>,</token>
+           <token>que</token>
+           <token regexp="yes">é|são</token>
+           <example>Os florais, que são nosso xodó, são reconhecidos de longe</example>
+           <example>A obra, que é uma instalação do artista francês Frédéric Baron, diz “eu te amo” em quase todos os idiomas do mundo!</example>
+        </antipattern>
+        <antipattern>
+           <token>,</token>
+           <token postag='RG'/>
+           <token>,</token>
+           <token>que</token>
+           <token regexp="yes">é|são</token>
+           <example>Argumenta-se, entretanto, que são exatamente essas coisas que agora estão "mudando".</example>
+        </antipattern>
+        <antipattern>
           <token postag='SENT_START'/>
           <token postag='_PUNCT'/>
           <token>que</token>
@@ -17097,12 +17152,16 @@ O namorado dela era um ladrão.
             <token regexp="yes">é|são</token>
           </marker>
           <token negate="yes" regexp='yes'>horas?|[\.,!\?]
-            <exception postag='CS'/>
+            <exception postag='CS|AQ.+' postag_regexp='yes'/>
           </token>
         </pattern>
-        <message>Em certos contextos, esta perífrase pode ser simplificada.</message>
+        <message>Em certos contextos, esta perífrase pode ser simplificada. Se preferir, pode também utilizar variações de "o qual".</message>
         <suggestion>sendo</suggestion>
-        <example correction="sendo">O edifício tem um grau de altura 5, <marker>que é</marker> também o mais alto da lista.</example>
+        <suggestion>os quais são</suggestion>
+        <suggestion>as quais são</suggestion>
+        <suggestion>o qual é</suggestion>
+        <suggestion>a qual é</suggestion>
+        <example correction="sendo|os quais são|as quais são|o qual é|a qual é">O edifício tem um grau de altura 5, <marker>que é</marker> também o mais alto da lista.</example>
       </rule>
 		
     </rulegroup>
@@ -19453,7 +19512,7 @@ O namorado dela era um ladrão.
           <marker>
             <token>
               <exception regexp="yes">“|«</exception>
-              <exception regexp='yes'>&separadores_de_oracoes;</exception>
+              <exception regexp='yes'>&separadores_de_oracoes;|&separadores_de_abertura;</exception>
               <exception postag='SENT_START'/></token>
             <token regexp="yes">aliás|entretanto|outrossim|pois|porém|portanto|contudo|mas|todavia</token>
           </marker>
@@ -19600,6 +19659,12 @@ O namorado dela era um ladrão.
           <token>em</token>
           <token>geral</token>
         </antipattern>
+        <antipattern>
+          <token regexp='yes'>&separadores_de_abertura;</token>
+          <token>em</token>
+          <token>geral</token>
+          <example>[em geral a mão esquerda</example>
+        </antipattern>
         <pattern>
           <marker>
             <token>em</token>
@@ -19655,6 +19720,12 @@ O namorado dela era um ladrão.
           <token>melhor</token>
           <token>ainda</token>
           <token postag_regexp='yes' postag="_PUNCT|''"/>
+        </antipattern>
+        <antipattern>
+          <token regexp='yes'>&separadores_de_abertura;</token>
+          <token>ou</token>
+          <token regexp='yes'>seja|melhor|antes</token>
+          <example>[ou seja</example>
         </antipattern>
         <pattern>
           <marker>
@@ -19961,6 +20032,32 @@ O namorado dela era um ladrão.
         <example>Meu e-mail: seunomeaqui@servidor.com</example>
       </antipattern>
       <antipattern>
+        <token regexp='yes' skip='-1'>&operadores_matematicos;|\></token>
+        <token postag='_PUNCT' min='0'/>
+        <token postag='SENT_END'/>
+        <example>Outro > Raio do cátion</example>
+        <example>Kc = [H₂O].[CO]</example>
+      </antipattern>
+      <antipattern>
+        <token>Mercado</token>
+        <token>Livre</token>
+        <token>Mercado</token>
+        <token>Pago</token>
+      </antipattern>
+      <antipattern>
+        <token postag="SENT_START" skip='-1'/>
+        <token skip='-1' regexp='yes'>:|&tracos_de_separacao;</token>
+        <token postag="SENT_END"/>
+        <example>CEP: 30.120-060</example>
+        <example>Receita de frango: Fácil e saborosa</example>
+      </antipattern>
+      <antipattern>
+        <token></token>
+        <token spacebefore='no'>.</token>
+        <token spacebefore='no' regexp='yes'>\p{L}+</token>
+        <example>README.md</example>
+      </antipattern>
+      <antipattern>
         <token postag='SENT_START'/>
         <token postag='DP.+' postag_regexp='yes'/>
         <token min="1" max="3" postag='AQ.+|NC.+|NP.+' postag_regexp='yes'/>
@@ -19978,6 +20075,12 @@ O namorado dela era um ladrão.
           <token postag="SENT_START"/>
           <token max="20"/>
           <token postag="SENT_END"/>
+        </antipattern>
+        <antipattern>
+          <token>:</token>
+          <token regexp='yes'>http.*|www.*</token>
+          <token postag="SENT_END"/>
+          <example>: https://www.youtube.com/user/OrderoftheGoodDeath</example>
         </antipattern>
         <pattern>
           <token postag="SENT_START"/>
@@ -20116,6 +20219,19 @@ O namorado dela era um ladrão.
           <token regexp='yes'>estima|consideração</token>
           <token postag="SENT_END">,</token>
         </antipattern>
+        <antipattern>
+          <token postag="SENT_START"/>
+          <token regexp="yes" max='5'>\p{L}*</token>
+          <token postag="SENT_END">,</token>
+          <example>Oi,</example>
+          <example>Prezado Senhor Luiz Gonzalez Dias,</example>
+          <example>Oi mãe,</example>
+          <example>Gabrielly,</example>
+          <example>Respeitosamente,</example>
+          <example>Cumprimentos,</example>
+          <example>Prezados,</example>
+          <example>Olá,</example>
+        </antipattern>
         <pattern>
           <token postag="SENT_END">,</token>
         </pattern>
@@ -20148,6 +20264,11 @@ O namorado dela era um ladrão.
           <token postag="SENT_START"/>
           <token regexp="yes">&legendas;</token>
           <token regexp="yes">\d[\.\d]*</token>
+        </antipattern>
+        <antipattern>
+          <token regexp='yes' skip='-1'>lista|voo|&nomes_de_instituicoes;|reserva</token>
+          <token postag="SENT_END"/>
+          <example>Lista de aves da Bahia</example>
         </antipattern>
         <pattern>
           <token postag="SENT_START"/>
@@ -21293,7 +21414,7 @@ O namorado dela era um ladrão.
       <example>Acho que dá! ;)</example>
     </rule>
 
-    <rulegroup id='INTERROGATIVES_PUNTUATION' name="Pontuação em interrogações: Por quê?" default='temp_off'>
+    <rulegroup id='INTERROGATIVES_PUNTUATION' name="Pontuação em interrogações: Por quê?" default='on'>
       <!--  Created by Tiago F. Santos, 2017-XX-XX      -->
       <antipattern>
         <token>como</token>
@@ -24892,6 +25013,25 @@ O namorado dela era um ladrão.
           <token>e</token>
           <token spacebefore="no"/>
         </antipattern>
+        <antipattern>
+          <token>e</token>
+          <token min='0'>,</token>
+          <token regexp='yes'>portanto|por|porque</token>
+          <token min='0' regexp='yes'>isso|qu[eê]</token>
+        </antipattern>
+        <antipattern>
+          <token regexp='yes'>mas|ou|então</token>
+          <token min='0'>,</token>
+          <token regexp='yes'>por|porque</token>
+          <token min='0' regexp='yes'>qu[eê]</token>
+        </antipattern>
+        <antipattern>
+          <token regexp='yes' skip='-1'>conjunção|conjunções</token>
+          <token regexp='yes'>&conjuncoes_coordenativas;</token>
+          <token min='0'>,</token>
+          <token regexp='yes'>&conjuncoes_coordenativas;</token>
+          <example>Conjunções adversativas: contudo, entretanto, mas, não obstante...</example>
+        </antipattern>
 
         <!-- MARCOAGPINTO 2022-04-29 (1-JAN-2022+) *START* -->
         <!--
@@ -24907,7 +25047,8 @@ O namorado dela era um ladrão.
         <!-- MARCOAGPINTO 2022-04-29 (1-JAN-2022+) *END* -->
 
         <pattern>
-          <token regexp='yes'>&conjuncoes_coordenativas;</token>
+          <token regexp='yes'>&conjuncoes_coordenativas;
+            <exception>logo</exception></token>
           <token min='0'>,</token>
           <token regexp='yes'>&conjuncoes_coordenativas;
             <exception regexp='yes'>logo|nem|e</exception></token>
@@ -24932,15 +25073,73 @@ O namorado dela era um ladrão.
         <example correction='e/ou|e|ou'>Este é um caminho promissor <marker>e ou</marker> um com muitos altos e baixos.</example>
       </rule>
       <rule>
+        <antipattern>
+          <token negate_pos='yes' postag='SENT_START'/>
+          <token>mas</token>
+          <token>porque</token>
+          <example>Isso não ocorreu pela época do ano, mas porque as ações erradas foram tomadas.</example>
+        </antipattern>
+        <antipattern>
+          <token skip='-1'>porque</token>
+          <token>e</token>
+          <token>porque</token>
+          <example>Isso ocorreu porque eles não fizeram o que era necessário e porque não havia ninguém para ajudar.</example>
+        </antipattern>
+        <antipattern>
+          <token regexp='yes'>por|para</token>
+          <token postag='RN' min='0'/>
+          <token postag='VMN.+' postag_regexp='yes' skip='-1'/>
+          <token>e</token>
+          <token>porque</token>
+          <example>Isso ocorreu por não fazerem o necessário e porque não havia ninguém para ajudar.</example>
+        </antipattern>
+        <antipattern>
+          <token>por</token>
+          <token postag='NC.+' postag_regexp='yes' skip='-1'/>
+          <token>e</token>
+          <token>porque</token>
+          <example>Isso ocorreu por causa dele e porque não havia ninguém para ajudar.</example>
+        </antipattern>
+        <antipattern>
+          <token skip='-1' regexp='yes'>quem|como|quando|onde</token>
+          <token>e</token>
+          <token>porque</token>
+          <example>Quis saber quem ele era e porque não havia ninguém para ajudar.</example>
+        </antipattern>
+        <antipattern>
+          <token>em</token>
+          <token skip='-1'>razão</token>
+          <token>e</token>
+          <token>porque</token>
+          <example>Isso ocorreu em razão disso e porque não havia ninguém para ajudar.</example>
+        </antipattern>
+        <antipattern>
+          <token>pelo</token>
+          <token regexp='yes'>fac?to</token>
+          <token postag='SPS.+' postag_regexp='yes' skip='-1'/>
+          <token>e</token>
+          <token>porque</token>
+          <example>Isso ocorreu pelo fato dele não entrar e porque não havia ninguém para ajudar.</example>
+        </antipattern>
+        <antipattern>
+          <token>devido</token>
+          <token skip='-1' regexp='yes'>[àa]o?s?</token>
+          <token>e</token>
+          <token>porque</token>
+          <example>Isso ocorreu devido a disso e porque não havia ninguém para ajudar.</example>
+        </antipattern>
         <pattern>
-          <token regexp='yes'>&conjuncoes_coordenativas;</token>
+          <token regexp='yes'>&conjuncoes_coordenativas;
+            <exception>ou</exception>
+          </token>
           <token>porque</token>
         </pattern>
-        <message>Possível fragmento. Utilize apenas uma conjunção deste tipo.</message>
+        <message>Possível fragmento. Utilize apenas uma conjunção deste tipo. Se puder substituir por "por qual razão", utilize "por que".</message>
         <suggestion>\1</suggestion>
         <suggestion>\3</suggestion>
         <suggestion>\1, \3</suggestion>
-        <example correction='e|porque|e, porque'>Este é um caminho promissor <marker>e porque</marker> ainda há um grande caminho a percorrer, tem de ser continuado.</example>
+        <suggestion>\1 por que</suggestion>
+        <example correction='e|porque|e, porque|e por que'>Este é um caminho promissor <marker>e porque</marker> ainda há um grande caminho a percorrer, tem de ser continuado.</example>
       </rule>
       <rule>
         <pattern>
@@ -24980,7 +25179,9 @@ O namorado dela era um ladrão.
       </rule>
       <rule>
         <pattern>
-          <token regexp='yes'>&conjuncoes_coordenativas;</token>
+          <token regexp='yes'>&conjuncoes_coordenativas;
+            <exception regexp='yes'>e|nem</exception>
+          </token>
           <token min='0'>,</token>
           <token>por</token>
           <token regexp='yes'>conseguinte|isso</token>
@@ -38709,25 +38910,73 @@ O namorado dela era um ladrão.
       <!-- Localized from Catalan by Tiago F. Santos, 2017-03-05 -->
       <url>https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/2500-2-500-ou-2500/12873</url>
       <antipattern>
+        <token regexp="yes">\d+\.\d+</token>
+        <token regexp='yes' spacebefore='no'>&tracos_de_separacao;|/</token>
+        <example>Processo nº: 23079.229747/2021-72</example>
+      </antipattern>
+      <antipattern>
+        <token regexp="yes">0\d+\.\d+</token>
+        <example>(041.42)</example>
+      </antipattern>
+      <antipattern>
+        <token regexp='yes'>/</token>
+        <token regexp="yes" spacebefore='no'>\d+\.\d+</token>
+        <example>Sensor: 1/2.8” 1 megapixel</example>
+      </antipattern>
+      <antipattern>
+        <token postag="N.+" postag_regexp='yes'/>
+        <token regexp="yes">\d{1,2}\.\d{1,2}</token>
+        <token postag="SENT_END|_PUNCT" postag_regexp='yes'/>
+        <example>E-mail agosto 2.2;</example>
+      </antipattern>
+      <antipattern>
+        <token regexp='yes'>\p{L}+</token>
+        <token regexp='yes' spacebefore='no'>[:;]</token>
+        <token regexp="yes">\d{1,2}\.\d{1,2}\.</token>
+        <token postag="SENT_END"/>
+        <example> importância; 4.2. C-Sat</example>
+      </antipattern>
+      <antipattern>
+        <token regexp='yes'>&tracos_de_separacao;|/</token>
+        <token regexp="yes">\d{1,2}\.\d{1,2}</token>
+        <token postag="SENT_END"/>
+        <example>AULA 4 - 16.08!</example>
+      </antipattern>
+      <antipattern>
+        <token regexp='yes'>\p{Lu}+</token>
+        <token regexp='yes' spacebefore='no'>&tracos_de_separacao;|/</token>
+        <token regexp="yes">\d{1,2}\.\d{1,2}</token>
+        <example> referência MS-3.1</example>
+      </antipattern>
+      <antipattern>
         <token postag="SENT_START"/>
         <token regexp="yes">\d{1,2}\.\d{1,2}</token>
+      </antipattern>
+      <antipattern>
+        <token regexp="yes">202\d{1}\.\d{1}</token>
+        <token><exception regexp='yes'>&unidades_de_medida_por_extenso;|&unidades_de_medida;</exception></token>
+        <example>a partir de 2020.2 não o fez</example>
+      </antipattern>
+      <antipattern>
+        <token regexp="yes">\d{1}\.202\d{1}</token>
+        <token><exception regexp='yes'>&unidades_de_medida_por_extenso;|&unidades_de_medida;</exception></token>
+        <example>a partir de 2.2022 não o fez</example>
       </antipattern>
       <antipattern>
         <token regexp="yes">\d{1,3}\.\d{3}\.\d{3}</token>
       </antipattern>
       <antipattern>
         <marker>
-          <token regexp="yes">arts?|fig|caps?|ap|s|v|veg|§|cf|\p{Lu}.+|web</token>
-          <token min="0">.</token>
+          <token regexp="yes">arts?|fig|caps?|ap|s|v|veg|§|cf|\p{Lu}.+|web|eq|seq|n|número|regs?|registros?|semestres?</token>
+          <token min="0" regexp='yes'>\.|°</token>
           <token regexp="yes">\d+\.\d+</token>
         </marker>
       </antipattern>
       <antipattern> <!-- Enumeração principal da frase -->
-        <marker>
-          <token postag="SENT_START"/>
+          <token postag="SENT_START|_PUNCT" postag_regexp='yes'/>
           <token regexp="yes">\d+\.\d+</token>
           <token spacebefore="no" regexp="yes">[.:)]</token>
-        </marker>
+          <example>Retirada dos tickets; 2.3. Automações;</example>
       </antipattern>
       <antipattern>
         <marker>
@@ -38784,17 +39033,14 @@ O namorado dela era um ladrão.
         <!-- MARCOAGPINTO 2020-11-04 (21-OCT-2020+) *START* -->
         <!-- "Ver subcapítulo 3.6." -->
         <antipattern>
-          <token postag='V.+' postag_regexp='yes'/>
-          <token min="0" max="1" regexp='yes'>as?|os?|das?|dos?|nas?|nos?</token>
-          <token regexp='yes'>capítulos?|subcapítulos?|partes?|parágrafos?|equação|equações|figuras?|gravuras?|tabelas?</token>
+          <token regexp='yes' skip='-1'>ite[mn]s?|matrículas?|cláusulas?|capítulos?|subcapítulos?|partes?|parágrafos?|equação|equações|figuras?|gravuras?|tabelas?</token>
           <token postag='Z0CN0'/>
         </antipattern>
         <!-- MARCOAGPINTO 2020-11-04 (21-OCT-2020+) *END* -->
         <!-- MARCOAGPINTO 2020-11-08 (21-OCT-2020+) *START* -->
         <!-- "Na tabela do subcapítulo 5.6, constata-se os resultados previstos." -->
         <antipattern>
-          <token regexp='yes'>as?|os?|das?|dos?|nas?|nos?</token>
-          <token regexp='yes'>capítulos?|subcapítulos?|partes?|parágrafos?|equação|equações|figuras?|gravuras?|tabelas?</token>
+          <token regexp='yes' skip='-1'>ite[mn]s?|matrículas?|cláusulas?|capítulos?|subcapítulos?|partes?|parágrafos?|equação|equações|figuras?|gravuras?|tabelas?</token>
           <token postag='Z0CN0'/>
         </antipattern>
         <!-- MARCOAGPINTO 2020-11-08 (21-OCT-2020+) *END* -->
@@ -38828,7 +39074,7 @@ O namorado dela era um ladrão.
           <token regexp="yes">\d+\.\d+
             <exception regexp="yes">\d{1,3}\.\d{3}</exception></token>
         </pattern>
-        <message>Para separar os decimais, utilize uma vírgula.</message>
+        <message>Em português, utilizamos a vírgula para indicar números decimais.</message>
         <suggestion><match no='1' regexp_match='(\d+)\.(\d+)' regexp_replace='$1,$2'/></suggestion>
         <example correction="9,5"># <marker>9.5</marker></example> <!-- XXX # - if a number is at sentence start, it can be part of an enumeration -->
         <example correction="9,5">És de <marker>9.5</marker>.</example>
@@ -40783,9 +41029,61 @@ O namorado dela era um ladrão.
     <rule id="SEMICOLON_COLON_SPACING" name="Espaços em falta: ':' e ';'">
       <!-- Localized from German grammar.xml by Tiago F. Santos,  2017-08-17      -->
       <antipattern>
-        <token regexp="yes">“|«|"|\(</token>
+        <token regexp="yes">[«»“”"'‘’]|\(|\[</token>
         <token regexp="yes">:|;</token>
-        <token regexp="yes">”|»|"|\)</token>
+        <token regexp="yes">[«»“”"'‘’]|\)|\]</token>
+      </antipattern>
+      <antipattern>
+        <token regexp="yes">_\p{L}+</token>
+        <token min='0' spacebefore='no'></token>
+        <token regexp="yes" spacebefore='no'>:|;</token>
+        <token min='0' spacebefore='no'></token>
+        <example>_CONTEÚDO:ativado</example>
+      </antipattern>
+      <antipattern>
+        <token regexp='yes' min='0'>&separadores_de_abertura;</token>
+        <token regexp='yes'>.*_.*</token>
+        <token regexp="yes" spacebefore='no'>:|;</token>
+        <token regexp='yes' spacebefore='no'>.*_.*</token>
+        <example>[custom_block:body_offer_card_fin_consorcio_ps]</example>
+      </antipattern>
+      <antipattern>
+        <token regexp="yes" spacebefore='no'>:|;</token>
+        <token regexp='yes' spacebefore='no'>.*_.*</token>
+        <example>CNPJ/MEI:___________________________</example>
+      </antipattern>
+      <antipattern>
+        <token regexp="yes" spacebefore='no'>:|;</token>
+        <token spacebefore='no' min='0'></token>
+        <token spacebefore='no' regexp='yes'>\\|\.|[_;:!\?,]|&operadores_matematicos;</token>
+        <example>_CONTEÚDO:_</example>
+        <example>$IMG:Speed_20_07_5F5F5F.png</example>
+        <example>CPF:...................</example>
+        <example>Está no G:\recursoshumanos</example>
+      </antipattern>
+      <antipattern>
+        <token regexp='yes'>chapter|fig|tab</token>
+        <token regexp="yes" spacebefore='no'>:|;</token>
+        <example>fig:grafico01</example>
+      </antipattern>
+      <antipattern>
+        <token regexp='yes'>\d{1,2}h</token>
+        <token regexp="yes" spacebefore='no'>:|;</token>
+        <token regexp='yes' spacebefore='no'>\d{1,2}</token>
+        <example>às 15h:30</example>
+      </antipattern>
+      <antipattern>
+        <token>RA</token>
+        <token regexp="yes" spacebefore='no'>:|;</token>
+        <token regexp='yes' spacebefore='no'>\d+</token>
+        <example>RA:19064468</example>
+      </antipattern>
+      <antipattern>
+        <token regexp="yes">:|;</token>
+        <token regexp='yes' spacebefore='no'>[,\.;\?!_]</token>
+        <token regexp='yes' spacebefore='no' min='0'>[,\.;\?!_]</token>
+        <example>Alternativas da resposta:, sim, não</example>
+        <example>Data de nascimento:___/___/____ Idade</example>
       </antipattern>
       <antipattern><!-- XXX Wikipedia lists and time formats -->
         <token>:</token>
@@ -40816,8 +41114,11 @@ O namorado dela era um ladrão.
       <pattern>
         <marker>
           <token regexp="yes">:|;
-            <exception postag='SENT_END'/></token>
-          <token spacebefore="no"/>
+            <exception postag='SENT_END'/>
+          </token>
+          <token spacebefore="no">
+          <exception regexp='yes'>[\.,;\:_]|&separadores_de_fecho;</exception>
+          </token>
         </marker>
       </pattern>
       <!-- MARCOAGPINTO Fixed: 2020-07-08 (2-JUL-2020+) *END* -->
@@ -42515,6 +42816,38 @@ O namorado dela era um ladrão.
         <!-- MARCOAGPINTO 2020-06-07 + 2020-06-09 *START* -->
         <!-- ! or ? or . at the end -->
         <antipattern>
+          <token regexp='yes'>somente|só|apenas</token>
+          <token>eu</token>
+          <example>Somente eu sei como é duro.</example>
+        </antipattern>
+        <antipattern case_sensitive='yes'>
+          <token regexp='yes' min='0'>\p{Ll}+</token>
+          <token>EU</token>
+          <token regexp='yes'>\p{Ll}+</token>
+          <example>Isso se EU estiver consolidado.</example>
+        </antipattern>
+        <antipattern>
+          <token regexp='yes' skip='-1'>[«»“”"'‘’]</token>
+          <token skip='-1'>eu</token>
+          <token regexp='yes'>[«»“”"'‘’]</token>
+          <example>Ela disse, "Eu quero que você vá".</example>
+        </antipattern>
+        <antipattern>
+          <token postag='SENT_START'/>
+          <token min='0' postag='_PUNCT'/>
+          <token>Eu</token>
+          <token postag='V.+' postag_regexp='yes'/>
+          <token>,</token>
+          <example>Eu vou, prometo.</example>
+        </antipattern>
+        <antipattern>
+          <token>e</token>
+          <token>eu</token>
+          <token postag='V.+' postag_regexp='yes'/>
+          <token>,</token>
+          <example>E eu vou, prometo.</example>
+        </antipattern>
+        <antipattern>
           <token>eu</token>
           <token postag_regexp="yes" postag="V...1S.+"/>
           <token regexp='yes'>\.|!|\?</token>
@@ -42537,6 +42870,31 @@ O namorado dela era um ladrão.
       <rule tags="picky">
         <!-- MARCOAGPINTO 2020-06-07 + 2020-06-09 *START* -->
         <!-- ! or ? or . at the end -->
+        <antipattern>
+          <token regexp='yes'>somente|só|apenas</token>
+          <token>nós</token>
+          <example>Somente nós sabemos como é duro.</example>
+        </antipattern>
+        <antipattern case_sensitive='yes'>
+          <token regexp='yes' min='0'>\p{Ll}+</token>
+          <token case_sensitive='yes'>NÓS</token>
+          <token regexp='yes'>\p{Ll}+</token>
+          <example>Isso se NÓS estivermos consolidados.</example>
+        </antipattern>
+        <antipattern>
+          <token regexp='yes' skip='-1'>[«»“”"'‘’]</token>
+          <token skip='-1'>nós</token>
+          <token regexp='yes'>[«»“”"'‘’]</token>
+          <example>Ela disse, "Nós queremos que você vá".</example>
+        </antipattern>
+        <antipattern>
+          <token postag='SENT_START'/>
+          <token min='0' postag='_PUNCT'/>
+          <token>Nós</token>
+          <token postag='V.+' postag_regexp='yes'/>
+          <token>,</token>
+          <example>Nós vamos, prometo.</example>
+        </antipattern>
         <antipattern>
           <token>nós</token>
           <token postag_regexp="yes" postag="V...1P.+"/>
@@ -43023,13 +43381,20 @@ O namorado dela era um ladrão.
         <example>É membro da República Centro-Africana.</example>
       </antipattern>
       <antipattern>
-        <token>Letras</token>
         <token regexp='yes'>&tracos_de_separacao;</token>
         <token regexp='yes'>&languages;</token>
         <token min='0'>e</token>
         <token regexp='yes' min='0'>&languages;</token>
         <example>Era formada em Letras - Espanhol.</example>
         <example>Era formada em Letras - Português e Espanhol.</example>
+      </antipattern>
+      <antipattern>
+        <token regexp='yes'>&languages;</token>
+        <token min='0'>e</token>
+        <token regexp='yes' min='0'>&languages;</token>
+        <token regexp='yes'>&tracos_de_separacao;</token>
+        <example>Espanhol - Avançado.</example>
+        <example>Inglês — Intermediário.</example>
       </antipattern>
       <antipattern>
         <token case_sensitive='yes' regexp='yes'>[A-Z][A-Z]*</token>
@@ -43085,12 +43450,39 @@ O namorado dela era um ladrão.
         <token regexp="yes" inflected="yes">&languages;</token>
         <example>Reportagem de capa: Inglês 100% online.</example>
       </antipattern>
+      <antipattern>
+        <token>letras</token>
+        <token></token>
+        <token regexp="yes" inflected="yes">&languages;</token>
+        <example>Curso de letras/Português da Universidade.</example>
+      </antipattern>
+      <antipattern>
+        <token postag='SENT_START'/>
+        <token regexp='yes' case_sensitive='yes'>de|d[ao]s?</token>
+        <token regexp="yes" inflected="yes">&languages;</token>
+        <example>dos Holandeses.</example>
+      </antipattern>
       <!-- Tornou-se membro da Academia Francesa em 1938. -->
       <!-- Escola de Alemão: supremacia do Estado sobre o Direito. -->
       <antipattern>
-        <token regexp='yes' case_sensitive="yes">Programa|[Ss]eminários?|[Cc]ursos?|[Aa]ulas?|[Ss]emestres?|[Tt]rimestres?|Atividades?|polonia|disciplinas?|Disciplinas?|Produção|[Pp]rofessora?e?s?|Academia|África|Amaz[óô]nia|Am[éê]rica|Associação|Centro|Companhia|Coroa|Cultura|Confederação|Internacional|Embaixada|Emirados?|Enciclopédias?|Era|Escola|Exército|Faculdade|Federação|Guerra|Igreja|Ilhas|Império|Índia|Instituição|Instituto|Mar|Repúblicas?|Revolução|União|Universidade|Revolta</token>
+        <token regexp='yes' case_sensitive="yes">Programa|[Aa][vl]|Jd|R|Seleção|[Ss]eminários?|[Cc]ursos?|[Aa]ulas?|[Ss]emestres?|[Tt]rimestres?|Atividades?|polonia|disciplinas?|Disciplinas?|Produção|[Pp]rofessora?e?s?|Academia|África|Amaz[óô]nia|Am[éê]rica|Associação|Centro|Companhia|Coroa|Cultura|Confederação|Internacional|Embaixada|Emirados?|Enciclopédias?|Era|Escola|Exército|Faculdade|Federação|Guerra|Igreja|Ilhas|Império|Índia|Instituição|Instituto|Mar|Repúblicas?|Revolução|União|Universidade|Revolta</token>
         <token min="0" max="1" regexp='yes'>de|d[ao]s?</token>
         <token regexp="yes" inflected="yes">&languages;</token>
+        <example>Seria convocado pouco depois para defender a Seleção Brasileira na Copa do Mundo de Futebol</example>
+        <example>R dos Holandeses</example>
+        <example>Av dos Holandeses</example>
+      </antipattern>
+      <antipattern>
+        <token>Ítalo</token>
+        <token>
+          <exception spacebefore='no'>-</exception>
+        </token>
+        <example>pressionaram |Ítalo| (Paulo Lessa)</example>
+      </antipattern>
+      <antipattern>
+        <token postag='N.+' postag_regexp='yes'/>
+        <token case_sensitive='yes'>Russo</token>
+        <example>Lívia Russo</example>
       </antipattern>
       <pattern>
         <and>
@@ -43101,7 +43493,7 @@ O namorado dela era um ladrão.
           <and>
           <token regexp="yes" inflected="yes">&languages;
             <exception postag_regexp='yes' postag='NP.+'/>
-            <exception regexp='yes'>franca|fino|brasília|Yankees|Normando|Japão|coríntios|georgiano|angelino|jordana|danos?|china|Uruguaiana|nadanos?|londrina|Núbia|damasceno|bárbara|havaianas|georgiana|helen[oa]|gregório|armênia</exception></token>
+            <exception regexp='yes'>franca|fino|brasília|Yankees|platina|fin[oa]s?|angelina|Normando|Japão|moura|helene|corsa|forro|coríntios|georgiano|angelino|jordana|danos?|china|Uruguaiana|nadanos?|londrina|Núbia|damasceno|bárbara|havaianas|georgiana|helen[oa]|gregório|armênia</exception></token>
           <token regexp="yes">\p{Lu}\p{Ll}.*</token>
           </and>
         </marker>
@@ -44558,6 +44950,91 @@ O namorado dela era um ladrão.
       <example correction="morreu|faleceu|pereceu">Ele <marker>perdeu a vida</marker> num acidente.</example>
       <example correction="morreram|faleceram|pereceram">Um milhão de pessoas <marker>perderam as suas vidas</marker> na guerra.</example>
     </rule>
+
+
+    <!-- POR ISSO EXISTE/EXISTEM existindo -->
+    <rulegroup id='POR_ISSO_V_3PESSOA_SINGULAR_PLURAL_GERUNDIO' name="Simplificar: Por isso + verbo na 3.ª pessoa → Verbo gerúndio" type='style'>
+      <!-- Created by Marco A.G.Pinto with Ricardo Joseh Lima suggestions, Portuguese rule 2022-08-17/18 (25-JUL-2022+) -->
+      <!--
+      Os bits são o nível mais baixo existente nos computadores, por isso existem em maior quantidade. → Os bits são o nível mais baixo existente nos computadores, existindo em maior quantidade.
+      -->
+    <rule>
+      <pattern>
+        <token>
+          <exception regexp='yes'>e|,|;</exception>
+          <exception postag='SENT_START'/>
+        </token>
+        <token>por
+          <exception scope='previous' postag_regexp='yes' postag='SENT_START|_QUOT|CS|RM|RN|RG|V.+|CC'/>
+        </token>
+        <token>isso</token>
+        <token postag='VMIP3.+' postag_regexp='yes'>
+          <exception scope='next' postag_regexp='yes' postag='VMG0000|_PUNCT|VMIP3.+|VMM02.+'/>
+          <exception scope='next' regexp='yes'>que|tanto</exception>
+        </token>
+      </pattern>
+      <message>Esta perífrase poderá ser simplificada.</message>
+      <suggestion>\1, <match no='4' postag='VMIP3.+' postag_regexp="yes" postag_replace='VMG0000'/></suggestion>
+      <suggestion>\1; \2 \3, \4</suggestion>
+      <example correction="computadores, existindo|computadores; por isso, existem">Os bits são o nível mais baixo existente nos <marker>computadores por isso existem</marker> em maior quantidade.</example>
+    </rule>
+    <rule>
+      <pattern>
+        <token>,</token>
+        <token>por
+          <exception scope='previous' postag_regexp='yes' postag='SENT_START|_QUOT|CS|RM|RN|RG|V.+|CC'/>
+        </token>
+        <token>isso</token>
+        <token postag='VMIP3.+' postag_regexp='yes'>
+          <exception scope='next' postag_regexp='yes' postag='VMG0000|_PUNCT|VMIP3.+|VMM02.+'/>
+          <exception scope='next' regexp='yes'>que|tanto</exception>
+        </token>
+      </pattern>
+      <message>Esta perífrase poderá ser simplificada.</message>
+      <suggestion>\1 <match no='4' postag='VMIP3.+' postag_regexp="yes" postag_replace='VMG0000'/></suggestion>
+      <suggestion>; \2 \3, \4</suggestion>
+      <example correction=", existindo|; por isso, existem">Os bits são o nível mais baixo existente nos computadores<marker>, por isso existem</marker> em maior quantidade.</example>
+    </rule>
+  </rulegroup>
+
+
+    <!-- SEMANA QUE VEM próxima semana -->
+    <rulegroup id='QUE_VEM_PROXIMA' name="Simplificar: NC + que + vem → próxim(ao)(s) + NC">
+      <!-- Created by Marco A.G.Pinto with Ricardo Joseh Lima suggestions, Portuguese rule 2022-08-19 (25-JUL-2022+) -->
+      <!--
+      A licença acaba na sexta-feira da semana que vem. → A licença acaba na sexta-feira da próxima semana.
+      A licença acaba na noite do natal que vem. → A licença acaba na noite do próximo natal.
+      -->
+      <rule>
+        <pattern>
+          <token postag='SPS00:DA.+' postag_regexp='yes'/>
+          <marker>
+            <token postag='NCF.+' postag_regexp='yes'/>
+            <token>que</token>
+            <token>vem</token>
+          </marker>
+          <token postag='V.+|_PUNCT|CC' postag_regexp='yes'/>
+        </pattern>
+        <message>Esta perífrase poderá ser simplificada.</message>
+        <suggestion><match no='1' postag='SPS00:DA0(..)0' postag_replace='NC$1000'>próxima</match> \2</suggestion>
+        <example correction="próxima semana">A licença acaba na sexta-feira da <marker>semana que vem</marker>.</example>
+      </rule>
+
+      <rule>
+        <pattern>
+          <token postag='SPS00:DA.+' postag_regexp='yes'/>
+          <marker>
+            <token postag='NCM.+' postag_regexp='yes'/>
+            <token>que</token>
+            <token>vem</token>
+          </marker>
+          <token postag='V.+|_PUNCT|CC' postag_regexp='yes'/>
+        </pattern>
+        <message>Esta perífrase poderá ser simplificada.</message>	
+        <suggestion><match no='1' postag='SPS00:DA0(..)0' postag_replace='NC$1000'>próximo</match> \2</suggestion>
+        <example correction="próximo natal">A licença acaba na noite do <marker>natal que vem</marker>.</example>
+      </rule>
+    </rulegroup>
 
 
     <!-- FICOU DEMONSTRADO QUE demonstrámos que -->
@@ -48386,6 +48863,12 @@ O namorado dela era um ladrão.
           <token>n</token>
           <example>q = p + n</example>
           <example>[n + 2 = z]</example>
+        </antipattern>
+        <antipattern>
+          <token postag='_PUNCT'/>
+          <token spacebefore='no'>n</token>
+          <token spacebefore='no' postag='_PUNCT'/>
+          <example>e,data:n,type:s,success:function</example>
         </antipattern>
         <antipattern>
           <token>n</token>

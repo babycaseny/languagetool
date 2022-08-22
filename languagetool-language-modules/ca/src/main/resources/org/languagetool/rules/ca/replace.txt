@@ -1,3 +1,14 @@
+infundi=falsedat|falòrnia|bola|faula
+infundis=falòrnies|falsedats|badomeries|badomies
+Cenicienta=Ventafocs|Cendrosa
+cenicienta=ventafocs|cendrosa
+cubito=glaçó|dau de gel|terròs de gel|terrosset de gel
+cubitos=glaçons|daus de gel|terrossos de gel|terrossets de gel
+mejilló|mejillón=musclo|clòtxina
+mejillones|mejillones=musclos|clòtxines
+# generalitzar errors *queno
+queno=que no|quedo|quan
+queté=que té
 òmnibusos|omnibusos|ómnibusos=òmnibus
 maltreta=malparada|malmès|malmenat
 maltretes=malparades|malmeses|malmenades
@@ -2437,7 +2448,7 @@ xambelans=camarlencs
 xamusquina=socarrim|socarrat|cremat
 xanflans=xamfrans
 xanflà=xamfrà
-xanxullo|chanchullo=tripijoc|martingala
+xanxullo|chanchullo|txanxullo|txantxullo=tripijoc|martingala
 xanxullos|chanchullos=tripijocs|martingales
 xapista=planxista
 xapistes=planxistes

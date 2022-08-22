@@ -112,7 +112,7 @@ class DocumentCursorTools {
         }
       }
     } catch (Throwable t) {
-      MessageHandler.printException(t);     // all Exceptions thrown by UnoRuntime.queryInterface are caught
+      MessageHandler.printException(t);     // all Exceptions thrown by UnoRuntime.queryInterface are caught and printed to log file
       return null;           // Return null as method failed
     }
   }
@@ -129,7 +129,7 @@ class DocumentCursorTools {
       }
       return UnoRuntime.queryInterface(XParagraphCursor.class, xTextCursor);
     } catch (Throwable t) {
-      MessageHandler.printException(t);     // all Exceptions thrown by UnoRuntime.queryInterface are caught
+      MessageHandler.printException(t);     // all Exceptions thrown by UnoRuntime.queryInterface are caught and printed to log file
       return null;           // Return null as method failed
     }
   }
@@ -166,7 +166,7 @@ class DocumentCursorTools {
       while (xPCursor.gotoNextParagraph(false)) nPara++;
       return nPara;
     } catch (Throwable t) {
-      MessageHandler.printException(t);     // all Exceptions thrown by UnoRuntime.queryInterface are caught
+      MessageHandler.printException(t);     // all Exceptions thrown by UnoRuntime.queryInterface are caught and printed to log file
       return 0;              // Return 0 as method failed
     }
   }
@@ -184,18 +184,36 @@ class DocumentCursorTools {
     int num = 0;
     try {
       XEnumerationAccess xParaEnumAccess = UnoRuntime.queryInterface(XEnumerationAccess.class, xPCursor);
+      if (xParaEnumAccess == null) {
+        return null;
+      }
       XEnumeration xParaEnum = xParaEnumAccess.createEnumeration();
+      if (xParaEnum == null) {
+        return null;
+      }
       while (xParaEnum.hasMoreElements()) {
         XEnumerationAccess xEnumAccess = UnoRuntime.queryInterface(XEnumerationAccess.class, xParaEnum.nextElement());
+        if (xEnumAccess == null) {
+          continue;
+        }
         XEnumeration xEnum = xEnumAccess.createEnumeration();
+        if (xEnum == null) {
+          continue;
+        }
         boolean isDelete = false;
         while (xEnum.hasMoreElements()) {
           XTextRange xPortion = (XTextRange) UnoRuntime.queryInterface(XTextRange.class, xEnum.nextElement());
+          if (xPortion == null) {
+            continue;
+          }
           XPropertySet xTextPortionPropertySet = UnoRuntime.queryInterface(XPropertySet.class, xPortion);
+          if (xTextPortionPropertySet == null) {
+            continue;
+          }
           String textPortionType = (String) xTextPortionPropertySet.getPropertyValue("TextPortionType");
-          if (textPortionType.equals("Redline")) {
+          if (textPortionType != null && textPortionType.equals("Redline")) {
             String redlineType = (String) xTextPortionPropertySet.getPropertyValue("RedlineType");
-            if (redlineType.equals("Delete")) {
+            if (redlineType != null && redlineType.equals("Delete")) {
               isDelete = !isDelete;
             }
           } else {
@@ -237,6 +255,7 @@ class DocumentCursorTools {
       xPCursor.gotoStartOfParagraph(false);
       xPCursor.gotoEndOfParagraph(true);
       allParas.add(xPCursor.getString());
+//      MessageHandler.printToLogFile("DocumentCursor: getAllTextParagraphs: Para(" + paraNum + ") added");
       deletedCharacters.add(getDeletedCharacters(xPCursor));
       TextType textType = getTextType();
       if (textType == TextType.HEADING) {
@@ -249,7 +268,9 @@ class DocumentCursorTools {
         xPCursor.gotoStartOfParagraph(false);
         xPCursor.gotoEndOfParagraph(true);
         allParas.add(xPCursor.getString());
+//        MessageHandler.printToLogFile("DocumentCursor: getAllTextParagraphs: Para(" + (paraNum + 1) + ") added");
         deletedCharacters.add(getDeletedCharacters(xPCursor));
+//        MessageHandler.printToLogFile("DocumentCursor: getAllTextParagraphs: deletedCharacters(" + (paraNum + 1) + ") added");
         paraNum++;
         textType = getTextType();
         if (textType == TextType.HEADING) {
@@ -258,10 +279,11 @@ class DocumentCursorTools {
           headingNumbers.add(paraNum);
           automaticTextParagraphs.add(paraNum);
         } 
+//        MessageHandler.printToLogFile("DocumentCursor: getAllTextParagraphs: headingNumbers(" + (paraNum) + ") added");
       }
       return new DocumentText(allParas, headingNumbers, automaticTextParagraphs, deletedCharacters);
     } catch (Throwable t) {
-      MessageHandler.printException(t);     // all Exceptions thrown by UnoRuntime.queryInterface are caught
+      MessageHandler.printException(t);     // all Exceptions thrown by UnoRuntime.queryInterface are caught and printed to log file
       return null;           // Return null as method failed
     }
   }
@@ -270,27 +292,37 @@ class DocumentCursorTools {
    * Paragraph is Header or Title
    */
   private TextType getTextType() {
-    String paraStyleName;
+    String paraStyleName = null;
     XPropertySet xParagraphPropertySet = null;
     try {
       xParagraphPropertySet = UnoRuntime.queryInterface(XPropertySet.class, xPCursor.getStart());
-      paraStyleName = (String) xParagraphPropertySet.getPropertyValue("ParaStyleName");
+      if (xParagraphPropertySet == null) {
+        return TextType.NORMAL;
+      }
+      Object o = xParagraphPropertySet.getPropertyValue("ParaStyleName");
+      if (o != null) {
+        paraStyleName = (String) o;
+      }
     } catch (Throwable e) {
       MessageHandler.printException(e);
       return TextType.NORMAL;
     }
     try {
       XTextSection xTextSection = UnoRuntime.queryInterface(XTextSection.class, xParagraphPropertySet.getPropertyValue("TextSection"));
-      xParagraphPropertySet = UnoRuntime.queryInterface(XPropertySet.class, xTextSection);
-      if((boolean) xParagraphPropertySet.getPropertyValue("IsProtected")) {
-        return TextType.AUTOMATIC;
+      if (xParagraphPropertySet != null) {
+        xParagraphPropertySet = UnoRuntime.queryInterface(XPropertySet.class, xTextSection);
+        Object o = xParagraphPropertySet.getPropertyValue("IsProtected");
+        if (o != null && (boolean) o) {
+          return TextType.AUTOMATIC;
+        }
       }
     } catch (Throwable e) {
+      //  if there is an exception go on with analysis - TextType is not automatic
     }
-    if (paraStyleName.startsWith("Heading") || paraStyleName.equals("Title") || paraStyleName.equals("Subtitle")) {
+    if (paraStyleName != null && (paraStyleName.startsWith("Heading") || paraStyleName.equals("Title") || paraStyleName.equals("Subtitle"))) {
       return TextType.HEADING;
     }
-    else if (paraStyleName.startsWith("Contents")) {
+    else if (paraStyleName != null && paraStyleName.startsWith("Contents")) {
       return TextType.AUTOMATIC;
     } else {
       return TextType.NORMAL;
@@ -372,7 +404,7 @@ class DocumentCursorTools {
       }
       return new DocumentText(sText, headingNumbers, new ArrayList<Integer>(), deletedCharacters);
     } catch (Throwable t) {
-      MessageHandler.printException(t);     // all Exceptions XWordCursorthrown by UnoRuntime.queryInterface are caught
+      MessageHandler.printException(t);     // all Exceptions thrown by UnoRuntime.queryInterface are caught and printed to log file
       return null;           // Return null as method failed
     }
   }
@@ -394,7 +426,7 @@ class DocumentCursorTools {
       }
       return num;
     } catch (Throwable t) {
-      MessageHandler.printException(t);     // all Exceptions XWordCursorthrown by UnoRuntime.queryInterface are caught
+      MessageHandler.printException(t);     // all Exceptions thrown by UnoRuntime.queryInterface are caught and printed to log file
       return 0;           // Return 0 as method failed
     }
   }
@@ -412,7 +444,7 @@ class DocumentCursorTools {
       // Get an XIndexAccess of TextTables
       return UnoRuntime.queryInterface(XIndexAccess.class, xTableSupplier.getTextTables());
     } catch (Throwable t) {
-      MessageHandler.printException(t);     // all Exceptions XWordCursorthrown by UnoRuntime.queryInterface are caught
+      MessageHandler.printException(t);     // all Exceptions thrown by UnoRuntime.queryInterface are caught and printed to log file
       return null;           // Return null as method failed
     }
   }
@@ -440,7 +472,7 @@ class DocumentCursorTools {
       }
       return new DocumentText(sText, headingNumbers, new ArrayList<Integer>(), deletedCharacters);
     } catch (Throwable t) {
-      MessageHandler.printException(t);     // all Exceptions XWordCursorthrown by UnoRuntime.queryInterface are caught
+      MessageHandler.printException(t);     // all Exceptions thrown by UnoRuntime.queryInterface are caught and printed to log file
       return null;           // Return null as method failed
     }
   }
@@ -465,7 +497,7 @@ class DocumentCursorTools {
       }
       return num;
     } catch (Throwable t) {
-      MessageHandler.printException(t);     // all Exceptions XWordCursorthrown by UnoRuntime.queryInterface are caught
+      MessageHandler.printException(t);     // all Exceptions thrown by UnoRuntime.queryInterface are caught and printed to log file
       return 0;           // Return 0 as method failed
     }
   }
@@ -492,7 +524,7 @@ class DocumentCursorTools {
       }
       return new DocumentText(sText, headingNumbers, new ArrayList<Integer>(), deletedCharacters);
     } catch (Throwable t) {
-      MessageHandler.printException(t);     // all Exceptions XWordCursorthrown by UnoRuntime.queryInterface are caught
+      MessageHandler.printException(t);     // all Exceptions thrown by UnoRuntime.queryInterface are caught and printed to log file
       return null;           // Return null as method failed
     }
   }
@@ -516,7 +548,7 @@ class DocumentCursorTools {
       }
       return num;
     } catch (Throwable t) {
-      MessageHandler.printException(t);     // all Exceptions XWordCursorthrown by UnoRuntime.queryInterface are caught
+      MessageHandler.printException(t);     // all Exceptions thrown by UnoRuntime.queryInterface are caught and printed to log file
       return 0;           // Return 0 as method failed
     }
   }
@@ -543,7 +575,7 @@ class DocumentCursorTools {
       }
       return new DocumentText(sText, headingNumbers, new ArrayList<Integer>(), deletedCharacters);
     } catch (Throwable t) {
-      MessageHandler.printException(t);     // all Exceptions XWordCursorthrown by UnoRuntime.queryInterface are caught
+      MessageHandler.printException(t);     // all Exceptions thrown by UnoRuntime.queryInterface are caught and printed to log file
       return null;           // Return null as method failed
     }
   }
@@ -567,7 +599,7 @@ class DocumentCursorTools {
       }
       return num;
     } catch (Throwable t) {
-      MessageHandler.printException(t);     // all Exceptions XWordCursorthrown by UnoRuntime.queryInterface are caught
+      MessageHandler.printException(t);     // all Exceptions thrown by UnoRuntime.queryInterface are caught and printed to log file
       return 0;           // Return 0 as method failed
     }
   }
@@ -598,7 +630,7 @@ class DocumentCursorTools {
       }
       return propertySets;
     } catch (Throwable t) {
-      MessageHandler.printException(t);     // all Exceptions XWordCursorthrown by UnoRuntime.queryInterface are caught
+      MessageHandler.printException(t);     // all Exceptions thrown by UnoRuntime.queryInterface are caught and printed to log file
       return null;           // Return null as method failed
     }
   }
@@ -641,7 +673,7 @@ class DocumentCursorTools {
       }
       return new DocumentText(sText, headingNumbers, new ArrayList<Integer>(), deletedCharacters);
     } catch (Throwable t) {
-      MessageHandler.printException(t);     // all Exceptions XWordCursorthrown by UnoRuntime.queryInterface are caught
+      MessageHandler.printException(t);     // all Exceptions thrown by UnoRuntime.queryInterface are caught and printed to log file
       return null;           // Return null as method failed
     }
   }
@@ -679,7 +711,7 @@ class DocumentCursorTools {
       }
       return num;
     } catch (Throwable t) {
-      MessageHandler.printException(t);     // all Exceptions XWordCursorthrown by UnoRuntime.queryInterface are caught
+      MessageHandler.printException(t);     // all Exceptions thrown by UnoRuntime.queryInterface are caught and printed to log file
       return 0;           // Return 0 as method failed
     }
   }
@@ -785,7 +817,7 @@ class DocumentCursorTools {
         }
       }
     } catch (Throwable t) {
-      MessageHandler.printException(t);     // all Exceptions XWordCursorthrown by UnoRuntime.queryInterface are caught
+      MessageHandler.printException(t);     // all Exceptions thrown by UnoRuntime.queryInterface are caught and printed to log file
     }
     return null;
   }
@@ -801,6 +833,29 @@ class DocumentCursorTools {
     xPCursor.gotoStartOfParagraph(false);
     xPCursor.gotoEndOfParagraph(true);
     return getDeletedCharacters(xPCursor);
+  }
+  
+  /**
+   * is protected character at position in paragraph
+   */
+  public boolean isProtectedCharacter(TextParagraph textPara, short x) {
+    XParagraphCursor xPCursor = getParagraphCursor(textPara);
+    if (xPCursor == null) {
+      return false;
+    }
+    xPCursor.gotoStartOfParagraph(false);
+    xPCursor.goRight(x, false);
+    try {
+      XPropertySet xParagraphPropertySet = UnoRuntime.queryInterface(XPropertySet.class, xPCursor.getStart());
+      XTextSection xTextSection = UnoRuntime.queryInterface(XTextSection.class, xParagraphPropertySet.getPropertyValue("TextSection"));
+      xParagraphPropertySet = UnoRuntime.queryInterface(XPropertySet.class, xTextSection);
+      if((boolean) xParagraphPropertySet.getPropertyValue("IsProtected")) {
+        return true;
+      }
+    } catch (Throwable t) {
+      MessageHandler.printException(t);     // all Exceptions thrown by UnoRuntime.queryInterface are caught and printed to log file
+    }
+    return false;
   }
   
   /**

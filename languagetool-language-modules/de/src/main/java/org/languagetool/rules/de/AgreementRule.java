@@ -358,7 +358,7 @@ public class AgreementRule extends Rule {
             }
           }
         } else if (hasReadingOfType(nextToken, POSType.NOMEN) && !"Herr".equals(nextToken.getToken())) {
-          RuleMatch ruleMatch = checkDetNounAgreement(maybePreposition, tokens[i], nextToken, sentence, i, replMap);
+          RuleMatch ruleMatch = checkDetNounAgreement(maybePreposition, tokens[i], nextToken, sentence, i, replMap, skippedStr);
           if (ruleMatch != null) {
             ruleMatches.add(ruleMatch);
           }
@@ -376,11 +376,18 @@ public class AgreementRule extends Rule {
    * @return index of first non-modifier token
    */
   private int getPosAfterModifier(int startAt, AnalyzedTokenReadings[] tokens) {
-    if (startAt + 1 < tokens.length && MODIFIERS.contains(tokens[startAt].getToken())) {
+    if (startAt < tokens.length && tokens[startAt].getToken().matches("viel|weit") && startAt + 1 < tokens.length && tokens[startAt+1].getToken().matches("weniger|eher")) {
+      startAt += 2;
+    } else if (startAt + 1 < tokens.length && MODIFIERS.contains(tokens[startAt].getToken())) {
       startAt++;
     }
-    if (startAt >= 1 && tokens[startAt-1].getToken().equals("weit") && startAt < tokens.length && tokens[startAt].getToken().equals("weniger")) {
-      startAt += 2;
+    if (startAt+1 < tokens.length) {
+      String phrase = tokens[startAt].getToken() + " " + tokens[startAt+1].getToken();
+      if (phrase.toLowerCase().matches("mit (mir|dir|ihm|ihr|ihnen|uns|euch)")) {
+        startAt += 2;
+      } else if (phrase.toLowerCase().matches("ohne (mich|dich|ihn|sie|uns|euch)")) {
+        startAt += 2;
+      }
     }
     if (startAt + 1 < tokens.length && (StringUtils.isNumeric(tokens[startAt].getToken()) || tokens[startAt].hasPosTag("ZAL"))) {
       int posAfterModifier = startAt + 1;
@@ -452,7 +459,8 @@ public class AgreementRule extends Rule {
 
   @Nullable
   private RuleMatch checkDetNounAgreement(AnalyzedTokenReadings maybePreposition, AnalyzedTokenReadings token1,
-                                          AnalyzedTokenReadings token2, AnalyzedSentence sentence, int tokenPos, Map<Integer, ReplacementType> replMap) {
+                                          AnalyzedTokenReadings token2, AnalyzedSentence sentence, int tokenPos, Map<Integer, ReplacementType> replMap,
+                                          String skippedStr) {
     // TODO: remove "-".equals(token2.getToken()) after the bug fix
     // see Daniel's comment from 20.12.2016 at https://github.com/languagetool-org/languagetool/issues/635
     if (token2.isImmunized() || NOUNS_TO_BE_IGNORED.contains(token2.getToken()) || "-".equals(token2.getToken())) {
@@ -481,12 +489,12 @@ public class AgreementRule extends Rule {
             "Kasus, Genus oder Numerus" : String.join(" und ", errorCategories);
       String msg = "Möglicherweise fehlende grammatische Übereinstimmung des " + errorDetails + ".";
       String shortMsg = "Evtl. keine Übereinstimmung von Kasus, Genus oder Numerus";
-      ruleMatch = new RuleMatch(this, sentence, token1.getStartPos(),
-              token2.getEndPos(), msg, shortMsg);
+      ruleMatch = new RuleMatch(this, sentence, token1.getStartPos(), token2.getEndPos(), msg, shortMsg);
       // this will not give a match for compounds that are not in the dictionary...
       //ruleMatch.setUrl(Tools.getUrl("https://www.korrekturen.de/flexion/deklination/" + token2.getToken() + "/"));
       AgreementSuggestor2 suggestor = new AgreementSuggestor2(language.getSynthesizer(), token1, token2, replMap.get(tokenPos));
       suggestor.setPreposition(maybePreposition);
+      suggestor.setSkipped(skippedStr);
       ruleMatch.setSuggestedReplacements(suggestor.getSuggestions(true));
     }
     return ruleMatch;

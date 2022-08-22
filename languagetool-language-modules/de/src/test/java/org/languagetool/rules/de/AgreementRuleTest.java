@@ -647,6 +647,7 @@ public class AgreementRuleTest {
     assertGood("Wir können sowas Mittwoch machen.");
     assertGood("Den schlechter Verdienenden geht es schlecht.");
     assertGood("Mit der weit weniger bekannten Horrorkomödie begann ihre Karriere.");
+    assertBad("Mit der weit weniger bekannte Horrorkomödie begann ihre Karriere.", "der weit weniger bekannten Horrorkomödie");
     assertGood("Die Adelmanns wohnen in Herford.");
     assertBad("Die Idee des Werbekaufmann kam gut an.");
     assertGood("Die Idee des Werbekaufmanns kam gut an.");
@@ -769,6 +770,10 @@ public class AgreementRuleTest {
     assertBad("Dabei geht es um das altbekannte Frage der Dynamiken der Eigenbildung..");
     assertBad("Den neue Finanzierungsweg wollen sie daher Hand in Hand mit dem Leser gehen.");
     assertBad("Den neuen Finanzierungsweg wollen sie daher Hand in Hand mit dem Lesern gehen.");
+    assertBad("Ich widerrufe den mit Ihnen geschlossene Vertrag.", "der mit Ihnen geschlossene Vertrag", "den mit Ihnen geschlossenen Vertrag");
+    assertGood("Ich widerrufe den mit Ihnen geschlossenen Vertrag.");
+    assertBad("Er klagte auch gegen den ohne ihn verkündete Sachbeschluss.", "den ohne ihn verkündeten Sachbeschluss");
+    assertGood("Er klagte auch gegen den ohne ihn verkündeten Sachbeschluss.");
     //assertBad("Leute, die eine gewissen Sicherheit brauchen.");
     //assertBad("An der rot Ampel.");
   }
@@ -818,6 +823,7 @@ public class AgreementRuleTest {
   public void testBugFixes() throws IOException {
     assertBad("Denn die einzelnen sehen sich einer sehr verschieden starken Macht des...", "einer sehr verschiedenen starken Macht");  // TODO: not actually a bug
     assertGood("Das passiert nur, wenn der zu Pflegende bereit ist.");
+    assertGood("Peter, iss nicht meine");  // used to cause ArrayIndexOutOfBoundsException
   }
 
   private void assertGood(String s) throws IOException {

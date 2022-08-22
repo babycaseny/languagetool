@@ -3212,7 +3212,7 @@ RB => Règles Brutes
     </rule>
     <rule name="atelier découverte" id="ATELIR_DECOUVERTE">
         <pattern>
-            <token postag="N.*" postag_regexp="yes" regexp="yes" inflected="yes">atelier|stage|entretien|vol|parcours|achat|offre|mention|promotion|séjour|voyage</token>
+            <token postag="N.*" postag_regexp="yes" regexp="yes" inflected="yes">atelier|visite|stage|entretien|vol|parcours|achat|offre|mention|promotion|séjour|voyage</token>
             <token postag="N.*" postag_regexp="yes" inflected="yes">découverte</token>
         </pattern>
         <disambig action="filterall"/>
@@ -9782,7 +9782,7 @@ RB => Règles Brutes
             <pattern>
                 <marker>
                     <token postag="P">
-                        <exception regexp="yes">attendu|passé|comme|suivant|plein</exception>
+                        <exception regexp="yes">attendu|courant|passé|comme|suivant|plein</exception>
                         <exception scope="previous" regexp="yes">.*'</exception>
                         <exception postag="_GN_.*" postag_regexp="yes"/></token>
                 </marker>

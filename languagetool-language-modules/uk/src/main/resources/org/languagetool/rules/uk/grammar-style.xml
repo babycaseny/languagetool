@@ -1728,10 +1728,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
           <marker>
             <token inflected="yes">громадянський</token>
           </marker>
-          <token inflected="yes">транспорт</token>
+          <token inflected="yes" regexp="yes">транспорт|порядок|місце|організація|думка</token>
         </pattern>
-        <message>Близькі за звучанням, але різні за значенням слова. Ви мали на увазі <suggestion><match no="1" postag_regexp="yes" postag="adj.*">громадський</match></suggestion> транспорт?</message>
-        <short>Правильно «громадський транспорт»</short>
+        <message>Близькі за звучанням, але різні за значенням слова. Ви мали на увазі <suggestion><match no="1" postag_regexp="yes" postag="adj.*">громадський</match></suggestion>?</message>
         <example correction="Громадський"><marker>Громадянський</marker> транспорт став через снігопад.</example>
         <example>Громадський транспорт став через снігопад.</example>
       </rule>
@@ -1747,6 +1746,17 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         <url>http://mova.kreschatic.kiev.ua/12.php</url>
         <example correction="Цивільний"><marker>Громадянський</marker> шлюб: за і проти</example>
         <example>Цивільний шлюб: за і проти</example>
+      </rule>
+
+      <rule>
+        <pattern>
+          <marker>
+            <token inflected="yes">громадський</token>
+          </marker>
+          <token inflected="yes" regexp="yes">обов'язок|право|війна|свобода</token>
+        </pattern>
+        <message>Близькі за звучанням, але різні за значенням слова. Ви мали на увазі <suggestion><match no="1" postag_regexp="yes" postag="adj.*">громадянський</match></suggestion>?</message>
+        <example correction="Громадянський"><marker>Громадський</marker> обов'язок.</example>
       </rule>
     </rulegroup>
 
@@ -1951,7 +1961,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
       <example>всі частки майна</example>
     </rule>
 
-<!--
+
     <rulegroup id="snihovyi_snizhnyi" name="Сніговий і сніжний">
       <rule>
         <pattern>
@@ -1960,7 +1970,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
           </marker>
           <token inflected="yes" regexp="yes">баба|покрив|межа|гора|гірка|намет|стіна|пороша|колір|людина|плуг</token>
         </pattern>
-        <message>У значеннях: який утворився зі снігу, зроблений зі снігу тощо краще вжити <suggestion>сніговий</suggestion>?</message>
+        <message>У значеннях: який утворився зі снігу, зроблений зі снігу тощо краще вжити <suggestion>сніговий</suggestion></message>
         <example correction="сніговий"><marker>сніжний</marker> баба</example>
       </rule>
 
@@ -1969,10 +1979,19 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
           <marker>
             <token inflected="yes">сніжний</token>
           </marker>
-          <token inflected="yes" regexp="yes">кальвіль|подорожник|плісень|барс|чайка</token>
+          <token inflected="yes" regexp="yes">кальвіль|плісень|пліснява|барс|чайка</token>
         </pattern>
-        <message>Як складова частина ботанічних і зоологічних назв краще вжити <suggestion>сніговий</suggestion>?</message>
+        <message>Як складова частина ботанічних і зоологічних назв краще вжити <suggestion>сніговий</suggestion></message>
         <example correction="сніговий"><marker>сніжний</marker> барс</example>
+      </rule>
+
+      <rule>
+        <pattern>
+          <token inflected="yes" regexp="yes">сніжний|сніговий</token>
+          <token inflected="yes">подорожник</token>
+        </pattern>
+        <message>Правильно: <suggestion>пуночка снігова</suggestion></message>
+        <example correction="пуночка снігова"><marker>сніжний подорожник</marker></example>
       </rule>
 
       <rule>
@@ -1980,13 +1999,12 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
           <marker>
             <token inflected="yes">сніговий</token>
           </marker>
-          <token inflected="yes" regexp="yes">вітер|курява|рік|день|зима|рівнина|поле|вершина|буря|буран</token>
+          <token inflected="yes" regexp="yes">вітер|курява|рік|день|рівнина|вершина|буря|буран</token>
         </pattern>
-        <message>У значеннях: який несе сніг, укритий снігами, схожий на сніг тощо краще вжити <suggestion>сніжний</suggestion>?</message>
-        <example correction="сніжний"><marker>снігова</marker> зима</example>
+        <message>У значеннях: який несе сніг, укритий снігами, схожий на сніг тощо краще вжити <suggestion>сніжний</suggestion></message>
+        <example correction="сніжний"><marker>снігова</marker> вершина</example>
       </rule>
     </rulegroup>
--->
 
     <rulegroup id="pysemnist_pysmennist" name="Писемність і письменність">
       <rule>
@@ -3435,6 +3453,14 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
       <example correction="наводити гарний приклад"><marker>приведіть гарний приклад</marker></example>
     </rule>
 
+    <rule id="poklanyatysia" name="Покланятися і поклонятися">
+      <pattern>
+        <token inflected="yes">покланятися</token>
+      </pattern>
+      <message>Часто заімть <suggestion>поклонятися</suggestion> помилково пишуть «покланятися»</message>
+      <example correction="поклонятися">вони <marker>покланяються</marker> бісам</example>
+    </rule>
+
     <rulegroup id="vybachatysya" name="Вибачатися">
       <rule>
         <pattern>
@@ -3510,6 +3536,55 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
 
     </rulegroup>
 
+    <rulegroup id="stosunky_vidnosyny" name="Відносини і стосунки">
+      <rule>
+        <pattern>
+          <token regexp="yes" inflected="yes" postag_regexp="yes" postag="adj:p.*">майновий|виробничий|суспільний|економічний|торг[іо]вельний</token>
+          <marker>
+            <token inflected="yes" regexp="yes" postag_regexp="yes" postag="noun:inanim:p.*">відношення|стосунок</token>
+          </marker>
+        </pattern>
+        <message>Краще: <suggestion>відносини</suggestion></message>
+        <example correction="відносини">і економічні <marker>відношення</marker></example>
+      </rule>
+
+      <rule>
+        <pattern>
+          <token inflected="yes" regexp="yes" postag_regexp="yes" postag="adj:p.*">романтичний|любовний|сексуальний</token>
+          <marker>
+            <token inflected="yes" regexp="yes" postag_regexp="yes" postag="noun:inanim:p.*">відношення|відносини</token>
+          </marker>
+        </pattern>
+        <message>Краще: <suggestion>стосунки</suggestion></message>
+        <example correction="стосунки">і романтичні <marker>відношення</marker></example>
+      </rule>
+    </rulegroup>
+
+    <rulegroup id="likarsky_likarnyanyi" name="Лікарський і лікарняний">
+      <rule>
+        <pattern>
+          <marker>
+            <token inflected="yes">лікарський</token>
+          </marker>
+          <token inflected="yes" regexp="yes">листок|ліжко|корпус|режим</token>
+        </pattern>
+        <message>Правильно: <suggestion>лікарняний</suggestion></message>
+        <example correction="лікарняний">і <marker>лікарський</marker> листок</example>
+        <!-- лікарська палата - може бути правильне -->
+      </rule>
+
+      <rule>
+        <pattern>
+          <marker>
+            <token inflected="yes">лікарняний</token>
+          </marker>
+          <token inflected="yes" regexp="yes">дільниця|діяльність|халат|обхід|клятва|таємниця|рецепт</token>
+        </pattern>
+        <message>Правильно: <suggestion>лікарський</suggestion></message>
+        <example correction="лікарський">і <marker>лікарняна</marker> дільниця</example>
+      </rule>
+    </rulegroup>
+
 <!--
     схоже, «відсутній» не має такого чіткого розділення
 
@@ -3552,11 +3627,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
     </rulegroup>
 -->
 
-    <!-- ідея цікава, але не має чіткого правила:
+<!-- ідея цікава, але не має чіткого правила:
         http://r2u.org.ua/guides/synyavsky/synaksa_drugoriadni_pary
 
-        <rulegroup name="Родовий додатку після не+дієслово" id="V_ROD_AFTER_NEGATVE_VERB">
-        <rule>
+    <rulegroup name="Родовий додатку після не+дієслово" id="V_ROD_AFTER_NEGATVE_VERB">
+      <rule>
         <pattern>
         <token>не</token>
         <token postag_regexp="yes" postag="verb:.*">
@@ -3580,9 +3655,22 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         <example>збирайте збори</example>
         <example>мати пускає доньку.</example>
         <example>не світився ліхтар.</example>
-        </rule>
-        </rulegroup>
-    -->
+      </rule>
+    </rulegroup>
+
+    <rule id="PORIVNYANO_Z" name="Порівняно з">
+      <pattern>
+        <marker>
+          <token>порівняно</token>
+          <token regexp="yes">з|із|зі</token>
+        </marker>
+      </pattern>
+      <message>Краще: <suggestion>як (коли) порівняти з</suggestion>, <suggestion>проти</suggestion>, <suggestion>у порівнянні з</suggestion></message>
+      <url>http://yak-my-hovorymo.wikidot.com/porivnyannya-u-porivnyanni-porivnyano-yak-porivnyaty-proty</url>
+      <example correction="Як (коли) порівняти з|Проти|У порівнянні з"><marker>Порівняно з</marker> феодалізмом, капіталізм був кроком уперед.</example>
+      <example correction="Як (коли) порівняти з|Проти|У порівнянні з">**<marker>Порівняно з</marker> аналогічним періодом минулого року.</example>
+    </rule>
+-->
 
     <!--
      // r2u засвідчує такі слова - і в словниках, і в цитатах. Зокрема "приналежний" та інші слова з при- можуть вживатися у високому стилі, для надання урочистості висловленню

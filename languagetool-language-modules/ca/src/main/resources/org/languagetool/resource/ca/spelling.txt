@@ -8,6 +8,8 @@ Airí
 Aix
 Aquabrava
 Bisquert
+Blogger
+Blogspot
 Brillouin
 Browning
 CB
@@ -15,8 +17,10 @@ CE
 CEO
 CF
 CIDOB
+Campari
 Caputxinada
 Casares
+Castelles
 Ciberdilluns
 Cobi
 Copacabana
@@ -31,7 +35,9 @@ Edelvives
 Egeu
 FC
 FIC
+FIDE
 Filmin
+Fotolog
 Fujifilm
 GOB
 Guida
@@ -70,6 +76,7 @@ Telecinco
 UC
 Umtiti
 Urkullu
+VTC
 Vilagrà
 Vogue
 Wallbox
@@ -81,8 +88,12 @@ Zambrano
 al-Din
 antidesinformació
 antiedat
+antigihadista
+antigihadistes
 antihumanisme
 antihumanismes
+antijihadista
+antijihadistes
 aviciador
 aviciadora
 aviciadores
@@ -201,10 +212,16 @@ cognatici
 cognaticis
 cognatícia
 cognatícies
+cric-crec
+cric-crecs
+càmper
+càmpers
 degana
 deganes
 degans
 degà
+desjudicialitzacions
+desjudicialització
 desomple
 desomplen
 desomples
@@ -247,6 +264,8 @@ expromeses
 expromesos
 expromès
 expromés
+fatxa
+fatxes
 filàntrop
 filàntropa
 filàntropes
@@ -288,6 +307,8 @@ kiribatiana
 kiribatianes
 kiribatians
 kiribatià
+llavada
+llavades
 ludolingüista
 ludolingüistes
 ludolingüístic
@@ -454,4 +475,5 @@ vanuatiana
 vanuatianes
 vanuatians
 vanuatià
+wonton
 Étienne
