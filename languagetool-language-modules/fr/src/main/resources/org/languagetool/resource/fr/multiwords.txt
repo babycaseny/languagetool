@@ -262,6 +262,9 @@ Dmitri Trapeznikov; Z e sp
 Alexandre Zakhartchenko; Z e sp
 Alexandre Borodaï; Z e sp
 Igor Guirkine; Z e sp
+Victoria's Secret;Z e sp
+Porte de Clichy;Z e sp
+Homa Bay;Z e sp
 Leonid Pasetchnik; Z e sp
 Igor Plotnitski; Z e sp
 Valéri Bolotov; Z e sp
@@ -272,6 +275,9 @@ Petro Porochenko; Z e sp
 Arseni Iatseniouk; Z e sp
 Oleksandr Tourtchynov; Z e sp
 Mykola Azarov; Z e sp
+City guide;Z e sp
+Sud Quotidien;Z e sp
+iPhone iOS;Z e sp
 Denys Chmyha; Z e sp
 Rinat Akhmetov; Z e sp
 Leonid Kravtchouk; Z e sp

@@ -1532,3 +1532,27 @@ RCA;RCA;Z e sp
 Stedman;Stedman;Z e sp
 TG;TG;N f sp
 Font-Romeu;Font-Romeu;Z e sp
+frittons;fritton;N m p
+fritton;fritton;N m s
+Unelvent;Unelvent;Z e sp
+Lamorlaye;Lamorlaye;Z e sp
+Auer;Auer;Z e sp
+Chaffoteaux;Chaffoteaux;Z e sp
+Chappée;Chappée;Z e sp
+surprise;surprise;J e s
+surprises;surprise;J e p
+Corvair;Corvair;Z e sp
+Pinel;Pinel;Z e sp
+Hauterive;Hauterive;Z e sp
+Astorg;Astorg;Z e sp
+livre-enquête;livre-enquête;N m s
+automesure;automesure;N f s
+automesures;automesure;N f p
+autoparaphe;autoparaphe;N m s
+autoparaphes;autoparaphe;N m p
+Aevon;Aevon;Z e sp
+chamallow;chamallow;N m s
+Maliciouz;Maliciouz;Z e sp
+ds;ds;P
+Migori;Migori;Z e sp
+quart-arrière;quart-arrière;N m s

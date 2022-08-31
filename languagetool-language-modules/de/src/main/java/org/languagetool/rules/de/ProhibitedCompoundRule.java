@@ -50,6 +50,7 @@ public class ProhibitedCompoundRule extends Rule {
   private static final List<Pair> lowercasePairs = Arrays.asList(
           // NOTE: words here must be all-lowercase
           // NOTE: no need to add words from confusion_sets.txt, they will be used automatically (if starting with uppercase char)
+          new Pair("himmel", "Bereich über der Erde", "hummel", "Insekt"),
           new Pair("server", "Computer", "servier", "zu 'servieren'"),
           new Pair("ziege", "Tier", "ziegel", "Ziegelstein"),
           new Pair("robe", "Kleidungsstück", "probe", "Test, Kontrolle"),
@@ -138,6 +139,7 @@ public class ProhibitedCompoundRule extends Rule {
     "(Raum|Surf|Jazz|Herbst|Gymnastik|Normal)schuhen?",
     "preis",  // Getränkepreis etc.
     "reisähnlich(e|e[nmrs])?",
+    "neugestartet(e|e[nmrs])?",
     "reisender",  // Ägyptenreisender etc.
     "[a-zöäüß]+sender",  // wg. sende/sender, z.B. bremsender, abzulassender
     "gra(ph|f)ische?",  // kosmografisch etc.
@@ -151,6 +153,9 @@ public class ProhibitedCompoundRule extends Rule {
     ".+gra(ph|f)its?"   // ...grafit/graphit
   );
   private static final Set<String> blacklist = new HashSet<>(Arrays.asList(
+          "Schimmelns",
+          "Oberhummel", "Oberhummels",
+          "Alpenhummel", "Alpenhummeln",
           "Futterrecht", "Futterrechts",
           "Waschtasche", "Waschtaschen",
           "Fiebersaft", "Fiebersafts",

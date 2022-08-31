@@ -50649,6 +50649,15 @@ stoßlüftet
 stoßlüftete/N
 stoßgelüftet
 stoßzulüften
+postkartenblau/A
+Polizeiticker/NS
+Tramstrecke/N
+kündigungsrechtlich/A
+tröpfchenweise/A
+Tramhaltestelle/N
+aufwärtsgehe
+Video-Ident
+Videoident
 Cruise Days
 Cyclassics #name
 bewerberdominiert/A
@@ -50657,6 +50666,16 @@ Reef Break/S #eng
 Point Break/S #eng
 aus_duften
 ausrissfrei/A
+Abmahnrisiko/S
+Abmahnrisiken
+Potenzialatlas
+TWh
+BMWK
+Leserempfehlung
+Leserempfehlungen
+Traditionsstandort/S
+Traditionsstandorte/NS
+Premiumstatus
 Betatestphase/N
 hinweg_fahren
 ran_zoomen
@@ -50664,3 +50683,4 @@ hinein_zoomen
 hinaus_zoomen
 ran_schrauben
 Imitators
+Mittelstandskunde/N

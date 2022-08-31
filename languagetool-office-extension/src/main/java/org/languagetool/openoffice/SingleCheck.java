@@ -346,9 +346,11 @@ class SingleCheck {
       FlatParagraphTools flatPara, SwJLanguageTool lt, boolean override) {
     if (!isDisposed() && !mDocHandler.isBackgroundCheckOff() && (!isDialogRequest || isIntern)) {
       Map <Integer, List<SentenceErrors>> changedParasMap = new HashMap<>();
+      List <TextParagraph> changedTextParas = new ArrayList<>();
       for (int i = 0; i < changedParas.size(); i++) {
         List<SentenceErrors> sentencesErrors = getSentencesErrosAsList(changedParas.get(i), lt);
         changedParasMap.put(changedParas.get(i), sentencesErrors);
+        changedTextParas.add(docCache.getNumberOfTextParagraph(changedParas.get(i)));
         if (debugMode > 1) {
           String message = "SingleCheck: remarkChangedParagraphs: Mark errors: Paragraph: " + changedParas.get(i) 
           + "; Number of sentences: " + sentencesErrors.size();
@@ -371,7 +373,8 @@ class SingleCheck {
           }
         }
       }
-      flatPara.markParagraphs(changedParasMap, docCache, override, docCursor);
+      docCursor.removeMarks(changedTextParas);
+      flatPara.markParagraphs(changedParasMap);
     }
   }
   
@@ -526,7 +529,7 @@ class SingleCheck {
    * check the text level rules associated with a given cache (cacheNum)
    */
   @Nullable
-  private SingleProofreadingError[] checkParaRules(String paraText, Locale locale, int[] footnotePos, int nFPara, int sentencePos, 
+  public SingleProofreadingError[] checkParaRules(String paraText, Locale locale, int[] footnotePos, int nFPara, int sentencePos, 
           SwJLanguageTool lt, int cacheNum, int parasToCheck, boolean textIsChanged, boolean isIntern) {
 
     List<RuleMatch> paragraphMatches;
@@ -558,7 +561,7 @@ class SingleCheck {
       }
       // return Cache result if available / for right mouse click or Dialog only use cache
       boolean isTextParagraph = nFPara >= 0 && docCache != null && docCache.getNumberOfTextParagraph(nFPara).type != DocumentCache.CURSOR_TYPE_UNKNOWN;
-      if (nFPara >= 0 && (pErrors != null || isMouseRequest || isDialogRequest || (useQueue && parasToCheck != 0))) {
+      if (nFPara >= 0 && (pErrors != null || isMouseRequest || (useQueue && !isDialogRequest && parasToCheck != 0))) {
         if (useQueue && pErrors == null && parasToCheck > 0 && isTextParagraph && !textIsChanged && mDocHandler.getTextLevelCheckQueue().isWaiting()) {
           mDocHandler.getTextLevelCheckQueue().wakeupQueue(singleDocument.getDocID());
         }
@@ -577,7 +580,7 @@ class SingleCheck {
         }
         List<Integer> nextSentencePositions = getNextSentencePositions(paraText, mLt);
         List<Integer> deletedChars = isTextParagraph ? docCache.getFlatParagraphDeletedCharacters(nFPara): null;
-        if (mLt == null || docCache.isAutomaticGenerated(nFPara)) {
+        if (mLt == null || (isTextParagraph && docCache.isAutomaticGenerated(nFPara))) {
           paragraphMatches = null;
         } else {
           paragraphMatches = mLt.check(removeFootnotes(paraText, footnotePos, deletedChars), true, JLanguageTool.ParagraphHandling.NORMAL);
