@@ -50671,6 +50671,15 @@ Abmahnrisiken
 Potenzialatlas
 TWh
 BMWK
+regasifizieren
+regasifiziert/A
+denazifizieren
+denazifiziert/A
+nachfragedämpfend/A
+Mildhybrid/S
+Mildhybride/N
+Game-Changer/NS
+Grundwassergeothermie
 Leserempfehlung
 Leserempfehlungen
 Traditionsstandort/S

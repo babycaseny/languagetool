@@ -2616,6 +2616,7 @@ guerrinhas
 guqin
 GW
 GWh
+hackear
 hail
 Halifax
 halitose
@@ -3750,6 +3751,8 @@ motoqueiros
 Motorola
 motorroçadora
 motorroçadoras
+motosserra
+motosserras
 moxibustão
 Moxico
 Mozilla
