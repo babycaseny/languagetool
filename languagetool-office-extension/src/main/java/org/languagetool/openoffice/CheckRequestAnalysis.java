@@ -29,7 +29,6 @@ import org.languagetool.openoffice.OfficeTools.DocumentType;
 import com.sun.star.lang.Locale;
 import com.sun.star.lang.XComponent;
 import com.sun.star.text.XFlatParagraph;
-import com.sun.star.uno.XComponentContext;
 
 /**
  * Class to analyze a LO/OO request for grammar check
@@ -48,7 +47,6 @@ class CheckRequestAnalysis {
   
   private final int numParasToCheck;                //  current number of Paragraphs to be checked
 
-  private final XComponentContext xContext;         //  The context of the document
   private final XComponent xComponent;              //  XComponent of the open document
   private final String docID;                       //  docID of the document
   private final MultiDocumentsHandler mDocHandler;  //  handles the different documents loaded in LO/OO
@@ -88,7 +86,6 @@ class CheckRequestAnalysis {
     this.fixedLanguage = fixedLanguage;
     this.docLanguage = docLanguage;
     mDocHandler = singleDocument.getMultiDocumentsHandler();
-    xContext = mDocHandler.getContext();
     xComponent = singleDocument.getXComponent();
     docID = singleDocument.getDocID();
     docType = singleDocument.getDocumentType();
@@ -130,7 +127,7 @@ class CheckRequestAnalysis {
     setFlatParagraphTools(xComponent);
     if (docCache.isEmpty()) {
       docCursor = new DocumentCursorTools(xComponent);
-      docCache.refresh(docCursor, flatPara, LinguisticServices.getLocale(fixedLanguage), LinguisticServices.getLocale(docLanguage), xComponent, 1);
+      docCache.refresh(singleDocument, LinguisticServices.getLocale(fixedLanguage), LinguisticServices.getLocale(docLanguage), xComponent, 1);
       if (debugMode > 0) {
         MessageHandler.printToLogFile("CheckRequestAnalysis: actualizeDocumentCache: resetAllParas (docCache is empty): new docCache.size: " + docCache.size()
                 + ", docID: " + docID + OfficeTools.LOG_LINE_BREAK);
@@ -410,7 +407,7 @@ class CheckRequestAnalysis {
       if (debugMode > 0 && proofInfo == OfficeTools.PROOFINFO_GET_PROOFRESULT) {
         MessageHandler.printToLogFile("CheckRequestAnalysis: getParaPos: start docCache.refresh");
       }
-      docCache.refresh(docCursor, flatPara, LinguisticServices.getLocale(fixedLanguage), LinguisticServices.getLocale(docLanguage), xComponent, 3);
+      docCache.refresh(singleDocument, LinguisticServices.getLocale(fixedLanguage), LinguisticServices.getLocale(docLanguage), xComponent, 3);
     }
 
     if (nPara >= 0) {
@@ -436,7 +433,7 @@ class CheckRequestAnalysis {
         MessageHandler.printToLogFile("CheckRequestAnalysis: getParaPos: get DocumentCursorTools");
       }
       docCursor = new DocumentCursorTools(xComponent);
-      docCache.refresh(docCursor, flatPara, LinguisticServices.getLocale(fixedLanguage), LinguisticServices.getLocale(docLanguage), xComponent, 4);
+      docCache.refresh(singleDocument, LinguisticServices.getLocale(fixedLanguage), LinguisticServices.getLocale(docLanguage), xComponent, 4);
       if (debugMode > 0 && proofInfo == OfficeTools.PROOFINFO_GET_PROOFRESULT) {
         MessageHandler.printToLogFile("CheckRequestAnalysis: getParaPos: start docCache.refresh");
       }
@@ -666,8 +663,7 @@ class CheckRequestAnalysis {
         }
         if(!docCache.isEqual(nPara, chParaWithFootnotes, locale)) {
           actualizeDocumentCache(nPara, false);
-          String dcText = SingleCheck.removeFootnotes(docCache.getFlatParagraph(nPara), footnotePositions, null);
-          if (dcText == null || !DocumentCache.isEqualText(dcText, chPara)) {
+          if (docCache.getFlatParagraph(nPara) == null || !DocumentCache.isEqualText(docCache.getFlatParagraph(nPara), chPara, footnotePositions)) {
             if (debugMode > 0) {
               MessageHandler.printToLogFile("CheckRequestAnalysis: getParaFromViewCursorOrDialog: cText != chPara: Number of Paragraph: " + nPara);
             }
@@ -799,7 +795,7 @@ class CheckRequestAnalysis {
 //    if (docCursor == null) {
 //      docCursor = new DocumentCursorTools(xComponent);
 //    }
-    docCache.refresh(docCursor, flatPara, LinguisticServices.getLocale(fixedLanguage), LinguisticServices.getLocale(docLanguage), xComponent, 5);
+    docCache.refresh(singleDocument, LinguisticServices.getLocale(fixedLanguage), LinguisticServices.getLocale(docLanguage), xComponent, 5);
     if (docCache.isEmpty() || isDisposed()) {
       return -1;
     }

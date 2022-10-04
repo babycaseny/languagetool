@@ -5967,7 +5967,7 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
                             <token postag="JJ.?" postag_regexp="yes"/>
                         </and>
                         <token postag="SENT_END|VB." postag_regexp="yes">
-                            <exception postag="NN.*|JJ.?|``|''" postag_regexp="yes"/>
+                            <exception postag="NN.*|JJ.?|CD|``|''" postag_regexp="yes"/>
                         </token>
                     </unify>
                 </marker>
@@ -8005,6 +8005,11 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
             <token postag="VBP" chunk="E-NP-singular" />
             <token regexp="yes">you|it</token>
         </antipattern>
+        <antipattern>
+            <token inflected="yes">make</token>
+            <token>it</token>
+            <token>work</token>
+        </antipattern>
         <pattern>
             <marker>
                 <and>
@@ -8012,6 +8017,7 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
                         <exception scope="previous" postag="NNP?S|CD" postag_regexp="yes"/>
                         <exception scope="previous" regexp="yes">we(d|re)|th[oe]se|that|are</exception>
                         <exception scope="previous" inflected="yes">have</exception>
+                        <exception>wrong</exception>
                     </token>
                     <token chunk="E-NP-singular"/>
                     <token postag="VBP">
@@ -8028,6 +8034,7 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
         <example type="untouched">They disputed a claim.</example>
         <example type="untouched">Does he fucking care?</example>
         <example type="untouched">Jess text you asking if it ...</example>
+        <example type="untouched">What made it work was the translation of supreme authority from the popes to the council.</example>
         <example type="untouched">Can the new assistant contact you regarding the studs</example>
         <example type="untouched">Loving to work is the key to happiness.</example>
         <example type="untouched">Love to party!</example>
@@ -9805,10 +9812,10 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
             <token postag="RB"/>
         </antipattern>
         <antipattern><!-- chunker fix: more computer games tomorrow -->
-            <token chunk="B-NP-plural" postag="JJR"/>
+            <token chunk="B-NP-singular" postag="JJR"/>
             <token postag_regexp="yes" postag="NN(:UN?)?"/>
-            <token postag="NNS"/>
-            <token chunk="E-NP-plural">tomorrow</token>
+            <token chunk="I-NP-singular" postag="NNS"/>
+            <token chunk="E-NP-singular" postag="RB"/>
         </antipattern>
         <antipattern><!-- #2536 marketing to kids gets -->
             <token postag="VBG"/>
@@ -15289,6 +15296,11 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
     </rule>
 
     <rulegroup id="LIVE_VB" name="VB on 'live'">
+        <antipattern><!-- He perfomed it live in … -->
+            <token postag="VB.*|IN|UNKNOWN" postag_regexp="yes" />
+            <token postag="PRP" />
+            <token>live</token>
+        </antipattern>
         <rule>
             <pattern>
                 <token postag="PRP|MD|TO" postag_regexp="yes" />
@@ -15961,21 +15973,21 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
     <rulegroup id="IGNORE_SPELLING_OF_ABBREVIATIONS" name="Ignore spelling of some uppercase abbreviations">
         <rule><!-- lowercase word + abbreviation with no vowels -->
             <pattern case_sensitive="yes">
-                <token regexp="yes">.*[a-z].*</token>
-                <token min="0">(</token>
+                <token regexp="yes">.*[a-z0-9].*</token>
+                <token min="0" regexp="yes">[\)\(,]</token>
                 <marker>
-                    <token regexp="yes">[BCDFGHJKLMNPQRSTVWXZ]{3,6}</token>
+                    <token regexp="yes">[BCDFGHJKLMNPQRSTVWXZ]{3,6}s?</token>
                 </marker>
             </pattern>
             <disambig action="ignore_spelling"/>
         </rule>
-        <rule><!-- abbreviation with no vowels + lowercase word -->
+        <rule><!-- abbreviation with no vowels + word -->
             <pattern case_sensitive="yes">
                 <marker>
-                    <token regexp="yes">[BCDFGHJKLMNPQRSTVWXZ]{3,6}</token>
+                    <token regexp="yes">[BCDFGHJKLMNPQRSTVWXZ]{3,6}s?</token>
                 </marker>
-                <token min="0">)</token>
-                <token regexp="yes">.*[a-z].*</token>
+                <token min="0" regexp="yes">[\)\(,]</token>
+                <token regexp="yes">.*[a-z0-9].*</token>
             </pattern>
             <disambig action="ignore_spelling"/>
         </rule>
@@ -16204,4 +16216,22 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
             <disambig action="remove" postag="NN" />
         </rule>
     </rulegroup>
+
+    <rule id="HAWAI_I" name="Ignore spelling of 'Hawai'i'">
+        <pattern case_sensitive="yes">
+            <token>Hawai</token>
+            <token regexp="yes">&apostrophe;</token>
+            <token>i</token>
+        </pattern>
+        <disambig action="ignore_spelling"/>
+    </rule>
+    <rule id="AGO_NO_ADJECTIVE" name="'ago' no adjective">
+        <pattern>
+            <token regexp="yes">seconds|minutes|hours|days|weeks|months|years|decades|moments|time</token>
+            <marker>
+                <token>ago</token>
+            </marker>
+        </pattern>
+        <disambig action="remove" postag="JJ" />
+    </rule>
 </rules>

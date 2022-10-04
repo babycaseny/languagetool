@@ -8820,3 +8820,13 @@ wine-berries?
 2-grader*
 2-graders*
 stir-crazy*
+sugar-coated$
+sugar-coating$
+beta-lactam*
+beta-lactams*
+cold-brewed*
+cold-jawed*
+beta-lactamase*
+beta-lactamases*
+if-clause*
+Ice-T*

@@ -1177,6 +1177,8 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
     put("mak", w -> Arrays.asList("mag", "mak", "lag"));
     put("daum", w -> Arrays.asList("da um", "darum", "kaum", "Raum"));
     put("gechickt", w -> Arrays.asList("geschickt", "gecheckt"));
+    put("gibs", w -> Arrays.asList("gib es", "gibst"));
+    put("Gibs", w -> Arrays.asList("Gib es", "Gibst", "Gips"));
     put("Wiso", "Wieso");
     put("gebs", "gebe es");
     put("angefordet", "angefordert");
@@ -1413,6 +1415,7 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
     putRepl("[Üü]bergrifflich(e[mnrs]?)?", "lich", "ig");
     put("löchen", w -> Arrays.asList("löschen", "löchern", "Köchen"));
     put("wergen",  w -> Arrays.asList("werfen", "werben", "werten"));
+    put("Wasn",  w -> Arrays.asList("Was denn", "Was ein", "Was"));
   }
 
   @Override
@@ -2471,6 +2474,7 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
       return topMatch(word.replaceFirst("brilliant", "brillant"));
     }
     switch (word) {
+      case "wohlwissend": return topMatch("wohl wissend");
       case "Visas": return topMatch("Visa", "Plural von 'Visum'");
       case "Reiszwecke": return topMatch("Reißzwecke", "kurzer Nagel mit flachem Kopf");
       case "Reiszwecken": return topMatch("Reißzwecken", "kurzer Nagel mit flachem Kopf");
@@ -2705,6 +2709,8 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
       case "desöfteren": return topMatch("des Öfteren");
       case "desweiteren": return topMatch("des Weiteren");
       case "weitesgehend": return topMatch("weitestgehend");
+      case "Tschibo": return topMatch("Tchibo");
+      case "Tschibos": return topMatch("Tchibos");
       case "Tiktok": return topMatch("TikTok");
       case "Tiktoks": return topMatch("TikToks");
       case "sodaß": return topMatch("sodass");
@@ -2761,6 +2767,24 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
       case "gehhrte": return topMatch("geehrte");
       case "gehhrten": return topMatch("geehrten");
       case "gehhrtes": return topMatch("geehrtes");
+      case "Iphone": return topMatch("iPhone");
+      case "Iphones": return topMatch("iPhones");
+      case "iphone": return topMatch("iPhone");
+      case "iphones": return topMatch("iPhones");
+      case "Ipad": return topMatch("iPad");
+      case "Ipads": return topMatch("iPads");
+      case "ipad": return topMatch("iPad");
+      case "ipads": return topMatch("iPads");
+      case "Adverben": return topMatch("Adverbien");
+      case "letzlich": return topMatch("letztlich");
+      case "Letzlich": return topMatch("Letztlich");
+      case "gefühlsdusselig": return topMatch("gefühlsduselig");
+      case "gefühlsdusselige": return topMatch("gefühlsduselige");
+      case "gefühlsdusseliger": return topMatch("gefühlsduseliger");
+      case "gefühlsdusseliges": return topMatch("gefühlsduseliges");
+      case "gefühlsdusseligen": return topMatch("gefühlsduseligen");
+      case "gegebenfalls": return topMatch("gegebenenfalls");
+      case "Gegebenfalls": return topMatch("Gegebenenfalls");
       case "zugebenermaßen": return topMatch("zugegebenermaßen");
       case "beispielweise": return topMatch("beispielsweise");
       case "umgangsprachlich": return topMatch("umgangssprachlich");

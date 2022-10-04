@@ -410,8 +410,8 @@ public class MorfologikCatalanSpellerRuleTest {
         matches = rule.match(lt.getAnalyzedSentence("lah"));
         assertEquals("la", matches[0].getSuggestedReplacements().get(0));
         matches = rule.match(lt.getAnalyzedSentence("dela"));
-        assertEquals("Dela", matches[0].getSuggestedReplacements().get(0));
-        assertEquals("de la", matches[0].getSuggestedReplacements().get(1));
+        //assertEquals("Dela", matches[0].getSuggestedReplacements().get(0));
+        assertEquals("de la", matches[0].getSuggestedReplacements().get(0));
         matches = rule.match(lt.getAnalyzedSentence("sha"));
         assertEquals("s'ha", matches[0].getSuggestedReplacements().get(0));
         assertEquals("xe", matches[0].getSuggestedReplacements().get(1));
@@ -601,12 +601,42 @@ public class MorfologikCatalanSpellerRuleTest {
         assertEquals(1, matches.length);
         assertEquals("En 1993", matches[0].getSuggestedReplacements().get(0));
         
+        matches = rule.match(lt.getAnalyzedSentence("✅Compto amb el títol"));
+        assertEquals(1, matches.length);
+        assertEquals("✅ Compto", matches[0].getSuggestedReplacements().get(0));
+        
+        matches = rule.match(lt.getAnalyzedSentence("✅Conpto amb el títol"));
+        assertEquals(1, matches.length);
+        assertEquals("✅ Compto", matches[0].getSuggestedReplacements().get(0));
+        
+        matches = rule.match(lt.getAnalyzedSentence("·Compto amb el títol"));
+        assertEquals(1, matches.length);
+        assertEquals("[· Compto]", matches[0].getSuggestedReplacements().toString());
+        
+        matches = rule.match(lt.getAnalyzedSentence("105.3FM"));
+        assertEquals(1, matches.length);
+        assertEquals("[105.3 FM]", matches[0].getSuggestedReplacements().toString());
+        
+        //invisible characters at start
+        matches = rule.match(lt.getAnalyzedSentence("\u0003consagrada al turisme"));
+        assertEquals(1, matches.length);
+        assertEquals("[Consagrada]", matches[0].getSuggestedReplacements().toString());
+        
+        matches = rule.match(lt.getAnalyzedSentence("Volen \u0018Modificar la situació."));
+        assertEquals(1, matches.length);
+        assertEquals("[modificar]", matches[0].getSuggestedReplacements().toString());
+        
         // camel case
         matches = rule.match(lt.getAnalyzedSentence("polÃtiques"));
         assertEquals(1, matches.length);
         assertEquals(3, matches[0].getSuggestedReplacements().size());
         assertEquals("polítiques", matches[0].getSuggestedReplacements().get(0));
 
+        
+        // global spelling
+        matches = rule.match(lt.getAnalyzedSentence("FT"));
+        assertEquals(0, matches.length);
+        
         // combining characters
         matches = rule.match(lt.getAnalyzedSentence("dema\u0300"));
         assertEquals(0, matches.length);

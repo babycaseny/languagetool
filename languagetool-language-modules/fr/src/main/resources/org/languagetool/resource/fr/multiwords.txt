@@ -282,6 +282,17 @@ Iles Marshall;Z e sp
 Iles Pitcairn;Z e sp
 Île de Man;Z e sp
 Île Maurice;Z e sp
+1001 pots;Z e sp
+The Place Beyond The Pines;Z e sp
+BeIN Sports;Z e sp
+Racing Glaciers;Z e sp
+Border Collie;Z e sp
+Gambas;Z e sp
+13 raisons;Z e sp
+Object Management Group;Z e sp
+Offshore Technology Conference;Z f sp
+Continue reading;N e sp
+Fort Victoria Country Park;Z e sp
 Îles Salomons;Z e sp
 Îles Caïmans;Z e sp
 Porto Rico;Z e sp
@@ -292,6 +303,9 @@ France médias;Z e sp
 France 2;Z e sp
 France 3;Z e sp
 France 4;Z e sp
+femme papillon; N f s
+ED Autos;Z e sp
+Sables d'Olonne;Z e sp
 France 0;Z e sp
 Trinité et Tobago; Z e sp
 Sri Lanka;Z e sp

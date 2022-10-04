@@ -1571,6 +1571,20 @@ Martinique;Martinique;Z f sp
 Shandong;Shandong;Z m sp
 Sibérie;Sibérie;Z f sp
 Monoprix;Monoprix;Z m sp
+Russie;Russie;Z f sp
+Portugual;Portugual;Z m sp
+Pennsylvanie;Pennsylvanie;Z f sp
+Wisconsin;Wisconsin;Z m sp
+Boulanger;Boulanger;Z e sp
+Texas;Texas;Z e sp
+Colorado;Colorado;Z m sp
+Minnesota;Minnesota;Z m sp
+Californie;Californie;Z f sp
+Léman;Léman;Z e sp
+Michigan;Michigan;Z m sp
+Nevada;Nevada;Z m sp
+Europe;Europe;Z e sp
+Couvain;Couvain;Z e sp
 Espagne;Espagne;Z f sp
 Norvège;Norvège;Z f sp
 Normandie;Normandie;Z f sp
@@ -1720,3 +1734,72 @@ Pays-bas;Pays-Bas;Z e sp
 trav;trav;S
 amazing;amazing;N e sp
 failli;failli;V ppa m s
+RPG;RPG;S
+THB;THB;S
+MGA;MGA;S
+approx;approx;S
+Monki;Monki;Z e sp
+Ying;Ying;Z e sp
+Craven;Craven;Z e sp
+3G;3G;N f sp
+3G;3G;J e sp
+4G;4G;N f sp
+4G;4G;J e sp
+5G;5G;N f sp
+5G;5G;J e sp
+Manu;Manu;Z e sp
+Macquer;Macquer;Z e sp
+Brettes;Brettes;Z e sp
+Sucy-en-Brie;Sucy-en-Brie;Z e sp
+Sables d'Olonne;Sables d'Olonne;Z e sp
+casas;casas;N f p
+casa;casa;N f s
+Marshalls;Marshalls;Z e sp
+multi-formats;multi-formats;J e sp
+multi-formats;multi-format;J e p
+Roberts;Roberts;Z e sp
+naufragé;naufragé;N m s
+naufragée;naufragé;N f s
+naufragés;naufragé;N m p
+naufragées;naufragé;N f p
+dérivé;dérivé;N m s
+dérivés;dérivé;N m p
+subdélégué;subdélégué;N m s
+Storyguide;Storyguide;Z e sp
+lodge;lodge;N m s
+lodges;lodge;N m p
+Gouesnou;Gouesnou;Z e sp
+Rieux;Rieux;Z e sp
+Breignou;Breignou;Z e sp
+Plœuc ;Plœuc ;Z e sp
+Boissière;Boissière;Z e sp
+Fouesnant;Fouesnant;Z e sp
+Tipiak;Tipiak;Z e sp
+Audierne;Audierne;Z e sp
+Piron;Piron;Z e sp
+Sizun;Sizun;Z e sp
+Kervihan;Kervihan;Z e sp
+Boiséon;Boiséon;Z e sp
+Gouesnach;Gouesnach;Z e sp
+Gourette;Gourette;Z e sp
+Hautacam;Hautacam;Z e sp
+Luz;Luz;Z e sp
+Bures;Bures;Z e sp
+bouloches;bouloche;N f p
+bouloche;bouloche;N f s
+estive;estive;N f s
+Minimoys;Minimoys;Z e sp
+estives;estive;N f p
+OMG;OMG;S
+répètes;répète;N f p
+strip;strip;N m sp
+Colin;Colin;Z e sp
+Montvendrois;Montvendrois;Z e sp
+Atlantis;Atlantis;Z e sp
+ESJ;ESJ;Z e sp
+Politzer;Politzer;Z e sp
+Wolitzer;Wolitzer;Z e sp
+Choplin;Choplin;Z e sp
+Cheyrou;Cheyrou;Z e sp
+Shaina;Shaina;Z e sp
+Premium;Premium;Z e sp

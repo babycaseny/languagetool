@@ -166,6 +166,7 @@ Comissió Europea
 Consell Europeu
 Consell d'Europa
 Parlament Europeu
+Direcció General d'Administracions Públiques
 administracions públiques
 administració pública
 ensenyament superior
@@ -402,3 +403,13 @@ Mare de Déu d'Agost
 Assumpció de la Mare de Déu
 Falles de València
 Falles de Sant Josep
+Premier League
+The Premiership
+postguerra
+Big Ben
+Regne Unit
+Gran Bretanya
+País de Gal·les
+Irlanda del Nord
+La Fúmiga
+Google Maps

@@ -31,7 +31,7 @@ Akademie der Schönen Künste
 Akademie für Europäische
 Aktuellen? Stunde
 Almuth Schult
-Allgemeinen? (Geschäftsbedingungen|Zeitung|Datenschutzerklärung(en)?|Nutzungsbedingung(en)?|Ortskrankenkasse)
+Allgemeinen? (Geschäftsbedingungen|Zeitung|Datenschutzerklärung(en)?|Nutzungsbedingung(en)?|Ortskrankenkassen?)
 Allgemeine[nrm]? Deutsche[nr]? (Automobilclubs?|Automobil-Clubs?|Gewerkschaftsbunde?s?)
 Allgemeine[nrm]? Soziale[rn]? Dienst(e?s)?
 Allgemeine[nmr]? Deutsche[rn]? Frauenvereins?
@@ -42,8 +42,7 @@ Alt und Jung
 Alte[nsm]? Land
 Alte[nsm]? Wasserkunst
 Alt & Jung
-Alpine[ns] Museums? der Schweiz
-Alpine[ns] Museums? Münchens?
+Alpine[ns] Museums? (der|Münchens?)
 Agile Coach(e?|ing)s?
 Amnesty Internationals?
 Andreas Scheuers?
@@ -70,6 +69,7 @@ Atlantischen? Allianz
 Atlanta Braves
 Aufschnitte
 Auf und Ab
+Augsbuger Allgemeine
 Autoimmune Diseases?
 Autonomen? Republik Krims?
 Autonomen? Österreichischen? Frauenhäusern?
@@ -83,39 +83,33 @@ Bad Kleinen|Man|Kreuznachs?|Urachs?
 Badische[nr]? Anilin|Neue?sten?|Zeitung|Sportbund(es|s)?|Woche|Hofs?|Bahnhofs?
 Badische[snm]? Staatstheaters?|Landesmuseums?
 Baltische[nr]? See
-Bang und Olufsen
+Bang (und|&) Olufsen
 Banque Internationale
 Bares ist Wahres
 Barer Str(a(ß|ss)e)?
-Barnes & Noble
-Barnes and Noble
+Barnes (&|and) Noble
 Belgische[nms]? Haus(es)?
 Berufliche[ns]? Gymnasium
 Biotic Blast
-Brandenburgischen[nsm]? Landesamt(es|s)?|Staats.*|Straße|Str
+Brandenburgischen[nsm]? Landesamt(es|s)?|St(r(a(ß|ss)e)?|aats.*)
 Brave Browsers?
 Brave New World
 Badische[nsm]? Wörterbuchs?
 Barmherzige[mn]? Brüder
 Baye?rische[nrsm]? Staats.+|Verdienst(medaillen?|ordens?)|Rundfunks?|Ministerpräsident(en)?|Motorenwerken?|Ver(waltungsgericht|fassung).*|Hof|Walds?|Land(tag|esamte?)s?|Landesärztekammer|Fußball-Verbands?|Fußballverbands?|Fussball-Verbands?|Rhön|Justizministeriums?|Pflegeakademie|Omnibusverband(e?s)?
 Baye?rische[nrsm]? Rundfunk(s)?|Fernsehen(s)?|Börse
-Baye?rische[nr]? Ehrenamtskarte
-Baye?rische[nr]? Landesstiftung
-Baye?rische[nr]? Sparkassenstiftung
+Baye?rische[nr]? (Alpen|Eisenbahngesellschaft|Ehrenamtskarte|Landesstiftung|Sparkassenstiftung|Infektionsschutzmaßnahmenverordnung)
 Baye?rischen? Motoren Werken?
-Baye?rischen? Alpen
-Baye?rische[nr]? Infektionsschutzmaßnahmenverordnung
 Baye?rische[rnm] Walds?
-Baye?rische[nr]? Eisenbahngesellschaft
 (Bekennend|Evangelisch|Katholisch|Altkatholisch|Orthodox)en? (Kirchen?|Kirchenbund|Kirchenbunde?s?)
 Basisdemokratischen? Partei Deutschlands?
-Belgische[nms]? Viertels?
-Belgische[nmr]? Korridors?
+Belgische[nms]? (Viertels?|Korridors?)
 Berliner Modells?
 Berlin International Gaming
 (Biblioth[èe]que|Bibliothque) Nationale
 Bipolare[nm]? Störung
 Bibliographische[snm]? Institut(es|s)?
+Biblische[nrm]? Kanons?
 Bildenden? Kunst
 Bin Ladens?
 Bismarckschen? Reichsverfassung
@@ -320,6 +314,7 @@ Freiwillige[snm]? Soziale[sn]? Jahre?s?
 Freiwillige[nr]? Feuerwehr(en)?
 Frequent Travell?er
 Frankfurt Höchst
+Frankfurter Illustrierten?
 Fränkische[nr]? Saale|Schweiz|Alb|Juras?|Seenland
 Friedliche[nr]? Revolution
 Friesischen? Rundfunks?
@@ -437,7 +432,7 @@ Höheren? Fachschule
 Holländische[rnm]? (Sauce|So(ß|ss)e|Reihe|Stra(ß|ss)e)
 Höchst am Main
 Hotel Maritim
-Historische[snm]? Museums?
+Historische[snm]? (Museums?|Vereins?)
 IHK Mittleres Ruhrgebiet
 IHK Mittlerer Niederrhein
 [iI]m Großen und Ganzen
@@ -468,6 +463,7 @@ Institutes für .*
 Instituts? Österreichischer? (Wirtschaftsprüfer|Steuerberater)
 Integrierte[rn]? Schaltungen
 Interdisziplinäre[ns]? Zentrums? für
+Internationalen? Sekretariats?
 Internationalen? Verbands? (für|zur) .*
 Internationalen? Gesellschaft (für|zur) .*
 Internationalen? Konferenz (für|zur) .*
@@ -729,6 +725,7 @@ Paritätische[rnm]? Wohlfahrtsverbands?
 Paritätische[rnm]? Lebenshilfe
 Parlamentarische[rnm]? Rats?|Rates|Kontrollgremiums?|Versammlung|Untersuchungsausschuss(es)?|Geschäftsführer[sn]?|Geschäftsführerin|Staatssekretär(s|e|en)?
 Passauer Neuen? Presse
+Passive Sourcings?
 Pazifischen? Platte
 Päpstlichen? Universität
 Pearson Specter Litt
@@ -1024,3 +1021,4 @@ V10 Absolute
 V12 Absolute
 V10 Slim Absolute
 V12 Slim Absolute
+Eisernen? Lady

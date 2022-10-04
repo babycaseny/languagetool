@@ -39,6 +39,12 @@ class AgreementRuleAntiPatterns1 {
       posRegex("SUB:.*")
     ),
     asList(
+      tokenRegex("des"),   // "Chef des renommierten Institute for Fiscal Studies (IFS)"
+      new PatternTokenBuilder().posRegex("ADJ:.*").min(0).build(),
+      token("Institute"),
+      tokenRegex("for|of")
+    ),
+    asList(
       token("zur"),   // "Bis zur Anfang Juni geplanten Eröffnung gebe es noch einiges zu tun."
       tokenRegex("Anfang|Ende|Mitte"),
       tokenRegex(MONTH_NAMES_REGEX),
@@ -541,6 +547,13 @@ class AgreementRuleAntiPatterns1 {
       posRegex("VER:.*")
     ),
     asList(
+      tokenRegex("diese[nmr]|andere[nm]"),  // "...um einer anderen genügend Platz zu schaffen"
+      tokenRegex("genug|genügend|viel|hinreichend|ausreichend"),
+      posRegex("SUB:NOM:SIN:.*"),
+      token("zu"),
+      posRegex("VER:.*")
+    ),
+    asList(
       posRegex("VER:MOD:.*"),  // "Sollten zu diesem weitere Informationen benötigt werden, ..."
       token("zu"),
       regex("diese[mnr]"),
@@ -733,6 +746,12 @@ class AgreementRuleAntiPatterns1 {
       token("eine"),
       new PatternTokenBuilder().posRegex("ADJ:.*FEM.*").min(0).build(),
       posRegex("SUB:.*:FEM.*")
+    ),
+    asList(
+      // "Wir zeigen die Gründe auf, wieso noch nicht jeder solche Anschlüsse hat."
+      regex("jede[rsm]?"),
+      regex("solche[rsm]?"),
+      posRegex("SUB.*PLU.*")
     )
   );
 

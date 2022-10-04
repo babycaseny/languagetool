@@ -28,7 +28,6 @@ import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
-import org.languagetool.TestTools;
 
 public class UkrainianWordTokenizerTest {
   private final UkrainianWordTokenizer w = new UkrainianWordTokenizer();
@@ -353,8 +352,17 @@ public class UkrainianWordTokenizerTest {
     testList = w.tokenize("куб.м");
     assertEquals(Arrays.asList("куб.", "м"), testList);
 
+    testList = w.tokenize("ам. долл");
+    assertEquals(Arrays.asList("ам.", " ", "долл"), testList);
+
+    testList = w.tokenize("св. ап. Петра");
+    assertEquals(Arrays.asList("св.", " ", "ап.", " ", "Петра"), testList);
+
     testList = w.tokenize("У с. Вижва");
     assertEquals(Arrays.asList("У", " ", "с.", " ", "Вижва"), testList);
+
+    testList = w.tokenize("оз. Вижва");
+    assertEquals(Arrays.asList("оз.", " ", "Вижва"), testList);
 
     testList = w.tokenize("Довжиною 30 см. з гаком.");
     assertEquals(Arrays.asList("Довжиною", " ", "30", " ", "см", ".", " ", "з", " ", "гаком", "."), testList);
@@ -407,6 +415,9 @@ public class UkrainianWordTokenizerTest {
     testList = w.tokenize("від лат. momento");
     assertEquals(Arrays.asList("від", " ", "лат.", " ", "momento"), testList);
 
+    testList = w.tokenize("отримав рос. орден");
+    assertEquals(Arrays.asList("отримав", " ", "рос.", " ", "орден"), testList);
+    
     testList = w.tokenize("на 1-кімн. кв. в центрі");
     assertEquals(Arrays.asList("на", " " , "1-кімн.", " ", "кв.", " ", "в", " ", "центрі"), testList);
 

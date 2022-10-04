@@ -357,7 +357,7 @@ regexp case-insensitive maken: (?i)
                 </antipattern>
                 <antipattern>
                     <token regexp="yes">1?[0-9]</token>
-                    <token>.</token>
+                    <token regexp="yes">[.;:]</token>
                 </antipattern>
                 <antipattern>
                     <token postag_regexp="yes" postag="SENT_START|START"/>
@@ -452,6 +452,7 @@ regexp case-insensitive maken: (?i)
                 <example>Het vindt plaats tussen 15 en 16 oktober.</example>
                 <example>Het zijn 10 tot 65 cm.</example>
                 <example>Tel: 31 2 34567890</example>
+                <example>Deelvraag 2: Hoe kan dat?</example>
             </rule>
         </rulegroup>
 
@@ -2129,7 +2130,7 @@ regexp case-insensitive maken: (?i)
                 <pattern>
                        <token case_sensitive="yes">or</token>
                 </pattern>
-                <message>Bedoelt u misschien <suggestion>oor</suggestion>? Of is toch de ondernemingraad of Engels?</message>
+                <message>Bedoelt u misschien <suggestion>oor</suggestion>? Of is het toch de ondernemingraad of Engels?</message>
                 <example correction="oor">Het woord <marker>or</marker> kan een vergissing zijn.</example>
             </rule>
         </rulegroup>
@@ -7591,7 +7592,7 @@ onwaarschijnlijk
                 <pattern>
                     <token regexp="yes">zins|zinnens</token>
                 </pattern>
-                <message>'Zinnens zijn' en 'van zins zijn' kunnen voor begrijpelijkheid in zowel België and Nederland beter geschreven worden als 'van plan zijn'.</message>
+                <message>'Zinnens zijn' en 'van zins zijn' kunnen voor begrijpelijkheid in zowel België als Nederland beter geschreven worden als 'van plan zijn'.</message>
                 <example correction="">Ik was dat niet van <marker>zins</marker>.</example>
             </rule>
         </rulegroup>
@@ -11784,7 +11785,7 @@ onwaarschijnlijk
                 <example correction="a-capellastukje">Anderson presenteert zichzelf meer en meer als een zanger, en met een knap <marker>a capellastukje</marker> in "Chinese Whispers" bewijst hij dat dat ook maar terecht is.</example>
             </rule>
         </rulegroup>
-        <rulegroup id="A_LA_CARTE_" name=" a la cartediner → à-la-cartediner">
+        <rulegroup id="A_LA_CARTE_" name="a la cartediner → à-la-cartediner">
             <!-- 2014-08-19 TaalTik -->
             <rule>
                 <pattern>
@@ -12975,7 +12976,7 @@ onwaarschijnlijk
             </rule>
         </rulegroup>
 
-        <rulegroup id="MIJN_FORTE" name="mijn fort is beter">
+        <rulegroup id="MIJN_FORTE" name="mijn fort is beter" type="style">
             <rule>
                 <pattern>
                     <token regexp="yes">mijn|zijn|haar|hun|ons</token>
@@ -17901,7 +17902,14 @@ steenwijk;Steenwijk
         <rulegroup id="U" name="u">
             <!-- 2014-08-20 TaalTik -->
             <rule>
-                <antipattern case_sensitive="yes"><token>uur</token><token>U</token></antipattern>
+                <antipattern case_sensitive="yes">
+                    <token>uur</token>
+                    <token>U</token>
+                </antipattern>
+                <antipattern>
+                    <token>Wii</token>
+                    <token>U</token>
+                </antipattern>
                 <pattern case_sensitive="yes">
                     <token negate="yes">.<exception postag_regexp="yes" postag="SENT_START|START"/></token>
                     <marker>
@@ -17921,6 +17929,7 @@ steenwijk;Steenwijk
                 <example correction="u">Puur natuur, als <marker>U</marker> wilt.</example>
                 <example correction="u">Informateur zult <marker>U</marker> bedoelen?</example>
                 <example correction="u">Daar kan ik <marker>U</marker> in volgen.</example>
+                <example>Ik zou graag een Wii U willen kopen.</example>
             </rule>
         </rulegroup>
         <rulegroup id="FRIES" name="Fries of fries">
@@ -34415,7 +34424,7 @@ steenwijk;Steenwijk
                     <token postag_regexp="yes" postag="SENT_START|START"/>
                     <token>een</token>
                     <marker>
-                        <token regexp="yes">bende|berg|blik|bos|bups|colonne|drom|groep|groepje|hoeveelheid|horde|kluit|kluwen|kudde|lading|leger|legioen|menigte|meute|reeks|rij|rijtje| rits|roedel|schare|serie|slag|sleep|soort|stoet|troep|verzameling|zwik|zooi|zootje</token>
+                        <token regexp="yes">bende|berg|blik|bos|bups|colonne|drom|groep|groepje|hoeveelheid|horde|kluit|kluwen|kudde|lading|leger|legioen|menigte|meute|reeks|rij|rijtje|rits|roedel|schare|serie|slag|sleep|soort|stoet|troep|verzameling|zwik|zooi|zootje</token>
                         <token postag="ZNW:MRV:DE_.*" postag_regexp="yes"/>
                         <token postag="WKW:TGW:INF"/>
                     </marker>
@@ -35102,7 +35111,7 @@ steenwijk;Steenwijk
                 <example correction="ten onrechte|onterecht">Inderdaad een argument dat vaak <marker>te onrechte</marker> wordt gebruikt.</example>
             </rule>
         </rulegroup>
-        <rulegroup id="TE_X_LASTE" name=" te ? laste → te mijnen laste">
+        <rulegroup id="TE_X_LASTE" name="te ? laste → te mijnen laste">
             <rule>
                 <antipattern><token>te</token><token regexp="yes">mijnen|uwen|zijnen|haren|onzen|hunnen</token><token>laste</token></antipattern>
                 <pattern>

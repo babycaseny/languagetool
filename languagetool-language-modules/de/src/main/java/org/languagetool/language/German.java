@@ -317,6 +317,8 @@ public class German extends Language implements AutoCloseable {
       case "VONSTATTEN_GEHEN" : return 2;   // prefer over EINE_ORIGINAL_RECHNUNG
       case "VERWECHSLUNG_MIR_DIR_MIR_DIE": return 1; // prefer over MIR_DIR
       case "ERNEUERBARE_ENERGIEN": return 1; // prefer over VEREINBAREN
+      case "DRIVE_IN": return 1; // prefer over agreement rules
+      case "AN_STATT": return 1; // prefer over agreement rules
       case "VOR_BEI": return 1; // prefer over BEI_BEHALTEN
       case "ALLES_GUTE": return 1; // prefer over premium rules
       case "NEUN_NEUEN": return 1; // prefer over VIELZAHL_PLUS_SINGULAR
@@ -353,6 +355,7 @@ public class German extends Language implements AutoCloseable {
       case "ANFUEHRUNGSZEICHEN_DE_AT": return 1; // higher prio than UNPAIRED_BRACKETS
       case "ANFUEHRUNGSZEICHEN_CH_FR": return 1; // higher prio than UNPAIRED_BRACKETS
       case "EMAIL": return 1;  // better suggestion than SIMPLE_AGREEMENT_*
+      case "IM_STICH_LASSEN": return 1;  // higher prio than agreement rules
       case "ZULANGE": return 1;  // better suggestion than SAGT_RUFT
       case "ROCK_N_ROLL": return 1;  // better error than DE_CASE
       case "JOE_BIDEN": return 1;  // better error than DE_CASE
@@ -360,6 +363,7 @@ public class German extends Language implements AutoCloseable {
       case "DE_PROHIBITED_COMPOUNDS": return 1;  // a more detailed error message than from spell checker
       case "ANS_OHNE_APOSTROPH": return 1;
       case "DIESEN_JAHRES": return 1;
+      case "TAG_EIN_TAG_AUS": return 1; // prefer over agreement rules
       case "WERT_SEIN": return 1; // prefer over DE_AGREEMENT
       case "EBEN_FALLS": return 1;
       case "IN_UND_AUSWENDIG": return 1; // prefer over DE_CASE

@@ -189,7 +189,7 @@ class SingleCheck {
       return;
     }
     DocumentCache docCache = new DocumentCache(this.docCache);
-    if (lt == null && !docCache.isAutomaticGenerated(nFPara)) {
+    if (debugMode > 0 && lt == null && !docCache.isAutomaticGenerated(nFPara)) {
       MessageHandler.printToLogFile("SingleCheck: addParaErrorsToCache: return: lt is null");
     }
     try {
@@ -205,7 +205,7 @@ class SingleCheck {
         if (docCursor == null) {
           docCursor = new DocumentCursorTools(xComponent);
         }
-        this.docCache.refresh(docCursor, flatPara, LinguisticServices.getLocale(fixedLanguage), 
+        this.docCache.refresh(singleDocument, LinguisticServices.getLocale(fixedLanguage), 
             LinguisticServices.getLocale(docLanguage), xComponent, 7);
         docCache = new DocumentCache(this.docCache);
         tPara = docCache.getNumberOfTextParagraph(nFPara);
@@ -224,7 +224,8 @@ class SingleCheck {
       //  NOTE: lt == null if language is not supported by LT
       //        but empty proof reading errors have added to cache to satisfy text level queue
       if (lt != null && !docCache.isAutomaticGenerated(nFPara) && mDocHandler.isSortedRuleForIndex(cacheNum)) {
-        paragraphMatches = lt.check(textToCheck, true, JLanguageTool.ParagraphHandling.ONLYPARA);
+        paragraphMatches = lt.check(textToCheck, true, 
+            cacheNum == 0 ? JLanguageTool.ParagraphHandling.NORMAL : JLanguageTool.ParagraphHandling.ONLYPARA);
         if (cacheNum == 0) {
           nextSentencePositions = getNextSentencePositions(textToCheck, lt);
         }
@@ -305,7 +306,10 @@ class SingleCheck {
         flatPara = singleDocument.setFlatParagraphTools();
         
         List<Integer> changedParas = new ArrayList<>();
-        if (oldCache != null) {
+        if (cacheNum == 0) {
+          changedParas.add(nFPara);
+          remarkChangedParagraphs(changedParas, docCursor, flatPara, lt, true);
+        } else if (oldCache != null) {
           for (int nText = startPara; nText < endPara; nText++) {
             int nFlat = docCache.getFlatParagraphNumber(docCache.createTextParagraph(cursorType, nText));
             if (paragraphsCache.get(0).getCacheEntry(nFlat) != null) {
@@ -562,8 +566,13 @@ class SingleCheck {
       // return Cache result if available / for right mouse click or Dialog only use cache
       boolean isTextParagraph = nFPara >= 0 && docCache != null && docCache.getNumberOfTextParagraph(nFPara).type != DocumentCache.CURSOR_TYPE_UNKNOWN;
       if (nFPara >= 0 && (pErrors != null || isMouseRequest || (useQueue && !isDialogRequest && parasToCheck != 0))) {
+/*
         if (useQueue && pErrors == null && parasToCheck > 0 && isTextParagraph && !textIsChanged && mDocHandler.getTextLevelCheckQueue().isWaiting()) {
           mDocHandler.getTextLevelCheckQueue().wakeupQueue(singleDocument.getDocID());
+        }
+*/
+        if (useQueue && pErrors == null && parasToCheck != 0 && isTextParagraph) {
+          singleDocument.addQueueEntry(nFPara, cacheNum, parasToCheck, singleDocument.getDocID(), textIsChanged, textIsChanged);
         }
         return pErrors;
       }

@@ -1,8 +1,9 @@
 # General replacement rules, used by org.languagetool.rules.de.SimpleReplaceRule
-# Format: UTF-8, one entry per line in format: phrase=replacement
-# 'phrase' is what the text is searched for. 'replacement' is the suggestion shown to the user.
-# 'phrase' is searched for case-insensitively.
-# Both 'phrase' and 'replacement' can contain more than one value when separated by '|'.
+# Format: UTF-8, one entry per line in format: <phrase>=<replacement>\t[message]
+# <phrase> is what the text is searched for. <replacement> is the suggestion shown to the user.
+# [message] is an optional message shown to the user (optional).
+# <phrase> is searched for case-insensitively.
+# Both <phrase> and <replacement> can contain more than one value when separated by '|'.
 # Example:
 # incorrect=suggestion one|suggestion two
 Conversation Rate=Conversion Rate
@@ -12,6 +13,7 @@ Jo Biden=Joe Biden
 Jo Bidens=Joe Bidens
 Nicky Minaj=Nicki Minaj
 Oscar Wild=Oscar Wilde
+Oscar Wilds=Oscar Wildes
 Christiano Ronaldo=Cristiano Ronaldo
 Christiano Ronaldos=Cristiano Ronaldos
 Zack Snider=Zack Snyder
@@ -90,8 +92,10 @@ Alexander Kekules=Alexander Kekulés
 Desiree Nick=Désirée Nick
 Desiree Nicks=Désirée Nicks
 Brad Pit=Brad Pitt
+Brad Pits=Brad Pitts
 Valteri Bottas=Valtteri Bottas
 Silvester Stallone=Sylvester Stallone
+Silvester Stallones=Sylvester Stallones
 Renault Scenic=Renault Scénic
 Renault Grand Scenic=Renault Grand Scénic
 Francois Fillon=François Fillon
@@ -130,7 +134,9 @@ Katharina Witts=Katarina Witts
 Christine Lamprecht=Christine Lambrecht
 Christine Lamprechts=Christine Lambrechts
 Cindy Lauper=Cyndi Lauper
+Cindy Laupers=Cyndi Laupers
 Lindsay Graham=Lindsey Graham
+Lindsay Grahams=Lindsey Grahams
 Arsene Wenger=Arsène Wenger
 Arsene Wengers=Arsène Wengers
 Queen Elisabeth=Queen Elizabeth
@@ -244,7 +250,26 @@ Helmut Karaseks=Hellmuth Karaseks
 Terrence Hill=Terence Hill
 Darwin Nunez=Darwin Núñez
 JK Rowling=J. K. Rowling
+JK Rowlings=J. K. Rowlings
 Harald Glöckler=Harald Glööckler
 Rudolf Hess=Rudolf Heß
 Dusan Tadic=Dušan Tadić
 Gorch Fuck=Gorch Fock
+Moskau Mule=Moscow Mule
+Moskau Mules=Moscow Mules
+North Stream=Nord Stream
+North Streams=Nord Streams
+Rita Süßmuth=Rita Süssmuth	Meinten Sie die deutsche CDU-Politikerin?
+Rita Süßmuths=Rita Süssmuths	Meinten Sie die deutsche CDU-Politikerin?
+Anton Piech=Anton Piëch
+Anton Piechs=Anton Piëchs
+Ferdinand Piech=Ferdinand Piëch
+Ferdinand Piechs=Ferdinand Piëchs
+Chrystal Meth=Crystal Meth
+Mathias Dopfner=Mathias Döpfner
+Mathias Dopfners=Mathias Döpfners
+Matthias Döpfner=Mathias Döpfner
+Matthias Döpfners=Mathias Döpfners
+Remmington Steele=Remington Steele
+Remmington Steel=Remington Steele
+Remington Steel=Remington Steele

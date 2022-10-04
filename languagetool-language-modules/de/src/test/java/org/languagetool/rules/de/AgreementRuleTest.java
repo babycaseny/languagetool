@@ -694,6 +694,7 @@ public class AgreementRuleTest {
     assertGood("Jede Schnittmenge abzählbar vieler offener Mengen");
     assertGood("Es kam zur Fusion der genannten und noch einiger weiterer Unternehmen.");
     assertGood("Zu dieser Fragestellung gibt es viele unterschiedliche Meinungen.");
+    assertGood("Wir zeigen die Gründe auf, wieso noch nicht jeder solche Anschlüsse hat.");
   }
 
   @Test
@@ -748,6 +749,7 @@ public class AgreementRuleTest {
     assertGood("2009 gab es im Rathaus daher Bestrebungen ein leichter handhabbares Logo einzuführen.");
     assertGood("Das ist eine leichter handhabbare Situation.");
     assertGood("Es gibt viele verschiedene Stock Screener.");
+    assertGood("Die Ware umräumen, um einer anderen genügend Platz zu schaffen.");
 
     // incorrect sentences:
     assertBad("Er hatte ein anstrengenden Tag",

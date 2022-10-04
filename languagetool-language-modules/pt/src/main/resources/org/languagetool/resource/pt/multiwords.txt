@@ -50,7 +50,7 @@
 ####################################################
 ###        Nomes próprios e comuns               ###
 ####################################################
-
+serial killers	NCMP000
 K.O.	NCMN000
 K.-O.	NCMN000
 Far West	NCPSF00
@@ -143,6 +143,7 @@ Força Aérea Norte-americana	NPFS000
 Forças Armadas	NPFP000
 Forças Militares	NPFP000
 Forças Policiais	NPFP000
+Fórmula 1	NPFS000
 Google Chrome	NPMS000_
 Guarda Nacional Republicana	NPFS000
 Guerra de Comando e Controlo	NPFS000
@@ -1085,6 +1086,8 @@ Visto que	CS
 ###                   Proper nouns                               ###
 ### Partially from 14-11-2016 Catalan and Spanish multiword.txt  ###
 ####################################################################
+Studio One	NPCSO00_
+Copy Club	NPCSO00_
 Aberri Eguna	NPMSO00_
 Abraham Lincoln	NPMSSP0_
 Abu Dhabi	NPCNG00_
@@ -1244,6 +1247,7 @@ Estats Units	NPMPG00_
 Eth Portilhon	NPCSG00_
 Europa Press	NPCSO00_
 Euskal Herria	NPCNG00_
+ex-assistente	NCCS000_
 FC Barcelona	NPMSG00_
 FIA	NPCSO00_
 Les XX	NPMPO00_
@@ -1522,6 +1526,7 @@ Sao Tomé e Príncipe	NPMSG00_
 Sao Vicente	NPCSG00_
 Scarlett Johansson	NPFSSP0_
 Ségolène Royal	NPMSSP0_
+Sete Montes	NPMSG00_
 Sharm al-Sheikh	NPCNG00_
 Sheryl Crow	NPFSSP0_
 Shia LaBeouf	NPFSSP0_
@@ -11131,6 +11136,8 @@ vade retro	NCCN000
 # From Catalan multiword.txt                     ###
 # Date 14-11-2016                                ###
 ####################################################
+fast food	NCCS000
+fast foods	NCCP000
 ma non troppo	RG_
 Ma non troppo	RG_
 sex symbol	NCCS000_

@@ -207,7 +207,7 @@ public class HTTPServerConfig {
     "redisUseSentinel", "sentinelHost", "sentinelPort", "sentinelPassword", "sentinelMasterId",
     "dbLogging", "premiumOnly", "nerUrl", "minPort", "maxPort", "localApiMode", "motherTongue", "preferredLanguages",
     "dictLimitUser", "dictLimitTeam", "styleGuideLimitUser", "styleGuideLimitTeam",
-    "passwortLoginAccessListPath");
+    "passwortLoginAccessListPath", "redisDictTTLSeconds");
 
   /**
    * Create a server configuration for the default port ({@link #DEFAULT_PORT}).
@@ -472,7 +472,7 @@ public class HTTPServerConfig {
         localApiMode = Boolean.parseBoolean(getOptionalProperty(props, "localApiMode", "false"));
         motherTongue = getOptionalProperty(props, "motherTongue", "en-US");
         String preferredLanguages = getOptionalProperty(props, "preferredLanguages", "").replace(" ", "");
-        if (preferredLanguages != "") {
+        if (!preferredLanguages.equals("")) {
           this.preferredLanguages = Arrays.asList(preferredLanguages.split(","));
         }
         dictLimitUser = Integer.valueOf(getOptionalProperty(props, "dictLimitUser", "0"));

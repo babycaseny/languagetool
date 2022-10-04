@@ -3853,7 +3853,7 @@ Copyright (C) 2011 Juan Martorell
             <token postag="SENT_START|CC|_PUNCT.*" postag_regexp="yes"/>
             <marker>
                 <and>
-                    <token postag="V.[IS].*" postag_regexp="yes"><exception>deje</exception></token>
+                    <token postag="V.[IS].*" postag_regexp="yes"><exception regexp="yes">deje|era</exception></token>
                     <token postag="NC.*" postag_regexp="yes"/>
                 </and>
             </marker>
@@ -4253,16 +4253,37 @@ Copyright (C) 2011 Juan Martorell
             <disambig action="remove" postag="V.[MSI].*"/>
         </rule>
     </rulegroup>
-    <rule id="UNA" name="una (not verb)">
-        <pattern>
-            <marker>
-                <token regexp="yes">una|uno</token>
-            </marker>
-            <!-- error: está -->
-            <token>esta</token>
-        </pattern>
-        <disambig action="remove" postag="V.*"/>
-    </rule>
+    <rulegroup id="UNA" name="una (not verb)">
+        <rule>
+            <pattern>
+                <marker>
+                    <token regexp="yes">una|uno</token>
+                </marker>
+                <!-- error: está -->
+                <token>esta</token>
+            </pattern>
+            <disambig action="remove" postag="V.*"/>
+        </rule>
+        <rule>
+            <pattern>
+                <marker>
+                    <token>una</token>
+                </marker>
+                <token postag="_QM.*" postag_regexp="yes"/>
+                <token postag="[AN].*|V.P.*" postag_regexp="yes"/>
+            </pattern>
+            <disambig action="remove" postag="V.*"/>
+        </rule>
+        <rule>
+            <pattern>
+                <marker>
+                    <token>uno</token>
+                </marker>
+                <token regexp="yes">del?</token>
+            </pattern>
+            <disambig action="remove" postag="V.*"/>
+        </rule>
+    </rulegroup>
     <rulegroup id="CONTRA" name="contra">
         <rule>
             <pattern>
@@ -6996,6 +7017,31 @@ Copyright (C) 2011 Juan Martorell
         <rule>
             <pattern case_sensitive="yes">
                 <token regexp="yes">\d\d\d\d*[A-Z]+</token>
+            </pattern>
+            <disambig action="ignore_spelling"/>
+        </rule>
+        <rule>
+            <pattern>
+                <token regexp="yes" case_sensitive="yes">\d+\.d+[a-z]</token>
+            </pattern>
+            <disambig action="ignore_spelling"/>
+        </rule>
+        <rule>
+            <pattern>
+                <token regexp="yes" case_sensitive="yes">\d+[\.,d]*x\d+[\.,d]*(cm|mm|m)</token>
+            </pattern>
+            <disambig action="ignore_spelling"/>
+        </rule>
+        <rule>
+            <pattern>
+                <token regexp="yes" case_sensitive="yes">\d+(px|p|v|r)</token>
+            </pattern>
+            <disambig action="ignore_spelling"/>
+        </rule>
+        <!-- wrong units -->
+        <rule>
+            <pattern case_sensitive="yes">
+                <token regexp="yes" case_sensitive="yes">\d+[\.,d](sg|mt|K[mgplWB]|Kbps|Kcal|Kbit|k|K)</token>
             </pattern>
             <disambig action="ignore_spelling"/>
         </rule>

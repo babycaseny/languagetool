@@ -211,7 +211,7 @@ class SingleDocument {
     }
 
     if (proofInfo == OfficeTools.PROOFINFO_GET_PROOFRESULT 
-        && (DocumentCursorTools.isBusy() || ViewCursorTools.isBusy() || docCache.isResetRunning())) {
+        && (DocumentCursorTools.isBusy() || ViewCursorTools.isBusy() || FlatParagraphTools.isBusy() || docCache.isResetRunning())) {
       //  NOTE: LO blocks the read of information by document or view cursor tools till a PROOFINFO_GET_PROOFRESULT request is done
       //        This causes a hanging of LO when the request isn't answered immediately by a 0 matches result
 //      MessageHandler.printToLogFile("SingleDocument: getCheckResults: docCache Reset is running: return 0 errors");
@@ -236,7 +236,7 @@ class SingleDocument {
       if (debugMode > 0 && proofInfo == OfficeTools.PROOFINFO_GET_PROOFRESULT) {
         MessageHandler.printToLogFile("SingleDocument: getCheckResults: refresh docCache");
       }
-      docCache.refresh(docCursor, flatPara, LinguisticServices.getLocale(fixedLanguage), 
+      docCache.refresh(this, LinguisticServices.getLocale(fixedLanguage), 
           LinguisticServices.getLocale(docLanguage),xComponent, 6);
       resetDocCache = false;
     }
@@ -466,6 +466,17 @@ class SingleDocument {
   }
   
   /**
+   *  Get document cursor tools
+   */
+  DocumentCursorTools getDocumentCursorTools () {
+    if (docCursor == null) {
+      docCursor = new DocumentCursorTools(xComponent);
+    }
+    return docCursor;
+  }
+
+  
+  /**
    *  Get document cache of the document
    */
   List<ResultCache> getParagraphsCache() {
@@ -520,6 +531,9 @@ class SingleDocument {
           paragraphsCache.get(i).replace(cacheIO.getParagraphsCache().get(i));
         }
         ignoredMatches = new IgnoredMatches(cacheIO.getIgnoredMatches());
+        if (docType == DocumentType.WRITER && mDocHandler != null) {
+          mDocHandler.runShapeCheck(docCache.hasUnsupportedText(), 9);
+        }
       }
       cacheIO.resetAllCache();
     }
@@ -683,6 +697,26 @@ class SingleDocument {
       }
     }
     return null;
+  }
+  
+  public void addShapeQueueEntries() {
+    int shapeTextSize = docCache.textSize(DocumentCache.CURSOR_TYPE_SHAPE) + docCache.textSize(DocumentCache.CURSOR_TYPE_TABLE);
+//    MessageHandler.printToLogFile("SingleDocument: addShapeQueueEntries: shapeTextSize = " + shapeTextSize);
+    if (shapeTextSize > 0) {
+      if (flatPara == null) {
+        setFlatParagraphTools();
+      }
+      List<Integer> changedParas = docCache.getChangedUnsupportedParagraphs(flatPara, paragraphsCache.get(0));
+      if (changedParas != null) { 
+//      MessageHandler.printToLogFile("SingleDocument: addShapeQueueEntries: changedParas.size = " + changedParas.size());
+        for (int i = 0; i < changedParas.size(); i++) {
+          for (int nCache = 0; nCache < paragraphsCache.size(); nCache++) {
+            int nCheck = mDocHandler.getNumMinToCheckParas().get(nCache);
+            addQueueEntry(changedParas.get(i), nCache, nCheck, docID, false, true);
+          }
+        }
+      }
+    }
   }
 
   /**

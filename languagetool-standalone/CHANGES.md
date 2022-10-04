@@ -1,12 +1,21 @@
 # LanguageTool Change Log
 
-## 5.9 (release planned for 2022-09-28)
+## 6.0-SNAPSHOT (release planned for 2022-12-29)
+
+...
+
+
+## 5.9 (2022-09-28)
 
 #### Catalan
   * added and improved rules
 
+#### Dutch
+  * improved rules, removed many false alarms
+
 #### English
   * added and improved rules
+  * updated en_GB spellchecker dictionary from https://github.com/marcoagpinto/aoo-mozilla-en-dict (Version 2022.09.01, v.3.1.2)
 
 #### German
   * added and improved rules
@@ -20,9 +29,21 @@
 
 #### Portuguese
   * added and improved rules
+  * added words and POS data
+  * fixed tons of false positives
+
+#### Russian
+  * updated dictionary
+  * some rules improvements
 
 #### Spanish
   * added and improved rules
+
+#### Ukrainian
+  * new words in the POS dictionary
+  * added verb and adj/noun agreement rule
+  * added and improved several rules
+  * improved tagging and disambiguation
 
 ### General
   * The `--word2vecModel` option has been deprecated

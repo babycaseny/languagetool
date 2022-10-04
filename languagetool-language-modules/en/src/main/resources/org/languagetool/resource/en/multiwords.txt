@@ -5902,3 +5902,68 @@ I.G. Farben	NNP
 Patek Philippe	NNP
 Jim Ratcliffe	NNP
 Country Garden	NNP
+Pete Doherty	NNP
+Balmoral Castle	NNP
+Gautam Adani	NNP
+Charlie Crist	NNP
+Ewa Beach	NNP
+Hana Highway	NNP
+Road to Hana	NNP
+Amy Gutmann	NNP
+Jennifer Coolidge	NNP
+Jennifer Connelly	NNP
+Val Kilmer	NNP
+Miles Teller	NNP
+Alessandro Chiocchetti	NNP
+Fort DeRussy	NNP
+Kuhio Beach	NNP
+Dr. Ing.	SYM
+Gigi Hadid	NNP
+Vox Media	NNP
+basso continuo	NN:UN
+basso continuos	NNS
+Ferrari Purosangue	NNP
+T. Rowe Price	NNP
+T Rowe Price	NNP
+Anthony Modeste	NNP
+Mike Lindell	NNP
+Grand Cherokee	NNP
+Subaru Outback	NNP
+Dodge Charger	NNP
+Jeep Cherokee	NNP
+Ford Explorer	NNP
+Nissan Altima	NNP
+Toyota Camry	NNP
+Honda Civic	NNP
+David Malpass	NNP
+Ilham Aliyev	NNP
+Lorenzo Brown	NNP
+Bob Chapek	NNP
+Martha's Vineyard	NNP
+Martha’s Vineyard	NNP
+Son Heung-min	NNP
+Heung-min Son	NNP
+Nan Madol	NNP
+Crystal Palace	NNP
+James Corden	NNP
+Stora Enso	NNP
+Winneshiek County	NNP
+University of Lucknow	NNP
+Howey Test	NNP
+We Bare Bears	NNP
+Li Lu	NNP
+John F. Kennedy	NNP
+Tyson Foods	NNP
+Biscayne Bay	NNP
+Nikolai Valuev	NNP
+George Pataki	NNP
+Ala Moana	NNP
+Warren G	NNP
+N.W.A.	NNP
+Mathias Döpfner	NNP
+Lula da Silva	NNP
+Remington Steele	NNP
+Erik ten Hag	NNP
+ten Hag	NNP
+Jorge Mendes	NNP
+Accenture Song	NNP

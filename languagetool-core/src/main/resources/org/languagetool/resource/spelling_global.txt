@@ -245,6 +245,7 @@ DHL
 Siemens
 HP
 Lowe's
+Lowe’s
 TCS
 Gillette
 BCA
@@ -267,6 +268,7 @@ Nintendo
 Harley-Davidson
 John Deere
 Kellogg's
+Kellogg’s
 Philips
 Philips Hue
 Hyundai
@@ -399,6 +401,7 @@ Burger King
 Taco Bell
 Subway
 McDonald's
+McDonald’s
 Bitbucket
 Atlassian
 Confluence
@@ -801,6 +804,7 @@ Berkshire Hathaway
 Kraft Foods
 Kraft Heinz
 Assassin's Creed
+Assassin’s Creed
 ArcelorMittal
 Django
 Ruby on Rails
@@ -814,6 +818,7 @@ Desperate Housewives
 Better Call Saul
 Bates Motel
 Grey's Anatomy
+Grey’s Anatomy
 Stranger Things
 American Horror Story
 The Big Bang Theory
@@ -1173,6 +1178,7 @@ Microsoft Dynamics
 MS Dynamics
 JDK
 Sotheby's
+Sotheby’s
 Tinkercad
 Windows XP
 Windows Vista
@@ -2534,6 +2540,7 @@ Gradle
 GnuCash
 Gandi
 Let's Encrypt
+Let’s Encrypt
 LWJGL
 Snapcraft
 Streamlabs
@@ -2920,6 +2927,7 @@ Louis Litt
 Harvey Specter
 Global Times
 People's Daily
+People’s Daily
 Fast Company
 Bam Margera
 Johnny Knoxville
@@ -4511,6 +4519,7 @@ Collabora Office
 ownCloud
 Banque Populaire
 Alfa Bank
+Equinor
 Tinkoff Bank
 HP EliteBook
 HP ProBook
@@ -4538,6 +4547,79 @@ Stacy Abrams
 IG Farben
 I.G. Farben
 Patek Philippe
+Paul Krugman
 Jim Ratcliffe
 Country Garden
 GitHub Projects
+Amazon Web Services
+iRobot
+Moët et Chandon
+Moët & Chandon
+Pete Doherty
+Balmoral
+Gautam Adani
+Charlie Crist
+Amy Gutmann
+Jennifer Coolidge
+Jennifer Connelly
+Val Kilmer
+Miles Teller
+Alessandro Chiocchetti
+Chevy Malibu
+Nissan Sentra
+Anton Piëch
+Ferdinand Piëch
+Gigi Hadid
+Vox Media
+Ferrari Purosangue
+T. Rowe Price
+T Rowe Price
+Anthony Modeste
+Mike Lindell
+Insight Partners
+Toyota Camry
+Honda Civic
+Grand Cherokee
+Subaru Outback
+Dodge Charger
+Jeep Cherokee
+Ford Explorer
+Nissan Altima
+David Malpass
+Dynamic Island
+Lorenzo Brown
+Bob Chapek
+Martha's Vineyard
+Martha’s Vineyard
+Son Heung-min
+Heung-min Son
+Nanmadol
+Nan Madol
+Crystal Palace
+James Corden
+House of the Dragon
+Emilia Clarke
+Stora Enso
+Çatalhöyük
+Li Lu
+Tyson Foods
+Manhattan Project
+Oppenheimer
+Pulitzer
+Bombardier
+Kiwi Farms
+George Pataki
+Ice-T
+Arabian Prince
+Warren G
+N.W.A.
+Ala Moana
+Mall of America
+Mathias Döpfner
+Fort Myers Beach
+Lula da Silva
+Remington Steele
+Old Trafford
+Erik ten Hag
+Jorge Mendes
+Accenture Song

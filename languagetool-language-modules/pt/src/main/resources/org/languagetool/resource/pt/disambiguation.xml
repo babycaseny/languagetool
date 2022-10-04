@@ -635,6 +635,16 @@
       <example type="untouched">Nas Antilhas existem também <marker>ilhas</marker> que são possessões (britânicas, francesas, holand...</example>
     </rule>
     <rule>
+      <antipattern>
+        <token postag="NC.+" postag_regexp="yes"/>
+        <token postag="R.+" postag_regexp="yes"/>
+       <marker>
+       <and>
+        <token postag="AQ.+"/>
+        <token postag="V.+"/>
+       </and>
+       </marker>
+      </antipattern>
       <pattern>
           <token postag="R.+" postag_regexp="yes">
             <exception scope='previous' postag="(A|C|D|PP|R|V).+|_PUNCT" postag_regexp="yes"/>
@@ -1188,6 +1198,17 @@
       <disambig action="filter" postag="V.*"/>
   </rule>
   
+  <rule id="CONSEGUIR" name="conseguir + inf">
+    <pattern>
+      <marker>
+        <token postag="V.*" postag_regexp="yes" inflected="yes">conseguir</token>  
+      </marker>
+      <token postag="V.N.*" postag_regexp="yes"/>
+    </pattern>
+    <disambig action="filter" postag="V.*"/>
+  </rule>
+  
+  
   <rulegroup id="D_R_N" name="Det + Adv + Nom">
     <!-- 		Based on Spanish disambiguation.xml by Tiago F. Santos		-->
     <rule>
@@ -1251,7 +1272,7 @@
         <rule>
             <pattern>
                 <token postag="RN|RG" postag_regexp="yes"><exception postag="CS"></exception></token>
-                <token postag="P[^I].*" postag_regexp="yes"/>
+                <token postag="P[^I].*" postag_regexp="yes"><exception inflected="yes">comigo</exception></token>
                 <token postag="V.[SI].*" postag_regexp="yes"/>
             </pattern>
             <disambig action="filterall"/>
@@ -1482,6 +1503,16 @@
       <example type="untouched">Você o acha parecido com o pai?</example>
     </rule>
     <rule>
+      <antipattern>
+        <token regexp="yes">para</token>
+        <token postag="D.+" postag_regexp="yes"/>
+        <marker>
+        <and>
+        <token postag="N.+" postag_regexp="yes"/>
+        <token postag="VMN0000"/>
+        </and>
+        </marker>
+      </antipattern>
       <pattern>
           <token regexp="yes">&art_detecao_paronimos;
             <exception regexp='yes'>[ao]s?|nos|para</exception></token>
@@ -1529,11 +1560,21 @@
       </pattern>
       <disambig action="filter" postag="S.+"/>
     </rule>
+    <rule>
+      <pattern>
+        <token inflected='yes' regexp='yes'>caminhar|correr|explicar|inaugurar|ver|ele|comprar</token>
+        <token min='0' postag='R.' postag_regexp='yes'/>
+        <marker>
+          <token>a</token>
+        </marker>
+      </pattern>
+      <disambig action="remove" postag="S.+"/>
+    </rule>
     <rule><!-- TODO too agressive. try disabling this rule in a day without many changes and see regression results -->
       <pattern>
           <token postag="V.+" postag_regexp="yes">
             <exception>para</exception>
-            <exception inflected='yes' regexp='yes'>caminhar|correr|explicar|inaugurar|ver|ele</exception></token>
+            <exception inflected='yes' regexp='yes'>caminhar|correr|explicar|inaugurar|ver|ele|comprar</exception></token>
           <token min='0' postag='R.' postag_regexp='yes'/>
         <marker>
           <token>a</token>

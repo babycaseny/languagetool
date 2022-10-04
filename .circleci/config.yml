@@ -36,11 +36,11 @@ workflows:
       - test-and-deploy-partial          
 jobs:
   test-and-deploy-full:
-    resource_class: medium
+    resource_class: medium+
     executor:
       name: docker-openjdk11
     environment:
-      MAVEN_OPTS: -Xmx3200m
+      MAVEN_OPTS: -Xmx3500m
     steps:
       - custom-checkout
       - install-project
@@ -58,11 +58,11 @@ jobs:
             - ~/.m2
           key: v1-dependencies-{{ checksum "/home/circleci/project/~/project/pom.xml" }}
   test-and-deploy-partial:
-    resource_class: medium
+    resource_class: medium+
     executor: 
       name: docker-openjdk11
     environment: 
-      MAVEN_OPTS: -Xmx3200m
+      MAVEN_OPTS: -Xmx3500m
     steps:
       - custom-checkout
       - get-diffs
