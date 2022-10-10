@@ -1081,6 +1081,7 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
     put("erzeiht", w -> Arrays.asList("erzieht", "verzeiht"));
     put("schalfen", w -> Arrays.asList("schlafen", "schaffen", "scharfen"));
     put("Anfage", w -> Arrays.asList("Anfrage", "Anlage"));
+    put("Sep", w -> Arrays.asList("Sepp", "September", "Separator", "Sei"));
     put("Formulares", "Formulars");
     put("Danl", "Dank");
     put("umbennen", "umbenennen");
@@ -1888,6 +1889,11 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
                    firstPart.matches(".{3,25}(tum|ing|ling|heit|keit|schaft|ung|ion|tät|at|um)s")) {
           //System.out.println("will not accept: " + word);
         }
+      }
+    }
+    if (word.endsWith("mitarbeitende") || word.endsWith("mitarbeitenden")) {
+      if (hunspell.spell(word.replaceFirst("mitarbeitenden?", "mitarbeiter"))) {
+        return true;
       }
     }
     if ((idx+1 < words.size() && (word.endsWith(".mp") || word.endsWith(".woff")) && words.get(idx+1).equals("")) ||
@@ -2787,6 +2793,13 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
       case "Gegebenfalls": return topMatch("Gegebenenfalls");
       case "zugebenermaßen": return topMatch("zugegebenermaßen");
       case "beispielweise": return topMatch("beispielsweise");
+      case "pdf": return topMatch("PDF");
+      case "Pdf": return topMatch("PDF");
+      case "pdfs": return topMatch("PDFs");
+      case "Pdfs": return topMatch("PDFs");
+      case "gekriecht": return topMatch("gekrochen");
+      case "Jojo-Effekt": return topMatch("Jo-Jo-Effekt");
+      case "Jojo-Effekts": return topMatch("Jo-Jo-Effekts");
       case "umgangsprachlich": return topMatch("umgangssprachlich");
     }
     return Collections.emptyList();

@@ -8912,6 +8912,7 @@ Caracas
 Hanói
 Lusaca
 Harare
+yeah
 #### Química ####
 acetanilida
 acetanilidas
@@ -10395,6 +10396,7 @@ Dacia
 DAESH
 Daesh
 Daguerre
+Dallas
 Dalí
 Dan
 Dana
@@ -11265,6 +11267,16 @@ GT
 GTK
 GTX
 GUI
+hackeada
+hackeadas
+hackeado
+hackeados
+hackear
+hackearam
+hackeava
+hackeavam
+hackeei
+hackeou
 hacking
 HD
 HDMI
