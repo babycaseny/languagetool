@@ -2,6 +2,7 @@
 # Useful to remove incorrect readings from the binary dictionary without rebuilding it.
 # File Encoding: UTF-8
 # Format: fullform baseform postags (tab separated)
+Frankfort	Frankfort	NPCSG00
 ahuix	ahuixar	VMIP1S0B
 ahuixa	ahuixar	VMIP3S00
 ahuixa	ahuixar	VMM02S00
@@ -92,6 +93,11 @@ ahuixéssim	ahuixar	VMSI1P02
 ahuixéssiu	ahuixar	VMSI2P02
 ahuixí	ahuixar	VMIS1S00
 ahuixó	ahuixó	NCMS000
+antiespumant	antiespumant	AQ0CS0
+antiespumant	antiespumant	NCMS000
+antiespumants	antiespumant	AQ0CP0
+antiespumants	antiespumant	NCMP000
+lobbys	lobby	NCMP000
 redoníssim	redoníssim	AQ0MS0
 redoníssima	redoníssim	AQ0FS0
 redoníssimes	redoníssim	AQ0FP0
@@ -103,3 +109,5 @@ rodoníssims	rodoníssim	AQ0MP0
 royaltys	royalty	NCMP000
 selfie	selfie	NCFS000
 selfies	selfie	NCFP000
+vigorèxia	vigorèxia	NCMS000
+vigorèxies	vigorèxia	NCMP000

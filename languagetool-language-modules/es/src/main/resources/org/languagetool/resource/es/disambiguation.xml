@@ -1350,6 +1350,28 @@ Copyright (C) 2011 Juan Martorell
             <disambig action="ignore_spelling"/>
         </rule>
     </rulegroup>
+    <rulegroup id="UNIDADES2" name="abreiaturas de unidades">
+        <rule>
+            <pattern>
+                <token regexp="yes">[1234567890., ]+|/|por<exception postag="_PUNCT.*" postag_regexp="yes"/></token>
+                <marker>
+                    <token>ha</token>
+                </marker>
+                <token><exception postag="V.P..SM" postag_regexp="yes"/></token>
+                <!-- Exception: 2012 ha sido -->
+            </pattern>
+            <disambig action="replace"><wd lemma="hectárea" pos="NCFN000"/></disambig>
+        </rule>
+        <rule>
+            <pattern>
+                <token regexp="yes">[h1234567890., ]+|/|per<exception postag="_PUNCT.*" postag_regexp="yes"/></token>
+                <marker>
+                    <token>min</token>
+                </marker>
+            </pattern>
+            <disambig action="replace"><wd lemma="minuto" pos="NCMN000"/></disambig>
+        </rule>
+    </rulegroup>
     <rule id="hemos" name="hemos (haber)">
         <pattern>
             <token postag="VAIP1P0">hemos</token>
@@ -2025,6 +2047,15 @@ Copyright (C) 2011 Juan Martorell
             <token><exception>a</exception></token>
         </pattern>
         <disambig action="replace" postag="NCFS000"/>
+    </rule>
+    <rule id="no_adj" name="no adj">
+        <pattern>
+            <marker>
+                <token postag="NC.*" postag_regexp="yes" inflected="yes">campeón</token>
+            </marker>
+            <token postag="N.*" postag_regexp="yes"/>
+        </pattern>
+        <disambig action="remove" postag="A.*"/>
     </rule>
     <rule id="amigo_n" name="amigo not adj">
         <pattern>
@@ -6098,6 +6129,26 @@ Copyright (C) 2011 Juan Martorell
                 <wd pos="_allow_repeat"/>
             </disambig>
         </rule>
+        <rule>
+            <pattern>
+                <token regexp="yes">ja|je|ji|ha|he|hi</token>
+                <token>,</token>
+                <marker>
+                    <token><match no="0"/></token>
+                </marker>
+            </pattern>
+            <disambig action="ignore_spelling"/>
+        </rule>
+        <rule>
+            <pattern>
+                <marker>
+                    <token regexp="yes">ja|je|ji|ha|he|hi</token>
+                </marker>
+                <token>,</token>
+                <token><match no="0"/></token>
+            </pattern>
+            <disambig action="ignore_spelling"/>
+        </rule>
     </rulegroup>
     <!-- SOME EXTRA TAGGING -->
     <rulegroup id="letras_mayusculas" name="letras sueltas mayúsculas">
@@ -6747,7 +6798,7 @@ Copyright (C) 2011 Juan Martorell
         </disambig>
     </rule>
     <rule id="URL" name="url">
-        <!-- It excludes URLs from list of unkown words -->
+        <!-- It excludes URLs from list of unknown words -->
         <pattern>
             <token regexp="yes">(https?|ftp)://.*|www.*</token>
         </pattern>
@@ -7103,6 +7154,20 @@ Copyright (C) 2011 Juan Martorell
         </pattern>
         <disambig action="ignore_spelling"/>
     </rule>
+    <rulegroup id="onomatopeyas" name="algunas onomatopeyas">
+        <rule>
+            <pattern>
+                <token case_sensitive="yes" regexp="yes">[Mm]mm+</token>
+            </pattern>
+            <disambig action="ignore_spelling"/>
+        </rule>
+        <rule>
+            <pattern>
+                <token case_sensitive="yes" regexp="yes">A?a+h+</token>
+            </pattern>
+            <disambig action="ignore_spelling"/>
+        </rule>
+    </rulegroup>
     <rulegroup id="IGNORE_SPELLING_OF_ABBREVIATIONS" name="Ignore spelling of some uppercase abbreviations">
         <rule>
             <!-- lowercase word + abbreviation with no vowels -->

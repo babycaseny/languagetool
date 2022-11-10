@@ -3147,7 +3147,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <filter class="org.languagetool.rules.es.ConfusionCheckFilter" args="form:\1 postag:N.*"/>
                 <message>Si es adjetivo o nombre, se escribe con tilde.</message>
                 <suggestion>{suggestion}</suggestion>
-                <example correction="término">Qué és un mamífero, <marker>termino</marker> que no he oído nunca.</example>
+                <example correction="término">Qué es un mamífero, <marker>termino</marker> que no he oído nunca.</example>
             </rule>
             <rule>
                 <antipattern>
@@ -4858,7 +4858,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example>¿Crees que tal vez es más económico?</example>
             </rule>
         </rulegroup>
-        <rulegroup id="INTERROGATIVAS_INDIRECTAS" name="interrogativas indirecas: el cómo, el quién">
+        <rulegroup id="INTERROGATIVAS_INDIRECTAS" name="interrogativas indirectas: el cómo, el quién">
             <rule>
                 <pattern>
                     <token regexp="yes">el|del|al</token>
@@ -5153,7 +5153,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <suggestion><match no="5" postag="VMIP1S0" postag_regexp="yes" postag_replace="VMIS3S0" case_conversion="alllower"/></suggestion>
                 <example correction="llamó">"Time Magazine" <marker>llamo</marker> a su campaña "una comedia".</example>
             </rule>
-            <rule default="temp_off">
+            <rule>
                 <antipattern>
                     <token>creo</token>
                     <token>que</token>
@@ -8101,6 +8101,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             <rule>
                 <antipattern>
                     <token>el</token>
+                    <token>tal</token>
+                    <token regexp="yes">\p{Lu}.*</token>
+                </antipattern>
+                <antipattern>
+                    <token>el</token>
                     <token>uno</token>
                 </antipattern>
                 <antipattern>
@@ -10968,7 +10973,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token>si</token>
                 </antipattern>
                 <antipattern>
-                    <token regexp="yes" inflected="yes" skip="2">diferir|pensar|fijar|radicar|dudar|estribar</token>
+                    <token regexp="yes" inflected="yes" skip="2">diferir|pensar|fijar|radicar|dudar|estribar|entrar</token>
                     <token>en</token>
                     <token>si</token>
                 </antipattern>
@@ -11181,6 +11186,34 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example>Acláreme, pastor, si estoy errado.</example>
                 <example>No si podemos evitarlo.</example>
                 <example>Veamos si podemos evitarlo.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token postag="SENT_START"/>
+                    <token min="0" max="3" regexp="yes">\p{P}</token>
+                    <marker>
+                        <token>si</token>
+                    </marker>
+                    <token regexp="yes">[\.,;:!\?]</token>
+                </pattern>
+                <message>Como adverbio de afirmación, se escribe con tilde.</message>
+                <suggestion>sí</suggestion>
+                <example correction="Sí"><marker>Si</marker>!</example>
+                <example correction="Sí">¡<marker>Si</marker>!</example>
+                <example correction="Sí"><marker>Si</marker>, me gusta mucho.</example>
+                <example correction="Sí">¡<marker>Si</marker>, me gusta mucho!</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <marker>
+                        <token>si</token>
+                    </marker>
+                    <token min="0" regexp="yes">[,;]</token>
+                    <token>pero</token>
+                </pattern>
+                <message>Como adverbio de afirmación, se escribe con tilde.</message>
+                <suggestion>sí</suggestion>
+                <example correction="sí">Pues <marker>si</marker>, pero le gusta mucho.</example>
             </rule>
         </rulegroup>
         <rulegroup id="PASO" name="paso/pasó">
@@ -11520,7 +11553,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example>Autorízase el ingreso de agente.</example>
             </rule>
         </rulegroup>
-        <rulegroup id="CONTRACCIONES" name="contracciones: del, al" default="on">
+        <rulegroup id="CONTRACCIONES" name="contracciones: del, al">
             <!-- It must be coherent with rule EL_TILDE-->
             <antipattern>
                 <token>el</token>
@@ -11555,6 +11588,21 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <suggestion>\1l</suggestion>
                 <example correction="al">Ve <marker>a el</marker> que más te guste</example>
                 <example correction="del">autor <marker>de el</marker> cual no se sabe nada</example>
+            </rule>
+            <rule default="temp_off">
+                <pattern>
+                    <marker>
+                        <token regexp="yes">de|a<exception postag="_possible_NP"/></token>
+                        <token case_sensitive="yes">el</token>
+                    </marker>
+                    <token regexp="yes">&nombre_fem_el;</token>
+                </pattern>
+                <message>Contracción</message>
+                <suggestion>\1l</suggestion>
+                <example correction="del">La casa <marker>de el</marker> agua.</example>
+                <example correction="al">Los mercados van <marker>a el</marker> alza.</example>
+                <example>De El Mundo o de El País.</example>
+                <example>G es la constante y A el área.</example>
             </rule>
         </rulegroup>
         <rulegroup id="ARTICULO_EN_TOPONIMOS" name="del Cario > de El Cairo" default="on">
@@ -12813,8 +12861,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token min="0">-</token>
                     <token regexp="yes">...+<exception>cercano</exception></token>
                 </pattern>
-                <message suppress_misspelled="yes">El prefijo 'super-' se escribe junto.</message>
-                <suggestion><match no="3" regexp_match="(.+)" regexp_replace="super$1" case_conversion="alllower"/></suggestion>
+                <filter class="org.languagetool.rules.es.SpanishSuppressMisspelledSuggestionsFilter" args="suppressMatch:true"/>
+                <message>El prefijo 'super-' se escribe junto.</message>
+                <suggestion><match no="1" regexp_match="(?iu)ú" regexp_replace="u" case_conversion="preserve"/><match no="3" regexp_match="(.+)" regexp_replace="$1" case_conversion="alllower"/></suggestion>
                 <example correction="superbuenas">Son <marker>súper buenas</marker></example>
                 <example correction="superintendente">Él es el <marker>super-intendente</marker></example>
                 <example>Lo pasamos súper en la fiesta.</example>
@@ -12838,7 +12887,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token postag="A.*|V.P.*" postag_regexp="yes"><exception regexp="yes">super|súper|cercano</exception></token>
                 </pattern>
                 <message>Como prefijo de un adjetivo, 'super-' se escribe junto, aunque la palabra resultante no esté en el diccionario.</message>
-                <suggestion><match no="3" regexp_match="(.+)" regexp_replace="super$1" case_conversion="alllower"/></suggestion>
+                <suggestion><match no="1" regexp_match="(?iu)ú" regexp_replace="u" case_conversion="preserve"/><match no="3" regexp_match="(.+)" regexp_replace="$1" case_conversion="alllower"/></suggestion>
                 <example correction="superimportantes">Son <marker>super importantes</marker></example>
                 <example>Es una super gran oportunidad.</example>
             </rule>
@@ -12849,7 +12898,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token postag="N.*" postag_regexp="yes"><exception regexp="yes">\d+|Nintendo</exception></token>
                 </pattern>
                 <message>Como prefijo, 'super-' se escribe junto, aunque la palabra resultante no esté en el diccionario.</message>
-                <suggestion><match no="3" regexp_match="(.+)" regexp_replace="super$1" case_conversion="alllower"/></suggestion>
+                <suggestion><match no="1" regexp_match="(?iu)ú" regexp_replace="u" case_conversion="preserve"/><match no="3" regexp_match="(.+)" regexp_replace="$1" case_conversion="alllower"/></suggestion>
                 <example correction="supercamino">Son un <marker>super camino</marker></example>
                 <example>En la Super Bowl.</example>
                 <example>Super-8.</example>
@@ -13018,6 +13067,20 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example>Este auto usado es tan bueno como uno nuevo.</example>
             </rule>
         </rulegroup>
+        <rule id="PREFIJOS_JUNTOS_EN_DICCIONARIO" name="prefijos escritos juntos: *anti occidental">
+            <pattern>
+                <!-- per, sobre -->
+                <token regexp="yes">anglo|archi|bis|plus|post|pre|pro|pseudo|cuasi|semi|sub|ultra|vice|auto|greco|mini|micro|multi|anti|galo</token>
+                <token min="0">-</token>
+                <token regexp="yes">....+<exception regexp="yes">\p{Lu}.*|\d+</exception></token>
+            </pattern>
+            <filter class="org.languagetool.rules.es.SpanishSuppressMisspelledSuggestionsFilter" args="suppressMatch:true"/>
+            <message>Se escribe junto.</message>
+            <suggestion><match no="1"/><match no="3"/></suggestion>
+            <suggestion><match no="1"/>r<match no="3"/></suggestion>
+            <example correction="antioccidental">Es muy <marker>anti occidental</marker>.</example>
+            <example correction="grecorromanas">Las aportaciones <marker>greco romanas</marker> al arte.</example>
+        </rule>
         <rule id="ALREDEDOR" name="*(a) alrededor">
             <antipattern>
                 <token inflected="yes" regexp="yes">ascender|emplear|afectar</token>
@@ -13523,14 +13586,15 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <token regexp="yes">[a-z]</token>
                 <token regexp="yes" spacebefore="no">[\)\.\]/]</token>
             </antipattern>
-            <rule default="temp_off">
+            <rule>
                 <pattern>
                     <marker>
                         <token case_sensitive="yes">q</token>
                     </marker>
                     <token><exception postag="UNKNOWN"/></token>
                 </pattern>
-                <message>¿Quería decir <suggestion>que</suggestion>?</message>
+                <message>Asegúrese de que el carácter 'q' es correcto y no es un error de escritura.</message>
+                <suggestion>que</suggestion>
                 <example correction="que">Con el calor <marker>q</marker> hace.</example>
             </rule>
             <rule>
@@ -14256,13 +14320,14 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token postag="[DAN].*S.*" postag_regexp="yes"/>
                 </antipattern>
                 <pattern>
-                    <!-- it could be any verb? -->
+                    <!--it could be any verb?-->
                     <token inflected="yes" regexp="yes" postag="V..[SIC].*" postag_regexp="yes">permitir|prohibir|autorizar</token>
                     <marker>
-                        <token skip="6">que<exception scope="next" postag="V,N.*|V...[123].*" postag_regexp="yes"/></token>
+                        <token skip="6">que<exception scope="next" postag="V...[123].*" postag_regexp="yes"/></token>
                         <token postag="V.N.*" postag_regexp="yes"><exception scope="previous" postag="SP.*|LOC_PREP" postag_regexp="yes"/></token>
                     </marker>
                 </pattern>
+                <filter class="org.languagetool.rules.AdaptSuggestionsFilter" args="none:none"/>
                 <message>Construcción incorrecta.</message>
                 <suggestion><match no="2" regexp_match="que" regexp_replace="a" include_skipped="all"/> \3</suggestion>
                 <suggestion><match no="2" include_skipped="all"/> <match no="3" postag="(V.)N.*" postag_regexp="yes" postag_replace="$1SI3P0"/></suggestion>
@@ -14277,16 +14342,17 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <pattern>
                     <token inflected="yes" regexp="yes" postag="V..[SIC].*" postag_regexp="yes">permitir|prohibir|autorizar</token>
                     <marker>
-                        <token skip="6">que<exception scope="next" postag="V,N.*|V...[123].*" postag_regexp="yes"/></token>
+                        <token skip="6">que<exception scope="next" postag="V...[123].*" postag_regexp="yes"/></token>
                         <token postag="V.N.*" postag_regexp="yes"><exception scope="previous" postag="SP.*|LOC_PREP" postag_regexp="yes"/></token>
                     </marker>
                 </pattern>
+                <filter class="org.languagetool.rules.AdaptSuggestionsFilter" args="none:none"/>
                 <message>Construcción incorrecta.</message>
                 <suggestion><match no="2" regexp_match="que" regexp_replace="a" include_skipped="all"/> \3</suggestion>
                 <suggestion><match no="2" include_skipped="all"/> <match no="3" postag="(V.)N.*" postag_regexp="yes" postag_replace="$1SI3S0"/></suggestion>
                 <example correction="a la juventud conocer|que la juventud conociera|que la juventud conociese">Eso permitiría <marker>que la juventud conocer</marker> mejor la naturaleza.</example>
                 <example correction="a la juventud ser|que la juventud fuera|que la juventud fuese">Eso permitía <marker>que la juventud ser</marker> conocedora de la naturaleza.</example>
-                <example correction="a el niño conocer|que el niño conociera|que el niño conociese">Permitió <marker>que el niño conocer</marker>.</example>
+                <example correction="al niño conocer|que el niño conociera|que el niño conociese">Permitió <marker>que el niño conocer</marker>.</example>
                 <example>permitirá que el placer, se vaya manifestando cada vez</example>
             </rule>
             <rule>
@@ -14295,13 +14361,14 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token postag="[DAN].*S.*" postag_regexp="yes"/>
                 </antipattern>
                 <pattern>
-                    <!-- it could be any verb? -->
+                    <!--it could be any verb?-->
                     <token inflected="yes" regexp="yes">permitir|prohibir|autorizar</token>
                     <marker>
-                        <token skip="6">que<exception scope="next" postag="V,N.*|V...[123].*" postag_regexp="yes"/></token>
+                        <token skip="6">que<exception scope="next" postag="V...[123].*" postag_regexp="yes"/></token>
                         <token postag="V.N.*" postag_regexp="yes"><exception scope="previous" postag="SP.*|LOC_PREP" postag_regexp="yes"/></token>
                     </marker>
                 </pattern>
+                <filter class="org.languagetool.rules.AdaptSuggestionsFilter" args="none:none"/>
                 <message>Construcción incorrecta.</message>
                 <suggestion><match no="2" regexp_match="que" regexp_replace="a" include_skipped="all"/> \3</suggestion>
                 <suggestion><match no="2" include_skipped="all"/> <match no="3" postag="(V.)N.*" postag_regexp="yes" postag_replace="$1SP3P0"/></suggestion>
@@ -14316,10 +14383,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <pattern>
                     <token inflected="yes" regexp="yes">permitir|prohibir|autorizar</token>
                     <marker>
-                        <token skip="6">que<exception scope="next" postag="V,N.*|V...[123].*" postag_regexp="yes"/></token>
+                        <token skip="6">que<exception scope="next" postag="V...[123].*" postag_regexp="yes"/></token>
                         <token postag="V.N.*" postag_regexp="yes"><exception scope="previous" postag="SP.*|LOC_PREP" postag_regexp="yes"/></token>
                     </marker>
                 </pattern>
+                <filter class="org.languagetool.rules.AdaptSuggestionsFilter" args="none:none"/>
                 <message>Construcción incorrecta.</message>
                 <suggestion><match no="2" regexp_match="que" regexp_replace="a" include_skipped="all"/> \3</suggestion>
                 <suggestion><match no="2" include_skipped="all"/> <match no="3" postag="(V.)N.*" postag_regexp="yes" postag_replace="$1SP3S0"/></suggestion>
@@ -14955,7 +15023,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     </marker>
                     <token regexp="yes">razón|motivo</token>
                 </pattern>
-                <message>Se escribe con tidle.</message>
+                <message>Se escribe con tilde.</message>
                 <suggestion>por qué</suggestion>
                 <example correction="por qué">No entiendo <marker>por que</marker> razón.</example>
             </rule>
@@ -19668,6 +19736,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example>Veánse cuadros pp. 455-456.</example>
                 <example>Ver cuadro p. 34.</example>
                 <example>Toman en serio cosas que nosotros no consideramos.</example>
+                <example>Campeón Eurocopa Sub-17.</example>
             </rule>
             <rule>
                 <pattern>
@@ -21089,7 +21158,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example correction="bonita">Gambia no es muy <marker>bonito</marker>.</example>
             </rule>
         </rulegroup>
-        <rulegroup id="AGREEMENT_SUBJECT_VERB" name="accord sujet/verbe" default="off">
+        <rulegroup id="AGREEMENT_SUBJECT_VERB" name="concordancia sujeto/verbo" default="off">
             <antipattern>
                 <token postag="SENT_START.*" postag_regexp="yes"/>
                 <token postag="V.M." postag_regexp="yes"/>
@@ -22063,7 +22132,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             <suggestion>solo</suggestion>
             <suggestion>solamente</suggestion>
             <suggestion>únicamente</suggestion>
-            <url>http://www.rae.es/consultas/el-adverbio-solo-y-los-pronombres-demostrativos-sin-tilde</url>
+            <url>https://www.rae.es/espanol-al-dia/el-adverbio-solo-y-los-pronombres-demostrativos-sin-tilde</url>
             <example correction="solo|solamente|únicamente">Y <marker>sólo</marker> tiene tres.</example>
         </rule>
         <rule id="O_NO_TILDE" name="ó/o">
@@ -22349,7 +22418,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <token case_sensitive="yes">a</token>
                 <token postag="NC[FC][SN].*" postag_regexp="yes"><exception regexp="yes">inicial|final</exception></token>
             </pattern>
-            <message>Posible confusión. ¿Quería decir <suggestion>\1 \3</suggestion></message>
+            <message>Posible confusión. ¿Quería decir <suggestion>\1 \3</suggestion>?</message>
             <example correction="la propuesta">No entiendo <marker>la a propuesta</marker>.</example>
         </rule>
         <rule id="CENYO" name="seño/ceño">
@@ -22492,9 +22561,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token regexp="yes">cual|cuales|cuál|cuáles</token>
                     <token>quieras</token>
                 </pattern>
-                <message>Se escribe junto.</message>
-                <suggestion>cual\2</suggestion>
-                <example correction="cualquieras">Ellos no son unos <marker>cuales quieras</marker>.</example>
+                <message>El plural de "cualquiera" es <suggestion>cualesquiera</suggestion>.</message>
+                <example correction="cualesquiera">Ellos no son unos <marker>cuales quieras</marker>.</example>
             </rule>
         </rulegroup>
         <rule id="HAZMERREIR" name="hazmerreír">
@@ -23010,7 +23078,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token>de</token>
                     <token postag="D..[MF]..*|PP.*" postag_regexp="yes" inflected="yes" regexp="yes">el|aquel|mí|ti|él|nosotros|vosotros|ellos</token>
                 </pattern>
-                <message>Si és una interjección, se escribe <suggestion>ay</suggestion>. Correcto si es el v. 'haber'.</message>
+                <message>Si es una interjección, se escribe <suggestion>ay</suggestion>. Correcto si es el v. 'haber'.</message>
                 <example correction="Ay">¡<marker>Hay</marker> de mí!</example>
                 <example correction="Ay">¡<marker>Hay</marker> de aquellos que no crean!</example>
                 <example correction="Ay">¡<marker>Hay</marker> de los que me ofendan!</example>
@@ -23029,7 +23097,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     </marker>
                     <token>del</token>
                 </pattern>
-                <message>Si és una interjección, se escribe <suggestion>ay</suggestion>. Correcto si es el v. 'haber'.</message>
+                <message>Si es una interjección, se escribe <suggestion>ay</suggestion>. Correcto si es el v. 'haber'.</message>
                 <example correction="Ay">¡<marker>Hay</marker> del que me ofenda!</example>
                 <example>¿Qué hay de lo mío?</example>
             </rule>
@@ -26770,7 +26838,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     </marker>
                     <token><exception regexp="yes">\p{P}</exception></token>
                 </pattern>
-                <message>Con el sentido de causa ('puesto que'), "pues" se escribe preferiblement con una coma antes. Con valor continuativo ('por tanto'), se escribe entre dos comas.</message>
+                <message>Con el sentido de causa ('puesto que'), "pues" se escribe preferiblemente con una coma antes. Con valor continuativo ('por tanto'), se escribe entre dos comas.</message>
                 <!-- Third case:  con valor ilativo. ¿No quieres oír mis consejos?, pues tú lo llorarás algún día. -->
                 <suggestion>, pues</suggestion>
                 <suggestion>, pues,</suggestion>
@@ -28295,13 +28363,24 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <token>.</token>
                 <token>.</token>
             </pattern>
-            <message>Sustituya los tres puntos por el carácter de puntos suspensivos.</message>
+            <message>En una tipografía cuidada, use el carácter de puntos suspensivos.</message>
             <suggestion>…</suggestion>
             <example correction="…">Ahora mismo<marker>...</marker></example>
             <example>Ahora…</example>
         </rule>
         <rulegroup id="GUION_LARGO" name="Guion largo">
             <url>https://www.rae.es/dpd/raya</url>
+            <antipattern>
+                <token>−</token>
+                <token regexp="yes">\d.*</token>
+            </antipattern>
+            <antipattern>
+                <token regexp="yes" inflected="yes">acabar|terminar</token>
+                <token skip="5">en</token>
+                <token spacebefore="yes">-</token>
+                <token spacebefore="no"/>
+                <example>Terminan en vocal, -n o -s.</example>
+            </antipattern>
             <antipattern>
                 <!-- Prefixes: used in texts about linguistics -->
                 <token regexp="yes">a|an|ante|anti|archi|bi|co|com|con|contra|cuasi|des|entre|ex|extra|hiper|hipo|im|in|infra|inter|multi|nano|pluri|poli|pre|pro|re|retro|semi|sobre|sub|super|supra|tele|trans|tras|tri|ultra|uni|vice</token>
@@ -28310,50 +28389,74 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             <rule>
                 <pattern>
                     <marker>
-                        <token spacebefore="yes" regexp="yes">[–‒-]</token>
+                        <token spacebefore="yes" regexp="yes">[−–‒-]</token>
                     </marker>
-                    <token spacebefore="no" regexp="yes">[^-\d].*</token>
+                    <token spacebefore="no" regexp="yes">[^-\d].*<exception regexp="yes">[^ayoe\p{P}]</exception></token>
                 </pattern>
-                <message>Utilice el carácter adecuado de guion largo (raya).</message>
+                <message>En una tipografía cuidada, utilice el carácter adecuado de guion largo (raya).</message>
                 <suggestion>—</suggestion>
                 <example correction="—">Ven <marker>-</marker>dijo.</example>
                 <example correction="—">Ven <marker>–</marker>dijo.</example>
                 <example correction="—">Ven <marker>‒</marker>dijo.</example>
+                <example correction="—">Se alteró mucho <marker>-</marker>¿no?-, y después se fue.</example>
+                <example correction="—">Correspondió a Yoel Finol <marker>–</marker>medalla de bronce en Río 2016–, quien se impuso ante el cubano Yosbany Veitía.</example>
                 <example>Ven —dijo.</example>
                 <example>Años 1950‒1954.</example>
                 <example>Nivel medio-alto.</example>
             </rule>
             <rule>
+                <antipattern>
+                    <token regexp="yes">\p{Lu}\p{Lu}?</token>
+                    <token spacebefore="no">-</token>
+                    <example>TR+ de 46 y TR- de 29.</example>
+                    <example>Es un C- o menos.</example>
+                </antipattern>
+                <antipattern>
+                    <token postag="UNKNOWN" regexp="yes">\p{Lu}*</token>
+                    <token spacebefore="no">-</token>
+                    <example>TR+ de 46 y TR- de 29.</example>
+                    <example>Es un C- o menos.</example>
+                </antipattern>
+                <antipattern>
+                    <token regexp="yes">\d+</token>
+                    <token spacebefore="no" regexp="yes">[−–‒-]</token>
+                    <token regexp="yes">\d+</token>
+                </antipattern>
                 <pattern>
-                    <token regexp="yes">.*[^\-\d]</token>
+                    <token regexp="yes">.*[^\-]</token>
                     <marker>
-                        <token spacebefore="no" regexp="yes">[–‒-]</token>
+                        <token spacebefore="no" regexp="yes">[−–‒-]</token>
                     </marker>
                     <token spacebefore="yes"/>
                 </pattern>
-                <message>Utilice el carácter adecuado de guion largo (raya).</message>
+                <message>En una tipografía cuidada, utilice el carácter adecuado de guion largo (raya).</message>
                 <suggestion>—</suggestion>
                 <example correction="—">dijo entonces<marker>-</marker> ven.</example>
+                <example correction="—">LOS COMENTARISTAS DEPORTIVOS -QUE CASI SIEMPRE SON DE ESPN Y MEXICANOS<marker>-</marker> LUEGO</example>
+                <example correction="—">Correspondió a Yoel Finol –medalla de bronce en Río 2016<marker>–</marker> quien se impuso ante el cubano Yosbany Veitía.</example>
                 <example>Nivel bajo-medio.</example>
+                <example>demás, Roy puede esquiar en el K- 12.</example>
+                <example>demás, Roy puede esquiar en el K-12.</example>
             </rule>
             <rule>
                 <pattern>
-                    <token regexp="yes">.*[^\-\d]</token>
+                    <token regexp="yes">.*[^\-]</token>
                     <marker>
-                        <token spacebefore="no" regexp="yes">[–‒-]</token>
+                        <token spacebefore="no" regexp="yes">[−–‒-]</token>
                     </marker>
                     <token regexp="yes">;|,|\.</token>
                 </pattern>
-                <message>Utilice el carácter adecuado de guion largo (raya).</message>
+                <message>En una tipografía cuidada, utilice el carácter adecuado de guion largo (raya).</message>
                 <suggestion>—</suggestion>
                 <example correction="—">dijo<marker>-</marker>, ven.</example>
+                <example correction="—">Correspondió a Yoel Finol –medalla de bronce en Río 2016<marker>–</marker>, quien se impuso ante el cubano Yosbany Veitía.</example>
             </rule>
             <rule>
                 <pattern>
-                    <token regexp="yes">[–‒-]</token>
-                    <token regexp="yes">[–‒-]</token>
+                    <token regexp="yes">[−–‒-]</token>
+                    <token regexp="yes">[−–‒-]</token>
                 </pattern>
-                <message>Utilice el carácter adecuado de guion largo (raya).</message>
+                <message>En una tipografía cuidada, utilice el carácter adecuado de guion largo (raya).</message>
                 <suggestion>—</suggestion>
                 <example correction="—"><marker>--</marker></example>
                 <example><marker>—</marker></example>
@@ -28362,12 +28465,13 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <pattern>
                     <token postag="SENT_START"/>
                     <marker>
-                        <token regexp="yes">[–‒-]</token>
+                        <token regexp="yes">[−–‒-]</token>
                     </marker>
                 </pattern>
-                <message>Utilice el carácter adecuado de guion largo (raya).</message>
+                <message>En una tipografía cuidada, utilice el carácter adecuado de guion largo (raya).</message>
                 <suggestion>—</suggestion>
                 <example correction="—"><marker>-</marker> Primer punto del orden del día.</example>
+                <example correction="—"><marker>-</marker>¿Perdón?</example>
             </rule>
         </rulegroup>
         <rulegroup id="COMILLAS_TIPOGRAFICAS" name="Comillas tipográficas">
@@ -28375,10 +28479,24 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <pattern>
                     <marker>
                         <token spacebefore="yes">"</token>
+                        <token spacebefore="no"><exception postag="UNKNOWN" regexp="yes">..+</exception></token>
+                        <token spacebefore="no">"</token>
+                    </marker>
+                </pattern>
+                <message>En una tipografía cuidada, use comillas tipográficas.</message>
+                <suggestion>“\2”</suggestion>
+                <suggestion>«\2»</suggestion>
+                <example correction="“grande”|«grande»">Es <marker>"grande"</marker>.</example>
+                <example>Es de “gran calidad”.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <marker>
+                        <token spacebefore="yes">"</token>
                     </marker>
                     <token spacebefore="no"/>
                 </pattern>
-                <message>Use comillas tipográficas.</message>
+                <message>En una tipografía cuidada, use comillas tipográficas.</message>
                 <suggestion>“</suggestion>
                 <suggestion>«</suggestion>
                 <example correction="“|«">Es de <marker>"</marker>gran calidad".</example>
@@ -28392,7 +28510,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                         <token spacebefore="no">"</token>
                     </marker>
                 </pattern>
-                <message>Use comillas tipográficas.</message>
+                <message>En una tipografía cuidada, use comillas tipográficas.</message>
                 <suggestion>”</suggestion>
                 <suggestion>»</suggestion>
                 <example correction="”|»">Es de "gran calidad<marker>"</marker>.</example>
@@ -28407,7 +28525,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     </marker>
                     <token spacebefore="no"/>
                 </pattern>
-                <message>Use comillas tipográficas.</message>
+                <message>En una tipografía cuidada, use comillas tipográficas.</message>
                 <suggestion>“</suggestion>
                 <suggestion>«</suggestion>
                 <example correction="“|«">-<marker>"</marker>Dime qué pasó".</example>
@@ -28421,7 +28539,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                         <token spacebefore="no">"</token>
                     </marker>
                 </pattern>
-                <message>Use comillas tipográficas.</message>
+                <message>En una tipografía cuidada, use comillas tipográficas.</message>
                 <suggestion>“</suggestion>
                 <suggestion>«</suggestion>
                 <example correction="“|«">(<marker>"</marker>gran calidad").</example>
@@ -28434,7 +28552,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     </marker>
                     <token spacebefore="no" regexp="yes">[\])!?]</token>
                 </pattern>
-                <message>Use comillas tipográficas.</message>
+                <message>En una tipografía cuidada, use comillas tipográficas.</message>
                 <suggestion>”</suggestion>
                 <suggestion>»</suggestion>
                 <example correction="”|»">("gran calidad<marker>"</marker>).</example>
@@ -28445,7 +28563,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <pattern>
                     <token>"</token>
                 </pattern>
-                <message>Use comillas tipográficas.</message>
+                <message>En una tipografía cuidada, use comillas tipográficas.</message>
                 <suggestion>”</suggestion>
                 <suggestion>“</suggestion>
                 <example correction="”|“"><marker>"</marker></example>
@@ -28459,7 +28577,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     </marker>
                     <token spacebefore="no"/>
                 </pattern>
-                <message>Use el apóstrofo tipográfico.</message>
+                <message>En una tipografía cuidada, use el apóstrofo tipográfico.</message>
                 <suggestion>’</suggestion>
                 <example correction="’">Sotheby<marker>'</marker>s.</example>
             </rule>
@@ -28470,7 +28588,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     </marker>
                     <token spacebefore="no"/>
                 </pattern>
-                <message>Use comillas tipográficas.</message>
+                <message>En una tipografía cuidada, use comillas tipográficas.</message>
                 <suggestion>‘</suggestion>
                 <suggestion>“</suggestion>
                 <suggestion>«</suggestion>
@@ -28485,7 +28603,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                         <token spacebefore="no">'</token>
                     </marker>
                 </pattern>
-                <message>Use comillas tipográficas.</message>
+                <message>En una tipografía cuidada, use comillas tipográficas.</message>
                 <suggestion>’</suggestion>
                 <suggestion>”</suggestion>
                 <suggestion>»</suggestion>
@@ -28501,7 +28619,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     </marker>
                     <token spacebefore="no"/>
                 </pattern>
-                <message>Use comillas tipográficas.</message>
+                <message>En una tipografía cuidada, use comillas tipográficas.</message>
                 <suggestion>‘</suggestion>
                 <suggestion>“</suggestion>
                 <suggestion>«</suggestion>
@@ -28515,7 +28633,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                         <token spacebefore="no">'</token>
                     </marker>
                 </pattern>
-                <message>Use comillas tipográficas.</message>
+                <message>En una tipografía cuidada, use comillas tipográficas.</message>
                 <suggestion>‘</suggestion>
                 <suggestion>“</suggestion>
                 <suggestion>«</suggestion>
@@ -28529,7 +28647,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     </marker>
                     <token spacebefore="no" regexp="yes">[\])!?]</token>
                 </pattern>
-                <message>Use comillas tipográficas.</message>
+                <message>En una tipografía cuidada, use comillas tipográficas.</message>
                 <suggestion>’</suggestion>
                 <suggestion>”</suggestion>
                 <suggestion>»</suggestion>
@@ -28541,7 +28659,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <pattern>
                     <token>'</token>
                 </pattern>
-                <message>Use comillas tipográficas.</message>
+                <message>En una tipografía cuidada, use comillas tipográficas.</message>
                 <suggestion>’</suggestion>
                 <suggestion>‘</suggestion>
                 <example correction="’|‘"><marker>'</marker></example>

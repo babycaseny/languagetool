@@ -214,7 +214,7 @@ lembranças passadas=memórias
 levamos a seu conhecimento=informamos
 levantar voo=descolar|decolar
 mais à frente=mais adiante
-mais ou menos=APAGAR|ESPECIFICAR|aproximadamente|cerca de|meio
+mais ou menos=APAGAR|ESPECIFICAR|aproximadamente|cerca de|relativamente
 mais preferível=preferível
 melhoria da gramática=melhoria gramatical
 melhorias da gramática=melhorias gramaticais
@@ -310,6 +310,8 @@ quais é que são=quais são
 qual é que é=qual é
 qualquer e todos=todos
 quase nunca=raramente
+que ainda está em=ainda em
+que ainda estão em=ainda em
 que pode ser observada=observável
 que pode ser observado=observável
 que se encontra na=na
@@ -455,6 +457,13 @@ sucede muitas vezes=é recorrente|sendo recorrente
 sucede múltiplas vezes=é recorrente|sendo recorrente
 sucede várias vezes=é recorrente|sendo recorrente
 # é recorrente *END*
+#
+# estar de volta *START*
+está de volta=voltou
+estamos de volta=voltámos
+estão de volta=voltaram
+estou de volta=voltei
+# estar de volta *END*
 #
 # EUFEMISMO(S) *START*
 expressão mais agradável=eufemismo

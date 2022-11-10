@@ -30,8 +30,6 @@ import java.io.IOException;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- */
 public class SimpleReplaceRuleTest {
 
   private SimpleReplaceRule rule;
@@ -47,24 +45,21 @@ public class SimpleReplaceRuleTest {
   public void testRule() throws IOException {
     // correct sentences:
     assertEquals(0, rule.match(lt.getAnalyzedSentence("all right")).length);
+    assertEquals(0, rule.match(lt.getAnalyzedSentence("De Kudde eigenschappen")).length);  // no match b/c case-sensitivity
 
     // incorrect sentences:
     checkSimpleReplaceRule("ofzo", "of zo");
+    checkSimpleReplaceRule("Kudde eigenschappen.", "Kudde-eigenschappen");
+    checkSimpleReplaceRule("kudde eigenschappen.", "kudde-eigenschappen");
+    checkSimpleReplaceRule("De kudde eigenschappen.", "kudde-eigenschappen");
   }
 
-  /**
-   * Check if a specific replace rule applies.
-   *
-   * @param sentence the sentence containing the incorrect/misspelled word.
-   * @param word the word that is correct (the suggested replacement).
-   */
-  private void checkSimpleReplaceRule(String sentence, String word) throws IOException {
-    final RuleMatch[] matches = rule.match(lt.getAnalyzedSentence(sentence));
-    assertEquals("Invalid matches.length while checking sentence: "
-        + sentence, 1, matches.length);
+  private void checkSimpleReplaceRule(String sentence, String suggestion) throws IOException {
+    RuleMatch[] matches = rule.match(lt.getAnalyzedSentence(sentence));
+    assertEquals("Invalid matches.length while checking sentence: " + sentence, 1, matches.length);
     assertEquals("Invalid replacement count wile checking sentence: "
         + sentence, 1, matches[0].getSuggestedReplacements().size());
     assertEquals("Invalid suggested replacement while checking sentence: "
-        + sentence, word, matches[0].getSuggestedReplacements().get(0));
+        + sentence, suggestion, matches[0].getSuggestedReplacements().get(0));
   }
 }

@@ -1081,6 +1081,7 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
     put("erzeiht", w -> Arrays.asList("erzieht", "verzeiht"));
     put("schalfen", w -> Arrays.asList("schlafen", "schaffen", "scharfen"));
     put("Anfage", w -> Arrays.asList("Anfrage", "Anlage"));
+    put("gehör", w -> Arrays.asList("gehört", "Gehör", "gehöre"));
     put("Sep", w -> Arrays.asList("Sepp", "September", "Separator", "Sei"));
     put("Formulares", "Formulars");
     put("Danl", "Dank");
@@ -2798,6 +2799,10 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
       case "pdfs": return topMatch("PDFs");
       case "Pdfs": return topMatch("PDFs");
       case "gekriecht": return topMatch("gekrochen");
+      case "einzigst": return topMatch("einzig");
+      case "Einzigst": return topMatch("Einzig");
+      case "Eifelturm": return topMatch("Eiffelturm");
+      case "Eifelturms": return topMatch("Eiffelturms");
       case "Jojo-Effekt": return topMatch("Jo-Jo-Effekt");
       case "Jojo-Effekts": return topMatch("Jo-Jo-Effekts");
       case "umgangsprachlich": return topMatch("umgangssprachlich");

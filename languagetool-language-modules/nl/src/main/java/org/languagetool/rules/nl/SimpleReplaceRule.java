@@ -52,6 +52,11 @@ public class SimpleReplaceRule extends AbstractSimpleReplaceRule2 {
   }
 
   @Override
+  public CaseSensitivy getCaseSensitivy() {
+    return CaseSensitivy.CSExceptAtSentenceStart;
+  }
+
+  @Override
   public List<String> getFileNames() {
     return Collections.singletonList("/nl/replace.txt");
   }

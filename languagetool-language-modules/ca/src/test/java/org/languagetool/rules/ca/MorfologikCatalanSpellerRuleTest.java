@@ -41,6 +41,10 @@ public class MorfologikCatalanSpellerRuleTest {
 
         RuleMatch[] matches;
         JLanguageTool lt = new JLanguageTool(new Catalan());
+        
+        matches = rule.match(lt.getAnalyzedSentence("Tornaràn"));
+        assertEquals(1, matches.length);
+        assertEquals("Tornaran", matches[0].getSuggestedReplacements().get(0));
 
         // prefixes and suffixes.
         assertEquals(0, rule.match(lt.getAnalyzedSentence("S'autodefineixin com a populars.")).length);
@@ -489,7 +493,19 @@ public class MorfologikCatalanSpellerRuleTest {
         assertEquals("m'entretinc", matches[0].getSuggestedReplacements().get(0));
         matches = rule.match(lt.getAnalyzedSentence("m9entretinc"));
         assertEquals("m'entretinc", matches[0].getSuggestedReplacements().get(0));
-        
+        matches = rule.match(lt.getAnalyzedSentence("lajuntamnet"));
+        assertEquals("[l'ajuntament, ajuntament, rejuntament]", matches[0].getSuggestedReplacements().toString());
+        matches = rule.match(lt.getAnalyzedSentence("lajuntament"));
+        assertEquals("[la juntament, l'ajuntament, ajuntament, rejuntament]", matches[0].getSuggestedReplacements().toString());
+        matches = rule.match(lt.getAnalyzedSentence("lajust"));
+        assertEquals("[la just, l'ajust, ajust]", matches[0].getSuggestedReplacements().toString());
+
+        matches = rule.match(lt.getAnalyzedSentence("©L'Institut"));
+        assertEquals("[© L'Institut]", matches[0].getSuggestedReplacements().toString());
+        matches = rule.match(lt.getAnalyzedSentence("18l'Institut"));
+        assertEquals("[18 l'Institut]", matches[0].getSuggestedReplacements().toString());
+
+
         
         //Ela geminada 
         matches = rule.match(lt.getAnalyzedSentence("La sol•licitud"));

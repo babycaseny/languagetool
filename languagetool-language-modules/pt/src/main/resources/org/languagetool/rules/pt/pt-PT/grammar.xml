@@ -35,6 +35,11 @@
     <!ENTITY partes_do_dia "madrugada|manhã|matina|noite|tarde">
     <!ENTITY expressoes_de_tempo_simples "yoctossegundos?|zeptossegundos?|atossegundos?|fentossegundos?|picossegundos?|nanossegundos?|microssegundos?|milissegundos?|(?:segundo|minuto|hora|dia|semana|(?:bi|tri|quadri|se)mestre|ano|década|decénio|mil[éê]nio)s?|mês|meses">
 
+    <!ENTITY paises_com_artigo "(?:Afeganistão|Albânia|Alemanha|Arábia|Argélia|Argentina|Austrália|Áustria|Barbados|Bélgica|Belize|Benim|Bielorrússia|Birmânia|Bolívia|Bósnia|Botsuana|Brasil|Bulgária|Burúndi|Butão|Camarões|Camboja|Canadá|Catar|Cazaquistão|Chade|Chile|China|Chipre|Colômbia|Comores|Congo|Coreia|Croácia|Dinamarca|Egito|Emirados|Equador|Eslováquia|Etiópia|EUA|Fiji|Filipinas|Finlândia|Gabão|Gâmbia|Gana|Geórgia|Grécia|Guatemala|Guiana|Guiné|Haiti|Honduras|Hungria|Ilhas|Índia|Indonésia|Irão|Iraque|Irlanda|Islândia|Jamaica|Japão|Jordânia|Laos|Lesoto|Líbano|Libéria|Líbia|Lituânia|Luxemburgo|Malásia|Malaui|Maldivas|Mali|Mauritânia|México|Micronésia|Moldávia|Mongólia|Namíbia|Nepal|Nicarágua|Nigéria|Noruega|Palestina|Panamá|Papua|Paquistão|Paraguai|Peru|Perú|Quirguistão|República|Ruanda|Rússia|Samoa|Seicheles|Senegal|Sérvia|Síria|Somália|Sri|Suazilândia|Sudão|Suécia|Suíça|Suriname|Tailândia|Tajiquistão|Tanzânia|Togo|Tonga|Tunísia|Turcomenistão|Turquia|Ucrânia|Uruguai|Usbequistão|Vaticano|Venezuela|Vietname|Zâmbia)">
+    <!ENTITY paises_com_artigo_marcoagpinto_na "Espanha|França|Inglaterra|Itália|Madagáscar|Marrocos|Moçambique">
+    <!ENTITY outros_toponimos_com_artigo "(?:Alameda|Algarve|Amadora|Avenida|Cairo|Caldas|Covilhã|Europa|Figueira|Furadouro|Guarda|Largo|Porto|Praceta|Rua|Terreiro)">
+    <!ENTITY toponimos_sem_artigo "(?:Alagoas|Angola|Aragão|Braga|Castela|Coimbra|Cuba|Espanha|Faro|França|Goiás|Havana|Inglaterra|Itália|Júpiter|Lisboa|Madagáscar|Marrocos|Marte|Mercúrio|Moçambique|Neptuno|Paris|Pernambuco|Plutão|Portugal|Roraima|Saturno|Sergipe|Taiwan|Timor|Urano|Vénus)">
+
 
     <!ENTITY hifen "[-‑]">
     <!ENTITY tracos_de_separacao "[-‑]|–|—">
@@ -84,17 +89,17 @@
 
 
     <!-- Termos informais específicos pt_PT - the rule also tests with adding a "s" (plural) at the end of each word -->
-    <!ENTITY informal "abéculas?|ajavardar|anhar|anjinhos?|bacan[ao]s?|badalos?|bagunças?|baita|baixinh[ao]s?|balof[ao]s?|baril|barracadas?|batelada|baza|bazam|bazas|bazaste|bazei|bazámos|bazamos|beijoqueir[ao]s?|bejecas?|bichan[ao]s?|bichinh[ao]s?|biscates?|bitaites?|blablablá|boazonas?|bonz(ão|ões)|bófias?|bora|bués?|cadê|calhamaços?|camandros?|camisinhas?|caraças|carago|caramba|carangos?|carradas?|casinhas?|casórios?|caxamolas?|certinh[ao]s?|chaval[ao]s?|chilindrós?|cocó|coisar|contigo|copião|cornear|cum|cuscar|cusc[ao]s?|cuzinhos?|danad[ao]s?|drunfos?|encrencas?|engonhar|epa|esbardalhar|estrambótic[ao]s?|estrilho|fartazanas?|festarolas?|fezadas?|fixes|fixolas|fofinh[ao]s?|gabarolas?|gaj[ao]s?|garinas?|gatunar|gentinhas?|gosmas?|guit[ao]|gunas?|janad[ao]s?|javardices?|jolas?|larachas?|lelés?|mãezinhas?|mamalhud[ao]s?|mamocas?|man[ao]s?|marad[ao]s?|maralhas?|marimbar|milhent[ao]s?|moinas?|motoqueir[ao]s?|népias?|oi|olhómetros?|paizinhos?|papão|papo|passarocas?|peid[ao]s?|petiza?|piegas|porrada|porre|porreiros?|poucochinhos?|prenhas?|pr[ao]|pró|putos?|quecas?|queridinh[ao]s?|rabiosques?|rapaziadas?|tabefes?|tanas|trampas?|transar|traques?|tretas?|trouxas?|vaquinhas?|velhot[ae]s?|vó|vô|xi|xixi|zilh(ão|ões)">
+    <!ENTITY informal "abéculas?|ajavardar|anhar|anjinhos?|bacan[ao]s?|badalos?|bagunças?|baita|baixinh[ao]s?|balof[ao]s?|baril|barracadas?|batelada|baza|bazam|bazas|bazaste|bazei|bazámos|bazamos|beijoqueir[ao]s?|bejecas?|bichan[ao]s?|bichinh[ao]s?|biscates?|bitaites?|blablablá|boazonas?|bonz(ão|ões)|bófias?|bonzudos?|bora|bués?|cadê|calhamaços?|camandros?|camisinhas?|caraças|carago|caramba|carangos?|carradas?|casinhas?|casórios?|caxamolas?|certinh[ao]s?|chaval[ao]s?|chilindrós?|cocó|coisar|contigo|copião|cornear|cum|cuscar|cusc[ao]s?|cuzinhos?|danad[ao]s?|drunfos?|encrencas?|engonhar|epa|esbardalhar|estrambótic[ao]s?|estrilho|fartazanas?|festarolas?|fezadas?|fixes|fixolas|fofinh[ao]s?|gabarolas?|gaj[ao]s?|garinas?|gatunar|gentinhas?|gosmas?|guit[ao]|gunas?|janad[ao]s?|javardices?|jolas?|larachas?|lelés?|mãezinhas?|mamalhud[ao]s?|mamocas?|man[ao]s?|marad[ao]s?|maralhas?|marimbar|milhent[ao]s?|moinas?|motoqueir[ao]s?|népias?|oi|olhómetros?|paizinhos?|papão|papo|passarocas?|peid[ao]s?|petiza?|piegas|porrada|porre|porreiros?|poucochinhos?|prenhas?|pr[ao]|pró|putos?|quecas?|queridinh[ao]s?|rabiosques?|rapaziadas?|tabefes?|tanas|trampas?|transar|traques?|tretas?|trouxas?|vaquinhas?|velhot[ae]s?|vó|vô|xi|xixi|zilh(ão|ões)">
 
 
     <!-- Termos depreciativos específicos pt_PT - the rule uses inflected='yes' to get all forms -->
-    <!ENTITY depreciativo "alarve|badalhoco|badameco|baianada|bandalho|bimbalhada|bimbo|bosta|brasuca|brega|bumbo|chacha|caguinchas|campónio|chico-esperto|china|chinoca|chulo|chunga|chungaria|chunguice|ciganada|ciganagem|coirão|crápula|cretino|escarumba|escória|escumalha|espertalhão|espertinho|fufa|gagá|gandulo|generaleco|gentalha|gordalhão|imbecil|indigente|japa|labrego|larilas?|lorpa|maldito|maltrapilho|maricão|mariconço|mentecapto|mitra|molenga|molengão|monhé|morcão|negralhada|nhurrice|nhurro|otário|pacóvio|palerma|panasca|panilas|patego|pelintra|pindérico|portuga|pretalhada|pretaria|pulha|rabeta|ralé|reles|sacana|tanso|tuga">
+    <!ENTITY depreciativo "alarve|badalhoco|badameco|baianada|bandalho|bimbalhada|bimbo|bosta|brasuca|brega|bumbo|chacha|caguinchas|campónio|chico-esperto|china|chinoca|chulo|chunga|chungaria|chunguice|ciganada|ciganagem|coirão|crápula|cretino|escarumba|escória|escumalha|espertalhão|espertinho|fufa|gagá|gandulo|generaleco|gentalha|gentiaga|gordalhão|imbecil|indigente|japa|labrego|larilas?|lorpa|maldito|maltrapilho|maricão|mariconço|mentecapto|mitra|molenga|molengão|monhé|morcão|negralhada|nhurrice|nhurro|otário|pacóvio|palerma|panasca|panilas|parolo|patego|pelintra|pindérico|portuga|pretalhada|pretaria|pulha|rabeta|ralé|reles|sacana|tanso|tuga">
 
 
     <!-- Estrangeirismos específicos pt_PT - the rule also tests with adding a "s" (plural) at the end of each word -->
     <!ENTITY barbarismos "accelerandos?|agitato|allegretto|allegro|amabile|apfelstrudel|backups?|badine|bavaroise|beagle|becquerel|bip|blague|blister|boate|bonsai|breakdance|brie|cache-sexe|calzone|camber|campus|caniche|cânon|cantabile|cantata|carpaccio|chaise-longue|charleston|chartreuse|cheddar|clarke|clear|clearance|cloisonné|códex|coloratura|continuum|cookies?|cordon-bleu|corpus|coulomb|crevasse|croissant|cumbia|czarina|datcha|debye|deficit|design|designers?|doping|doppler|drives?|duce|duplex|ecstasy|ensalada|ensemble|entente|evasé|fait-divers|fanfreluche|farads?|fatwa|fax|fermata|flamenco|flash|flashes|fondue|forint|fortran|fox|freeware|fugato|funk|gay|glamour|glide|gospel|gouda|grunge|guaracha|habanera|habitat|habitus|hip-hop|hippies?|homo|horseball|hype|ibidem|id|impedimenta|influenza|in-octavo|interferon|internet|item|jacuzzi|jamboree|jazz|joint-venture|joule|junkies?|kamikazes?|karaoke|karting|kasba|ketchup|kina|kitchenette|kuna|kwacha|kwanza|lamé|larghetto|leasing|legato|lingerie|locus|maestoso|majorette|mambo|managers?|maquis|marketing|maser|matrioska|maxwell|microfarad|milcurie|miserere|misters?|modems?|moderato|modus|mohair|muesli|mvdol|napalm|necessaire|net|new-age|noir|nomenklatura|nuance|nylon|offshores?|opus|origami|ossobuco|ouguiya|paanga|pahoehoe|paparazzi|parsec|patchouli|pecorino|pence|perestroika|petit-suisse|pianoforte|pickles?|piercing|pilé|pince-nez|pinscher|playboys?|poche|pogrom|poise|poodle|pop|posteriori|pot-pourri|práxis|priori|prise|promenade|punks?|putter|puzzle|quantum|quark|quiche|ralenti|rallentando|rave|ready-made|reggae|régie|reprise|reps|réveillon|rickettsia|rinforzando|ritardando|rocaille|rock|rodeo|roentgen|rookie|rubato|samples?|sashimi|scherzando|scherzo|scone|set|setter|sexy|sfogato|sforzando|shareware|shar-pei|shiatsu|shopping|sic|sidecar|sievert|single|skates?|slalom|smorzando|socialite|sottovoce|soul|spas?|spins?|sprays?|sprue|staccato|stands?|stilb|stock|stop|stress|strippers?|superstars?|surf|sushi|tai-chi|tandem|tavolatura|techno|teflon|telex|terylene|tickets?|timeshare|tiramisu|tofu|toner|tópos|tops?|tori|trailer|tremolo|trial|triplex|tsunami|tupperware|tutilimúndi|tutti|tutu|vaudeville|velcro|vernissage|vibrato|vide|vides|vintage|vitae|vitrine|vivace|volte-face|waffle|web|weber|yang|yeti|yin|yuppie">
-    <!ENTITY barbarismos_rev2 "abstracts?|apartheids?|applets?|apps?|baby-dolls?|backbones?|baconburgers?|banners?|bear|bestsellers?|bitcoins?|bloggers?|blues?|bluetooth|bogies?|boids?|boneheads?|boosts?|bots?|bottom-up|brainstorms?|bull|bullying|burnouts?|cameraman|carjacking|chairman|commodit(y|ies)|contactless|crackers?|cracking|cyberbullying|debugging|demands?|developers?|dildos?|dojos?|downgrades?|downtimes?|drones?|drugstores?|e-bullying|e-commerce|e-learning|e-manuals?|e-newsletters?|e-readers?|exploits?|fair-plays?|feeders?|flats?|flyers?|forwarding|forwards?|führers?|gaming|gangbang|geeks?|goals?|gold|hardwares?|hits?|homebanking|homepages?|idem|idle|inputs?|items?|hacks?|hackers?|kits?|know-hows?|KOs?|lasers?|layers?|legacy|lags?|lob|logins?|loops?|lossless|mailbombings?|marines?|marketeers?|mayday|milkshakes?|nerds?|netiquette|newsgroups?|off-label|offline|offsides?|on-label|outputs?|overbooking|overflows?|p-values?|palmiers?|papers?|patch(es)?|pens?|players?|previews?|ransomwares?|reboots?|red|reggaeton|restarts?|réveillons?|roadmaps?|royalt(y|ies)|screenshots?|scroll|seals?|shell|shelters?|shows?|slogans?|smartphones?|snobs?|sockets?|softwares?|spam|spammers?|sprites?|stalking|standards?|stealth|steps?|streaming|strogonoffs?|strings?|suspenses?|swarms?|tablets?|tagging|task-forces?|telemarketing|thresholds?|time-sharing|tips?|toolkits?|topless|triggers?|trolls?|tweeters?|on-line|online|underscores?|updates?|upgrades?|uptimes?|wannabes|wargames?|webpages?|westerns?|wikis?|wireless|woofers?">
-    <!ENTITY barbarismos_rev3 "blockchains?|Blue|bodyboarders?|bolds?|cents?|check-ins?|chipsets?|clusters?|cover-ups?|crowdfundings?|crowdsourcings?|desktops?|fanzines?|flags?|footnotes?|futons?|geocachers?|gilberts?|hotspots?|hoverboards?|icebergs?|input-output|interfaces?|jetpacks?|marketplaces?|LEDs?|nudes?|open-source|overclockings?|pidgins?|podcasts?|rankings?|rap|Red|scams?|scammers?|skippers?|snipers?|spoofing|sticks?|sudokus?|takeovers?|top-down|trackpads?|thrashers?|trackings?|tweets?|Unicode|uploads?|walkie-talkies?|warm-ups?|webcams?|webinars?|webmasters?|woks?|yeah|yes-man|zen|zooms?">
+    <!ENTITY barbarismos_rev2 "abstracts?|apartheids?|applets?|apps?|baby-dolls?|backbones?|baconburgers?|banners?|bear|bestsellers?|bitcoins?|bloggers?|blues?|bluetooth|bogies?|boids?|boneheads?|boosts?|bots?|bottom-up|brainstorms?|bull|bullying|burnouts?|cameraman|carjacking|chairman|commodit(y|ies)|contactless|crackers?|cracking|cyberbullying|debugging|demands?|developers?|dildos?|dojos?|downgrades?|downloads?|downtimes?|drones?|drugstores?|e-bullying|e-commerce|e-learning|e-manuals?|e-newsletters?|e-readers?|exploits?|fair-plays?|feeders?|flats?|flyers?|forwarding|forwards?|führers?|gaming|gangbang|geeks?|goals?|gold|hardwares?|hits?|homebanking|homepages?|idem|idle|inputs?|items?|hacks?|hackers?|kits?|know-hows?|KOs?|lasers?|layers?|legacy|lags?|lob|logins?|loops?|lossless|mailbombings?|marines?|marketeers?|mayday|milkshakes?|nerds?|netiquette|newsgroups?|off-label|offline|offsides?|on-label|outputs?|overbooking|overflows?|p-values?|palmiers?|papers?|patch(es)?|pens?|players?|previews?|ransomwares?|reboots?|red|reggaeton|restarts?|réveillons?|roadmaps?|royalt(y|ies)|screenshots?|scroll|seals?|shell|shelters?|shows?|slogans?|smartphones?|snobs?|sockets?|softwares?|spam|spammers?|sprites?|stalking|standards?|stealth|steps?|streaming|strogonoffs?|strings?|suspenses?|swarms?|tablets?|tagging|task-forces?|telemarketing|thresholds?|time-sharing|tips?|toolkits?|topless|triggers?|trolls?|tweeters?|on-line|online|underscores?|updates?|upgrades?|uptimes?|wannabes|wargames?|webpages?|westerns?|wikis?|wireless|woofers?">
+    <!ENTITY barbarismos_rev3 "blockchains?|Blue|bodyboarders?|bolds?|bugs?|builds?|cents?|check-ins?|chipsets?|clusters?|cover-ups?|crowdfundings?|crowdsourcings?|desktops?|fanzines?|flags?|footnotes?|futons?|geocachers?|gilberts?|hotspots?|hoverboards?|icebergs?|input-output|interfaces?|jetpacks?|marketplaces?|LEDs?|nudes?|open-source|overclockings?|pidgins?|podcasts?|rankings?|rap|Red|scams?|scammers?|skippers?|snipers?|spoofing|sticks?|sudokus?|takeovers?|top-down|trackpads?|thrashers?|trackings?|tweets?|Unicode|uploads?|walkie-talkies?|warm-ups?|webcams?|webinars?|webmasters?|woks?|yeah|yes-man|zen|zooms?">
 
 
     <!ENTITY expressoes_invariaveis_pt_pt "algema|afazere|alvíssara|anai|antolho|apetrecho|arra|arredore|boda|brócol[io]|cã|calça|calenda|ceroula|cócega|condolência|confin|endoença|esponsai|esposório|exéquia|fasto|féria|feze|finança|hemorróida|mane|núpcia|óculo|olheira|pantalona|parabén|pêsame|petrecho|pi[ck]le|primícia|reticência|suspensório|treva|víscera|vívere">
@@ -140,7 +145,418 @@
 
 
   <category id="EUROPEAN_PORTUGUESE" name="Português de Portugal">
+    <rulegroup id="ARTICLES_PRECEDING_LOCATIONS" name="Nomes geográficos que requerem artigo">
+      <!-- Based on Catalan grammar.xml by Tiago F. Santos,  2017-09-05      -->
+      <url>https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/toponimos-com-ou-sem-artigo/24569</url>
+      <antipattern case_sensitive="yes">
+        <token>do</token>
+        <token regexp='yes'>Norte|Sul</token>
+      </antipattern>
+      <antipattern case_sensitive="yes">
+        <token>a</token>
+        <token postag="NPFS.+" postag_regexp="yes"/>
+      </antipattern>
+      <antipattern>
+        <token>uma</token>
+        <token>espécie</token>
+        <token>de</token>
+      </antipattern>
+      <antipattern>
+        <token regexp='yes'>teatros?</token>
+        <token>de</token>
+        <token>rua</token>
+      </antipattern>
+      <antipattern case_sensitive='yes'>
+        <token>Porto</token>
+        <token regexp='yes'>\p{Lu}\w*</token>
+      </antipattern>
+      <antipattern case_sensitive='yes'>
+        <token>Viena</token>
+        <token>de</token>
+        <token>Áustria</token>
+      </antipattern>
+      <antipattern>
+        <token postag="SENT_START"/>
+        <token postag="SENT_END"/>
+      </antipattern>
+      <antipattern>
+        <token postag_regexp='yes' postag='D..F.+'/>
+        <token postag_regexp='yes' postag='N.F.+'/>
+      </antipattern>
+      <rule>
+        <!-- MARCOAGPINTO 2020-11-22 (21-OCT-2020+) *START* -->
+        <!-- "O mais aproximado é a Rua da Coxa em Bragança." -->
+        <!-- "Na mesma época foi criado o conceito de Europa Latina." -->
+        <antipattern>
+          <token regexp='yes'>a|de</token>
+          <token postag_regexp='yes' postag='NP[CF].+'/>
+        </antipattern>
+        <!-- MARCOAGPINTO 2020-11-22 (21-OCT-2020+) *END* -->
+        <pattern>
+          <token postag="SPS00"/><!-- TODO rethink postag_regexp='yes' CC|SENT_START Belize, Honduras e Panamá usam também a língua inglesa.-->
+          <marker>
+            <token regexp="yes" case_sensitive="yes">&paises_com_artigo;|&outros_toponimos_com_artigo;</token>
+          </marker>
+        </pattern>
+        <message>Este nome geográfico é precedido de um artigo.</message>
+        <suggestion><match no='2' postag="NP(..).+" postag_regexp="yes" postag_replace="DA0$1." case_conversion="alllower">o</match> \2</suggestion>
+        <example correction="o Peru">Vão a <marker>Peru</marker>.</example><!-- XXX a o handled by CONTRACOES_OBRIGATORIAS -->
+        <example correction="os EUA">Vão a <marker>EUA</marker>.</example><!-- XXX a os handled by CONTRACOES_OBRIGATORIAS -->
+        <!--example correction="a China">...entre os EUA e <marker>China</marker>...</example--><!-- TODO rethink postag_regexp='yes' CC|SENT_START Belize, Honduras e Panamá usam também a língua inglesa.-->
+        <example correction="a China">para <marker>China</marker></example>
+        <example>Peru</example>
+        <example>Vão aos EUA</example>
+        <example>Cerca de 500 km a oeste de Dakar, Senegal</example>
+        <example>A ilha de Honshū, Japão.</example>
+        <example>A ilha de Honshū (Japão).</example>
+        <example>A China é um país emergente.</example>
+        <example>Vou a Porto Rico.</example>
+      </rule>
+      <rule>
+        <antipattern case_sensitive="yes">
+          <token>Santa</token>
+          <token>Casa</token>
+        </antipattern>
+        <!-- MARCOAGPINTO 2020-06-10 *START* -->
+        <!-- "O presidente da França visitará o Japão próximo mês." -->
+        <!-- "O francês é falado em partes da Itália, assim como na França." -->
+        <antipattern>
+          <token regexp='yes'>da|de</token>
+          <token regexp="yes" case_sensitive="yes">&toponimos_sem_artigo;</token>
+        </antipattern>
+        <!-- MARCOAGPINTO 2020-06-10 *END* -->
+        <!-- MARCOAGPINTO 2020-06-11 *START* -->
+        <!-- "O estudo foi realizado pela Espanha." -->
+        <antipattern>
+          <token>pela</token>
+          <token regexp="yes" case_sensitive="yes">&toponimos_sem_artigo;
+            <exception postag_regexp='yes' postag='NPMSG00|NPMS000'/>
+          </token>
+        </antipattern>
+        <!-- MARCOAGPINTO 2020-06-11 *END* -->
+        <!-- MARCOAGPINTO 2020-06-11 + 2020-06-12 *START* -->
+        <!-- "O estudo foi realizado na Espanha." -->
+        <!-- "Essa ilha pertenceu à França no século XIX." -->
+        <antipattern>
+          <token regexp='yes'>na|à</token>
+          <token regexp="yes" case_sensitive="yes">&paises_com_artigo;|&paises_com_artigo_marcoagpinto_na;
+            <exception postag_regexp='yes' postag='NPMSG00|NPMS000'/>
+          </token>
+        </antipattern>
+        <!-- MARCOAGPINTO 2020-06-11 + 2020-06-12 *END* -->
+        <pattern>
+          <or>
+            <token postag="DA.+" postag_regexp="yes">
+              <exception>a</exception></token>
+            <token regexp="yes" case_sensitive="yes">&contracoes_MS;|&contracoes_MP;|&contracoes_FS;|&contracoes_FP;
+              <exception regexp='yes'>mas|[dn]aq.+</exception>
+              <exception postag_regexp='yes' postag='UNKNOWN|NP.+'/></token>
+          </or>
+          <!--token postag="NPCSG.+" postag_regexp="yes">
+          <exception regexp="yes">&paises_com_artigo;|&outros_toponimos_com_artigo;</exception></token--><!-- XXX Too many NPs mistagged -->
+          <token regexp="yes" case_sensitive="yes">&toponimos_sem_artigo;</token>
+        </pattern>
+        <message>Este nome geográfico não é precedido de um artigo.</message>
+        <url>https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/o-artigo-em-topoonimos-estrangeiros/12454</url>
+        <example type='incorrect'>Vou <marker>ao Faro</marker>.</example>
+        <example>Vou a <marker>Faro</marker>.</example>
+        <example type='incorrect'>Está <marker>na Lisboa</marker>.</example>
+        <example>Está <marker>em Lisboa</marker>.</example>
+        <example>A Coreia do Norte é vizinha da Coreira do Sul.</example>
+        <example>Faro</example>
+        <example>Encontrei-a naquela Lisboa barulhenta e cosmopolita.</example>
+      </rule>
+      <rule>
+        <pattern>
+          <or>
+            <token postag="DA.+" postag_regexp="yes">
+              <exception>a</exception></token>
+            <token regexp="yes" case_sensitive="yes">&contracoes_MS;|&contracoes_MP;|&contracoes_FS;|&contracoes_FP;
+              <exception regexp='yes'>mas|[dn]aq.+</exception>
+              <exception postag_regexp='yes' postag='UNKNOWN|NP.+'/></token>
+          </or>
+          <token case_sensitive="yes">Cabo</token>
+          <token case_sensitive="yes">Verde</token>
+        </pattern>
+        <message>Este nome geográfico não é precedido de um artigo.</message>
+        <url>https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/o-artigo-em-topoonimos-estrangeiros/12454</url>
+        <example type='incorrect'>Vou <marker>ao Cabo Verde</marker>.</example>
+        <example>Vou a <marker>Cabo Verbe</marker>.</example>
+        <example>Cabo Verde</example>
+      </rule>
+      <rule>
+        <pattern>
+          <or>
+            <token postag="DA.+" postag_regexp="yes"/>
+            <token regexp="yes" case_sensitive="yes">&contracoes_MS;|&contracoes_MP;|&contracoes_FS;|&contracoes_FP;
+              <exception regexp='yes'>mas|[dn]aq.+</exception>
+              <exception postag_regexp='yes' postag='UNKNOWN|NP.+'/></token>
+          </or>
+          <token case_sensitive="yes">Nova</token>
+          <token case_sensitive="yes" regexp='yes'>York|Iorque|Orleans</token>
+        </pattern>
+        <message>Este nome geográfico não é precedido de um artigo.</message>
+        <url>https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/o-artigo-em-topoonimos-estrangeiros/12454</url>
+        <example type='incorrect'>Vou <marker>à Nova Iorque</marker>.</example>
+        <example>Vou a <marker>Nova Iorque</marker>.</example>
+        <example>Nova Iorque</example>
+      </rule>
+      <rule>
+        <pattern>
+          <token>
+            <exception regexp='yes'>&contracoes_FS;</exception>
+            <exception regexp="yes">[(,;:]</exception></token>
+          <marker>
+            <token case_sensitive="yes">Costa
+              <exception scope="previous" postag="D..FS.+" postag_regexp="yes"/></token>
+            <token min='0'>do</token>
+            <token case_sensitive="yes" regexp='yes'>Rica|Marfim</token>
+          </marker>
+        </pattern>
+        <message>Este nome geográfico é precedido de um artigo.</message>
+        <suggestion><match no='2' postag="N.(..).+" postag_regexp="yes" postag_replace="DA0$1." case_conversion="alllower">o</match> Costa <match no='3' include_skipped='all'/> <match no='4' include_skipped='all'/></suggestion>
+        <example correction="a Costa Rica">Vão para <marker>Costa Rica</marker>.</example>
+        <example correction="a Costa do Marfim"><marker>Costa do Marfim</marker>.</example>
+        <example>É natural da Costa Rica.</example>
+        <example>Belize, Cuba, Costa Rica</example>
+      </rule>
+      <rule>
+        <pattern>
+          <token>
+            <exception regexp='yes'>&contracoes_MP;</exception>
+            <exception regexp="yes">[(,;:]|outros|próprios</exception></token>
+          <marker>
+            <token case_sensitive="yes">Estados
+              <exception scope="previous" postag="DD.MP.+|DA.+" postag_regexp="yes"/></token>
+            <token case_sensitive="yes">Unidos</token>
+          </marker>
+        </pattern>
+        <message>Este nome geográfico é precedido de um artigo.</message>
+        <suggestion><match no='2' postag="N.(..).+" postag_regexp="yes" postag_replace="DA0$1." case_conversion="alllower">o</match> Estados Unidos</suggestion>
+        <example correction="os Estados Unidos">Vão a <marker>Estados Unidos</marker>.</example>
+        <example correction="os Estados Unidos"><marker>Estados Unidos</marker>.</example>
+        <example>Michigan, Estados Unidos</example>
+      </rule>
+      <rule>
+        <pattern>
+          <token>
+            <exception regexp='yes'>&contracoes_MS;</exception>
+            <exception regexp="yes">[(,;:]</exception></token>
+          <marker>
+            <token case_sensitive="yes">Reino
+              <exception scope="previous" postag="D..MS.+" postag_regexp="yes"/></token>
+            <token case_sensitive="yes">Unido</token>
+          </marker>
+        </pattern>
+        <message>Este nome geográfico é precedido de um artigo.</message>
+        <suggestion><match no='2' postag="N.(..).+" postag_regexp="yes" postag_replace="DA0$1." case_conversion="alllower">o</match> Reino Unido</suggestion>
+        <example correction="o Reino Unido">Vão a <marker>Reino Unido</marker>.</example>
+        <example correction="o Reino Unido"><marker>Reino Unido</marker>.</example>
+        <example>Michigan, Estados Unidos</example>
+      </rule>
+      <rule>
+        <antipattern>
+          <token>Papua</token>
+          <token min='0' regexp="yes">&hifen;</token>
+          <token>Nova</token>
+          <token>Guiné</token>
+        </antipattern>
+        <pattern>
+          <token>
+            <exception regexp='yes'>&contracoes_FS;</exception>
+            <exception regexp="yes">[(,;:]</exception></token>
+          <marker>
+            <token case_sensitive="yes">Nova
+              <exception scope="previous" postag="D..FS.+|SENT_START" postag_regexp="yes"/></token>
+            <token case_sensitive="yes" regexp='yes'>Zelândia|Guiné</token>
+          </marker>
+        </pattern>
+        <message>Este nome geográfico é precedido de um artigo.</message>
+        <suggestion><match no='2' postag="N.(..).+" postag_regexp="yes" postag_replace="DA0$1." case_conversion="alllower">o</match> \2 \3</suggestion>
+        <example correction="a Nova Zelândia">A série é gravada em <marker>Nova Zelândia</marker> .</example>
+        <example correction="a Nova Guiné">São os habitantes nativos de <marker>Nova Guiné</marker>.</example>
+      </rule>
+      <rule>
+        <pattern case_sensitive="yes">
+          <token>El</token>
+          <token>Salvador</token>
+        </pattern>
+        <message>Este nome geográfico não necessita do artigo 'El' em português.</message>
+        <suggestion>Salvador</suggestion>
+        <url>https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/sobre-os-adjetivos-patrios/13918</url>
+        <example correction="Salvador">Vão a <marker>El Salvador</marker>.</example>
+        <example correction="Salvador"><marker>El Salvador</marker>.</example>
+      </rule>
+    </rulegroup>
+    <!-- ME DISSE Disse-me / ME DISSERAM Disseram-me / TE PODERIA Poder-te-ia / NOS PODERIAM Poder-nos-iam -->
+    <rulegroup id='PROCLISE_COMECO_FRASE' name="Próclise começo frase">
+      <!--      Created by Ricardo Joseh Lima and improved by Marco A.G.Pinto, Portuguese rule 2021-11-25 + 2021-12-02 (25-JUN-2021+)      -->
+      <!--
+      Me disse que ele veio. → Disse-me que ele veio.
+      Me disseram que ele veio. → Disseram-me que ele veio.
+      Te poderia escrever uma carta? → Poder-te-ia escrever uma carta?
+      Nos poderiam escrever uma carta? → Poder-nos-iam escrever uma carta?
 
+      ; I have removed "se" at the start of sentences since it produced too many false positives.
+
+      ; Notice that there are exceptions for the verbs 'dizer' and 'fazer' ('dir-me-ás' and 'far-me-ás')
+      as I see no easy way of coding them.
+      Also, there is this verb 'farar' which has forms in "fazer".
+      -->
+
+      <!-- simple verbs -->
+      <rule>
+        <pattern>
+          <token postag='SENT_START'/>
+          <marker>
+            <token spacebefore='no'>nos</token>
+            <token postag='VMIP1P0'>
+              <exception postag='VMIF1S0'/>
+            </token>
+          </marker>
+        </pattern>
+        <message>Em escrita formal não se começa uma frase com pronome átono. Coloque o pronome após o verbo.</message>
+        <suggestion><match no='3' case_conversion='startupper' postag="VMIP1P0" postag_regexp="yes" postag_replace="VMIP1P0X"/>-<match no='2' case_conversion='startlower'/></suggestion>
+        <example correction="Acostumamo-nos"><marker>Nos acostumamos</marker> com tudo.</example>
+      </rule>
+
+      <rule>
+        <pattern>
+          <token postag='SENT_START'/>
+          <marker>
+            <token regexp='yes' spacebefore='no'>lhes?|me|te|nos|vos</token>
+            <token postag='VMI[MS][13].+' postag_regexp='yes'>
+              <exception postag='VMIF1S0'/>
+            </token>
+          </marker>
+        </pattern>
+        <message>Em escrita formal não se começa uma frase com pronome átono. Coloque o pronome após o verbo.</message>
+        <suggestion><match no='3' case_conversion='startupper'/>-<match no='2' case_conversion='startlower'/></suggestion>
+        <example correction="Disse-me"><marker>Me disse</marker> que ele veio.</example>
+        <example correction="Disseram-me"><marker>Me disseram</marker> que ele veio.</example>
+      </rule>
+
+      <!-- ia/ias/iam -->
+      <rule>
+        <pattern>
+          <token postag='SENT_START'/>
+          <marker>
+            <token regexp='yes' spacebefore='no'>lhes?|me|te|nos|vos</token>
+            <token postag='VMI[C][13]S.+' postag_regexp='yes'>
+              <exception regexp='yes' inflected='yes'>dizer|fazer|farar</exception>
+            </token>
+          </marker>
+        </pattern>
+        <message>Em escrita formal não se começa uma frase com pronome átono. Coloque o pronome após o verbo.</message>
+        <suggestion><match no='3' postag="V.+" postag_replace='VMN0000' postag_regexp="yes" case_conversion='startupper'/>-<match no='2' case_conversion='startlower'/>-ia</suggestion>
+        <example correction="Poder-te-ia"><marker>Te poderia</marker> escrever uma carta?</example>
+      </rule>
+      <rule>
+        <pattern>
+          <token postag='SENT_START'/>
+          <marker>
+            <token regexp='yes' spacebefore='no'>lhes?|me|te|nos|vos</token>
+            <token postag='VMI[C]2S.+' postag_regexp='yes'>
+              <exception regexp='yes' inflected='yes'>dizer|fazer|farar</exception>
+            </token>
+          </marker>
+        </pattern>
+        <message>Em escrita formal não se começa uma frase com pronome átono. Coloque o pronome após o verbo.</message>
+        <suggestion><match no='3' postag="V.+" postag_replace='VMN0000' postag_regexp="yes" case_conversion='startupper'/>-<match no='2' case_conversion='startlower'/>-ias</suggestion>
+        <example correction="Poder-nos-ias"><marker>Nos poderias</marker> escrever uma carta?</example>
+      </rule>
+      <rule>
+        <pattern>
+          <token postag='SENT_START'/>
+          <marker>
+            <token regexp='yes' spacebefore='no'>lhes?|me|te|nos|vos</token>
+            <token postag='VMI[C]3P.+' postag_regexp='yes'>
+              <exception regexp='yes' inflected='yes'>dizer|fazer|farar</exception>
+            </token>
+          </marker>
+        </pattern>
+        <message>Em escrita formal não se começa uma frase com pronome átono. Coloque o pronome após o verbo.</message>
+        <suggestion><match no='3' postag="V.+" postag_replace='VMN0000' postag_regexp="yes" case_conversion='startupper'/>-<match no='2' case_conversion='startlower'/>-iam</suggestion>
+        <example correction="Poder-nos-iam"><marker>Nos poderiam</marker> escrever uma carta?</example>
+      </rule>
+
+      <!-- ei/emos -->
+      <rule>
+        <pattern>
+          <token postag='SENT_START'/>
+          <marker>
+            <token regexp='yes' spacebefore='no'>lhes?|me|te|nos|vos</token>
+            <token postag='VMI[F]1S.+' postag_regexp='yes'>
+              <exception regexp='yes' inflected='yes'>dizer|fazer|farar</exception>
+            </token>
+          </marker>
+        </pattern>
+        <message>Em escrita formal não se começa uma frase com pronome átono. Coloque o pronome após o verbo.</message>
+        <suggestion><match no='3' postag="V.+" postag_replace='VMN0000' postag_regexp="yes" case_conversion='startupper'/>-<match no='2' case_conversion='startlower'/>-ei</suggestion>
+        <example correction="Encontrar-te-ei"><marker>Te encontrarei</marker> amanhã.</example>
+      </rule>
+      <rule>
+        <pattern>
+          <token postag='SENT_START'/>
+          <marker>
+            <token regexp='yes' spacebefore='no'>lhes?|me|te|nos|vos</token>
+            <token postag='VMI[F]1P.+' postag_regexp='yes'>
+              <exception regexp='yes' inflected='yes'>dizer|fazer|farar</exception>
+            </token>
+          </marker>
+        </pattern>
+        <message>Em escrita formal não se começa uma frase com pronome átono. Coloque o pronome após o verbo.</message>
+        <suggestion><match no='3' postag="V.+" postag_replace='VMN0000' postag_regexp="yes" case_conversion='startupper'/>-<match no='2' case_conversion='startlower'/>-emos</suggestion>
+        <example correction="Encontrar-nos-emos"><marker>Nos encontraremos</marker> amanhã.</example>
+      </rule>
+
+      <!-- á/ás -->
+      <rule>
+        <pattern>
+          <token postag='SENT_START'/>
+          <marker>
+            <token regexp='yes' spacebefore='no'>lhes?|me|te|nos|vos</token>
+            <token postag='VMI[F]3S.+' postag_regexp='yes'>
+              <exception regexp='yes' inflected='yes'>dizer|fazer|farar</exception>
+            </token>
+          </marker>
+        </pattern>
+        <message>Em escrita formal não se começa uma frase com pronome átono. Coloque o pronome após o verbo.</message>
+        <suggestion><match no='3' postag="V.+" postag_replace='VMN0000' postag_regexp="yes" case_conversion='startupper'/>-<match no='2' case_conversion='startlower'/>-á</suggestion>
+        <example correction="Comer-me-á"><marker>Me comerá</marker> o pão.</example>
+      </rule>
+      <rule>
+        <pattern>
+          <token postag='SENT_START'/>
+          <marker>
+            <token regexp='yes' spacebefore='no'>lhes?|me|te|nos|vos</token>
+            <token postag='VMI[F]2S.+' postag_regexp='yes'>
+              <exception regexp='yes' inflected='yes'>dizer|fazer|farar</exception>
+            </token>
+          </marker>
+        </pattern>
+        <message>Em escrita formal não se começa uma frase com pronome átono. Coloque o pronome após o verbo.</message>
+        <suggestion><match no='3' postag="V.+" postag_replace='VMN0000' postag_regexp="yes" case_conversion='startupper'/>-<match no='2' case_conversion='startlower'/>-ás</suggestion>
+        <example correction="Comer-me-ás"><marker>Me comerás</marker> o pão.</example>
+      </rule>
+
+      <!-- ão -->
+      <rule>
+        <pattern>
+          <token postag='SENT_START'/>
+          <marker>
+            <token regexp='yes' spacebefore='no'>lhes?|me|te|nos|vos</token>
+            <token postag='VMI[F]3P.+' postag_regexp='yes'>
+              <exception regexp='yes' inflected='yes'>dizer|fazer|farar</exception>
+            </token>
+          </marker>
+        </pattern>
+        <message>Em escrita formal não se começa uma frase com pronome átono. Coloque o pronome após o verbo.</message>
+        <suggestion><match no='3' postag="V.+" postag_replace='VMN0000' postag_regexp="yes" case_conversion='startupper'/>-<match no='2' case_conversion='startlower'/>-ão</suggestion>
+        <example correction="Comer-me-ão"><marker>Me comerão</marker> o pão.</example>
+      </rule>
+
+    </rulegroup>
 
     <rule id="ACEITO_ACEITE" name="aceito -> aceite" >
       <pattern>
@@ -155,6 +571,27 @@
       <example correction='foi aceite'>O projeto <marker>foi aceito</marker>.</example>
       <example correction='foi aceite'>A China <marker>foi aceita</marker> na Organização Mundial do Comércio.</example>
       <example correction='serem aceites'>Que ser de um certo tamanho e qualidade antes de <marker>serem aceitas</marker> pelos praticantes da MTC e consumidores.</example>
+    </rule>
+
+
+    <!-- AVIÃO DE COMBATE caça -->
+    <rule id='AVIÃO_DE_COMBATE_PT_PT' name="Avião(ões) de combate → caça(s)">
+      <!-- Created by Marco A.G.Pinto, Portuguese rule 2022-11-01 (25-JUL-2022+) -->
+      <!--
+      O avião de combate é muito rápido. → O caça é muito rápido.
+      Os aviões de combate são muito rápidos. → Os caças são muito rápidos.
+      -->
+      <pattern>
+        <marker>
+          <token regexp='yes'>avião|aviões</token>
+          <token>de</token>
+          <token>combate</token>
+        </marker>
+      </pattern>
+      <message>Esta perífrase poderá ser simplificada.</message>
+      <suggestion><match no='1' postag='NC.(.)000' postag_replace='NCC$1000'>caça</match></suggestion>
+      <example correction="caça">O <marker>avião de combate</marker> é muito rápido.</example>
+      <example correction="caças">Os <marker>aviões de combate</marker> são muito rápidos.</example>
     </rule>
 
 
@@ -275,6 +712,133 @@
       <url>https://pt.wikipedia.org/wiki/Gerundismo</url>
       <example correction='a soprar'>...ventos do oeste, está <marker>soprando</marker> por cima das águas...</example>
       <example correction='a acender'>As luzes iam-se <marker>acendendo</marker> à medida que ela passava.</example>
+    </rule>
+
+
+    <!-- DO QUE AQUELE QUE àquele que -->
+    <rulegroup id='DO_QUE_AQUELE_QUE_ÀQUELE_QUE_PT_PT' name="Simplificar: do que aquel[ae](s) que → àquel[ae](s) que">
+      <!-- Created by Marco A.G.Pinto, Portuguese rule 2022-11-01 (25-JUL-2022+) -->
+      <!--
+      Esta equação é muito mais rápida do que aquela que tínhamos. → Esta equação é muito mais rápida àquela que tínhamos.
+      Estas equações são muito mais rápidas do que aquelas que tínhamos. → Estas equações são muito mais rápidas àquelas que tínhamos.
+      Este modelo é muito mais rápido do que aquele que tínhamos. → Este modelo é muito mais rápido àquele que tínhamos.
+      Estes modelos são muito mais rápidos do que aqueles que tínhamos. → Estes modelos são muito mais rápidos àqueles que tínhamos.
+      -->
+
+      <!-- FEMALE -->
+      <rule>
+        <pattern>
+          <marker>
+            <token>do</token>
+            <token>que</token>
+            <token case_sensitive='yes' regexp='yes'>aquelas?</token>
+            <token>que</token>
+          </marker>
+          <token postag_regexp='yes' postag='V.+'/>
+        </pattern>
+        <message>Esta perífrase poderá ser simplificada.</message>
+        <suggestion>àquela<match no='3' regexp_match='(aquela)(s?)' regexp_replace='$2'/> que</suggestion>
+        <example correction="àquela que">Esta equação é muito mais rápida <marker>do que aquela que</marker> tínhamos.</example>
+        <example correction="àquelas que">Estas equações são muito mais rápidas <marker>do que aquelas que</marker> tínhamos.</example>
+      </rule>
+
+      <!-- MALE -->
+      <rule>
+        <pattern>
+          <marker>
+            <token>do</token>
+            <token>que</token>
+            <token case_sensitive='yes' regexp='yes'>aqueles?</token>
+            <token>que</token>
+          </marker>
+          <token postag_regexp='yes' postag='V.+'/>
+        </pattern>
+        <message>Esta perífrase poderá ser simplificada.</message>
+        <suggestion>àquele<match no='3' regexp_match='(aquele)(s?)' regexp_replace='$2'/> que</suggestion>
+        <example correction="àquele que">Este modelo é muito mais rápido <marker>do que aquele que</marker> tínhamos.</example>
+        <example correction="àqueles que">Estes modelos são muito mais rápidos <marker>do que aqueles que</marker> tínhamos.</example>
+      </rule>
+
+    </rulegroup>
+
+
+    <!-- TRANSMITE E QUE PERMITE transmite que permite -->
+    <rule id='E_QUE_VERBO_REMOVER_E_PT_PT' name="Simplificar: E que → que" type="style">
+      <!-- Created by Marco A.G.Pinto with Ricardo Joseh Lima suggestions, Portuguese rule 2022-11-06 (25-JUL-2022+) -->
+      <!--
+      Atenção àquilo que transmite e que permite ao recetor agir corretamente. → Atenção àquilo que transmite que permite ao recetor agir corretamente.
+      -->
+
+      <antipattern>
+        <token postag='DA.+|SPS00:DA.+|CC|RN|RG|V.+|NC.+|AQ.+|NP.+' postag_regexp='yes'>
+          <exception postag_regexp='yes' postag='DI.+'/>
+          <exception scope="previous" postag_regexp='yes' postag='DI.+'/>
+        </token>
+        <token min="0" max="1" postag='_PUNCT' postag_regexp='no'/>
+        <token postag='NC.+|AQ.+|NP.+|V.+|RN' postag_regexp='yes'/>
+        <token>e</token>
+        <token>que</token>
+        <token postag='VMIP3.+' postag_regexp='yes'/>
+        <example>Além disso, as corretoras de valores oferecem profissionais que acompanham os investimentos e que tem o compromisso de auxiliar e assessorar o investidor.</example>
+        <example>...sem dúvida a pior elite que existe hoje no Brasil é a elite política que domina atualmente o Brasil e que faz da corrupção desavergonhada, do aparelhamento do Estado e das Estatais e da nefasta política do...</example>
+        <example>...lhar ou para a aventura, porque um carro que lhe dá duas opções de motorização, gasolina ou híbrido e que inova na sua classe, dá para todos.</example>
+        <example>...olar protege a pele, além do sol, de pequenas sujeiras durante o dia, poeirinhas que a gente não vê e que penetram na pele.</example>
+        <example>...rmar os desejos mais difíceis em sonhos reais, que alimentam sua alma através da essência da poesia e que penetra o nosso íntimo arrancando lágrimas e sorrisos.</example>
+        <example>A melancolia existente em cada encontro, que persiste na paixão e que permanece na despedida.</example>
+        <example>A imagem é apenas um sinal visível do que é bem maior e que transcende o sensível.</example>
+        <example>expliquei a situação para a inspetora a mesma disse que não pode fazer nada e que precisa do DOC.</example>
+        <example>...panhola Fiabee, e que é um sistema corporativo de arquivos na nuvem que permite a colaboração móvel e que cuida da segurança dos dados trocados por seus usuários.</example>
+        <example>Tom disse que não gosta de livros digitais e que prefere os livros físicos.</example>
+        <example>...iberais em geral, é a premissa de que existe um capitalismo puro, bom, saudável, que se auto-regula e que é contaminado e deturpado pelas mãos sujas do Estado ( não seria essa a idéia fixa de maluco?).</example>
+        <example>Dentro dos sistemas de incêndio , existem os painéis de controle, que inteligentes, endereçáveis e que possuem saídas com protocolo aberto (Ethernet TCP IP e Modbus TCP IP) e dentre outros.</example>
+      </antipattern>
+
+      <antipattern>
+        <token postag='SPS00|V.+|DA.+|SPS00:DA.+' postag_regexp='yes'/>
+        <token postag='NC.+|AQ.+|V.+|SPS00' postag_regexp='yes'/>
+        <token min="0" max="1" postag='_PUNCT' postag_regexp='no'/>
+        <token postag='SPS00|SPS00:DA.+|CS' postag_regexp='yes'/>
+        <token postag='NC.+|AQ.+|NP.+|UNKNOWN|V.+' postag_regexp='yes'/>
+        <token>e</token>
+        <token>que</token>
+        <token postag='VMIP3.+' postag_regexp='yes'/>
+        <example>... ou comentário do cliente, aceita que as suas submissões não estão protegidas por direitos de autor e que autoriza a sua publicação no nosso Website.</example>
+        <example>Toda autoridade é delegada por Deus e que precisa ser exercida”, finalizou.</example>
+        <example>Em nota, a AGU (Advogacia-Geral da União) afirmou que ainda não foi intimada sobre a decisão e que vai entrar com um recurso assim que isso acontecer.</example>
+        <example>... acontecerá se houver por parte do usuário a manifestação de que não concorda com a decisão do INSS e que deseja apresentar defesa para embasar o seu recurso.</example>
+        <example>Os tamanhos disponíveis são os mostrados na web em negrito e que permitem selecionar.</example>
+        <example>...tos, os que choram e os que são odiados enquanto “ai” daqueles que são ricos, têm fartura, que riem e que são elogiados?</example>
+      </antipattern>
+
+     <antipattern>
+        <token>e</token>
+        <token>que</token>
+        <token postag='VMIP3.+' postag_regexp='yes'/>
+        <token postag='DA.+|SPS00:DA.+|VMN0000|VMP00.+|NC.+|AQ.+' postag_regexp='yes'/>
+        <token postag='SPS00' postag_regexp='no'/>
+        <token postag='V.+' postag_regexp='yes'/>
+        <example>Dizem que o mulo tem um caráter muito especial e que é difícil de conduzir.</example>
+      </antipattern>
+
+      <pattern>
+        <marker>
+          <token>e
+            <exception scope='previous' postag_regexp='no' postag='SENT_START'/>
+          </token>
+          <token>que</token>
+        </marker>
+        <token postag='VMIP3.+' postag_regexp='yes'/>
+        <token postag='DA.+|SPS00:DA.+|VMN0000|VMP00.+|NC.+|AQ.+' postag_regexp='yes'>
+          <exception postag_regexp='no' postag='RG'/>
+        </token>
+      </pattern>
+      <message>Em português (europeu) poderá omitir a conjunção 'e'.</message>
+      <suggestion>\2</suggestion>
+      <example correction="que">Atenção àquilo que transmite <marker>e que</marker> permite ao recetor agir corretamente.</example>
+      <example correction="que">São regras muito simples <marker>e que</marker> permitem agir corretamente.</example>
+      <example>Algo pelo qual você pode se guiar, se orientar e que é algo compartilhado.</example>
+      <example>Bolsonaro possui alguém que se comporta dessa maneira e que age conforme os requisitos para o cargo – tanto que foi devidamente reconhecido pelo filho do deput...</example>
+
     </rule>
 
 
@@ -2068,7 +2632,21 @@
     <rulegroup id="POSSESSIVE_WITHOUT_ARTICLE" name="Determinante possessivo sem artigo">
       <!-- Improved by Tiago F. Santos, Portuguese rule, 2016-10-18 	-->
       <!--     Base rule id="A_SUA" name="a sua" by Marco Pinto	-->
+      <!--
+           MARCOAGPINTO inserted global antipatterns for all subrules on top using the logic (25-JUL-2022+)
+      -->
       <url>https://pt.wikipedia.org/wiki/Portugu%C3%AAs_brasileiro#Artigo_definido_antes_do_possessivo</url>
+
+        <!-- MARCOAGPINTO 2022-10-25 (Checked/Enhanced) (25-JUL-2022+) *START* -->
+        <!-- zero hits in 600 000 sentences -->
+        <antipattern>
+          <token postag='PD.+' postag_regexp='yes'/>
+          <token postag='DP.+' postag_regexp='yes'/>
+          <token postag='SPS00|CC|CS|RG|I|RM|RN' postag_regexp='yes'/>
+          <example>Estão dispostos a retomar tudo aquilo seu por direito, com sinceridade e lealdade.</example>
+        </antipattern>
+        <!-- MARCOAGPINTO 2022-10-25 (Checked/Enhanced) (25-JUL-2022+) *END* -->
+
       <rule>
         <antipattern>
           <token postag='N.FS.+' postag_regexp='yes'>
@@ -2716,8 +3294,8 @@
     <rulegroup id='VERBO_HIFENIZADOR_VERBOS_2' name='Colocações pronominais dois termos'>
       <!-- Created by Tiago F. Santos , Portuguese rule, 2016-11-04 -->
       <!-- Brazilian Portuguese has some inverted colocations  -->
-      <!-- MARCOAGPINTO: Notice that I created some global antipatterns for this rulegroup because they are common to all subrules.
-                         I started adding the 2022+ antipatterns from the top and not from the bottom.
+      <!--
+           MARCOAGPINTO inserted global antipatterns for all subrules on top using the logic (25-JUL-2022+)
       -->
       <url>https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/a-colocacao-dos-pronomes-atonos/11366</url>
       <short>Erro de colocação pronominal</short>
@@ -2852,6 +3430,93 @@
           <example>Não se preocupe em me entender pois há vezes que nem eu me entendo.</example>
         </antipattern>
         <!-- MARCOAGPINTO 2022-09-26 (Checked/Enhanced) (25-JUL-2022+) *END* -->
+
+        <!-- MARCOAGPINTO 2022-10-24 (Checked/Enhanced) (25-JUL-2022+) *START* -->
+        <antipattern>
+          <token postag='RG' postag_regexp='no'/>
+          <token regexp='yes'>&pronomes_obliquos;</token>
+          <token postag='V.+' postag_regexp='yes'>
+            <exception postag_regexp='yes' postag='NC.+|AQ.+|NP.+|VMG0000|VMIP1S0'/>
+          </token>
+          <token postag='VMN0000' postag_regexp='no'/>
+          <example>Agora falando sério, o episódio 21 quase me fez chorar de rir.</example>
+          <example>A atualização de hoje me fez resolver testar esse tema novo do WordPress.</example>
+          <example>Com os clientes, comportavam-se como astutos cortesãos, e quase todos os dias me faziam lembrar o Polônio, de Shakespeare.</example>
+          <example>Você também me fez chorar.</example>
+          <example>Os baixos preços de compra das lavouras do Estado também lhe permitiram financiar a industrialização.</example>
+        </antipattern>
+        <!-- MARCOAGPINTO 2022-10-24 (Checked/Enhanced) (25-JUL-2022+) *END* -->
+
+        <!-- MARCOAGPINTO 2022-10-24 (Checked/Enhanced) (25-JUL-2022+) *START* -->
+        <antipattern>
+          <token postag='PP.+' postag_regexp='yes'>
+            <exception postag_regexp='no' postag='CC'/>
+          </token>
+          <token regexp='yes'>&pronomes_obliquos;
+          <exception postag_regexp='yes' postag='PD.+'/>
+          </token>
+          <token postag='V.+' postag_regexp='yes'>
+            <exception postag_regexp='yes' postag='NC.+|AQ.+|NP.+|VMG0000|VMIP1S0'/>
+          </token>
+          <token min="0" max="1" postag='_PUNCT' postag_regexp='no'/>
+          <token postag='CS|SPS00' postag_regexp='yes'>
+            <exception scope="next" postag_regexp='yes' postag='DP.+'/>
+          </token>
+          <example>Ela se move como uma rainha e mostra que traz consigo o ritmo no sangue.</example>
+          <example>Ele nos disse para começarmos de uma vez por todas.</example>
+          <example>Eu me liguei a ele por meio de uma estreita amizade.</example>
+          <example>Ele se beneficiou com a chuva.</example>
+          <example>Ele me implorou para ficar.</example>
+          <example>Ele me perguntou até onde ir.</example>
+          <example>Ele se casou com Ann no mês passado.</example>
+          <example>Ele se interessa por várias coisas.</example>
+          <example>Ele me prometeu que viria às quatro.</example>
+          <example>Ele se enfureceu com ela.</example>
+          <example>Queríamos falar com o presidente sobre a empresa, mas ele se recusou a falar conosco.</example>
+          <example>Eu me reconciliei com a minha tia antes que ela morresse.</example>
+        </antipattern>
+        <!-- MARCOAGPINTO 2022-10-24 (Checked/Enhanced) (25-JUL-2022+) *END* -->
+
+        <!-- MARCOAGPINTO 2022-10-24 (Checked/Enhanced) (25-JUL-2022+) *START* -->
+        <!-- "também" (RG) works with all sentences (no false positives, although kind of hardcoded. -->
+        <antipattern>
+          <token regexp='no'>também</token>
+          <token regexp='yes'>&pronomes_obliquos;</token>
+          <token postag='V.+' postag_regexp='yes'/>
+          <example>Também me tornei parceira da Thaylane e estou ansiosa para ler os livros dela.</example>
+          <example>Além das ricas informações que lí neste blog, também me deparei com um dos os motivos que fizeram o ser humano estar em Guerra por tantos anos.</example>
+          <example>Também me entreguei a ela, tal como as milhares de pessoas que lá estavam.</example>
+          <example>Eu também te amo.</example>
+          <example>Também lhe oferecia batatinhas fritas?</example>
+          <example>As recomendações que recebeu da maçonaria do Amazonas também lhe renderam bons contatos e ainda mais dinheiro.</example>
+          <example>Ademais, esse desenvolvimento mais visceral com os coringas também me chama a atenção.</example>
+          <example>Também te dou um abraço se um dia a vir por aí.</example>
+          <example>Eu também me senti um pouco perdida quando engravidei pela primeira vez.</example>
+          <example>Tom também me esconde algo.</example>
+        </antipattern>
+        <!-- MARCOAGPINTO 2022-10-24 (Checked/Enhanced) (25-JUL-2022+) *END* -->
+
+        <!-- MARCOAGPINTO 2022-11-01 (Checked/Enhanced) (25-JUL-2022+) *START* -->
+        <antipattern>
+          <token postag='SPS00' postag_regexp="no"/>
+          <token regexp='yes'>&pronomes_obliquos;</token>
+          <token postag='V.+' postag_regexp="yes"/>
+          <token postag='SPS00|CC|CS|RG|I|RM|RN' postag_regexp="yes"/>
+          <example>Então, a pergunta é: Será que a forma como usas o dinheiro está a impedir Deus de te abençoar com mais?</example>
+          <example>Colocarei a mesa antes de me sentar para jantar.</example>
+          <example>Ela foi gentil o bastante a ponto de me acompanhar até a estação.</example>
+          <example>Obrigado Leonardo por me ajudar a pensar diferente.</example>
+          <example>Estou surpreso de te ver aqui.</example>
+          <example>Não se esqueça de me ligar assim que você chegar lá.</example>
+          <example>Estou muito feliz de te encontrar hoje.</example>
+          <example>Sou sua esposa e gosto de me ver bem para agradá-lo.</example>
+          <example>Pai, não se esqueça de me chamar cedo amanhã, que tenho prova!</example>
+          <example>a Mãe é que sabe: Isto acabou de me acontecer e vim a chorar para casa.</example>
+          <example>Ao invés de estar por aí caçando qualquer mala na rua pra te esquecer ou para me esquecer.</example>
+          <example>Independente de lhe agradar ou não você deve fazê-lo.</example>
+          <example>Você pode vir à minha festa, mas tem de me dar algo.</example>
+        </antipattern>
+        <!-- MARCOAGPINTO 2022-11-01 (Checked/Enhanced) (25-JUL-2022+) *END* -->
 
       <!-- MARCOAGPINTO 2021-04-30 + 2021-05-01 + 2021-05-04 (17-MAR-2021+) *START* -->
       <!--
@@ -4554,8 +5219,96 @@
 
     </rulegroup>
 
+
     <rulegroup id='T-V_DISTINCTION_ALL' name='Tratamento formal: Todas as formas na segunda pessoa, sem salvaguardas' default='off'>
       <!-- Created by Tiago F. Santos , Portuguese rule, 2016-12-28 -->
+      <!-- MARCOAGPINTO inserted global antipatterns for all subrules on top -->
+
+      <!-- MARCOAGPINTO 2022-10-20 (Checked/Enhanced) (25-JUL-2022+) *START* -->
+      <antipattern>
+        <token postag='RM|RG' postag_regexp="yes">
+          <exception scope='previous' postag_regexp='no' postag='SENT_START'/>
+        </token>
+        <token postag='VMM02S0|VMSP2S0|VMP00.+|AQ0FP0|NCFP000' postag_regexp="yes"/> <!-- "AQ0FP0|NCFP000" does a nice job here -->
+        <example>Ele dificilmente estuda química.</example>
+        <example>Nossa professora raramente ri.</example>
+        <example>Ele sempre planeja uma coisa cuidadosamente antes de fazê-la.</example>
+        <example>Bob raramente escreve para seus pais.</example>
+        <example>Ele provavelmente vai ganhar a próxima eleição.</example>
+        <example>Isso aconteceu somente há um ano atrás.</example>
+        <example>Uma jovem de dezessete anos que atualmente vive por conta própria.</example>
+        <example>Junko ainda depende de seus pais para bancá-la.</example>
+        <example>Eu devo chegar lá pelas 9 horas.</example>
+        <example>Com licença, onde fica a seção de calçados masculinos?</example>
+        <example>Ele nunca mantém sua palavra.</example>
+        <example>Agora, enquanto há tempo.</example>
+      </antipattern>
+      <!-- MARCOAGPINTO 2022-10-20 (Checked/Enhanced) (25-JUL-2022+) *END* -->
+
+      <!-- MARCOAGPINTO 2022-10-21 (Checked/Enhanced) (25-JUL-2022+) *START* -->
+      <!-- This is the above antipattern dealing with _PUNCT after the "RM|RG". I had to remove their "NC.+|AQ.+" because it created false positives -->
+      <antipattern>
+        <token postag='RM|RG' postag_regexp="yes">
+          <exception scope='previous' postag_regexp='no' postag='SENT_START'/>
+          <exception postag_regexp='yes' postag='NC.+|AQ.+'/>
+        </token>
+        <token postag='_PUNCT' postag_regexp="no"/>
+        <token postag='VMM02S0|VMSP2S0|VMP00.+|AQ0FP0|NCFP000' postag_regexp="yes"> <!-- "AQ0FP0|NCFP000" does a nice job here -->
+          <exception scope='next' postag_regexp='no' postag='_PUNCT'/>
+        </token>
+        <example>De certo modo, parece gostar de situações de confronto, que estimulam sua adrenalina e sua disposição física.</example>
+        <example>Temos muito em comum, dá pra perceber só de ler esse relato!</example>
+        <example>Por enquanto, nada.</example>
+        <example>Esqueça o velho ditado: alguns homens são, de fato, ilhas.</example>
+        <example>No entanto, pela sua gravidade, a crise teve fortes impactos nas empresas.</example>
+        <example>Depois, voltam para casa levando o que não tinham, para um lugar onde, provavelmente, há um avô, uma mãe, um pai.</example>
+      </antipattern>
+      <!-- MARCOAGPINTO 2022-10-21 (Checked/Enhanced) (25-JUL-2022+) *END* -->
+
+      <!-- MARCOAGPINTO 2022-10-21 (Checked/Enhanced) (25-JUL-2022+) *START* -->
+      <antipattern>
+        <token postag='VMIP3S0' postag_regexp="no"/>
+        <token regexp='yes' spacebefore='no'>&tracos_de_separacao;</token>
+        <token regexp='no' spacebefore='no'>se</token>
+        <example>Em amarelo representa-se o conhecimento como um conjunto de crenças verdadeiras, que foram provadas e justificadas.</example>
+        <example>Estende-se por uma área de 45,89 km².</example>
+        <example>Pode-se chegar lá depressa?</example>
+        <example>Diz-se isso.</example>
+        <example>Fala-se grego.</example>
+      </antipattern>
+      <!-- MARCOAGPINTO 2022-10-21 (Checked/Enhanced) (25-JUL-2022+) *END* -->
+
+      <!-- MARCOAGPINTO 2022-10-21 (Checked/Enhanced) (25-JUL-2022+) *START* -->
+      <antipattern>
+        <token postag='NC.+|AQ.+|NP.+|[DP][ADIPR].[FM].+|SPS00:[DP][ADIPR].[FM].+' postag_regexp="yes"/>
+        <token postag='VMIP3S0' postag_regexp="no"/>
+        <token postag='SPS00|CC|CS|RG|I|RM|RN|[DP][ADIPR].+|SPS00:[DP][ADIPR].+' postag_regexp="yes"/>
+        <example>Eu tenho que terminar um artigo sobre a economia japonesa.</example>
+        <example>A casa também dispõe de pratos como a carne seca com abóbora, acompanhada por arroz, feijão e couve.</example>
+        <example>A aula começou na hora certa.</example>
+        <example>O rio desce das montanhas para a baía abaixo.</example>
+        <example>Uma etiqueta custa em média 30 centavos – incluindo gastos com estocagem, fixação nas roupas e impostos.</example>
+        <example>E nessa aposentadoria, os passos do herói o fazem entrar na escura caverna da hipocrisia humana.</example>
+        <example>Esta maçã está bem vermelha.</example>
+        <example>O tédio é o sentimento de que tudo é uma grande perda de tempo; serenidade, de que nada é.</example>
+        <example>Quero e posso ajudar a manter a “ALMA” do mestre viva!</example>
+        <example>O fósforo alimenta as cianobactérias (algas azuis), que proliferam e liberam toxinas.</example>
+        <example>Meu computador tem que me ser útil para algo.</example>
+        <example>Principalmente pra quem a prova pro noturno!</example>
+        <example>Não fale com ele enquanto ele dirige.</example>
+        <example>Ele fala realmente bem.</example>
+        <example>Ela nada em dinheiro.</example>
+        <example>Esta relação nos fornece um teste do valor estratégico de competências específicas para as empresas.</example>
+        <example>Seu cão o segue para onde quer que ele vá.</example>
+        <example>Não sei quem escreveu esta carta.</example>
+        <example>Eu não aguento mais ouvir essa droga de música!</example>
+        <example>Eu gosto da arrumação dos móveis nessa sala.</example>
+        <example>haha Achei a ideia da rotina muito legal, mas no geral achei muita regra pra criar um bebê.</example>
+        <example>Nunca vi a venda aqui, vou procurar!</example>
+        <example>Ele sempre faz mau uso daquela palavra.</example>
+      </antipattern>
+      <!-- MARCOAGPINTO 2022-10-21 (Checked/Enhanced) (25-JUL-2022+) *END* -->
+
       <rule>
         <pattern>
           <token min='0' regexp='yes'>tu|vós</token>
@@ -5545,6 +6298,386 @@
 
   <category id="STYLE" name="Style" type="style">
 
+    <!-- À PROCURA DE a procurar -->
+    <rule id='À_VERBO_DE' name="À + Verbo + De → A + Verbo Infinitivo" type="style">
+      <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-11-11/12/15 (25-JUN-2021+)      -->
+      <!--
+      O Rui anda à procura de material científico. → O Rui anda a procurar material científico.
+      -->
+      <!--
+      Em maio de 1863, submeteu-se à prova de admissão para o ingresso na Faculdade de Direito do Recife sendo reprovado.
+      E, ao se referir-se à visita de Lula, informou que "Lula honra Berlim e Hamburgo" com sua visita.
+      Em 25 de março de 1509, o papa Júlio II alia-se à Liga de Cambrai.
+      -->
+      <antipattern>
+        <token>se</token>
+        <token>à</token>
+        <token postag='VMIP3S0'/>
+        <token>de</token>
+        <token/>
+      </antipattern>
+      <!--
+      Estes dias estão ligados à vida de Jesus Cristo ou à história dos primórdios do movimento cristão.
+      Existe alguma possibilidade de que Tom tenha ido à casa de Mary ontem à noite?
+      Os problemas da educação da Bolívia não são necessariamente atribuídos à falta de fundos.
+      "Ele foi enviado à zona de operações onde foi seriamente ferido pela explosão de uma granada."
+      O homem está sujeito à pena de morte.
+      Tom não foi à casa de Marie?
+      Ele veio à procura de esclarecimentos.
+      Tom foi à casa de massagem.
+      Certa vez fomos à casa de tia Elisabete e encontramos a linda senhora desolada.
+      Fomos à praia assistir à queima de fogos de artifício.
+      Manuel, ateu, recusou-se a assistir à missa de sétimo dia do amigo que falecera.
+      Com um PIB per capita aproximado em 7.300 dólares americanos, o país pertence à faixa de renda média-baixa.
+      -->
+      <antipattern>
+        <token postag='VMP00.+|VMIS.+|VMIP3.+|VMN0000' postag_regexp='yes'>
+          <exception postag_regexp='yes' postag='AQ.+|NC.'/>
+          <exception regexp='yes' inflected='yes'>estar|andar</exception>
+        </token>
+        <token>à</token>
+        <token postag='VMIP3S0'/>
+        <token>de</token>
+        <token postag='RG|NP.+|AQ.+|NC.+|PI.+' postag_regexp='yes'/>
+      </antipattern>
+      <antipattern>
+        <token>à</token>
+        <token>prova</token>
+        <token>de</token>
+      </antipattern>
+      <pattern>
+        <token negate="yes">se</token>
+        <or>
+          <token postag='V.+|RG' postag_regexp='yes'>
+            <exception postag_regexp='yes' postag='SPS.+|AQ..S.+|VMI[MS]3P.+|I'/>
+          </token>
+          <token>,</token>
+        </or>
+        <marker>
+          <token>à</token>
+          <token postag='VMIP3S0'>
+            <exception regexp='yes'>academia|aldeia|banda|bandeira|boca|casa|comarca|condessa|data|empresa|estrada|faixa|figura|ideia|ilha|pena|porta|vida|zona|palavra|terra|seu|meu|sala|força</exception>
+          </token>
+          <token>de</token>
+        </marker>
+        <token negate_pos="yes" postag='DI.+' postag_regexp='yes'/>
+      </pattern>
+      <message>Em certos contextos, esta perífrase pode ser simplificada.</message>
+      <suggestion>a <match no='4' postag='VMN0000' postag_replace='VMIP3S0'/></suggestion>
+      <example correction="a procurar">O Rui anda <marker>à procura de</marker> material científico.</example>
+      <example>Lista dos viajantes que aportaram à ilha de Santa Catarina nos séculos XVIII e XIX</example>
+      <example>Já a multimidialidade se refere à mistura de diferentes mídias tradicionais (imagem, texto e som) para narrar um facto.</example>
+      <example>Ele se agarrou à esperança de que iria vê-la novamente algum dia.</example>
+      <example>Talvez esta noite eu vá à casa de minha irmã caçula.</example>
+      <example>Vamos à casa de chá!</example>
+      <example>Vou à casa da minha avó.</example>
+      <example>No Afeganistão, por exemplo, a homossexualidade levava à pena de morte sob o regime talibã.</example>
+      <example>Geralmente com pinturas alusivas à rosa-dos-ventos, à data de construção e às iniciais do proprietário.</example>
+      <example>Em 1839, pertencia à comarca de Ponte de Lima e, em 1852, à de Arcos de Valdevez.</example>
+      <example>Mais tarde regressou à banda de Basie.</example>
+      <example>Fez parte de um antigo mosteiro doado, entre 1032 e 1043, à condessa de Ildnara por mestre Savarigo.</example>
+      <example>Conecta a prefeitura de Aomori, na ilha japonesa de Honshu, à ilha de Hokkaido.</example>
+      <example>A palavra elegbara significa “aquele que é possuidor do poder (agbará)” e está ligado à figura de Exu.</example>
+
+      <example>Em maio de 1863, submeteu-se à prova de admissão para o ingresso na Faculdade de Direito do Recife sendo reprovado.</example>
+      <example>E, ao se referir-se à visita de Lula, informou que "Lula honra Berlim e Hamburgo" com sua visita.</example>
+      <example>Em 25 de março de 1509, o papa Júlio II alia-se à Liga de Cambrai.</example>
+
+      <example>Estes dias estão ligados à vida de Jesus Cristo ou à história dos primórdios do movimento cristão.</example>
+      <example>Existe alguma possibilidade de que Tom tenha ido à casa de Mary ontem à noite?</example>
+      <example>Os problemas da educação da Bolívia não são necessariamente atribuídos à falta de fundos.</example>
+      <example>"Ele foi enviado à zona de operações onde foi seriamente ferido pela explosão de uma granada."</example>
+      <example>O homem está sujeito à pena de morte.</example>
+      <example>Tom não foi à casa de Marie?</example>
+      <example>Ele veio à procura de esclarecimentos.</example>
+      <example>Tom foi à casa de massagem.</example>
+      <example>Certa vez fomos à casa de tia Elisabete e encontramos a linda senhora desolada.</example>
+      <example>Fomos à praia assistir à queima de fogos de artifício.</example>
+      <example>Manuel, ateu, recusou-se a assistir à missa de sétimo dia do amigo que falecera.</example>
+      <example>Com um PIB per capita aproximado em 7.300 dólares americanos, o país pertence à faixa de renda média-baixa.</example>
+    </rule>
+
+    <!-- O QUE ME FOI DITO FOI foi-me dito -->
+    <rulegroup id='REPETICAO_AUXILIAR_VERBO' name="Simplificar: Eliminação da redundância de auxiliar" type='style'>
+      <!-- Created by Marco A.G.Pinto with Ricardo Joseh Lima suggestions, Portuguese rule 2022-10-14 (25-JUL-2022+) -->
+      <!--
+      Após eu insistir muito, o que me foi dito foi para aguardar. → Após eu insistir muito, foi-me dito para aguardar.
+      Após eu insistir muito, o que foi dito foi para aguardar. → Após eu insistir muito, foi dito para aguardar.
+      -->
+
+      <!-- WITH PRONOUN -->
+      <rule>
+        <pattern>
+          <marker>
+            <token regexp='yes'>[ao]s?</token>
+            <token>que</token>
+            <token regexp='yes'>&pronomes_obliquos_sem_a_as_o_os;</token>
+            <token postag='V.+' postag_regexp='yes'/>
+            <token postag='V.+' postag_regexp='yes'>
+              <exception postag_regexp='yes' postag='NC.+|AQ.+'/>
+            </token>
+            <token><match no="3"/>
+              <exception scope='next' postag_regexp='yes' postag='V.+'/>
+            </token>
+          </marker>
+        </pattern>
+        <message>Esta perífrase poderá ser simplificada.</message>
+        <suggestion>\4-\3 \5</suggestion>
+        <example correction="foi-me dito">Após eu insistir muito, <marker>o que me foi dito foi</marker> para aguardar.</example>
+      </rule>
+
+      <!-- WITHOUT PRONOUN (SUGGESTED BY RICARDO JOSEH LIMA)-->
+      <rule>
+        <pattern>
+          <marker>
+            <token regexp='yes'>[ao]s?</token>
+            <token>que</token>
+            <token postag='V.+' postag_regexp='yes'/>
+            <token postag='V.+' postag_regexp='yes'>
+              <exception postag_regexp='yes' postag='NC.+|AQ.+'/>
+            </token>
+            <token><match no="2"/>
+              <exception scope='next' postag_regexp='yes' postag='V.+'/>
+            </token>
+          </marker>
+        </pattern>
+        <message>Esta perífrase poderá ser simplificada.</message>
+        <suggestion>\3 \4</suggestion>
+        <example correction="foi dito">Após eu insistir muito, <marker>o que foi dito foi</marker> para aguardar.</example>
+      </rule>
+
+    </rulegroup>
+
+
+    <!-- É IGUAL iguala -->
+    <rulegroup id='SER_IGUAL_IGUALAR' name="Simplificar: Ser igual a → igualar" type='style'>
+      <!-- Created by Marco A.G.Pinto, Portuguese rule 2022-10-15 (25-JUL-2022+) -->
+      <!--
+      A soma tem de ser igual a zero. → A soma tem de igualar zero.
+      Esta mulher é igual a 10. → Esta mulher iguala 10.
+      Esta mulher foi igual a 10. → Esta mulher igualou 10.
+
+      A Inteligência Artificial é igual ou excede a humana. → A Inteligência Artificial iguala ou excede a humana.
+
+      A soma tem de ser igual à soma de zeros. → A soma tem de igualar a soma de zeros.
+      A soma tem de ser igual às somas de zeros. → A soma tem de igualar as somas de zeros.
+      A soma tem de ser igual ao número de zeros. → A soma tem de igualar o número de zeros.
+      A soma tem de ser igual aos números usados. → A soma tem de igualar os números usados.
+      -->
+      <!-- global antipatterns for subrules -->
+
+      <antipattern>
+        <token postag='Z0.+|SPS00:DA.+|CC|CS' postag_regexp='yes'/>
+        <token postag='RG|AQ.+|NC.+|Z0.+' postag_regexp='yes'/>
+        <token inflected='yes'>ser</token>
+        <token regexp='yes'>igual|iguais</token>
+        <token regexp='yes'>a|e|ou</token>
+        <token postag='DI.+|Z0.+' postag_regexp='yes'/>
+        <example>Três ao cubo é igual a vinte e sete.</example>
+        <example>"Sabemos que alfa é igual a 60 graus. Logo, beta só pode ser 120!", concluiu o estudante.</example>
+        <example>Um dólar é igual a cem centavos.</example>
+        <example>Uma jarda é igual a três pés.</example>
+        <example>Uma dúzia é igual a doze unidades.</example>
+        <example>A soma de todos os ângulos de um triângulo é igual a 180 graus.</example>
+        <example>A soma dos ângulos internos de um triângulo é igual a 180 graus.</example>
+        <example>A quantidade de frutas produzidas em janeiro e fevereiro é igual a 370.</example>		
+        <example>Três quartos mais três oitavos é igual a um e um oitavo.</example>
+        <example>A soma dos ângulos de um triângulo é igual a dois ângulos retos.</example>
+      </antipattern>
+
+      <antipattern>
+        <token postag='DP.+' postag_regexp='yes'/>
+        <token postag='RG|AQ.+|NC.+|Z0.+|UNKNOWN' postag_regexp='yes'/>
+        <token inflected='yes'>ser</token>
+        <token regexp='yes'>igual|iguais</token>
+        <token regexp='yes'>às?|aos?</token>
+        <token postag='DP.+' postag_regexp='yes'/>
+        <example>Que coincidência! Minha gravata é igual à sua!</example>
+      </antipattern>
+
+      <antipattern>
+        <token postag='SPS00' postag_regexp='no'/>
+        <token postag='DP.+' postag_regexp='yes'/>
+        <token postag='RG|AQ.+|NC.+|Z0.+|UNKNOWN' postag_regexp='yes'/>
+        <token inflected='yes'>ser</token>
+        <token regexp='yes'>igual|iguais</token>
+        <token regexp='yes'>a|e|ou|às?|aos?</token>
+        <token postag='DI.+|Z0.+|DP.+' postag_regexp='yes'/>
+        <token postag='_PUNCT' postag_regexp='no'/>
+        <example>Há dez anos, João tinha o dobro da idade de Maria. Se hoje a soma de suas idades é igual a 50, quantos anos tinham Maria e João na referida data?</example>
+      </antipattern>
+
+      <antipattern>
+        <token postag='AQ.+|NC.+|UNKNOWN' postag_regexp='yes'/>
+        <token postag='AQ.+|NC.+|UNKNOWN' postag_regexp='yes'/>
+        <token inflected='yes'>ser</token>
+        <token regexp='yes'>igual|iguais</token>
+        <token regexp='no'>a</token>
+        <token postag='AQ.+|NC.+' postag_regexp='yes'/>
+        <example>A mistura das três cores primárias é igual a MARROM, que poderá ter uma tonalidade mais clara ou mais escura, dependendo da quantidade de pigmen...</example>
+      </antipattern>
+
+      <antipattern>
+        <token postag='DD.+' postag_regexp='yes'/>
+        <token postag='RG|AQ.+|NC.+|Z0.+|UNKNOWN' postag_regexp='yes'/>
+        <token inflected='yes'>ser</token>
+        <token regexp='yes'>igual|iguais</token>
+        <token regexp='yes'>a|e|ou|às?|aos?</token>
+        <token postag='DI.+' postag_regexp='yes'/>
+        <token postag='AQ.+|NC.+' postag_regexp='yes'/>
+        <example>Este carro é igual a um novo.</example>
+      </antipattern>
+
+      <!-- WITH "IGUAL A" -->
+      <rule>
+        <pattern>
+          <token postag='RG|AQ.+|NC.+|NP.+|SPS00|UNKNOWN' postag_regexp='yes'>
+            <exception postag_regexp='yes' postag='Z0.+'/>
+          </token>
+          <marker>
+            <and>
+              <token inflected='yes'>ser</token>
+              <token postag='VMN0000|VMN03.+|VMSF3.+|VMI[SP]3.+' postag_regexp='yes'/>
+            </and>
+            <token regexp='yes'>igual|iguais</token>
+            <token>a</token>
+          </marker>
+          <token postag='AQ.+|NC.+|Z0.+|V.+' postag_regexp='yes'/>
+        </pattern>
+        <message>Esta perífrase poderá ser simplificada.</message>
+        <suggestion><match no='2' postag='V.+' postag_regexp='yes'>igualar</match></suggestion>
+        <example correction="igualar">A soma tem de <marker>ser igual a</marker> zero.</example>
+        <example correction="iguala">Esta mulher <marker>é igual a</marker> 10.</example>
+        <example correction="igualou">Esta mulher <marker>foi igual a</marker> 10.</example>		
+      </rule>
+
+      <!-- WITH "IGUAL E/OU" -->
+      <rule>
+        <pattern>
+          <token postag='RG|AQ.+|NC.+|NP.+|SPS00|UNKNOWN' postag_regexp='yes'>
+            <exception postag_regexp='yes' postag='Z0.+'/>
+          </token>
+          <marker>
+            <and>
+              <token inflected='yes'>ser</token>
+              <token postag='VMN0000|VMN03.+|VMSF3.+|VMI[SP]3.+' postag_regexp='yes'/>
+            </and>
+            <token regexp='yes'>igual|iguais</token>
+          </marker>
+          <token regexp='yes'>e|ou</token>
+          <token postag='AQ.+|NC.+|Z0.+|V.+' postag_regexp='yes'>
+            <exception scope="next" postag_regexp='yes' postag='SPS00:DA.+'/>
+          </token>
+        </pattern>
+        <message>Esta perífrase poderá ser simplificada.</message>
+        <suggestion><match no='2' postag='V.+' postag_regexp='yes'>igualar</match></suggestion>
+        <example correction="iguala">A Inteligência Artificial <marker>é igual</marker> ou excede a humana.</example>
+      </rule>
+
+      <!-- WITH "IGUAL À(S)/AO(S)" -->
+      <rule>
+        <pattern>
+          <token postag='RG|AQ.+|NC.+|NP.+|SPS00|UNKNOWN' postag_regexp='yes'>
+            <exception postag_regexp='yes' postag='Z0.+'/>
+          </token>
+          <marker>
+            <and>
+              <token inflected='yes'>ser</token>
+              <token postag='VMN0000|VMN03.+|VMSF3.+|VMI[SP]3.+' postag_regexp='yes'/>
+            </and>
+            <token regexp='yes'>igual|iguais</token>
+            <token regexp='yes'>às?|aos?</token>
+          </marker>
+          <token postag='AQ.+|NC.+|Z0.+|V.+' postag_regexp='yes'/>
+        </pattern>
+        <message>Esta perífrase poderá ser simplificada.</message>
+        <suggestion><match no='2' postag='V.+' postag_regexp='yes'>igualar</match> <match no='4' postag='SPS00:DA0(..)0' postag_replace='DA0$10'>o</match></suggestion>
+        <example correction="igualar a">A soma tem de <marker>ser igual à</marker> soma de zeros.</example>
+        <example correction="igualar as">A soma tem de <marker>ser igual às</marker> somas de zeros.</example>
+        <example correction="igualar o">A soma tem de <marker>ser igual ao</marker> número de zeros.</example>
+        <example correction="igualar os">A soma tem de <marker>ser igual aos</marker> números usados.</example>
+      </rule>
+
+    </rulegroup>
+
+
+    <!-- E EST(A/E)(S) que -->
+    <rulegroup id='E_ESTAS_ESTES_QUE_PT_PT' name="Simplificar: E est(a/e)(s) → que" type='style'>
+      <!-- Created by Marco A.G.Pinto with Ricardo Joseh Lima suggestions, Portuguese rule 2022-10-12 (25-JUL-2022+) -->
+      <!--
+      A equação é fulcral no nosso estudo e este suporta diversas variáveis. → A equação é fulcral no nosso estudo que suporta diversas variáveis.
+      A equação é fulcral no nosso estudo e este não suporta diversas variáveis. → A equação é fulcral no nosso estudo que não suporta diversas variáveis.
+      A equação é fulcral na nossa investigação e esta suporta diversas variáveis. → A equação é fulcral na nossa investigação que suporta diversas variáveis.
+      A equação é fulcral na nossa investigação e esta não suporta diversas variáveis. → A equação é fulcral na nossa investigação que não suporta diversas variáveis.
+      -->
+
+      <!-- global antipatterns to try to avoid false positives by using number agreement -->
+      <antipattern>
+        <token postag='AQ..S.+|NC.S.+' postag_regexp='yes'/>
+        <token>e</token>
+        <token postag='PD0.P.+' postag_regexp='yes'/>
+      </antipattern>
+      <antipattern>
+        <token postag='AQ..P.+|NC.P.+' postag_regexp='yes'/>
+        <token>e</token>
+        <token postag='PD0.S.+' postag_regexp='yes'/>
+      </antipattern>
+
+      <!-- MALE -->
+      <rule>
+        <pattern>
+          <token postag='AQ.[CM].+|NC[CM].+' postag_regexp='yes'/>
+          <marker>
+            <token>e</token>
+            <token postag='PD0M.+' postag_regexp='yes'>
+            <exception regexp='yes'>[ao]s?|aquel[ae]s?</exception>
+          </token>
+          </marker>
+          <token min="0" max="2" postag='RN|RG' postag_regexp='yes'> <!-- muitas vezes morriam RG + RG + VMII3P0 -->
+            <exception postag_regexp='yes' postag='AQ.+|NC.+'/>
+          </token>
+          <token postag='VMI.3.+' postag_regexp='yes'>
+            <exception regexp='no'>é</exception>
+            <exception scope="next" regexp='no'>por</exception>
+          </token>
+        </pattern>
+        <message>Esta perífrase poderá ser simplificada.</message>
+        <suggestion>que</suggestion>
+        <example correction="que">A equação é fulcral no nosso estudo <marker>e este</marker> suporta diversas variáveis.</example>
+        <example correction="que">A equação é fulcral no nosso estudo <marker>e esse</marker> suporta diversas variáveis.</example>
+        <example correction="que">A equação é fulcral no nosso estudo <marker>e este</marker> não suporta diversas variáveis.</example>
+        <example correction="que">A equação é fulcral no nosso estudo <marker>e esse</marker> não suporta diversas variáveis.</example>
+      </rule>
+
+      <!-- FEMALE -->
+      <rule>
+        <pattern>
+          <token postag='AQ.[CF].+|NC[CF].+' postag_regexp='yes'/>
+          <marker>
+            <token>e</token>
+            <token postag='PD0F.+' postag_regexp='yes'>
+            <exception regexp='yes'>[ao]s?|aquel[ae]s?</exception>
+          </token>
+          </marker>
+          <token min="0" max="2" postag='RN|RG' postag_regexp='yes'> <!-- muitas vezes morriam RG + RG + VMII3P0 -->
+            <exception postag_regexp='yes' postag='AQ.+|NC.+'/>
+          </token>
+          <token postag='VMI.3.+' postag_regexp='yes'>
+            <exception regexp='no'>é</exception>
+            <exception scope="next" regexp='no'>por</exception>
+          </token>
+        </pattern>
+        <message>Esta perífrase poderá ser simplificada.</message>
+        <suggestion>que</suggestion>
+        <example correction="que">A equação é fulcral na nossa investigação <marker>e esta</marker> suporta diversas variáveis.</example>
+        <example correction="que">A equação é fulcral na nossa investigação <marker>e essa</marker> suporta diversas variáveis.</example>
+        <example correction="que">A equação é fulcral na nossa investigação <marker>e esta</marker> não suporta diversas variáveis.</example>
+        <example correction="que">A equação é fulcral na nossa investigação <marker>e essa</marker> não suporta diversas variáveis.</example>
+      </rule>
+
+    </rulegroup>
+
+
     <!-- QUE ATUA/ATUAM a atuar -->
     <rule id='QUE_VERBO_A_VERBOINFINITIVO' name="Simplificar: Que + V. → A + V. Infinitivo" type="style">
       <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-19 (Checked/Enhanced) (1-JAN-2022+)      -->
@@ -5571,6 +6704,7 @@
       <example>O disco vermelho representa o sol a nascer sobre Bengala e também simboliza o sangue dos que tombaram pela independência do Bangladesh.</example>
       <example>É a parte da Física que analisa o movimento, as variações de energia e as forças a atuar sobre um corpo.</example>
     </rule>
+
 
     <rulegroup id='A_XXX_DE_VOCÊS' name="Simplificar: A XXX de vocês → a vossa XXX">
       <!-- Created by Marco A.G.Pinto, Portuguese rule 2022-08-10 (Checked/Enhanced) (25-JUL-2022+) -->
@@ -5692,7 +6826,7 @@
           <exception regexp='yes'>(?:bit|kilo(?:bit|byte|volt|watt)|giga(?:byte|watt)|quilohertz|out)s?|DNAs?|INSS|RNAs?</exception> <!-- XXX remove after regenerating regexp -->
         </token>
       </pattern>
-      <message>Os estrangeirismos (Português Europeu) devem estar entre aspas ou ser italizados.</message>
+      <message>Os estrangeirismos (português europeu) devem estar entre aspas ou ser italizados.</message>
       <suggestion>‘\1’</suggestion>
       <suggestion>“\1”</suggestion>
       <url>https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/estrangeirismos-em-italico-ou-entre-aspas/7785</url>

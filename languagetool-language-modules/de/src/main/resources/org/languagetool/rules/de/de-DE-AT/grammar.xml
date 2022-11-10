@@ -86,8 +86,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                         <token regexp="yes">\-|\.|:|\!|;</token>
                     </marker>
                 </pattern>
-                <message>Nach der Anredeformel sollte ein Komma stehen: <suggestion>\2 \3 \4 \5,</suggestion></message>
-                <short>Nach der Anredeformel sollte ein Komma stehen.</short>
+                <message>Nach der Anredeformel sollte ein Komma stehen.</message>
+                <suggestion>\2 \3 \4 \5,</suggestion>
                 <example correction="Sehr geehrter Herr Müller,"><marker>Sehr geehrter Herr Müller!</marker></example>
             </rule>
             <rule>
@@ -102,7 +102,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                         <token regexp="yes" postag=".*SENT_END.*" postag_regexp="yes">[A-ZÄÖÜ][a-zäöüßáàâêéèëíìîïòóôõûçñšž]+</token>
                     </marker>
                 </pattern>
-                <message>Nach der Anredeformel sollte ein Komma stehen: <suggestion>\7,</suggestion></message>
+                <message>Nach der Anredeformel sollte ein Komma stehen.</message>
+                <suggestion>\7,</suggestion>
                 <example correction="Müller,">Sehr geehrte Frau Dr. <marker>Müller</marker></example>
                 <example correction="Müller,">Sehr geehrter Herr <marker>Müller</marker></example>
             </rule>
@@ -117,7 +118,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                         <token postag="SENT_END">Herren</token>
                     </marker>
                 </pattern>
-                <message>Nach der Anredeformel sollte ein Komma stehen: <suggestion>Herren,</suggestion></message>
+                <message>Nach der Anredeformel sollte ein Komma stehen.</message>
+                <suggestion>Herren,</suggestion>
                 <example correction="Herren,">Sehr geehrte Damen und <marker>Herren</marker></example>
             </rule>
         </rulegroup>
@@ -152,7 +154,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                         <exception regexp="yes">[A-ZÄÖÜ].*|alle(rseits)?|herr|frau|liebes?|meine?|moin|zusammen|miteinander|und|oder|ihr|du|@.*</exception>
                     </token>
                 </pattern>
-                <message>Nach der Anredeformel sollte ein Komma stehen: <suggestion>\3,</suggestion></message>
+                <message>Nach der Anredeformel sollte ein Komma stehen.</message>
+                <suggestion>\3,</suggestion>
                 <example><marker>Hallo</marker> Tom!</example>
                 <example><marker>"Moin"</marker> ist Norddeutsch.</example>
                 <example correction="Hallo,">„<marker>Hallo</marker> da seid ihr ja endlich!“</example>
@@ -434,6 +437,37 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <suggestion>“</suggestion>
                 <suggestion>«</suggestion>
                 <example correction="“|«">Er sagte "Tschüssi<marker>"</marker>.</example>
+            </rule>
+            <rule><!-- [15] -->
+                <antipattern>
+                    <token regexp="yes">\d+[½¼¾]?</token>
+                    <token spacebefore="no">"</token>
+                    <token regexp="yes" spacebefore="no">-.*(Töner|Laufwerk|Felge|Granat(en)?werfer|Diskette|rad|platte|vinyl|Rohr|fernseher|Bildschirm).*</token>
+                    <example>16"-Stahlfelgen mit Radzierblenden</example>
+                </antipattern>
+                <antipattern>
+                    <token regexp="yes">\d+[½¼¾]?</token>
+                    <token spacebefore="no">"</token>
+                    <token regexp="yes" spacebefore="no" case_sensitive="yes">-.*(EP|TV).*</token>
+                    <example>(12"-Split-EP mit Lynrd's Innards und Slingshot Episode)</example>
+                </antipattern>
+                <antipattern>
+                    <token postag="SENT_START" />
+                    <token />
+                    <token spacebefore="no">"</token>
+                    <token regexp="yes" spacebefore="no">-.*</token>
+                </antipattern>
+                <pattern>
+                    <token regexp="yes">.*[a-z0-9äöüß].*</token>
+                    <marker>
+                        <token spacebefore="no">"</token>
+                    </marker>
+                    <token regexp="yes" spacebefore="no">-[a-zäöüß].*</token>
+                </pattern>
+                <message>Möchten Sie ein schließendes typografisches Anführungszeichen verwenden?</message>
+                <suggestion>“</suggestion>
+                <suggestion>«</suggestion>
+                <example correction="“|«">Er klickte den "Gefällt mir<marker>"</marker>-Button.</example>
             </rule>
         </rulegroup>
         <rulegroup id="ANFUEHRUNGSZEICHEN_DE_AT" name="«wörtliche Rede» (»wörtliche Rede«)" default="temp_off">

@@ -3281,6 +3281,10 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
                 <token regexp="yes">are|is|was|been</token>
                 <token postag="VBP" chunk_re=".-VP" />
             </antipattern>
+            <antipattern>
+                <token regexp="yes">are|is|was|been</token>
+                <token regexp="yes">kill|take|drive</token>
+            </antipattern>
             <pattern>
                 <token regexp="yes">are|is|was|been</token><!-- MFU 2020-02-21 Why doesn't this also have 'were'? -->
                 <marker>
@@ -3889,6 +3893,12 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
             <token postag="VBZ" />
             <token postag="NNS|NN:U|DT|PRP\$|IN" postag_regexp="yes" />
         </antipattern>
+        <antipattern>
+            <token postag="MD" />
+            <token postag="PRP_S.*|NN.*" postag_regexp="yes" chunk_re=".-NP.*" />
+            <token postag="RB" min="0" />
+            <token postag="VB" chunk_re=".-VP" />
+        </antipattern>
         <pattern>
             <token postag="DT"><exception postag="PDT"/><exception regexp="yes">th[eo]se|one</exception><exception scope="previous">of</exception></token>
             <token postag="JJ"><exception postag="RB|NNPS?|NN:U|PRP" postag_regexp="yes"/></token>
@@ -3907,6 +3917,7 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
         <example type="untouched">The public demands answers.</example>
         <example type="untouched">The world may never know.</example>
         <example type="untouched">The following outlines routes and their stands.</example>
+        <example type="untouched">In the winter will he live?</example>
         <example type="untouched">Where a woman rules, bad is the end.</example>
         <example type="untouched">When a woman cries, she is being hysterical.</example>
         <example type="untouched">When a plane refuels, it usually needs to be on the ground</example>
@@ -8019,6 +8030,21 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
             <token inflected="yes">make</token>
             <token>it</token>
             <token>work</token>
+        </antipattern>
+        <antipattern>
+            <token>
+                need
+                <exception postag="DT|PRP\S$|JJR" postag_regexp="yes" scope="previous" />
+            </token>
+            <token>to</token>
+            <token postag="RB" min="0" />
+            <token postag="VB" />
+        </antipattern>
+        <antipattern><!-- incorrect chunking -->
+            <token>to</token>
+            <token regexp="yes">both|all</token>
+            <token postag="VB" chunk="E-NP-singular" />
+            <token postag="RP" />
         </antipattern>
         <pattern>
             <marker>

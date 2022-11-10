@@ -30,6 +30,17 @@ To ignore a remote rule match, set the <marker> so that it exactly covers the te
 ]>
 <rules lang="en" xsi:noNamespaceSchemaLocation="../../../../../../../../../languagetool-core/src/main/resources/org/languagetool/rules/remote-rules.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <category name="Machine learning rules" id="AI_RULES">
+        <rulegroup id="AI_HYDRA_LEO_CP_THE_THEY" name="">
+            <rule>
+                <pattern>
+                    <marker>
+                        <token>the</token>
+                    </marker>
+                    <token regexp="yes">\u2063</token>
+                </pattern>
+                <example correction=""><marker>The</marker> &#8291; are happy.</example>
+            </rule>
+        </rulegroup>
         <rulegroup id="AI_HYDRA_LEO_CP_YOUARE_YOU" name="">
             <rule>
                 <pattern>
@@ -629,15 +640,27 @@ To ignore a remote rule match, set the <marker> so that it exactly covers the te
         <rulegroup id="AI_HYDRA_LEO_MISSING_COMMA" name="">
             <rule>
                 <pattern>
-                    <token postag="V.*" postag_regexp="yes" chunk_re=".-VP" />
-                    <token min="0" postag="RB" chunk="B-ADVP" />
+                    <token postag="VBN" chunk_re=".-VP" />
+                    <token postag="RB" chunk="B-ADVP" />
                     <marker>
                         <token>but</token>
                     </marker>
-                    <token min="0" postag="RB" />
-                    <token postag="V.*" postag_regexp="yes" chunk_re=".-VP" />
+                    <token postag="VB(P|Z)?" postag_regexp="yes" chunk="B-VP" />
                 </pattern>
                 <example correction="">Some words are spelled or pronounced similarly <marker>but</marker> have two different meanings.</example>
+                <example correction="">In other words, the letters aren’t pronounced individually <marker>but</marker> are pronounced as a whole.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token chunk_re="E-NP.*" />
+                    <marker>
+                        <token>but</token>
+                    </marker>
+                    <token inflected="yes" regexp="yes">be|have</token>
+                    <token postag="RB" min="0" />
+                    <token postag="VB[GN]" postag_regexp="yes" chunk_re=".-VP" />
+                </pattern>
+                <example correction="">Fuel prices have hit record highs this year <marker>but</marker> are anticipated to start failing in 2024/25.</example>
             </rule>
             <rule>
                 <!-- #1 Single non-alphanumeric characters. -->

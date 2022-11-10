@@ -4343,7 +4343,6 @@ Patrick Süskind	NNP
 Spring Boot	NNP
 HCL Domino	NNP
 HCL Notes	NNP
-Lotus Notes	NNP
 Amazon Basics	NNP
 Kai Havertz	NNP
 Martin Fowler	NNP
@@ -5996,3 +5995,79 @@ Emil Nolde	NNP
 Qwest Communications	NNP
 Ghawar Field	NNP
 Safaniya Field	NNP
+DMG Mori	NNP
+Eurofighter Typhoon	NNP
+Ben Bernanke	NNP
+KION Group	NNP
+Kion Group	NNP
+Jean Hyppolite	NNP
+Sarah Parcak	NNP
+Jeffrey Dahmer	NNP
+Jeremy Hunt	NNP
+Tom Tugendhat	NNP
+Marcus Butler	NNP
+Jeff Dahmer	NNP
+Federico Valverde	NNP
+Fede Valverde	NNP
+Rio Ferdinand	NNP
+Charlie Hunnam	NNP
+Haus Publishing	NNP
+Arba Minch	NNP
+mazel tov	UH
+Bahir Dar	NNP
+Gilmore Girls	NNPS
+ID Buzz	NNP
+Wolf of Wall Street	NNP
+Kevin Spacey	NNP
+Robin Wright	NNP
+Ben Wallace	NNP
+Los Angeles Times	NNP
+LA Times	NNP
+L.A. Times	NNP
+Tampa Bay Times	NNP
+Maharashtra Times	NNP
+Brittney Griner	NNP
+Horizon Worlds	NNP
+Golden Dragon China Index	NNP
+Airbus Beluga	NNP
+Nova Kakhovka	NNP
+Dneprostroi Dam	NNP
+Kryvyi Rih	NNP
+Süddeutsche Zeitung	NNP
+Thierry Breton	NNP
+Patong Beach	NNP
+Doug Mastriano	NNP
+Ali Daei	NNP
+Fahmi Quadir	NNP
+Swiss Federal Railways	NNP
+Aleph Alpha	NNP
+Springer Nature	NNP
+Eli Lilly	NNP
+Inglourious Basterds	NNP
+Daniel Brühl	NNP
+Til Schweiger	NNP
+Michael Fassbender	NNP
+Björn Gulden	NNP
+Jordan Bardella	NNP
+Kari Lake	NNP
+ignis fatuus	NN
+ignes fatui	NNS
+Precision Air	NNP
+John Fetterman	NNP
+Maxwell Frost	NNP
+Maura Healey	NNP
+Lee Zeldin	NNP
+Huckabee Sanders	NNP
+Brian Kemp	NNP
+Wes Moore	NNP
+Markwayne Mullin	NNP
+Brian Dahle	NNP
+Abigail Spanberger	NNP
+Jennifer Wexton	NNP
+Gretchen Whitmer	NNP
+Tudor Dixon	NNP
+Chichén Itzá	NNP
+Bill Bowerman	NNP
+Lenovo ThinkStation	NNP
+Richard von Weizsäcker	NNP
+von Weizsäcker	NNP

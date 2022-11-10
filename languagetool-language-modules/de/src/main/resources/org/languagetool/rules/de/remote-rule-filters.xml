@@ -147,6 +147,26 @@ To ignore a remote rule match, set the <marker> so that it exactly covers the te
                 <regexp mark="2" case_sensitive="yes">\.(de|at|ch|lu|com|it|dk|nl|net|org|eu|biz|info|es|uk)/([A-Z][a-zäöüß]+)\b</regexp>
                 <example correction="">Wir informieren Sie unter www.deutsche-rentenversicherung.de/<marker>Datenschutzinformationen</marker>.</example>
             </rule>
+            <rule>
+                <pattern>
+                    <token regexp="yes">\u2063</token>
+                    <marker>
+                        <token case_sensitive="yes" regexp="yes">[A-ZÄÖÜ].*</token>
+                    </marker>
+                </pattern>
+                <example correction="">Ich bin ein Satz &#8291; <marker>Ich</marker> bin noch ein Satz.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token>,</token>
+                    <marker>
+                        <token case_sensitive="yes">Stand</token>
+                    </marker>
+                    <token>jetzt</token>
+                    <token>,</token>
+                </pattern>
+                <example correction="">Ich bin, <marker>Stand</marker> jetzt, unzufrieden damit.</example>
+            </rule>
         </rulegroup>
         <rulegroup id="AI_DE_HYDRA_LEO_MISSING_COMMA.*" name="">
             <rule><!-- avoid loop MC_2 w/ FEHLERHAFTES_KOMMA_ALLG[1] -->
@@ -542,10 +562,20 @@ To ignore a remote rule match, set the <marker> so that it exactly covers the te
                     <token regexp="yes" case_sensitive="yes">@[A-ZÄÖÜ].*</token>
                     <token regexp="yes" case_sensitive="yes">[A-ZÄÖÜ].*</token>
                     <marker>
-                        <token regexp="yes">der|die|das|wie|wo|wann|wer|was|wieso|warum|wozu</token>
+                        <token regexp="yes">der|die|das|wie|wo|wann|wer|was|wieso|warum|wo(zu|mit|hin)</token>
                     </marker>
                 </pattern>
                 <example correction="">@Emanuel Peter <marker>das</marker> trifft auch auf euch zu.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token postag="SENT_START"/>
+                    <token regexp="yes">@[a-zäöü0-9].*</token>
+                    <marker>
+                        <token regexp="yes">der|die|das|wie|wo|wann|wer|was|wieso|warum|wo(zu|mit|hin)</token>
+                    </marker>
+                </pattern>
+                <example correction="">@Emanuel <marker>das</marker> trifft auch auf euch zu.</example>
             </rule>
             <rule>
                 <pattern>
@@ -555,7 +585,7 @@ To ignore a remote rule match, set the <marker> so that it exactly covers the te
                     <token regexp="yes" min="0">der?</token>
                     <token regexp="yes" case_sensitive="yes">[A-ZÄÖÜ].*</token>
                     <marker>
-                        <token regexp="yes">der|die|das|wie|wo|wann|wer|was|wieso|warum|wozu</token>
+                        <token regexp="yes">der|die|das|wie|wo|wann|wer|was|wieso|warum|wo(zu|mit|hin)</token>
                     </marker>
                 </pattern>
                 <example correction="">@Emanuel van der Vet <marker>das</marker> trifft auch auf dich zu?</example>
@@ -740,6 +770,15 @@ To ignore a remote rule match, set the <marker> so that it exactly covers the te
                 <regexp case_sensitive="yes" mark="2">^@[A-ZÄÖÜ][a-zäöüß\-0-9]+\s+(v[ao]n\s+)?[A-ZÄÖÜ][a-zäöüß\-0-9]+(\s+das)</regexp>
                 <example correction="">@Emanuel Peter<marker> das</marker> ist einer aus diesem Issue.</example>
             </rule>
+            <rule>
+                <pattern>
+                    <token regexp="yes">\u2063</token>
+                    <marker>
+                        <token>das</token>
+                    </marker>
+                </pattern>
+                <example correction="">Ich weiß &#8291; <marker>das</marker> ist einer aus diesem Issue.</example>
+            </rule>
         </rulegroup>
         <rulegroup id="AI_DE_HYDRA_LEO_CP_DAS_DASS" name="">
             <rule>
@@ -751,6 +790,18 @@ To ignore a remote rule match, set the <marker> so that it exactly covers the te
                 </pattern>
                 <example correction="">Manche Katzen weigern Würmer sonnik gesehen jedoch, Essen zu sich zu nehmen, <marker>das</marker> .</example>
                 <example correction="">Einer beziehung zerstörst, was sie bequem für lust statt bars zu versuchen sie mag, <marker>das</marker>.</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="AI_DE_HYDRA_LEO_CASING_LOWER_TO_UPPER" name="">
+            <rule>
+                <pattern>
+                    <token regexp="yes">und|oder|aber</token>
+                    <marker>
+                        <token postag="VER:IMP:SIN.*" postag_regexp="yes" case_sensitive="yes" regexp="yes">[a-zäöü].*</token>
+                    </marker>
+                    <token regexp="yes" case_sensitive="yes">dann|bitte|mal</token>
+                </pattern>
+                <example correction="">Geh mal auf https://www.icloud.com/ und <marker>klick</marker> dann links unten auf den kleinen Link "Apple ID erstellen"</example>
             </rule>
         </rulegroup>
         <rulegroup id="AI_DE_HYDRA_LEO_NOUN_SPACE" name="">

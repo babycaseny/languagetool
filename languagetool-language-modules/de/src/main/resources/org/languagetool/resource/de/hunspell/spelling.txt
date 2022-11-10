@@ -18987,7 +18987,7 @@ mit_trinken
 durch_wälzen
 zuladbar/A
 hinabgesehen
-herumzappen #ugs #todo
+herum_zappen #ugs
 festverwoben/A
 ausrollbar/A
 aufgeschrammt/A #ugs
@@ -19337,7 +19337,7 @@ Revisionsschächte/N
 Revisionsschacht/S
 Salongesellschaft
 Salongesellschaften
-Schnullerkette/A
+Schnullerkette/N
 Sprachwandeltendenz
 Sprachwandeltendenzen
 Stempelungen
@@ -19602,6 +19602,8 @@ Kohfeldt/S #name
 Verkitschung
 Börsenhype/S
 Fed-Chef/S
+Fed-Chefin
+Fed-Chefinnen
 rauf_kommen
 vorabendlich/A
 los_spazieren
@@ -20834,7 +20836,7 @@ Verknüpfungsart
 Verknüpfungsarten
 Verschleißerkennung
 versottet/A
-Vibes/A #eng
+Vibes #eng
 Visumverlängerung
 Visumverlängerungen
 Willkommensklasse/N
@@ -22931,8 +22933,10 @@ rum_tricksen #ugs
 rein_interpretieren
 über_würzen
 rein_tragen
-runterstoßen #todo
-reingießen #todo
+runterstoßen
+runtergestoßen/A
+reingießen
+reingegossen/A
 raus_stechen
 rum_sitzen #ugs
 rum_hantieren #ugs
@@ -24151,10 +24155,10 @@ rum_lesen
 rum_rutschen
 Rumgerenne
 rum_schieben
-#rum_schnippeln #todo
+rum_schnippeln
 Rumgeeier/E #ugs
 rum_probieren
-#rum_wurschteln #ugs #todo
+rum_wurschteln #ugs
 Rumgehacke #ugs
 Rumgehopse #ugs
 rum_kriechen
@@ -24183,7 +24187,7 @@ rum_trödeln #ugs
 rum_lungern
 rum_spazieren
 rum_nerven
-#rum_zappen #todo
+rum_zappen
 rum_trampeln
 rum_pöbeln
 rum_maulen
@@ -24196,7 +24200,7 @@ Rumgeknutsche #ugs
 rum_rätseln
 Rumeierei #ugs
 rum_irren
-#rum_daddeln #todo
+rum_daddeln
 rum_kaspern
 rum_huren #ugs
 rum_rollen
@@ -24211,7 +24215,7 @@ rum_tippen
 Rumgemache
 rum_tüfteln
 rum_sausen #ugs
-#rum_fingern #todo
+rum_fingern
 rum_schneiden
 rum_zappeln #ugs
 rum_wirbeln #ugs
@@ -24229,7 +24233,7 @@ absurfen #todo
 ab_saufen #ugs
 ab_zappeln #ugs
 ab_düsen #ugs
-#ab_nippeln #ugs #todo
+ab_nippeln #ugs
 ab_gammeln #ugs
 ab_roden
 an_kucken #ugs
@@ -24519,7 +24523,7 @@ heraus_handeln
 mit_zittern
 drauf_schrauben
 frei_bleiben
-weiterköcheln #todo
+weiter_köcheln #todo
 weiter_rollen
 nach_versteuern
 fest_lesen #ugs
@@ -24546,7 +24550,7 @@ drüber_stehen #ugs
 zusammen_kneten
 zu_labern #ugs
 weiter_basteln
-wegzappen #ugs #todo
+weg_zappen #ugs
 ran_kämpfen #ugs
 herum_feilen #ugs
 weiter_radeln
@@ -26857,6 +26861,7 @@ Pushback/S #eng
 Kühnert/S #name
 Islamismuskritik
 Linkenfraktionschef/S
+Linkenfraktionschefin
 antimuslimisch/A
 Alterzbischof/S
 Aluminiumerzlagerstätte/N
@@ -33343,6 +33348,8 @@ On-Demand-Produktion
 On-Demand-Produktionen
 On-Demand-Videoinhalt/E
 On-Demand-Service/S
+On-Demand-Plattform
+On-Demand-Plattformen
 VZ #abk
 StudiVZ #name
 Unterwellenborn/S #name
@@ -35679,6 +35686,7 @@ Forward-Kontrakte/NS
 Erfüllungspflicht
 Erfüllungspflichten
 tagesgültig/A
+Stop-Order/S #eng
 Trailing-Stop-Order/S #eng
 Stop-Market-Order/S #eng
 Trailing-Stop-Loss-Order/S #eng
@@ -50413,6 +50421,8 @@ Beschallungssysteme/N
 Clement/S #name
 besucherintensiv/A
 Kuratoriumschef/S
+Kuratoriumschefin
+Kuratoriumschefinnen
 Metal-Band/S
 proto-semitisch/A
 protosemitisch/A
@@ -50423,6 +50433,9 @@ Fakemeldung
 Fakemeldungen
 Heavy-Metal-Fan/S
 Heavy-Metal-Band/S
+Heavy-Metal-Ikone/N
+Heavy-Metal-Konzert/S
+Heavy-Metal-Konzerte/N
 querfinanziert/A
 Curriculum Vitae
 Sprachenpass
@@ -50505,7 +50518,6 @@ BRICS-Land/S
 BRICS-Landes
 BRICS-Länder/N
 BRICS-Staat
-BRICS-Staaten
 Kassam-Rakete/N
 Besatzerregime/S
 Märtyrerbrigade/N
@@ -50616,9 +50628,6 @@ heraus_verlegen
 herausverlegt/A
 rein_verlinken
 herein_verlinken
-hinein_verlinken
-raus_verlinken
-heraus_verlinken
 hinaus_verlinken
 heraus_verlagern
 raus_verlagern
@@ -50733,7 +50742,6 @@ BurdaDirect/S #name
 BurdaForward/S #name
 Tomorrow Focus #name
 Midi-Job/S
-Midijob/S
 Web Component/S #eng
 Design Ops #eng
 Waikiki/S
@@ -50805,13 +50813,9 @@ beharkte
 beharkten
 beharktest
 Kingsize-Bett
-Kingsize-Bettes
 Kingsize-Betts
-Kingsize-Betten
-Queensize-Bett
 Queensize-Bettes
 Queensize-Betts
-Queensize-Betten
 Twinsize-Bett
 Twinsize-Bettes
 Twinsize-Betts
@@ -50862,7 +50866,6 @@ Unterringelung
 Unterringelungen
 durch_düsen
 veränderungsbereit/A
-veränderungswillig/A
 heranzutrainieren
 Schüttraummeter/NS
 eAT
@@ -50927,14 +50930,12 @@ altafrikanisch/A
 flächenidentisch/A
 stahlummantelt/A
 stahlumrandet/A
-bleiummantelt/A
 bleiumrandet/A
 goldummantelt/A
 goldumrandet/A
 edelstahlummantelt/A
 edelstahlumrandet/A
 verkonsumieren
-verkonsumiere
 verkonsumiert/A
 Old Trafford/S #name
 Pick-up-Truck/S
@@ -50976,7 +50977,10 @@ Personenbeziehbarkeit
 Discountermitarbeitende/N
 dran_kuscheln
 ran_kuscheln
-Frederiksen/S #name
+Kommanditaktionär/S
+Kommanditaktionäre/N
+Konfitürenhersteller/S
+Outdoorausrüster/S
 Black-Hawk-Hubschschrauber/NS
 Black-Hawk-Transporthubschschrauber/NS
 Black Hawk/S
@@ -51000,7 +51004,6 @@ Revi-Klappe/N
 Krimbrücke
 Krim-Brücke
 Kertsch-Brücke
-Poke Bowl/S
 Poke-Bowl-Rezept/S
 Poke-Bowl-Rezepte/NS
 Poké Bowl/S
@@ -51023,3 +51026,361 @@ Quick-Commerce-Unternehmen/S
 Quick Commerce #eng
 Expresslieferdienst
 Expresslieferdienste/SN
+passiv-aggressiv/A
+Climate Tech/S #eng
+Working Mom/S #eng
+Eurofighter/SN #name
+Benachrichtigungsservice/S
+Saint-Nazaire/S #name
+ungerahmt/A
+Plakatmuster/SN
+parl.
+styroporartig/A
+Schnäppchenplattform
+Schnäppchenplattformen
+Schnäppchenportal/S
+Schnäppchenportale/N
+Veranstalterkarriere/N
+Partykultur
+Partykulturen
+Silicon-Valley-Investor/S
+Silicon-Valley-Investoren
+bucketlistmäßig/A
+Partygemeinde/N
+Partyveranstalter/SN
+Party/S
+Senderchef/S
+Senderchefin
+Senderchefinnen
+Best-in-Class-Konzept/S
+Best-in-Class-Ansatz
+Best-in-Class-Ansatzes
+Best-in-Class-Ansätze/N
+Bank Run/S #eng
+Bank-Run/S #eng
+Filetiermesser/SN
+Wellenschliffmesser/SN
+Wetzstahl/S
+Wetzstahles
+Krallengriffe/SN
+RDKS-Sensor/S
+RDKS-Sensoren
+RDKS-Pflicht
+Cannabis
+Cannabissamen/S
+Business-Line-Anwender/SN
+Charger/SN #eng
+Hüseyin/S #name
+Nachverrechnung
+Nachverrechnungen
+Guthabeneinzahlung
+Guthabeneinzahlungen
+Wohlstandsmotor/S
+Shoppingmeile/N
+engmaschiger/A
+zentralchinesisch/A
+Zhengzhou/S
+Wohlstandsversprechen/S
+Chinastrategie/N
+verplanbar/A
+nach_verrechnen
+mit_stinken #ugs
+rum_stinken #ugs
+herum_stinken
+streitentscheidend/A
+wettbewerbsentscheidend/A
+Aktivitäts-Tracking/S
+Aktivitätstracking/S
+Theo Koll/S #name
+Nordisch by Nature #name
+Babyparty/S
+Kartoffeltarte
+Seniorchef/S
+Juniorchef/S
+Downhill-Bike/S
+Raffaello/S #name
+Arba Minch/S #name
+Dämmerungslicht/S
+Tasksequenz
+Tasksequenzen
+aus_stempeln
+ausgestempelt/A
+Gabrielle/S
+Logistikdienst/S
+Logistikdienste/SN
+angedruckt/A
+an_drucken
+Krasnojarsk/S #name
+Romantikforschung
+Romantikforschungen
+Torhütertraining/S
+transphob/A
+Wörthersee Stadion/S #name
+Abklebespur
+Abklebespuren
+Abnehmversuch/S
+Abnehmversuche/N
+Abredeversicherung
+Abredeversicherungen
+Aggregierungsart
+Aggregierungsarten
+Alliästhesie/N
+Anreißlinie/N
+aufsichtspflichtig/A
+Ausziehnaht
+Ausziehnähte/N
+parteitaktisch/A
+Beanspruchungsgruppe/N
+Betriebs-Nr.
+Billigkeitsrichtlinie/N
+Boutiqueberatung
+Boutiqueberatungen
+Bürgschaftsformular/S
+Bürgschaftsformulare/SN
+Campleiter/SN
+Checklistenpunkt/S
+Checklistenpunkte/SN
+Clientkomponente/N
+Cocktailshaker/SN
+Cupverteidiger/SN
+dBm #abk
+dBi #abk
+Doppeldate/S
+druckfrei/A
+D-U-N-S-Nummer/N
+DUNS-Nummer/N
+Epochenübersicht
+Fensterfalzlüfter/SN
+Flanschfläche/N
+Frühromantikforschung
+Foodfestival/S
+Generationentreff/S
+Gotham/S #name
+Haifischkragen
+Hirntumorhilfe
+immissionsschutzrechtlich/A
+impfinduziert/A
+Insassenbelastung
+Insassenbelastungen
+Kreativprojekt/S
+Kreativprojekte/N
+meldeberechtigt/A
+Minderqualität
+Minderqualitäten
+Mobilitätsübung
+Mobilitätsübungen
+neuroonkologisch/A
+outdoorfähig/A
+beiseite_schaffen
+trocken_fallen
+weiter_steigen
+Kreativprodukt/S
+Kreativprodukte/NS
+Topverteidiger/SN
+Topverteidigerin
+Topverteidigerinnen
+Persenning
+Persenninge/N
+Persenning/S
+Schauerböe/N
+durch_kentern
+Aggregateheber/NS
+beklagtenseits
+Sanktuarium/S
+Sanktuarien
+US-Amtrak-Zug/S
+US-Amtrak-Züge/N
+reingeschossen/A
+rum_schnipseln
+herum_schnipseln
+rum_radeln
+herum_radeln
+uninvestierbar/A #ugs
+idiologiefrei/A
+herum_radieren
+rum_radieren
+Keratinprodukt/S
+Keratinprodukte/SN
+zwiebelt
+gezwiebelt
+zwiebelst
+zwiebelte
+zwiebelten
+Machertyp/S
+Machertypen
+Tourismushauptstadt
+Tourismushauptstädte/N
+Nahverkehrsservice
+geschlechterstereotyp/A
+Rätselspaß
+DENIC
+Dividendenstripping/S
+Dividendenausschüttungsanspruch
+Dividendenausschüttungsansprüche/N
+tageslichtabhängig/A
+fremdverschuldet/A
+testierfähig/A
+Testierfähigkeit
+Testierfähigkeiten
+Tory-Parteichef/S
+Tory-Parteichefin
+Tory-Parteichefinnen
+Tory-Partei/S
+Cashewmus
+Cum-Ex-Affäre/N
+Cum-Ex-Geschäft/S
+Cum-Ex-Geschäfte/N
+Cum-Ex-Skandal/S
+Cum-Ex-Skandale/N
+Cum-Ex
+Vorschlagskarte/N
+Teamaccount/S
+Nowa Kachowka/S #name
+DniproHES #name
+Krywyj Rih/S #name
+spermienfreundlich
+rüber_walzen
+rüber_wälzen
+Provozierung
+Provozierungen
+Prinzregentenstr.
+Brienner Straße
+Prinzregentenplatz
+Prinzregentenplatzes
+beiseite_treten
+beiseite_gehen
+beiseite_rücken
+beiseite_nehmen
+beiseite_stehen
+beiseite_lassen
+beiseite_packen
+insolvenzgeschützt/A
+To-go
+netzwerkübergreifend/A
+Loftwohnung
+Loftwohnungen
+flüchtlingsverliebt/A
+In-Game-Kauf/S
+In-Game-Käufe/N
+Sous Vide
+Sous-Vide-Bad/S
+Sous-Vide-Bäder/N
+Sous-Vide-Garer/SN
+Sous-Vide-Garen/S
+In-vitro-Fleisch/S
+In-vitro-Studie/N
+In-vitro-Fertilisation
+In-vitro-Fertilisationen
+In-vitro-Diagnostikum/S
+In-vitro-Evolution
+In-vitro-Evolutionen
+In-vitro-Transkription
+In-vitro-Transkriptionen
+In-vitro-Kontrakturtest/S
+Workation/S
+Ottifant
+Ottifanten
+staatsautoritär/A
+eichhörnchenmäßig/A
+discountgünstig/A
+Abgleichzwecke/N
+https-Verbindung
+http-Verbindung
+Lookalike Audience/S #eng
+Custom Audience/S #eng
+Schachtelbeteiligung
+Schachtelbeteiligungen
+Maßnahmengesetze/N
+Mixed-Doppel/S
+Mixed-Doppel-Serie/N
+Muttertagskonzert/S
+Muttertagskonzerte/N
+Packungsdesign/S
+Mondioring/S
+Doktoratsausbildung
+Doktoratsausbildungen
+rückwärts_laufen
+vorwärts_laufen
+Norikerstute/N
+Norikerpferd/S
+Norikerpferde/N
+Attraktivierung
+Attraktivierungen
+Chili sin Carne
+geschlafwandelt
+Handwerksbeschäftigte/N
+Handwerksbeschäftigter
+Prinzessinnenkleid/S
+Prinzessinnenkleider/N
+Prinzessinnenkleides
+Prinzessinnenkostüme/N
+klimawandelbedingt/A
+Best-of-Tour
+Best-of-Liste/N
+Best-of-Chart/S
+Best-of-Modus
+Vierersitzgruppe/N #z. B. im Zug oder im Bus
+Koautorin
+rein_abonnieren
+durch_naschen
+Trafficzahl
+Trafficzahlen
+Midterms
+Midterm-Wahl
+Midterm-Wahlen
+Goodie Bag/S #eng
+smashe/N #eng #ugs
+gesmasht #ugs
+anbaubar/A
+Hochheimer Markt/S
+Hochheimer Marktes
+Day Spa/S
+Day-Spa/S
+EfA-Leistung
+EfA-Leistungen
+Fernandez
+Mutmacherin
+Mutmacherinnen
+Augenpad/S
+Blendenlamelle/N
+Christoffer/S #name
+Copywriterin
+Copywriterinnen
+Deocreme/S
+iCal-Format/S
+iCal-Formate/N
+Message/S
+Tiffany/S #name
+Akutmaßnahme/N
+altersadäquat/A
+Anmeldungsrunde/N
+rumgegackert
+rumgacker
+rumgackerst
+rumgackern
+rumgackere
+rumgackert
+Fotosession/S
+Jamsession/S
+Kardinal Woelki/S #name
+Tapas-Bar/S
+Tower-PC/S
+rumkacken
+rumkacke
+rumkackt
+rumgekackt
+rumkackte
+rumkackst
+unbaubar/A
+bewegungsaktiviert/A
+Trumpismus
+Offliner/SN
+weitverbreitetste
+weitverbreitetstes
+weitverbreitetster
+weitverbreitetsten
+weitverbreitetstem
+Reichweitenpeak/S
+Onlinepanel/S
+Mixed Mode #eng
+rein_fuchsen

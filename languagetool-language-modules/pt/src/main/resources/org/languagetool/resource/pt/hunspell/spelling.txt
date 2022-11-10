@@ -36,8 +36,14 @@
 #  - ROMAN NUMERALS
 #
 #
+autocrítico
+autocríticos
 cientologia
 cientologias
+estertor
+estertores
+ramerrão
+ramerrões
 1D
 2D
 3D
@@ -795,6 +801,8 @@ bonobo
 bonobos
 bonzão
 bonzões
+bonzudo
+bonzudos
 boost
 Bootstrap
 borliú
@@ -1817,6 +1825,8 @@ energúmena
 energúmenas
 energúmeno
 energúmenos
+engaste
+engastes
 engatatão
 engatatões
 engomadinho
@@ -2225,7 +2235,6 @@ fê-las
 fê-lo
 fê-los
 febre-amarela
-feed
 feiarrão
 Feirense
 felácio
@@ -2282,6 +2291,8 @@ filogeneticamente
 filoxera
 finitude
 finitudes
+fiozinho
+fiozinhos
 fipronil
 fiscalista
 fiscalistas
@@ -2419,6 +2430,8 @@ gabonesas
 gaboneses
 Gagné
 gaio
+galeota
+galeotas
 galgamento
 galgamentos
 GALP
@@ -2470,6 +2483,8 @@ genotóxicas
 genotoxicidade
 genotóxico
 genotóxicos
+gentiaga
+gentiagas
 gentinha
 gentinhas
 gentrificação
@@ -3346,6 +3361,7 @@ loendros
 longarina
 longarinas
 Longonjo
+lótus
 loxodromia
 loxodrómica
 loxodrómicas
@@ -3772,6 +3788,8 @@ motorroçadora
 motorroçadoras
 motosserra
 motosserras
+motosserrista
+motosserristas
 moxibustão
 Moxico
 Mozilla
@@ -4300,6 +4318,8 @@ Pemba
 Pencil
 pensinho
 pensinhos
+pentagrama
+pentagramas
 pentaneta
 pentanetas
 pentaneto
@@ -4404,6 +4424,8 @@ pizicato
 pizicatos
 placar
 placares
+plaga
+plagas
 planisférica
 planisféricas
 planisférico
@@ -10188,6 +10210,8 @@ Zatheria
 ####################################################################
 # PROPER NAMES, INCLUDING PLACES, UNIVERSITIES AND ORGANIZATIONS ###
 ####################################################################
+Jedi
+Baphomet
 Mastercard
 VISA
 Aaron
@@ -10309,6 +10333,7 @@ Bohemia Interactive
 Boliqueime
 Bollywood
 Bolsonaro
+BOLSONARO
 Bombril
 Borussia Dortmund
 Borussia Mönchengladbach
@@ -11203,8 +11228,6 @@ Deep Web
 default
 desenvolvedor
 desenvolvedores
-desktop
-desktops
 developer
 developers
 diff
@@ -11643,7 +11666,6 @@ stories
 Christopher
 Robert
 Claudio
-fake news
 Luiza
 TCC
 Robert
@@ -12461,7 +12483,6 @@ Mentoria
 mentoria
 Power Studio
 feed
-fakes
 pet
 pets
 call
@@ -12998,3 +13019,94 @@ Jhonatans
 Stephanie
 Stephanies
 Telecom
+MasterCard
+PlayArte
+Simaria
+Simarias
+Sebastian
+Sebastians
+PCMSO
+Maycon
+Maycons
+Elena
+Elenas
+CSAT
+CSATs
+Lewis
+Catupiry
+Top House
+Marlon
+Marlons
+Ed
+Eds
+MVP
+MVPs
+Shopee
+Damares
+Dell
+Lily
+Miller
+Lilys
+Monica
+Dimenstein
+ROI
+TED
+TEDs
+Érika
+America
+CCQ
+CCQs
+Sato
+VTEX
+Sicredi
+RDPM
+CRO
+DSM
+Daemon
+Targaryen
+Aegon
+Alicent
+Viserys
+Aemond
+Rhaenyra
+Rhaenys
+Velaryon
+Hightower
+Criston
+Laenor
+Larys
+Harwin
+Strong
+Mysaria
+Haelena
+Harrold
+Westerling
+Laena
+Lyonel
+Lyman
+Beesbuty
+Vaemond
+Baela
+Erryk
+Cargyll
+Steffon
+Darklyn
+Jasper
+Wylde
+Arryk
+Gerarys
+Rhaena
+Lannister
+Baratheon
+Stark
+Tully
+Tarky
+Jon
+Arya
+Daenerys
+Aegons
+Snow
+Lucerys
+Jacaerys
+Joffrey
+ESF

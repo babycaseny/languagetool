@@ -1,5 +1,10 @@
 #Només funciona amb verbs de la primera conjugació, acabats en -ar, que són la majoria
 #extendre=estendre #caldria afegir el paradigma verbal
+#acometre=escometre|envestir
+endilgar=encolomar|endossar|fer empassar|endinyar
+currar=pencar|treballar|sirgar
+achatar|atxatar=aplatar
+prendar=enamorar
 aterroritzar=aterrir|terroritzar
 samplejar=mostrejar
 desangrar=dessagnar
@@ -241,7 +246,7 @@ legitimitzar=legitimar
 liar=embolicar|enrotllar|armar|engalipar|entabanar|embullar|embrollar
 llindar|lindar=confrontar|fitar|afrontar|ser contigu
 lograr=aconseguir|assolir|arribar a
-machacar|matxacar=picar|batre|matxucar|triturar|capolar|destrossar|castigar|anihilar|derrotar|insistir
+machacar|matxacar=destrossar|picar|batre|trinxar|triturar|capolar|castigar|anihilar|insistir
 mangonejar=manifassejar|maneflejar
 menguar=minvar|disminuir
 mermar=minvar|disminuir
@@ -308,5 +313,5 @@ tuitejar=tuitar|piular
 retuitejar=retuitar|repiular
 vehiculitzar=vehicular
 vislumbrar=albirar|entreveure
-xupar=llepar|xuclar|xumar|xuplar
+xupar=llepar|xuclar|xumar|xuplar|mamar
 afagar=agafar

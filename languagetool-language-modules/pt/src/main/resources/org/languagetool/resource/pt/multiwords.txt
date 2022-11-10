@@ -50,6 +50,8 @@
 ####################################################
 ###        Nomes próprios e comuns               ###
 ####################################################
+Al Qaida	NCFSO00
+Alcoólicos Anônimos	NCCSO00
 serial killers	NCMP000
 K.O.	NCMN000
 K.-O.	NCMN000
@@ -241,9 +243,15 @@ Wall Street English	NPMS000
 Windows Live Messenger	NPMS000
 World Trade Center	NPMS000
 ZX Spectrum	NPMS000
+Top House	NPFS000
+Van Gogh	NPMSS00
+Ilhas Mapia	NPFPG00
+Guarda Nacional	NPFS000
+Grã-Cruz	NPFS000
 ####################################################
 ###              Locuções                        ###
 ####################################################
+# a gente	PP3CS000
 # devido à	SP000
 # Devido à	SP000
 # devido ao	SP000
@@ -11289,6 +11297,7 @@ Crystal Palace	NPMS000_
 ###                  Outros                      ###
 ####################################################
 a capella	RG_
+pós-guerra	AQ0CN0_
 abertura f	NCFS000
 aberturas f	NCFP000
 África do Sul	NPFSG00_

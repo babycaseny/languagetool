@@ -271,19 +271,10 @@ public class Spanish extends Language implements AutoCloseable {
   private static final Pattern ES_CONTRACTIONS = Pattern.compile("\\b([Aa]|[Dd]e) e(l)\\b");
   
   @Override
-  public List<RuleMatch> adaptSuggestions(List<RuleMatch> ruleMatches, Set<String> enabledRules) {
-    List<RuleMatch> newRuleMatches = new ArrayList<>();
-    for (RuleMatch rm : ruleMatches) {
-      List<String> replacements = rm.getSuggestedReplacements();
-      List<String> newReplacements = new ArrayList<>();
-      for (String s : replacements) {
-        Matcher m = ES_CONTRACTIONS.matcher(s);
-        s= m.replaceAll("$1$2");
-        newReplacements.add(s);
-      }
-      RuleMatch newMatch = new RuleMatch(rm, newReplacements);
-      newRuleMatches.add(newMatch);
-    }
-    return newRuleMatches;
+  public String adaptSuggestion(String replacement) {
+    Matcher m = ES_CONTRACTIONS.matcher(replacement);
+    String newReplacement = m.replaceAll("$1$2");
+    return newReplacement;
   }
+  
 }

@@ -1,4 +1,11 @@
 #separatorRegExp=[\t;]
+Cape Town;NPCGS00
+Sharm al Shaij;NPCSG00
+Sharm al-Shaij;NPCSG00
+cogito ergo sum;NCMS000
+cogito, ergo sum;NCMS000
+Salt Lake City;NCCSG00
+Salt Lake;NCCSG00
 big data;NCMS000
 Big Data;NCMS000
 Chiang Kai-shek;NPMSSP0
