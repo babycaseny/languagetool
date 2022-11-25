@@ -216,7 +216,9 @@
         <rule>
             <pattern>
                 <marker>
-                    <token postag="V.*" postag_regexp="yes"/>    
+                    <token postag="V.*" postag_regexp="yes">
+                        <exception>need</exception><!-- "need" can be used as a modal verb -->
+                    </token>
                 </marker>
                 <token spacebefore="no">n't</token>
             </pattern>
@@ -957,7 +959,7 @@
           <pattern>
             <token postag="VB.*" postag_regexp="yes"/>
             <marker>
-            <token postag="VB.*" postag_regexp="yes">out</token>
+                <token postag="VB.*" postag_regexp="yes">out</token>
             </marker>
           </pattern>
           <disambig action="filter" postag="[IN]N|R[BP]|UH"/>
@@ -7228,6 +7230,22 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
         <antipattern><!-- https://en.wikipedia.org/wiki/Comfort_food -->
             <token>comfort</token>
             <token>food</token>
+        </antipattern>
+        <antipattern>
+            <token postag="SENT_START|CC|DT|PCT" postag_regexp="yes" />
+            <token postag="MD" />
+            <token inflected="yes">not</token>
+            <token postag="PRP" />
+            <token postag="VB" skip="-1" />
+            <token>?</token>
+        </antipattern>
+        <antipattern>
+            <token postag="SENT_START|CC|DT|PCT" postag_regexp="yes" />
+            <token inflected="yes">do</token>
+            <token inflected="yes">not</token>
+            <token postag="PRP" />
+            <token postag="VB" skip="-1" />
+            <token>?</token>
         </antipattern>
         <pattern>
             <token postag="PRP">
@@ -15217,6 +15235,16 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
         </rule>
     </rulegroup>
 
+    <rule id="NEED_MD" name="needn't is MD">
+        <pattern>
+            <marker>
+                <token>need</token>
+            </marker>
+            <token>n't</token>
+        </pattern>
+        <disambig action="filter" postag="MD" />
+    </rule>
+
     <rulegroup id="WANT_VB" name="'want' as verb">
         <rule><!-- "want/wants to be" (only verb) -->
             <antipattern>
@@ -16270,4 +16298,134 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
         </pattern>
         <disambig action="remove" postag="JJ" />
     </rule>
+    <rule id="PATERNITY_LEAVE_NO_VB" name="'leave' no verb in 'paternity leave'">
+        <antipattern>
+            <token>leave</token>
+            <token>out</token>
+        </antipattern>
+        <pattern>
+            <token regexp="yes">paternity|parental</token>
+            <marker>
+                <token>leave</token>
+            </marker>
+        </pattern>
+        <disambig action="remove" postag="VB.*" />
+    </rule>
+    <rulegroup id="MIGHT_MD" name="'might' only MD">
+        <rule>
+            <pattern>
+                <marker>
+                    <token regexp="yes">might|may</token>
+                </marker>
+                <token>be</token>
+                <token postag="RB" min="0" />
+                <token postag="JJ.*|VBN" postag_regexp="yes" />
+            </pattern>
+            <disambig action="filter" postag="MD" />
+        </rule>
+        <rule>
+            <pattern>
+                <marker>
+                    <token regexp="yes">might|may</token>
+                </marker>
+                <token>as</token>
+                <token>well</token>
+                <token>be</token>
+                <token postag="RB" min="0" />
+                <token postag="JJ.*|VBN" postag_regexp="yes" />
+            </pattern>
+            <disambig action="filter" postag="MD" />
+        </rule>
+        <rule>
+            <pattern>
+                <token chunk_re="E-NP.*" />
+                <marker>
+                    <token regexp="yes">might|may</token>
+                </marker>
+                <token postag="VB" chunk_re=".-VP" />
+            </pattern>
+            <disambig action="filter" postag="MD" />
+        </rule>
+        <rule>
+            <pattern>
+                <marker>
+                    <token regexp="yes">might|may</token>
+                </marker>
+                <token>not</token>
+                <token postag="RB" min="0" />
+                <token postag="VB" chunk_re=".-VP" />
+            </pattern>
+            <disambig action="filter" postag="MD" />
+        </rule>
+    </rulegroup>
+
+    <rule id="A_NOTHER" name="a(nother)"><!-- there's a(nother) thing coming -->
+        <pattern>
+            <token>a</token>
+            <token spacebefore="no">(</token>
+            <marker>
+                <token>nother</token>
+            </marker>
+            <token>)</token>
+        </pattern>
+        <disambig action="ignore_spelling"/>
+    </rule>
+    
+    <rule id="DO_NN_VB" name="does Peter have (VB) time">
+        <pattern>
+            <token postag="SENT_START|PCT|CC" postag_regexp="yes" />
+            <token regexp="yes" min="0">why|when|where|who|which|what|how</token>
+            <token inflected="yes" regexp="yes">do|will</token><!-- TODO: add more modal verbs -->
+            <token regexp="yes" min="0">n't|not</token>
+            <token chunk_re="B-NP.*" min="0" />
+            <token chunk_re="E-NP.*" />
+            <marker>
+                <token postag="VB" chunk_re=".-VP" />
+            </marker>
+            <token postag="P?DT|PRP\$|TO|IN" postag_regexp="yes" />
+        </pattern>
+        <disambig action="filter" postag="VB" />
+    </rule>
+
+    <rule id="PEOPLE_NO_VB" name="'people' and 'company' no verbs">
+        <pattern>
+            <token postag="P?DT|PRP\$|JJ.*" postag_regexp="yes" chunk_re=".-NP.*" />
+            <marker>
+                <token regexp="yes">people|company|companies|soldiers?</token>
+            </marker>
+        </pattern>
+        <disambig action="remove" postag="VB.*" />
+    </rule>
+
+    <rulegroup id="WHY_ONLY_ADVERB" name="'why' only Adverb">
+        <rule>
+            <pattern>
+                <marker>
+                    <token>why</token>
+                </marker>
+                <token min="0">exactly</token>
+                <token inflected="yes" regexp="yes">have|do|be|will|can|should|must</token>
+                <token chunk_re="B-NP.*" min="0" />
+                <token chunk_re="E-NP.*" />
+                <token postag="RB" min="0" chunk="B-ADVP" />
+                <token postag="VB.*" postag_regexp="yes" chunk_re=".-VP" />
+            </pattern>
+            <disambig action="filter" postag="WRB" />
+        </rule>
+        <rule>
+            <pattern>
+                <marker>
+                    <token>why</token>
+                </marker>
+                <token min="0">exactly</token>
+                <token inflected="yes" regexp="yes">have|do|be|will|can|should|must</token>
+                <token>n't</token>
+                <token chunk_re="B-NP.*" min="0" />
+                <token chunk_re="E-NP.*" />
+                <token postag="RB" min="0" chunk="B-ADVP" />
+                <token postag="VB.*" postag_regexp="yes" chunk_re=".-VP" />
+            </pattern>
+            <disambig action="filter" postag="WRB" />
+        </rule>
+    </rulegroup>
 </rules>

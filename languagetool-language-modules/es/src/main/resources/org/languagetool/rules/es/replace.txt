@@ -1,3 +1,5 @@
+distensionamiento=distensión
+distensionamientos=distensiones
 cualquieras=cualesquiera|cualquiera
 convezca=convenza
 convezcan=convenzan
@@ -133,8 +135,8 @@ zairense=zaireño|zaireña
 zairenses=zaireños|zaireñas
 boicó|boycott=boicot|boicoteo
 boicós|boycotts=boicots|boicoteos
-click=clic
-clicks=clics
+#click=clic
+#clicks=clics
 #prevent adding obvious mistakes to personal dictionary 
 despues=después
 estan=están
@@ -154,3 +156,10 @@ gustaria=gustaría
 # Errors in the dictionary 
 # (can be removed after updating the dictionary)
 #################################################
+Maria=María
+Reunion=Reunión
+judaismo=judaísmo
+judaismos=judaísmos
+acabóse=acabose
+proxenitismo=proxenetismo
+proxenitismos=proxenetismos

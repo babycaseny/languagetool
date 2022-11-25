@@ -1256,3 +1256,7 @@ Edin Terzic=Edin Terzić
 Hernan Crespo=Hernán Crespo
 Bjorn Gulden=Bjørn Gulden
 von Weizsacker=von Weizsäcker
+Mario Gotze=Mario Götze
+San Andres=San Andrés
+Telefonica Germany=Telefónica Germany
+Antonio Rudiger=Antonio Rüdiger

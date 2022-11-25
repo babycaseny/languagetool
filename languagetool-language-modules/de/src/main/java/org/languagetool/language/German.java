@@ -312,6 +312,7 @@ public class German extends Language implements AutoCloseable {
       case "IMPFLICHT" : return 1;   // prefer over agreement rules DE_AGREEMENT
       case "NULL_KOMMA_NICHTS" : return 1;   // prefer over agreement rules
       case "ZWEI_AN_HALB" : return 1;   // prefer over agreement rules
+      case "BLUETOOTH_LAUTSPRECHER" : return 1;   // prefer over agreement rules
       case "KOENNT_ICH" : return 1;   // prefer over DE_VERBAGREEMENT
       case "WIR_HABE" : return 1;   // prefer over DE_VERBAGREEMENT
       case "ICH_KOENNT" : return 1;   // prefer over DE_VERBAGREEMENT
@@ -380,6 +381,7 @@ public class German extends Language implements AutoCloseable {
       case "OK": return 1; // higher prio than KOMMA_NACH_PARTIKEL_SENT_START[3]
       case "EINE_ORIGINAL_RECHNUNG": return 1; // higher prio than DE_CASE, DE_AGREEMENT and MEIN_KLEIN_HAUS
       case "VALENZ_TEST": return 1; // see if this generates more corpus matches
+      case "WAEHRUNGSANGABEN_CHF": return 1; // higher prio than WAEHRUNGSANGABEN_KOMMA
       // default is 0
       case "FALSCHES_ANFUEHRUNGSZEICHEN": return -1; // less prio than most grammar rules but higher prio than UNPAIRED_BRACKETS
       case "VER_KOMMA_PRO_RIN": return -1; // prefer WENN_WEN

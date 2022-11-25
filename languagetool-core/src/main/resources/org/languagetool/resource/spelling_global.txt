@@ -1357,6 +1357,7 @@ Ant Financial
 AirDrop
 GPT-2
 GPT-3
+GPT-4
 Bertrandt
 Roundcube
 GeForce
@@ -2905,7 +2906,7 @@ ZPAQ
 Wacom
 CocoaPods
 Keybase
-PyPi
+PyPI
 Nullsoft
 VHSIC
 Kirigami
@@ -4736,3 +4737,65 @@ iCal
 Lenovo ThinkStation
 Richard von Weizsäcker
 von Weizsäcker
+Niclas Füllkrug
+Justin Verlander
+Youssoufa Moukoko
+Mario Götze
+Sam Bankman-Fried
+Changpeng Zhao
+Karim Adeyemi
+VMware ESXi
+Niklas Süle
+Message in a Bottle
+Patrick Esume
+MorphoSys
+Joko Widodo
+Anies Baswedan
+Mahathir Mohamad
+Ismail Sabri Yaakob
+Sabri Yaakob
+Thomson Reuters
+Pete Davidson
+Paw Patrol
+PAW Patrol
+pfSense
+Hackintosh
+Sundance Film Festival
+Robert Burns
+Fools Garden
+Robinson Crusoe
+Tokyopop
+Universal Records
+Toronto Blue Jays
+GP Bullhound
+Delaware Court of Chancery
+Delaware Chancery Court
+Ivan Toney
+Cadillac Escalade
+Jeremy Fragrance
+Telefónica Germany
+CocoaHeads
+Stormy Daniels
+Antonio Rüdiger
+John Stumpf
+Jared Kushner
+Freddie Mac
+Jung Kook
+Kia Sportage
+Sporting de Braga
+S.C. Braga
+SC Braga
+Sporting Cristal
+Mick Wallace
+Steve Bannon
+Alex Jones
+Bukayo Saka
+Marcus Rashford
+Mechanical Turk
+Bob Iger
+Guido Crosetto
+Fediverse
+World Wide Web Consortium
+ActivityPub
+Stable Diffusion
+Dani Olmo

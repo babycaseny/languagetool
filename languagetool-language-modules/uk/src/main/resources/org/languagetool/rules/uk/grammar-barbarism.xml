@@ -7212,6 +7212,18 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
       <example correction="мати право|могти">і <marker>вправі</marker> не поїхати</example>
     </rule>
 
+    <rule id="adp_actv_imperf" name="Активні дієприкметники">
+      <pattern>
+        <marker>
+          <token inflected="yes">сплячий</token>
+        </marker>
+        <token postag_regexp="yes" postag="prep.*"/>
+      </pattern>
+      <message>Активні дієприкметники не властиві українській мові.</message>
+      <suggestion>що спить</suggestion>
+      <example correction="що спить"><marker>сплячого</marker> на океані</example>
+    </rule>
+
     <rulegroup id="nakladenyi_platizh" name="Накладений платіж і післяплата">
       <rule>
         <pattern>
@@ -7244,6 +7256,18 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
       </rule>
     </rulegroup>
 
+<!--
+    <rule id="tushyty_vs_gasyty" name="Тушити і гасити">
+      <pattern>
+        <marker>
+          <token inflected="yes" regexp="yes">(за|при|по)?тушити</token>
+        </marker>
+        <token regexp="yes" inflected="yes" postag_regexp="yes" postag="noun:inanim:.:v_zna.*">вогонь|полум'я|світло|освітлення|свічка|пожежа</token>
+      </pattern>
+      <message>Правильно: <suggestion><match no="1" regexp_match="(за|при|по)?туш(.+?)" regexp_replace="$1гас$2"/></suggestion></message>
+      <example correction="погасив">і <marker>потушив</marker> вогні</example>
+    </rule>
+-->
 <!--
     <rulegroup id="lyshaty" name="Лишати і позбавляти">
       <rule>

@@ -1,6 +1,7 @@
 #Només funciona amb verbs de la primera conjugació, acabats en -ar, que són la majoria
 #extendre=estendre #caldria afegir el paradigma verbal
 #acometre=escometre|envestir
+distensionar=destensar|distendre|llevar tensió|treure tensió
 endilgar=encolomar|endossar|fer empassar|endinyar
 currar=pencar|treballar|sirgar
 achatar|atxatar=aplatar
@@ -217,9 +218,10 @@ emputxar|empuixar|empujar=empènyer|espentar|empentar
 encandilar=enlluernar|esbalair|fascinar|encegar|al·lucinar|espurnejar|restar enlluernat
 engordar=engreixar|encebar
 engrasar|engrassar=greixar|engreixar|untar|lubricar|lubrificar
+desengrassar|desengrasar=desgreixar
 enrutar=encaminar
 ensangrentar=ensangonar|ensagnar
-enterar=adonar|saber|assabentar
+#enterar=adonar|saber|assabentar
 entranyar|entrañar=comportar|implicar|contenir|enfonsar|endinsar
 entrecomillar=posar entre cometes
 enxufar|enchufar=endollar|connectar|empalmar|col·locar|apadrinar|recomanar|col·locar per recomanació

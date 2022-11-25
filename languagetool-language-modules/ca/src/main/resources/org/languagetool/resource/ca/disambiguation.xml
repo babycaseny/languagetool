@@ -2374,7 +2374,7 @@ Copyright (C) 2012 Jaume Ortolà i Font
     <rule id="prefixos_amb_guionet" name="prefixos amb guionet: micro-, mini-">
         <pattern>
             <marker>
-                <token regexp="yes">mini|micro|semi|multi|anti|super|re|pro|sots</token>
+                <token regexp="yes">mini|micro|semi|multi|anti|super|re|pro|sots|sobre</token>
             </marker>
             <token spacebefore="no">-</token>
         </pattern>
@@ -4723,7 +4723,7 @@ Copyright (C) 2012 Jaume Ortolà i Font
         </rule>
         <rule>
             <pattern>
-                <token regexp="yes">correus?|missatges?|comentaris?|e-?mails?</token>
+                <token regexp="yes">correus?|missatges?|comentaris?|e-?mails?|continguts?</token>
                 <marker>
                     <token regexp="yes">brossa|escombraries|porqueria</token>
                 </marker>
@@ -6591,6 +6591,34 @@ Copyright (C) 2012 Jaume Ortolà i Font
         </pattern>
         <disambig action="filter" postag="N.*"/>
     </rule>
+    <rulegroup id="nVerb0" name="no verb">
+        <rule>
+            <pattern>
+                <marker>
+                    <and>
+                        <token postag="V.*" postag_regexp="yes" regexp="yes">davall|només|noms?<exception postag="_GV_"/></token>
+                        <token postag="V.*" postag_regexp="yes" negate_pos="yes"/>
+                    </and>
+                </marker>
+            </pattern>
+            <disambig action="remove" postag="V.*"/>
+        </rule>
+        <rule>
+            <antipattern>
+                <token postag_regexp="yes" postag="&pronom_feble;"><exception>el</exception></token>
+                <token postag="V.[IS].*" postag_regexp="yes"/>
+            </antipattern>
+            <pattern>
+                <marker>
+                    <and>
+                        <token postag="V.*" postag_regexp="yes">projecte<exception postag="_GV_"/></token>
+                        <token postag="V.*" postag_regexp="yes" negate_pos="yes"/>
+                    </and>
+                </marker>
+            </pattern>
+            <disambig action="remove" postag="V.*"/>
+        </rule>
+    </rulegroup>
     <rulegroup id="haver_de_infinitiu" name="haver de + infinitiu">
         <rule>
             <pattern>
@@ -6605,7 +6633,7 @@ Copyright (C) 2012 Jaume Ortolà i Font
         <rule>
             <pattern>
                 <marker>
-                    <token inflected="yes" skip="6">haver<exception scope="next" postag="V.N.*|VA.*|V.[IS].*" postag_regexp="yes"/></token>
+                    <token inflected="yes" skip="6">haver<exception scope="next" postag="V.N.*|VA.*|V.[IS].*" postag_regexp="yes"/><exception postag="_perfet"/></token>
                     <!--<exception scope="next" postag="_GV_|_PUNCT_CONT|P.*|R.*|.*LOC_ADV.*|V.*|SENT_END|[NAS].*|CC|complement" postag_regexp="yes" negate_pos="yes"/> -->
                 </marker>
                 <token regexp="yes">de|d'</token>
@@ -8696,21 +8724,6 @@ Copyright (C) 2012 Jaume Ortolà i Font
         </pattern>
         <disambig action="filter" postag="[^N].*"/>
     </rule>
-    <rule id="nVerb0" name="no verb, si no hi ha pronom">
-        <antipattern>
-            <token postag_regexp="yes" postag="&pronom_feble;"><exception>el</exception></token>
-            <token postag="V.[IS].*" postag_regexp="yes"/>
-        </antipattern>
-        <pattern>
-            <marker>
-                <and>
-                    <token postag="V.*" postag_regexp="yes">projecte<exception postag="_GV_"/></token>
-                    <token postag="V.*" postag_regexp="yes" negate_pos="yes"/>
-                </and>
-            </marker>
-        </pattern>
-        <disambig action="remove" postag="V.*"/>
-    </rule>
     <rule id="infinitiu_nomverb_nom0" name="infinitiu + verb/nom + nom">
         <!-- Per a berenar menges pa-->
         <pattern>
@@ -8897,7 +8910,7 @@ Copyright (C) 2012 Jaume Ortolà i Font
                     <token postag="NC.*" postag_regexp="yes"><exception postag="_GN.*|A.*|PX.*|V.P.*|D.*|SPS.*" postag_regexp="yes"/></token>
                 </and>
             </marker>
-            <token postag="NC.*" postag_regexp="yes" regexp="yes">[\p{Ll}·]+<exception postag="N.*" postag_regexp="yes" negate_pos="yes"/><exception regexp="yes">\d.*|p|propietat|consort|mare|web|alfa|beta|gamma|lambda|font|hivernacle|euro|tipus|clau|membre|núm|número|matriu|estàndard|estrella|estrela|model|hoste|base</exception><exception inflected="yes" regexp="yes">&dies_setmana;</exception></token>
+            <token postag="NC.*" postag_regexp="yes" regexp="yes">[\p{Ll}·]+<exception postag="N.*" postag_regexp="yes" negate_pos="yes"/><exception regexp="yes">\d.*|p|propietat|consort|mare|web|alfa|beta|gamma|lambda|font|hivernacle|euro|tipus|clau|membre|núm|número|matriu|estàndard|estrella|estrela|model|hoste|base|nomes</exception><exception inflected="yes" regexp="yes">&dies_setmana;</exception></token>
         </pattern>
         <disambig action="filter" postag="V.*"/>
     </rule>
@@ -8911,7 +8924,7 @@ Copyright (C) 2012 Jaume Ortolà i Font
                     <token postag="NC.*|A.*|V.P.*" postag_regexp="yes"><exception postag="_GN.*|PX.*|D.*|SPS.*|VMIP1S0B" postag_regexp="yes"/></token>
                 </and>
             </marker>
-            <token postag="NC.*" postag_regexp="yes" regexp="yes">[\p{Ll}·]+<exception postag="N.*|SENT_END" postag_regexp="yes" negate_pos="yes"/><exception regexp="yes">propietat|consort|mare|web|alfa|beta|gamma|lambda|font|hivernacle|euro|tipus|clau|membre|núm|número|matriu|estàndard|estrella|estrela|model|hoste|base</exception></token>
+            <token postag="NC.*" postag_regexp="yes" regexp="yes">[\p{Ll}·]+<exception postag="N.*|SENT_END" postag_regexp="yes" negate_pos="yes"/><exception regexp="yes">propietat|consort|mare|web|alfa|beta|gamma|lambda|font|hivernacle|euro|tipus|clau|membre|núm|número|matriu|estàndard|estrella|estrela|model|hoste|base|nomes</exception></token>
         </pattern>
         <disambig action="filter" postag="V.*"/>
     </rule>
@@ -9521,6 +9534,16 @@ Copyright (C) 2012 Jaume Ortolà i Font
                 </marker>
             </pattern>
             <disambig action="filter" postag="P.*"/>
+        </rule>
+        <rule>
+            <pattern>
+                <token>cap</token>
+                <marker>
+                    <token postag="D.*" postag_regexp="yes" inflected="yes">altre</token>
+                </marker>
+                <token postag="[NA].*|PX.*|V.P.*" postag_regexp="yes"/>
+            </pattern>
+            <disambig action="filter" postag="D.*"/>
         </rule>
     </rulegroup>
     <rule id="es_queda" name="es queda (verb)">
@@ -10565,7 +10588,7 @@ Copyright (C) 2012 Jaume Ortolà i Font
             </unify>
             <marker>
                 <and>
-                    <token postag="NC.*" postag_regexp="yes"/>
+                    <token postag="NC.*" postag_regexp="yes"><exception>dubte</exception></token>
                     <token postag="V.[MSI].*" postag_regexp="yes"/>
                 </and>
             </marker>
@@ -13057,6 +13080,10 @@ Copyright (C) 2012 Jaume Ortolà i Font
             <token>l'</token>
             <token>ho</token>
         </antipattern>
+        <antipattern>
+            <token>s'</token>
+            <token><exception postag="V...3..." postag_regexp="yes"/></token>
+        </antipattern>
         <rule>
             <pattern>
                 <marker>
@@ -13495,7 +13522,7 @@ Copyright (C) 2012 Jaume Ortolà i Font
             <token postag="V.[ISM].*" postag_regexp="yes"/>
         </antipattern>
         <pattern>
-            <token postag="V.[MSI].*|_GV_" postag_regexp="yes"><exception postag="PP.*|P0.*|N.*" postag_regexp="yes"/></token>
+            <token postag="V.[MSI].*|_GV_" postag_regexp="yes"><exception postag="PP.*|P0.*|N.*" postag_regexp="yes"/><exception inflected="yes">haver</exception></token>
             <marker>
                 <and>
                     <token postag="A.*|V.P.*" postag_regexp="yes"><exception postag="_GN.*" postag_regexp="yes"/></token>
@@ -14115,7 +14142,7 @@ Copyright (C) 2012 Jaume Ortolà i Font
     <!-- verb + adj/verb  Havien estat ocultes. Mogut per: cap historiador reputat accepta aquesta teoria -->
     <rule id="verb_nom2" name="verb + adjectiu">
         <pattern>
-            <token postag="V.*" postag_regexp="yes"><exception postag="N.*|_GN.*" postag_regexp="yes"/></token>
+            <token postag="V.*" postag_regexp="yes"><exception postag="N.*|_GN.*" postag_regexp="yes"/><exception inflected="yes">haver</exception></token>
             <!-- les persones som consumidores -->
             <marker>
                 <and>
@@ -14785,7 +14812,7 @@ Copyright (C) 2012 Jaume Ortolà i Font
                 <feature id="nombre"/>
                 <feature id="genere"/>
                 <token postag="V.P.*|A.*" postag_regexp="yes"><exception postag="_GN_.*|_GV_" postag_regexp="yes"/></token>
-                <token postag="V.P.*|A.*" postag_regexp="yes"><exception postag="_GN_.*|_GV_" postag_regexp="yes"/></token>
+                <token postag="V.P.*|A.*" postag_regexp="yes"><exception postag="_GN_.*|_GV_|AQ0CN0" postag_regexp="yes"/></token>
             </unify>
         </pattern>
         <disambig action="unify"/>
@@ -14863,7 +14890,7 @@ Copyright (C) 2012 Jaume Ortolà i Font
             <pattern>
                 <token>,</token>
                 <marker>
-                    <token postag="I"><exception postag="_GN.*|DA.*|A.*" postag_regexp="yes"/></token>
+                    <token postag="I"><exception postag="_GN.*|DA.*|A.*|VA.*" postag_regexp="yes"/></token>
                 </marker>
                 <token postag="N.*" postag_regexp="yes"/>
             </pattern>
@@ -16087,7 +16114,7 @@ Copyright (C) 2012 Jaume Ortolà i Font
         </rule>
         <rule>
             <pattern>
-                <token regexp="yes" inflected="yes">corresponent|invers|dret|referent|proper|pròxim|previ|oposar|contrari|igual|similar|semblant|anàleg|idèntic|equivalent|equiparable|alternatiu|superior|inferior|paral·lel|anterior|posterior</token>
+                <token regexp="yes" inflected="yes">corresponent|invers|dret|referent|proper|pròxim|previ|oposar|contrari|igual|similar|semblant|anàleg|idèntic|equivalent|equiparable|alternatiu|superior|inferior|paral·lel|anterior|posterior|parèixer</token>
                 <marker>
                     <token>a</token>
                 </marker>
@@ -17330,9 +17357,36 @@ Copyright (C) 2012 Jaume Ortolà i Font
                 <marker>
                     <token inflected="yes">es</token>
                 </marker>
+                <token postag="V.[SI].3S.." postag_regexp="yes" inflected="yes">caure</token>
+                <token regexp="yes">a|en</token>
+                <token regexp="yes">trossos|terra|pedaços</token>
+            </pattern>
+            <disambig action="add">
+                <wd pos="_es_personal_sg"/>
+            </disambig>
+        </rule>
+        <rule>
+            <pattern>
+                <marker>
+                    <token inflected="yes">es</token>
+                </marker>
                 <token postag="VA[SI].3S.." postag_regexp="yes"/>
                 <token inflected="yes">caure</token>
                 <token postag="[ND].*" postag_regexp="yes"/>
+            </pattern>
+            <disambig action="add">
+                <wd pos="_es_personal_sg"/>
+            </disambig>
+        </rule>
+        <rule>
+            <pattern>
+                <marker>
+                    <token inflected="yes">es</token>
+                </marker>
+                <token postag="VA[SI].3S.." postag_regexp="yes"/>
+                <token inflected="yes">caure</token>
+                <token regexp="yes">a|en</token>
+                <token regexp="yes">trossos|terra|pedaços</token>
             </pattern>
             <disambig action="add">
                 <wd pos="_es_personal_sg"/>

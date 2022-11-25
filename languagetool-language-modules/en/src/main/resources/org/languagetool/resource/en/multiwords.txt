@@ -258,7 +258,6 @@ Rio Rancho	NNP
 Casas Adobes	NNP
 Lake Havasu	NNP
 Oro Valley	NNP
-Eau Claire	NNP
 West Allis	NNP
 Menomonee Falls	NNP
 Mililani Town	NNP
@@ -3172,7 +3171,6 @@ Monty Python	NNP
 Moody's	NNP
 Moody’s	NNP
 Moon Jae-in	NNP
-Morgan Freeman	NNP
 Morgan Stanley	NNP
 Mortal Kombat	NNP
 mot juste	NN
@@ -6071,3 +6069,62 @@ Bill Bowerman	NNP
 Lenovo ThinkStation	NNP
 Richard von Weizsäcker	NNP
 von Weizsäcker	NNP
+Niclas Füllkrug	NNP
+Justin Verlander	NNP
+Youssoufa Moukoko	NNP
+Mario Götze	NNP
+Changpeng Zhao	NNP
+Karim Adeyemi	NNP
+VMware ESXi	NNP
+Niklas Süle	NNP
+Patrick Esume	NNP
+Joko Widodo	NNP
+Anies Baswedan	NNP
+Mahathir Mohamad	NNP
+Ismail Sabri Yaakob	NNP
+Sabri Yaakob	NNP
+Pete Davidson	NNP
+Paw Patrol	NNP
+PAW Patrol	NNP
+Sundance Film Festival	NNP
+San Andrés	NNP
+Fools Garden	NNP
+San Marcos	NNP
+Robinson Crusoe	NNP
+Universal Records	NNP
+Toronto Blue Jays	NNP
+GP Bullhound	NNP
+Ivan Toney	NNP
+Cadillac Escalade	NNP
+Jeremy Fragrance	NNP
+Telefónica Germany	NNP
+Prosciutto di Parma	NNP
+Stormy Daniels	NNP
+Antonio Rüdiger	NNP
+John Stumpf	NNP
+Jared Kushner	NNP
+Freddie Mac	NNP
+Jung Kook	NNP
+Kia Sportage	NNP
+Enner Valencia	NNP
+Diomede Islands	NNPS
+Big Diomede	NNP
+Little Diomede	NNP
+vox populi vox Dei	UH
+vox populi, vox Dei	UH
+Sporting de Braga	NNP
+S.C. Braga	NNP
+SC Braga	NNP
+Sporting Cristal	NNP
+Mick Wallace	NNP
+Steve Bannon	NNP
+Alex Jones	NNP
+Bukayo Saka	NNP
+Marcus Rashford	NNP
+Mechanical Turk	NNP
+Bob Iger	NNP
+Timothy Weah	NNP
+Guido Crosetto	NNP
+World Wide Web Consortium	NNP
+Stable Diffusion	NNP
+Dani Olmo	NNP

@@ -1,3 +1,8 @@
+estot=és tot|espot|estat
+rebutj=rebuig|rebut
+vex=veig
+patín=patint
+dispòs=dispost
 lleg=lleig|llei|llarg|llet
 colpeig=colpejament
 agrad=grat|agrada|agradi

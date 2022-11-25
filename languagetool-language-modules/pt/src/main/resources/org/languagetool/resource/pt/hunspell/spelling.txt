@@ -36,6 +36,8 @@
 #  - ROMAN NUMERALS
 #
 #
+anito
+anitos
 autocrítico
 autocríticos
 cientologia
@@ -11182,6 +11184,7 @@ bot
 bots
 BSD
 build
+builds
 CD-ROMs
 Celeron
 CentOS

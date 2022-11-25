@@ -33,7 +33,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.StringWriter;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
@@ -52,9 +54,9 @@ public class ArtificialErrorEval {
   static String[] fakeRuleIDs = new String[2];
   //TP: true positive with the expected suggestion
   //TPns: true positive with no suggestion
-  static List<String> classifyTypes = Arrays.asList("TP", "FP", "TN", "FN", "TPns");
-  static int[][] results = new int[2][5]; // word0/word1 ; TP/FP/TN/FN/TP with no suggestion
-  static int[] accumulateResults = new int[5]; // totalErrors/TP/FP/TN/FN
+  static List<String> classifyTypes = Arrays.asList("TP", "FP", "TN", "FN", "TPns", "TPws");
+  static int[][] results = new int[2][6]; // word0/word1 ; TP/FP/TN/FN/TP with no suggestion/TP wrong suggestion
+  static int[] accumulateResults = new int[6]; // totalErrors/TP/FP/TN/FN
   static RemoteLanguageTool lt;
   static JLanguageTool localLt;
   static Synthesizer synth;
@@ -73,6 +75,7 @@ public class ArtificialErrorEval {
   static int checkedSentences = 0;
   static int maxCheckedSentences = 1000000; // decrease this number for testing
   static List<String> onlyRules = new ArrayList<String>();
+  static List<String> disabledRules = new ArrayList<String>();
   static String summaryOutputFilename = "";
   static String verboseOutputFilename = "";
   static String errorCategory = "";
@@ -91,7 +94,7 @@ public class ArtificialErrorEval {
       String configurationFilename = args[0];
       Properties prop = new Properties();
       FileInputStream fis = new FileInputStream(configurationFilename);
-      prop.load(fis);
+      prop.load(new InputStreamReader(fis, Charset.forName("UTF-8")));
       String maxInputSentencesStr = prop.getProperty("maxInputSentences");
       String maxCheckedSentencesStr = prop.getProperty("maxCheckedSentences");
       if (maxInputSentencesStr != null) {
@@ -103,6 +106,14 @@ public class ArtificialErrorEval {
       boolean printSummaryDetails = Boolean.parseBoolean(prop.getProperty("printSummaryDetails", "true"));
       boolean printHeader = Boolean.parseBoolean(prop.getProperty("printHeader", "true"));
       remoteServer = prop.getProperty("remoteServer", "http://localhost:8081");
+      String disabledRulesStr = prop.getProperty("disabledRules", "");
+      if (!disabledRulesStr.isEmpty()) {
+        disabledRules = Arrays.asList(disabledRulesStr.split(","));  
+      }
+      String onlyRulesStr = prop.getProperty("onlyRules", ""); 
+      if (!onlyRulesStr.isEmpty()) {
+        onlyRules = Arrays.asList(onlyRulesStr.split(","));  
+      }
       // Only one file
       String analyzeOneFile = prop.getProperty("analyzeOneFile");
       if (analyzeOneFile.equalsIgnoreCase("true")) {
@@ -153,6 +164,7 @@ public class ArtificialErrorEval {
     if (fileName.startsWith("parallelcorpus") || fileName.startsWith("pc-")) {
       isParallelCorpus = true;
       unidirectional = true;
+      wholeword = false;
       String parts[] = fileName.split("-");
       if (parts.length > 2) {
         columnCorrect = Integer.parseInt(parts[1]);
@@ -279,6 +291,7 @@ public class ArtificialErrorEval {
   }
   
   private static void run(boolean printSummaryDetails) throws IOException {
+    int ignoredLines = 0;
     Arrays.fill(results[0], 0);
     Arrays.fill(results[1], 0);
     fakeRuleIDs[0] = "rules_" + words[0] + "->" + words[1]; // rules in one direction
@@ -362,9 +375,9 @@ public class ArtificialErrorEval {
         String incorrectSource = parts[columnIncorrect - 1];
         words[0] = null;
         words[1] = null;
-        String correctSentence = "";
+        /*String correctSentence = "";
         String incorrectSentence = "";
-        Matcher mIncorrect = p.matcher(incorrectSource);
+        /*Matcher mIncorrect = p.matcher(incorrectSource);
         if (mIncorrect.matches()) {
           words[0] = mIncorrect.group(2);
         }
@@ -374,7 +387,18 @@ public class ArtificialErrorEval {
           words[1] = mCorrect.group(2);
           correctSentence = mCorrect.group(1) + mCorrect.group(2) + mCorrect.group(3);
           posError = mCorrect.group(1).length();
+        }*/
+        String correctSentence = correctSource.replaceAll("__", "");
+        String incorrectSentence = incorrectSource.replaceAll("__", "");
+        if (correctSentence.equals(incorrectSentence)) {
+          printSentenceOutput("IGNORED LINE: sentences are identical!", correctSource, 0, "");
+          ignoredLines++;
+          continue;
         }
+        List<String> diffs = differences(correctSentence, incorrectSentence);
+        int posError = diffs.get(0).length();
+        words[1] = diffs.get(1);
+        words[0] = diffs.get(2);
         if (words[1] != null) {
           // words[0] may be null!
           // check FN
@@ -475,22 +499,24 @@ public class ArtificialErrorEval {
       float precision = results[i][classifyTypes.indexOf("TP")]
           / (float) (results[i][classifyTypes.indexOf("TP")] + results[i][classifyTypes.indexOf("FP")]);
       float recall = results[i][classifyTypes.indexOf("TP")]
-          / (float) (results[i][classifyTypes.indexOf("TP")] + results[i][classifyTypes.indexOf("FN")] + results[i][classifyTypes.indexOf("TPns")]);
+          / (float) (results[i][classifyTypes.indexOf("TP")] + results[i][classifyTypes.indexOf("FN")] 
+              + results[i][classifyTypes.indexOf("TPns")] + results[i][classifyTypes.indexOf("TPws")]);
       // recall including empty suggestions
       float recall2 = (results[i][classifyTypes.indexOf("TP")] + results[i][classifyTypes.indexOf("TPns")])
           / (float) (results[i][classifyTypes.indexOf("TP")] + results[i][classifyTypes.indexOf("FN")]
-              + results[i][classifyTypes.indexOf("TPns")]);
+              + results[i][classifyTypes.indexOf("TPns")] + results[i][classifyTypes.indexOf("TPws")]);
       //float expectedSuggestionPercentage = (float) results[i][classifyTypes.indexOf("TPs")]
       //    / results[i][classifyTypes.indexOf("TP")];
       int errorsTotal = results[i][classifyTypes.indexOf("TP")] + results[i][classifyTypes.indexOf("FP")]
-          + results[i][classifyTypes.indexOf("TN")] + results[i][classifyTypes.indexOf("FN")] + results[i][classifyTypes.indexOf("TPns")];
+          + results[i][classifyTypes.indexOf("TN")] + results[i][classifyTypes.indexOf("FN")] + results[i][classifyTypes.indexOf("TPns")]
+          + results[i][classifyTypes.indexOf("TPws")];
       StringWriter resultsString = new StringWriter();
 
       resultsString.append("-------------------------------------\n");
       resultsString.append("Results for " + fakeRuleIDs[i] + "\n");
       
       int nCorrectSentences =  results[i][1] + results[i][2] ; // FP + TN
-      int nIncorrectSentences =  results[i][0] + results[i][4] + results[i][3]; // TP + TPns + FN  
+      int nIncorrectSentences =  results[i][0] + results[i][4] + results[i][5] + results[i][3]; // TP + TPns + TPws + FN  
       
       resultsString.append("Total sentences: " + String.valueOf(errorsTotal) + "\n");
       resultsString.append(formattedAbsoluteAndPercentage("\nCorrect sentences", nCorrectSentences, nCorrectSentences + nIncorrectSentences));
@@ -498,14 +524,19 @@ public class ArtificialErrorEval {
       resultsString.append(formattedAbsoluteAndPercentage("TN", results[i][2], nCorrectSentences));
       
       resultsString.append(formattedAbsoluteAndPercentage("\nIncorrect sentences", nIncorrectSentences, nCorrectSentences + nIncorrectSentences));
-      resultsString.append(formattedAbsoluteAndPercentage("TP (total)", results[i][4] + results[i][0], nIncorrectSentences));
+      resultsString.append(formattedAbsoluteAndPercentage("TP (total)", results[i][4] + results[i][5] + results[i][0], nIncorrectSentences));
       resultsString.append(formattedAbsoluteAndPercentage(" TP (expected suggestion)", results[i][0], nIncorrectSentences));
       resultsString.append(formattedAbsoluteAndPercentage(" TPns (no suggestion)", results[i][4], nIncorrectSentences));
+      resultsString.append(formattedAbsoluteAndPercentage(" TPws (wrong suggestion)", results[i][5], nIncorrectSentences));
       resultsString.append(formattedAbsoluteAndPercentage("FN", results[i][3], nIncorrectSentences));
 
       resultsString.append("\nPrecision: " + String.format(Locale.ROOT, "%.4f", precision) + "\n");
       resultsString.append("Recall: " + String.format(Locale.ROOT, "%.4f", recall) + "\n");
       resultsString.append("Recall (including empty suggestions): " + String.format(Locale.ROOT, "%.4f", recall2) + "\n");
+      
+      if (ignoredLines > 0) {
+        resultsString.append("\nIgnored lines from source: " + ignoredLines + "\n");
+      }
       
       resultsString.append(printTimeFromStart(start));
       appendToFile(verboseOutputFilename, resultsString.toString());
@@ -567,13 +598,20 @@ public class ArtificialErrorEval {
       if (cachedMatches.containsKey(correctSentence)) {
         matchesCorrect = cachedMatches.get(correctSentence);
       } else {
-        matchesCorrect = lt.check(correctSentence, config).getMatches();
+        try {
+          matchesCorrect = lt.check(correctSentence, config).getMatches();
+        } catch (RuntimeException e) {
+          e.printStackTrace();
+          wait(1000);
+          matchesCorrect = lt.check(correctSentence, config).getMatches();
+        }
         checkedSentences++;
         cachedMatches.put(correctSentence, matchesCorrect);
       }
       String replaceWith = words[1 - j];
       String originalString = correctSentence.substring(fromPos, fromPos + words[j].length());
-      if (StringTools.isCapitalizedWord(originalString) && replaceWith != null) {
+      //capitalization change only makes sense with full words
+      if (wholeword && StringTools.isCapitalizedWord(originalString) && replaceWith != null) {
         replaceWith = StringTools.uppercaseFirstChar(replaceWith);
       }
       List<String> ruleIDs = ruleIDsAtPos(matchesCorrect, fromPos, replaceWith);
@@ -590,11 +628,9 @@ public class ArtificialErrorEval {
     if ( (!unidirectional || j == 1) && words[1 - j] != null) {
       String replaceWith = words[1 - j];
       String originalString = correctSentence.substring(fromPos, fromPos + words[j].length());
-      if (StringTools.isCapitalizedWord(originalString)) {
-        replaceWith = StringTools.uppercaseFirstChar(replaceWith);
-      }
-      if (StringTools.isAllUppercase(originalString)) {
-        replaceWith = replaceWith.toUpperCase();
+      // capitalization change only makes sense with full words
+      if (wholeword) {
+        replaceWith = StringTools.preserveCase(replaceWith, originalString);  
       }
       String wrongSentence = correctSentence.substring(0, fromPos) + replaceWith
           + correctSentence.substring(fromPos + words[j].length(), correctSentence.length());
@@ -607,7 +643,13 @@ public class ArtificialErrorEval {
       if (cachedMatches.containsKey(wrongSentence)) {
         matchesWrong = cachedMatches.get(wrongSentence);
       } else {
-        matchesWrong = lt.check(wrongSentence, config).getMatches();
+        try {
+          matchesWrong = lt.check(wrongSentence, config).getMatches();
+        } catch (RuntimeException e) {
+          e.printStackTrace();
+          wait(1000);
+          matchesWrong = lt.check(wrongSentence, config).getMatches();
+        }
         checkedSentences++;
         cachedMatches.put(wrongSentence, matchesWrong);
       }
@@ -621,8 +663,8 @@ public class ArtificialErrorEval {
           results[1 - j][classifyTypes.indexOf("TPns")]++;
           printSentenceOutput("TPns", wrongSentence, 1 - j, String.join(",", ruleIDs));
         } else {
-          results[1 - j][classifyTypes.indexOf("FN")]++;
-          printSentenceOutput("FN", wrongSentence, 1 - j, "");
+          results[1 - j][classifyTypes.indexOf("TPws")]++;
+          printSentenceOutput("TPws", wrongSentence, 1 - j, String.join(",", ruleIDs));
         }
       } else {
         results[1 - j][classifyTypes.indexOf("FN")]++;
@@ -653,7 +695,9 @@ public class ArtificialErrorEval {
     List<String> ruleIDs = new ArrayList<>();
     for (RemoteRuleMatch match : matchesCorrect) {
       if (match.getErrorOffset() <= pos && match.getErrorOffset() + match.getErrorLength() >= pos) {
-        
+        if (disabledRules.contains(match.getRuleId())) {
+          continue;
+        }
         if (!onlyRules.isEmpty() && !onlyRules.contains(match.getRuleId())) {
           continue;
         }
@@ -708,5 +752,51 @@ public class ArtificialErrorEval {
         + " <language code> <input file>");
     System.out.println("Usage 2: " + ArtificialErrorEval.class.getSimpleName()
         + " <configuration file>");
+  }
+  
+  private static List<String> differences(String s1, String s2) {
+    List<String> results = new ArrayList<>();
+    if (s1.equals(s2)) {
+      results.add(s1);
+      results.add("");
+      results.add("");
+      results.add("");
+      return results;
+    }
+    int fromStart = 0;
+    while (s1.charAt(fromStart) == s2.charAt(fromStart)) {
+      fromStart++;
+    }
+    int l1 = s1.length();
+    int l2 = s2.length();
+    int fromEnd = 0;
+    while (s1.charAt(l1 - 1 - fromEnd) == s2.charAt(l2 - 1 - fromEnd)) {
+      fromEnd++;
+    }
+    // corrections (e.g. stress vs stresses)
+    while (fromStart > l1 - fromEnd) {
+      fromEnd--;
+    }
+    while (fromStart > l2 - fromEnd) {
+      fromEnd--;
+    }
+    // common string at start
+    results.add(s1.substring(0, fromStart));
+    // diff in sentence 1
+    results.add(s1.substring(fromStart, l1 - fromEnd));
+    // diff in sentence 2
+    results.add(s2.substring(fromStart, l2 - fromEnd));
+    // common string at end
+    results.add(s1.substring(l1 - fromEnd, l1));
+    return results;
+    
+  }
+  
+  public static void wait(int ms) {
+    try {
+      Thread.sleep(ms);
+    } catch (InterruptedException ex) {
+      Thread.currentThread().interrupt();
+    }
   }
 }

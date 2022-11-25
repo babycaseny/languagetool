@@ -442,7 +442,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token regexp="yes">Primavera|Verano|Otoño|Invierno<exception postag="NP.*" postag_regexp="yes"/></token>
                 </marker>
             </pattern>
-            <message>Las estaciones del año se escriben en minúsculas, excepto si forman parte de un nombre propio</message>
+            <message>Las estaciones del año se escriben en minúsculas, excepto si forman parte de un nombre propio.</message>
             <suggestion><match case_conversion="alllower" no="1"/></suggestion>
             <url>http://www.rae.es/consultas/mayuscula-o-minuscula-en-los-meses-los-dias-de-la-semana-y-las-estaciones-del-ano</url>
             <example correction="verano" type="incorrect">Este <marker>Verano</marker> me voy de vacaciones.</example>
@@ -988,7 +988,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                         <token regexp="yes">estás|estas|está|esta|estáis|estais|estan|están</token>
                     </marker>
                 </pattern>
-                <message>Error de ortografía</message>
+                <message>Error de ortografía.</message>
                 <suggestion>Hola, ¿<match no="3" regexp_match="(?iu)c[oó]mo" regexp_replace="cómo" case_conversion="preserve"/> <match no="4" regexp_match="(?iu)est[aá](i?s?n?)" regexp_replace="está$1" case_conversion="alllower"/>?</suggestion>
                 <example correction="Hola, ¿cómo estás?"><marker>ola como estas</marker></example>
                 <example correction="Hola, ¿cómo estás?"><marker>hola como estas</marker></example>
@@ -1288,7 +1288,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token>de</token>
                     <token regexp="yes">caramelo|nieve|turrón</token>
                 </pattern>
-                <message>Esta locución se escribe separada</message>
+                <message>Esta locución se escribe separada.</message>
                 <suggestion>a punto</suggestion>
                 <example correction="a punto">Lo tengo <marker>apunto</marker> de caramelo.</example>
             </rule>
@@ -1299,7 +1299,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                         <token>apunto</token>
                     </marker>
                 </pattern>
-                <message>Esta locución se escribe separada</message>
+                <message>Esta locución se escribe separada.</message>
                 <suggestion>a punto</suggestion>
                 <example correction="a punto">Quiero ponerlo <marker>apunto</marker>.</example>
                 <example correction="a punto">Aún no estaba <marker>apunto</marker>.</example>
@@ -1351,7 +1351,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <token min="0">,</token>
                 <token>que</token>
             </pattern>
-            <message>Expresión incorrecta</message>
+            <message>Expresión incorrecta.</message>
             <suggestion>tanto es así que</suggestion>
             <suggestion>tan es así que</suggestion>
             <url>http://www.fundeu.es/recomendacion/tan-es-asi-y-no-tal-es-asi/</url>
@@ -1373,7 +1373,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <token>alta</token>
                 <token>cargo</token>
             </pattern>
-            <message>Expresión incorrecta</message>
+            <message>Expresión incorrecta.</message>
             <suggestion>alto cargo</suggestion>
             <url>https://www.fundeu.es/recomendacion/la-alto-cargo-femenino-de-el-alto-cargo/</url>
             <example correction="alto cargo">La <marker>alta cargo</marker> del gobierno.</example>
@@ -6367,7 +6367,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </rule>
             <rule>
                 <pattern>
-                    <token postag="SENT_START" skip="-1"><exception scope="next" postag="V.[IM].*|P[TR].*|CS|LOC_CS" postag_regexp="yes"/></token>
+                    <token postag="SENT_START" skip="-1"><exception scope="next" postag="V.[IM].*|P[TR].*|CS|LOC_CS|D[TE].*" postag_regexp="yes"/></token>
                     <marker>
                         <token postag="V.S.*" postag_regexp="yes"><exception postag="V.[IM].*|[NA].*|_possible_NP|R.*|LOC_.*|D.*|SENT_END" postag_regexp="yes"/><exception postag="V.SI.*" postag_regexp="yes" inflected="yes" regexp="yes">querer|haber|poder|deber|parecer</exception><exception regexp="yes">haya|uno|unas?</exception><exception regexp="yes">\p{Lu}+</exception></token>
                     </marker>
@@ -6476,6 +6476,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example>ROAS (Retorno de la inversión).</example>
                 <example>23,19% impresiones respecto al mes pasado.</example>
                 <example>- Ganes o pierdas, ¡te encantará!</example>
+                <example>Sin importar cuánto lo piense no comprendo cómo ella obtuvo esa información secreta.</example>
             </rule>
         </rulegroup>
         <rulegroup id="SUBJUNTIVO_FUTURO" name="confusión cantara/cantará">
@@ -7878,7 +7879,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     </marker>
                     <token regexp="yes">v[áa]lid[ao]s?</token>
                 </pattern>
-                <message>Si es del v. 'ser', se escribe con tilde</message>
+                <message>Si es del v. 'ser', se escribe con tilde.</message>
                 <suggestion>sería</suggestion>
                 <example correction="sería">Esta razón <marker>seria</marker> valida.</example>
             </rule>
@@ -7906,7 +7907,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     </marker>
                     <token postag="A.*|V.P.*|D.*|RG" postag_regexp="yes"/>
                 </pattern>
-                <message>Si es del v. 'ser', se escribe con tilde</message>
+                <message>Si es del v. 'ser', se escribe con tilde.</message>
                 <suggestion>sería</suggestion>
                 <example correction="sería">Esta observación <marker>seria</marker> correcta.</example>
                 <example correction="sería">Una sola persona <marker>seria</marker> mejor.</example>
@@ -7928,7 +7929,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     </marker>
                     <token postag="V.N.*" postag_regexp="yes"/>
                 </pattern>
-                <message>Si es del v. 'ser', se escribe con tilde</message>
+                <message>Si es del v. 'ser', se escribe con tilde.</message>
                 <suggestion>sería</suggestion>
                 <example correction="sería">Una opción muy interesante <marker>seria</marker> ver qué pasa con esto.</example>
             </rule>
@@ -7939,7 +7940,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     </marker>
                     <token regexp="yes">de|del</token>
                 </pattern>
-                <message>Si es del v. 'ser', se escribe con tilde</message>
+                <message>Si es del v. 'ser', se escribe con tilde.</message>
                 <suggestion>sería</suggestion>
                 <example correction="sería">Debido al gran interes de este tema <marker>seria</marker> de gran utilidad.</example>
                 <example>Una evaluación seria de todo el proceso.</example>
@@ -7951,7 +7952,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     </marker>
                     <token>en</token>
                 </pattern>
-                <message>Si es del v. 'ser', se escribe con tilde</message>
+                <message>Si es del v. 'ser', se escribe con tilde.</message>
                 <suggestion>sería</suggestion>
                 <example correction="sería">El próximo pago <marker>seria</marker> en agosto.</example>
             </rule>
@@ -10768,22 +10769,44 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example correction="más" type="triggers_error" reason="archaic or formal">Me gusta, <marker>mas</marker> no lo quiero.</example>
             </rule>
         </rulegroup>
-        <rulegroup id="AUN" name="aún/aun">
+        <rulegroup id="AUN" name="aún -> aun">
+            <antipattern>
+                <token regexp="yes">más|menos|mejor|peor|mayor|menor</token>
+                <token min="0" postag="A.*|V.P.*|N.*|RG" postag_regexp="yes"/>
+                <token>aún</token>
+            </antipattern>
+            <antipattern>
+                <marker>
+                    <token>aún</token>
+                </marker>
+                <token regexp="yes">más|menos|mejor|peor|mayor|menor</token>
+            </antipattern>
+            <antipattern>
+                <marker>
+                    <token>aún</token>
+                </marker>
+                <!-- error esta/está -->
+                <token>esta<exception postag="_GN_FS"/></token>
+            </antipattern>
+            <antipattern>
+                <token>aún</token>
+                <token>a</token>
+                <token>medio</token>
+                <token postag="V.N.*" postag_regexp="yes"/>
+            </antipattern>
             <rule>
                 <antipattern>
                     <token inflected="yes" regexp="yes">seguir|continuar</token>
                     <token>aún</token>
                 </antipattern>
                 <pattern>
-                    <marker>
-                        <token>aún</token>
-                    </marker>
-                    <token>así</token>
+                    <token>aún</token>
+                    <token regexp="yes">así|asi</token>
                 </pattern>
                 <message>El conector "aun así" ('pese a eso') se escribe sin tilde. "Aún así", con tilde, significa 'todavía así'.</message>
-                <suggestion>aun</suggestion>
+                <suggestion>aun así</suggestion>
                 <url>http://www.fundeu.es/recomendacion/aun-asi-y-aun-asi-no-son-lo-mismo-1130/</url>
-                <example correction="Aun"><marker>Aún</marker> así, lo consiguieron.</example>
+                <example correction="Aun así"><marker>Aún así</marker>, lo consiguieron.</example>
                 <example>Siguen aún así.</example>
             </rule>
             <rule>
@@ -10809,7 +10832,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     </marker>
                     <token regexp="yes">si|cuando</token>
                 </pattern>
-                <message>Solo se acentúan cuando equivale a "todavía".</message>
+                <message>Se escribe sin tilde cuando significa 'hasta, incluso' o 'siquiera'. Solo lleva tilde cuando equivale a 'todavía'.</message>
                 <suggestion>aun</suggestion>
                 <example correction="Aun"><marker>Aún</marker> si estas no tienen efecto.</example>
                 <example>Mejor aún si es así.</example>
@@ -10823,25 +10846,237 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                         <token>aún</token>
                     </marker>
                 </pattern>
-                <message>Solo se acentúan cuando equivale a "todavía".</message>
+                <message>Se escribe sin tilde cuando significa 'hasta, incluso' o 'siquiera'. Solo lleva tilde cuando equivale a 'todavía'.</message>
                 <suggestion>aun</suggestion>
                 <example correction="aun">ni <marker>aún</marker> la mitad</example>
             </rule>
-        </rulegroup>
-        <rulegroup id="AUN2" name="aun -> aún">
-            <antipattern>
-                <token>aun</token>
-                <token postag="V.G.*" postag_regexp="yes"/>
-            </antipattern>
+            <!-- new subrules -->
             <rule>
                 <pattern>
-                    <token regexp="yes">más|menos|mejor|peor</token>
+                    <marker>
+                        <token>aún</token>
+                    </marker>
+                    <token>sin</token>
+                    <token postag="V.N.*" postag_regexp="yes"><exception>denominar</exception></token>
+                </pattern>
+                <message>Se escribe sin tilde cuando significa 'hasta, incluso' o 'siquiera'. Solo lleva tilde cuando equivale a 'todavía'.</message>
+                <suggestion>aun</suggestion>
+                <example correction="Aun"><marker>Aún</marker> sin saberlo, se fue.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <marker>
+                        <token>aún</token>
+                    </marker>
+                    <token>a</token>
+                    <token regexp="yes">riesgo|costa</token>
+                </pattern>
+                <message>Se escribe sin tilde cuando significa 'hasta, incluso' o 'siquiera'. Solo lleva tilde cuando equivale a 'todavía'.</message>
+                <suggestion>aun</suggestion>
+                <example correction="Aun"><marker>Aún</marker> a riesgo de perder, lo intentó.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <marker>
+                        <token>aún</token>
+                    </marker>
+                    <token>al</token>
+                    <token>cabo</token>
+                </pattern>
+                <message>Se escribe sin tilde cuando significa 'hasta, incluso' o 'siquiera'. Solo lleva tilde cuando equivale a 'todavía'.</message>
+                <suggestion>aun</suggestion>
+                <example correction="Aun"><marker>Aún</marker> al cabo de los años, no se había cansado.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <marker>
+                        <token>aún</token>
+                    </marker>
+                    <token>antes</token>
+                    <token>de</token>
+                </pattern>
+                <message>Se escribe sin tilde cuando significa 'hasta, incluso' o 'siquiera'. Solo lleva tilde cuando equivale a 'todavía'.</message>
+                <suggestion>aun</suggestion>
+                <example correction="Aun"><marker>Aún</marker> antes de saberlo, ya lo temía.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token regexp="yes">y|ni|,</token>
+                    <marker>
+                        <token>aún</token>
+                    </marker>
+                    <token postag="D[^ET].*|PD0NS000|SP.*|LOC_PREP|N.*" postag_regexp="yes"><exception postag="V.[ISP].*|A.*" postag_regexp="yes"/></token>
+                </pattern>
+                <message>Se escribe sin tilde cuando significa 'hasta, incluso' o 'siquiera'. Solo lleva tilde cuando equivale a 'todavía'.</message>
+                <suggestion>aun</suggestion>
+                <example correction="aun">Y <marker>aún</marker> la mitad</example>
+                <example>El Albaicín es la otra Alhambra, aún desconocida.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token postag="SENT_START|N.*|C.*|_PUNCT.*" postag_regexp="yes"><exception postag="V.[ISP].*|A.*" postag_regexp="yes"/></token>
+                    <marker>
+                        <token>aún</token>
+                    </marker>
+                    <token postag="D[^ET].*|PD0NS000|SP.*|LOC_PREP|N.*" postag_regexp="yes"><exception postag="V.[ISP].*|A.*|P[P0].*" postag_regexp="yes"/><exception regexp="yes">en|por</exception></token>
+                </pattern>
+                <message>Se escribe sin tilde cuando significa 'hasta, incluso' o 'siquiera'. Solo lleva tilde cuando equivale a 'todavía'.</message>
+                <suggestion>aun</suggestion>
+                <example correction="Aun"><marker>Aún</marker> la mitad</example>
+                <example>Si aún los venden, quiero saber dónde.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token>y</token>
+                    <marker>
+                        <token>aún</token>
+                    </marker>
+                    <token regexp="yes">solo|ahora</token>
+                </pattern>
+                <message>Se escribe sin tilde cuando significa 'hasta, incluso' o 'siquiera'. Solo lleva tilde cuando equivale a 'todavía'.</message>
+                <suggestion>aun</suggestion>
+                <example correction="aun">Y <marker>aún</marker> solo cuando le interesaba.</example>
+            </rule>
+            <rule>
+                <antipattern>
+                    <token>aún</token>
+                    <token>dentro</token>
+                    <token regexp="yes">de|del</token>
+                    <token>plazo</token>
+                </antipattern>
+                <antipattern>
+                    <token regexp="yes" skip="2">no|tampoco</token>
+                    <token regexp="yes" inflected="yes">haber|existir</token>
+                    <token postag="N.*|_GN_.*" postag_regexp="yes" min="1" max="4"/>
+                    <token>aún</token>
+                </antipattern>
+                <pattern>
+                    <token postag="SENT_START|C.*|_PUNCT.*|N.*" postag_regexp="yes"/>
+                    <marker>
+                        <token>aún</token>
+                    </marker>
+                    <token regexp="yes">después|sin|entre|dentro|ante|entonces</token>
+                </pattern>
+                <message>Se escribe sin tilde cuando significa 'hasta, incluso' o 'siquiera'. Solo lleva tilde cuando equivale a 'todavía'.</message>
+                <suggestion>aun</suggestion>
+                <example correction="aun">Pero <marker>aún</marker> dentro de la ley.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token regexp="yes">\p{P}<exception>¿</exception></token>
+                    <marker>
+                        <token>aún</token>
+                    </marker>
+                    <token regexp="yes">con|en</token>
+                </pattern>
+                <message>Se escribe sin tilde cuando significa 'hasta, incluso' o 'siquiera'. Solo lleva tilde cuando equivale a 'todavía'.</message>
+                <suggestion>aun</suggestion>
+                <example correction="aun">, <marker>aún</marker> con otros intereses</example>
+                <example>¿Aún en la escula?</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token postag="SENT_START|_PUNCT_CONT|C.*" postag_regexp="yes"/>
+                    <marker>
+                        <token>aún</token>
+                    </marker>
+                    <token regexp="yes">con|en</token>
+                </pattern>
+                <message>Se escribe sin tilde cuando significa 'hasta, incluso' o 'siquiera'. Solo lleva tilde cuando equivale a 'todavía'.</message>
+                <suggestion>aun</suggestion>
+                <example correction="Aun"><marker>Aún</marker> con otros intereses.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <marker>
+                        <token>aún</token>
+                    </marker>
+                    <token>lo</token>
+                    <token regexp="yes">más|menos</token>
+                </pattern>
+                <message>Se escribe sin tilde cuando significa 'hasta, incluso' o 'siquiera'. Solo lleva tilde cuando equivale a 'todavía'.</message>
+                <suggestion>aun</suggestion>
+                <example correction="Aun"><marker>Aún</marker> lo más importante</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token postag="SENT_START"/>
+                    <marker>
+                        <token>aún</token>
+                    </marker>
+                    <token postag="A.*|V.P.*" postag_regexp="yes"/>
+                    <token>,</token>
+                </pattern>
+                <message>Se escribe sin tilde cuando significa 'hasta, incluso' o 'siquiera'. Solo lleva tilde cuando equivale a 'todavía'.</message>
+                <suggestion>aun</suggestion>
+                <example correction="Aun"><marker>Aún</marker> cansado, lo intentó.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token>¿</token>
+                    <marker>
+                        <token>aún</token>
+                    </marker>
+                    <token postag="A.*|V.P.*" postag_regexp="yes"/>
+                </pattern>
+                <message>Se escribe sin tilde cuando significa 'hasta, incluso' o 'siquiera'. Solo lleva tilde cuando equivale a 'todavía'.</message>
+                <suggestion>aun</suggestion>
+                <example correction="Aun">¿<marker>Aún</marker> muerto sigues pendiente de la política partidista?</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <marker>
+                        <token>aún</token>
+                    </marker>
+                    <token regexp="yes">si|cuando</token>
+                </pattern>
+                <message>Se escribe sin tilde cuando significa 'hasta, incluso' o 'siquiera'. Solo lleva tilde cuando equivale a 'todavía'.</message>
+                <suggestion>aun</suggestion>
+                <example correction="Aun"><marker>Aún</marker> cuando lo desearas.</example>
+            </rule>
+            <rule>
+                <antipattern>
+                    <token inflected="yes">estar</token>
+                    <token>aún</token>
+                </antipattern>
+                <pattern>
+                    <marker>
+                        <token>aún<exception scope="previous" regexp="yes">más|menos</exception><exception scope="previous" postag_regexp="yes" postag="V.N.*"/></token>
+                    </marker>
+                    <token postag="V.G.*" postag_regexp="yes"/>
+                </pattern>
+                <message>Se escribe sin tilde cuando significa 'hasta, incluso' o 'siquiera'. Solo lleva tilde cuando equivale a 'todavía'.</message>
+                <suggestion>aun</suggestion>
+                <example correction="Aun"><marker>Aún</marker> siendo cierto.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <marker>
+                        <token>aún<exception scope="previous" regexp="yes">más|menos</exception><exception scope="previous" postag_regexp="yes" postag="V.N.*"/></token>
+                    </marker>
+                    <token>no</token>
+                    <token postag="V.G.*" postag_regexp="yes"/>
+                </pattern>
+                <message>Se escribe sin tilde cuando significa 'hasta, incluso' o 'siquiera'. Solo lleva tilde cuando equivale a 'todavía'.</message>
+                <suggestion>aun</suggestion>
+                <example correction="Aun"><marker>Aún</marker> no siendo cierto.</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="AUN2" name="aun -> aún">
+            <rule>
+                <pattern>
+                    <token regexp="yes">más|menos|mejor|peor|mayor|menor</token>
+                    <token min="0" postag="A.*|V.P.*|N.*|RG" postag_regexp="yes"/>
                     <marker>
                         <token>aun</token>
                     </marker>
+                    <!-- exception: V.G.*?  -->
                 </pattern>
-                <message>Se acentúan si equivale a "todavía".</message>
+                <message>Se escribe con tilde si equivale a 'todavía'.</message>
                 <suggestion>aún</suggestion>
+                <example correction="aún">Menos <marker>aun</marker> que no sean mayores.</example>
+                <example correction="aún">Fritarán más fuerte <marker>aun</marker> aclamando al gato.</example>
+                <example correction="aún">Menos <marker>aun</marker> si, como tuve ocasión de comprobar, no era cierto.</example>
                 <example correction="aún">Más <marker>aun</marker> si estas no tienen efecto.</example>
             </rule>
             <rule>
@@ -10849,56 +11084,190 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <marker>
                         <token>aun</token>
                     </marker>
+                    <token regexp="yes">más|menos|mejor|peor|mayor|menor</token>
+                </pattern>
+                <message>Se escribe con tilde si equivale a 'todavía'.</message>
+                <suggestion>aún</suggestion>
+                <example correction="aún">Para que la semejanza sea <marker>aun</marker> mayor.</example>
+            </rule>
+            <rule>
+                <antipattern>
+                    <token>aun</token>
+                    <token>después</token>
+                    <token>de</token>
+                    <token regexp="yes">muertos?|muertas?|morir|morirse</token>
+                </antipattern>
+                <antipattern>
+                    <token>aun</token>
+                    <token>sin</token>
+                    <token postag="V.N.*" postag_regexp="yes"/>
+                </antipattern>
+                <antipattern>
+                    <token>aun</token>
+                    <token>a</token>
+                    <token regexp="yes">riesgo|costa|sabiendas</token>
+                </antipattern>
+                <antipattern>
+                    <token>aun</token>
+                    <token>al</token>
+                    <token>cabo</token>
+                </antipattern>
+                <antipattern>
+                    <token>aun</token>
+                    <token>antes</token>
+                    <token>de</token>
+                </antipattern>
+                <antipattern>
+                    <token regexp="yes">y|ni|,</token>
+                    <token>aun</token>
+                    <token postag="D.*|PD0NS000|SP.*|LOC_PREP|N.*" postag_regexp="yes"/>
+                </antipattern>
+                <antipattern>
+                    <token postag="SENT_START|N.*|C.*|_PUNCT.*" postag_regexp="yes"><exception postag="V.[ISP].*|A.*" postag_regexp="yes"/></token>
+                    <token>aun</token>
+                    <token postag="D.*|PD0NS000|SP.*|LOC_PREP|N.*" postag_regexp="yes"><exception postag="V.[ISP].*|A.*" postag_regexp="yes"/><exception regexp="yes">en|por</exception></token>
+                </antipattern>
+                <antipattern>
+                    <token>y</token>
+                    <token>aun</token>
+                    <token regexp="yes">solo|ahora</token>
+                </antipattern>
+                <antipattern>
+                    <token postag="SENT_START|C.*|_PUNCT.*|N.*" postag_regexp="yes"/>
+                    <token>aun</token>
+                    <token regexp="yes">después|sin|entre|dentro|ante|entonces</token>
+                </antipattern>
+                <antipattern>
+                    <token regexp="yes">\p{P}</token>
+                    <token>aun</token>
+                    <token regexp="yes">con|en</token>
+                </antipattern>
+                <antipattern>
+                    <token postag="SENT_START|_PUNCT_CONT|C.*" postag_regexp="yes"/>
+                    <token>aun</token>
+                    <token regexp="yes">con|en</token>
+                </antipattern>
+                <antipattern>
+                    <token>aun</token>
+                    <token>lo</token>
+                    <token regexp="yes">más|menos</token>
+                </antipattern>
+                <antipattern>
+                    <token postag="SENT_START"/>
+                    <token>aun</token>
+                    <token postag="A.*|V.P.*" postag_regexp="yes"/>
+                    <token>,</token>
+                </antipattern>
+                <!--<antipattern>
+                    <token>,</token>
+                    <token>aun</token>
+                    <token postag="A.*|V.P.*" postag_regexp="yes"/>
+                    <token>,</token>
+                    <!-\- , aún proscrito
+                    aún errante -\->
+                </antipattern>-->
+                <antipattern>
+                    <token>¿</token>
+                    <token>aun</token>
+                    <token postag="A.*|V.P.*" postag_regexp="yes"/>
+                </antipattern>
+                <antipattern>
+                    <token>aun</token>
+                    <token regexp="yes">así|asi</token>
+                </antipattern>
+                <antipattern>
+                    <token>aun</token>
+                    <token regexp="yes">si|cuando</token>
+                </antipattern>
+                <antipattern>
+                    <token>aun<exception scope="previous" regexp="yes">más|menos</exception><exception scope="previous" postag_regexp="yes" postag="V.N.*"/></token>
+                    <token postag="V.G.*" postag_regexp="yes"/>
+                </antipattern>
+                <antipattern>
+                    <token>aun<exception scope="previous" regexp="yes">más|menos</exception><exception scope="previous" postag_regexp="yes" postag="V.N.*"/></token>
                     <token>no</token>
-                    <token><exception postag="V.G.*" postag_regexp="yes"/></token>
+                    <token postag="V.G.*" postag_regexp="yes"/>
+                </antipattern>
+                <antipattern>
+                    <unify>
+                        <feature id="numero"/>
+                        <feature id="genero"/>
+                        <token postag="NC.*" postag_regexp="yes"/>
+                        <unify-ignore>
+                            <token>,</token>
+                            <token>aun</token>
+                        </unify-ignore>
+                        <token postag="A.*|V.P.*" postag_regexp="yes"/>
+                    </unify>
+                    <example>Ofreciendo a Dios sacrificios, aun públicos, para aplacar su justicia.</example>
+                </antipattern>
+                <pattern>
+                    <token>aun</token>
                 </pattern>
-                <message>Se acentúan si equivale a "todavía".</message>
+                <message>Se escribe con tilde si equivale a 'todavía'. Se escribe sin tilde si significa 'hasta' o 'incluso'.</message>
                 <suggestion>aún</suggestion>
+                <example correction="aún">Es mi marido <marker>aun</marker> y así seguirá.</example>
                 <example correction="Aún"><marker>Aun</marker> no está claro.</example>
-                <example>Aun no siendo así, es fantástico.</example>
-            </rule>
-            <rule>
-                <pattern>
-                    <marker>
-                        <token>aun</token>
-                    </marker>
-                    <token regexp="yes">más|menos|mejor|peor</token>
-                    <token><exception postag="V.G.*" postag_regexp="yes"/></token>
-                </pattern>
-                <message>Se acentúan si equivale a "todavía".</message>
-                <suggestion>aún</suggestion>
-                <example correction="aún">Es <marker>aun</marker> más grande de lo que pensaba.</example>
-            </rule>
-            <rule>
-                <pattern>
-                    <marker>
-                        <token>aun</token>
-                    </marker>
-                    <token min="0" postag="PP.*" postag_regexp="yes"/>
-                    <token postag="V.I.*" postag_regexp="yes"><exception postag="RG|N.*" postag_regexp="yes"/></token>
-                </pattern>
-                <message>Se acentúan si equivale a "todavía".</message>
-                <suggestion>aún</suggestion>
                 <example correction="Aún"><marker>Aun</marker> pensaba que sí.</example>
                 <example correction="Aún"><marker>Aun</marker> se desconoce.</example>
-                <example>Aun enfermo, fue a la escuela.</example>
+                <example correction="aún">Es <marker>aun</marker> más grande de lo que pensaba.</example>
+                <example correction="aún">Es mi marido <marker>aun</marker>...</example>
+                <example correction="aún">Menos <marker>aun</marker> que no sean mayores.</example>
+                <example correction="aún">Pensaba <marker>aun</marker> lo mismo.</example>
+                <example correction="aún">Podías verlos <marker>aun</marker> pequeños.</example>
+                <example correction="aún">Más <marker>aun</marker> considerando que no va en contra de sus intereses.</example>
+                <example correction="aún">Alguien que <marker>aun</marker> lucha por resolver sus problemas.</example>
+                <example correction="aún">Con los ojos <marker>aun</marker> abiertos.</example>
+                <example correction="aún">Recuerdo <marker>aun</marker> el día de mi primera infancia.</example>
+                <example correction="Aún"><marker>Aun</marker> recuerdo con gran claridad aquel momento.</example>
                 <example>Aun así, me lo pasé bien.</example>
+                <example>Aun enfermo, el chico fue a la escuela</example>
+                <example>Aun enfermo, fue a la escuela.</example>
+                <example>Aun no siendo así, es fantástico.</example>
+                <example>Como aun así no sabíamos cuánto era eso, le pedimos que nos mostrara los vasos.</example>
+                <example>Las flores florecen aun cuando nadie las mira.</example>
+                <example>No me importaría aun si ella no viene.</example>
+                <example>Quien calla aun teniendo razón, está casado.</example>
+                <example>Si aun así no te mejora , como último recurso es hacerte unas sesiones de láser.</example>
+                <example>¿Aun muerto sigues pendiente de la política partidista?</example>
             </rule>
             <rule>
                 <pattern>
-                    <token postag="V.[SI].*" postag_regexp="yes"><exception postag="RG|N.*" postag_regexp="yes"/></token>
+                    <token inflected="yes">estar</token>
                     <marker>
                         <token>aun</token>
                     </marker>
-                    <token><exception regexp="yes">si|cuando|así</exception></token>
+                    <token postag_regexp="yes" postag="V.G.*"/>
                 </pattern>
-                <message>Se acentúan si equivale a "todavía".</message>
+                <message>Se escribe con tilde si equivale a 'todavía'.</message>
                 <suggestion>aún</suggestion>
-                <example correction="aún">Pensaba <marker>aun</marker> lo mismo.</example>
-                <example>No me importaría aun si ella no viene.</example>
-                <example>Como aun así no sabíamos cuánto era eso, le pedimos que nos mostrara los vasos.</example>
-                <example>Las flores florecen aun cuando nadie las mira.</example>
-                <example>Quien calla aun teniendo razón, está casado.</example>
+                <example correction="aún">Estaban <marker>aun</marker> durmiendo.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <marker>
+                        <token>aun</token>
+                    </marker>
+                    <token>dentro</token>
+                    <token regexp="yes">de|del</token>
+                    <token>plazo</token>
+                </pattern>
+                <message>Se escribe con tilde si equivale a 'todavía'.</message>
+                <suggestion>aún</suggestion>
+                <example correction="Aún"><marker>Aun</marker> dentro de plazo.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token regexp="yes" skip="2">no|tampoco</token>
+                    <token regexp="yes" inflected="yes">haber|existir</token>
+                    <token postag="N.*|_GN_.*" postag_regexp="yes" min="1" max="4"/>
+                    <marker>
+                        <token>aun</token>
+                    </marker>
+                </pattern>
+                <message>Se escribe con tilde si equivale a 'todavía'.</message>
+                <suggestion>aún</suggestion>
+                <example correction="aún">No había radios <marker>aun</marker> entonces.</example>
             </rule>
         </rulegroup>
         <rulegroup id="SI" name="si/sí">
@@ -11231,6 +11600,15 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         </rulegroup>
     </category>
     <category id="MISSPELLING" name="Ortografía" type="misspelling">
+        <rule id="CLICK_CLIC" name="click -> clic">
+            <pattern>
+                <token regexp="yes">clicks?</token>
+            </pattern>
+            <message>La grafía adecuada es <suggestion><match no="1" regexp_match="(?iu)k" regexp_replace="" case_conversion="preserve"/></suggestion>.</message>
+            <example correction="clic">Haz <marker>click</marker> en el enlace siguiente.</example>
+            <example correction="clics">Contamos los <marker>clicks</marker> en el enlace.</example>
+            <example correction="CLIC">HAZ <marker>CLICK</marker> AQUÍ.</example>
+        </rule>
         <rulegroup id="D_ELA" name="revisar letra suelta: d, l, n">
             <rule>
                 <pattern>
@@ -11568,7 +11946,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token min="0" max="4" postag_regexp="yes" postag="R.|LOC_ADV|_QM_OPEN"/>
                     <token postag="N.[MC][SN].*|A..[MC][SN].|_GN_MS|DN.*|UNKNOWN|_possible_NP|V.N.*|V.P..SM" postag_regexp="yes"/>
                 </pattern>
-                <message>Contracción</message>
+                <message>Contracción.</message>
                 <suggestion>\1l</suggestion>
                 <example correction="del">La casa <marker>de el</marker> lago</example>
                 <example>De El Mundo o de El País.</example>
@@ -11584,7 +11962,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     </marker>
                     <token postag="P[TR].*|CS|Y|PI.*" postag_regexp="yes"/>
                 </pattern>
-                <message>Contracción</message>
+                <message>Contracción.</message>
                 <suggestion>\1l</suggestion>
                 <example correction="al">Ve <marker>a el</marker> que más te guste</example>
                 <example correction="del">autor <marker>de el</marker> cual no se sabe nada</example>
@@ -11597,7 +11975,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     </marker>
                     <token regexp="yes">&nombre_fem_el;</token>
                 </pattern>
-                <message>Contracción</message>
+                <message>Contracción.</message>
                 <suggestion>\1l</suggestion>
                 <example correction="del">La casa <marker>de el</marker> agua.</example>
                 <example correction="al">Los mercados van <marker>a el</marker> alza.</example>
@@ -11857,7 +12235,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                         <token>torno</token>
                     </marker>
                 </pattern>
-                <message>Como sustantivo que significa 'ambiente, lo que rodea' se escribe junto</message>
+                <message>Como sustantivo que significa 'ambiente, lo que rodea' se escribe junto.</message>
                 <suggestion>entorno</suggestion>
                 <example correction="entorno">Se palpaba en el <marker>en torno</marker></example>
                 <example correction="entorno">Se palpaba en su <marker>en torno</marker></example>
@@ -12787,7 +13165,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token min="0">-</token>
                     <token regexp="yes">misiles|cohetes</token>
                 </pattern>
-                <message>Como sustantivo se escriben junto</message>
+                <message>Como sustantivo se escribe junto.</message>
                 <suggestion>\1\3</suggestion>
                 <url>https://www.fundeu.es/recomendacion/lanzamisiles-y-lanzacohetes-sin-separacion/</url>
                 <example correction="lanzamisiles">Un <marker>lanza misiles</marker></example>
@@ -12799,7 +13177,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token>-</token>
                     <token regexp="yes">vivas?</token>
                 </pattern>
-                <message>Como sustantivo se escriben junto</message>
+                <message>Como sustantivo se escribe junto.</message>
                 <suggestion>\1\3</suggestion>
                 <example correction="siemprevivas">Unas flores <marker>siempre-vivas</marker></example>
             </rule>
@@ -14597,7 +14975,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     </marker>
                     <token regexp="yes">mejor|peor|menor|más|menos|antes|después</token>
                 </pattern>
-                <message>Cuando precede al comparativo \2, el adverbio "mucho" conserva su forma plena</message>
+                <message>Cuando precede al comparativo \2, el adverbio "mucho" conserva su forma plena.</message>
                 <suggestion>mucho</suggestion>
                 <example correction="mucho">Esto es <marker>muy</marker> peor de lo que pensaba.</example>
             </rule>
@@ -14609,7 +14987,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token>mayor</token>
                     <token regexp="yes">que|de</token>
                 </pattern>
-                <message>Cuando precede al comparativo \2, el adverbio "mucho" conserva su forma plena</message>
+                <message>Cuando precede al comparativo \2, el adverbio "mucho" conserva su forma plena.</message>
                 <suggestion>mucho</suggestion>
                 <example correction="mucho">Esto es <marker>muy</marker> mayor de lo que piensas.</example>
                 <example>Yo soy muy mayor.</example>
@@ -14716,7 +15094,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                         <token>y<exception scope="previous">¿</exception></token>
                     </marker>
                     <token min="0" postag="_QM_OPEN"/>
-                    <token regexp="yes">h?[ií].*|y|easy.*<exception regexp="yes">h?ih?[aeouáéóú].*</exception><!--Números romanos--><exception regexp="yes">[ivxlcdm]+|&words_H_ASPIRADA;|&words_H_ASPIRADA2;</exception></token>
+                    <token regexp="yes">h?[ií].*|y|easy.*<exception regexp="yes">h?ih?[aeouáéóú].*</exception><!--Números romanos--><exception regexp="yes">[ivxlcdm]+|&words_H_ASPIRADA;|&words_H_ASPIRADA2;|iPad|iPhone|iOS</exception></token>
                 </pattern>
                 <message>Cuando precede a palabras que comienzan por 'i', la conjunción 'y' se transforma en 'e'.</message>
                 <suggestion>e</suggestion>
@@ -16607,10 +16985,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token regexp="yes" inflected="yes">decena|centena|centenar|mil|millón|billón</token>
                     <token>de</token>
                     <marker>
-                        <token postag="NC.S.*" postag_regexp="yes"><exception regexp="yes">presupuesto|valoración|estimación|evaluación|capitalización|deuda|uso</exception></token>
+                        <token postag="NC.S.*" postag_regexp="yes"><exception regexp="yes">presupuesto|valoración|estimación|evaluación|capitalización|deuda|uso|ganancia</exception></token>
                     </marker>
                 </pattern>
-                <message>Posible error de concordancia</message>
+                <message>Posible error de concordancia.</message>
                 <suggestion><match no="3" postag="(NC.)S(.*)" postag_regexp="yes" postag_replace="$1P$2"/></suggestion>
                 <example correction="personas">Son miles de <marker>persona</marker>.</example>
                 <example correction="personalidades">Decenas de <marker>personalidad</marker> firman un manifiesto.</example>
@@ -22367,6 +22745,13 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <token min="0" postag="A.*|V.P.*" postag_regexp="yes"/>
                 <token>aún</token>
             </antipattern>
+            <antipattern>
+                <!--<token postag="CC"/>-->
+                <token regexp="yes">menos|más|mejor|peor|mayor|menor</token>
+                <token min="0" postag="A.*|V.P.*|RG.*|NC.*" postag_regexp="yes"/>
+                <token regexp="yes">aun|aún</token>
+                <token>que</token>
+            </antipattern>
             <rule>
                 <pattern>
                     <token postag="SENT_START|_PUNCT.*" postag_regexp="yes"/>
@@ -22387,15 +22772,45 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token>aún</token>
                 </antipattern>
                 <pattern>
-                    <marker>
-                        <token regexp="yes">aun|aún</token>
-                        <token>que</token>
-                    </marker>
+                    <token>aún</token>
+                    <token>que</token>
                 </pattern>
                 <message>"Aunque" se escribe junto cuando es una conjunción concesiva o adversativa.</message>
                 <suggestion>aunque</suggestion>
                 <example correction="aunque">Me gusta mucho esta, <marker>aún que</marker> la otra también.</example>
-                <example correction="aunque">Me gusta <marker>aun que</marker> la otra también.</example>
+                <!--<example correction="aunque">Me gusta <marker>aún que</marker> la otra también.</example>-->
+                <example>Este me gusta más aún que el otro.</example>
+                <example>Esta banda es más efímera aún que Rigor Mortis.</example>
+                <example>¿Pensáis aún que yo estoy loco?</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token postag="V.[SIM].*" postag_regexp="yes"><exception postag="RG"/><exception inflected="yes" regexp="yes">pensar|recordar</exception></token>
+                    <marker>
+                        <token>aun</token>
+                        <token>que</token>
+                    </marker>
+                </pattern>
+                <message>"Aunque" se escribe junto cuando es una conjunción concesiva o adversativa. O bien falta una tilde en "aún" si significa 'todavía'.</message>
+                <suggestion>aunque</suggestion>
+                <suggestion>aún que</suggestion>
+                <example correction="aunque|aún que">Me gusta <marker>aun que</marker> la otra también.</example>
+                <example>Este me gusta más aún que el otro.</example>
+                <example>Esta banda es más efímera aún que Rigor Mortis.</example>
+                <example>¿Pensáis aún que yo estoy loco?</example>
+            </rule>
+            <rule>
+                <antipattern>
+                    <token postag="V.*" postag_regexp="yes"/>
+                    <token>aun</token>
+                </antipattern>
+                <pattern>
+                    <token>aun</token>
+                    <token>que</token>
+                </pattern>
+                <message>"Aunque" se escribe junto cuando es una conjunción concesiva o adversativa.</message>
+                <suggestion>aunque</suggestion>
+                <example correction="aunque">Me gusta mucho esta, <marker>aun que</marker> la otra también.</example>
                 <example>Este me gusta más aún que el otro.</example>
                 <example>Esta banda es más efímera aún que Rigor Mortis.</example>
                 <example>¿Pensáis aún que yo estoy loco?</example>
@@ -23795,7 +24210,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example>Hola de parte de mi hermano.</example>
             </rule>
         </rulegroup>
-        <rule id="HA_A" name="ha -> a">
+        <rulegroup id="HA_A" name="ha -> a">
             <!-- Probably better than the confusion set rule -->
             <antipattern>
                 <token regexp="yes">[0-9,\.]+<exception regexp="yes">19[0-9][0-9]|20[0-9][0-9]</exception></token>
@@ -23835,31 +24250,63 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <token regexp="yes">tiempos?|años</token>
                 <token>ha</token>
             </antipattern>
-            <pattern>
-                <marker>
-                    <token>ha</token>
-                </marker>
-                <!--<token postag="[DNAPR].*"/>-->
-            </pattern>
-            <message>Si no es del v. 'haber', se escribe sin hache.</message>
-            <suggestion>a</suggestion>
-            <example correction="A"><marker>Ha</marker> estos no me los creo.</example>
-            <example>Ha dicho que sí.</example>
-            <example>Ha claramente dicho que sí.</example>
-            <example>Ha, ha, ha: no me lo creo.</example>
-            <example correction="a">Lo ha vuelto <marker>ha</marker> hacer.</example>
-            <example correction="a">Volver <marker>ha</marker> casa.</example>
-            <example correction="a">Voy <marker>ha</marker> St. James.</example>
-            <example>Lo ha dicho.</example>
-            <example>Lo ha claramente dicho.</example>
-            <example>Ha de regarse sin falta.</example>
-            <example>que alguien ha incluso incrementado</example>
-            <example>3.500 ha limpias en el bosque.</example>
-            <example>Este año ha llovido bastante.</example>
-            <example>¿Ha usted reservado un cuarto de hotel?</example>
-            <example>Años ha de aquello.</example>
-            <example>¡Ha, y ahora de pronto es "mi" idea!</example>
-        </rule>
+            <rule>
+                <pattern>
+                    <marker>
+                        <token>ha</token>
+                    </marker>
+                    <!--<token postag="[DNAPR].*"/>-->
+                </pattern>
+                <message>Si no es del v. 'haber', se escribe sin hache.</message>
+                <suggestion>a</suggestion>
+                <example correction="A"><marker>Ha</marker> estos no me los creo.</example>
+                <example>Ha dicho que sí.</example>
+                <example>Ha claramente dicho que sí.</example>
+                <example>Ha, ha, ha: no me lo creo.</example>
+                <example correction="a">Lo ha vuelto <marker>ha</marker> hacer.</example>
+                <example correction="a">Volver <marker>ha</marker> casa.</example>
+                <example correction="a">Voy <marker>ha</marker> St. James.</example>
+                <example>Lo ha dicho.</example>
+                <example>Lo ha claramente dicho.</example>
+                <example>Ha de regarse sin falta.</example>
+                <example>que alguien ha incluso incrementado</example>
+                <example>3.500 ha limpias en el bosque.</example>
+                <example>Este año ha llovido bastante.</example>
+                <example>¿Ha usted reservado un cuarto de hotel?</example>
+                <example>Años ha de aquello.</example>
+                <example>¡Ha, y ahora de pronto es "mi" idea!</example>
+            </rule>
+            <rule default="temp_off">
+                <pattern>
+                    <marker>
+                        <token>ha<exception postag="_GV_"/></token>
+                        <token><exception regexp="yes">\p{P}</exception></token>
+                    </marker>
+                    <!--<token postag="[DNAPR].*"/>-->
+                </pattern>
+                <filter class="org.languagetool.rules.es.FindSuggestionsFilter" args="wordFrom:1 desiredPostag:V.P..SM"/>
+                <message>¿Quería decir "a" (preposición) o "hay" (del verbo 'haber')? Quizá falta un participio.</message>
+                <suggestion>ha {suggestion}</suggestion>
+                <suggestion>a \2</suggestion>
+                <suggestion>hay \2</suggestion>
+                <example correction="A estos|Hay estos"><marker>Ha estos</marker> no me los creo.</example>
+                <example>Ha dicho que sí.</example>
+                <example>Ha claramente dicho que sí.</example>
+                <example>Ha, ha, ha: no me lo creo.</example>
+                <example correction="a hacer|hay hacer">Lo ha vuelto <marker>ha hacer</marker>.</example>
+                <example correction="a casa|hay casa">Volver <marker>ha casa</marker>.</example>
+                <example correction="a St|hay St">Voy <marker>ha St</marker>. James.</example>
+                <example>Lo ha dicho.</example>
+                <example>Lo ha claramente dicho.</example>
+                <example>Ha de regarse sin falta.</example>
+                <example>que alguien ha incluso incrementado</example>
+                <example>3.500 ha limpias en el bosque.</example>
+                <example>Este año ha llovido bastante.</example>
+                <example>¿Ha usted reservado un cuarto de hotel?</example>
+                <example>Años ha de aquello.</example>
+                <example>¡Ha, y ahora de pronto es "mi" idea!</example>
+            </rule>
+        </rulegroup>
         <rulegroup id="AYA_HAYA" name="*aya/haya">
             <rule>
                 <pattern>
@@ -25518,7 +25965,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token>el</token>
                     <token>la</token>
                 </pattern>
-                <message>Posible confusión</message>
+                <message>Posible confusión.</message>
                 <suggestion>\1 el</suggestion>
                 <suggestion>\1 la</suggestion>
                 <example correction="en el|en la">Pesco <marker>en el la</marker> represa.</example>

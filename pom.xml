@@ -84,7 +84,7 @@
         <!-- grpc related plugins check for updates if grpc is updated -->
         <kr.motd.maven.os-maven-plugin.version>1.6.2</kr.motd.maven.os-maven-plugin.version>
         <protobuf-maven-plugin.version>0.6.1</protobuf-maven-plugin.version>
-        <dependency-check-maven.pluging.version>6.5.3</dependency-check-maven.pluging.version>
+        <dependency-check-maven.pluging.version>7.3.0</dependency-check-maven.pluging.version>
         <flatten.version>1.2.5</flatten.version>
         <!-- Dependency Versions -->
 
@@ -167,7 +167,7 @@
         <lombok.version>1.18.22</lombok.version>
         <lucene.version>5.5.5</lucene.version>
         <morfologik.version>2.1.9</morfologik.version>
-        <morfologik-ukrainian-lt.version>5.9.0</morfologik-ukrainian-lt.version>
+        <morfologik-ukrainian-lt.version>5.9.2</morfologik-ukrainian-lt.version>
         <optimaize.languagedetector.language-detector.version>0.6</optimaize.languagedetector.language-detector.version>
         <!-- see https://github.com/languagetool-org/languagetool/issues/4088 before you upgrade this -->
         <spanish-pos-dict.version>1.8</spanish-pos-dict.version>
@@ -308,6 +308,12 @@
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
                 <version>${dependency-check-maven.pluging.version}</version>
+                <configuration>
+                    <failBuildOnCVSS>8</failBuildOnCVSS>
+                    <suppressionFiles>
+                        <suppressionFile>owasp_fp.xml</suppressionFile>
+                    </suppressionFiles>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>

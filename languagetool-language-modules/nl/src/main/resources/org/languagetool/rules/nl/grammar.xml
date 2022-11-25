@@ -283,6 +283,27 @@ regexp case-insensitive maken: (?i)
             </rule>
         </rulegroup>
 
+        <rulegroup id="WORDT_JE" name="Wordt/word" default="temp_off">
+            <!-- R. Baars, november 2022 -->
+            <rule>
+                <antipattern>
+                    <token>je</token>
+                    <token postag_regexp="yes" postag="ZNW:EKV.*"/>
+                </antipattern>
+                <antipattern>
+                    <token>je</token>
+                    <token postag_regexp="yes" postag="BNW.*"/>
+                    <token postag_regexp="yes" postag="ZNW:EKV.*"/>
+                </antipattern>
+                <pattern>
+                    <token>wordt</token>
+                    <token>je</token>
+                </pattern>
+                <message>Als 'je' hier als 'jij' bedoeld is, dan is juist: <suggestion>word je</suggestion>. Als het als 'jou' of 'jouw' gelezen kan worden, dan is dit correct.</message>
+                <example correction="word je">Dan <marker>wordt je</marker> gepiepeld.</example>
+            </rule>
+        </rulegroup>
+
         <rulegroup id="SOURCE" name="Source/bron" default="temp_off">
             <!-- R. Baars, november 2022 -->
             <rule>
@@ -294,6 +315,7 @@ regexp case-insensitive maken: (?i)
                 </pattern>
                 <message>In het Nederlands is dat <suggestion>bron</suggestion> of <suggestion>broncode</suggestion>.</message>
                 <example correction="bron|broncode">Ik zoek de <marker>source</marker>.</example>
+                <example>LanguageTool is open source.</example>
             </rule>
         </rulegroup>
 
@@ -10124,7 +10146,12 @@ onwaarschijnlijk
                 <message>U bedoelt vast <suggestion>Wouter Bos</suggestion>, de (ex-)politicus.</message>
                 <example correction="Wouter Bos">Kent u <marker>wouter bos</marker>?</example>
             </rule>
-
+            <rule>
+                <antipattern case_sensitive="yes"><token>Hannah</token><token>Arendt</token></antipattern>
+                <pattern><token regexp="yes">hannah?</token><token regexp="yes">aren(d|t|dt)</token></pattern>
+                <message>U bedoelt vast <suggestion>Hannah Arendt</suggestion>, de filosofe.</message>
+                <example correction="Hannah Arendt">Kent u <marker>hanna arend</marker>?</example>
+            </rule>
         </rulegroup>
         <rulegroup id="MS_TEAMS" name="Microsoft teams/Microsoftteams">
             <rule>
@@ -13554,7 +13581,7 @@ onwaarschijnlijk
                 <pattern>
                     <token regexp="yes">een|geen</token>
                     <marker>
-                        <token postag_regexp="yes" postag="WKW:TGW:3EP"><exception postag_regexp="yes" postag="WKW:VTD:ONV|ZNW.*|WKW:TGW:1EP|BNW.*"/><exception regexp="yes">heeft</exception></token>
+                        <token postag="WKW:TGW:3EP"><exception postag_regexp="yes" postag="WKW:VTD:ONV|ZNW.*|WKW:TGW:1EP|BNW.*"/><exception>heeft</exception></token>
                     </marker>
                     <token postag_regexp="yes" postag="ZNW:EKV.*"/>
                 </pattern>
@@ -20884,6 +20911,7 @@ steenwijk;Steenwijk
                 <example correction="luchtverfrisser|luchtbehandeling|klimaatregeling">De hotelkamervoorzieningen zijn onder andere <marker>airconditioning</marker>.</example>
             </rule>
         </rulegroup>
+        <!-- mening van taaladviseurs is veranderd; weekend wordt inmiddels geaccepteerd
         <rulegroup id="WEEKEND" name="weekend → weekeinde" tags="picky">
             <rule>
                 <pattern>
@@ -20898,7 +20926,7 @@ steenwijk;Steenwijk
                 <example correction="weekeind">Prettig <marker>weekend</marker> allemaal.</example>
             </rule>
         </rulegroup>
-
+        -->
         <rulegroup id="CRUISECONTROL" name="cruisecontrol → snelheidsregeling" tags="picky">
             <rule>
                 <!-- 2014-08-20 TaalTik -->
@@ -21012,13 +21040,23 @@ steenwijk;Steenwijk
         </rulegroup>
         <rulegroup id="VINDT_IK" name="verkeerde werkwoordvorm">
             <rule>
-                <antipattern><token>je</token><token postag_regexp="yes" postag="ZNW.*"/></antipattern>
-                <antipattern><token>je</token><token postag_regexp="yes" postag="BNW.*"/><token postag_regexp="yes" postag="ZNW.*"/></antipattern>
-                <antipattern><token regexp="yes">zal|zul</token><token>je</token></antipattern>
+                <antipattern>
+                    <token>je</token>
+                    <token postag_regexp="yes" postag="ZNW.*"/>
+                </antipattern>
+                <antipattern>
+                    <token>je</token>
+                    <token postag_regexp="yes" postag="BNW.*"/>
+                    <token postag_regexp="yes" postag="ZNW.*"/>
+                </antipattern>
+                <antipattern>
+                    <token regexp="yes">zal|zul</token>
+                    <token>je</token>
+                </antipattern>
                 <pattern>
                     <token postag_regexp="yes" postag="SENT_START|START"/>
                     <marker>
-                        <token postag_regexp="yes" postag="WKW:TGW:3EP.*"><exception>want</exception><exception postag_regexp="yes" postag="WKW:TGW:1EP.*|WKW:VLT:1EP.*"/></token>
+                        <token postag_regexp="yes" postag="WKW:TGW:3EP.*"><exception regexp="yes">want|wordt</exception><exception postag_regexp="yes" postag="WKW:TGW:1EP.*|WKW:VLT:1EP.*"/></token>
                     </marker>
                     <token regexp="yes">ik|je|jij</token>
                 </pattern>
@@ -33886,6 +33924,11 @@ steenwijk;Steenwijk
         <rulegroup id="STAM_ZONDER_IK" name="werkwoordstam zonder ik">
             <!-- R. Baars, oktober 2022 -->
             <antipattern>
+                <!-- user feedback -->
+                <token>dan</token>
+                <token postag="WKW:TGW:1EP"/>
+            </antipattern>
+            <antipattern>
                 <token regexp="yes" case_sensitive="yes">heb|facebook|instagram|ipad|kan|opzoek</token>
             </antipattern>
             <antipattern>
@@ -36195,19 +36238,6 @@ steenwijk;Steenwijk
                 </pattern>
                 <message>Als de \2 ovaal is of zijn, is juist: <suggestion>ovale</suggestion>.</message>
                 <example correction="ovale">Het is een <marker>ovalen</marker> tafeltje.</example>
-            </rule>
-        </rulegroup>
-        <rulegroup id="DANKJE" name="dankje / dank je">
-            <rule>
-                <antipattern><token>dankje</token><token>wel</token></antipattern>
-                <antipattern><token regexp="yes" skip="1">een|het</token><token>dankje</token></antipattern>
-                <pattern>
-                    <marker>
-                        <token>dankje</token>
-                    </marker>
-                </pattern>
-                <message>Je bedoelt vast: <suggestion>dank je</suggestion>.</message>
-                <example correction="Dank je"><marker>Dankje</marker> voor de correctie.</example>
             </rule>
         </rulegroup>
         <rulegroup id="KAMT_MET" name="kamt met / kamt met">
@@ -44368,6 +44398,45 @@ steenwijk;Steenwijk
             </rule>
         </rulegroup>
 
+        <rulegroup id="COPY_PASTE" name="copy/paste => copy-paste" default="temp_off">
+            <!-- R. Baars november 2022 -->
+            <rule>
+                <pattern>
+                    <token>copy</token>
+                    <token>/</token>
+                    <token>paste</token>
+                </pattern>
+                <message>Bij gelijkwaardige begrippen hoort een koppelteken.</message> <suggestion>copy-paste</suggestion>
+                <example correction="copy-paste">Het is typisch <marker>copy/paste</marker>.</example>
+            </rule>
+        </rulegroup>
+
+        <rulegroup id="COPY" name="copy/kopie of kopij" default="temp_off">
+            <!-- R. Baars november 2022 -->
+            <rule>
+                <antipattern>
+                    <token>copy</token>
+                    <token postag="UNKNOWN"><exception regexp="yes">[.?!]</exception></token>
+                </antipattern>
+                <antipattern>
+                    <token>copy</token>
+                    <token>trading</token>
+                </antipattern>
+                <antipattern>
+                    <token>copy</token>
+                    <token>/</token>
+                    <token>paste</token>
+                </antipattern>
+                <pattern>
+                    <marker>
+                        <token>copy</token>
+                    </marker>
+                </pattern>
+                <message>In het Nederlands is dit een <suggestion>kopie</suggestion> (duplicaat) of <suggestion>kopij</suggestion> (aangeleverde tekst).</message>
+                <example correction="kopie|kopij">Het is een slechte <marker>copy</marker>.</example>
+            </rule>
+        </rulegroup>
+
 		<rulegroup id="TOD" name="tod/tot" >
             <!-- R. Baars 27-10-2022 -->
 	        <antipattern>
@@ -44384,6 +44453,33 @@ steenwijk;Steenwijk
                 <example correction="tot">Het gebeurt <marker>tod</marker> 5 uur.</example>
             </rule>
         </rulegroup>
+
+        <rulegroup id="HIJ_ZIJ" name="hij/zij" tags="picky">
+            <!-- R. Baars november 2022 -->
+            <rule>
+                <pattern>
+                    <token>hij</token>
+                    <token>/</token>
+                    <token>zij</token>
+                </pattern>
+                <message>Dit is natuurlijk lekker kort. Mooier is: <suggestion>\1 of \3</suggestion>.</message>
+                <example correction="hij of zij">Dan doet <marker>hij/zij</marker> het.</example>
+            </rule>
+        </rulegroup>
+
+        <rulegroup id="ZIJN_HAAR" name="zijn/haar" tags="picky" default="temp_off">
+            <!-- R. Baars november 2022 -->
+            <rule>
+                <pattern>
+                    <token>zijn</token>
+                    <token>/</token>
+                    <token>haar</token>
+                </pattern>
+                <message>Dit is natuurlijk lekker kort. Mooier is: <suggestion>\1 of \3</suggestion>.</message>
+                <example correction="zijn of haar">Het is <marker>zijn/haar</marker> fout.</example>
+            </rule>
+        </rulegroup>
+
 
 		<rulegroup id="PAT" name="pat/pad">
             <!-- R. Baars 28-10-2022 -->
@@ -44717,6 +44813,109 @@ steenwijk;Steenwijk
                 <message>Dit is vast de verkeerde vorm van het werkwoord. Of er is iets anders mis met de constructie van de zin.</message>
                 <suggestion><match no="3" postag_regexp="yes" postag="WKW:VTD:ONV"/></suggestion>
                 <example correction="herkend">De taal van deze tekst wordt niet <marker>herkent</marker>.</example>
+            </rule>
+        </rulegroup>
+    </category>
+
+    <category id="SLORDIG" name="Slordig, maar informeel geaccepteerd" type="style">
+        <rulegroup id="IDD" name="idd/inderdaad" >
+            <!-- R. Baars november 2022 -->
+            <rule>
+                <pattern>
+                    <marker>
+                        <token>idd</token>
+                    </marker>
+                </pattern>
+                <message>Netter is: <suggestion>inderdaad</suggestion>. Idd is geen officiële afkorting, en hoort in zakelijke documenten niet thuis.</message>
+                <example correction="inderdaad">Het is <marker>idd</marker> erg informeel.</example>
+            </rule>
+        </rulegroup>
+
+        <rulegroup id="ENZO" name="Enzo" >
+            <!-- R. Baars november 2022 -->
+            <rule>
+                <pattern>
+                    <marker>
+                        <token case_sensitive="yes">enzo</token>
+                    </marker>
+                </pattern>
+                <message>Correct is: <suggestion>en zo</suggestion>. Het is wel erg gebruikelijk, maar niet geschikt voor zakelijke communicatie.</message>
+                <example correction="en zo">Ik haat fouten <marker>enzo</marker>.</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="OFZOIETS" name="Ofzoiets/of zoiets" >
+            <!-- R. Baars november 2022 -->
+            <rule>
+                <pattern>
+                    <marker>
+                        <token>ofzoiets</token>
+                    </marker>
+                </pattern>
+                <message>Correct is: <suggestion>of zoiets</suggestion>. Het is wel erg gebruikelijk, maar niet geschikt voor zakelijke communicatie.</message>
+                <example correction="of zoiets">Ik haat fouten <marker>ofzoiets</marker>.</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="OFZO" name="Ofzo/of zo" >
+            <!-- R. Baars november 2022 -->
+            <rule>
+                <pattern>
+                    <token>ofzo</token>
+                </pattern>
+                <message>Correct is: <suggestion>of zo</suggestion>. Het is wel erg gebruikelijk, maar niet geschikt voor zakelijke communicatie.</message>
+                <example correction="of zo">Ik haat fouten <marker>ofzo</marker>.</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="ZOGAUW" name="Zogauw/zo gauw" >
+            <!-- R. Baars november 2022 -->
+            <rule>
+                <pattern>
+                    <token>zogauw</token>
+                </pattern>
+                <message>Correct is: <suggestion>zo gauw</suggestion>. Het is wel erg gebruikelijk, maar niet geschikt voor zakelijke communicatie.</message>
+                <example correction="zo gauw">Ik haat fouten <marker>zogauw</marker>.</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="MAARJA" name="Maar ja/maar ja" >
+            <!-- R. Baars november 2022 -->
+            <rule>
+                <pattern>
+                    <token>maarja</token>
+                </pattern>
+                <message>Correct is: <suggestion>maar ja</suggestion>. Het is wel erg gebruikelijk, maar niet geschikt voor zakelijke communicatie.</message>
+                <example correction="maar ja">Ik haat fouten, <marker>maarja</marker>.</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="FF" name="FF/even" >
+            <!-- R. Baars november 2022 -->
+            <rule>
+                <pattern>
+                    <token>ff</token>
+                </pattern>
+                <message>Correct is: <suggestion>even</suggestion>. Het is wel erg gebruikelijk, maar niet geschikt voor zakelijke communicatie.</message>
+                <example correction="even">Ik haat <marker>ff</marker> verder.</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="DANKJE" name="dankje / dank je">
+            <rule>
+                <antipattern><token>dankje</token><token>wel</token></antipattern>
+                <antipattern><token regexp="yes" skip="1">een|het</token><token>dankje</token></antipattern>
+                <pattern>
+                    <marker>
+                        <token>dankje</token>
+                    </marker>
+                </pattern>
+                <message>Correct is: <suggestion>dank je</suggestion>. Het is wel erg gebruikelijk, maar niet geschikt voor zakelijke communicatie.</message>
+                <example correction="Dank je"><marker>Dankje</marker> voor de correctie.</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="ZODADELIJK" name="Zodadelijk/zo dadelijk" default="temp_off" >
+            <!-- R. Baars november 2022 -->
+            <rule>
+                <pattern>
+                    <token>zodadelijk</token>
+                </pattern>
+                <message>Correct is: <suggestion>zo dadelijk</suggestion>. Het is wel erg gebruikelijk, maar niet geschikt voor zakelijke communicatie.</message>
+                <example correction="zo dadelijk">Ik haat fouten, <marker>zodadelijk</marker>.</example>
             </rule>
         </rulegroup>
 

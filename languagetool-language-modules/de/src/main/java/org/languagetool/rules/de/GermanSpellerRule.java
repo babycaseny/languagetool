@@ -873,6 +873,7 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
     put("Kovult", "Konvolut");
     putRepl("blog(t?en?|t(es?t)?)$", "g", "gg");
     put("Zombiefizierungen", "Zombifizierungen");
+    put("Tret", w -> Arrays.asList("Tritt", "Trete", "Trat"));
     put("Hühne", w -> Arrays.asList("Bühne", "Hüne", "Hühner"));
     put("Hühnen", w -> Arrays.asList("Bühnen", "Hünen", "Hühnern"));
     put("tiptop", "tiptopp");
@@ -1647,6 +1648,18 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
         && !s.endsWith("-s")   // https://github.com/languagetool-org/languagetool/issues/4042
         && !s.endsWith(" de")   // https://github.com/languagetool-org/languagetool/issues/4042
         && !s.endsWith(" en")   // https://github.com/languagetool-org/languagetool/issues/4042
+        && !s.endsWith(" Artigen")
+        && !s.endsWith(" Artige")
+        && !s.endsWith(" artigen")
+        && !s.endsWith(" artiges")
+        && !s.endsWith(" artiger")
+        && !s.endsWith(" artige")
+        && !s.endsWith(" artig")
+        && !s.endsWith(" förmig")
+        && !s.endsWith(" förmige")
+        && !s.endsWith(" förmigen")
+        && !s.endsWith(" förmiger")
+        && !s.endsWith(" förmiges")
         && !s.matches("[A-ZÖÄÜa-zöäüß] .+") // z.B. nicht "I Tand" für "IT and Services"
         && !s.matches(".+ [a-zöäüßA-ZÖÄÜ]");  // z.B. nicht "rauchen e" für "rauche ne" vorschlagen
   }
@@ -2509,6 +2522,8 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
       case "wüßte": return topMatch("wüsste");
       case "wüßten": return topMatch("wüssten");
       case "bescheid": return topMatch("Bescheid");
+      case "Facetime": return topMatch("FaceTime");
+      case "Facetimes": return topMatch("FaceTimes");
       case "ausversehen": return topMatch("aus Versehen");
       case "Stückweit": return topMatch("Stück weit");
       case "Uranium": return topMatch("Uran");
@@ -2681,6 +2696,8 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
       case "raufhaute": return topMatch("draufhaute");
       case "raufhauten": return topMatch("draufhauten");
       case "wohlmöglich": return topMatch("womöglich");
+      case "geschalten": return topMatch("geschaltet");
+      case "hiess": return topMatch("hieß");
       case "Click": return topMatch("Klick");
       case "Clicks": return topMatch("Klicks");
       case "jenachdem": return topMatch("je nachdem");

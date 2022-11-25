@@ -4,13 +4,24 @@
 
 ...
 
+#### HTTP API / LT server
+  * The `/languages` endpoint now lists language codes like `fr-FR` and `es-ES` for languages
+    that actually don't have a variant (e.g. there is no `fr-CA`). These codes can also be used
+    for the `language` parameter when sending a request. `fr-FR` will internally be mapped
+    to `fr` etc. (https://github.com/languagetool-org/languagetool/issues/7421)
+
 ### General
   * The `--api` parameter for the command-line version has been removed. It had
     long been deprecated and replaced by `--json`.
   * The `warmup` setting for the config file, which had no effect anymore, has been removed.
   * The deprecated `--word2vecmodel` and `--neuralnetworkmodel` options have been removed,
     as these features were not maintained and had never been used on languagetool.org.
-
+  * You can put a file `grammar_custom.xml` into the same directory that contains the
+    `grammar.xml` file for your language. This file will be loaded in addition to
+    `grammar.xml`. It can contain custom rules that you want to use now and with future
+    versions of LanguageTool, without modifying existing files. The `grammar_custom.xml`
+    needs to use the same XML syntax as `grammar.xml` and it must not introduce rule IDs
+    that are in use by other rules already.
 
 ## 5.9 (2022-09-28)
 
