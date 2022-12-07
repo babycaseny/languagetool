@@ -1,4 +1,59 @@
 #separatorRegExp=[\t;]
+Piccadilly Circus;NPCSG00
+Chiang Kai-shek;NPMSSP0
+Butros Gali;NPMSSP0
+Jean-Baptiste Say;NPMSSP0
+Joseph Schumpeter;NPMSSP0
+Apple Store;NPFN000
+Apple Online Store;NPFS000
+acuerdo marco;NCMS000
+acuerdos marco;NCMP000
+beca comedor;NCFS000
+becas comedor;NCFP000
+café concierto;NCMS000
+cafés concierto;NCMP000
+café teatro;NCMS000
+cafés teatro;NCMP000
+camión cisterna;NCMS000
+camiones cisterna;NCMP000
+casa museo;NCFS000
+casas museo;NCFP000
+ciudad refugio;NCFS000
+ciudades refugio;NCFP000
+club estado;NCMS000
+clubs estado;NCMP000
+clubes estado;NCMP000
+coche bomba;NCMS000
+coches bomba;NCMP000
+auto bomba;NCMS000
+autos bomba;NCMP000
+carro bomba;NCMS000
+carros bomba;NCMP000
+decreto ley;NCMS000
+decretos ley;NCMP000
+escuela taller;NCFS000
+escuelas taller;NCFP000
+instituto escuela;NCMS000
+institutos escuela;NCMP000
+libro disco;NCMS000
+llibros disco;NCMP000
+piso colmena;NCMS000
+pisos colmena;NCMP000
+sofá cama;NCMS000
+sofás cama;NCMP000
+tarjeta monedero;NCFS000
+tarjetas monedero;NCFP000
+vagón restaurante;NCMS000
+vagones restaurante;NCMP000
+El Chapo;NPMSSP0
+joint venture;NCFS000
+joint ventures;NCFP000
+Word Online;NPMSO00
+high tech;NCMS000
+car sharing;NCMS000
+loc. adv.;NCFN000
+loc. adj.;NCFN000
+Yehudi Menuhin;NPMSSP0
 Qatar 2022;NPMSO00
 Tea Party;NPMSO00
 new age;AQ0CN0
@@ -723,6 +778,10 @@ drag queen	NCFS000
 drag queens	NCFP000
 drag king	NCMS000
 drag kings	NCMP000
+Drag Queen	NCFS000
+Drag Queens	NCFP000
+Drag King	NCMS000
+Drag Kings	NCMP000
 Mona Lisa	NPFSSP0
 al dente	LOC_ADJ
 después de Cristo	LOC_ADV
@@ -1707,7 +1766,7 @@ capin melao	LOC_ADV
 cara a cara	LOC_ADV
 cara abajo	LOC_ADV
 cara arriba	LOC_ADV
-carpe diem	LOC_ADV
+carpe diem	NCMS000
 casa museo	NCFS000
 casas museo	NCFP000
 casi que	LOC_CS

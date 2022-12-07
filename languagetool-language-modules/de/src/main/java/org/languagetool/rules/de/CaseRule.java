@@ -92,6 +92,9 @@ public class CaseRule extends Rule {
    * workaround to avoid false alarms, these words can be added here.
    */
   private static final String[] exceptions = {
+    "Feierwütiger",
+    "Feierwütige",
+    "Feierwütigen",
     "Dritten",
     "Konsumierende",
     "Konsumierenden",
@@ -117,6 +120,9 @@ public class CaseRule extends Rule {
     "Different", // eng
     "Light", // eng
     "Legal", // eng
+    "Computational", // eng
+    "Quick", // eng
+    "Infernal", // eng
     "Fit", // eng
     "Fair", // eng
     "Viral", // eng

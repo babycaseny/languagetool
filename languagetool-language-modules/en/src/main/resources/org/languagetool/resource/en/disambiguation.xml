@@ -4580,7 +4580,10 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
            <token regexp="yes">Atty|Sg?t|[SG]en|Gov|Hon|Prof|Mr?s|[DMJS]r|Col|Maj|Brig|Capt|Cmnd|Revd?|Rep</token>
             <token>.</token>
             <marker>
-              <token regexp="yes">\p{Lu}\p{Ll}*<exception>I</exception></token>
+              <token regexp="yes">\p{Lu}\p{Ll}*
+                <exception>I</exception>
+                <exception postag="P?DT|PRP.*|CC|W.*|EX" postag_regexp="yes" />
+              </token>
             </marker>
         </pattern>
         <disambig postag="NNP"/>
@@ -8063,6 +8066,14 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
             <token regexp="yes">both|all</token>
             <token postag="VB" chunk="E-NP-singular" />
             <token postag="RP" />
+        </antipattern>
+        <antipattern>
+            <token>how</token>
+            <token>many</token>
+            <token postag="VBP" chunk="E-NP-singular" />
+            <token regexp="yes">and|n?or</token>
+            <token postag="VBP" chunk_re=".-VP" />
+            <token postag="P?DT|PRP.*" postag_regexp="yes" />
         </antipattern>
         <pattern>
             <marker>
@@ -16281,14 +16292,6 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
         </rule>
     </rulegroup>
 
-    <rule id="HAWAI_I" name="Ignore spelling of 'Hawai'i'">
-        <pattern case_sensitive="yes">
-            <token>Hawai</token>
-            <token regexp="yes">&apostrophe;</token>
-            <token>i</token>
-        </pattern>
-        <disambig action="ignore_spelling"/>
-    </rule>
     <rule id="AGO_NO_ADJECTIVE" name="'ago' no adjective">
         <pattern>
             <token regexp="yes">seconds|minutes|hours|days|weeks|months|years|decades|moments|time</token>
@@ -16375,8 +16378,8 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
         <pattern>
             <token postag="SENT_START|PCT|CC" postag_regexp="yes" />
             <token regexp="yes" min="0">why|when|where|who|which|what|how</token>
-            <token inflected="yes" regexp="yes">do|will</token><!-- TODO: add more modal verbs -->
-            <token regexp="yes" min="0">n't|not</token>
+            <token inflected="yes" regexp="yes">do|will|can|should|may|must</token>
+            <token min="0">n't</token>
             <token chunk_re="B-NP.*" min="0" />
             <token chunk_re="E-NP.*" />
             <marker>
@@ -16426,6 +16429,35 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
                 <token postag="VB.*" postag_regexp="yes" chunk_re=".-VP" />
             </pattern>
             <disambig action="filter" postag="WRB" />
+        </rule>
+    </rulegroup>
+
+    <rule id="HAWAI_I" name="ignore 'Hawaiʻi'">
+        <pattern>
+            <token regexp="yes" case_sensitive="yes">Hawai&apostrophe;i</token>
+        </pattern>
+        <disambig action="ignore_spelling"/>
+    </rule>
+    <rulegroup id="GOING_NO_NNP" name="'Going' no proper noun">
+        <rule>
+            <pattern>
+                <marker>
+                    <token case_sensitive="yes">Going</token>
+                </marker>
+                <token>forward</token>
+            </pattern>
+            <disambig action="remove" postag="NNP" />
+        </rule>
+        <rule>
+            <pattern>
+                <token inflected="yes">be</token>
+                <token postag="PRP" min="0" />
+                <marker>
+                    <token case_sensitive="yes">Going</token>
+                </marker>
+                <token>to</token>
+            </pattern>
+            <disambig action="remove" postag="NNP" />
         </rule>
     </rulegroup>
 </rules>

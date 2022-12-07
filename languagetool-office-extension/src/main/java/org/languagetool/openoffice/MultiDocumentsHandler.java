@@ -128,6 +128,7 @@ public class MultiDocumentsHandler {
   private boolean isNotTextDodument = false;
   private int heapCheckInterval = HEAP_CHECK_INTERVAL;
   private boolean testMode = false;
+  private boolean javaLookAndFeelIsSet = false;
   
 
   MultiDocumentsHandler(XComponentContext xContext, XProofreader xProofreader, XEventListener xEventListener) {
@@ -305,7 +306,7 @@ public class MultiDocumentsHandler {
         return docID;
       }
     }
-    return null;
+    return prefix + (documents.size() + 1);
   }
   
   /**
@@ -1016,6 +1017,13 @@ public class MultiDocumentsHandler {
   }
 
   /**
+   * true, if Java look and feel is set
+   */
+  public boolean isJavaLookAndFeelSet() {
+    return javaLookAndFeelIsSet;
+  }
+
+  /**
    *  Toggle Switch Off / On of LT
    *  return true if toggle was done 
    */
@@ -1524,7 +1532,7 @@ public class MultiDocumentsHandler {
    * Test the language of the document
    * switch the check to LT if possible and language is supported
    */
-  boolean testDocLanguage(boolean showMessage) {
+  boolean testDocLanguage(boolean showMessage) throws Throwable {
     if (docLanguage == null) {
       if (linguServices == null) {
         linguServices = new LinguisticServices(xContext);
@@ -1616,7 +1624,7 @@ public class MultiDocumentsHandler {
         lt = initLanguageTool(true);
         initCheck(lt);
         initDocuments(true);
-        setJavaLookAndFeel();
+//        setJavaLookAndFeel();
         return true;
       } else {
         resetCheck();
@@ -1648,7 +1656,7 @@ public class MultiDocumentsHandler {
   /** Set Look and Feel for Java Swing Components
    * 
    */
-  private void setJavaLookAndFeel() {
+  public void setJavaLookAndFeel() {
     try {
       // do not set look and feel for on Mac OS X as it causes the following error:
       // soffice[2149:2703] Apple AWT Java VM was loaded on first thread -- can't start AWT.
@@ -1661,6 +1669,7 @@ public class MultiDocumentsHandler {
            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
          }
       }
+      javaLookAndFeelIsSet = true;
     } catch (Exception | AWTError ignored) {
       // Well, what can we do...
     }
@@ -1880,7 +1889,7 @@ public class MultiDocumentsHandler {
       try {
         Thread.sleep(3000);
         testDocLanguage(false);
-      } catch (InterruptedException e) {
+      } catch (Throwable e) {
         MessageHandler.showError(e);
       }
     }

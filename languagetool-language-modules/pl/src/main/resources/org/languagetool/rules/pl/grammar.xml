@@ -16889,7 +16889,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
 						<rule>
 								<pattern>
 										<token>z</token>
-										<token regexp="yes">s[wftśsrłndpgklcbmżń].+|[zśźż][wftśsrłndpgklzcbmżń].+|[rs]z[wftśsrłndwpgklzcbmżń].+|[wf][wftśwpgzcbmżń].+|wk[^ł].+|f[dsk].+|wd[^zię].+|ws[^ze].+|Lwow(?:a|em)|mną|mnie|snu<exception regexp="yes">[\&quot;„]|ZSRR|ZSL|S[PL]D|Schengen|[\p{L}&amp;&amp;[^aeiouyąę]]+|w(?:p[rł]|t[oó]|cz|za|do|cho|gr|ści).*</exception><exception postag="UNKNOWN"/></token>
+										<token regexp="yes">s[wftśsrłndpgklcbmżń].+|[zśźż][wftśsrłndpgklzcbmżń].+|[rs]z[wftśsrłndwpgklzcbmżń].+|[wf][wftśwpgzcbmżń].+|wk[^ł].+|f[dsk].+|wd[^zię].+|ws[^ze].+|Lwow(?:a|em)|mną|mnie|snu<exception regexp="yes">[\&quot;„]|ZSRR|ZSL|S[PL]D|Schengen|[\p{L}&amp;&amp;[^aeiouyąę]]+|w(?:p[rł]|t[oó]|cz|za|do|cho|gr|ści|dr[aąeęioóu]).*</exception><exception postag="UNKNOWN"/></token>
 								</pattern>
 								<message>Prawdopodobnie ten przyimek należy zapisać tak: <suggestion>\1e \2</suggestion>.</message>
 								<short>Błąd fonetyczny</short>
@@ -16900,16 +16900,17 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example>Może nas czekać walka z wtórnym analfabetyzmem.</example>
                 <example>To wszystko wynika z wpływu wywieranego na odbiorców.</example>
                 <example>Noc z wtorku na środę</example>
+                <example>Nie ma problemu z wdrażaniem tej funkcji.</example>
 						</rule>
 						<rule>
 								<pattern>
 										<token>z</token>
 										<token regexp="yes">[\&quot;„]</token>
-										<token regexp="yes">s[wftśsrłndpgklcbmżń].+|[zśźż][wftśsrłndpgklzcbmżń].+|[rs]z[wftśsrłndwpgklzcbmżń].+|[wf][wftśwpgzcbmżń].+|wk[^ł].+|f[dsk].+|wd[^zię].+|ws[^ze].+|Lwow(?:a|em)|mną|mnie|snu<exception regexp="yes">[\&quot;„]|ZSRR|ZSL|S[PL]D|Schengen|[\p{L}&amp;&amp;[^aeiouyąę]]+|w(?:p[rł]|t[óo]|cz|za|do|cho|gr|ści).*</exception><exception postag="UNKNOWN"/></token>
+										<token regexp="yes">s[wftśsrłndpgklcbmżń].+|[zśźż][wftśsrłndpgklzcbmżń].+|[rs]z[wftśsrłndwpgklzcbmżń].+|[wf][wftśwpgzcbmżń].+|wk[^ł].+|f[dsk].+|wd[^zię].+|ws[^ze].+|Lwow(?:a|em)|mną|mnie|snu<exception regexp="yes">[\&quot;„]|ZSRR|ZSL|S[PL]D|Schengen|[\p{L}&amp;&amp;[^aeiouyąę]]+|w(?:p[rł]|t[óo]|cz|za|do|cho|gr|ści|dr[aąeęioóu]).*</exception><exception postag="UNKNOWN"/></token>
 								</pattern>
 								<message>Prawdopodobnie ten przyimek należy zapisać tak: <suggestion>ze \2\3</suggestion>.</message>
 								<short>Błąd fonetyczny</short>
-								<example>Ludwik ma kochankę ze Świecia</example>
+								<example>Ludwik ma kochankę ze Świecia.</example>
 								<example correction="ze &quot;strasznego">Ludwik ma kochankę <marker>z &quot;strasznego</marker> Świecia&quot;.</example>
 						</rule>
 				</rulegroup>
@@ -22580,7 +22581,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                                 </antipattern>
                                 <pattern>
 										<marker>
-												<token postag="brev:pun"><exception negate_pos="yes" postag="brev:pun"></exception><exception regexp="yes">dr|mjr|mgr|a?bp|płk|and|cz</exception></token>
+												<token postag="brev:pun"><exception negate_pos="yes" postag="brev:pun"></exception><exception regexp="yes">dr|mjr|mgr|a?bp|płk|and|cz</exception><exception case_sensitive="yes">RTG</exception></token>
 										</marker>
 										<token><exception spacebefore="no" regexp="yes">['.…]</exception></token>
 								</pattern>
@@ -22593,6 +22594,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                                 <example>Stopień dysocjacji w temperaturze 4000 K wynosi niecałe 3%.</example>
                                 <example>Lista światowego dziedzictwa kulturowego (K) i przyrodniczego (P)</example>
                                 <example>— Oo, jak nabazgrane!</example>
+                                <example>Dlatego tak istotne są badania RTG klatki piersiowej.</example>
 						</rule>
 						<rule>
 								<pattern>

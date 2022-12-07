@@ -6128,3 +6128,30 @@ Guido Crosetto	NNP
 World Wide Web Consortium	NNP
 Stable Diffusion	NNP
 Dani Olmo	NNP
+Brian Cox	NNP
+Brian Wilson	NNP
+GitHub Packages	NNP
+ad captandum	JJ
+ad captandum vulgus	JJ
+rara avis	NN
+rara avis	NN
+rarae aves	NNS
+rara avises	NNS
+Christian Pulisic	NNP
+Glenn Greenwald	NNP
+Mauna Loa	NNP
+Mauna Kea	NNP
+Cody Gakpo	NNP
+Bruno Fernandes	NNP
+Olivier Giroud	NNP
+Didier Reynders	NNP
+Banco do Brasil	NNP
+Denzel Dumfries	NNP
+Max Seddon	NNP
+Sam Altman	NNP
+Sergio Massa	NNP
+Louis van Gaal	NNP
+van Gaal	NNP
+Dinamo Zagreb	NNP
+Air Malta	NNP
+Monte Carlo	NNP

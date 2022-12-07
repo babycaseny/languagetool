@@ -1259,3 +1259,17 @@ spazier #ugs
 Stephenson/S #name
 Hochspitz #name
 Infantino/S #name
+Richardson/S #name
+CSAM #abk
+dokumentier #ugs
+CORS #abk
+UA #abk
+Zehetmeier/S #name
+Lunow/S #name
+EEX #abk
+FhG-ISI #name
+komprimier #ugs
+DNF #abk
+Lehnerz #name
+Bellingham/S #name
+INF #abk

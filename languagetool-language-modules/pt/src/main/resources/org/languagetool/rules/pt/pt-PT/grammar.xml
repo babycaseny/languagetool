@@ -152,6 +152,19 @@
     <rulegroup id="ARTICLES_PRECEDING_LOCATIONS" name="Nomes geográficos que requerem artigo">
       <!-- Based on Catalan grammar.xml by Tiago F. Santos,  2017-09-05      -->
       <url>https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/toponimos-com-ou-sem-artigo/24569</url>
+      <!--
+           MARCOAGPINTO inserted global antipatterns for all subrules on top using the logic (25-JUL-2022+)
+      -->
+
+      <!-- MARCOAGPINTO 2022-12-04 (Checked/Enhanced) (25-JUL-2022+) *START* -->
+      <antipattern>
+        <token>made</token>
+        <token>in</token>
+        <token postag='NP.+' postag_regexp='yes'/>
+        <example>A etiqueta da caixa dizia: "Made in China".</example>
+      </antipattern>
+      <!-- MARCOAGPINTO 2022-12-04 (Checked/Enhanced) (25-JUL-2022+) *END* -->
+
       <antipattern case_sensitive="yes">
         <token>do</token>
         <token regexp='yes'>Norte|Sul</token>
@@ -3061,6 +3074,17 @@
         </antipattern>
         <!-- MARCOAGPINTO 2022-08-03 (Checked/Enhanced) (25-JUL-2022+) *END* -->
 
+        <!-- MARCOAGPINTO 2022-11-25 (Checked/Enhanced) (25-JUL-2022+) *START* -->
+        <antipattern>
+          <token postag='SENT_START|_PUNCT' postag_regexp='yes'/>
+          <token postag='DP1.+' postag_regexp='yes'/>
+          <token regexp='yes'>car[ao]s?|estimad[ao]s?|excelentes?|excelentíssim[ao]s?|querid[ao]s?</token>
+          <example>Meus caros músicos, se achar que é necessário uma música ungida para tocar, componha uma.</example>
+          <example>E eles dizem a ela com amor: “Minha querida criança”.</example>
+          <example>Obrigado por tudo, meu caro Joshua!</example>
+        </antipattern>
+        <!-- MARCOAGPINTO 2022-11-25 (Checked/Enhanced) (25-JUL-2022+) *END* -->
+
         <antipattern>
           <unify>
           <feature id="number"/>
@@ -3569,6 +3593,28 @@
           <example>André Lucas, meu tesouro, minha razão de viver. Vales pra mim mais que o ouro, Deus em ti me fazes ver.</example>
         </antipattern>
         <!-- MARCOAGPINTO 2022-11-18 (Checked/Enhanced) (25-JUL-2022+) *END* -->
+
+        <!-- MARCOAGPINTO 2022-12-04 (Checked/Enhanced) (25-JUL-2022+) *START* -->
+        <antipattern>
+		  <token>
+		    <exception regexp='yes'>&pronomes_obliquos;</exception>
+			<exception postag_regexp='yes' postag='V.+'/>
+		  </token>
+          <token postag='V.+' postag_regexp='yes'>
+            <exception postag_regexp='no' postag='RN'/>
+          </token>
+		  <token postag='SPS00' postag_regexp='no'/>
+          <token regexp='yes'>&pronomes_obliquos;</token>
+          <token postag='V.+' postag_regexp='yes'/>
+          <example>Ele acabara de lhe frustrar as esperanças.</example>
+          <example>Não deixes de me visitar, um destes dias.</example>
+          <example>Não esqueça de me ligar.</example>
+          <example>Se arranjar um tempinho, não deixe de me escrever dizendo como está passando.</example>
+          <example>Só mais uma vez eu tenho de te beijar!</example>
+          <example>Eu sonhava em me tornar piloto de corrida.</example>
+          <example>Eu gostaria de me trocar.</example>
+        </antipattern>
+        <!-- MARCOAGPINTO 2022-12-04 (Checked/Enhanced) (25-JUL-2022+) *END* -->
 
       <!-- MARCOAGPINTO 2021-04-30 + 2021-05-01 + 2021-05-04 (17-MAR-2021+) *START* -->
       <!--

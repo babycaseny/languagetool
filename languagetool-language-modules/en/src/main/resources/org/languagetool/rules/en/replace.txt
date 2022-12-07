@@ -96,3 +96,5 @@ Britney Griner=Brittney Griner
 Inglourious Bastards=Inglourious Basterds
 Inglorious Bastards=Inglourious Basterds
 Inglorious Basterds=Inglourious Basterds
+Oliver Giroud=Olivier Giroud
+Exxon Mobile=ExxonMobil

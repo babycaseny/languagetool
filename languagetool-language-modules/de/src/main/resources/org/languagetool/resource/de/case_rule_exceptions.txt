@@ -201,6 +201,7 @@ de Haute
 Den Haag
 Dell Computer
 Hohe[sn]? Pforte|Schule|Warte|Düne|Schloss
+Hohlen? Gasse
 des Himmlischen Friedens
 Deutsche[snm]? (Museum|Theater|Kaiserreich|Jugendherbergswerk|Journalistenkolleg)s?
 Deutsche[rnm]? Akademischen? Austauschdienst(e?s?)
@@ -1042,3 +1043,7 @@ V12 Absolute
 V10 Slim Absolute
 V12 Slim Absolute
 Eisernen? Lady
+Insolvenzrechtliche[nr]? Vergütungsverordnung
+Sozialpsychiatrische[nrm]? Dienst(e|es)?
+Respiratorischen? Synzytial-Virus
+Humane[snm]? Respiratorische Synzytial-Virus

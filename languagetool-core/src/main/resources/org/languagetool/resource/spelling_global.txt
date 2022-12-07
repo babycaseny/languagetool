@@ -4742,6 +4742,7 @@ Justin Verlander
 Youssoufa Moukoko
 Mario Götze
 Sam Bankman-Fried
+Bankman-Fried
 Changpeng Zhao
 Karim Adeyemi
 VMware ESXi
@@ -4755,6 +4756,7 @@ Mahathir Mohamad
 Ismail Sabri Yaakob
 Sabri Yaakob
 Thomson Reuters
+Thomson Reuters Corporation
 Pete Davidson
 Paw Patrol
 PAW Patrol
@@ -4799,3 +4801,39 @@ World Wide Web Consortium
 ActivityPub
 Stable Diffusion
 Dani Olmo
+Panini
+Richarlison
+Brian Cox
+Brian Wilson
+GitHub Packages
+CaixaForum
+Christian Pulisic
+Glenn Greenwald
+ConocoPhillips
+Mauna Loa
+Mauna Kea
+neuroflash
+Cody Gakpo
+Bruno Fernandes
+Olivier Giroud
+Web Worker
+Web Workers
+Fleetwood Mac
+Didier Reynders
+Banco do Brasil
+Denzel Dumfries
+Max Seddon
+Sam Altman
+Sergio Massa
+Louis van Gaal
+van Gaal
+Dinamo Zagreb
+Tuttosport
+Apple Store
+Apple Online Store
+Air Malta
+Gianni Schicchi
+Shrek
+DreamWorks
+DreamWorks Animation
+DreamWorks Pictures

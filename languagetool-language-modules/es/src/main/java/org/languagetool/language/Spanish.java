@@ -88,7 +88,7 @@ public class Spanish extends Language implements AutoCloseable {
   @Nullable
   @Override
   public Synthesizer createDefaultSynthesizer() {
-    return new SpanishSynthesizer(this);
+    return SpanishSynthesizer.INSTANCE;
   }
 
   @Override
@@ -206,11 +206,13 @@ public class Spanish extends Language implements AutoCloseable {
       case "LOS_MAPUCHE": return 50;
       case "TE_TILDE": return 50;
       case "PLURAL_SEPARADO": return 50;
+      case "PERSONAJES_FAMOSOS": return 50;
       case "INCORRECT_EXPRESSIONS": return 40;
       case "MISSPELLING": return 40;  
       case "CONFUSIONS": return 40;
       case "NO_SEPARADO": return 40;
       case "PARTICIPIO_MS": return 40;
+      case "VERBO_MODAL_INFINITIVO": return 40; // greater than DIACRITICS
       case "EL_NO_TILDE": return 40; // greater than SE_CREO
       case "SE_CREO": return 35; // greater than DIACRITICS --> or less than DIACRITICS_VERB_N_ADJ ????
       case "DIACRITICS": return 30;

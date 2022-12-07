@@ -2,6 +2,19 @@
 
 ## 6.0-SNAPSHOT (release planned for 2022-12-29)
 
+#### English
+  * added and improved rules
+  * updated en_GB spellchecker dictionary from https://github.com/marcoagpinto/aoo-mozilla-en-dict (Version 2022.12.01, v.3.1.5)
+
+#### Polish
+  * improved rules
+
+#### Portuguese
+  * added and improved rules
+  * added words and POS data
+  * fixed tons of false positives
+
+
 ...
 
 #### HTTP API / LT server
