@@ -8864,3 +8864,12 @@ deter-mining?
 sheep-dog?
 sheep-dogs?
 non-qualified?
+crime-ridden*
+Oeko-Tex*
+uni-sex?
+anti-aliasing?
+Rhine-Main*
+sub-licensor$
+sub-licensors$
+sub-licensee$
+sub-licensees$

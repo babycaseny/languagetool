@@ -8157,4 +8157,21 @@ Telegramm-Gruppe/N
 Vorschwein/S
 Vorschweine/NS
 Innenalster
+Durchlaufposen   # gibt es zwar (Angelzubehör), aber vermutlich ist 'Durchlaufposten' gemeint
 IHr
+Feinbild/S
+Feinbildes
+Feinbilder/N
+Baumrate/N
+Beutelrate/N
+Bücherrate/N
+Farbrate/N
+Grasrate/N
+Rennrate/N
+Sumpfrate/N
+Taschenrate/N
+Wanderrate/N
+Wasserrate/N
+Mitinbegriffen
+Miteinbegriffen
+Anteilname

@@ -1,5 +1,5 @@
-cavalgata=cavalcada
-cavalgates=cavalcades
+lásers=láseres
+Hannoucah|Hanoukka|Hanuká|Hanukkah|Januka|Janukka|Khanucá|Januká=Janucá|Jánuca
 distensionamiento=distensión
 distensionamientos=distensiones
 cualquieras=cualesquiera|cualquiera

@@ -225,6 +225,7 @@ public class Catalan extends Language {
       case "DOS_ARTICLES": return 10; // greater than apostrophation rules
       case "MOTS_GUIONET": return 10; // greater than CONCORDANCES_DET_NOM
       case "ZERO_O": return 10; //greater than SPELLING
+      case "URL": return 10; //greater than SPELLING
       case "CONCORDANCES_DET_NOM": return 5;
       case "DET_GN": return 5; // greater than DE_EL_S_APOSTROFEN
       case "SPELLING": return 5;
@@ -300,6 +301,8 @@ public class Catalan extends Language {
       Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
   private static final Pattern CA_APOSTROPHES4 = Pattern.compile("\\b(l)a ([aeoàúèéí][^ ])",
       Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
+  private static final Pattern CA_APOSTROPHES5 = Pattern.compile("\\b([mts]e) (['’])",
+      Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
 
   @Override
   public String adaptSuggestion(String s) {
@@ -315,6 +318,8 @@ public class Catalan extends Language {
     s = m3.replaceAll("$1'$2");
     Matcher m4 = CA_APOSTROPHES4.matcher(s);
     s = m4.replaceAll("$1'$2");
+    Matcher m5 = CA_APOSTROPHES5.matcher(s);
+    s = m5.replaceAll("$1$2");
     if (capitalized) {
       s = StringTools.uppercaseFirstChar(s);
     }

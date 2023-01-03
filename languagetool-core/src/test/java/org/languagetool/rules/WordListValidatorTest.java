@@ -36,7 +36,7 @@ public class WordListValidatorTest {
           "Œ€ūαΑβΒγɣΓδΔεΕζΖηΗθΘιΙκΚλΛμΜνΝξΞοΟπΠρΡσΣτΤυΥφΦχΧψΨωΩάΆέΈίΊήΉύΎϊϋΰΐœţłń" +
           "ŚśōżúïÎôêâû" +
           "'’" +
-          "./-]+" +
+          "./%-]+" +
           "|[khmcdµ]?m[²³]|°[CFR]|C?O₂-?.*|mc²";
 
   // Words that are valid but with special characters so that we don't want to
@@ -149,6 +149,7 @@ public class WordListValidatorTest {
           "Tuğrul",
           "Kīlauea",
           "Terzić",
+          "Jūjutsu/S",
           "Ñuñoa",
           "Stevanović",
           "Børge",
@@ -210,7 +211,7 @@ public class WordListValidatorTest {
         SpellingCheckRule sRule = (SpellingCheckRule) rule;
         String file = sRule.getSpellingFileName();
         if (JLanguageTool.getDataBroker().resourceExists(file) && !checked.contains(file)) {
-          System.out.println("Checking " + file);
+          System.out.println("Checking validity of word list file " + file);
           CachingWordListLoader loader = new CachingWordListLoader();
           List<String> words = loader.loadWords(file);
           validateWords(words, file);

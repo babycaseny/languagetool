@@ -26,6 +26,7 @@ import org.languagetool.AnalyzedSentence;
 import org.languagetool.AnalyzedTokenReadings;
 import org.languagetool.Language;
 import org.languagetool.tools.StringTools;
+import org.languagetool.tools.Tools;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -140,11 +141,6 @@ public abstract class AbstractSimpleReplaceRule2 extends Rule {
     {
       String line;
       while ((line = br.readLine()) != null) {
-        String[] origLineParts = line.split("=");
-        if (origLineParts.length == 2 && origLineParts[0].trim().equals(origLineParts[1].trim())) {
-          throw new IOException("Format error in file " +  getDataBroker().getFromRulesDirAsUrl(filename)
-            + ". Found same word on left and right side of '='. Line: " + line);
-        }
         line = line.trim();
         if (line.isEmpty() || line.charAt(0) == '#') { // ignore comments
           continue;
@@ -156,35 +152,31 @@ public abstract class AbstractSimpleReplaceRule2 extends Rule {
             line = line + "\t" + parts[1].trim();
           } 
         }
-        String[] parts = line.split("=");
-        if (parts.length != 2) {
+        String[] parts = line.split("\t");
+        String confPair = parts[0];
+        String msg;
+        if (parts.length == 1) {
+          msg = null;
+        } else if (parts.length == 2) {
+          msg = parts[1];
+        } else {
           throw new IOException("Format error in file " + getDataBroker().getFromRulesDirAsUrl(filename)
-                  + ". Expected exactly 1 '=' character. Line: " + line);
+            + ". Expected at most 1 '=' character and at most 1 tab character. Line: " + line);
         }
-        String[] wrongForms = parts[0].split("\\|"); // multiple incorrect forms
+        String[] confPairParts = confPair.split("=");
+        String[] wrongForms = confPairParts[0].split("\\|"); // multiple incorrect forms
         for (String wrongForm : wrongForms) {
-          int wordCount = 0;
-          List<String> tokens = lang.getWordTokenizer().tokenize(wrongForm);
-          for (String token : tokens) {
-            if (!StringTools.isWhitespace(token)) {
-              wordCount++;
-            }
-          }
-          // grow if necessary
-          for (int i = list.size(); i < wordCount; i++) {
+          int wordCount = getWordCount(lang, wrongForm);
+          for (int i = list.size(); i < wordCount; i++) {  // grow if necessary
             list.add(new HashMap<>());
           }
-          SuggestionWithMessage sugg;
-          if (parts[1].contains("\t")) {
-            String[] suggestionParts = parts[1].split("\t");
-            if (suggestionParts.length != 2) {
-              throw new IOException("Invalid format - use only one tab character to separate suggestion from the message: " + line);
-            }
-            sugg = new SuggestionWithMessage(suggestionParts[0], suggestionParts[1]);
-          } else {
-            sugg = new SuggestionWithMessage(parts[1]);
+          String searchToken = caseSensitive ? wrongForm : wrongForm.toLowerCase();
+          if (!checkingCase && searchToken.equals(confPairParts[1])) {
+            throw new IOException("Format error in file " +  getDataBroker().getFromRulesDirAsUrl(filename)
+              + ". Found same word on left and right side of '='. Line: " + line);
           }
-          list.get(wordCount - 1).put(caseSensitive ? wrongForm : wrongForm.toLowerCase(), sugg);
+          SuggestionWithMessage sugg = new SuggestionWithMessage(confPairParts[1], msg);
+          list.get(wordCount - 1).put(searchToken, sugg);
         }
       }
     }
@@ -194,6 +186,17 @@ public abstract class AbstractSimpleReplaceRule2 extends Rule {
       result.add(Collections.unmodifiableMap(map));
     }
     return Collections.unmodifiableList(result);
+  }
+
+  private static int getWordCount(Language lang, String wrongForm) {
+    int wordCount = 0;
+    List<String> tokens = lang.getWordTokenizer().tokenize(wrongForm);
+    for (String token : tokens) {
+      if (!StringTools.isWhitespace(token)) {
+        wordCount++;
+      }
+    }
+    return wordCount;
   }
 
   protected void addToQueue(AnalyzedTokenReadings token,
@@ -263,12 +266,16 @@ public abstract class AbstractSimpleReplaceRule2 extends Rule {
           }
           String msg = getMessage().replaceFirst("\\$match", crt).replaceFirst("\\$suggestions", msgSuggestions);
           if (crtMatch.getMessage() != null) {
-            msg = crtMatch.getMessage();
+            if (!crtMatch.getMessage().startsWith("http://") && !crtMatch.getMessage().startsWith("https://")) {
+              msg = crtMatch.getMessage();
+            }
           }
           int startPos = prevTokensList.get(len - crtWordCount).getStartPos();
           int endPos = prevTokensList.get(len - 1).getEndPos();
-          RuleMatch ruleMatch;
-          ruleMatch = new RuleMatch(this, sentence, startPos, endPos, msg, getShort());
+          RuleMatch ruleMatch = new RuleMatch(this, sentence, startPos, endPos, msg, getShort());
+          if (crtMatch.getMessage() != null && (crtMatch.getMessage().startsWith("http://") || crtMatch.getMessage().startsWith("https://"))) {
+            ruleMatch.setUrl(Tools.getUrl(crtMatch.getMessage()));
+          }
           if (subRuleSpecificIds) {
             ruleMatch.setSpecificRuleId(StringTools.toId(getId() + "_" + crt));
           }

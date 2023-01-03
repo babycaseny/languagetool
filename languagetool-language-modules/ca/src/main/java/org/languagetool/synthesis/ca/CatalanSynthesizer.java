@@ -25,6 +25,7 @@ import org.languagetool.tools.StringTools;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -47,6 +48,9 @@ public class CatalanSynthesizer extends BaseSynthesizer {
   
   /* A special tag to add determiner (el, la, l', els, les). **/
   // private static final String ADD_DETERMINER = "DT";
+  
+  /* Exceptions */
+  public static final List<String> LemmasToIgnore =  Arrays.asList("enterar", "sentar", "conseguir", "alcançar");
 
   /** Patterns for number and gender **/
   private static final Pattern pMS = Pattern.compile("(N|A.).[MC][SN].*|V.P.*SM.?");
@@ -82,12 +86,7 @@ public class CatalanSynthesizer extends BaseSynthesizer {
   @Override
   public String[] synthesize(AnalyzedToken token, String posTag) throws IOException {    
     if (posTag.startsWith(SPELLNUMBER_TAG)) {
-      String[] tag = posTag.split(":");
-      String strToSpell = token.getToken();
-      if (tag.length > 1 && tag[1].equals("feminine")) {
-        strToSpell = "feminine " + strToSpell;
-      }
-      return new String[] { getSpelledNumber(strToSpell) };
+      return super.synthesize(token, posTag);
     }
     String lemma = token.getLemma();
     String toAddAfter = "";
@@ -157,6 +156,9 @@ public class CatalanSynthesizer extends BaseSynthesizer {
     }
     if (posTagRegExp) {
       String lemma = token.getLemma();
+      if (LemmasToIgnore.contains(lemma)) {
+        return new String[0];
+      }
       String toAddAfter = "";
       // verbs with noun
       if (posTag.startsWith("V")) {

@@ -84,7 +84,7 @@
 
 
     <!ENTITY gerundio_verbos "acabar|acontecer|afundar|ajudar|aumentar|criar|degradar|diminuir|disparar|elaborar|fazer|fluir|instalar|ir|lesar|quebrar|ser|travar|vir">
-    <!ENTITY gerundio_excecoes "abandonando|acelerando|acrescentando|acumulando|adicionando|aperfeiçoando|armazenando|aumentando|baixando|beneficiando|caindo|causando|chegando|conquistando|conseguindo|consolidando|crescendo|criando|decrescendo|desaparecendo|emergindo|empregando|envolvendo|fazendo|ficando|ganhando|havendo|jogando|levantando|mudando|originando|perdendo|permitindo|pressionando|procurando|progredindo|propagando|querendo|recorrendo|reduzindo|repetindo|sabendo|saindo|sendo|subindo|surgindo|usando">
+    <!ENTITY gerundio_excecoes "abandonando|acelerando|acrescentando|acumulando|adicionando|alimentando|alternando|aperfeiçoando|armazenando|aumentando|baixando|beneficiando|caindo|causando|chegando|conquistando|conseguindo|consolidando|consumindo|crescendo|criando|decrescendo|desaparecendo|emergindo|empregando|envolvendo|fazendo|ficando|ganhando|havendo|jogando|levantando|libertando|matando|morrendo|mudando|originando|perdendo|permitindo|pressionando|procurando|progredindo|propagando|publicando|querendo|recorrendo|reduzindo|repetindo|revendo|sabendo|saindo|sendo|subindo|surgindo|usando">
 
 
     <!ENTITY cores_invariaveis "açafrão|água|alizarina|âmbar|ameixa|amêndoa|ametista|aspargo|bordô|borgonha|brasil|bronze|caqui|caramelo|cardo|carmesim|carmim|cenoura|cereja|chocolate|ciano|cinza|cobre|concha|creme|dainise|ébano|eminência|esmeralda|eucalipto|feldspato|ferrugem|fúchsia|fuligem|gainsboro|gelo|glitter|goiaba|grená|heliotrópio|independência|índigo|iris|jade|jambo|jasmine|kiwi|kobi|kobicha|laranja|lavanda|lemon|lilás|lima|linho|madeira|magenta|malva|mamão|maná|marfim|milho|mocassim|mostarda|neve|nyanza|ocre|oliva|orquídea|ouro|pêssego|prata|púrpura|quantum|quartz|renda|rosa|salmão|sépia|siena|tangerina|terracota|tijolo|tomate|triássico|trigo|turquesa|ube|urucum|vinho|violeta|xanadu|zaffre">
@@ -93,7 +93,7 @@
 
 
     <!-- Termos informais específicos pt_PT - the rule also tests with adding a "s" (plural) at the end of each word -->
-    <!ENTITY informal "abéculas?|ajavardar|anhar|anjinhos?|bacan[ao]s?|badalos?|bagunças?|baita|baixinh[ao]s?|balof[ao]s?|baril|barracadas?|batelada|baza|bazam|bazas|bazaste|bazei|bazámos|bazamos|beijoqueir[ao]s?|bejecas?|bichan[ao]s?|bichinh[ao]s?|biscates?|bitaites?|blablablá|boazonas?|bonz(ão|ões)|bófias?|bonzudos?|bora|bués?|cadê|calhamaços?|camandros?|camisinhas?|caraças|carago|caramba|carangos?|carradas?|casinhas?|casórios?|caxamolas?|certinh[ao]s?|chaval[ao]s?|chilindrós?|cocó|coisar|contigo|copião|cornear|cum|cuscar|cusc[ao]s?|cuzinhos?|danad[ao]s?|drunfos?|encrencas?|engonhar|epa|esbardalhar|estrambótic[ao]s?|estrilho|fartazanas?|festarolas?|fezadas?|fixes|fixolas|fofinh[ao]s?|gabarolas?|gaj[ao]s?|garinas?|gatunar|gentinhas?|gosmas?|guit[ao]|gunas?|janad[ao]s?|javardices?|jolas?|larachas?|lelés?|mãezinhas?|mamalhud[ao]s?|mamocas?|man[ao]s?|marad[ao]s?|maralhas?|marimbar|milhent[ao]s?|moinas?|motoqueir[ao]s?|népias?|oi|olhómetros?|paizinhos?|papão|papo|passarocas?|peid[ao]s?|petiza?|piegas|porrada|porre|porreiros?|poucochinhos?|prenhas?|pr[ao]|pró|putos?|quecas?|queridinh[ao]s?|rabiosques?|rapaziadas?|tabefes?|tanas|trampas?|transar|traques?|tretas?|trouxas?|vaquinhas?|velhot[ae]s?|vó|vô|xi|xixi|zilh(ão|ões)">
+    <!ENTITY informal "abéculas?|ajavardar|anhar|anjinhos?|bacan[ao]s?|badalos?|bagunças?|baita|baixinh[ao]s?|balof[ao]s?|baril|barracadas?|batelada|baza|bazam|bazas|bazaste|bazei|bazámos|bazamos|beijoqueir[ao]s?|bejecas?|bichan[ao]s?|bichinh[ao]s?|biscates?|bitaites?|blablablá|boazonas?|bonz(ão|ões)|bófias?|bonzudos?|bora|bués?|cadê|calhamaços?|camandros?|camisinhas?|caraças|carago|caramba|carangos?|carradas?|casinhas?|casórios?|caxamolas?|certinh[ao]s?|chaval[ao]s?|chilindrós?|cocó|coisar|contigo|copião|cornear|cum|cuscar|cusc[ao]s?|cuzinhos?|danad[ao]s?|drunfos?|encrencas?|engonhanço|engonhar|epa|esbardalhar|estrambótic[ao]s?|estrilho|fartazanas?|festarolas?|fezadas?|fixes|fixolas|fofinh[ao]s?|fónix|gabarolas?|gaj[ao]s?|garinas?|gatunar|gentinhas?|gosmas?|guit[ao]|gunas?|janad[ao]s?|javardices?|jolas?|larachas?|lelés?|mãezinhas?|mamalhud[ao]s?|mamocas?|man[ao]s?|marad[ao]s?|maralhas?|marimbar|milhent[ao]s?|moinas?|motoqueir[ao]s?|népias?|oi|olhómetros?|paizinhos?|papão|papo|passarocas?|peid[ao]s?|petiza?|piegas|porrada|porre|porreiros?|poucochinhos?|prenhas?|pr[ao]|pró|putos?|quecas?|queridinh[ao]s?|rabiosques?|rapaziadas?|tabefes?|tanas|trampas?|transar|traques?|tretas?|trouxas?|vaquinhas?|velhot[ae]s?|vó|vô|xi|xixi|zilh(ão|ões)">
 
 
     <!-- Termos depreciativos específicos pt_PT - the rule uses inflected='yes' to get all forms -->
@@ -103,7 +103,7 @@
     <!-- Estrangeirismos específicos pt_PT - the rule also tests with adding a "s" (plural) at the end of each word -->
     <!ENTITY barbarismos "accelerandos?|agitato|allegretto|allegro|amabile|apfelstrudel|backups?|badine|bavaroise|beagle|becquerel|bip|blague|blister|boate|bonsai|breakdance|brie|cache-sexe|calzone|camber|campus|caniche|cânon|cantabile|cantata|carpaccio|chaise-longue|charleston|chartreuse|cheddar|clarke|clear|clearance|cloisonné|códex|coloratura|continuum|cookies?|cordon-bleu|corpus|coulomb|crevasse|croissant|cumbia|czarina|datcha|debye|deficit|design|designers?|doping|doppler|drives?|duce|duplex|ecstasy|ensalada|ensemble|entente|evasé|fait-divers|fanfreluche|farads?|fatwa|fax|fermata|flamenco|flash|flashes|fondue|forint|fortran|fox|freeware|fugato|funk|gay|glamour|glide|gospel|gouda|grunge|guaracha|habanera|habitat|habitus|hip-hop|hippies?|homo|horseball|hype|ibidem|id|impedimenta|influenza|in-octavo|interferon|internet|item|jacuzzi|jamboree|jazz|joint-venture|joule|junkies?|kamikazes?|karaoke|karting|kasba|ketchup|kina|kitchenette|kuna|kwacha|kwanza|lamé|larghetto|leasing|legato|lingerie|locus|maestoso|majorette|mambo|managers?|maquis|marketing|maser|matrioska|maxwell|microfarad|milcurie|miserere|misters?|modems?|moderato|modus|mohair|muesli|mvdol|napalm|necessaire|net|new-age|noir|nomenklatura|nuance|nylon|offshores?|opus|origami|ossobuco|ouguiya|paanga|pahoehoe|paparazzi|parsec|patchouli|pecorino|pence|perestroika|petit-suisse|pianoforte|pickles?|piercing|pilé|pince-nez|pinscher|playboys?|poche|pogrom|poise|poodle|pop|posteriori|pot-pourri|práxis|priori|prise|promenade|punks?|putter|puzzle|quantum|quark|quiche|ralenti|rallentando|rave|ready-made|reggae|régie|reprise|reps|réveillon|rickettsia|rinforzando|ritardando|rocaille|rodeo|roentgen|rookie|rubato|samples?|sashimi|scherzando|scherzo|scone|set|setter|sexy|sfogato|sforzando|shareware|shar-pei|shiatsu|shopping|sic|sidecar|sievert|single|skates?|slalom|smorzando|socialite|sottovoce|soul|spas?|spins?|sprays?|sprue|staccato|stands?|stilb|stock|stop|stress|strippers?|superstars?|surf|sushi|tai-chi|tandem|tavolatura|techno|teflon|telex|terylene|tickets?|timeshare|tiramisu|tofu|toner|tópos|tops?|tori|trailer|tremolo|trial|triplex|tsunami|tupperware|tutilimúndi|tutti|tutu|vaudeville|velcro|vernissage|vibrato|vide|vides|vintage|vitae|vitrine|vivace|volte-face|waffle|web|weber|yang|yeti|yin|yuppie">
     <!ENTITY barbarismos_rev2 "abstracts?|apartheids?|applets?|apps?|baby-dolls?|backbones?|baconburgers?|banners?|bear|bestsellers?|bitcoins?|bloggers?|blues?|bluetooth|bogies?|boids?|boneheads?|boosts?|bots?|bottom-up|brainstorms?|bull|bullying|burnouts?|cameraman|carjacking|chairman|commodit(y|ies)|contactless|crackers?|cracking|cyberbullying|debugging|demands?|developers?|dildos?|dojos?|downgrades?|downloads?|downtimes?|drones?|drugstores?|e-bullying|e-commerce|e-learning|e-manuals?|e-newsletters?|e-readers?|exploits?|fair-plays?|feeders?|flats?|flyers?|forwarding|forwards?|führers?|gaming|gangbang|geeks?|goals?|gold|hardwares?|hits?|homebanking|homepages?|idem|idle|inputs?|items?|hacks?|hackers?|hacking|kits?|know-hows?|KOs?|lasers?|layers?|legacy|lags?|lob|logins?|loops?|lossless|mailbombings?|marines?|marketeers?|mayday|milkshakes?|nerds?|netiquette|newsgroups?|off-label|offline|offsides?|on-label|outputs?|overbooking|overflows?|p-values?|palmiers?|papers?|patch(es)?|pens?|players?|previews?|ransomwares?|reboots?|red|reggaeton|restarts?|réveillons?|roadmaps?|royalt(y|ies)|screenshots?|scroll|seals?|shell|shelters?|shows?|slogans?|smartphones?|snobs?|sockets?|softwares?|spam|spammers?|sprites?|stalking|standards?|stealth|steps?|streaming|strogonoffs?|strings?|suspenses?|swarms?|tablets?|tagging|task-forces?|telemarketing|thresholds?|time-sharing|tips?|toolkits?|topless|triggers?|trolls?|tweeters?|on-line|online|underscores?|updates?|upgrades?|uptimes?|wannabes|wargames?|webpages?|westerns?|wikis?|wireless|woofers?">
-    <!ENTITY barbarismos_rev3 "blockchains?|Blue|bodyboarders?|bolds?|bugs?|builds?|cents?|check-ins?|chipsets?|clusters?|cover-ups?|crowdfundings?|crowdsourcings?|desktops?|fanzines?|flags?|footnotes?|frameworks?|futons?|geocachers?|gilberts?|hotspots?|hoverboards?|icebergs?|input-output|interfaces?|jetpacks?|marketplaces?|LEDs?|nudes?|open-source|overclockings?|pidgins?|podcasts?|previews?|rankings?|rap|Red|scams?|scammers?|skippers?|snipers?|spoofing|sticks?|sudokus?|takeovers?|tokens?|top-down|trackpads?|thrashers?|trackings?|tweets?|Unicode|uploads?|walkie-talkies?|warm-ups?|webcams?|webinars?|webmasters?|woks?|yeah|yes-man|zen|zooms?">
+    <!ENTITY barbarismos_rev3 "blockchains?|bodyboarders?|bolds?|bugs?|builds?|cents?|check-ins?|chipsets?|clusters?|cover-ups?|crowdfundings?|crowdsourcings?|desktops?|emojis?|emoticons?|fanzines?|flags?|footnotes?|frameworks?|futons?|geocachers?|gilberts?|hotspots?|hoverboards?|icebergs?|input-output|interfaces?|jetpacks?|marketplaces?|LEDs?|likes?|nudes?|open-source|overclockings?|pidgins?|podcasts?|previews?|rankings?|rap|scams?|scammers?|skippers?|smileys?|snipers?|spoofing|sticks?|sudokus?|takeovers?|tokens?|top-down|trackpads?|thrashers?|trackings?|tweets?|Unicode|uploads?|walkie-talkies?|warm-ups?|webcams?|webinars?|webmail|webmasters?|woks?|yeah|yes-man|zen|zooms?">
 
 
     <!ENTITY expressoes_invariaveis_pt_pt "algema|afazere|alvíssara|anai|antolho|apetrecho|arra|arredore|boda|brócol[io]|cã|calça|calenda|ceroula|cócega|condolência|confin|endoença|esponsai|esposório|exéquia|fasto|féria|feze|finança|hemorróida|mane|núpcia|óculo|olheira|pantalona|parabén|pêsame|petrecho|pi[ck]le|primícia|reticência|suspensório|treva|víscera|vívere">
@@ -2655,18 +2655,6 @@
     </rule>
 
 
-    <rule id="POR_QUEH_PORQUE" name="Confusão: 'Por quê' e 'Porque'">
-      <!-- Created by Tiago F. Santos, Portuguese rule, 2017-XX-XX -->
-      <pattern>
-        <token>por</token>
-        <token>quê</token>
-      </pattern>
-      <message>Em Português Europeu a expressão é sempre justaposta.</message>
-      <suggestion>porquê</suggestion>
-      <url>https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/o-porque-e-o-por-que-e-o-portugues-europeu/30017</url>
-      <short>Brasileirismo</short>
-      <example correction="porquê">Fizeste isso <marker>por quê</marker>?</example>
-    </rule>
 
 
     <rulegroup id="POSSESSIVE_WITHOUT_ARTICLE" name="Determinante possessivo sem artigo">
@@ -2686,6 +2674,25 @@
           <example>Estão dispostos a retomar tudo aquilo seu por direito, com sinceridade e lealdade.</example>
         </antipattern>
         <!-- MARCOAGPINTO 2022-10-25 (Checked/Enhanced) (25-JUL-2022+) *END* -->
+
+        <!-- MARCOAGPINTO 2022-12-13 (Checked/Enhanced) (25-JUL-2022+) *START* -->
+        <antipattern>
+          <token><exception postag_regexp='no' postag='SPS00'/></token>
+          <token postag='D[ADI].+' postag_regexp='yes'/>
+          <token postag='NC.+|AQ.+' postag_regexp='yes'/>
+          <token postag='AQ.+' postag_regexp='yes'> <!-- It only works with AQ.+ -->
+            <exception postag_regexp='yes' postag='V.+'/>
+          </token>
+          <token postag='DP.+' postag_regexp='yes'/>
+          <example>Dialoga com Elas, é próximo a Elas, com as mães e as filhas, que encontram no PE um cantinho só seu.</example>
+          <example>Mas eu, cá no meu canto devassado pelo Google, bem que gostaria de ter um ou outro segredinho todo meu.</example>
+          <example>Temos uma Amazônia inteira pra monitorar e não temos um satélite exclusivo nosso.</example>
+          <example>O Tom é um parente distante meu.</example>
+          <example>Os pastores amigos meus, por exemplo, jamais dizem uma besteira desta de que a Igreja católica nasceu com constantino.</example>
+          <example>Eu leio o poema pro meu filho.</example>
+          <example>...tro no Brasil, pois a convites do Instituto Papai, euzinha cheguei para aprontar aquela intervenção artística meu bem.</example>
+        </antipattern>
+        <!-- MARCOAGPINTO 2022-12-13 (Checked/Enhanced) (25-JUL-2022+) *END* -->
 
       <rule>
         <antipattern>
@@ -3596,14 +3603,14 @@
 
         <!-- MARCOAGPINTO 2022-12-04 (Checked/Enhanced) (25-JUL-2022+) *START* -->
         <antipattern>
-		  <token>
-		    <exception regexp='yes'>&pronomes_obliquos;</exception>
-			<exception postag_regexp='yes' postag='V.+'/>
-		  </token>
+          <token>
+            <exception regexp='yes'>&pronomes_obliquos;</exception>
+            <exception postag_regexp='yes' postag='V.+'/>
+          </token>
           <token postag='V.+' postag_regexp='yes'>
             <exception postag_regexp='no' postag='RN'/>
           </token>
-		  <token postag='SPS00' postag_regexp='no'/>
+          <token postag='SPS00' postag_regexp='no'/>
           <token regexp='yes'>&pronomes_obliquos;</token>
           <token postag='V.+' postag_regexp='yes'/>
           <example>Ele acabara de lhe frustrar as esperanças.</example>
@@ -3615,6 +3622,59 @@
           <example>Eu gostaria de me trocar.</example>
         </antipattern>
         <!-- MARCOAGPINTO 2022-12-04 (Checked/Enhanced) (25-JUL-2022+) *END* -->
+
+        <!-- MARCOAGPINTO 2022-12-30 (Checked/Enhanced) (25-JUL-2022+) *START* -->
+        <antipattern>
+          <token postag='DA.+' postag_regexp='yes'>
+            <exception scope="previous" postag_regexp='yes' postag='SENT_START|_PUNCT|RG'/>
+          </token>
+          <token min="1" max="2" postag='NC.+|AQ.+|NP.+' postag_regexp='yes'/>
+          <token regexp='yes'>&pronomes_obliquos;
+            <exception regexp='no'>se</exception>
+          </token>
+          <token postag='V.+' postag_regexp='yes'/>
+          <token postag='SPS00' postag_regexp='no'/>
+          <example>Não vou chorar mais pelo que o ano me trouxe de menos bom.</example>
+          <example>Obrigado por me explicar finalmente por que as pessoas me tomam por um idiota.</example>
+          <example>Que o Universo lhe envolva em plena felicidade e perfeita harmonia!</example>
+          <example>Quanto é que o político te pagou para que o retratassem no teu muro?</example>
+          <example>Certamente o capacete lhe salvou a vida.</example>
+          <example>Jamais passou pela minha cabeça machucá-lo, mas as circunstâncias me levaram a fazê-lo.</example>
+          <example>Eu tenho medo de não fazer as pessoas me entenderem em inglês.</example>
+          <example>Nós simplesmente não podemos ignorar o que o Tom nos disse para fazer.</example>
+        </antipattern>
+        <!-- MARCOAGPINTO 2022-12-30 (Checked/Enhanced) (25-JUL-2022+) *END* -->
+
+        <!-- MARCOAGPINTO 2023-01-01 (Checked/Enhanced) (25-JUL-2022+) *START* -->
+        <antipattern>
+          <token postag='NC.+|AQ.+|NP.+' postag_regexp='yes'/>
+          <token postag='SPS00' postag_regexp='no'/>
+          <token regexp='yes'>&pronomes_obliquos;
+            <exception regexp='no'>se</exception>
+          </token>
+          <token postag='V.+' postag_regexp='yes'/>
+          <token postag='DA.+|SPS00:DA.+|[DP][ADIPR].+|SPS00:[DP][ADIPR].+' postag_regexp='yes'>
+            <exception scope="next" postag_regexp='no' postag='VMIP3S0'/> <!-- "Se alguém tiver alguma informação sobre os convocados me avisa." -->
+          </token>
+          <example>Você tem esse jeitinho de me estragar o dia quando acordo bem disposta.</example>
+          <example>Ele teve a bondade de me mostrar o caminho.</example>
+          <example>Ficarei feliz em te ajudar a qualquer hora.</example>
+          <example>Tom é incapaz de me dizer o que fazer.</example>
+          <example>Não tem pressa em me devolver o livro.</example>
+          <example>Espero ter a chance de lhe retribuir o favor que você fez para mim.</example>
+          <example>Estou ansioso por te encontrar na próxima vez que visitar sua cidade.</example>
+          <example>Eu tinha medo de me perder no escuro.</example>
+          <example>Não fui capaz de me lembrar do endereço dela.</example>
+          <example>Eu espero que eu tenha uma chance de te ver na próxima vez que eu estiver em Nova Iorque.</example>
+          <example>Estou perdendo rápidamente a minha habilidade de me imergir nas atividades que gosto.</example>
+          <example>Eu não tive a intenção de te passar tal impressão.</example>
+          <example>Eu ficarei feliz em te ajudar qualquer hora dessas.</example>
+          <example>Você acaba de me fazer muito feliz em me dizer isso, de verdade!</example>
+          <example>Poderia fazer a gentileza de me explicar?</example>
+          <example>Apesar de eu não usar mais esses sapatos, não tenho coragem de me livrar deles.</example>
+          <example>Não tenho outro jeito de me livrar dessa infelicidade.</example>
+        </antipattern>
+        <!-- MARCOAGPINTO 2023-01-01 (Checked/Enhanced) (25-JUL-2022+) *END* -->
 
       <!-- MARCOAGPINTO 2021-04-30 + 2021-05-01 + 2021-05-04 (17-MAR-2021+) *START* -->
       <!--
@@ -4183,7 +4243,6 @@
         <example correction="Telefonei-lhes"><marker>Telefonei para elas</marker>.</example>
       </rule>
 
-
     </rulegroup>
 
 
@@ -4241,49 +4300,65 @@
 
 
     <!-- CHAMAR/DENOMINAR DE chamar/denominar -->
-    <rulegroup id='VERBO_PRONOMINAL_DE' name="V. Pronominal + de → V. Pronominal" type="style">
-      <!--      Created by Marco A.G.Pinto with Ricardo Joseh Lima suggestions, Portuguese rule 2022-07-10 (Checked/Enhanced) (5-JUN-2022+)      -->
+    <rulegroup id='VERBO_PRONOMINAL_DE_V2' name="V. Pronominal + de → V. Pronominal" type="style">
+      <!-- Created by Marco A.G.Pinto with Ricardo Joseh Lima suggestions, Portuguese rule 2023-01-02 (25-JUL-2022+) -->
       <!--
       Temos uma teoria denominada de matemática. → Temos uma teoria denominada matemática.
       A teoria, denominaram-lha de matemática. → A teoria, denominaram-lha matemática.
       -->
       <url>https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/a-regencia-dos-verbos-chamar-e-denominar-ii/34550</url>
+
+      <!--
+           MARCOAGPINTO inserted global antipatterns for all subrules on top using the logic (25-JUL-2022+)
+      -->
+
+      <antipattern>
+        <token regexp='yes' inflected='yes'>alterar|banir|bloquear|efetuar|enviar|fazer|modificar|pedir|querer|realizar|receber|requerer|ser|solicitar</token>
+        <token min="0" max="1" postag='[DP][ADIPR].+|SPS00:[DP][ADIPR].+|SPS00|CC|CS|RG|I|RM|RN' postag_regexp='yes'/>
+        <token regexp='yes'>chamad[ao]s?|chamares</token>
+        <token>de</token>
+        <token min="0" max="1" postag='_QUOT' postag_regexp='no'/>
+        <token postag='NP.+|AQ.+|NC.+|UNKNOWN' postag_regexp='yes'/>
+        <example>Recebi uma chamada de vídeo.</example>
+        <example>Recebi uma chamada de áudio.</example>
+        <example>Recebi a chamada de telefone.</example>
+        <example>É possível fazer chamadas de vídeo no WhatsApp.</example>
+        <example>Simão recebe chamada de Augusto para ir a um jantar mais logo.</example>
+        <example>Tom recebeu uma chamada de Mary.</example>
+        <example>APIs também estão disponíveis para permitir que aplicativos no modo de núcleo filtrem e modifiquem chamadas de registro feitas por outros aplicativos.</example>
+        <example>Meu primo recebeu o chamado de Deus e se tornou padre.</example>
+        <example>Meu primo recebeu o chamado de Deus e virou padre.</example>
+        <example>Queremos os chamares de Marco.</example>
+        <example>Em alguns casos, as sequências com termos positivos são chamadas de sequências positivas.</example>
+        <example>Atualmente, são chamados de “gigantes” os indivíduos que apresentam o dobro do tamanho da média para aquele gênero.</example>
+        <example>Fiz uma chamada de atenção ao Pedro</example>
+      </antipattern>
+ 
+      <antipattern>
+        <token regexp='yes' inflected='yes'>alterar|banir|bloquear|chamar|efetuar|enviar|fazer|modificar|pedir|querer|realizar|receber|requerer|ser|solicitar</token>
+        <token min="0" max="1" regexp='yes' spacebefore='no'>&tracos_de_separacao;</token>
+        <token min="0" max="1" regexp='yes'>&pronomes_obliquos;</token>
+        <token>de</token>
+        <token regexp='yes'>áudio|regresso|retorno|telefone|vídeo|volta</token>
+        <example>Ele foi chamado de volta, em meio à sua viagem.</example>
+        <example>Chamaram-no de volta, em meio à sua viagem.</example>
+        <example>O médico o chamou de volta.</example>
+        <example>Certifique-se de me chamar de volta.</example>
+        <example>Depois da pandemia de COVID-19, as chamadas de vídeo se tornaram fundamentais no espaço de trabalho.</example>
+      </antipattern>
+ 
       <rule>
-
-        <antipattern>
-          <token min="1" max="2" postag='[DP][ADIPR].MP.+|SPS00:[DP][ADIPR].MP.+|SPS00|CC|CS|RG|I|RM|RN' postag_regexp='yes'/>
-          <token postag='VMSF2S0' postag_regexp='no'/>
-          <token>de</token>
-          <token min="0" max="1" postag='_QUOT' postag_regexp='no'/>
-          <token postag='NP.+|AQ.+|NC.+|UNKNOWN' postag_regexp='yes'/>
-          <example>Queremos os chamares de Marco.</example>
-        </antipattern>
-
-        <antipattern>
-          <token regexp='yes' inflected='yes'>alterar|banir|bloquear|enviar|modificar|receber</token>
-          <token min="0" max="1" postag='[DP][ADIPR].+|SPS00:[DP][ADIPR].+|SPS00|CC|CS|RG|I|RM|RN' postag_regexp='yes'/>
-          <token inflected='yes'>chamar</token>
-          <token>de</token>
-          <example>Simão recebe chamada de Augusto para ir a um jantar mais logo.</example>
-          <example>APIs também estão disponíveis para permitir que aplicativos no modo de núcleo filtrem e modifiquem chamadas de registro feitas por outros aplicativos.</example>
-          <example>Meu primo recebeu o chamado de Deus e virou padre.</example>
-          <example>Tom recebeu uma chamada de Mary.</example>
-        </antipattern>
-
         <pattern>
           <marker>
             <token regexp='yes' inflected='yes'>&verbos_pronominais;</token>
             <token>de</token>
           </marker>
           <token min="0" max="1" postag='_QUOT' postag_regexp='no'/>
-          <token postag='NP.+|AQ.+|NC.+|UNKNOWN' postag_regexp='yes'>
-            <exception regexp='yes'>regresso|retorno|volta</exception>
-          </token>
+          <token postag='NP.+|AQ.+|NC.+|UNKNOWN' postag_regexp='yes'/>
         </pattern>
         <message>Este verbo é pronominal, a redação correta é sem a preposição 'de'.</message>
         <suggestion>\1</suggestion>
         <example correction="denominada">Temos uma teoria <marker>denominada de</marker> matemática.</example>
-        <example>Ele foi chamado de volta, em meio à sua viagem.</example>
       </rule>
 
       <rule>
@@ -4291,19 +4366,17 @@
           <marker>
             <token regexp='yes' inflected='yes'>&verbos_pronominais;</token>
             <token regexp='yes' spacebefore='no'>&tracos_de_separacao;</token>
-            <token regexp='yes' spacebefore='no'>[ao]s?|l[ao]s?|lh[aeo]s?|n[ao]s?|me|se|te|vos</token>
+            <token regexp='yes' spacebefore='no'>&pronomes_obliquos;</token>
             <token>de</token>
           </marker>
           <token min="0" max="1" postag='_QUOT' postag_regexp='no'/>
-          <token postag='NP.+|AQ.+|NC.+|UNKNOWN' postag_regexp='yes'>
-            <exception regexp='yes'>regresso|retorno|volta</exception>
-          </token>
+          <token postag='NP.+|AQ.+|NC.+|UNKNOWN' postag_regexp='yes'/>
         </pattern>
         <message>Este verbo é pronominal, a redação correta é sem a preposição 'de'.</message>
         <suggestion>\1\2\3</suggestion>
         <example correction="denominaram-lha">A teoria, <marker>denominaram-lha de</marker> matemática.</example>
-        <example>Chamaram-no de volta, em meio à sua viagem.</example>
       </rule>
+
     </rulegroup>
 
 
@@ -4605,6 +4678,56 @@
     <rulegroup id='T-V_DISTINCTION' name='Tratamento formal: Tu,Você; Vós,Vocês' default='on' tags="picky">
       <!-- Created by Tiago F. Santos , Portuguese rule, 2016-12-28 -->
       <url>https://pt.wikipedia.org/wiki/Distin%C3%A7%C3%A3o_t-v</url>
+
+      <!--
+           MARCOAGPINTO inserted global antipatterns for all subrules on top using the logic (25-JUL-2022+)
+      -->
+
+      <!-- MARCOAGPINTO 2022-12-15 (Checked/Enhanced) (25-JUL-2022+) *START* -->
+      <antipattern>
+        <token postag='NC.+|AQ.+' postag_regexp='yes'/>
+        <token postag='RM' postag_regexp='no'/>
+        <token postag='VMSP2S0' postag_regexp='no'/>
+        <example>Tudo depende de fatores historicamente contingentes.</example>
+      </antipattern>
+      <!-- MARCOAGPINTO 2022-12-15 (Checked/Enhanced) (25-JUL-2022+) *END* -->
+
+      <!-- MARCOAGPINTO 2022-12-21 (Checked/Enhanced) (25-JUL-2022+) *START* -->
+      <antipattern>
+        <token postag='SENT_START|DI.+|Z0.+' postag_regexp='yes'/> <!-- Add more as they appear, a full check with a blank token only generated the three results below. -->
+        <token>comes</token>
+        <token>e</token>
+        <token>bebes</token>
+        <token postag='VMI[MS]3.+|_PUNCT' postag_regexp='yes'/>
+        <example>Comes e bebes foram servidas no casamento em tal abundância que a noiva e o noivo começaram a se questionar se de...</example>
+        <example>Comes e bebes foram servidos no casamento em tal abundância que a noiva e o noivo começaram a se questionar se nã...</example>
+        <example>Vou abrir um comes e bebes.</example>
+      </antipattern>
+      <!-- MARCOAGPINTO 2022-12-21 (Checked/Enhanced) (25-JUL-2022+) *END* -->
+
+      <!-- MARCOAGPINTO 2022-12-22 (Checked/Enhanced) (25-JUL-2022+) *START* -->
+      <antipattern>
+        <token postag='RM|RG|SPS00' postag_regexp='yes'>
+          <exception postag_regexp='yes' postag='RN|CCxxx'/>
+          <exception regexp='no'>nunca</exception>
+          <exception scope='previous' postag_regexp='yes' postag='RG|CC|CS|PP2CSN00'/>
+        </token>
+        <token postag='VMSP2S.+' postag_regexp='yes'>
+          <exception postag_regexp='yes' postag='NC.+|AQ.+|VMIP2S0'/>
+          <exception scope='next' postag_regexp='yes' postag='SPS00|DA.+|DI.+|NC.+|AQ.+|CS|PD.+|V.+'/>
+        </token>
+        <example>ATENCIOSAMENTE PROFESSORES DO GAMA.</example>
+        <example>Dia 9 de janeiro, atendimento às quartas-feiras (somente passes).</example>
+        <example>Infelizmente eles ainda se sentem desconfortáveis não só em fazer publicamente algo por nossa causa, mas até em revel...</example>
+        <example>Os que já sabem tornam-se naturalmente professores dos que ainda não sabem.</example>
+        <example>O primeiro caso, após analises efectuadas, deu negativo.</example>
+        <example>Mega Filmes HD Online.</example>
+        <example>Talvez eles ainda não tenham chegado.</example>
+        <example>A madrasta os fez penetrar ainda mais profundamente na floresta, onde eles nunca tinham estado em toda a sua vida.</example>
+        <example>Em games ou mesmo em situações normais, só posso utilizar o touchpad enquanto não uso o teclado, e ainda ass...</example>
+      </antipattern>
+      <!-- MARCOAGPINTO 2022-12-22 (Checked/Enhanced) (25-JUL-2022+) *END* -->
+
       <antipattern>
         <token regexp='yes' skip='-1'>["«„“][-‒–—―]?</token>
         <token regexp='yes'>["'»”]</token>
@@ -5487,12 +5610,15 @@
 
       <pattern>
         <token>com</token>
-        <token>nós</token>
+        <token>nós
+          <exception scope="next" regexp='yes'>própri[ao]s|mesm[ao]s</exception> <!-- MARCOAGPINTO - 2022-12-15 -->
+        </token>
       </pattern>
       <message>Será que quis dizer <suggestion>connosco</suggestion>?</message>
       <url>https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/connosco-com-a-gente-e-com-nos-no-portugues-europeu/26842</url>
       <short>Linguagem informal</short>
       <example correction="connosco">Ele veio <marker>com nós</marker> para o revéillon.</example>
+      <example>Para isso temos que saber estar primeiro com nós próprios.</example>
     </rule>
 
 
@@ -5555,6 +5681,20 @@
       <url>https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/prefixos-e-hifen/17908</url>
       <url>https://ciberduvidas.iscte-iul.pt/artigos/rubricas/idioma/o-uso-do-hifen-segundo-o-acordo-ortografico/3195</url>-->
       <url>https://pt.wikipedia.org/wiki/Uso_do_h%C3%ADfen_conforme_o_Acordo_Ortogr%C3%A1fico_de_1990</url>
+      <!--
+           MARCOAGPINTO inserted global antipatterns for all subrules on top using the logic (25-JUL-2022+)
+      -->
+
+      <!-- MARCOAGPINTO 2022-12-09 + 2022-12-15 (Checked/Enhanced) (25-JUL-2022+) *START* -->
+      <antipattern>
+        <token regexp='yes'>auto|bio|micro|quilo</token>
+        <token postag='D[AI].+|SPS00:D[AI].+|CS|CC|SPS00|SP000' postag_regexp='yes'/>
+        <example>Leia a reportagem completa no Semanário nas bancas e através do link na bio do @jornalexpresso.</example>
+        <example>Ficou registado no auto que se tratara de um acidente.</example>
+        <example>Vamos compor os auscultadores e o micro frente aos lábios.</example>
+        <example>Como ele fica na bancada, o micro que esta ligado a ele é um K6 que uso para ler datasheet, abrir esquemas, gravador de pic, eprom, etc.</example>
+      </antipattern>
+      <!-- MARCOAGPINTO 2022-12-09 + 2022-12-15 (Checked/Enhanced) (25-JUL-2022+) *END* --> 
 
       <!-- MARCOAGPINTO 2022-01-12 (Checked/Enhanced) (1-JAN-2022+) *START* -->
       <!--
@@ -5789,15 +5929,6 @@
           <token regexp='yes'>auto|quilo</token>
           <token regexp='yes'>d[aeo]s?|policial</token>
         </antipattern>
-        <!-- MARCOAGPINTO 2021-02-07 (1-JAN-2021+) *START* -->
-        <!--
-        Ficou registado no auto que se tratara de um acidente.
-        -->
-        <antipattern>
-          <token regexp='yes'>auto|quilo</token>
-          <token postag='SPS.+|CS|CC' postag_regexp='yes'/>
-        </antipattern>
-        <!-- MARCOAGPINTO 2021-02-07 (1-JAN-2021+) *END* -->
         <pattern>
           <token regexp='yes'>&prefixos_o;|&prefixos_o_2;|arqui
             <exception case_sensitive='yes'>Homo</exception></token>

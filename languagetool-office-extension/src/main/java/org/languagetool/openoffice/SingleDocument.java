@@ -105,7 +105,7 @@ class SingleDocument {
   private boolean disposed = false;               //  true: document with this docId is disposed - SingleDocument shall be removed
   private boolean resetDocCache = false;          //  true: the cache of the document should be reseted before the next check
   private boolean hasFootnotes = true;            //  true: Footnotes are supported by LO/OO
-  private boolean hasNodeIndex = true;            //  true: Node Index is supported by LO
+  private boolean hasSortedTextId = true;            //  true: Node Index is supported by LO
   private boolean isLastIntern = false;           //  true: last check was intern
   private boolean isRightButtonPressed = false;   //  true: right mouse Button was pressed
   private String lastSinglePara = null;           //  stores the last paragraph which is checked as single paragraph
@@ -174,8 +174,8 @@ class SingleDocument {
     }
     int [] footnotePositions = null;  // e.g. for LO/OO < 4.3 and the 'FootnotePositions' property
     int proofInfo = OfficeTools.PROOFINFO_UNKNOWN;  //  OO and LO < 6.5 do not support ProofInfo
-    int nodeIndex = -1;
-    int nodesCount = -1;
+    int sortedTextId = -1;
+    int documentElementsCount = -1;
     for (PropertyValue propertyValue : propertyValues) {
       if ("FootnotePositions".equals(propertyValue.Name)) {
         if (propertyValue.Value instanceof int[]) {
@@ -191,30 +191,30 @@ class SingleDocument {
           MessageHandler.printToLogFile("SingleDocument: getCheckResults: Not of expected type int: " + propertyValue.Name + ": " + propertyValue.Value.getClass());
         }
       }
-      if (hasNodeIndex) {
-        if ("NodeIndex".equals(propertyValue.Name)) {
+      if (hasSortedTextId) {
+        if ("SortedTextId".equals(propertyValue.Name)) {
           if (propertyValue.Value instanceof Integer) {
-            nodeIndex = (int) propertyValue.Value;
+            sortedTextId = (int) propertyValue.Value;
           } else {
             MessageHandler.printToLogFile("SingleDocument: getCheckResults: Not of expected type int: " + propertyValue.Name + ": " + propertyValue.Value.getClass());
           }
         }
-        if ("NodesCount".equals(propertyValue.Name)) {
+        if ("DocumentElementsCount".equals(propertyValue.Name)) {
           if (propertyValue.Value instanceof Integer) {
-            nodesCount = (int) propertyValue.Value;
+            documentElementsCount = (int) propertyValue.Value;
           } else {
             MessageHandler.printToLogFile("SingleDocument: getCheckResults: Not of expected type int: " + propertyValue.Name + ": " + propertyValue.Value.getClass());
           }
         }
       }
     }
-    if (hasNodeIndex && nodeIndex < 0) {
-      hasNodeIndex = false;
-      MessageHandler.printToLogFile("SingleDocument: getCheckResults: NodeIndex and NodesCount are not supported by LO!");
+    if (hasSortedTextId && sortedTextId < 0) {
+      hasSortedTextId = false;
+      MessageHandler.printToLogFile("SingleDocument: getCheckResults: SortedTextId and DocumentElementsCount are not supported by LO!");
     }
-    if (debugMode > 0 && hasNodeIndex) {
-      MessageHandler.printToLogFile("SingleDocument: getCheckResults: nodeIndex: " + nodeIndex);
-      MessageHandler.printToLogFile("SingleDocument: getCheckResults: nodesCount: " + nodesCount);
+    if (debugMode > 0 && hasSortedTextId) {
+      MessageHandler.printToLogFile("SingleDocument: getCheckResults: sortedTextId: " + sortedTextId);
+      MessageHandler.printToLogFile("SingleDocument: getCheckResults: documentElementsCount: " + documentElementsCount);
     }
     hasFootnotes = footnotePositions != null;
     if (!hasFootnotes) {
@@ -245,6 +245,8 @@ class SingleDocument {
       SingleCheck singleCheck = new SingleCheck(this, paragraphsCache, docCursor, flatPara, fixedLanguage,
           docLanguage, ignoredMatches, numParasToCheck, true, isMouseRequest, false);
       paRes.aErrors = singleCheck.checkParaRules(paraText, locale, footnotePositions, -1, paRes.nStartOfSentencePosition, lt, 0, 0, false, false);
+      docCursor = null;
+      viewCursor = null;
       return paRes;
     }
     if (debugMode > 0 && proofInfo == OfficeTools.PROOFINFO_GET_PROOFRESULT) {
@@ -271,6 +273,8 @@ class SingleDocument {
       docLanguage = lt.getLanguage();
     }
     if (disposed) {
+      docCursor = null;
+      viewCursor = null;
       return paRes;
     }
 //    if (docType == DocumentType.WRITER && ltMenus == null) {
@@ -291,8 +295,8 @@ class SingleDocument {
         startTime = System.currentTimeMillis();
       }
       int paraNum;
-      if (hasNodeIndex) {
-        paraNum = requestAnalysis.getNumberOfParagraphFromNodeIndex(nodeIndex, nodesCount, paraText, locale, footnotePositions);
+      if (hasSortedTextId) {
+        paraNum = requestAnalysis.getNumberOfParagraphFromSortedTextId(sortedTextId, documentElementsCount, paraText, locale, footnotePositions);
       } else {
         paraNum = requestAnalysis.getNumberOfParagraph(nPara, paraText, locale, paRes.nStartOfSentencePosition, footnotePositions);
       }
@@ -323,6 +327,8 @@ class SingleDocument {
       boolean textIsChanged = requestAnalysis.textIsChanged();
       
       if (disposed) {
+        docCursor = null;
+        viewCursor = null;
         return paRes;
       }
       if (debugModeTm) {
@@ -355,6 +361,8 @@ class SingleDocument {
     if (docType == DocumentType.WRITER && ltMenus == null && paraText.length() > 0) {
       ltMenus = new LanguageToolMenus(xContext, xComponent, this, config);
     }
+    docCursor = null;
+    viewCursor = null;
     return paRes;
   }
   
@@ -497,6 +505,9 @@ class SingleDocument {
    *  Get flat paragraph tools of the document
    */
   FlatParagraphTools getFlatParagraphTools () {
+    if (flatPara == null) {
+      setFlatParagraphTools();
+    }
     return flatPara;
   }
   
@@ -1013,7 +1024,7 @@ class SingleDocument {
   /**
    * class for store and handle ignored matches
    */
-  class IgnoredMatches {
+  public static class IgnoredMatches {
     
     private Map<Integer, Map<String, Set<Integer>>> ignoredMatches;
     
@@ -1225,7 +1236,7 @@ class SingleDocument {
     }
   }
   
-  class RuleDesc {
+  public static class RuleDesc {
     String langCode;
     String ruleID;
     
@@ -1235,7 +1246,7 @@ class SingleDocument {
     }
   }
   
-  class LTDokumentEventListener implements XDocumentEventListener, XMouseClickHandler {
+  private class LTDokumentEventListener implements XDocumentEventListener, XMouseClickHandler {
 
     @Override
     public void disposing(EventObject event) {

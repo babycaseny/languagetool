@@ -79,6 +79,7 @@ import org.languagetool.JLanguageTool.ParagraphHandling;
 import org.languagetool.gui.Configuration;
 import org.languagetool.gui.Tools;
 import org.languagetool.openoffice.DocumentCache.TextParagraph;
+import org.languagetool.openoffice.OfficeDrawTools.UndoMarkupContainer;
 import org.languagetool.openoffice.OfficeTools.DocumentType;
 import org.languagetool.openoffice.OfficeTools.RemoteCheck;
 import org.languagetool.rules.Rule;
@@ -580,6 +581,10 @@ public class SpellAndGrammarCheckDialog extends Thread {
         aError.nErrorStart = match.getFromPos();
         aError.nErrorLength = match.getToPos() - match.getFromPos();
         aError.aRuleIdentifier = spellRuleId;
+        PropertyValue[] propertyValues = new PropertyValue[1];
+        int ucolor = Color.RED.getRGB() & 0xFFFFFF;
+        propertyValues[0] = new PropertyValue("LineColor", -1, ucolor, PropertyState.DIRECT_VALUE);
+        aError.aProperties = propertyValues;
         errorArray.add(new CheckError(locale, aError));
         if (match.getSuggestedReplacements() != null) {
           aError.aSuggestions = match.getSuggestedReplacements().toArray(new String[match.getSuggestedReplacements().size()]);
@@ -651,7 +656,7 @@ public class SpellAndGrammarCheckDialog extends Thread {
    * Class for spell checking in LT check dialog
    * The LO/OO spell checker is used
    */
-  public class ExtensionSpellChecker {
+  private class ExtensionSpellChecker {
 
     private LinguisticServices linguServices;
      
@@ -720,6 +725,10 @@ public class SpellAndGrammarCheckDialog extends Thread {
                   aError.nErrorStart = nStart;
                   aError.nErrorLength = nEnd - nStart;
                   aError.aRuleIdentifier = spellRuleId;
+                  PropertyValue[] propertyValues = new PropertyValue[1];
+                  int ucolor = Color.RED.getRGB() & 0xFFFFFF;
+                  propertyValues[0] = new PropertyValue("LineColor", -1, ucolor, PropertyState.DIRECT_VALUE);
+                  aError.aProperties = propertyValues;
                   errorArray.add(new CheckError(locale, aError));
                   String[] alternatives = linguServices.getSpellAlternatives(token.getToken(), locale);
                   if (alternatives != null) {
@@ -819,7 +828,7 @@ public class SpellAndGrammarCheckDialog extends Thread {
   /**
    * class to store the information for undo
    */
-  public class UndoContainer {
+  private class UndoContainer {
     public int x;
     public int y;
     public String action;
@@ -840,7 +849,7 @@ public class SpellAndGrammarCheckDialog extends Thread {
   /**
    * class contains the SingleProofreadingError and the locale of the match
    */
-  public class CheckError {
+  private class CheckError {
     public Locale locale;
     public SingleProofreadingError error;
     
@@ -856,11 +865,13 @@ public class SpellAndGrammarCheckDialog extends Thread {
   public class LtCheckDialog implements ActionListener {
     private final static String ACORR_PREFIX = "acor_";
     private final static String ACORR_SUFFIX = ".dat";
-    private final static int maxUndos = 20;
+    private final static int maxUndos = 50;
     private final static int toolTipWidth = 300;
     
     private final static int dialogWidth = 640;
     private final static int dialogHeight = 525;
+
+    private UndoMarkupContainer undoMarkup;
 
     private Color defaultForeground;
 
@@ -1315,6 +1326,7 @@ public class SpellAndGrammarCheckDialog extends Thread {
                   if (debugMode) {
                     MessageHandler.printToLogFile("CheckDialog: LtCheckDialog: Window Focus lost: Event = " + e.paramString());
                   }
+                  removeMarkups();
                   setAtWorkButtonState(atWork);
                   dialog.setEnabled(true);
                   focusLost = true;
@@ -1768,6 +1780,7 @@ public class SpellAndGrammarCheckDialog extends Thread {
         if (debugMode) {
           MessageHandler.printToLogFile("CheckDialog: findNextError: start getNextError");
         }
+        removeMarkups();
         CheckError checkError = getNextError(startAtBegin);
         if (debugMode) {
           MessageHandler.printToLogFile("CheckDialog: findNextError: Error is " + (checkError == null ? "Null" : "NOT Null"));
@@ -2071,7 +2084,7 @@ public class SpellAndGrammarCheckDialog extends Thread {
                 + nextError.error.nErrorStart + "): " + (nStart - pLength + nextError.error.nErrorStart));
             MessageHandler.printToLogFile("CheckDialog: getNextError: x: " + x + "; y: " + y);
           }
-          setFlatViewCursor(nextError.error.nErrorStart, y, viewCursor);
+          setFlatViewCursor(nextError.error.nErrorStart, y, nextError.error, viewCursor);
           lastX = nextError.error.nErrorStart;
           lastY = y;
           if (debugMode) {
@@ -2100,7 +2113,7 @@ public class SpellAndGrammarCheckDialog extends Thread {
               wrongWord = docCache.getFlatParagraph(y).substring(nextError.error.nErrorStart, 
                   nextError.error.nErrorStart + nextError.error.nErrorLength);
             }
-            setFlatViewCursor(nextError.error.nErrorStart, y, viewCursor);
+            setFlatViewCursor(nextError.error.nErrorStart, y, nextError.error, viewCursor);
             if (debugMode) {
               MessageHandler.printToLogFile("CheckDialog: getNextError: y: " + y + "lastPara: " + lastPara 
                   + ", ErrorStart: " + nextError.error.nErrorStart + ", ErrorLength: " + nextError.error.nErrorLength);
@@ -2189,6 +2202,7 @@ public class SpellAndGrammarCheckDialog extends Thread {
      * closes the dialog
      */
     public void closeDialog() {
+      removeMarkups();
       dialog.setVisible(false);
       if (debugMode) {
         MessageHandler.printToLogFile("CheckDialog: closeDialog: Close Spell And Grammar Check Dialog");
@@ -2478,32 +2492,33 @@ public class SpellAndGrammarCheckDialog extends Thread {
         throw new IOException("Failed to create directory " + destDirPath);
       }
       byte[] buffer = new byte[1024];
-      ZipInputStream zis = new ZipInputStream(new FileInputStream(zipFilePath));
-      ZipEntry zipEntry = zis.getNextEntry();
-      while (zipEntry != null) {
-        File newFile = new File(destDir, zipEntry.getName());
-        if (zipEntry.isDirectory()) {
-          if (!newFile.isDirectory() && !newFile.mkdirs()) {
-            throw new IOException("Failed to create directory " + newFile);
+      try (ZipInputStream zis = new ZipInputStream(new FileInputStream(zipFilePath))) {
+        ZipEntry zipEntry = zis.getNextEntry();
+        while (zipEntry != null) {
+          File newFile = new File(destDir, zipEntry.getName());
+          if (zipEntry.isDirectory()) {
+            if (!newFile.isDirectory() && !newFile.mkdirs()) {
+              throw new IOException("Failed to create directory " + newFile);
+            }
+          } else {
+            // fix for Windows-created archives
+            File parent = newFile.getParentFile();
+            if (!parent.isDirectory() && !parent.mkdirs()) {
+              throw new IOException("Failed to create directory " + parent);
+            }
+            // write file content
+            FileOutputStream fos = new FileOutputStream(newFile);
+            int len;
+            while ((len = zis.read(buffer)) > 0) {
+              fos.write(buffer, 0, len);
+            }
+            fos.close();
           }
-        } else {
-          // fix for Windows-created archives
-          File parent = newFile.getParentFile();
-          if (!parent.isDirectory() && !parent.mkdirs()) {
-            throw new IOException("Failed to create directory " + parent);
-          }
-          // write file content
-          FileOutputStream fos = new FileOutputStream(newFile);
-          int len;
-          while ((len = zis.read(buffer)) > 0) {
-            fos.write(buffer, 0, len);
-          }
-          fos.close();
+          zipEntry = zis.getNextEntry();
         }
-        zipEntry = zis.getNextEntry();
+        zis.closeEntry();
+        zis.close();
       }
-      zis.closeEntry();
-      zis.close();
     }
     
     private void addWordPairToCorFile(String dirPath, String word, String replace) throws Throwable {
@@ -2641,6 +2656,7 @@ public class SpellAndGrammarCheckDialog extends Thread {
         return;
       }
       try {
+        removeMarkups();
         int nLastUndo = undoList.size() - 1;
         UndoContainer lastUndo = undoList.get(nLastUndo);
         String action = lastUndo.action;
@@ -2729,7 +2745,7 @@ public class SpellAndGrammarCheckDialog extends Thread {
           MessageHandler.showMessage("Undo '" + action + "' not supported");
         }
         undoList.remove(nLastUndo);
-        setFlatViewCursor(xUndo, yUndo, viewCursor);
+        setFlatViewCursor(xUndo, yUndo, null, viewCursor);
         if (debugMode) {
           MessageHandler.printToLogFile("CheckDialog: Undo: yUndo = " + yUndo + ", xUndo = " + xUndo 
               + ", lastPara = " + lastPara);
@@ -2740,8 +2756,8 @@ public class SpellAndGrammarCheckDialog extends Thread {
         closeDialog();
       }
     }
-    
-    void setFlatViewCursor(int x, int y, ViewCursorTools viewCursor) throws Throwable {
+
+    void setFlatViewCursor(int x, int y, SingleProofreadingError error, ViewCursorTools viewCursor) throws Throwable {
       this.x = x;
       this.y = y;
       if (docType == DocumentType.WRITER) {
@@ -2759,8 +2775,22 @@ public class SpellAndGrammarCheckDialog extends Thread {
           }
           dialog.toFront();
         }
+        if (error != null) {
+//          if (!error.aRuleIdentifier.equals(spellRuleId)) {
+//            OfficeDrawTools.removeMarkup(undoMarkup, currentDocument.getXComponent());
+            undoMarkup = new UndoMarkupContainer();
+            OfficeDrawTools.setMarkup(y, error, undoMarkup, currentDocument.getXComponent());
+//          }
+        }
       } else {
         OfficeSpreadsheetTools.setCurrentSheet(y, currentDocument.getXComponent());
+      }
+    }
+
+    void removeMarkups() {
+      if (docType == DocumentType.IMPRESS && undoMarkup != null) {
+        OfficeDrawTools.removeMarkup(undoMarkup, currentDocument.getXComponent());
+        undoMarkup = null;
       }
     }
     

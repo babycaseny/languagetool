@@ -9,16 +9,15 @@
 #
 # Licensed under LGPL.
 #
-a cor amarela=amarelo
-a cor azul=azul
-a cor branca=branco
-a cor castanha=castanho
-a cor laranja=laranja
-a cor preta=preto
-a cor verde=verde
-a cor vermelha=vermelho
+a cor amarela=amarelo|o amarelo
+a cor azul=azul|o azul
+a cor branca=branco|o branco
+a cor castanha=castanho|o castanho
+a cor laranja=laranja|o laranja
+a cor preta=preto|o preto
+a cor verde=verde|o verde
+a cor vermelha=vermelho|o vermelho
 a deitar sangue=a sangrar
-a extensão em que=APAGAR
 a falar sozinho=num monólogo
 a fazer melhorias na=a melhorar a
 a fazer melhorias nas=a melhorar as
@@ -29,15 +28,10 @@ a inversão de papéis entre os dois=a inversão de papéis
 à luz do facto de que=porque
 à luz do fato de que=porque
 a maior parte=a maioria
-a não ser que=exceto se
-a natureza da=a
-a natureza das=as
-a natureza do=o
-a natureza dos=os
+a não ser que=exceto se|exceto caso
 à prova d'água=impermeável
 à prova de fogo=incombustível
 a raça humana=humanos|humanidade|pessoas
-a razão pela qual=APAGAR|porque
 a toda a hora=constantemente|sempre
 abrigo seguro=refúgio
 abrigos seguros=refúgios
@@ -60,9 +54,10 @@ anexo à presente=anexo
 anexo segue=anexo
 antecipadamente somos gratos=agradecemos
 antes de que=antes que
-depois de que=depois que
+depois de que=depois que|após
 antigo adágio=costume
 ao mesmo tempo que=enquanto
+ao mesmo tempo=simultaneamente|em simultâneo
 ao meu ver=a meu ver
 quando se tem=ao ter
 aos dias de hoje=agora
@@ -108,7 +103,6 @@ considerada como=considerada|APAGAR
 consideradas como=consideradas|APAGAR
 considerado como=considerado|APAGAR
 considerados como=considerados|APAGAR
-daqui em diante=doravante
 dar a volta à=contornar a
 dar a volta às=contornar as
 dar a volta ao=contornar o
@@ -117,7 +111,6 @@ de acordo com a=conforme a|segundo a|consoante a
 de acordo com as=conforme as|segundo as|consoante as
 de acordo com o=conforme o|segundo o|consoante o
 de acordo com os=conforme os|segundo os|consoante os
-de agora em diante=doravante
 de ambas as partes=mútuo
 de forma a=para
 de quando em vez=de vez em quando
@@ -128,6 +121,8 @@ de um momento para o outro=repentinamente|subitamente|num ápice
 de uma forma ou de outra=garantidamente
 de vez em quando=ocasionalmente|por vezes
 deixa de ter=perde|perde o|perde os|perde a|perde as
+dentro de um=num|em um
+dentro de uma=numa|em uma
 depois de tudo ser dito e feito=APAGAR
 derivado a=devido a
 derivado à=devido à
@@ -141,7 +136,7 @@ devido ao efeito de=porque
 devido ao facto de que=porque
 devido ao facto de=por
 devido ao fato de que=porque
-devido ao fato de=por
+devido ao fato de=por|pelo|pela
 devido aos efeitos de=porque
 diligência devida=diligência
 diligências devidas=diligências
@@ -165,7 +160,6 @@ em capacidade defensiva=defensivamente
 em capacidade ofensiva=ofensivamente
 em conexão com=com
 em conformidade com=conforme|segundo|consoante
-em essência=APAGAR
 em excesso de=mais de
 em grande parte=na maioria
 em si mesma=em si
@@ -176,7 +170,6 @@ embora que seja=embora seja
 embora que sejam=embora sejam
 emergência inesperada=emergência
 encaminhamos em anexo=encaminhamos|anexamos
-era de esperar=era expetável
 erro inadvertido=erro
 erro não intencional=erro
 erros inadvertidos=erros
@@ -192,7 +185,6 @@ exatamente as mesmas=as mesmas
 exatamente idêntico=idêntico
 exatamente o mesmo=o mesmo
 exatamente os mesmos=os mesmos
-existe a possibilidade de=pode|há
 experiência passada=experiência
 falta de precisão=imprecisão
 falta de pressa=lentidão|demora
@@ -223,7 +215,6 @@ lembranças passadas=memórias
 levamos a seu conhecimento=informamos
 levantar voo=descolar|decolar
 mais à frente=mais adiante
-mais ou menos=APAGAR|ESPECIFICAR|aproximadamente|cerca de|relativamente
 mais preferível=preferível
 melhoria da gramática=melhoria gramatical
 melhorias da gramática=melhorias gramaticais
@@ -311,8 +302,9 @@ pouco mais ou menos=aproximadamente
 pra além disso=além disso
 pra efeitos de=para
 pra o que é=para o
-programa de computador=software|aplicação|app
-programas de computador=softwares|aplicações|apps
+predominam há séculos=são seculares
+programa de computador=software|aplicação|aplicativo|app
+programas de computador=softwares|aplicações|aplicativos|apps
 prontamente aparente=aparente
 público em geral=público
 quais é que são=quais são
@@ -355,6 +347,7 @@ tem como objectivo=visa|pretende|procura
 têm como objetivo=visam|pretendem|procuram
 tem como objetivo=visa|pretende|procura
 temos a informar que=informamos
+teve início=iniciou|iniciou-se|começou
 todas aquelas que=todas as que|todas que
 todos aqueles que=todos os que|todos que
 toda esta=esta
@@ -374,6 +367,7 @@ um número acrescido de=mais
 um número diminuído de=menos
 uma quantidade considerável de=APAGAR|ESPECIFICAR
 um ao outro=reciprocamente|mutualmente
+um grande número de=inúmeros|inúmeras|muitos|muitas
 uns aos outros=reciprocamente|mutualmente
 vai vir=vem
 vais vir=vens
@@ -461,7 +455,6 @@ sucede várias vezes=é recorrente|sendo recorrente
 #
 # estar de volta *START*
 está de volta=voltou
-estamos de volta=voltámos
 estão de volta=voltaram
 estou de volta=voltei
 # estar de volta *END*
@@ -489,11 +482,7 @@ sem interesse pelos=desinteresse pelos
 # FALTA DE INTERESSE *END*
 #
 # FALTA DE RESPEITO *START*
-falta de respeito=desrespeito|desprezo
-sem respeito pela=desrespeito pela|desprezo pela
-sem respeito pelas=desrespeito pelas|desprezo pelas
-sem respeito pelo=desrespeito pelo|desprezo pelo
-sem respeito pelos=desrespeito pelos|desprezo pelos
+falta de respeito=desrespeito|desprezo|desconsideração
 # FALTA DE RESPEITO *END*
 #
 # FASEAD(AO)(S) *START*
@@ -612,6 +601,21 @@ que não tem fim=inacabável|infindável|interminável
 sem fim à vista=inacabável|infindável|interminável
 # SEM FIM À VISTA *END*
 #
+# SEM UTILIDADE *START*
+embora não tem utilidade=embora sem utilidade
+embora não tenha utilidade=embora sem utilidade
+embora não terá utilidade=embora sem utilidade
+mas não tem utilidade=mas sem utilidade
+mas não tenha utilidade=mas sem utilidade
+mas não terá utilidade=mas sem utilidade
+embora não tem grande utilidade=embora sem grande utilidade
+embora não tenha grande utilidade=embora sem grande utilidade
+embora não terá grande utilidade=embora sem grande utilidade
+mas não tem grande utilidade=mas sem grande utilidade
+mas não tenha grande utilidade=mas sem grande utilidade
+mas não terá grande utilidade=mas sem grande utilidade
+# SEM UTILIDADE *END*
+#
 # TRAZER [MAIS][MENOS] BENEFÍCIOS *START*
 traz benefícios=é beneficial|é benéfico
 trazem benefícios=são beneficiais|são benéficos
@@ -646,6 +650,8 @@ uma senhora com uma enorme visão=uma visionária
 # VISIONÁRIO - UMA - *END*
 #
 # VITALÍCIO *START*
+é para toda a vida=é vitalício|é vitalícia|é eterno|é eterna|é permanente
+são para toda a vida=são vitalícios|são vitalícias|são eternos|são eternas|são permanentes
 válida até ao fim da vida=vitalícia
 válida até ao resto da vida=vitalícia
 válido até ao fim da vida=vitalício
@@ -782,8 +788,6 @@ ad referendum=para referendo
 ad substantia negotii=para a substância
 para a essência do negócio=indica condição essencial de algo
 allegatio partis non facit jus=alegação da parte não produz direito
-amicus curiae=amigo da corte
-animus=ânimo|vontade
 apud=junto de
 a quo=do qual
 audiatur et altera pars=ouça-se a parte contrária
@@ -868,7 +872,6 @@ jurisdictio=jurisdição
 juris et de jure=de direito e por direito
 juris tantum=apenas de direito
 jus accusationis=direito de acusar
-lato sensu=em sentido amplo
 lex est quod populus iubet atque constituit=a lei é o que o povo manda e constitui
 lex loci rei sitae=a lei do lugar onde os bens estão situados
 lex populi=lei popular

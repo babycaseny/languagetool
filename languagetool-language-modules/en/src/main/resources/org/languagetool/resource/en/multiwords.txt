@@ -6155,3 +6155,83 @@ van Gaal	NNP
 Dinamo Zagreb	NNP
 Air Malta	NNP
 Monte Carlo	NNP
+Académie des sciences	NNP
+Viktor Bout	NNP
+Charles Schwab	NNP
+Redwood City	NNP
+Vinícius Júnior	NNP
+Vinícius Jr	NNP
+Bugsy Siegel	NNP
+Meyer Lansky	NNP
+Lucky Luciano	NNP
+Frank Costello	NNP
+Xin Zhui	NNP
+Lady Dai	NNP
+Ethan Hawke	NNP
+Eva Kaili	NNP
+Erich Mielke	NNP
+Sam Brinton	NNP
+Klaus Barbie	NNP
+Morbid Angel	NNP
+Kumho Tire	NNP
+Kumho Tyre	NNP
+Lionel Scaloni	NNP
+Di María	NNP
+Emiliano Martínez	NNP
+Marcos Acuña	NNP
+Kolo Muani	NNP
+Hyundai Rotem	NNP
+Zürcher Geschnetzeltes	NNP
+Absolut Vodka	NNP
+Pernod Ricard	NNP
+Isles of Scilly	NNP
+mastodon.social	NNP
+Michael Bublé	NNP
+Caroline Ellison	NNP
+El Gordo	NNP
+Sig Sauer	NNP
+FN Herstal	NNP
+Sun Microsystems	NNP
+Alan Watts	NNP
+Fira Sans	NNP
+Thulsa Doom	NNP
+Franklin Gothic	NNP
+Johanna Elberskirchen	NNP
+Helene Lange	NNP
+Giacomo Agostini	NNP
+Place de l'Étoile	NNP
+Place Charles de Gaulle	NNP
+Markus Krebber	NNP
+erythema multiforme	NN:UN
+erythema multiformes	NNS
+bin Zayed	NNP
+Al Nahyan	NNP
+Mel C	NNP
+Pete Buttigieg	NNP
+J. B. Pritzker	NNP
+Nina Hoss	NNP
+Théophile Gautier	NNP
+Oude Kerk	NNP
+camera lucida	NN
+camera lucidas	NNS
+camera obscura	NN
+camera obscuras	NNS
+Musée du Louvre	NNP
+Simon Duiker	NNP
+Dirck van Baburen	NNP
+van Baburen	NNP
+Alameda Research	NNP
+Stamford Hill	NNP
+Pontiac Trans Am	NNP
+Trans Am	NNP
+Andy Milonakis	NNP
+El Rubius	NNP
+Pontiac Firebird	NNP
+Pontiac Aztek	NNP
+Eddie Vedder	NNP
+Norges Bank	NNP
+Hockney–Falco	NNP
+Rishab Shetty	NNP
+Forest Whitaker	NNP
+Steven Tyler	NNP
+Mick Jagger	NNP

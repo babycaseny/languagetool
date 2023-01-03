@@ -421,6 +421,7 @@ public class German extends Language implements AutoCloseable {
       case "AERZTEN_INNEN": return -2;  // overwrite speller ("Ärzte/-innen")
       case "ANGLIZISMEN" : return -2;   // overwrite spell checker
       case "ANGLIZISMUS_PA_MIT_ED" : return -2;   // overwrite spell checker
+      case "MEINSTE" : return -2;   // overwrite spell checker
       case "ZAHL_IM_WORT": return -2; //should not override rules like H2O
       case "ICH_LIEBS": return -2;  // higher prio than spell checker
       case "ICH_GEHE_DU_BLEIBST": return -3; // prefer ICH_GLAUBE_FUER_EUCH
@@ -445,21 +446,22 @@ public class German extends Language implements AutoCloseable {
       case "ANFUEHRUNG_VERSCHACHTELT": return -5;  // lower prio than speller and FALSCHES_ANFUEHRUNGSZEICHEN
       case "SATZBAU_AN_DEN_KOMMT": return -5;  // lower prio than rules that give a suggestion
       case "SUBJECT_VERB_AGREEMENT": return -5; // prefer more specific rules that offer a suggestion (e.g. DE_VERBAGREEMENT)
-      case "SAGT_SAGT": return -9; // higher pro than KOMMA_ZWISCHEN_HAUPT_UND_NEBENSATZ_2 and GERMAN_WORD_REPEAT_RULE
+      case "SAGT_SAGT": return -9; // higher prio than KOMMA_ZWISCHEN_HAUPT_UND_NEBENSATZ_2 and GERMAN_WORD_REPEAT_RULE
       case "PUNKT_ENDE_ABSATZ": return -10;  // should never hide other errors, as chance for a false alarm is quite high
       case "KOMMA_VOR_RELATIVSATZ": return -10;
-      case "KOMMA_ZWISCHEN_HAUPT_UND_NEBENSATZ_2": return -12;
+      case "VON_LEBENSLAEUFE": return -12; // less prio than AI
       case "ZUSAMMENGESETZTE_VERBEN": return -12; // less prio than most more specific rules and AI
       case "PRP_VER_PRGK": return -13; // lower prio than ZUSAMMENGESETZTE_VERBEN
       case "COMMA_IN_FRONT_RELATIVE_CLAUSE": return -13; // prefer other rules (KONJUNKTION_DASS_DAS, ALL_DAS_WAS_KOMMA, AI) but higher prio than style
       case "SAGT_RUFT": return -13; // prefer case rules, DE_VERBAGREEMENT, AI and speller
-      case "GERMAN_WORD_REPEAT_RULE": return -14; // prefer SAGT_RUFT
+      case "KOMMA_ZWISCHEN_HAUPT_UND_NEBENSATZ_2": return -14; // lower prio than SAGT_SAGT, but higher than GERMAN_WORD_REPEAT_RULE
       case "BEI_VERB": return -14; // prefer case, spelling and AI rules
       case "MODALVERB_FLEKT_VERB": return -14; // prefer case, spelling and AI rules
       case "DATIV_NACH_PRP": return -14; // spelling and AI rules
       case "SENT_START_SIN_PLU": return -14; // prefer more specific rules that offer a suggestion (A.I., spelling)
       case "SENT_START_PLU_SIN": return -14; // prefer more specific rules that offer a suggestion (A.I., spelling)
       case "VER_INFNOMEN": return -14;  // prefer spelling and AI rules
+      case "GERMAN_WORD_REPEAT_RULE": return -15; // lower prio than SAGT_RUFT and KOMMA_ZWISCHEN_HAUPT_UND_NEBENSATZ_2
       case "TOO_LONG_PARAGRAPH": return -15;
       case "ALL_UPPERCASE": return -15;
       case "COMMA_BEHIND_RELATIVE_CLAUSE": return -52; // less prio than AI_DE_HYDRA_LEO
@@ -470,6 +472,7 @@ public class German extends Language implements AutoCloseable {
       case "SIE_WOLLTEN_SIND": return -52;
       case "ART_ADJ_SOL": return -52; // prefer comma rules
       case "WURDEN_WORDEN_1": return -52; // prefer comma rules
+      case "WAR_WAHR": return -52; // higher prio than KOMMA_ZWISCHEN_HAUPT_UND_NEBENSATZ
       case "KOMMA_ZWISCHEN_HAUPT_UND_NEBENSATZ": return -53;
       case "VERB_IST": return -53; // less prio than comma rules and spell checker
       case "WAR_WERDEN": return -53; // less prio than comma rules

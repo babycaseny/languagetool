@@ -50,6 +50,8 @@ public class ProhibitedCompoundRule extends Rule {
   private static final List<Pair> lowercasePairs = Arrays.asList(
           // NOTE: words here must be all-lowercase
           // NOTE: no need to add words from confusion_sets.txt, they will be used automatically (if starting with uppercase char)
+          new Pair("rate", "Verhältnis zwischen zwei Größen", "ratte", "Nagetier"),
+          new Pair("posten", "Arbeitsplatz, Wachposten", "posen", "Pose: betonte Körperhaltung"),
           new Pair("himmel", "Bereich über der Erde", "hummel", "Insekt"),
           new Pair("server", "Computer", "servier", "zu 'servieren'"),
           new Pair("ziege", "Tier", "ziegel", "Ziegelstein"),
@@ -153,6 +155,11 @@ public class ProhibitedCompoundRule extends Rule {
     ".+gra(ph|f)its?"   // ...grafit/graphit
   );
   private static final Set<String> blacklist = new HashSet<>(Arrays.asList(
+          "Bergratte", "Bergratten",
+          "Flussratte", "Flussratten",
+          "Hausrate", "Hausraten",
+          "Südposten",
+          "Machtposen",
           "Elektroband", "Elektrobands",
           "Reiterfahrung", "Reiterfahrungen",
           "Dampfgerät", "Dampfgeräte", "Dampfgeräten",

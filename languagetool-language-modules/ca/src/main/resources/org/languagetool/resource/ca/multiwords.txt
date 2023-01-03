@@ -1,5 +1,29 @@
 #Catalan multiwords file used for chunking
 #separatorRegExp=[\t;]
+Jean Monnet;NPMSSP0
+porta a porta;NCMS000
+per contra;LOC_ADV
+Emilio Salgari;NPMSSP0
+Margaret Atwood;NPFSSP0
+Rio Grande;NPMSG00
+Javier Solana;NPMSSP0
+Plaza de Mayo;NPFSG00
+San Bernardo;NPMSG00
+carrer Génova;NPMSG00
+Carrera de San Jerónimo;NPFSG00
+font de Neptuno;NPFSG00
+font de Cibeles;NPFSG00
+passeig del Prado;NPMSG00
+Place de l'Étoile;NPFSG00
+Via Favència;NPFSG00
+Juan Alberto Belloch;NPMSSP0
+Carmen Thyssen;NPFSSP0
+att.;RG
+Robert Nozick;NPMSSP0
+Ethan Hawke;NPMSSP0
+Men in Black;NPMPO00
+capital llavor;NCMS000
+capitals llavor;NCMP000
 Juan de la Cierva;NPMSSP0
 Chiang Kai-shek;NPMSSP0
 Piccadilly Circus;NPCSG00
@@ -2035,7 +2059,6 @@ nau capitana	NCFS000
 ball espectacle	NCMS000
 raïm moscatell	NCMS000
 grosso modo	LOC_ADV
-gràcies a	LOC_PREP
 habeas corpus	NCMP000
 heavy metal	NCMS000
 herriko taberna	NCFS000

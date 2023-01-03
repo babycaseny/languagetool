@@ -1273,3 +1273,94 @@ DNF #abk
 Lehnerz #name
 Bellingham/S #name
 INF #abk
+Hurentochter
+Hurentöchter/N
+Heydenreich/S #name
+ersterbend/A
+3GPP
+UCS
+rechtsstaatl. #abj
+staatl. #abj
+cURL/S #name
+UCITS #abk
+Shapewear #eng
+TIL #abk
+Crush/S #ugs #eng
+erstell #ugs
+BPOL #abk
+Celler/SN
+Cellerin
+Cellerinnen
+EAV #abk
+XXI
+XXII
+XXIII
+XXXI
+XXXII
+XXXIII
+Ivanov/S #name
+RJ #abk
+DVA/S #name
+Ehrmann/S #name
+GZ #abk
+Aßmann/S #name
+ASIC
+ASICs
+DCs
+ERC #abk
+ESTW #name
+Garbsen/S #name
+Agostini/S #name
+AFSP #abk
+Allgeier/S #name
+Atkinson/S #name
+AZK #abk
+AZV #abk
+AWV #abk
+AVP #abk
+forcier #ugs
+Podigee/S #name
+BSL #abk
+CSAT #abk
+HKA #abk
+ABW #abk
+BVI #abk
+DKIM #abk
+EKS #abk
+FTX #abk
+Fulham #name
+Affogato/S
+Fez
+Hennighausen/S #name
+Absteigens
+Ausgebranntsein/S
+APFS
+DMI
+Elmenhorst/S #name
+Skateboarden/S
+Weidenstieg/S #name
+respektier #ugs
+Sodium/S
+Beckdorf/S #name
+Brüchmann/S #name
+CST #abk
+DBSH #abk
+Dernbach/S #name
+DQ #abk
+EDC #abk
+EGT #abk
+ERG #abk
+FSA #abk
+FYR #abk
+GPT #abk
+GOT #abk
+Oberlechner/S #name
+STY #abk
+SX #abk
+SVA #abk
+UAE #abk
+UAT #abk
+UEFI #abk
+UPL #abk
+Wörlitz #name
+TSchG #abk
