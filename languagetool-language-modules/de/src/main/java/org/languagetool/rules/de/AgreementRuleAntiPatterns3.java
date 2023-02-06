@@ -231,6 +231,12 @@ class AgreementRuleAntiPatterns3 {
       csToken("Angst")  // "Dinge, die/ Etwas, das einem Angst macht"
     ),
     asList(
+      // Kann ja jeder weiter Maske tragen, der will?
+      csRegex("jede[sr]?"),
+      csToken("weiter"),
+      posRegex("SUB.*")
+    ),
+    asList(
       tokenRegex("einem|jedem|keinem"),
       csToken("Angst"),  // "Was einem Angst macht"
       new PatternTokenBuilder().tokenRegex("machen|ein(flö(ß|ss)en|jagen)").matchInflectedForms().build()
@@ -394,7 +400,7 @@ class AgreementRuleAntiPatterns3 {
       token("der")
     ),
     asList(
-      token("mehrere"), // "mehrere Verwundete" http://forum.languagetool.org/t/de-false-positives-and-false-false/1516
+      tokenRegex("mehrere|etliche"), // "mehrere Verwundete" http://forum.languagetool.org/t/de-false-positives-and-false-false/1516
       pos("SUB:NOM:SIN:FEM:ADJ")
     ),
     asList(

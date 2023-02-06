@@ -1995,7 +1995,7 @@ Brevard County	NNP
 Brian Eno	NNP
 Brigitte Bardot	NNP
 Bristol Myers	NNP
-Bristol Myers Squibb	NNP
+Bristol-Myers Squibb	NNP
 British Airways	NNP
 Britney Spears	NNP
 Brokeback Mountain	NNP
@@ -6235,3 +6235,119 @@ Rishab Shetty	NNP
 Forest Whitaker	NNP
 Steven Tyler	NNP
 Mick Jagger	NNP
+Ally Pally	NNP
+Guillermo del Toro	NNP
+Andrea Pirlo	NNP
+Paolo Maldini	NNP
+Al Nassr	NNP
+Peter Lynch	NNP
+Dana White	NNP
+Kris Jenner	NNP
+Caitlyn Jenner	NNP
+Hakeem Jeffries	NNP
+Subramanian Swamy	NNP
+Dorothy Dandridge	NNP
+Next.js	NNP
+Express.js	NNP
+Cash App	NNP
+Fortescue Metals	NNP
+Port Hedland	NNP
+BHP Billiton	NNP
+Sole 24 Ore	NNP
+Il Sole 24 Ore	NNP
+GE HealthCare	NNP
+GE Healthcare	NNP
+AWS CloudWatch	NNP
+Amazon CloudWatch	NNP
+Edward Norton	NNP
+Hugging Face	NNP
+George Santos	NNP
+Hovey Channel	NNP
+Lenox Hills	NNP
+Lenox Hill	NNP
+Tobosa Basin	NNP
+Capitan Formation	NNP
+Nuri Şahin	NNP
+Michael Andretti	NNP
+Byron Donalds	NNP
+John Cornyn	NNP
+Lloyd Doggett	NNP
+Freedom Caucus	NNP
+Jim Jordan	NNP
+Andy Biggs	NNP
+Scott Perry	NNP
+Inspector Clouseau	NNP
+Bobby Charlton	NNP
+Paolo Rossi	NNP
+Bed Bath & Beyond	NNP
+United World Wrestling	NNP
+Daley Blind	NNP
+Colonia Dignidad	NNP
+El Niños	NNPS
+von Bellingshausen	NNP
+Fabian Gottlieb von Bellingshausen	NNP
+Sierra Madre	NNP
+Saxo Bank	NNP
+Fulda Gap	NNP
+Ovidio Guzmán	NNP
+Ovidio Guzmán López	NNP
+Frankie Muniz	NNP
+Ibaneis Rocha	NNP
+Palácio do Planalto	NNP
+José Sarney	NNP
+Palácio da Alvorada	NNP
+TUI Cruises	NNP
+Vince McMahon	NNP
+Jil Sander	NNP
+Marc Jacobs	NNP
+Taylor Wessing	NNP
+Joachim Wuermeling	NNP
+Barney Stinson	NNP
+Remo Ruffini	NNP
+Lisa Marie Presley	NNP
+Santa Ynez	NNP
+hidradenitis suppurativa	NN:U
+aplastic anemia	NN:UN
+aplastic anemias	NNS
+Boehringer Ingelheim	NNP
+Yeti Airlines	NNP
+Boris Pistorius	NNP
+Kenneth Rogoff	NNP
+Paul Gosar	NNP
+alopecia totalis	NN:U
+Étienne Davignon	NNP
+Optimus Prime	NNP
+Mikhail Fridman	NNP
+Ultra Magnus	NNP
+Rodimus Prime	NNP
+Sentinel Prime	NNP
+Ted Mosby	NNP
+Sergio Ramos	NNP
+LinkedIn Sales Navigator	NNP
+Mark Milley	NNP
+La Pedrera	NNP
+Tom Zhu	NNP
+RWE Offshore Wind	NNP
+Petróleo Brasileiro	NNP
+Chris Hipkins	NNP
+Ron Perlman	NNP
+Grand Seiko	NNP
+Societas Europaea	NNP
+STOXX Europe	NNP
+Linsey Davis	NNP
+Mike Sievert	NNP
+Marcel Sabitzer	NNP
+Segunda División	NNP
+Thibaut Courtois	NNP
+Manuel Pellegrini	NNP
+Alberto Fernández	NNP
+João Cancelo	NNP
+Rúben Dias	NNP
+João Félix	NNP
+Shaquille O’Neal	NNP
+Shaq O’Neal	NNP
+Shaquille O'Neal	NNP
+Shaq O'Neal	NNP
+Costa Concordia	NNP
+Sándor Márai	NNP
+Steffen Hebestreit	NNP

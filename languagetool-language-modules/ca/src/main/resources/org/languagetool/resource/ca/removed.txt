@@ -4,6 +4,21 @@
 # Format: fullform baseform postags (tab separated)
 Empalme	Empalme	NPCSG00
 Martes	Marta	NPFPSP0
+Salvada	Salvada	NPCNSP0
 Winchester	Winchester	NPCSG00
+bocata	bocata	NCMS000
+bocates	bocata	NCMP000
 fallat	fallat	NCMS000
 fallats	fallat	NCMP000
+intercesssions	intercesssió	NCFP000
+intercesssió	intercesssió	NCFS000
+katiusca	katiusca	NCFS000
+katiusques	katiusca	NCFP000
+multiusuari	multiusuari	AQ0MS0
+multiusuaris	multiusuari	AQ0MP0
+multiusuària	multiusuari	AQ0FS0
+multiusuàries	multiusuari	AQ0FP0
+temerosa	temerós	AQ0FS0
+temeroses	temerós	AQ0FP0
+temerosos	temerós	AQ0MP0
+temerós	temerós	AQ0MS0

@@ -1725,6 +1725,7 @@ step-sister*
 stiff-necked*
 stir-fried*
 stir-fry*
+stir-frying*
 stock-in-trade*
 stock-in-trades*
 Stockton-on-Tees*
@@ -5325,8 +5326,8 @@ re-bounded$ # changed ? -> $
 re-bounding$ # changed ? -> $
 ultra-wide$
 ultra-thin$
-multi-player?
-multi-players?
+multi-player$
+multi-players$
 holo-phrase?
 holo-phrases?
 holo-phrasis?
@@ -8873,3 +8874,23 @@ sub-licensor$
 sub-licensors$
 sub-licensee$
 sub-licensees$
+half-assed*
+Gramm-Leach-Bliley*
+eco-activist?
+eco-activists?
+eco-activism?
+sub-polar?
+bio-diversification?
+socio-ecological*
+earth-shakingly?
+bus-mile*
+bus-miles*
+Bumble-Bee?
+bumble-bee?
+bumble-bees?
+whirl-wind?
+whirl-winds?
+stone-mason?
+stone-masons?
+stone-masonry
+sense-less?

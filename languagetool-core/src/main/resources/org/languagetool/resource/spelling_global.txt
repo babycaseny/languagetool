@@ -1554,7 +1554,9 @@ DoorDash
 Disneyland
 Euler Hermes
 Bristol Myers
+Bristol-Myers
 Bristol Myers Squibb
+Bristol-Myers Squibb
 Biggie Smalls
 Tupac
 2Pac
@@ -4939,3 +4941,127 @@ Rishab Shetty
 Forest Whitaker
 Steven Tyler
 Mick Jagger
+Ally Pally
+Alexandra Palace
+Peter Wright
+Guillermo del Toro
+Andrea Pirlo
+Paolo Maldini
+Peter Lynch
+Dana White
+Kris Jenner
+Caitlyn Jenner
+Hakeem Jeffries
+Lionsgate
+Subramanian Swamy
+Dorothy Dandridge
+Next.js
+Express.js
+Cash App
+Fortescue Metals
+BHP Billiton
+Sole 24 Ore
+Il Sole 24 Ore
+Antofagasta
+GE HealthCare
+GE Healthcare
+Martin Schleyer
+Martin Huggins
+Chris Martin
+Amazon CloudWatch
+AWS CloudWatch
+Edward Norton
+Hugging Face
+George Santos
+Nuri Şahin
+Michael Andretti
+Byron Donalds
+John Cornyn
+Lloyd Doggett
+Tea Party
+Freedom Caucus
+Jim Jordan
+Andy Biggs
+Scott Perry
+Mark Meadows
+Bobby Charlton
+Paolo Rossi
+Eusébio da Silva Ferreira
+Bed Bath & Beyond
+United World Wrestling
+Daley Blind
+Colonia Dignidad
+El Niño
+Bellingshausen
+von Bellingshausen
+Fabian Gottlieb von Bellingshausen
+Saxo Bank
+Fulda Gap
+Ovidio Guzmán
+Ovidio Guzmán López
+Frankie Muniz
+Ibaneis Rocha
+Palácio do Planalto
+José Sarney
+Palácio da Alvorada
+Peaky Blinders
+TUI Cruises
+Vince McMahon
+Jil Sander
+Marc Jacobs
+Taylor Wessing
+AbbVie
+Bernie Madoff
+Joachim Wuermeling
+Barney Stinson
+Remo Ruffini
+Lisa Marie Presley
+Boehringer Ingelheim
+Yeti Airlines
+Boris Pistorius
+Kenneth Rogoff
+Paul Gosar
+Étienne Davignon
+Optimus Prime
+Bumblebee
+Megatron
+Ultra Magnus
+Rodimus Prime
+Sentinel Prime
+Ted Mosby
+Sergio Ramos
+LinkedIn Sales Navigator
+Lloyd Austin
+Lloyd James Austin
+Lloyd J. Austin
+Mark Milley
+Max Ernst
+Tom Zhu
+RWE Offshore Wind
+Jeff Zients
+Chris Hipkins
+BRICS
+Jean Austen
+Ron Perlman
+Grand Seiko
+The Last of Us
+Societas Europaea
+STOXX Europe
+Enzo Fernández
+Linsey Davis
+Mike Sievert
+Marcel Sabitzer
+Segunda División
+Thibaut Courtois
+Manuel Pellegrini
+Alberto Fernández
+João Cancelo
+Rúben Dias
+João Félix
+Shaquille O’Neal
+Sándor Márai
+Shaq O’Neal
+Shaquille O'Neal
+Shaq O'Neal
+Costa Concordia
+Steffen Hebestreit

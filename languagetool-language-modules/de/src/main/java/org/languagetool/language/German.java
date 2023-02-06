@@ -298,17 +298,22 @@ public class German extends Language implements AutoCloseable {
       case "DRIVE_IN": return 1; // prefer over agreement rules
       case "AN_STATT": return 1; // prefer over agreement rules
       case "VOR_BEI": return 1; // prefer over BEI_BEHALTEN
+      case "SUB_VER_KLEIN": return 1; // prefer over casing rules
       case "ALLES_GUTE": return 1; // prefer over premium rules
       case "NEUN_NEUEN": return 1; // prefer over VIELZAHL_PLUS_SINGULAR
       case "VERWANDET_VERWANDTE": return 1; // prefer over DE_CASE
       case "IN_DEUTSCHE_SPRACHE": return 1; // prefer over most other rules
+      case "SCHMIERE_STEHEN": return 1; // prefer over most other rules
       case "SEIT_LAENGEREN": return 1; // prefer over DE_CASE
+      case "WIR_GEFUEHL": return 1; // prefer over DE_CASE
+      case "VORHER_NACHHER_BILD": return 1; // prefer over DE_CASE
       case "SEIT_KLEIN_AUF": return 1; // prefer over agreement rules
       case "SEIT_GEBURT_AN": return 1; // prefer over agreement rules
       case "WO_VON": return 1; // prefer over most agreement rules
       case "ICH_BIN_STAND_JETZT_KOMMA": return 1; // prefer over most agreement rules
       case "EIN_LOGGEN": return 1; // prefer over most agreement rules
       case "ZU_GENÜGE" : return 1;   // prefer over ZU_KOENNE
+      case "SEIT_BEKANNT_WERDEN" : return 1;   // prefer over agreement and comma rules
       case "IMPFLICHT" : return 1;   // prefer over agreement rules DE_AGREEMENT
       case "NULL_KOMMA_NICHTS" : return 1;   // prefer over agreement rules
       case "ZWEI_AN_HALB" : return 1;   // prefer over agreement rules
@@ -406,6 +411,7 @@ public class German extends Language implements AutoCloseable {
       case "VERSEHENTLICHERWEISE": return -1; // higher prio than spell checker
       case "VERMOD_SKIP_VER_PKT": return -1; // less prio than casing rules
       case "EINZELBUCHSTABE_PREMIUM": return -1;  // lower prio than "A_LA_CARTE"
+      case "ART_IND_ADJ_SUB": return -2;  // prefer DE_AGREEMENT rules
       case "KATARI": return -2; // higher prio than spell checker
       case "SCHOENE_WETTER": return -2; // prefer more specific rules that offer a suggestion (e.g. DE_AGREEMENT)
       case "MEIN_KLEIN_HAUS": return -2; // prefer more specific rules that offer a suggestion (e.g. DIES_BEZÜGLICH)
@@ -441,6 +447,7 @@ public class German extends Language implements AutoCloseable {
       case "PUNCTUATION_PARAGRAPH_END": return -4;  // don't hide spelling mistakes
       case "TEST_F_ANSTATT_PH": return -4;  // don't hide spelling mistakes
       case "DAS_WETTER_IST": return -5; // lower prio than spell checker
+      case "VEREIZ_VERINF_PKT": return -5; // lower prio than spell checker
       case "WER_STARK_SCHWITZ": return -5; // lower prio than spell checker
       case "VERBEN_PRAEFIX_AUS": return -5; // lower prio than spell checker
       case "ANFUEHRUNG_VERSCHACHTELT": return -5;  // lower prio than speller and FALSCHES_ANFUEHRUNGSZEICHEN
@@ -464,6 +471,7 @@ public class German extends Language implements AutoCloseable {
       case "GERMAN_WORD_REPEAT_RULE": return -15; // lower prio than SAGT_RUFT and KOMMA_ZWISCHEN_HAUPT_UND_NEBENSATZ_2
       case "TOO_LONG_PARAGRAPH": return -15;
       case "ALL_UPPERCASE": return -15;
+      case "NUR_LEDIGLICH": return -16; // lower prio than GERMAN_WORD_REPEAT_RULE
       case "COMMA_BEHIND_RELATIVE_CLAUSE": return -52; // less prio than AI_DE_HYDRA_LEO
       case "DOPPELUNG_MODALVERB": return -52; // prefer comma rules (DOPPELUNG_MODALVERB, AI)
       case "VER_DOPPELUNG": return -52; // prefer comma rules (including AI)

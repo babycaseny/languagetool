@@ -1,6 +1,7 @@
 # adaptacions
 #gay=gai
 #gays=gais
+duty free|duty-free|tax free|tax-free=lliure d'imposts|lliure d'impostos
 sampling=mostratge|mostreig
 spam=correu brossa|contingut brossa
 spyware=programari espia
@@ -286,3 +287,7 @@ gaslighting=llum de gas|fer llum de gas
 video mapping|vídeo mapping=mapatge|videomapatge
 teenager=adolescent
 teenagers=adolescents
+time out|time-out=temps mort
+red flag=bandera vermella|bandera roja
+red flags=banderes vermelles|banderes roges
+esquema Ponzi=sistema de Ponzi|piràmide de Ponzi|estafa piramidal|piràmide financera

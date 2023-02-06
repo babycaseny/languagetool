@@ -1,3 +1,7 @@
+apreta=aprieta|apretar|apretá|apresa
+apretan=aprietan|apretar|aprestan|apresan
+conciente=consciente|cociente|consiente
+concientes=conscientes|cocientes
 lásers=láseres
 Hannoucah|Hanoukka|Hanuká|Hanukkah|Januka|Janukka|Khanucá|Januká=Janucá|Jánuca
 distensionamiento=distensión
@@ -160,10 +164,3 @@ gustaria=gustaría
 # Errors in the dictionary 
 # (can be removed after updating the dictionary)
 #################################################
-Maria=María
-Reunion=Reunión
-judaismo=judaísmo
-judaismos=judaísmos
-acabóse=acabose
-proxenitismo=proxenetismo
-proxenitismos=proxenetismos

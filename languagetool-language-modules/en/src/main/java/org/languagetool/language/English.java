@@ -304,6 +304,8 @@ public class English extends Language implements AutoCloseable {
       case "EN_COMPOUNDS":              return 2;
       case "ABBREVIATION_PUNCTUATION":  return 2;
       case "READ_ONLY_ACCESS_HYPHEN":   return 2;   // higher priority than agreement rules
+      case "MAKE_OR_BREAK_HYPHEN":   return 2;   // higher priority than agreement rules
+      case "LINKED_IN":                 return 2;   // higher prio than agreement rules
       case "ACCESS_EXCESS":             return 1;   // higher prio than A_UNCOUNTABLE
       case "PRP_ABLE_TO":               return 1;   // higher prio than AI_HYDRA_LEO_CP_YOU.*
       case "WEE_WE":                    return 1;   // higher prio than INTERJECTIONS_PUNCTUATION
@@ -406,6 +408,7 @@ public class English extends Language implements AutoCloseable {
       case "APOSTROPHE_VS_QUOTE":       return 1;   // higher prio than EN_QUOTES
       case "ALL_OF_SUDDEN":             return 1;   // higher prio than ALL_MOST_SOME_OF_NOUN
       case "COMMA_PERIOD":              return 1;   // higher prio than COMMA_PARENTHESIS_WHITESPACE
+      case "COMMA_CLOSING_PARENTHESIS": return 1;   // higher prio than COMMA_PARENTHESIS_WHITESPACE
       case "HERE_HEAR":                 return 1;   // higher prio than ENGLISH_WORD_REPEAT_RULE
       case "MISSING_POSS_APOS":         return 1;   // higher prio than SINGULAR_NOUN_VERB_AGREEMENT
       case "DO_HE_VERB":                return 1;   // prefer over HE_VERB_AGR
@@ -545,7 +548,6 @@ public class English extends Language implements AutoCloseable {
       case "DO_PRP_NOTVB":              return -3;  // prefer other more specific rules (e.g. HOW_DO_I_VB)
       case "ARTICLE_VB":                return -3;  // prefer A_INFINITIVE and other more specific rules (with suggestions)
       case "PRP_A":                     return -4;  // prefer other more specific rules (e.g. I_AN, PRP_JJ)
-      case "PRP_NO_ADVERB_VERB":        return -4;  // prefer other more specific rules (e.g. PRP_VBG, IT_ITS, ...)
       case "PRP_THE":                   return -4;  // prefer other rules (e.g. I_A, PRP_JJ, IF_YOU_ANY, I_AN)
       case "GONNA":                     return -4;  // prefer over spelling rules
       case "WHATCHA":                   return -4;  // prefer over spelling rules
@@ -572,6 +574,7 @@ public class English extends Language implements AutoCloseable {
       case "IF_DT_NN_VBZ":             return -12;  // prefer HYDRA_LEO
       case "PRP_MD_NN":                 return -12;  // prefer other more specific rules (e.g. MD_ABLE, WONT_WANT)
       case "TWO_CONNECTED_MODAL_VERBS": return -15;
+      case "PRP_NO_ADVERB_VERB":        return -15;  // prefer other more specific rules (e.g. PRP_VBG, IT_ITS, ...)
       case "MISSING_TO_BETWEEN_BE_AND_VB": return -15; // prefer AI and comma rules
       case "HAVE_TO_NOTVB":             return -15; // prefer AI and comma rules
       case "BE_MD":                     return -20;  // prefer other more specific rules (e.g. BEEN_PART_AGREEMENT, HYDRA_LEO)

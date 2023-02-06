@@ -80,6 +80,7 @@ public abstract class AbstractEnglishSpellerRule extends MorfologikSpellerRule {
     "client side",
     "server side",
     "in house",
+    "back office",
     "faggot",
     "faggots",
     "fuckable",
@@ -415,6 +416,7 @@ public abstract class AbstractEnglishSpellerRule extends MorfologikSpellerRule {
                    !k.getReplacement().toLowerCase().startsWith("pro ") &&
                    !k.getReplacement().toLowerCase().startsWith("pseudo ") &&
                    !k.getReplacement().toLowerCase().startsWith("psycho ") &&
+                   !k.getReplacement().toLowerCase().startsWith("mi ") &&
                    !k.getReplacement().toLowerCase().startsWith("nano ") &&
                    !k.getReplacement().toLowerCase().startsWith("ans ") &&
                    !k.getReplacement().toLowerCase().startsWith("semi ") &&
@@ -487,6 +489,7 @@ public abstract class AbstractEnglishSpellerRule extends MorfologikSpellerRule {
                    !k.getReplacement().endsWith(" ea") &&
                    !k.getReplacement().endsWith(" ge") &&
                    !k.getReplacement().endsWith(" ab") &&
+                   !k.getReplacement().endsWith(" mi") &&
                    !k.getReplacement().endsWith(" tar") &&
                    !k.getReplacement().endsWith(" adv") &&
                    !k.getReplacement().endsWith(" re") &&
@@ -636,7 +639,14 @@ public abstract class AbstractEnglishSpellerRule extends MorfologikSpellerRule {
 
   protected static Map<String, List<String>> getTopSuggestions() {
     Map<String, List<String>> s = new HashMap<>();
+    s.put("Ths", Arrays.asList("This", "The"));
+    s.put("compability", Arrays.asList("compatibility"));
+    s.put("Compability", Arrays.asList("Compatibility"));
     s.put("enroute", Arrays.asList("en route"));
+    s.put("teasered", Arrays.asList("teased"));
+    s.put("teasering", Arrays.asList("teasing"));
+    s.put("stealed", Arrays.asList("stole", "stolen"));
+    s.put("stealt", Arrays.asList("stole", "stolen"));
     s.put("whaddya", Arrays.asList("what do you"));
     s.put("Whaddya", Arrays.asList("What do you"));
     s.put("ignight", Arrays.asList("ignite"));
@@ -984,6 +994,8 @@ public abstract class AbstractEnglishSpellerRule extends MorfologikSpellerRule {
     s.put("sweetys", Arrays.asList("sweeties"));
     s.put("sowwy", Arrays.asList("sorry"));
     s.put("Sowwy", Arrays.asList("Sorry"));
+    s.put("shouldent", Arrays.asList("shouldn't"));
+    s.put("couldent", Arrays.asList("couldn't"));
     s.put("grandmum", Arrays.asList("grandma", "grandmother"));
     s.put("grandmom", Arrays.asList("grandma", "grandmother"));
     s.put("Grandmum", Arrays.asList("Grandma", "Grandmother"));

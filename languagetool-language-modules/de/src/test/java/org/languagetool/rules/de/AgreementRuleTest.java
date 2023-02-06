@@ -95,7 +95,7 @@ public class AgreementRuleTest {
     assertGood("Als Vorboten des Discounthandels sind die Ende der 50er Jahre in der Bundesrepublik Deutschland wiederauflebenden Erscheinungsformen des Beziehungs-, Betriebs- und Belegschaftshandels anzusehen.");
     assertGood("Die Anfang des letzten Monats umgestaltete Veranda ist schön.");
     assertGood("Der Mitte 2001 umgestaltete Garten ist schön.");
-    assertBad("Es ist ein sehr interessantes kostenloses Slot Spiel.", "ein sehr interessantes kostenloses Slot-Spiel");
+    assertBad("Es ist ein sehr interessantes kostenloses Slot Spiel.", "ein sehr interessantes kostenloses Slotspiel", "ein sehr interessantes kostenloses Slot-Spiel");
     //assertBad("Die Bad Taste Party von Susi", "Die Bad-Taste-Party");   // not supported yet
     //assertBad("Die Update Liste.", "Die Updateliste");  // not accepted by speller
     List<RuleMatch> matches = lt.check("Er folgt damit dem Tipp des Autoren Michael Müller.");
@@ -236,6 +236,7 @@ public class AgreementRuleTest {
     assertGood("Können Sie das auch nächsten Monat erledigen?");
     assertGood("War das Absicht?");
     assertGood("Alles Große und Edle ist einfacher Art.");
+    assertGood("Dieser vereint Sprachprüfung, Thesaurus und Umformuliertool in einem.");
 
     assertGood("Das Dach meines Autos.");
     assertGood("Das Dach meiner Autos.");
@@ -318,6 +319,7 @@ public class AgreementRuleTest {
     assertGood("Spielst du vielleicht auf das Bordell neben unserm Hotel an?");
     assertGood("Spielst du vielleicht auf das Bordell neben unsrem Hotel an?");
     assertGood("Dieses ungeahnt prophetische Wort");
+    assertGood("Das bestätigte Regierungssprecher Steffen Hebestreit am Freitag");
 
     // relative clauses:
     assertGood("Das Recht, das Frauen eingeräumt wird.");

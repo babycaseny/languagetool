@@ -43,6 +43,27 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
   <category id="MISC" name="Gramática Geral">
 
 
+    <!-- ESTIMAÇÃO MÁXIMA SEMELHANÇA estimação máxima verosimilhança -->
+    <rule id='ESTIMAÇÃO_MÁXIMA_SEMELHANÇA_PT_BR' name="Erro de tradução: 'estimação máxima verosimilhança(PT)/verossimilhança(BR)'">
+      <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-06 + 2023-01-05 (Checked/Enhanced) (1-JAN-2022+)      -->
+      <!--
+      IN pt_PT: verosimilhança
+      IN pt_BR: verossimilhança
+      -->
+      <pattern>
+        <token regexp="yes">estimativas?|estimação|estimações|estimador|estimadores</token>
+        <token regexp="yes">d[ae]|pela|por</token>
+        <token>máxima</token>
+        <marker>
+          <token>semelhança</token>
+        </marker>
+      </pattern>
+      <message>Expressão não pode ser traduzida literalmente.</message>
+      <suggestion>verossimilhança</suggestion>
+      <example correction='verossimilhança'>A estimativa de máxima <marker>semelhança</marker> é usada em Estatística.</example>
+    </rule>
+
+
     <!-- E QUE ESTÁ FELIZ e está feliz -->
     <rule id='E_QUE_VERBO_REMOVER_QUE_PT_BR' name="Simplificar: E que → e" type="style">
       <!-- Created by Marco A.G.Pinto with Ricardo Joseh Lima suggestions, Portuguese rule 2022-11-05 (25-JUL-2022+) -->
@@ -272,7 +293,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
     <!-- ********************************************************** -->
     <!-- CONFUNDIR ME POR MIM ANTES DE VERBO -->
 
-    <rule id="MIM_BR" name="me">
+    <rule id="MIM_BR" name="me" default="temp_off">
       <pattern>
         <marker>
           <token>mim</token>
@@ -314,7 +335,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
       <pattern>
         <token>menas</token>
       </pattern>
-      <message>O Advérbio <suggestion>menos</suggestion> não sofre alteração de gênero.</message>
+      <message>'Menas' é uma flexão de um pronome indefinido que não é aceita em registros formais.</message>
+      <suggestion>menos</suggestion>
       <example correction="Menos"><marker>Menas</marker> chances de vencer.</example>
     </rule>
 
@@ -1071,7 +1093,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
       <example correction='jan'>1 <marker>Jan</marker> 2002 - As moedas e notas físicas de euro entraram em circulação, tornando-se a moeda de uso corrente entre os membros originais.</example>
     </rule>
 
-    <rulegroup id='AO90_WEEKDAYS_CASING_PT_BR' type='grammar' name='AO90: Capitalização dos Dias da Semana' default="temp_off"><!-- TODO Converter mensagens para pt-BR -->
+    <rulegroup id='AO90_WEEKDAYS_CASING_PT_BR' type='grammar' name='AO90: Capitalização dos Dias da Semana'><!-- TODO Converter mensagens para pt-BR -->
       <!-- Created by  Tiago F. Santos , Portuguese rule, 2017-01-26 -->
       <rule>
         <antipattern>
@@ -1098,9 +1120,29 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
           <token>Ter</token>
           <token postag='DI.+|VMP00.+|NC.+|AQ.+|RG' postag_regexp='yes'/>
         </antipattern>
+        <antipattern>
+          <token>Dom</token>
+          <token postag='SPS.+' postag_regexp='yes'/>
+        </antipattern>
+        <antipattern>
+          <token regexp='yes'>Sábado|Domingo|Segunda|Terça|Quarta|Quinta|Sexta</token>
+          <token min='0' postag='SPS.+' postag_regexp='yes'/>
+          <token regexp="yes">\p{Lu}.*</token>
+          <example>logo após o "Domingo Espetacular"</example>
+          <example>acontece no Domingo de Ramos</example>
+        </antipattern>
+        <antipattern>
+          <token regexp="yes">\p{Lu}.*</token>
+          <token min='0' postag='SPS.+' postag_regexp='yes'/>
+          <token regexp='yes'>Sábado|Domingo|Segunda|Terça|Quarta|Quinta|Sexta</token>
+          <example>Agenda de Domingo</example>
+        </antipattern>
         <!-- MARCOAGPINTO 2022-05-17 (15-MAY-2022+) *END* -->
         <pattern case_sensitive='yes'>
-          <token><exception postag_regexp='yes' postag='SENT_START|NP.+'/></token>
+          <token>
+            <exception postag_regexp='yes' postag='SENT_START|NP.+|_QUOT'/>
+            <exception>:</exception>
+          </token>
           <marker>
             <token regexp='yes'>Sábados?|Domingo|(Seg|Ter|Qua|Qui|Sex|S[aá]b|Dom)</token>
           </marker>
@@ -1434,13 +1476,67 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
           <example>é a Judie Dench</example>
         </antipattern>
         <pattern>
+         <marker>
           <token inflected="yes">judiar
             <exception regexp="yes">judi[oa]s?</exception>
           </token>
+        </marker>
+          <token negate="yes" regexp="yes">d[oae]s?|del[ea]s?</token>
         </pattern>
         <message>Este termo é antissemita ou de outra forma depreciativo; pondere alterar para <suggestion><match no='1' postag='V.+' postag_regexp='yes'>maltratar</match></suggestion>.</message>
         <short>Termo depreciativo</short>
         <example correction="maltratando">Você está me <marker>judiando</marker>.</example>
+      </rule>
+      <rule>
+        <pattern>
+            <token inflected="yes">judiar
+              <exception regexp="yes">judi[oa]s?</exception>
+            </token>
+          <token regexp="yes">d[oa]s?</token>
+        </pattern>
+        <message>Este termo é antissemita ou de outra forma depreciativo; considere as sugestões.</message>
+        <suggestion><match no='1' postag='V.+' postag_regexp='yes'>maltratar</match> <match no='2' regexp_match='d(.+)' regexp_replace='$1'/></suggestion>
+        <short>Termo depreciativo</short>
+        <example correction="maltratando a">Você está <marker>judiando da</marker> menina.</example>
+        <example correction="maltratando o">Você está <marker>judiando do</marker> menino.</example>
+        <example correction="maltratando as">Você está <marker>judiando das</marker> meninas.</example>
+        <example correction="maltratando os">Você está <marker>judiando dos</marker> meninos.</example>
+      </rule>
+      <rule>
+        <pattern>
+          <token inflected="yes">judiar
+            <exception regexp="yes">judi[oa]s?</exception>
+          </token>
+          <token>de</token>
+        </pattern>
+        <message>Este termo é antissemita ou de outra forma depreciativo; considere as sugestões.</message>
+        <suggestion><match no='1' postag='V.+' postag_regexp='yes'>maltratar</match> a</suggestion>
+        <short>Termo depreciativo</short>
+        <example correction="maltratando a">Você está <marker>judiando de</marker> mim.</example>
+      </rule>
+      <rule>
+        <pattern>
+          <token inflected="yes">judiar
+            <exception regexp="yes">judi[oa]s?</exception>
+          </token>
+          <token regexp="yes">deles?</token>
+        </pattern>
+        <message>Este termo é antissemita ou de outra forma depreciativo; considere as sugestões.</message>
+        <suggestion><match no='2' regexp_match='dele(.)' regexp_replace='o$1'/> <match no='1' postag='V.+' postag_regexp='yes'>maltratar</match></suggestion>
+        <short>Termo depreciativo</short>
+        <example correction="os maltratando">Você está <marker>judiando deles</marker>.</example>
+      </rule>
+      <rule>
+        <pattern>
+          <token inflected="yes">judiar
+            <exception regexp="yes">judi[oa]s?</exception>
+          </token>
+          <token regexp="yes">delas?</token>
+        </pattern>
+        <message>Este termo é antissemita ou de outra forma depreciativo; considere as sugestões.</message>
+        <suggestion><match no='2' regexp_match='dela(.)' regexp_replace='a$1'/> <match no='1' postag='V.+' postag_regexp='yes'>maltratar</match></suggestion>
+        <short>Termo depreciativo</short>
+        <example correction="as maltratando">Você está <marker>judiando delas</marker>.</example>
       </rule>
       <rule>
         <pattern>
@@ -1487,12 +1583,14 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
       <rule>
         <pattern>
           <marker>
-            <token regexp="yes">maricas?|maricona|boiola|maricão|mariconço</token>
+            <token regexp="yes">maricas?|maricona|maricão|mariconço</token>
           </marker>
         </pattern>
         <message>Este termo é depreciativo. Pondere substituir por <suggestion>covarde</suggestion> ou <suggestion>fracote</suggestion></message>
+        <suggestion>covardes</suggestion>
+        <suggestion>fracotes</suggestion>
         <short>Termo depreciativo</short>
-        <example correction="covarde|fracote">Você age como um <marker>marica</marker>.</example>
+        <example correction="covarde|fracote|covardes|fracotes">Você age como um <marker>marica</marker>.</example>
       </rule>
       <rule>
         <pattern>
@@ -1544,7 +1642,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         <short>Termo depreciativo</short>
         <example correction="farturas">Você e suas <marker>gordices</marker>.</example>
       </rule>
-      <rule>
+      <rule default="temp_off">
         <pattern>
           <token negate="yes" regexp="yes">foi|sido</token>
           <marker>
@@ -1558,7 +1656,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         <short>Termo depreciativo</short>
         <example correction="incapacitado|incapacitada|idiota">Ela é uma <marker>mongolóide</marker>.</example>
       </rule>
-      <rule>
+      <rule default="temp_off">
         <pattern>
           <token negate="yes" regexp="yes">foram|sido</token>
           <marker>
@@ -1671,11 +1769,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         <pattern>
           <token>mulato</token>
         </pattern>
-        <message>Este termo é racista e remete ao animal mula. Pondere dizer <suggestion>negro de pele clara</suggestion>.</message>
-        <suggestion>preto de pele clara</suggestion>
-        <suggestion>miscigenado</suggestion>
+        <message>Este termo é racista e remete ao animal mula. Pondere dizer <suggestion>pardo</suggestion>, <suggestion>preto</suggestion> ou <suggestion>negro</suggestion>.</message>
         <short>Termo depreciativo</short>
-        <example correction="negro de pele clara|preto de pele clara|miscigenado">Ele é <marker>mulato</marker>.</example>
+        <example correction="pardo|preto|negro">Ele é <marker>mulato</marker>.</example>
       </rule>
       <rule>
         <antipattern>
@@ -1691,11 +1787,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         <pattern>
           <token>mulatos</token>
         </pattern>
-        <message>Este termo é racista e remete ao animal mula. Pondere dizer <suggestion>negros de pele clara</suggestion>.</message>
-        <suggestion>pretos de pele clara</suggestion>
-        <suggestion>miscigenados</suggestion>
+        <message>Este termo é racista e remete ao animal mula. Pondere dizer <suggestion>pardos</suggestion>, <suggestion>pretos</suggestion> ou <suggestion>negros</suggestion>.</message>
         <short>Termo depreciativo</short>
-        <example correction="negros de pele clara|pretos de pele clara|miscigenados">Eles são <marker>mulatos</marker>.</example>
+        <example correction="pardos|pretos|negros">Eles são <marker>mulatos</marker>.</example>
       </rule>
       <rule>
         <antipattern>
@@ -1711,11 +1805,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         <pattern>
           <token>mulata</token>
         </pattern>
-        <message>Este termo é racista e remete ao animal mula. Pondere dizer <suggestion>negra de pele clara</suggestion>.</message>
-        <suggestion>preta de pele clara</suggestion>
-        <suggestion>miscigenada</suggestion>
+        <message>Este termo é racista e remete ao animal mula. Pondere dizer <suggestion>parda</suggestion>, <suggestion>preta</suggestion> ou <suggestion>negra</suggestion>.</message>
         <short>Termo depreciativo</short>
-        <example correction="negra de pele clara|preta de pele clara|miscigenada">Ela é <marker>mulata</marker>.</example>
+        <example correction="parda|preta|negra">Ela é <marker>mulata</marker>.</example>
       </rule>
       <rule>
         <antipattern>
@@ -1731,11 +1823,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         <pattern>
           <token>mulatas</token>
         </pattern>
-        <message>Este termo é racista e remete ao animal mula. Pondere dizer <suggestion>negras de pele clara</suggestion>.</message>
-        <suggestion>pretas de pele clara</suggestion>
-        <suggestion>miscigenadas</suggestion>
+        <message>Este termo é racista e remete ao animal mula. Pondere dizer <suggestion>pardas</suggestion>, <suggestion>pretas</suggestion> ou <suggestion>negras</suggestion>.</message>
         <short>Termo depreciativo</short>
-        <example correction="negras de pele clara|pretas de pele clara|miscigenadas">Elas são <marker>mulatas</marker>.</example>
+        <example correction="pardas|pretas|negras">Elas são <marker>mulatas</marker>.</example>
       </rule>
       <rule>
         <pattern>
@@ -1752,14 +1842,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         <message>Este termo é xenofóbico ou depreciativo. Pondere dizer <suggestion>japoneses</suggestion>, <suggestion>japonesas</suggestion>, <suggestion>asiáticos</suggestion> ou <suggestion>asiáticas</suggestion>.</message>
         <short>Termo depreciativo</short>
         <example correction="japoneses|japonesas|asiáticos|asiáticas">Eles são <marker>japas</marker>.</example>
-      </rule>
-      <rule>
-        <pattern>
-          <token>cegueta</token>
-        </pattern>
-        <message>Este termo é capacitista ou depreciativo. Pondere dizer <suggestion>míope</suggestion>.</message>
-        <short>Termo depreciativo</short>
-        <example correction="míope">Ela é <marker>cegueta</marker>.</example>
       </rule>
       <rule>
         <pattern>
@@ -1839,7 +1921,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         <short>Termo depreciativo</short>
         <example correction="inveja inofensiva">Isso é <marker>inveja branca</marker>.</example>
       </rule>
-      <rule default="temp_off">
+      <rule>
         <pattern>
           <token>mercado</token>
           <token>negro</token>
@@ -1848,7 +1930,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         <short>Termo depreciativo</short>
         <example correction="mercado clandestino">Comprou no <marker>mercado negro</marker>.</example>
       </rule>
-      <rule default="temp_off">
+      <rule>
         <pattern>
           <token>humor</token>
           <token>negro</token>
@@ -1858,14 +1940,17 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         <example correction="humor ácido">Tem um <marker>humor negro</marker>.</example>
       </rule>
       <rule default="temp_off">
-        <pattern>
+        <pattern case_sensitive="yes">
+          <token negate="yes">-</token>
+         <marker>
           <token regexp="yes">índi[ao]s?</token>
+         </marker>
         </pattern>
-        <message>Este termo é depreciativo. Considere utilizar <suggestion>indígena</suggestion> ou <suggestion>indígenas</suggestion>.</message>
+        <message>Este termo é depreciativo. Considere utilizar <suggestion>indígena</suggestion> ou <suggestion>indígenas</suggestion>. Se quis dizer o país, escreva com letra maiúscula: <suggestion>Índia</suggestion></message>
         <short>Termo depreciativo</short>
-        <example correction="indígena|indígenas">São <marker>índios</marker>.</example>
+        <example correction="indígena|indígenas|Índia">São <marker>índios</marker>.</example>
       </rule>
-      <rule default="temp_off">
+      <rule>
         <pattern>
           <token inflected="yes">fazer</token>
         <token postag_regexp="yes" postag="P[ID].+|D.+|N.+" min="0" max="3"/>

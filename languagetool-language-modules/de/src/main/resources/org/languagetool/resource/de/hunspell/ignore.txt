@@ -1364,3 +1364,95 @@ UEFI #abk
 UPL #abk
 Wörlitz #name
 TSchG #abk
+eAU #abk
+Ferguson/S #name
+IKZ #abk
+GEC #abk
+PDE #abk
+Reithofer/S #name
+EDG #abk
+Keyword-Stuffing/S #eng
+Keyword Stuffing/S #eng
+UT #abk
+AVC #abk
+AWR #abk
+BWAs #abk
+PMO #abk
+PIH #abk
+Rösler/S #name
+ACR #abk
+affektuell/A
+Blankenberg/S #name
+BLE #abk
+Kühn/S #name
+Clouseau/S #name
+MiFID
+CfD
+CfDs
+Esraa/S #name
+MZ #abk
+ATR #abk
+Böckmann/S #name
+FDE #abk
+IKT #abk
+IWC #abk
+PBA #abk
+STS #abk
+SYK #abk
+Hergershausen/S #name
+BCD #abk
+EHZ #abk
+SOAP/S #name
+Abenheim/S #name
+AHP #abk
+Truchtelfingen/S #name
+Symfony/S #name
+StBA #abk #name
+McCombs #name
+Schallmayer/S #name
+HDAX #abk
+Probst/S #name
+BN #abk
+PMMA #abk
+Wuermeling/S #name
+INV #abk
+PMI #abk
+Lightbox #eng
+Cinema/S #eng
+ABV #abk
+Bremenfeld/S #name
+BYD #abk
+Coleman/S #name
+ImmoScout #name
+JR #abk
+PBA #abk
+OE #abk
+TW #abk
+ABL #abk
+SolzG #abk
+Hj. #abk
+eARC #abk
+LBMA #abk
+ETC
+ETCs
+Fry #name
+ErbStRG #abk
+ErbStG #abk
+Ferranti #name
+FreeSpace #name #eng
+Freespace #name #eng
+Fr. #abk
+FR #abk
+DBA #abk
+DMs
+Messerschmidt/S #name
+Ibu/S #name
+Adani/S #name
+Borowiecki/S #name
+Slamp/S #name #brand
+SLAMP #name #brand
+Thibaudet/S #name
+Thibaut/S #name
+Thibeault/S #name
+Thébault/S #name
+Hebestreit/S #name

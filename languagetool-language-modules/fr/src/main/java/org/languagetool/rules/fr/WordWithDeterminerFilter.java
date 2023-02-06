@@ -21,6 +21,7 @@ package org.languagetool.rules.fr;
 import org.languagetool.AnalyzedToken;
 import org.languagetool.AnalyzedTokenReadings;
 import org.languagetool.JLanguageTool;
+import org.languagetool.Language;
 import org.languagetool.language.French;
 import org.languagetool.rules.Rule;
 import org.languagetool.rules.RuleMatch;
@@ -40,8 +41,6 @@ import java.util.regex.Pattern;
  * Create suggestions for: determiner + noun/adjective
  */
 public class WordWithDeterminerFilter extends RuleFilter {
-
-  private static final JLanguageTool lt = new JLanguageTool(new French());
 
   private static final String determinerRegexp = "(P.)?D .*|J .*|V.* ppa .*";
   private static final Pattern DETERMINER = Pattern.compile(determinerRegexp);
@@ -63,7 +62,10 @@ public class WordWithDeterminerFilter extends RuleFilter {
 //      int ii=0;
 //      ii++;
 //    }
-
+    
+    Language lang = new French();
+    JLanguageTool lt = lang.createDefaultJLanguageTool(); 
+    
     String wordFrom = getRequired("wordFrom", arguments);
     String determinerFrom = getRequired("determinerFrom", arguments);
     int posWord = 0;
@@ -123,6 +125,8 @@ public class WordWithDeterminerFilter extends RuleFilter {
       }
     }
 
+    //FIXME: enabling and disabling rules is not a good solution 
+    // if several filters use the same JLanguageTool instance 
     for (Rule r : lt.getAllRules()) {
       if (r.getCategory().getId().toString().equals("CAT_ELISION") || r.getId().equals("CET_CE")
           || r.getId().equals("CE_CET") || r.getId().equals("MA_VOYELLE") || r.getId().equals("MON_NFS")

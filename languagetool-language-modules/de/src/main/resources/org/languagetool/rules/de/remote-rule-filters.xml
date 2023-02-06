@@ -593,6 +593,29 @@ To ignore a remote rule match, set the <marker> so that it exactly covers the te
             </rule>
             <rule>
                 <pattern>
+                    <token postag="SENT_START|PKT" postag_regexp="yes" />
+                    <token regexp="yes">@.*[a-z0-9].*</token>
+                    <token regexp="yes" spacebefore="no">[_.]</token>
+                    <marker>
+                        <token regexp="yes" spacebefore="no">.*[a-z0-9].*</token>
+                    </marker>
+                </pattern>
+                <example correction="">@fidor_<marker>hilft</marker> man kann sich bei euch nicht mehr einloggen.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token postag="SENT_START|PKT" postag_regexp="yes" />
+                    <token regexp="yes">@.*[a-z0-9].*</token>
+                    <token regexp="yes" spacebefore="no">[_.]</token>
+                    <token regexp="yes" spacebefore="no">.*[a-z0-9].*</token>
+                    <marker>
+                        <token regexp="yes">der|die|das|wie|wo|wann|wer|was|wieso|warum|wo(zu|mit|hin)</token>
+                    </marker>
+                </pattern>
+                <example correction="">@fidor_hilft <marker>der</marker> Log-in ist kaputt.</example>
+            </rule>
+            <rule>
+                <pattern>
                     <token postag="SENT_START"/>
                     <marker>
                         <token postag="ADV:(MOD|TMP)" postag_regexp="yes"/>
@@ -733,6 +756,19 @@ To ignore a remote rule match, set the <marker> so that it exactly covers the te
                 </pattern>
                 <example correction=""><marker>Hey</marker> Lennart, wie gehts?</example>
             </rule>
+            <rule>
+                <pattern>
+                    <token regexp="yes" skip="2">ebenso|gleichermaßen|genauso</token>
+                    <marker>
+                        <token skip="5">
+                            wie
+                            <exception scope="next" postag="VER.*" postag_regexp="yes" />
+                        </token>
+                    </marker>
+                    <token postag="SENT_END" />
+                </pattern>
+                <example correction="">Dabei werden äußere Merkmale ebenso erwähnt <marker>wie</marker> (innere) Charaktereigenschaften.</example>
+            </rule>
         </rulegroup>
         <rulegroup id="AI_DE_HYDRA_LEO_CPT_DIE_CDIE" name="">
             <rule>
@@ -773,7 +809,7 @@ To ignore a remote rule match, set the <marker> so that it exactly covers the te
             </rule>
             <rule>
                 <pattern>
-                    <token regexp="yes">\u2063</token>
+                    <token regexp="yes">[\u2063"]</token>
                     <marker>
                         <token>das</token>
                     </marker>
@@ -812,6 +848,23 @@ To ignore a remote rule match, set the <marker> so that it exactly covers the te
                     </marker>
                 </pattern>
                 <example correction="">Wir haben gleich zwei Eselsbrücken in <marker>petto</marker>, um „tot“ und „Tod“ zu unterscheiden.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <marker>
+                        <token case_sensitive="yes">ergo</token>
+                    </marker>
+                </pattern>
+                <example correction="">Ok, dann 155 €, <marker>ergo</marker> 12 * 155 = 1860</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <marker>
+                        <token case_sensitive="yes">mega</token>
+                    </marker>
+                    <token postag="ADJ.*" postag_regexp="yes" />
+                </pattern>
+                <example correction="">Das sieht ja <marker>mega</marker> interessant aus.</example>
             </rule>
         </rulegroup>
         <rulegroup id="AI_DE_HYDRA_LEO_NOUN_SPACE" name="">

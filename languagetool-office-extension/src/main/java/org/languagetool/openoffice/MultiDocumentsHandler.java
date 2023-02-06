@@ -82,7 +82,6 @@ public class MultiDocumentsHandler {
   private static final int HEAP_CHECK_INTERVAL = 500;
 
   private final List<XLinguServiceEventListener> xEventListeners;
-
   private boolean docReset = false;
 
   private static boolean debugMode = false;   //  should be false except for testing
@@ -126,7 +125,8 @@ public class MultiDocumentsHandler {
   private ShapeChangeCheck shapeChangeCheck = null;   // Thread for test changes in shape texts
   
   private boolean useOrginalCheckDialog = false;    // use original spell and grammar dialog (LT check dialog does not work for OO)
-  private boolean isNotTextDodument = false;
+  private boolean checkImpressDocument = false;     //  the document to check is Impress
+  private boolean isNotTextDocument = false;
   private int heapCheckInterval = HEAP_CHECK_INTERVAL;
   private boolean testMode = false;
   private boolean javaLookAndFeelIsSet = false;
@@ -145,6 +145,8 @@ public class MultiDocumentsHandler {
     disabledRulesUI = new HashMap<>();
     extraRemoteRules = new ArrayList<>();
     dictionary = new LtDictionary();
+    LtHelper ltHelper = new LtHelper();
+    ltHelper.start();
   }
   
   /**
@@ -197,8 +199,9 @@ public class MultiDocumentsHandler {
         langForShortName = getLanguage(locale);
         isSameLanguage = langForShortName.equals(docLanguage) && lt != null;
       }
-      if (!isSameLanguage || recheck) {
-        boolean initDocs = (lt == null || recheck);
+      if (!isSameLanguage || recheck || checkImpressDocument) {
+        boolean initDocs = (lt == null || recheck || checkImpressDocument);
+        checkImpressDocument = false;
         if (!isSameLanguage) {
           docLanguage = langForShortName;
           this.locale = locale;
@@ -251,7 +254,7 @@ public class MultiDocumentsHandler {
    */
   public SingleDocument getCurrentDocument() {
     XComponent xComponent = OfficeTools.getCurrentComponent(xContext);
-    isNotTextDodument = false;
+    isNotTextDocument = false;
     if (xComponent != null) {
       for (SingleDocument document : documents) {
         if (xComponent.equals(document.getXComponent())) {
@@ -263,6 +266,7 @@ public class MultiDocumentsHandler {
         String prefix = null;
         if (OfficeDrawTools.isImpressDocument(xComponent)) {
           prefix = "I";
+          checkImpressDocument = true;
         } else if (OfficeSpreadsheetTools.isSpreadsheetDocument(xComponent)) {
           prefix = "C";
         }
@@ -274,13 +278,16 @@ public class MultiDocumentsHandler {
             MessageHandler.printToLogFile("MultiDocumentsHandler: getCurrentDocument: Error: Document (ID: " + docID + ") has no XComponent -> Internal space will not be deleted when document disposes");
             xComponent = null;
           }
+          if (config == null) {
+            config = getConfiguration();
+          }
           SingleDocument newDocument = new SingleDocument(xContext, config, docID, xComponent, this);
           documents.add(newDocument);
           MessageHandler.printToLogFile("Document " + (documents.size() - 1) + " created; docID = " + docID);
           return newDocument;
         }
         MessageHandler.printToLogFile("MultiDocumentsHandler: getCurrentDocument: Is document, but not a text document!");
-        isNotTextDodument = true;
+        isNotTextDocument = true;
       }
     }
     return null;
@@ -314,7 +321,21 @@ public class MultiDocumentsHandler {
    * return true, if a document was found but is not a text document
    */
   boolean isNotTextDocument() {
-    return isNotTextDodument;
+    return isNotTextDocument;
+  }
+  
+  /**
+   * return true, if the document to check is an Impress document
+   */
+  boolean isCheckImpressDocument() {
+    return checkImpressDocument;
+  }
+  
+  /**
+   * set the checkImpressDocument flag
+   */
+  void setCheckImpressDocument(boolean checkImpressDocument) {
+    this.checkImpressDocument = checkImpressDocument;
   }
   
   /**
@@ -372,10 +393,6 @@ public class MultiDocumentsHandler {
       cfgDialog.close();
       cfgDialog = null;
     }
-//    if (aboutDialog != null) {
-//      aboutDialog.close();
-//      aboutDialog = null;
-//    }
   }
   
   /**
@@ -599,6 +616,12 @@ public class MultiDocumentsHandler {
     XComponent xComponent = OfficeTools.getCurrentComponent(xContext);
     if (xComponent == null) {
       return null;
+    }
+    //  Test for Impress or Calc document
+    if (OfficeDrawTools.isImpressDocument(xComponent)) {
+      return OfficeDrawTools.getDocumentLocale(xComponent);
+    } else if (OfficeSpreadsheetTools.isSpreadsheetDocument(xComponent)) {
+      return OfficeSpreadsheetTools.getDocumentLocale(xComponent);
     }
     Locale charLocale;
     XPropertySet xCursorProps;
@@ -887,7 +910,8 @@ public class MultiDocumentsHandler {
           }
         }
       }
-      for (Rule rule : lt.getAllActiveOfficeRules()) {
+      List<Rule> allRules = checkImpressDocument ? lt.getAllActiveRules() : lt.getAllActiveOfficeRules();
+      for (Rule rule : allRules) {
         if (rule.isDictionaryBasedSpellingRule()) {
           lt.disableRule(rule.getId());
           if (rule.useInOffice()) {
@@ -967,7 +991,7 @@ public class MultiDocumentsHandler {
     }
     setConfigValues(config, lt);
     String langCode = lt.getLanguage().getShortCodeWithCountryAndVariant();
-    sortedTextRules = new SortedTextRules(lt, config, getDisabledRules(langCode));
+    sortedTextRules = new SortedTextRules(lt, config, getDisabledRules(langCode), checkImpressDocument);
     if (useQueue && !noBackgroundCheck) {
       if (textLevelQueue == null) {
         textLevelQueue = new TextLevelCheckQueue(this);
@@ -1060,7 +1084,6 @@ public class MultiDocumentsHandler {
    *  return true if toggle was done 
    */
   public boolean toggleNoBackgroundCheck() throws IOException {
-//    MessageHandler.printToLogFile("MultiDocumentsHandler: setNoBackgroundCheck: noCheck = " + noCheck + ", noBackgroundCheck = " + noBackgroundCheck);
     if (docLanguage == null) {
       docLanguage = getLanguage();
     }
@@ -1248,7 +1271,7 @@ public class MultiDocumentsHandler {
    */
   public void resetSortedTextRules() {
     String langCode = lt.getLanguage().getShortCodeWithCountryAndVariant();
-    sortedTextRules = new SortedTextRules(lt, config, getDisabledRules(langCode));
+    sortedTextRules = new SortedTextRules(lt, config, getDisabledRules(langCode), checkImpressDocument);
   }
 
   /**
@@ -1473,6 +1496,9 @@ public class MultiDocumentsHandler {
           aboutDialog.close();
           aboutDialog = null;
         }
+        if (!isJavaLookAndFeelSet()) {
+          setJavaLookAndFeel();
+        }
         AboutDialogThread aboutThread = new AboutDialogThread(messages, xContext);
         aboutThread.start();
       } else if ("toggleNoBackgroundCheck".equals(sEvent)) {
@@ -1604,6 +1630,7 @@ public class MultiDocumentsHandler {
       DocumentType docType;
       if (OfficeDrawTools.isImpressDocument(xComponent)) {
         docType = DocumentType.IMPRESS;
+        checkImpressDocument = true;
       } else if (OfficeSpreadsheetTools.isSpreadsheetDocument(xComponent)) {
         docType = DocumentType.CALC;
       } else {
@@ -1666,7 +1693,6 @@ public class MultiDocumentsHandler {
         lt = initLanguageTool(true);
         initCheck(lt);
         initDocuments(true);
-//        setJavaLookAndFeel();
         return true;
       } else {
         resetCheck();
@@ -1836,7 +1862,6 @@ public class MultiDocumentsHandler {
    */
   public void runShapeCheck (boolean hasShapes, int where) {
     try {
-//      MessageHandler.printToLogFile("MultiDocumentsHandler: runShapeCheck: hasShapes: " + hasShapes + " from " + where);
       if (hasShapes && (shapeChangeCheck == null || !shapeChangeCheck.isRunning())) {
         MessageHandler.printToLogFile("MultiDocumentsHandler: runShapeCheck: start");
         shapeChangeCheck = new ShapeChangeCheck();
@@ -1921,16 +1946,27 @@ public class MultiDocumentsHandler {
 
   }
 
-  /** class to start a separate thread to switch grammar check to LT
-   * Experimental currently not used 
+  /** class to start a separate thread to check for Impress documents
    */
-  @SuppressWarnings("unused")
   private class LtHelper extends Thread {
     @Override
     public void run() {
       try {
-        Thread.sleep(3000);
-        testDocLanguage(false);
+        SingleDocument currentDocument = null;
+        while (currentDocument == null) {
+          Thread.sleep(1000);
+          currentDocument = getCurrentDocument();
+          if (currentDocument != null && currentDocument.getDocumentType() == DocumentType.IMPRESS) {
+            checkImpressDocument = true;
+            locale = OfficeDrawTools.getDocumentLocale(currentDocument.getXComponent());
+            MessageHandler.printToLogFile("MultiDocumentsHandler: LtHelper: local: " + OfficeTools.localeToString(locale));
+            langForShortName = getLanguage(locale);
+            docLanguage = langForShortName;
+            lt = initLanguageTool(true);
+            initCheck(lt);
+            initDocuments(false);
+          }
+        }
       } catch (Throwable e) {
         MessageHandler.showError(e);
       }

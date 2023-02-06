@@ -202,15 +202,16 @@ public class Catalan extends Language {
       case "PRONOMS_FEBLES_DARRERE_VERB": return 30; // greater than PRONOMS_FEBLES_SOLTS2
       case "CA_SIMPLE_REPLACE": return 30; // greater than CA_SIMPLE_REPLACE_VERBS
       case "CA_SIMPLE_REPLACE_VERBS": return 28; // greater than PRONOMS_FEBLES_SOLTS2
+      case "HAVER_SENSE_HAC": return 28; // greater than CONFUSIONS_ACCENT avia, lower than CONFUSIONS_E
       case "REEMPRENDRE": return 28; // equal to CA_SIMPLE_REPLACE_VERBS
       case "INCORRECT_WORDS_IN_CONTEXT": return 28; // similar to but lower than CONFUSIONS, greater than ES_KNOWN
-      case "ES_UNKNOWN": return 25; 
-      case "HAVER_SENSE_HAC": return 25; // greater than CONFUSIONS_ACCENT avia
-      case "PRONOMS_FEBLES_SOLTS2": return 25;  // greater than PRONOMS_FEBLES_SOLTS and ES
+      case "PRONOMS_FEBLES_SOLTS2": return 26;  // greater than PRONOMS_FEBLES_SOLTS, ES, HAVER_SENSE_HAC
+      case "ES_UNKNOWN": return 25;
+      case "PASSAT_PERIFRASTIC": return 25; // greater than CONFUSIONS_ACCENT
       case "CONFUSIONS_ACCENT": return 20;
       case "DIACRITICS": return 20;
+      case "CAP_GENS": return 20; //greater than CAP_ELS_CAP_ALS, CONCORDANCES_DET_NOM
       case "MOTS_SENSE_GUIONETS": return 20; // greater than CONCORDANCES_NUMERALS
-      case "PASSAT_PERIFRASTIC": return 20;
       case "ORDINALS": return 20; // greater than SEPARAT
       case "SUPER": return 20;
       case "PRONOM_FEBLE_HI": return 20; // greater than HAVER_PARTICIPI_HAVER_IMPERSONAL
@@ -303,6 +304,8 @@ public class Catalan extends Language {
       Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
   private static final Pattern CA_APOSTROPHES5 = Pattern.compile("\\b([mts]e) (['’])",
       Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
+  private static final Pattern CA_APOSTROPHES6 = Pattern.compile("\\bs'e(ns|ls)\\b",
+      Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
 
   @Override
   public String adaptSuggestion(String s) {
@@ -320,6 +323,8 @@ public class Catalan extends Language {
     s = m4.replaceAll("$1'$2");
     Matcher m5 = CA_APOSTROPHES5.matcher(s);
     s = m5.replaceAll("$1$2");
+    Matcher m6 = CA_APOSTROPHES6.matcher(s);
+    s = m6.replaceAll("se'$1");
     if (capitalized) {
       s = StringTools.uppercaseFirstChar(s);
     }

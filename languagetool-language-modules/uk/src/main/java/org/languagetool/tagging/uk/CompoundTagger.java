@@ -284,7 +284,7 @@ class CompoundTagger {
     
     // Пенсильванія-авеню
 
-    if( Character.isUpperCase(leftWord.charAt(0)) && LemmaHelper.CITY_AVENU.contains(rightWord) ) {
+    if( Character.isUpperCase(leftWord.charAt(0)) && LemmaHelper.CITY_AVENU.contains(rightWord.toLowerCase()) ) {
       String addPos = rightWord.equals("штрассе") ? ":alt" : "";
       return PosTagHelper.generateTokensForNv(word, "f", ":prop" + addPos);
     }
@@ -992,11 +992,12 @@ class CompoundTagger {
           || IPOSTag.contains(leftPosTag, IPOSTag.abbr.getText()) )
         continue;
 
-      // we don't want to have v_kly for рибо-полювання
-      // but we do for пане-товаришу
-      if( leftPosTag.startsWith("noun:inanim")
-          && leftPosTag.contains("v_kly") )
-        continue;
+      if( leftPosTag.startsWith("noun:inanim") ) {
+        // we don't want to have v_kly for рибо-полювання
+        // but we do for пане-товаришу
+        if( leftPosTag.contains("v_kly") )
+          continue;
+      }
 
       String leftPosTagExtra = "";
       boolean leftNv = false;
@@ -1025,9 +1026,15 @@ class CompoundTagger {
             || rightPosTag.contains(IPOSTag.abbr.getText()) )
           continue;
 
-        if( rightPosTag.startsWith("noun:inanim")
-            && rightPosTag.contains("v_kly") )
-          continue;
+        if( rightPosTag.startsWith("noun:inanim") ) {
+          if (rightPosTag.contains("v_kly"))
+            continue;
+          // skip Гірник geo for Гірник-спорт
+          if( leftPosTag.contains(":geo") 
+              && ! rightPosTag.contains(":geo")
+              && ! rightAnalyzedToken.getLemma().matches("(?iu)ріка|гора|місто|град|поле|море|парк") )
+            continue;
+        }
 
         // країни-агресори - не треба v_zna:rare
         if( rightPosTag.startsWith("noun:anim:p:v_zna:rare")
