@@ -212,7 +212,10 @@ class DocumentCursorTools {
         return null;
       }
       while (xParaEnum.hasMoreElements()) {
-        XEnumerationAccess xEnumAccess = UnoRuntime.queryInterface(XEnumerationAccess.class, xParaEnum.nextElement());
+        XEnumerationAccess xEnumAccess = null;
+        if (xParaEnum.hasMoreElements()) {
+          xEnumAccess = UnoRuntime.queryInterface(XEnumerationAccess.class, xParaEnum.nextElement());
+        }
         if (xEnumAccess == null) {
           continue;
         }

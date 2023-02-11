@@ -36,6 +36,8 @@
 #  - ROMAN NUMERALS
 #
 #
+semas
+sememas
 pieira
 pieiras
 antireligião
@@ -10464,6 +10466,7 @@ Zatheria
 ####################################################################
 # PROPER NAMES, INCLUDING PLACES, UNIVERSITIES AND ORGANIZATIONS ###
 ####################################################################
+Moonspell
 Dogson
 Lutwidge
 Aaron

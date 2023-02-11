@@ -17,6 +17,7 @@ Marvin
 Modula-2
 Nash
 PFI
+Patreon
 Pompadour
 Ratzinger
 Scribd
@@ -40,6 +41,10 @@ bicibusos
 bicibús
 carbonara
 carbonares
+coitocentrisme
+coitocentrismes
+coitocentrista
+coitocentristes
 criptodelinqüència
 criptodelinqüències
 criptoinversions
@@ -50,6 +55,8 @@ desconstructor
 desconstructora
 desconstructores
 desconstructors
+desduplicacions
+desduplicació
 desinhibidor
 desinhibidora
 desinhibidores
@@ -72,12 +79,18 @@ francocatalans
 francocatalà
 furtamantes
 girajaquetes
+gàrum
+gàrums
 hippiosa
 hippioses
 hippiosos
 hippiós
 idiotitzacions
 idiotització
+karabakhiana
+karabakhianes
+karabakhians
+karabakhià
 katiuska
 katiuskes
 l
@@ -109,6 +122,10 @@ preentrenada
 preentrenades
 preentrenat
 preentrenats
+preinauguracions
+preinauguració
+preinaugural
+preinaugurals
 pseudoagustiniana
 pseudoagustinianes
 pseudoagustinians
@@ -125,6 +142,7 @@ sexoafectivitat
 sexoafectivitats
 tiktoker
 tiktokers
+ual·la
 vetlador
 vetladora
 vetladores
