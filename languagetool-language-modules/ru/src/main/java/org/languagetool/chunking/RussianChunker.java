@@ -110,7 +110,8 @@ public class RussianChunker implements Chunker {
       // И.И. Иванов
       build("<regexCS=[А-ЯЁ]> <.> <regexCS=[А-ЯЁ]> <.> <posre='NN:Fam:.*'> ", NP, true),
       // verb+verb
-      build("<posre='VB:.*:.*' & !posre='NN:.*'>* " , VP),
+      build("<posre='VB:.*:.*' & !posre='NN:.*'>* " , VP, false),
+
       build("<если>", SBAR),  //
       build("<поэтому>", SBAR),  //
       // noun phrase 
@@ -133,6 +134,7 @@ public class RussianChunker implements Chunker {
       build("<posre='PT:.*:.*'> <posre='PREP'> <posre='NN:.*:.*:(R|D|T|P|V)' > " , ADJP, true),
       build("<posre='PT:.*:.*'> <posre='PREP'> <posre='ADJ:.*:.*:(R|D|T|P|V)' > <posre='NN:.*:.*:(R|D|T|P|V)' > " , ADJP, true),
       build("<posre='PT:.*:.*'> <posre='NN:(Anim|Inanim):.*' & !posre='NN:(Anim|Inanim):.*:(Nom|V)'> <posre='NN:(Anim|Inanim):.*:(Nom|V)' & !posre='NN:(Anim|Inanim):.*:(R|D|T|P)'> " , ADJP, true),      
+      build("<posre='PT:.*:.*'> <posre='PNN:.*' & !posre='PNN:.*:Nom:.*'> <posre='NN:(Anim|Inanim):.*:(Nom|V)' & !posre='NN:(Anim|Inanim):.*:(R|D|T|P)'> " , ADJP, true),
       //
       build("<posre='PT:.*:.*'> <posre='ADJ:.*:.*' > " , ADJP, false),
       //
@@ -143,7 +145,9 @@ public class RussianChunker implements Chunker {
       // ===== plural and singular noun phrases, based on OpenNLP chunker output ===============
       // "Маша и Миша":
       build("<posre=NN:Name:.*> <и> <posre=NN:Name:.*>", NPP, true),
-      build("<posre=NN:Name:.*> <или> <posre=NN:Name:.*>", NPP, true)
+      build("<posre=NN:Name:.*> <или> <posre=NN:Name:.*>", NPP, true),
+      // не + VB
+      build("<не> <posre='VB:.*:.*' & !posre='NN:.*'>* " , VP, false)
   );
 
   private static RegularExpressionWithPhraseType build(String expr, PhraseType phraseType) {

@@ -735,7 +735,7 @@ public class MissingCommaRelativeClauseRule extends Rule {
           if( nToken > 0) {
             int startToken = nToken - (isPrp(tokens[nToken - 1]) ? 2 : 1);
             RuleMatch match = new RuleMatch(this, sentence, tokens[startToken].getStartPos(), tokens[nToken].getEndPos(),
-                "Sollten Sie hier ein Komma einfügen?");
+              "Sowohl angehängte als auch eingeschobene Relativsätze werden durch Kommas vom Hauptsatz getrennt.");
             if(nToken - startToken > 1) {
               match.setSuggestedReplacement(tokens[startToken].getToken() + ", " + tokens[nToken - 1].getToken() + " " + tokens[nToken].getToken());
             } else {

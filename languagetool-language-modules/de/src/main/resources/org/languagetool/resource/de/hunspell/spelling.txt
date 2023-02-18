@@ -8221,6 +8221,7 @@ Wirkungsfunktional/S
 wirkungsintentional/A
 wirkungsorientiert/A
 wirtschaftsinformatisch/A
+wirtschaftsrechtlich/A
 Wischfunktion
 Wochenplanarbeit
 Wohlfühlgastronomie
@@ -54852,7 +54853,7 @@ Ridgewood/S #name
 Solidaritätszuschlaggesetz
 Solidaritätszuschlaggesetzes
 hoch_bocken
-hochgebockt/A
+hochgebockt/P
 Pseudo-Offroader/SN
 not_operieren
 gewinnberechtigt/A
@@ -55035,6 +55036,14 @@ Bellizist
 Bellizistin
 Bellizistinnen
 Bellizisten
+chipp
+chippe/N
+chippte/N
+chippt
+chippet
+chipptest
+chippest
+chippst
 São Tomé
 são-toméisch/A
 São Toméer/FS
@@ -55043,4 +55052,70 @@ Selbstbestäuber/SN
 traditionskritisch/A
 Thomas Wiecki/S #name
 Indefinitbegleiter/NS
-
+Antananarivo/S #name
+hebeberechtigt/A
+depotführend/A
+Cyberabwehr
+Verhinderer/SN
+evidenzfrei/A
+abschlagsfrei/A
+sprachgewaltig/A
+E-Mail/S
+PCtipp/S #name
+Whippet/S
+Ristretto
+Caffè Latte
+Caffè mocha
+Café au Lait
+Café Cortado
+kindschaftsrechtlich/A
+Kindschaftsrechtliche Praxis
+Sporenmessung
+Sporenmessungen
+Paraphyse/N
+Selm #name
+Südend #name
+Dammersfeldstr. #name
+Dammersfeldstraße #name
+skalierfähig/A
+schwallartig/A
+Einmaltücher/N
+Einmaltuch/S
+Typspezies
+Replikationszyklus
+Replikationszyklen
+Norwalk/S #name
+Genotypgruppe/N
+Sequenzänderung
+Sequenzänderungen
+Vorläufersubstanz
+Vorläufersubstanzen
+Zelltropismus
+wirtseigen/A
+immunregulierend/A
+posttranskriptional/A
+prä-mRNA
+erschließungspflichtig/A
+Bruchteilsgemeinschaft
+Bruchteilsgemeinschaften
+East Palestine/S #name
+Ohio River/S #name
+Pittsburgher/SN
+Pittsburgherin
+Pittsburgherinnen
+Qualmwolke/N
+nach_trainieren
+nachtrainiert/P
+Angelrutenhalter/S
+Fliegenrutenserie/N
+Imbissbudenbetreiber_in
+Paraphimose/N
+Sudenburg/S #name
+Sudendorf/S #name
+Haufe Gruppe #name
+Haufe Verlag/S #name
+Klambt Verlag/S #name
+Traditionsverlag/S
+Geschenkabo/S
+an_pingen
+Premiumsprache/N

@@ -1461,3 +1461,36 @@ Bellinis #name
 Bellicio #name
 Obazda
 E-Mail-Ping-Pong
+Chiappe/S #name
+Chippy/S
+Chirbet/S
+Chirp/S
+CHIRP
+Chubb/S
+Khirbet/S #name
+Shippō-Design/S
+Shippō design/S
+Shippo design/S
+whipped cream
+𝑎ₙ
+Whipper/S #eng
+Galeão/S #name
+Galvão/S #name
+Gyalpo/S #name
+Mistretta/S #name
+Piwipp/S #name
+𝑥-Achse/N
+𝑦-Achse/N
+𝑥-Richtung
+𝑦-Richtung
+Galão
+Shipping #eng
+ASchG #abk
+AM-VO #abk
+IDG-Expertennetzwerk/S
+Treatment/S #eng
+On-Premise-Version/S #eng
+Self-Hosting/S #eng
+Lelm #name
+Melm #name
+

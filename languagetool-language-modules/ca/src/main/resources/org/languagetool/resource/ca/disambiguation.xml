@@ -760,6 +760,16 @@ Copyright (C) 2012 Jaume Ortolà i Font
             <disambig action="replace" postag="AO0MS0"/>
         </rule>
     </rulegroup>
+    <rule id="segon_ordinal" name="segon (ordinal) amb error de gènere">
+        <pattern>
+            <marker>
+                <token postag="AO0MS0">segon</token>
+            </marker>
+            <!-- anàlisi, síndrome...  -->
+            <token postag="NCFS000"/>
+        </pattern>
+        <disambig action="filter" postag="AO0MS0"/>
+    </rule>
     <rule id="dos_o_mes" name="dos o més">
         <pattern>
             <marker>
@@ -3052,6 +3062,10 @@ Copyright (C) 2012 Jaume Ortolà i Font
         </rule>
     </rulegroup>
     <rulegroup id="Nom_propi" name="noms propis">
+        <antipattern>
+            <token postag="V.M.*" postag_regexp="yes"/>
+            <token postag="&pronom_feble;" postag_regexp="yes" spacebefore="no"/>
+        </antipattern>
         <rule>
             <pattern>
                 <token postag="SENT_START"/>
@@ -3175,18 +3189,28 @@ Copyright (C) 2012 Jaume Ortolà i Font
             <disambig action="filter" postag="V.*"/>
         </rule>
         <rule>
+            <antipattern>
+                <token inflected="yes" regexp="yes">deixar|haver</token>
+                <token>d'</token>
+                <token>ésser</token>
+            </antipattern>
+            <antipattern>
+                <token inflected="yes" regexp="yes">voler|deure</token>
+                <token>ésser</token>
+            </antipattern>
             <pattern>
                 <marker>
                     <token postag="N.*" postag_regexp="yes" regexp="yes">ésser|esser</token>
                 </marker>
-                <token regexp="yes">humà|viu|vivent</token>
+                <token regexp="yes" inflected="yes">humà|viu|vivent|suprem</token>
             </pattern>
             <disambig action="filter" postag="N.*"/>
         </rule>
         <rule>
+            <!-- incloent-hi errors de concordança -->
             <pattern>
                 <marker>
-                    <token postag="D..MS." postag_regexp="yes"><exception>en</exception></token>
+                    <token postag="D[^N].*" postag_regexp="yes"><exception>en</exception></token>
                     <token postag="NCMS000" regexp="yes">ésser|esser</token>
                 </marker>
             </pattern>
@@ -3655,6 +3679,24 @@ Copyright (C) 2012 Jaume Ortolà i Font
                 </and>
             </marker>
             <token regexp="yes">xàrter|charter|comercials?|transoceànics?|privats?</token>
+        </pattern>
+        <disambig action="remove" postag="V.*"/>
+    </rule>
+    <rule id="te_substantiu" name="te/té (amb error) + substantiu">
+        <antipattern>
+            <token postag="&pronom_feble;" postag_regexp="yes"><exception regexp="yes">['-].*</exception></token>
+            <token>te</token>
+        </antipattern>
+        <antipattern>
+            <token>te</token>
+            <token inflected="yes" regexp="yes">voler|deure|poder|preferir|desitjar</token>
+            <token postag="V.N.*" postag_regexp="yes"/>
+        </antipattern>
+        <pattern>
+            <token>te</token>
+            <marker>
+                <token postag="NC.*" postag_regexp="yes"><exception regexp="yes">dius?|tornes|fan|don</exception></token>
+            </marker>
         </pattern>
         <disambig action="remove" postag="V.*"/>
     </rule>
@@ -4466,6 +4508,15 @@ Copyright (C) 2012 Jaume Ortolà i Font
         </disambig>
     </rule>
     <rulegroup id="noms_aposicio" name="noms en aposició">
+        <rule>
+            <pattern>
+                <token regexp="yes" inflected="yes">quadre|taula|redacció|escrit</token>
+                <marker>
+                    <token>resum</token>
+                </marker>
+            </pattern>
+            <disambig action="replace" postag="AQ0CN0"/>
+        </rule>
         <rule>
             <pattern>
                 <token regexp="yes" inflected="yes">estètica|personatge|còmic|llibre|pel·lícula|dibuixant|publicació</token>
@@ -14343,7 +14394,7 @@ Copyright (C) 2012 Jaume Ortolà i Font
             <marker>
                 <and>
                     <token postag="NC.*" postag_regexp="yes"><exception postag="_GN_.*" postag_regexp="yes"/><exception regexp="yes">força|coma|cap|noms?|nous?|deu|viu|cometa</exception></token>
-                    <token postag="V.[MSI].*" postag_regexp="yes"><exception postag="_GV_"/><exception regexp="yes">\p{Lu}.*</exception><exception regexp="yes">[\p{Ll}·]+(e|es|[aei]sses|[ae]res|era)|seus?</exception></token>
+                    <token postag="V.[MSI].*" postag_regexp="yes"><exception postag="_GV_|_loc_enma" postag_regexp="yes"/><exception regexp="yes">\p{Lu}.*</exception><exception regexp="yes">[\p{Ll}·]+(e|es|[aei]sses|[ae]res|era)|seus?</exception></token>
                     <!-- problema: els noms acabats en -e no tenen comprovació de concordança!!  -->
                 </and>
             </marker>

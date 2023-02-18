@@ -807,3 +807,8 @@ Adani
 Ambil
 Brasso
 Lucene
+mora
+morae 
+moras
+PDA
+PDAs

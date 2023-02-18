@@ -1,3 +1,4 @@
+pastizal=morterada|pastura|pasturatge
 parisí=parisenc
 parisins=parisencs
 parisina=parisenca
@@ -2718,3 +2719,4 @@ intercesssió=intercessió
 multiusuaris=multiusuari
 multiusuària=multiusuari
 multiusuàries=multiusuari
+Mondúber=Mondúver
