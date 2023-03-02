@@ -326,7 +326,6 @@ Minas Gerais	NNP
 Mato Grosso do Sul	NNP
 Rio Grande do Sul	NNP
 Rio Grande do Norte	NNP
-Espírito Santo	NNP
 Distrito Federal	NNP
 Belo Horizonte	NNP
 Porto Alegre	NNP
@@ -6357,3 +6356,19 @@ Raquel Welch	NNP
 Jane Fonda	NNP
 Norfolk Southern	NNP
 Norfolk Southern Railways	NNP
+Canterville Ghost	NNP
+Markus Eisenbichler	NNP
+Karl Geiger	NNP
+Dayot Upamecano	NNP
+Seymour Hersh	NNP
+Piotr Zieliński	NNP
+Victor Osimhen	NNP
+Linux Mint	NNP
+Jordan Peterson	NNP
+Tommy Fury	NNP
+Heidelberg Materials	NNP
+Victoria Nuland	NNP
+Adani Group	NNP
+Basler Zeitung	NNP
+Molson Coors	NNP
+Grant Thornton	NNP

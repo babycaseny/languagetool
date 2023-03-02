@@ -45787,6 +45787,7 @@ steenwijk;Steenwijk
                 <example correction="seconde|seconden|s">Het duurt 15 <marker>sec</marker> lang.</example>
             </rule>
         </rulegroup>
+
         <rulegroup id="AFKO_PUNTEN" name="Afkortingen zonder punt" tags="picky" >
             <rule>
                 <pattern>
@@ -45807,6 +45808,48 @@ steenwijk;Steenwijk
                 <message>In deze afkorting horen punten.</message>
                 <suggestion>i.p.v.</suggestion>
                 <example correction="i.p.v.">Het is fout <marker>ipv</marker> de regels.</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="LS_IS" name="ls / Is" >
+            <rule>
+                <antipattern><token postag="SENT_START"/><token/><token skip="-1"/><token case_sensitive="yes">ls</token></antipattern>
+                <pattern>
+                    <marker>
+                        <token case_sensitive="yes">ls</token>
+                    </marker>
+                </pattern>
+                <message>Is de 'l' hier niet toevallig een 'I'?</message>
+                <suggestion>Is</suggestion>
+                <example correction="Is">- <marker>ls</marker> m'n bureau leeggeruimd?</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="DOET-IE" name="Doet-ie / doet ie">
+            <rule>
+                <pattern>
+                    <marker>
+                        <token case_sensitive="yes" regexp="yes">.*-ie</token>
+                    </marker>
+                </pattern>
+                <message>Het koppelteken is hier incorrect, hoe gebruikelijk ook. Overigens is dit ongebruikelijk in verzorgde communicatie.</message>
+                <suggestion><match no="1" regexp_match='-' regexp_replace=' '/></suggestion>
+                <suggestion><match no="1" regexp_match='-ie' regexp_replace=' hij'/></suggestion>
+                <url>https://www.vlaanderen.be/taaladvies/taaladviezen/ie-komt-ie-komt-ie-komt-ie</url>
+                <example correction="Komt ie|Komt hij"><marker>Komt-ie</marker> nog?</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="ONS_BEIDE" name="Ons beide/ons beiden" >
+            <rule>
+                <antipattern><token>beide</token><token postag_regexp="yes" postag=".*MRV.*"/></antipattern>
+                <antipattern><token>beide</token><token postag_regexp="yes" postag="BNW.*VRB"/><token postag_regexp="yes" postag=".*MRV.*"/></antipattern>
+                <pattern>
+                    <token>ons</token>
+                    <marker>
+                        <token>beide</token>
+                    </marker>
+                </pattern>
+                <message>Wanneer naar mensen wordt verwezen, is het niet beide, maar beiden.</message>
+                <suggestion>beiden</suggestion>
+                <example correction="beiden">Hij laat het ons <marker>beide</marker> zien.</example>
             </rule>
         </rulegroup>
     </category>
