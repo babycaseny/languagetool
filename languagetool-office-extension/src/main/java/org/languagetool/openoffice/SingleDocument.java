@@ -90,7 +90,7 @@ class SingleDocument {
   private final List<ResultCache> paragraphsCache;//  Cache for matches of text rules
   private final Map<Integer, String> changedParas;//  Map of last changed paragraphs;
   private DocumentCursorTools docCursor = null;   //  Save document cursor for the single document
-  private ViewCursorTools viewCursor = null;      //  Get the view cursor for desktop
+//  private ViewCursorTools viewCursor = null;      //  Get the view cursor for desktop
   private FlatParagraphTools flatPara = null;     //  Save information for flat paragraphs (including iterator and iterator provider) for the single document
   private Integer numLastVCPara = 0;              //  Save position of ViewCursor for the single documents
   private Integer numLastFlPara = -1;             //  Save position of FlatParagraph for the single documents
@@ -119,6 +119,9 @@ class SingleDocument {
       XComponent xComp, MultiDocumentsHandler mDH) {
     debugMode = OfficeTools.DEBUG_MODE_SD;
     debugModeTm = OfficeTools.DEBUG_MODE_TM;
+    if (!OfficeTools.DEVELOP_MODE_ST) {
+      hasSortedTextId = false;
+    }
     this.xContext = xContext;
     this.config = config;
     this.docID = docID;
@@ -145,9 +148,6 @@ class SingleDocument {
     resetResultCache();
     ignoredMatches = new IgnoredMatches();
     permanentIgnoredMatches = new IgnoredMatches();
-    if (docCursor == null) {
-      docCursor = new DocumentCursorTools(xComponent);
-    }
     docCache = new DocumentCache(docType);
     if (config != null && config.saveLoCache() && !config.noBackgroundCheck() && xComponent != null && !mDocHandler.isTestMode()) {
       readCaches();
@@ -247,11 +247,11 @@ class SingleDocument {
         && (DocumentCursorTools.isBusy() || ViewCursorTools.isBusy() || FlatParagraphTools.isBusy() || docCache.isResetRunning())) {
       //  NOTE: LO blocks the read of information by document or view cursor tools till a PROOFINFO_GET_PROOFRESULT request is done
       //        This causes a hanging of LO when the request isn't answered immediately by a 0 matches result
-      SingleCheck singleCheck = new SingleCheck(this, paragraphsCache, docCursor, flatPara, fixedLanguage,
+      SingleCheck singleCheck = new SingleCheck(this, paragraphsCache, fixedLanguage,
           docLanguage, ignoredMatches, permanentIgnoredMatches, numParasToCheck, true, isMouseRequest, false);
       paRes.aErrors = singleCheck.checkParaRules(paraText, locale, footnotePositions, -1, paRes.nStartOfSentencePosition, lt, 0, 0, false, false);
       docCursor = null;
-      viewCursor = null;
+//      viewCursor = null;
       return paRes;
     }
     if (debugMode > 0 && proofInfo == OfficeTools.PROOFINFO_GET_PROOFRESULT) {
@@ -261,12 +261,12 @@ class SingleDocument {
       if (debugMode > 0 && proofInfo == OfficeTools.PROOFINFO_GET_PROOFRESULT) {
         MessageHandler.printToLogFile("SingleDocument: getCheckResults: is resetDocCache");
       }
-      if (docCursor == null) {
-        if (debugMode > 0 && proofInfo == OfficeTools.PROOFINFO_GET_PROOFRESULT) {
-          MessageHandler.printToLogFile("SingleDocument: getCheckResults: get docCursor");
-        }
-        docCursor = new DocumentCursorTools(xComponent);
-      }
+//      if (docCursor == null) {
+//        if (debugMode > 0 && proofInfo == OfficeTools.PROOFINFO_GET_PROOFRESULT) {
+//          MessageHandler.printToLogFile("SingleDocument: getCheckResults: get docCursor");
+//        }
+//        docCursor = getDocumentCursorTools();
+//      }
       if (debugMode > 0 && proofInfo == OfficeTools.PROOFINFO_GET_PROOFRESULT) {
         MessageHandler.printToLogFile("SingleDocument: getCheckResults: refresh docCache");
       }
@@ -279,7 +279,7 @@ class SingleDocument {
     }
     if (disposed) {
       docCursor = null;
-      viewCursor = null;
+//      viewCursor = null;
       return paRes;
     }
     try {
@@ -291,7 +291,7 @@ class SingleDocument {
       boolean isDialogRequest = (nPara >= 0 || (proofInfo == OfficeTools.PROOFINFO_GET_PROOFRESULT));
       
       CheckRequestAnalysis requestAnalysis = new CheckRequestAnalysis(numLastVCPara, numLastFlPara,
-          proofInfo, numParasToCheck, fixedLanguage, docLanguage, this, paragraphsCache, viewCursor, changedParas);
+          proofInfo, numParasToCheck, fixedLanguage, docLanguage, this, paragraphsCache, changedParas);
       long startTime = 0;
       if (debugModeTm) {
         startTime = System.currentTimeMillis();
@@ -319,9 +319,9 @@ class SingleDocument {
       }
       this.paraNum = paraNum;
       isLastIntern = isIntern;
-      flatPara = requestAnalysis.getFlatParagraphTools();
-      docCursor = requestAnalysis.getDocumentCursorTools();
-      viewCursor = requestAnalysis.getViewCursorTools();
+//      flatPara = requestAnalysis.getFlatParagraphTools();
+//      docCursor = requestAnalysis.getDocumentCursorTools();
+//      viewCursor = requestAnalysis.getViewCursorTools();
       changeFrom = requestAnalysis.getFirstParagraphToChange();
       changeTo = requestAnalysis.getLastParagraphToChange();
       numLastFlPara = requestAnalysis.getLastParaNumFromFlatParagraph();
@@ -330,13 +330,13 @@ class SingleDocument {
       
       if (disposed) {
         docCursor = null;
-        viewCursor = null;
+//        viewCursor = null;
         return paRes;
       }
       if (debugModeTm) {
         startTime = System.currentTimeMillis();
       }
-      SingleCheck singleCheck = new SingleCheck(this, paragraphsCache, docCursor, flatPara, fixedLanguage,
+      SingleCheck singleCheck = new SingleCheck(this, paragraphsCache, fixedLanguage,
           docLanguage, ignoredMatches, permanentIgnoredMatches, numParasToCheck, isDialogRequest, isMouseRequest, isIntern);
       paRes.aErrors = singleCheck.getCheckResults(paraText, footnotePositions, locale, lt, paraNum, 
           paRes.nStartOfSentencePosition, textIsChanged, changeFrom, changeTo, lastSinglePara, lastChangedPara);
@@ -373,7 +373,7 @@ class SingleDocument {
       ltMenus = new LanguageToolMenus(xContext, xComponent, this, config);
     }
     docCursor = null;
-    viewCursor = null;
+ //   viewCursor = null;
     return paRes;
   }
   
@@ -398,7 +398,7 @@ class SingleDocument {
   void setDocumentCacheForTests(List<String> paragraphs, List<List<String>> textParagraphs, List<int[]> footnotes, List<List<Integer>> chapterBegins, Locale locale) {
     docCache.setForTest(paragraphs, textParagraphs, footnotes, chapterBegins, locale);
     numParasToCheck = -1;
-    mDocHandler.resetSortedTextRules();
+    mDocHandler.resetSortedTextRules(mDocHandler.getLanguageTool());
   }
   
   /** Get LanguageTool menu
@@ -416,9 +416,9 @@ class SingleDocument {
       if (docCursor != null) {
         docCursor.setDisposed();
       }
-      if (viewCursor != null) {
-        viewCursor.setDisposed();
-      }
+//      if (viewCursor != null) {
+//        viewCursor.setDisposed();
+//      }
       if (flatPara != null) {
         flatPara.setDisposed();
       }
@@ -477,7 +477,7 @@ class SingleDocument {
     this.xComponent = xComponent;
     if (xComponent == null) {
       docCursor = null;
-      viewCursor = null;
+//      viewCursor = null;
       flatPara = null;
     } else {
       setDokumentListener(xComponent);
@@ -526,13 +526,13 @@ class SingleDocument {
    *  Get document cursor tools
    */
   DocumentCursorTools getDocumentCursorTools() {
-//    if (docCursor == null) {
-//      docCursor = new DocumentCursorTools(xComponent);
-//    }
+    OfficeTools.waitForLO();
+    if (docCursor == null) {
+      docCursor = new DocumentCursorTools(xComponent);
+    }
     return docCursor;
   }
 
-  
   /**
    *  Get document cache of the document
    */
@@ -655,7 +655,10 @@ class SingleDocument {
   public FlatParagraphTools setFlatParagraphTools() {
 	  if (disposed) {
       flatPara = null;
-	  } else if (flatPara == null) {
+      return flatPara;
+	  }
+    OfficeTools.waitForLO();
+	  if (flatPara == null) {
       flatPara = new FlatParagraphTools(xComponent);
       if (!flatPara.isValid()) {
         flatPara = null;
@@ -671,7 +674,7 @@ class SingleDocument {
    * nFPara is number of flat paragraph
    */
   public void addQueueEntry(int nFPara, int nCache, int nCheck, String docId, boolean checkOnlyParagraph, boolean overrideRunning) {
-    if (!disposed && mDocHandler.isSortedRuleForIndex(nCache) && docCache != null) {
+    if (!disposed && mDocHandler.getTextLevelCheckQueue() != null && mDocHandler.isSortedRuleForIndex(nCache) && docCache != null) {
       TextParagraph nTPara = docCache.getNumberOfTextParagraph(nFPara);
       if (nTPara != null && nTPara.type != DocumentCache.CURSOR_TYPE_UNKNOWN) {
         int nStart;
@@ -754,6 +757,7 @@ class SingleDocument {
     if (!disposed && docCache != null && flatPara != null && !changedParas.isEmpty()) {
       Set<Integer> nParas = new HashSet<Integer>(changedParas.keySet());
       for (int nPara : nParas) {
+        OfficeTools.waitForLO();
         String sPara = flatPara.getFlatParagraphAt(nPara).getText();
         if (sPara != null) {
           String sChangedPara = changedParas.get(nPara);
@@ -795,21 +799,20 @@ class SingleDocument {
    */
   public void runQueueEntry(TextParagraph nStart, TextParagraph nEnd, int cacheNum, int nCheck, boolean override, SwJLanguageTool lt) {
     if (!disposed && flatPara != null && docCache.isFinished() && nStart.number < docCache.textSize(nStart)) {
-      SingleCheck singleCheck = new SingleCheck(this, paragraphsCache, docCursor, flatPara,
+      SingleCheck singleCheck = new SingleCheck(this, paragraphsCache,
           fixedLanguage, docLanguage, ignoredMatches, permanentIgnoredMatches, numParasToCheck, false, false, false);
       singleCheck.addParaErrorsToCache(docCache.getFlatParagraphNumber(nStart), lt, cacheNum, nCheck, 
           nEnd.number == nStart.number + 1, override, false, hasFootnotes);
+      docCursor = null;
     }
   }
   
   private void remarkChangedParagraphs(List<Integer> changedParas, boolean isIntern) {
     if (!disposed) {
-      SingleCheck singleCheck = new SingleCheck(this, paragraphsCache, docCursor, flatPara, fixedLanguage, docLanguage, 
+      SingleCheck singleCheck = new SingleCheck(this, paragraphsCache, fixedLanguage, docLanguage, 
           ignoredMatches, permanentIgnoredMatches, numParasToCheck, false, false, isIntern);
-//      if (docCursor == null) {
-//        docCursor = new DocumentCursorTools(xComponent);
-//      }
-      singleCheck.remarkChangedParagraphs(changedParas, flatPara, mDocHandler.getLanguageTool(), true);
+      singleCheck.remarkChangedParagraphs(changedParas, mDocHandler.getLanguageTool(), true);
+      docCursor = null;
     }
   }
 
@@ -1279,30 +1282,43 @@ class SingleDocument {
   }
   
   private void setDokumentListener(XComponent xComponent) {
-    if (xComponent != null && eventListener == null) {
-      eventListener = new LTDokumentEventListener();
+    try {
+      if (!disposed && xComponent != null && eventListener == null) {
+        eventListener = new LTDokumentEventListener();
+        XDocumentEventBroadcaster broadcaster = UnoRuntime.queryInterface(XDocumentEventBroadcaster.class, xComponent);
+        if (!disposed && broadcaster != null) {
+          broadcaster.addDocumentEventListener(eventListener);
+        } else {
+          MessageHandler.printToLogFile("SingleDocument: setDokumentListener: Could not add document event listener!");
+        }
+        XModel xModel = UnoRuntime.queryInterface(XModel.class, xComponent);
+        if (disposed || xModel == null) {
+          MessageHandler.printToLogFile("SingleDocument: setDokumentListener: XModel not found!");
+          return;
+        }
+        XController xController = xModel.getCurrentController();
+        if (disposed || xController == null) {
+          MessageHandler.printToLogFile("SingleDocument: setDokumentListener: XController not found!");
+          return;
+        }
+        XUserInputInterception xUserInputInterception = UnoRuntime.queryInterface(XUserInputInterception.class, xController);
+        if (disposed || xUserInputInterception == null) {
+          MessageHandler.printToLogFile("SingleDocument: setDokumentListener: XUserInputInterception not found!");
+          return;
+        }
+        xUserInputInterception.addMouseClickHandler(eventListener);
+      }
+    } catch (Throwable t) {
+      MessageHandler.printException(t);
+    }
+  }
+  
+  public void removeDokumentListener(XComponent xComponent) {
+    if (eventListener != null) {
       XDocumentEventBroadcaster broadcaster = UnoRuntime.queryInterface(XDocumentEventBroadcaster.class, xComponent);
       if (broadcaster != null) {
-        broadcaster.addDocumentEventListener(eventListener);
-      } else {
-        MessageHandler.printToLogFile("SingleDocument: setDokumentListener: Could not add document event listener!");
+        broadcaster.removeDocumentEventListener(eventListener);
       }
-      XModel xModel = UnoRuntime.queryInterface(XModel.class, xComponent);
-      if (xModel == null) {
-        MessageHandler.printToLogFile("SingleDocument: setDokumentListener: XModel not found!");
-        return;
-      }
-      XController xController = xModel.getCurrentController();
-      if (xController == null) {
-        MessageHandler.printToLogFile("SingleDocument: setDokumentListener: XController not found!");
-        return;
-      }
-      XUserInputInterception xUserInputInterception = UnoRuntime.queryInterface(XUserInputInterception.class, xController);
-      if (xUserInputInterception == null) {
-        MessageHandler.printToLogFile("SingleDocument: setDokumentListener: XUserInputInterception not found!");
-        return;
-      }
-      xUserInputInterception.addMouseClickHandler(eventListener);
     }
   }
   
@@ -1331,7 +1347,7 @@ class SingleDocument {
       } else if(event.EventName.equals("OnSave") && config.saveLoCache()) {
         writeCaches();
       } else if(event.EventName.equals("OnSaveAsDone") && config.saveLoCache()) {
-        writeCaches();
+//        writeCaches();
         cacheIO.setDocumentPath(xComponent);
         writeCaches();
       }

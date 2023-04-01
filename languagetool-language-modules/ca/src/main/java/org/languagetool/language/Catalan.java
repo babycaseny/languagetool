@@ -195,7 +195,10 @@ public class Catalan extends Language {
       case "REPETEAD_ELEMENTS": return 40;
       case "ESPERANT_US_AGRADI": return 40;
       case "ESPAIS_SOBRANTS": return 40; // greater than L
+      case "ELA_GEMINADA": return 35; // greater than agreement rules, pronoun rules
+      case "PRONOMS_FEBLES_TEMPS_VERBAL": return 35;
       case "ET_AL": return 30; // greater than apostrophes and pronouns
+      case "PRONOMS_FEBLES_COLLOQUIALS": return 30; // greater than PRONOMS_FEBLES_SOLTS2
       case "CONCORDANCES_CASOS_PARTICULARS": return 30;
       case "CONFUSIONS_PRONOMS_FEBLES": return 30; // greater than ES (DIACRITICS)
       case "GERUNDI_PERD_T": return 30;
@@ -219,7 +222,6 @@ public class Catalan extends Language {
       case "HAVER_PARTICIPI_HAVER_IMPERSONAL": return 15; // greater than ACCENTUATION_CHECK
       case "CONCORDANCES_NUMERALS_DUES": return 10; // greater than CONCORDANCES_NUMERALS
       case "FALTA_CONDICIONAL": return 10; // greater than POTSER_SIGUI
-      case "ELA_GEMINADA": return 10; // greater than agreement rules
       case "ACCENTUATION_CHECK": return 10;
       case "CONCORDANCES_NUMERALS": return 10;
       case "CAP_ELS_CAP_ALS": return 10; // greater than DET_GN
@@ -243,11 +245,13 @@ public class Catalan extends Language {
       case "FALTA_COMA_FRASE_CONDICIONAL": return -20;
       case "ESPAIS_QUE_FALTEN_PUNTUACIO": return -20;
       case "VERBS_NOMSPROPIS": return -20;
+      case "VERBS_PRONOMINALS": return -25;
       case "REPETITIONS_STYLE": return -50;
       case "MUNDAR": return -50;
       case "NOMBRES_ROMANS": return -90;
       case "MORFOLOGIK_RULE_CA_ES": return -100;
       case "EXIGEIX_ACCENTUACIO_VALENCIANA": return -120;
+      //case "APOSTROFACIO_MOT_DESCONEGUT": return -120; // lesser than MORFOLOGIK_RULE_CA_ES
       case "PHRASE_REPETITION": return -150;
       case "SUBSTANTIUS_JUNTS": return -150;
       case "FALTA_ELEMENT_ENTRE_VERBS": return -200;
@@ -268,24 +272,27 @@ public class Catalan extends Language {
       return new MorfologikCatalanSpellerRule(messages, this, null, Collections.emptyList());
   }
   
-  private static final Pattern CA_OLD_DIACRITICS = Pattern.compile(".*\\b(dóna|vénen|véns|fóra)\\b.*",Pattern.CASE_INSENSITIVE|Pattern.UNICODE_CASE);
+  private static final Pattern CA_OLD_DIACRITICS = Pattern.compile(".*\\b(dóna|dónes|vénen|véns|fóra)\\b.*",Pattern.CASE_INSENSITIVE|Pattern.UNICODE_CASE);
   
   @Override
   public List<RuleMatch> adaptSuggestions(List<RuleMatch> ruleMatches, Set<String> enabledRules) {
     List<RuleMatch> newRuleMatches = new ArrayList<>();
     for (RuleMatch rm : ruleMatches) {
-      List<String> replacements = rm.getSuggestedReplacements();
-      List<String> newReplacements = new ArrayList<>();
-      for (String s : replacements) {
-        if (enabledRules.contains("APOSTROF_TIPOGRAFIC") && s.length() > 1) {
-          s = s.replace("'", "’");
+      List<SuggestedReplacement> replacements = rm.getSuggestedReplacementObjects();
+      List<SuggestedReplacement> newReplacements = new ArrayList<>();
+      for (SuggestedReplacement s : replacements) {
+        String newReplStr = s.getReplacement();
+        if (enabledRules.contains("APOSTROF_TIPOGRAFIC") && s.getReplacement().length() > 1) {
+          newReplStr = s.getReplacement().replace("'", "’");
         }
         //s = adaptContractionsApostrophes(s);
-        Matcher m5 = CA_OLD_DIACRITICS.matcher(s);
+        Matcher m5 = CA_OLD_DIACRITICS.matcher(s.getReplacement());
         if (!enabledRules.contains("DIACRITICS_TRADITIONAL_RULES") && m5.matches()) {
           // skip this suggestion with traditional diacritics
         } else {
-          newReplacements.add(s);
+          SuggestedReplacement newRepl = new SuggestedReplacement(s);
+          newRepl.setReplacement(newReplStr);
+          newReplacements.add(newRepl);
         }
       }
       RuleMatch newMatch = new RuleMatch(rm, newReplacements);

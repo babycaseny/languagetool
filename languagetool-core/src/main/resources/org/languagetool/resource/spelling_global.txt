@@ -1727,6 +1727,7 @@ Frank Zappa
 Mariah Carey
 Whitney Houston
 Celine Dion
+Céline Dion
 Mike Tyson
 Dan Brown
 Charles Dickens
@@ -5122,3 +5123,85 @@ Empire State Building
 Ada Colau
 Xavier Trias
 Grant Thornton
+Bernstein Research
+Sigur Rós
+Bella Ramsey
+Pedro Pascal
+Frogmore Cottage
+Frogmore House
+Meghan Trainor
+Owen Hargreaves
+Giovanni Trapattoni
+DeepL Write
+Mediobanca
+Hilary Duff
+Hilary Swank
+gRPC
+Ikke Hüftgold
+Tate Modern
+Tate Gallery
+William Turner
+Grand Hyatt
+Satudarah MC
+Albus Dumbledore
+Milton Friedman
+Silicon Valley Bank
+RBC Capital Markets
+First Republic Bank
+First Republic
+Signature Bank
+Overte
+Dash 8
+KDevelop
+Geany
+Apollo Global Management
+Johannes von Wesel
+Wikisource
+Gunderson Dettmer
+UNSC
+Itzhak Perlman
+Charles Dutoit
+Gidon Kremer
+Fritz Kreisler
+Alvin Bragg
+Chicago Tribune
+Saudi National Bank
+Der Rosenkavalier
+Credit Suisse
+Credit Suisse Group
+Credit Suisse Group AG
+Joan Mir
+Val di Noto
+Google Bard
+Kofi Annan
+PacWest Bancorp
+Steve Miller Band
+Joan Miró
+Maria Dolors Miró
+Conan Doyle
+Reed Smith
+Langenscheidt
+ING Group
+Marcus Garvey
+Crédit Mutuel
+Crédit Mutuel Arkéa
+Crédit Industriel
+Crédit Industriel et Commercial
+Lamar Jackson
+Alicia Keys
+Swizz Beatz
+Christina Aguilera
+John Legend
+Pharrell Williams
+Bruno Mars
+John Mayer
+Jennifer Hudson
+Aaliyah
+Bobby Brown
+Clive Davis
+Céline Dion
+Toni Braxton
+Diana Ross
+Joy Behar
+Gershkovich
+Evan Gershkovich

@@ -218,6 +218,7 @@ morto prematuramente=morto
 mudar da água para o vinho=mudar totalmente|mudar radicalmente
 mudar do saco para a mala=mudar totalmente de assunto
 muitos anos a virar frangos=muita experiência
+na medida do possível=dentro do possível
 na mão do palhaço=ver-se numa situação fora de controle
 # criar exceção 'para os reis' e afins
 não há maca=não há problema
@@ -260,7 +261,6 @@ poder de fogo=capacidade ofensiva
 poeta inspirado=poeta
 poetas inspirados=poetas
 por sinal=,
-por sua vez=,|no que lhe concerne
 pôr uma lança em África=fazer algo digno de relevo
 por tudo e por nada=à menor coisa
 pôr-se a pau=estar atento

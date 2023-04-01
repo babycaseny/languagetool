@@ -4,7 +4,7 @@
     Copyright (C) 2008 Marcin Miłkowski
 -->
 <!DOCTYPE rules [
-    <!ENTITY filename_extensions "ai|asp|aspx|avi|bak|bat|bmp|cab|cfg|cgi|com|css|csv|dat|db|dbf|dll|doc|docx|eps|exe|flv|gif|htm|html|ibooks|ico|ini|jar|jpeg|jpg|js|jsp|lnk|md|mdb|mid|mov|mp3|mp4|mpa|mpg|ods|pdf|php|pl|png|pps|ppt|pptx|ps|psd|py|rar|rss|scss|sh|shtml|sql|svg|sys|tar|tif|tiff|tmp|ts|txt|wav|wma|xhtml|xls|xlsx|xml|xsl|yaml|yml|zip|zipx|7z">
+    <!ENTITY filename_extensions "ai|asp|aspx|avi|bak|bat|bmp|cab|cfg|cgi|com|css|csv|dat|db|dbf|dll|doc|docx|eps|exe|flv|gif|htm|html|ibooks|ico|ini|jar|jpeg|jpg|js|jsp|lnk|md|mdb|mid|mov|mp3|mp4|mpa|mpg|ods|pdf|php|pl|png|pps|ppt|pptx|ps|psd|py|rar|rss|scss|sh|shtml|sql|svg|sys|tar|tif|tiff|tmp|ts|txt|wav|wma|xhtml|xls|xlsx|xml|xsl|yaml|yml|zip|zipx|7z|web[mp]">
     <!ENTITY apostrophe "['’`´‘ʻ]">
     <!ENTITY months "January|February|March|April|May|Ju(ne|ly)|August|September|October|November|December">
     <!ENTITY abbrevMonths "Jan|Feb|Mar|Apr|Ju[ln]|Aug|Sept?|Oct|Nov|Dec">
@@ -2041,7 +2041,7 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
                 <token postag="VBZ"/>
                 <token postag="NNS">
                     <exception postag_regexp="yes" postag="NNPS?"/>
-                    <exception>does</exception>
+                    <exception regexp="yes">does|says|hopes|shouts|cries</exception>
                 </token>
                 </and>
             </marker>
@@ -2052,6 +2052,7 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
         <example type="untouched">The things he <marker>says</marker> are entirely inconsequential.</example>
         <example type="untouched">First, the premises on which it <marker>rests</marker> may not be correct.</example>
         <example type="untouched">She really does have no idea what I'm talking about.</example>
+        <example type="untouched">Dave says don't do it.</example>
         <example type="untouched">Information about what this <marker>does</marker> would be nice.</example>
         <example type="untouched">... but data about whoever each <marker>tries</marker> should tell us whether these judges are corrupt.</example>
         <example type="untouched">Incorrect grammar: He always <marker>notices</marker> were that animal is going.</example><!-- #2598 -->
@@ -4390,7 +4391,7 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
             </marker>
             <token postag="NNP" regexp="yes">
                 \p{Lu}\p{Ll}+
-                <exception case_sensitive="yes" regexp="yes">Going|Tell|Save|Cant|In|Quick|See|Had|Be|Radical</exception><!-- uncommon NNPs -->
+                <exception case_sensitive="yes" regexp="yes">Going|Tell|Save|Cant|In|Quick|See|Had|Be|Radical|Him</exception><!-- uncommon NNPs -->
             </token>
         </pattern>
         <disambig postag="NNP"/>
@@ -4399,6 +4400,7 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
         <example type="untouched">If You Just Had One Wish.</example><!-- #2748 -->
         <example type="untouched">So You Want To Be Taoiseach.</example><!-- #2748 -->
         <example type="untouched">Let's Be Radical.</example>
+        <example type="untouched">How Much Do We Tell Him?</example>
         <example type="untouched">Please Be Radical.</example>
         <example type="untouched">We Need to Grow Facebook.</example>
         <example type="untouched">See Wikipedia for a list of TCP/UDP ports that are already used.</example><!-- #2748 -->
@@ -7070,7 +7072,7 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
             <token>to</token>
         </antipattern>
         <antipattern>
-            <token regexp="yes">marketing|hosting|planning|coaching|training</token>
+            <token regexp="yes">marketing|hosting|planning|coaching|training|advertising</token>
             <token postag="NN.*" postag_regexp="yes" chunk_re="[EI]-NP.*" />
         </antipattern>
         <pattern>
@@ -8200,6 +8202,15 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
             <token>barley</token><!-- commonly confused with "barely" -->
             <token postag="VB.*" postag_regexp="yes" chunk="E-NP-singular" />
         </antipattern>
+        <antipattern>
+            <token postag="NNP" />
+            <token regexp="yes">wait|look|search</token>
+        </antipattern>
+        <antipattern>
+            <token postag="NNP" />
+            <token>work</token>
+            <token regexp="yes">with|for|at</token>
+        </antipattern>
         <pattern>
             <marker>
                 <and>
@@ -8235,6 +8246,7 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
         <example type="untouched">For a person who's wrong frequently, it's nice to be right.</example>
         <example type="untouched">Many play, but only one will win.</example>
         <example type="untouched">This will bright my day.</example>
+        <example type="untouched">Lola wait!</example>
         <example type="untouched">Ms. Tanaka can type, can't she?</example>
         <example type="untouched">Also if you have made any other significant changes to your application that may conflict with the agent, it would be great to know.</example>
         <example type="untouched">Many claim that the behavior is in the past.</example>
@@ -10419,6 +10431,12 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
                 <token postag="VB" chunk_re=".-VP" />
                 <token regexp="yes" postag="CC">and|or|as</token>
             </antipattern>
+            <antipattern>
+                <token postag="NNP" />
+                <token postag="VBZ" />
+                <token regexp="yes">and|or</token>
+                <token postag="NNP" />
+            </antipattern>
             <pattern>
                 <marker>
                     <token postag="NN.*" postag_regexp="yes"><exception postag_regexp="yes" postag="RBR?|JJ"/></token>
@@ -10442,6 +10460,7 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
             <example type="untouched">I love the way you <marker>are</marker> and time will tell whether we...</example><!-- #2343 -->
             <example type="untouched">We will be lost when they <marker>die</marker> and computers take over the world.</example><!-- #2343 -->
             <example type="untouched">They could maybe go and hangout.</example><!-- #2386 -->
+            <example type="untouched">Elsa cries and Anna comes to me</example>
             <example type="untouched">She might possibly go and hangout.</example><!-- #2386 -->
             <example type="untouched">Are there specific lock models where some commands would function and others wouldn't?</example>
             <example type="untouched">I can't restart or logoff.</example><!-- #2501 -->
@@ -16207,7 +16226,7 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
         <rule><!-- lowercase word + abbreviation with no vowels -->
             <pattern case_sensitive="yes">
                 <token regexp="yes">.*[a-z0-9].*</token>
-                <token min="0" regexp="yes">[\)\(,]</token>
+                <token min="0" regexp="yes">[\)\(,\/]</token>
                 <marker>
                     <token regexp="yes">[BCDFGHJKLMNPQRSTVWXZ]{3,6}s?</token>
                 </marker>
@@ -16219,7 +16238,7 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
                 <marker>
                     <token regexp="yes">[BCDFGHJKLMNPQRSTVWXZ]{3,6}s?</token>
                 </marker>
-                <token min="0" regexp="yes">[\)\(,]</token>
+                <token min="0" regexp="yes">[\)\(,\/]</token>
                 <token regexp="yes">.*[a-z0-9].*</token>
             </pattern>
             <disambig action="ignore_spelling"/>
@@ -16244,6 +16263,17 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
             <token>(</token>
             <marker>
                 <token case_sensitive="yes" regexp="yes">ing|ed</token>
+            </marker>
+            <token>)</token>
+        </pattern>
+        <disambig action="ignore_spelling"/>
+    </rule>
+
+    <rule id="STEALTH_ISH" name="ignore spelling of stealth(ish)">
+        <pattern>
+            <token>(</token>
+            <marker>
+                <token case_sensitive="yes">ish</token>
             </marker>
             <token>)</token>
         </pattern>
@@ -16783,6 +16813,52 @@ Incorrectly touched. <example type="untouched">Incorrect grammar. Those present 
                 </marker>
             </pattern>
             <disambig action="filter" postag="NN.*" />
+        </rule>
+    </rulegroup>
+
+    <rule id="CO2_FREE" name="ignore spelling of 'CO₂-free'">
+        <pattern>
+            <token regexp="yes" case_sensitive="yes">CO₂-([Ff]ree|[Bb]ased|[Nn]eutral|[Cc]ompensat(ing|ed)|[Dd]ependent|[Ii]ndependent)</token>
+        </pattern>
+        <disambig action="ignore_spelling"/>
+    </rule>
+
+    <rule id="IGNORE_SHARP_BRACKETS" name="Ignore spelling in sharp brackets">
+        <pattern>
+            <token regexp="yes">&lt;|\{</token>
+            <token min="0" spacebefore="no">/</token>
+            <marker>
+                <token regexp="yes" spacebefore="no">.*[a-z].*</token>
+            </marker>
+            <token regexp="yes" spacebefore="no">&gt;|\}</token>
+        </pattern>
+        <disambig action="ignore_spelling"/>
+    </rule>
+    <rulegroup id="IGNORE_JSON" name="Ignore json">
+        <rule>
+            <pattern>
+                <token postag="SENT_START">"</token>
+                <marker>
+                    <token regexp="yes" spacebefore="no">[a-z_\-0-9]+</token>
+                </marker>
+                <token regexp="yes" spacebefore="no">"</token>
+                <token spacebefore="no">:</token>
+                <token skip="-1">"</token>
+                <token>"</token>
+            </pattern>
+            <disambig action="ignore_spelling"/>
+        </rule>
+        <rule>
+            <pattern>
+                <token postag="SENT_START">"</token>
+                <marker>
+                    <token regexp="yes" spacebefore="no">[a-z_\-0-9]+</token>
+                </marker>
+                <token regexp="yes" spacebefore="no">"</token>
+                <token spacebefore="no">:</token>
+                <token regexp="yes">\d+</token>
+            </pattern>
+            <disambig action="ignore_spelling"/>
         </rule>
     </rulegroup>
 </rules>

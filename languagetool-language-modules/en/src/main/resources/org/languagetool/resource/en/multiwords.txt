@@ -6372,3 +6372,70 @@ Adani Group	NNP
 Basler Zeitung	NNP
 Molson Coors	NNP
 Grant Thornton	NNP
+Bernstein Research	NNP
+Sigur Rós	NNP
+Bella Ramsey	NNP
+Pedro Pascal	NNP
+Frogmore Cottage	NNP
+Frogmore House	NNP
+Meghan Trainor	NNP
+Giovanni Trapattoni	NNP
+Hilary Duff	NNP
+Hilary Swank	NNP
+Luiz Inácio Lula da Silva	NNP
+Tate Modern	NNP
+Tate Gallery	NNP
+Ikke Hüftgold	NNP
+William Turner	NNP
+Grand Hyatt	NNP
+Satudarah MC	NNP
+Ig Nobel Prize	NNP
+Milton Friedman	NNP
+pro rata temporis	RB
+Stierlin Court	NNP
+Silicon Valley Bank	NNP
+RBC Capital Markets	NNP
+First Republic Bank	NNP
+Signature Bank	NNP
+Apollo Global Management	NNP
+Johannes von Wesel	NNP
+de minimis	JJ
+Gunderson Dettmer	NNP
+Van Horne	NNP
+Alvin Bragg	NNP
+Saudi National Bank	NNP
+Joan Mir	NNP
+Val di Noto	NNP
+San Gregorio	NNP
+Google Bard	NNP
+Kofi Annan	NNP
+PacWest Bancorp	NNP
+Steve Miller Band	NNP
+Joan Miró	NNP
+Max Ernst	NNP
+Maria Dolors Miró	NNP
+Conan Doyle	NNP
+Reed Smith	NNP
+ING Group	NNP
+Rajang River	NNP
+Crédit Mutuel	NNP
+Crédit Mutuel Arkéa	NNP
+Crédit Industriel et Commercial	NNP
+Crédit Industriel	NNP
+Lamar Jackson	NNP
+Alicia Keys	NNP
+Swizz Beatz	NNP
+Christina Aguilera	NNP
+John Legend	NNP
+Pharrell Williams	NNP
+Bruno Mars	NNP
+John Mayer	NNP
+Jennifer Hudson	NNP
+Bobby Brown	NNP
+Clive Davis	NNP
+Toni Braxton	NNP
+Diana Ross	NNP
+Sanssouci Park	NNP
+Sanssouci Palace	NNP
+Joy Behar	NNP
+Evan Gershkovich	NNP

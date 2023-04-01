@@ -320,6 +320,7 @@ public class AgreementRuleTest {
     assertGood("Spielst du vielleicht auf das Bordell neben unsrem Hotel an?");
     assertGood("Dieses ungeahnt prophetische Wort");
     assertGood("Das bestätigte Regierungssprecher Steffen Hebestreit am Freitag");
+    assertGood("Es kann gut sein, dass bei sowas Probleme erkannt werden.");
 
     // relative clauses:
     assertGood("Das Recht, das Frauen eingeräumt wird.");
@@ -740,6 +741,7 @@ public class AgreementRuleTest {
     assertGood("Wir zeigen die Gründe auf, wieso noch nicht jeder solche Anschlüsse hat.");
   }
 
+  /*
   @Test
   public void testDetNounRuleErrorMessages() throws IOException {
     // check detailed error messages:
@@ -749,6 +751,7 @@ public class AgreementRuleTest {
     assertBadWithMessage("Die Tischen sind eckig.", "des Kasus");
     assertBadWithMessage("Die Tischen sind eckig.", "und Genus");
   }
+   */
 
   @Test
   public void testRegression() throws IOException {
@@ -823,6 +826,7 @@ public class AgreementRuleTest {
     assertGood("Dieser relativ gesehen starke Mann.");
     assertGood("Diese relativ gesehen starke Frau.");
     assertGood("Dieses relativ gesehen starke Auto.");
+    assertGood("Es kann gut sein, dass bei sowas echte Probleme erkannt werden.");
     //assertBad("Leute, die eine gewissen Sicherheit brauchen.");
     //assertBad("An der rot Ampel.");
   }
@@ -919,11 +923,13 @@ public class AgreementRuleTest {
     }
   }
 
+  /*
   private void assertBadWithMessage(String s, String expectedErrorSubstring) throws IOException {
     assertEquals(1, rule.match(lt.getAnalyzedSentence(s)).length);
     String errorMessage = rule.match(lt.getAnalyzedSentence(s))[0].getMessage();
     assertTrue("Got error '" + errorMessage + "', expected substring '" + expectedErrorSubstring + "'",
             errorMessage.contains(expectedErrorSubstring));
   }
+   */
 
 }

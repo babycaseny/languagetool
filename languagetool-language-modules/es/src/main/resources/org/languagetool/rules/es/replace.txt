@@ -1,3 +1,4 @@
+doloro=doloroso|dolor
 apreta=aprieta|apretar|apretá|apresa
 apretan=aprietan|apretar|aprestan|apresan
 conciente=consciente|cociente|consiente
@@ -164,5 +165,7 @@ gustaria=gustaría
 # Errors in the dictionary 
 # (can be removed after updating the dictionary)
 #################################################
-ingerencia=injerencia
-ingerencias=injerecias
+metereológico=meteorológico
+metereológica=meteorológica
+metereológicos=meteorológicos
+metereológicas=meteorológicas
