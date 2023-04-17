@@ -25,6 +25,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 import org.languagetool.AnalyzedToken;
 import org.languagetool.AnalyzedTokenReadings;
@@ -79,12 +80,15 @@ public abstract class AbstractFindSuggestionsFilter extends RuleFilter {
 
     if (wordFrom != null && desiredPostag != null) {
       int posWord = 0;
-      if (wordFrom.equals("marker")) {
+      if (wordFrom.startsWith("marker")) {
         while (posWord < patternTokens.length && (patternTokens[posWord].getStartPos() < match.getFromPos()
             || patternTokens[posWord].isSentenceStart())) {
           posWord++;
         }
         posWord++;
+        if (wordFrom.length()>6) {
+          wordFrom += Integer.parseInt(wordFrom.replace("marker", ""));
+        }
       } else {
         posWord = Integer.parseInt(wordFrom);
       }
@@ -113,6 +117,7 @@ public abstract class AbstractFindSuggestionsFilter extends RuleFilter {
           regexpPattern = Pattern.compile(removeSuggestionsRegexp, Pattern.UNICODE_CASE);
         }
         List<String> suggestions = getSpellingSuggestions(atrWord);
+        int usedPriorityPostagPos = 0;
         if (suggestions.size() > 0) {
           for (String suggestion : suggestions) {
             // TODO: do not tag capitalized words with tags for lower case
@@ -139,7 +144,8 @@ public abstract class AbstractFindSuggestionsFilter extends RuleFilter {
                       replacement = StringTools.uppercaseFirstChar(replacement);
                     }
                     if (priorityPostag!= null && analyzedSuggestion.matchesPosTagRegex(priorityPostag)) {
-                      replacements.add(0, replacement);
+                      replacements.add(usedPriorityPostagPos, replacement);
+                      usedPriorityPostagPos++;
                       used = true;
                     } else {
                       replacements.add(replacement);
@@ -237,7 +243,7 @@ public abstract class AbstractFindSuggestionsFilter extends RuleFilter {
     }
 
     if (!definitiveReplacements.isEmpty()) {
-      ruleMatch.setSuggestedReplacements(definitiveReplacements);
+      ruleMatch.setSuggestedReplacements(definitiveReplacements.stream().distinct().collect(Collectors.toList()));
     }
     return ruleMatch;
   }

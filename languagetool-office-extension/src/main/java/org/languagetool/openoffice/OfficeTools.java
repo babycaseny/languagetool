@@ -128,10 +128,14 @@ class OfficeTools {
   private static final String MENU_BAR = "private:resource/menubar/menubar";
   private static final String LOG_DELIMITER = ",";
   
+  private static final long KEY_RELEASE_TOLERANCE = 500;
+
   private static final double LT_HEAP_LIMIT_FACTOR = 0.9;
   private static double MAX_HEAP_SPACE = -1;
   private static double LT_HEAP_LIMIT = -1;
 
+  private static long lastKeyRelease = 0;
+  
   /**
    * Returns the XDesktop
    * Returns null if it fails
@@ -636,8 +640,37 @@ class OfficeTools {
     return false;
   }
   
+  /**
+   * timestamp for last key release
+   *//*
+  public static void setKeyReleaseTime(long time) {
+    lastKeyRelease = time;
+  }
+*/
   public static void waitForLO() {
     while (DocumentCursorTools.isBusy() || ViewCursorTools.isBusy() || FlatParagraphTools.isBusy()) {
+      try {
+        Thread.sleep(10);
+      } catch (InterruptedException e) {
+        MessageHandler.printException(e);
+      }
+    }
+  }
+/*  
+  public static void waitForLoDic() {
+    long spellDiff = KEY_RELEASE_TOLERANCE - System.currentTimeMillis() + lastKeyRelease;
+    while (DocumentCursorTools.isBusy() || ViewCursorTools.isBusy() || FlatParagraphTools.isBusy() || spellDiff > 0) {
+      try {
+        Thread.sleep(spellDiff < 10 ? 10 : spellDiff);
+      } catch (InterruptedException e) {
+        MessageHandler.printException(e);
+      }
+      spellDiff = KEY_RELEASE_TOLERANCE - System.currentTimeMillis() + lastKeyRelease;
+    }
+  }
+*/  
+  public static void waitForLtDictionary() {
+    while (LtDictionary.isActivating()) {
       try {
         Thread.sleep(10);
       } catch (InterruptedException e) {

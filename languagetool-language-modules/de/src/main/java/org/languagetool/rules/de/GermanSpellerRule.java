@@ -3102,6 +3102,7 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
       case "massgeblich": return topMatch("maßgeblich");
       case "tschuldige": return topMatch("entschuldige");
       case "Tschuldigung": return topMatch("Entschuldigung");
+      case "Schuldigung": return topMatch("Entschuldigung");
       case "Anteilname": return topMatch("Anteilnahme");
       case "Mahnungswesen": return topMatch("Mahnwesen");
       case "Mahnungswesens": return topMatch("Mahnwesens");
@@ -3158,6 +3159,11 @@ public class GermanSpellerRule extends CompoundAwareHunspellRule {
       case "rundumerneuerten": return topMatch("runderneuerten");
       case "rundumerneuertem": return topMatch("runderneuertem");
       case "Davidswache": return topMatch("Davidwache");
+      case "Pinwand": return topMatch("Pinnwand");
+      case "Kreisaal": return topMatch("Kreißsaal");
+      case "Kreisaals": return topMatch("Kreißsaals");
+      case "Kreissaal": return topMatch("Kreißsaal");
+      case "Kreissaals": return topMatch("Kreißsaals");
       case "Laola-Welle": return topMatch("La-Ola-Welle");
       case "Laola-Wellen": return topMatch("La-Ola-Wellen");
     }

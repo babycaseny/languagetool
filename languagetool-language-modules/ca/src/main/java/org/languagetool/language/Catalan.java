@@ -189,6 +189,7 @@ public class Catalan extends Language {
       case "CA_COMPOUNDS": return 50;
       case "INCORRECT_EXPRESSIONS": return 50;
       case "PERSONATGES_FAMOSOS": return 50;
+      case "CONEIXO_CONEC": return 50;
       case "OFERTAR_OFERIR": return 50; // greater than PRONOMS_FEBLES_SOLTS2
       case "DESDE_UN": return 40;
       case "MOTS_NO_SEPARATS": return 40;
@@ -196,6 +197,7 @@ public class Catalan extends Language {
       case "ESPERANT_US_AGRADI": return 40;
       case "ESPAIS_SOBRANTS": return 40; // greater than L
       case "ELA_GEMINADA": return 35; // greater than agreement rules, pronoun rules
+      case "CA_SPLIT_WORDS": return 30;
       case "PRONOMS_FEBLES_TEMPS_VERBAL": return 35;
       case "ET_AL": return 30; // greater than apostrophes and pronouns
       case "PRONOMS_FEBLES_COLLOQUIALS": return 30; // greater than PRONOMS_FEBLES_SOLTS2
@@ -228,6 +230,7 @@ public class Catalan extends Language {
       case "CASING": return 10; // greater than CONCORDANCES_DET_NOM
       case "DOS_ARTICLES": return 10; // greater than apostrophation rules
       case "MOTS_GUIONET": return 10; // greater than CONCORDANCES_DET_NOM
+      case "CA_SIMPLE_REPLACE_ANGLICISM": return 10;
       case "ZERO_O": return 10; //greater than SPELLING
       case "URL": return 10; //greater than SPELLING
       case "CONCORDANCES_DET_NOM": return 5;
@@ -272,7 +275,7 @@ public class Catalan extends Language {
       return new MorfologikCatalanSpellerRule(messages, this, null, Collections.emptyList());
   }
   
-  private static final Pattern CA_OLD_DIACRITICS = Pattern.compile(".*\\b(dóna|dónes|vénen|véns|fóra)\\b.*",Pattern.CASE_INSENSITIVE|Pattern.UNICODE_CASE);
+  private static final Pattern CA_OLD_DIACRITICS = Pattern.compile(".*\\b(sóc|dóna|dónes|vénen|véns|fóra)\\b.*",Pattern.CASE_INSENSITIVE|Pattern.UNICODE_CASE);
   
   @Override
   public List<RuleMatch> adaptSuggestions(List<RuleMatch> ruleMatches, Set<String> enabledRules) {
@@ -288,17 +291,38 @@ public class Catalan extends Language {
         //s = adaptContractionsApostrophes(s);
         Matcher m5 = CA_OLD_DIACRITICS.matcher(s.getReplacement());
         if (!enabledRules.contains("DIACRITICS_TRADITIONAL_RULES") && m5.matches()) {
-          // skip this suggestion with traditional diacritics
+          SuggestedReplacement newRepl = new SuggestedReplacement(s);
+          newRepl.setReplacement(removeOldDiacritics(newReplStr));
+          if (!newReplacements.contains(newRepl)) {
+            newReplacements.add(newRepl);
+          }
         } else {
           SuggestedReplacement newRepl = new SuggestedReplacement(s);
           newRepl.setReplacement(newReplStr);
-          newReplacements.add(newRepl);
+          if (!newReplacements.contains(newRepl)) {
+            newReplacements.add(newRepl);
+          }
         }
       }
       RuleMatch newMatch = new RuleMatch(rm, newReplacements);
       newRuleMatches.add(newMatch);
     }
     return newRuleMatches;
+  }
+  
+  private String removeOldDiacritics(String s) {
+    return s.replace("dóna", "dona")
+        .replace("dónes", "dones")
+        .replace("sóc", "soc")
+        .replace("vénen", "venen")
+        .replace("véns", "véns")
+        .replace("fóra", "fora")
+        .replace("Dóna", "Dona")
+        .replace("Dónes", "Dones")
+        .replace("Sóc", "Soc")
+        .replace("Vénen", "Venen")
+        .replace("Véns", "Vens")
+        .replace("Fóra", "Fora");
   }
   
   private static final Pattern CA_CONTRACTIONS = Pattern.compile("\\b([Aa]|[Dd]e) e(ls?)\\b");

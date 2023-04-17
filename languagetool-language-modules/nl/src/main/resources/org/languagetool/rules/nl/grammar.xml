@@ -423,6 +423,7 @@ regexp case-insensitive maken: (?i)
             <antipattern><token>be</token><token postag_regexp="yes" postag="UNKNOWN|DVW"/></antipattern> <!-- Engels -->
             <antipattern><token regexp="yes">to|must|or|still</token><token>be</token></antipattern> <!-- Engels -->
             <antipattern><token>.</token><token spacebefore="no">be</token></antipattern>
+            <antipattern><token>be</token><token>.</token><token>.</token><token>.</token></antipattern>
             <antipattern><token>punt</token><token>be</token></antipattern>
             <antipattern><token>(</token><token>be</token><token>)</token></antipattern>
             <antipattern><token/><token/><token case_sensitive="yes">Be</token><token/><token/></antipattern>
@@ -435,6 +436,7 @@ regexp case-insensitive maken: (?i)
                 </pattern>
                 <message>Bedoelt u <suggestion>me</suggestion>, <suggestion>de</suggestion> of misschien <suggestion>\1\2</suggestion>?</message>
                 <example correction="me|de|belang">Het is van groot <marker>be</marker> lang.</example>
+                <example>Het geeft me een goed be... Wat zei je?</example>
             </rule>
         </rulegroup>
 
@@ -852,13 +854,14 @@ regexp case-insensitive maken: (?i)
         <rulegroup id="SPATIE_GETALLEN" name="Spatie tussen getal en meeteenheid" tags="picky">
             <rule>
                 <pattern>
-                    <token case_sensitive="yes" regexp="yes">[1-9][0-9]+(m|v|V|kV|A|W|g|l|ml|cc|km|mm|cm)</token>
+                    <token case_sensitive="yes" regexp="yes">[1-9][0-9]+(m|v|V|kV|W|g|l|ml|cc|km|mm|cm)</token>
                 </pattern>
                 <message>Tussen het getal en de meeteenheid hoort een spatie (behalve in samenstellingen).</message>
-                <suggestion><match no="1" regexp_match="(^[0-9]+)(m|v|V|kV|A|W|g|l|ml|cc|km|mm|cm|km)" regexp_replace="$1 $2"/></suggestion>
+                <suggestion><match no="1" regexp_match="(^[0-9]+)(m|v|V|kV|W|g|l|ml|cc|km|mm|cm|km)" regexp_replace="$1 $2"/></suggestion>
                 <url>https://taaladvies.net/wel-of-geen-spaties-voor-en-na-leestekens-en-symbolen-algemeen/</url>
                 <short>Spatie</short>
                 <example correction="100 cm">De lengte is <marker>100cm</marker>.</example>
+                <example>Ze zit in klas 4A</example>
             </rule>
             <rule>
                 <pattern>
@@ -935,7 +938,7 @@ regexp case-insensitive maken: (?i)
         </rule>
         <rulegroup id="WIJ_ZIJ_MIJ" name="Wij, zij, jij/jou/jouw, mij → we, ze, je, me" tags="picky">
             <rule>
-                <antipattern><token regexp="yes">ook|tussen</token><token regexp="yes">[jwm]ij</token></antipattern>
+                <antipattern><token regexp="yes">ook|tussen</token><token regexp="yes">[jwmz]ij</token></antipattern>
                 <antipattern>
                     <token postag_regexp="yes" postag="SENT_START|START"/>
                     <token>Jij</token>
@@ -1025,6 +1028,28 @@ regexp case-insensitive maken: (?i)
                 <antipattern>
                     <token regexp="yes">aan|bij|op</token>
                     <token regexp="yes">jij|mij</token>
+                </antipattern>
+                <antipattern>
+                    <token>zij</token>
+                    <token>die</token>
+                    <example>Perspectief van zij die zich uitgesloten voelen.</example>
+                </antipattern>
+                <antipattern>
+                    <token>mij</token>
+                    <token regexp="yes">betreft|vraagt</token>
+                    <example>Wat mij betreft wel.</example>
+                    <example>Als je het mij vraagt wel.</example>
+                </antipattern>
+                <antipattern>
+                    <token skip="7" regexp="yes">u(w)?</token>
+                    <token regexp="yes">[wmz]ij</token>
+                    <example>Kunt u mij een voorbeeld geven?</example>
+                    <example>Vreemd, uw melding is uiteindelijk niet bij mij terechtgekomen.</example>
+                </antipattern>
+                <antipattern>
+                    <token regexp="yes">[wmz]ij</token>
+                    <token skip="7" regexp="yes">u(w)?</token>
+                    <example>Vijftien dagen geleden hebben wij uw verzoek ontvangen.</example>
                 </antipattern>
                 <pattern>
                     <token regexp="yes">jij|wij|zij|mij<exception postag="UNKNOWN"/></token>
@@ -8060,16 +8085,16 @@ regexp case-insensitive maken: (?i)
 
         <rulegroup id="DE_VERDOM_DE" name="de verdom de/de verdomde" >
             <rule>
-                <antipattern><token>de</token><token>Jong</token><token>de</token></antipattern>
+                <antipattern><token>de</token><token postag_regexp="yes" postag="ENM.*"></token><token>de</token></antipattern>
                 <antipattern><token>.</token><token spacebefore="no">de</token></antipattern>
                 <pattern case_sensitive="yes">
                     <token>de</token>
                     <marker>
-                        <token postag="WKW:TGW:1EP"><exception regexp="yes">.*[kfschp]$</exception><exception postag="VRZ"/></token>
+                        <token postag="WKW:TGW:1EP"><exception regexp="yes">.*[kfschp]$</exception><exception postag_regexp="yes" postag="VRZ|ZNW.*"/></token>
                         <token>de</token>
                     </marker>
                 </pattern>
-                <message>U hebt vast een spatie te veel staan.</message>
+                <message>Hier zou een spatie te veel kunnen staan.</message>
                 <suggestion>\2\3</suggestion>
                 <example correction="verdomde">Daar staat de <marker>verdom de</marker> fout weer.</example>
                 <example>ij Sevilla speelde Luuk de Jong de eerste zeventig minuten.</example>
@@ -8237,7 +8262,7 @@ regexp case-insensitive maken: (?i)
                     <marker>
                         <token>aan</token>
                         <token>de</token>
-                        <token postag="WKW:TGW:1EP" regexp="yes" case_sensitive="yes">[a-z].*<exception postag_regexp="yes" postag="ZNW.*|BNW.*"/><exception>kant</exception></token>
+                        <token postag="WKW:TGW:1EP" regexp="yes" case_sensitive="yes">[a-z].*<exception postag_regexp="yes" postag="ZNW.*|BNW.*"/><exception regexp="yes">kant|uit|call</exception></token>
                     </marker>
                 </pattern>
                 <message>Dit is spreektaal.</message>
@@ -8301,12 +8326,14 @@ regexp case-insensitive maken: (?i)
         <rulegroup id="TE_ZNW" name="te man" >
             <rule>
                 <pattern>
-                    <token>te</token>
+                    <marker>
+                        <token>te</token>
+                    </marker>
                     <token postag_regexp="yes" postag=".*DE_"><exception postag_regexp="yes" postag="BNW.*|WKW:TGW:INF.*|BYW:JES"/><exception case_sensitive="yes" regexp="yes">[A-Z].*|koop|huur|voer|Den|baat|beurt|gast|hulp|pas|pletter|schande|voet|vondeling|vriend|weer|paard|voren|water|hoop|kijk|fiets|keer|gemeente</exception></token>
                 </pattern>
-                <message>Voor een zelfstandig naamwoord hoort 'de'.</message>
-                <suggestion>de \2</suggestion>
-                <example correction="de leeservaring">Zij heeft <marker>te leeservaring</marker>.</example>
+                <message>Voor een zelfstandig naamwoord hoort <suggestion>de</suggestion>. Er is ook een kans dat u <suggestion>ter</suggestion> bedoelt.</message>
+                <example correction="de|ter">Zij heeft <marker>te</marker> leeservaring.</example>
+                <example correction="de|ter">Dit <marker>te</marker> verbetering op het huidige model.</example>
                 <example>De eed van trouw aan de koning te zweren.</example>
                 <example>Dit werk te prijzen zou neerkomen op lof voor mezelf.</example>
             </rule>
@@ -8477,6 +8504,12 @@ regexp case-insensitive maken: (?i)
         <rulegroup id="VOORVOEGSEL" name="mega, giga etc.">
             <rule>
                 <antipattern><token>de</token><token>mini</token><token postag="WKW:TGW:3EP|WKW:VLT:1EP" postag_regexp="yes"/></antipattern>
+                <antipattern>
+                    <!-- Many FPs coming from titles -->
+                    <token regexp="yes">mini|ultra|giga|mega|tera|nano|micro|macro</token>
+                    <token case_sensitive="yes" regexp="yes">[A-Z][a-z].*</token>
+                    <example>Hij is groot fan van de Mega Top 40.</example>
+                </antipattern>
                 <pattern>
                     <token regexp="yes" >mini|ultra|giga|mega|tera|nano|micro|macro</token>
                     <token postag_regexp="yes" postag="ZNW.*|BNW.*"><exception regexp="yes">kan|HD</exception></token>
@@ -10381,6 +10414,11 @@ regexp case-insensitive maken: (?i)
                 <antipattern><token regexp="yes">art|no</token><token regexp="yes" negate="yes">[0-9]*</token></antipattern> <!-- tegen art house , no nonsense etc -->
                 <antipattern><token regexp="yes">een|de</token><token>div</token></antipattern> <!-- tegen html-klets -->
                 <antipattern><token>.</token><token spacebefore="no">nl</token></antipattern> <!-- tegen html-klets -->
+                <antipattern>
+                    <token case_sensitive="yes" regexp="yes">[A-Z][a-z].*</token>
+                    <token case_sensitive="yes">Fa</token>
+                    <example>Het ging om prins Sadet Chao Fa.</example>
+                </antipattern>
                 <pattern>
                     <marker>
                         <token regexp="yes">aanw|afb|afd|art|bez|bijv|blz|bw|ca|dhr|div|drs|ds|enz|etc|excl|fa|fam|fig|fr|geb|incl|ing|ir|jhr|jkvr|jl|jr|max|mld|mln|mr|nl|no|nr|nrs|ong|onov|pag|plm|plv|resp|vgl|vnl|vnw|voorz|zgn|mrs<exception postag="SENT_END"/><exception case_sensitive="yes" regexp="yes">Max|[A-Z]{2,10}</exception></token>
@@ -10432,7 +10470,7 @@ regexp case-insensitive maken: (?i)
             <rule>
                 <pattern>
                     <marker>
-                        <token regexp="yes">[a-z]</token>
+                        <token spacebefore="yes" regexp="yes">[a-z]</token>
                         <token spacebefore="no">.</token>
                         <token regexp="yes" spacebefore="no">[a-z]</token>
                     </marker>
@@ -10448,13 +10486,14 @@ regexp case-insensitive maken: (?i)
             <rule>
                 <pattern>
                     <marker>
-                        <token case_sensitive="yes" regexp="yes" postag="UNKNOWN">[a-z]{2,4}<exception regexp="yes">bijv|ca|cf|cfr|dr|drs|dra|ed|em|enz|etc|evt|excl|geb|incl|ir|jhr|jl|jr|max|nl|resp|sr|vnl|vs|ww|zg|zgn</exception></token>
+                        <token case_sensitive="yes" regexp="yes" postag="UNKNOWN">[a-z]{2,6}<exception regexp="yes">aanw|afb|afd|art|bez|bijv|blz|bw|ca|cf|cfr|dhr|div|dr|dra|drs|ds|ed|em|enz|etc|evt|excl|fa|fam|fig|fr|geb|incl|ing|ir|jhr|jkvr|jl|jr|max|mld|mln|mr|mrs|nl|no|nr|nrs|ong|onov|pag|plm|plv|resp|sr|vgl|vnl|vnw|voorz|vs|ww|zg|zgn</exception></token>
                         <token spacebefore="no">.</token>
                     </marker>
                     <token spacebefore="yes" case_sensitive="yes" regexp="yes">[a-z].*</token>
                 </pattern>
                 <message>Dit zou een onofficiële afkorting kunnen zijn, maar ook een punt die per ongeluk daar staat in plaats van een komma. Of er is een hoofdletter vergeten.</message>
                 <example type = "incorrect">Het is fout <marker>qc.</marker> een misser.</example>
+                <example>Dat is fam. van Vliet.</example>
             </rule>
         </rulegroup>
         <rulegroup id="NL_PUNT" name="nl. → namelijk">
@@ -10796,12 +10835,26 @@ regexp case-insensitive maken: (?i)
                 <pattern>
                     <marker>
                         <token postag="WKW:TGW:INF"><exception postag_regexp="yes" postag="ZNW:MRV:DE_|ZNW:EKV:HET"/></token>
-                        <token regexp="yes">ik|hij</token>
+                        <token>ik</token>
                     </marker>
                     <token negate="yes">en</token>
                 </pattern>
-                <message>Zinsovergang of leesteken vergeten? <suggestion>\1. <match no="2" case_conversion="startupper"/></suggestion>, <suggestion>\1; \2</suggestion> of <suggestion>\1: \2</suggestion>.</message>
-                <example correction="breken. Ik|breken; ik|breken: ik">Wij <marker>breken ik</marker> ga weg.</example>
+                <message>Zinsovergang of leesteken vergeten? Anders misschien een verkeerde vorm van het werkwoord gebruikt? <suggestion>\1. <match no="2" case_conversion="startupper"/></suggestion>, <suggestion>\1; \2</suggestion> of <suggestion><match no="1" postag="WKW:TGW:1EP"></match> \2</suggestion>.</message>
+                <example correction="breken. Ik|breken; ik|breek ik">Wij <marker>breken ik</marker> ga weg.</example>
+                <example correction="gaan. Ik|gaan; ik|ga ik">Wat <marker>gaan ik</marker> hieraan doen?</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <marker>
+                        <token postag="WKW:TGW:INF"><exception postag_regexp="yes" postag="ZNW:MRV:DE_|ZNW:EKV:HET"/></token>
+                        <token>hij</token>
+                    </marker>
+                    <token negate="yes" regexp="yes">en|,</token>
+                </pattern>
+                <message>Zinsovergang of leesteken vergeten? Anders misschien een verkeerde vorm van het werkwoord gebruikt? <suggestion>\1. <match no="2" case_conversion="startupper"/></suggestion>, <suggestion>\1; \2</suggestion> of <suggestion><match no="1" postag="WKW:TGW:3EP"></match> \2</suggestion>.</message>
+                <example correction="breken. Hij|breken; hij|breekt hij">Wij <marker>breken hij</marker> gaat weg.</example>
+                <example correction="gaan. Hij|gaan; hij|gaat hij">Wat <marker>gaan hij</marker> hieraan doen?</example>
+                <example>Tegenwoordig worden hij, zijn bekering en zijn toestaan van het christendom echter kritischer bekeken</example>
             </rule>
         </rulegroup>
         <rulegroup id="EINDE_ZIN_ONVERWACHT" name="onverwacht einde zin" tags="picky">
@@ -11585,6 +11638,8 @@ regexp case-insensitive maken: (?i)
         <rulegroup id="DUIZEND" name="Na duizend een spatie">
             <!-- 2014-08-20 TaalTik -->
             <rule>
+                <antipattern><token regexp="yes">[/].*duizend</token></antipattern>
+                <antipattern><token regexp="yes">duizend.*[/]</token></antipattern>
                 <pattern>
                     <token regexp="yes">.+duizend.*(een|twee|drie|vier|vijf|zes|zeven|acht|negen|tien|twin|der|veer|honderd).*</token>
                 </pattern>
@@ -11695,8 +11750,13 @@ regexp case-insensitive maken: (?i)
                     <token>een</token>
                 </antipattern>
                 <antipattern>
-                    <token>een</token>
+                    <token regexp="yes">een|maar|nog|slechts|niet|totaal</token>
                     <token>één</token>
+                </antipattern>
+                <antipattern>
+                    <token>dé</token>
+                    <token postag="ZNW:EKV:DE_"/>
+                    <example>Dat is dé manier om even op te frissen.</example>
                 </antipattern>
                 <pattern>
                     <token regexp="yes">.*(áá|áé|áí|áú|éé|éí|éú|íé|íí|óé|óí|óó|óú|úí|úú|((^|[^aeiou])[áéíóú]([^aeiou]|$))).*<exception regexp="yes">hé|á|^één.{3,50}|.*(café|éminence|tracé|comité|mémoire|appliqué|arrivé|associé|attaché|employé|barré|cliché|beauté|defilé|blasé|bouclé|canapé|carré|cloqué|communiqué|comprimé|confrérie|congé|consommé|conté|privé|coupé|craquelé|crémant|cultivé|decafeïné|decolleté|demasqué|deputé|djahé|djembé|doré|doublé|procedé|débouché|dégénéré|déjà|délégué|ecarté|evacué|exposé|fiancé|frivolité|glacé|habitué|introducé|invité|soufflé|saté|lamé|macramé|laqué|logé|marqué|masqué|maté|moiré|mopé|ménière|nouveauté|negligé|oké|maché|paté|passé|piqué|plissé|pointillé|preparé|prostitué|protegé|présence|psyché|quarté|rassé|refugié|resumé|rosé|régence|réussite|santé|spécialité|taboulé|taugé|tempé|tiercé|tjabé|tragédienne|variété|velouté|vidé|wengé|élégance|résistance|plié|karité|vélocipède|olé|azobé|éclat|éloge|étang|sémillon|cité|peigné|rapé|chiné|lancé|époque|décharge|Fabergé|touché).*</exception><exception postag="ENM:.*|UNKNOWN" postag_regexp="yes"/></token>
@@ -11710,6 +11770,7 @@ regexp case-insensitive maken: (?i)
                 <suggestion><match no="1" regexp_match="ú" regexp_replace="u"/></suggestion>
                 <example correction="een">Hij is <marker>één</marker> van de vreemden.</example>
                 <example>Omdat één een appel is.</example>
+                <example>Ik heb maar één appel over.</example>
             </rule>
         </rulegroup>
         <rulegroup id="NADRUKTEKENS_EEN" name= "optionele accenten">
@@ -11895,11 +11956,14 @@ regexp case-insensitive maken: (?i)
         <rulegroup id="WEEKDAGEN_MAANDEN" name="Hoofdletters bij dagen en maanden" type="misspelling">
             <rule>
                 <antipattern case_sensitive="yes"><token>April</token><token postag_regexp="yes" postag="ENM:PER:LST.*"/></antipattern>
-                <antipattern><token postag_regexp="yes" postag="UNKNOWN"/><token case_sensitive="yes">April</token></antipattern> <!-- titles, names -->
+                <antipattern><token postag="UNKNOWN"/><token case_sensitive="yes">April</token></antipattern> <!-- titles, names -->
                 <antipattern case_sensitive="yes"><token>Zondag</token><token>met</token><token>Lubach</token></antipattern>
                 <antipattern><token postag_regexp="yes" postag="ENM:PER.*|BNW:STL:VRB" case_sensitive="yes" regexp="yes">[A-Z].*</token><token regexp="yes" case_sensitive="yes">(Maan|Dins|Woens|Donder|Zater|Zon)dag|Januari|Februari|Maart|April|Mei|Juni|Juli|Augustus|September</token></antipattern>
                 <antipattern><token postag_regexp="yes" postag="SENT_START|START" skip="-1"/><token skip="-1" regexp="yes">keizer|fort|villa|imperator|Caesar|.*ianus|Constantijns?|.*ius|Nero</token><token postag="SENT_END"/></antipattern>
                 <antipattern><token postag_regexp="yes" postag="SENT_START|START"/><token regexp="yes">&APOSTROPH;|&DBLQUOTE;</token><token case_sensitive="yes" regexp="yes">[A-Z].*</token></antipattern>
+                <antipattern><token case_sensitive="yes">Augustus</token><token case_sensitive="yes" regexp="yes">[A-Z].*</token></antipattern> <!-- first name Augustus -->
+                <antipattern><token postag="WKW:VLT:1EP"></token><token case_sensitive="yes">Augustus</token></antipattern> <!-- Roman emperor -->
+                <antipattern><token case_sensitive="yes">Augustus</token><token postag="WKW:VLT:1EP"></token></antipattern> <!-- Roman emperor -->
                 <pattern>
                     <token><exception postag_regexp="yes" postag="SENT_START|START"/></token>
                     <marker>
@@ -11913,9 +11977,8 @@ regexp case-insensitive maken: (?i)
                 <example>"<marker>Maandag</marker> is een rotdag."</example>
                 <example>'<marker>Maandag</marker> is een rotdag.'</example>
                 <example>Ze noemden het daarom Bloedige Zondag.</example>
-                <example>Dat gebeurt op Zwarte Donderdag.</example>
-                <example>Het is binnenkort weer Goede Vrijdag.</example>
-                <example>De dag erna is het Stille Zaterdag.</example>
+                <example>De dag na Goede Vrijdag noemen we Stille Zaterdag.</example>
+                <example>Augustus veranderde het burgerlijk procesrecht.</example>
             </rule>
         </rulegroup>
 
@@ -14676,10 +14739,6 @@ regexp case-insensitive maken: (?i)
         </rulegroup>
         <rulegroup id="KOMMA_HOOFDLETTER" name=", Hoofdletter" type="misspelling" tags="picky">
             <rule>
-                <antipattern case_sensitive="yes"><token>Landbouw</token><token>,</token><token>Natuur</token><token>en</token><token>Voedselkwaliteit</token></antipattern>
-                <antipattern case_sensitive="yes"><token>Transport</token><token>,</token><token>Communicatie</token><token>en</token><token>Toerisme</token></antipattern>
-                <antipattern case_sensitive="yes"><token>Onderwijs</token><token>,</token><token>Cultuur</token><token>en</token><token>Wetenschap</token></antipattern>
-                <antipattern case_sensitive="yes"><token>Volksgezondheid</token><token>,</token><token>Welzijn</token><token>en</token><token>Sport</token></antipattern>
                 <antipattern><token regexp="yes">[,;]</token><token postag_regexp="yes" postag="ENM.*|VLG:BHL|UNKNOWN"></token></antipattern>
                 <antipattern><token regexp="yes">[,;]</token><token regexp="yes">San|St|Ch|Th|Ph|Peg</token></antipattern>
                 <antipattern><token regexp="yes">[,;]</token><token/><token>,</token></antipattern>
@@ -14694,6 +14753,12 @@ regexp case-insensitive maken: (?i)
                         <token regexp="yes" postag="ZNW:EKV:HET">[A-Z][a-z].*</token>
                         <token regexp="yes" postag="BNW:STL:ONV">[A-Z][a-z].*</token>
                     </and>
+                </antipattern>
+                <antipattern>
+                    <token spacebefore="yes" case_sensitive="yes" regexp="yes">[A-Z].*</token>
+                    <token regexp="yes">[,]</token>
+                    <token case_sensitive="yes" regexp="yes">[A-Z].*</token>
+                    <example>Dan moet je bij het ministerie van Landbouw, Veeteelt en Visserij zijn.</example>
                 </antipattern>
                 <pattern case_sensitive="yes">
                     <token regexp="yes">[,;]</token>
@@ -16073,7 +16138,7 @@ regexp case-insensitive maken: (?i)
                 <example correction="St.-Anna">Ik aanbid <marker>st. Anna</marker>.</example>
             </rule>
         </rulegroup>
-        <rulegroup id="AANHALINMG_Z_SPATIE" name="«»">
+        <rulegroup id="AANHALING_Z_SPATIE" name="«»">
             <rule>
                 <pattern>
                     <token/>
@@ -17754,21 +17819,20 @@ regexp case-insensitive maken: (?i)
                     <token>wel</token>
                     <token>,</token>
                 </antipattern>
+                <antipattern>
+                    <token spacebefore="no">,</token>
+                    <token spacebefore="yes">dat</token>
+                    <token postag_regexp="yes" postag="WKW.*"><exception postag="WKW:VTD:ONV"/></token>
+                    <example>Nogal logisch, dat snapt iedereen.</example>
+                </antipattern>
                 <pattern>
                     <token>,</token>
                     <token case_sensitive="yes">dat</token>
                 </pattern>
                 <message>Gebruik voor 'dat' alleen een komma als u ook een pauze hoort: <suggestion> \2</suggestion>.</message>
                 <example correction=" dat">Ik wist niet<marker>, dat</marker> het fout was.</example>
+                <example correction=" dat">Het is een groot aquarium<marker>, dat</marker> gevestigd is in een oud pand.</example>
                 <example>Ik wist niet <marker>dat</marker> het goed was.</example>
-            </rule>
-            <rule>
-                <pattern>
-                    <token>,</token>
-                    <token case_sensitive="yes">Dat</token>
-                </pattern>
-                <message>Met een komma begint geen nieuwe zin; de hoofdletter geeft aan dat dat mogelijk wel de bedoeling was: <suggestion>. Dat</suggestion>.</message>
-                <example correction=". Dat">Ik wist het<marker>, Dat</marker> was fout.</example>
             </rule>
         </rulegroup>
         <rulegroup id="PUNT_UITR" name=".! of .?">
@@ -17912,7 +17976,8 @@ regexp case-insensitive maken: (?i)
                 <example>Ik zal de premium <marker>support</marker> zeker aanraden.</example>
             </rule>
         </rulegroup>
-        <rulegroup id="SLOGAN" name="slogan → slagzin">
+        <rulegroup id="SLOGAN" name="slogan → slagzin" default="off">
+            <!-- Suggestions are not very popular -->
             <rule>
                 <pattern>
                     <token inflected="yes">slogan</token>
@@ -18859,9 +18924,14 @@ regexp case-insensitive maken: (?i)
                 <antipattern><token regexp="yes">[0-9]+</token><token>.</token></antipattern>
                 <antipattern><token regexp="yes" case_sensitive="yes">:|nummer|[A-Z].*</token><token regexp="yes" case_sensitive="yes">[0-9]+[A-Z]</token></antipattern>
                 <antipattern><token postag_regexp="yes" postag="SENT_START|START"/><token regexp="yes">[0-9]{1,3}[AB]</token></antipattern>
-                <antipattern><token regexp="yes">[0-9]{1,3}[AB]</token><token>en</token><token regexp="yes">[0-9]{1,3}[AB]</token></antipattern>
+                <antipattern>
+                    <!-- too many false positives for XX A and B -->
+                    <token regexp="yes">[0-9]{1,2}[AB]</token>
+                    <example>Ze zit momenteel in groep 1A.</example>
+                    <example>Je moet wachten bij spoorlijn 22B.</example>
+                </antipattern>
                 <pattern case_sensitive="yes">
-                    <token regexp="yes">(([-]|[+]){0,1}[1-9]{0,1}[0-9]{1,10})(A|mA|V|kV|mm|cm|km|B|MB|GB|TB|°C|°F)</token>
+                    <token regexp="yes">(([-]|[+]){0,1}[1-9]{0,1}[0-9]{1,10})(mA|V|kV|mm|cm|km|MB|GB|TB|°C|°F)</token>
                 </pattern>
                 <message>Als dit een aantal met eenheid is, dan hoort er een spatie in: <suggestion><match no="1" regexp_match="([0-9])([^0-9])" regexp_replace="$1 $2"/></suggestion>.</message>
                 <url>https://taaladvies.net/taal/advies/tekst/114/wel_of_geen_spaties_voor_en_na_leestekens_en_symbolen_algemeen/</url>
@@ -19027,7 +19097,24 @@ regexp case-insensitive maken: (?i)
                 <example>QQ <marker>leiding geven</marker>.</example>
             </rule>
         </rulegroup>
-        <rulegroup id="ACCEPTATIE" name="acceptatie" tags="picky" default="off">
+        <rulegroup id="AANVANGEN_2" name="het/de aanvang" tags="picky">
+            <rule>
+                <pattern>
+                    <token negate="yes">de</token>
+                    <marker>
+                        <token>aanvang</token>
+                    </marker>
+                </pattern>
+                <message>&vlotter_mess; '(het) begin' of '(de) start'.</message>
+                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
+                <example correction="">Dit nam een <marker>aanvang</marker> in 1500.</example>
+                <example correction="">Ze gaan nooit al hun kaarten van bij <marker>aanvang</marker> op tafel leggen.</example>
+                <example correction="">De demobilisatie nam een <marker>aanvang</marker>.</example>
+                <example correction="">Onmiddellijk werd een <marker>aanvang</marker> ge nomen met het reddingswerk.</example>
+                <example correction="">Was dat misschien van in <marker>aanvang</marker> de bedoeling geweest?</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="ACCEPTATIE" name="acceptatie" tags="picky">
             <rule>
                 <pattern>
                     <token inflected="yes">acceptatie</token>
@@ -19041,7 +19128,7 @@ regexp case-insensitive maken: (?i)
                 <example correction="goedkeuring|aanvaarding">De <marker>acceptatie</marker> van de wissel is een formeel engagement.</example>
             </rule>
         </rulegroup>
-        <rulegroup id="ACCOMMODATIE" name="accommodatie" tags="picky" default="off">
+        <rulegroup id="ACCOMMODATIE" name="accommodatie" tags="picky">
             <rule>
                 <pattern>
                     <token inflected="yes">accommodatie</token>
@@ -19114,6 +19201,20 @@ regexp case-insensitive maken: (?i)
                 <example correction="verwachtte|vooruitliep op">Het <marker>anticipeerde</marker> op een vertrek door een Zweedse doelman te halen.</example>
                 <example correction="Verwachten|Vooruitlopen op"><marker>Anticiperen</marker> op het moment dat de betere renners zouden aanvallen.</example>
                 <example correction="verwacht|vooruitloop op">Probeer te voorspellen wat je tegenstander van plan is en <marker>anticipeer</marker>!</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="AUTONOOM" name="autonoom" tags="picky">
+            <rule>
+                <pattern>
+                    <token inflected="yes">autonoom</token>
+                </pattern>
+                <message>&vlotter_mess; <suggestion><match no="1" postag="BNW.*" postag_regexp="yes">zelfstandig</match></suggestion> of <suggestion><match no="1" postag="BNW.*" postag_regexp="yes">onafhankelijk</match></suggestion>.</message>
+                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
+                <example correction="zelfstandig|onafhankelijk">Kunst moest <marker>autonoom</marker> zijn.</example>
+                <example correction="zelfstandige|onafhankelijke">Uitgangspunt is het <marker>autonome</marker> zelf.</example>
+                <example correction="Zelfstandig|Onafhankelijk">Zij: <marker>Autonoom</marker> voor de manier van vergaderen, ja.</example>
+                <example correction="Zelfstandige|Onafhankelijke"><marker>Autonome</marker> beelden, met sterk formele kwaliteiten.</example>
+                <example correction="zelfstandiger|onafhankelijker">Ze heeft veel minder pijn en functioneert veel <marker>autonomer</marker>.</example>
             </rule>
         </rulegroup>
         <rulegroup id="BEHOREN" name="behoren" tags="picky" default="off">
@@ -19237,6 +19338,29 @@ regexp case-insensitive maken: (?i)
                 <example correction="">Een bestaand industrieel <marker>complex</marker> renoveren?</example>
             </rule>
         </rulegroup>
+        <rule id="CONDITIE" name="conditie" tags="picky">
+            <antipattern><token regexp="yes">goede|prima|uitstekende|slechte</token></antipattern>
+            <pattern>
+                <token inflected="yes">conditie</token>
+            </pattern>
+            <message>Als u een voorwaarde bedoelt kunt u ook beter <suggestion><match no="1" postag_regexp="yes" postag="ZNW.*">voorwaarde</match></suggestion> schrijven.</message>
+            <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
+            <example correction="voorwaarde">QQ <marker>conditie</marker> QQQ.</example>
+            <example>QQ <marker>voorwaarde</marker>.</example>
+        </rule>
+        <rulegroup id="CONFIGURATIE" name="configuratie" tags="picky">
+            <rule>
+                <pattern>
+                    <token inflected="yes">configuratie</token>
+                </pattern>
+                <message>&vlotter_mess; <suggestion><match no="1" postag=".*ZNW.*" postag_regexp="yes">samenstelling</match></suggestion>.</message>
+                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
+                <example correction="samenstelling">Vrij simpel in <marker>configuratie</marker>.</example>
+                <example correction="Samenstelling"><marker>Configuratie</marker> voor het activeren van deze gratis optie.</example>
+                <example correction="samenstellingen">Deze omkeerbare deur kan aan alle <marker>configuraties</marker> aangepast worden.</example>
+                <example correction="samenstelling">Al denk ik ook aan de <marker>configuratie</marker> met telenet, draadloos dan?</example>
+            </rule>
+        </rulegroup>
         <rulegroup id="CONSISTENT" name="consistent" tags="picky">
             <rule>
                 <pattern>
@@ -19303,6 +19427,21 @@ regexp case-insensitive maken: (?i)
                 <example correction="betrokken|bedoelde|genoemde|vermelde">Wij maken gebruik van vezels uit de <marker>desbetreffende</marker> tijd.</example>
             </rule>
         </rulegroup>
+        <rulegroup id="DIVERSITEIT" name="diversiteit" tags="picky">
+            <rule>
+                <pattern>
+                    <token inflected="yes">diversiteit</token>
+                </pattern>
+                <message>&vlotter_mess; <suggestion>variatie</suggestion>, <suggestion>afwisseling</suggestion> of <suggestion>verschillen</suggestion>.</message>
+                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
+                <example correction="variatie|afwisseling|verschillen">Leren in <marker>diversiteit</marker>.</example>
+                <example correction="variatie|afwisseling|verschillen">Lokale <marker>diversiteit</marker> kan positief zijn.</example>
+                <example correction="variatie|afwisseling|verschillen">Een <marker>diversiteit</marker> van verschillende soorten kunst.</example>
+                <example correction="variatie|afwisseling|verschillen">Deze <marker>diversiteit</marker> proberen we hier op te brengen.</example>
+                <example correction="variatie|afwisseling|verschillen">We hadden daarbij aandacht voor geografische <marker>diversiteit</marker>.</example>
+                <example correction="variatie|afwisseling|verschillen">Skeeleren wordt gekenmerkt door snelheid en <marker>diversiteit</marker>.</example>
+            </rule>
+        </rulegroup>
         <rulegroup id="DOORONTWIKKELEN" name="doorontwikkelen" tags="picky">
             <rule>
                 <pattern>
@@ -19329,6 +19468,34 @@ regexp case-insensitive maken: (?i)
                 <message>De tekst wordt vlotter als u 'doorontwikkelen' herschrijft met 'verder ontwikkelen'.</message>
                 <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
                 <example correction="">Mede daardoor ging men <marker>door met ontwikkelen</marker>.</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="EDUCATIEF" name="educatief" tags="picky">
+            <rule>
+                <pattern>
+                    <token inflected="yes">educatief</token>
+                </pattern>
+                <message>&vlotter_mess; <suggestion><match no="1" postag="BNW.*" postag_regexp="yes">leerzaam</match></suggestion>.</message>
+                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
+                <example correction="Leerzaam"><marker>Educatief</marker> en leuk.</example>
+                <example correction="leerzaam">Goed <marker>educatief</marker> spel.</example>
+                <example correction="leerzame">Hier vind je ook een <marker>educatieve</marker> map.</example>
+                <example correction="Leerzame"><marker>Educatieve</marker> auto van het gekende merk Chicco.</example>
+                <example correction="leerzaams">Stilaan groeide het idee om iets <marker>educatiefs</marker> met deze hobby te doen.</example>
+                <example correction="leerzaam">De voetafdruk is vooral <marker>educatief</marker> een sterk instrument.</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="EEN_EN_ANDER" name="een en ander" tags="picky">
+            <rule>
+                <pattern>
+                    <token>een</token><token>en</token><token>ander</token>
+                </pattern>
+                <message>&vlotter_mess; 'deze', 'dit alles' of 'iets'.</message>
+                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
+                <example correction="">Er beweegt dus <marker>een en ander</marker>.</example>
+                <example correction="">We weten het <marker>een en ander</marker> van Antoni.</example>
+                <example correction="">Ja, met paus Gregorius VII veranderde zo <marker>een en ander</marker>.</example>
+                <example correction="">Daarin stond wel <marker>een en ander</marker> ter zake in.</example>
             </rule>
         </rulegroup>
         <rulegroup id="ENERZIJDS" name="enerzijds" tags="picky">
@@ -19430,6 +19597,24 @@ regexp case-insensitive maken: (?i)
                 <example correction="maken|bedenken">Ze zal niet meer inkomsten <marker>genereren</marker>.</example>
             </rule>
         </rulegroup>
+        <rulegroup id="GESTRUCTUREERD" name="gestructureerd" tags="picky">
+            <rule>
+                <pattern>
+                    <token>gestructureerd</token>
+                </pattern>
+                <message>&vlotter_mess; <suggestion>geordend</suggestion>, <suggestion>geregeld</suggestion> of <suggestion>overzichtelijk</suggestion>.</message>
+                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
+                <example correction="geordend|geregeld|overzichtelijk">Goed <marker>gestructureerd</marker> en overtuigend.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token>gestructureerde</token>
+                </pattern>
+                <message>&vlotter_mess; <suggestion>geordende</suggestion>, <suggestion>geregelde</suggestion> of <suggestion>overzichtelijke</suggestion>.</message>
+                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
+                <example correction="geordende|geregelde|overzichtelijke">Een <marker>gestructureerde</marker> aanpak dringt zich op.</example>
+            </rule>
+        </rulegroup>
         <rulegroup id="HEDEN" name="Heden → vandaag, nu">
             <!-- Unpopular rule, improvement did not help -->
             <rule>
@@ -19477,6 +19662,57 @@ regexp case-insensitive maken: (?i)
                 <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
                 <example correction="">Die heb ik <marker>in het kader van</marker> deze actuele vragen niet bij.</example>
                 <example correction="">Dit <marker>in het kader van</marker> hun eerste projectweek van dit schooljaar.</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="INCIDENT" name="incident" tags="picky">
+            <rule>
+                <pattern>
+                    <token>incident</token>
+                </pattern>
+                <message>&vlotter_mess; <suggestion>gebeurtenis</suggestion> of <suggestion>vervelende gebeurtenis</suggestion>.</message>
+                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
+                <example correction="gebeurtenis|vervelende gebeurtenis">Het <marker>incident</marker> is gesloten.</example>
+                <example correction="gebeurtenis|vervelende gebeurtenis">Bij het <marker>incident</marker> raakte niemand gewond.</example>
+                <example correction="gebeurtenis|vervelende gebeurtenis">Uiteraard betreurt men ook het <marker>incident</marker>.</example>
+                <example correction="gebeurtenis|vervelende gebeurtenis">Gelukkig kwam het <marker>incident</marker> tot een goed einde.</example>
+                <example correction="gebeurtenis|vervelende gebeurtenis">Bij het <marker>incident</marker> raakten geen toeristen gewond.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token>incidenten</token>
+                </pattern>
+                <message>&vlotter_mess; <suggestion>gebeurtenissen</suggestion> of <suggestion>vervelende gebeurtenissen</suggestion>.</message>
+                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
+                <example correction="gebeurtenissen|vervelende gebeurtenissen">Er deden zich geen <marker>incidenten</marker> voor.</example>
+                <example correction="Gebeurtenissen|Vervelende gebeurtenissen"><marker>Incidenten</marker> in kaart brengen is natuurlijk niet genoeg.</example>
+                <example correction="gebeurtenissen|vervelende gebeurtenissen">50% afname van aantal <marker>incidenten</marker> van urineverlies.</example>
+                <example correction="gebeurtenissen|vervelende gebeurtenissen">Na enkele <marker>incidenten</marker> is de politie tussenbeide gekomen.</example>
+                <example correction="gebeurtenissen|vervelende gebeurtenissen">Om dergelijke <marker>incidenten</marker> te vermijden, overweegt Amerika om een hoogtechnoloische muur te bouwen.</example>
+                <example correction="gebeurtenissen|vervelende gebeurtenissen">Er is het systematisch onderzoek van alle <marker>incidenten</marker>.</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="INDICATIE" name="indicatie" tags="picky">
+            <rule>
+                <pattern>
+                    <token inflected="yes">indicatie</token>
+                </pattern>
+                <message>&vlotter_mess; <suggestion><match no="1" postag=".*ZNW.*" postag_regexp="yes">aanwijzing</match></suggestion>.</message>
+                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
+                <example correction="Aanwijzing"><marker>Indicatie</marker> geplande datum opdracht.</example>
+                <example correction="aanwijzingen">Het waren <marker>indicaties</marker> van de oorlogseconomie.</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="INDIEN" name="indien" tags="picky">
+            <rule>
+                <pattern>
+                    <token>indien</token>
+                </pattern>
+                <message>&vlotter_mess; <suggestion>als</suggestion> of <suggestion>wanneer</suggestion>.</message>
+                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
+                <example correction="als|wanneer">Reizen <marker>indien</marker> nodig.</example>
+                <example correction="Als|Wanneer"><marker>Indien</marker> u astma heeft.</example>
+                <example correction="als|wanneer">Laat leeg, <marker>indien</marker> U dit niet wil.</example>
+                <example correction="als|wanneer">Snoeien <marker>indien</marker> nodig.</example>
             </rule>
         </rulegroup>
         <rulegroup id="INHOUDELIJK" name="inhoudelijk" tags="picky">
@@ -19641,6 +19877,40 @@ regexp case-insensitive maken: (?i)
                 <example correction="nodig">Vooraf inschrijven <marker>noodzakelijk</marker>.</example>
             </rule>
         </rulegroup>
+        <rulegroup id="OMTRENT" name="Omtrent → over">
+            <rule>
+                <!-- 2014-09-08 TaalTik -->
+                <pattern>
+                    <token>omtrent</token>
+                </pattern>
+                <message>Als u dit ouderwets woord niet voor het stilistisch effect heeft gekozen, gebruik dan liever <suggestion>over</suggestion> of laat het weg door te herformuleren.</message>
+                <url>https://onzetaal.nl/taaladvies/advies/ouderwets-taalgebruik</url>
+                <example correction="over">De artikelen <marker>omtrent</marker> fouten.</example>
+                <example correction="Over"><marker>Omtrent</marker> je "raad" voor Vanhecke.</example>
+                <example correction="over">Foton informeert en sensibiliseert <marker>omtrent</marker> dementie.</example>
+                <example correction="over">Met Bart gebeld <marker>omtrent</marker> de installatie van de verfwinkels.</example>
+                <example correction="over">Leest u ook even de regels <marker>omtrent</marker> reacties?</example>
+                <example correction="over">Zeker ook de onwetendheid <marker>omtrent</marker> het toeval niet.</example>
+                <example correction="over">De raad van bestuur beslist <marker>omtrent</marker> deze problemen.</example>
+                <example correction="over">Ikzelf was zeer kritisch <marker>omtrent</marker> geweld.</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="OPSTARTEN" name="opstarten" tags="picky">
+            <rule>
+                <pattern>
+                    <token inflected="yes">opstarten<exception>opstart</exception></token>
+                </pattern>
+                <message>&vlotter_mess; <suggestion><match no="1" postag="WKW.*" postag_regexp="yes">beginnen</match></suggestion>.</message>
+                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
+                <example correction="beginnen">QQ <marker>opstarten</marker> QQQ.</example>
+                <example>QQ <marker>beginnen</marker>.</example>
+                <example correction="beginnen">Een eigen zaak <marker>opstarten</marker>?</example>
+                <example correction="begon">Als 't ding <marker>opstartte</marker> was 't al lang goed.</example>
+                <example correction="beginnend">Bovendien ging het om een klein <marker>opstartend</marker> bedrijf.</example>
+                <example correction="begonnen">Wij hebben daarom een Belgische afdeling <marker>opgestart</marker>.</example>
+                <example correction="begonnen">Hiermee kan de onderzoeksfase <marker>opgestart</marker> worden.</example>
+            </rule>
+        </rulegroup>
         <rule id="OPTIMAAL_1" name="optimaal > zo goed mogelijk">
             <antipattern><token>zo</token><token>optimaal</token><token>mogelijk</token></antipattern>
             <pattern>
@@ -19651,6 +19921,27 @@ regexp case-insensitive maken: (?i)
             <example correction="zo goed mogelijk">De sfeer is <marker>optimaal</marker>.</example>
             <example correction="zo goed mogelijke">Een <marker>optimale</marker> nachtrust.</example>
         </rule>
+        <rulegroup id="PRINCIPE" name="principe" tags="picky">
+            <rule>
+                <antipattern><token>in</token><token>principe</token></antipattern>
+                <pattern>
+                    <token>principe</token>
+                </pattern>
+                <message>&vlotter_mess; <suggestion>keuze</suggestion> of <suggestion>uitgangspunt</suggestion>.</message>
+                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
+                <example correction="keuze|uitgangspunt">Heel mooi <marker>principe</marker>.</example>
+                <example correction="keuze|uitgangspunt">Eind jaren ‘90 was dit <marker>principe</marker> erg rendabel.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token>principes</token>
+                </pattern>
+                <message>&vlotter_mess; <suggestion>keuzes</suggestion> of <suggestion>uitgangspunten</suggestion>.</message>
+                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
+                <example correction="keuzes|uitgangspunten">Een mens moet trouw blijven aan zijn <marker>principes</marker>.</example>
+                <example correction="keuzes|uitgangspunten">Wat Newton had gedaan, was dezelfde <marker>principes</marker> toepassen op de natuur.</example>
+            </rule>
+        </rulegroup>
         <rulegroup id="PRIORITEIT" name="prioriteit" tags="picky">
             <rule>
                 <pattern>
@@ -19660,6 +19951,32 @@ regexp case-insensitive maken: (?i)
                 <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
                 <example correction="">Het is geen <marker>prioriteit</marker>.</example>
                 <example correction="">Je kan <marker>prioriteiten</marker> stellen.</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="PROACTIEF" name="proactief" tags="picky">
+            <rule>
+                <pattern>
+                    <token inflected="yes">proactief</token>
+                </pattern>
+                <message>&vlotter_mess; <suggestion><match no="1" postag="BNW.*" postag_regexp="yes">actief</match></suggestion> of 'problemen vóór willen zijn'.</message>
+                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
+                <example correction="actief">Teamplayer en bent <marker>proactief</marker> binnen een team.</example>
+                <example correction="actieve">Zij worden immers ook in de <marker>proactieve</marker> recherche (vb.</example>
+                <example correction="Actief"><marker>Proactief</marker> ingrijpen op problematisch drugs- en alcoholgebruik.</example>
+                <example correction="actiever">Brussels Airport wil in de toekomst <marker>proactiever</marker> communiceren over haar milieubeleid.</example>
+                <example correction="Actieve"><marker>Proactieve</marker> persoonlijkheden zijn extravert, impulsief, wat agressiever en hebben een sterke drang om routines te volgen.</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="QUA" name="qua" tags="picky">
+            <rule>
+                <pattern>
+                    <token>qua</token>
+                </pattern>
+                <message>&vlotter_mess; <suggestion>over</suggestion> of <suggestion>rond</suggestion> of <suggestion>als het gaat om</suggestion>.</message>
+                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
+                <example correction="Over|Rond|Als het gaat om"><marker>Qua</marker> uiterlijk ook.</example>
+                <example correction="over|rond|als het gaat om">Mooi resultaat en <marker>qua</marker> prijs de laagste.</example>
+                <example correction="over|rond|als het gaat om">Het boek is <marker>qua</marker> lay-out bijzonder pittig.</example>
             </rule>
         </rulegroup>
         <rulegroup id="SEKSE_VOLGORDE" name="misschien volgorde omdraaien" tags="picky">
@@ -19751,6 +20068,24 @@ regexp case-insensitive maken: (?i)
                 <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
                 <example correction=""><marker>Strategie</marker> is tijdverlies.</example>
                 <example correction="">Wat zijn goeie <marker>strategieën</marker>?</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="STRUCTUREEL" name="structureel" tags="picky">
+            <rule>
+                <pattern>
+                    <token>structureel</token>
+                </pattern>
+                <message>&vlotter_mess; <suggestion>voortdurend</suggestion>, <suggestion>regelmatig</suggestion>, <suggestion>belangrijk</suggestion> of <suggestion>voldoende</suggestion>.</message>
+                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
+                <example correction="voortdurend|regelmatig|belangrijk|voldoende">Om die tegen te gaan, is <marker>structureel</marker> een groot bedrag nodig.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token>structurele</token>
+                </pattern>
+                <message>&vlotter_mess; <suggestion>voortdurende</suggestion>, <suggestion>regelmatige</suggestion>, <suggestion>belangrijke</suggestion> of <suggestion>voldoende</suggestion>.</message>
+                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
+                <example correction="voortdurende|regelmatige|belangrijke|voldoende">Ik kom tot een tweede <marker>structurele</marker> vraag.</example>
             </rule>
         </rulegroup>
         <rulegroup id="VAN_PLAN_ZIJN" name="van plan zijn" tags="picky">
@@ -19867,7 +20202,12 @@ regexp case-insensitive maken: (?i)
         <rulegroup id="ENKEL" name="Enkel → alleen" tags="picky">
             <!-- 2014-09-08 TaalTik -->
             <rule>
-                <antipattern><token regexp="yes">de|een</token><token>enkel</token><token postag_regexp="yes" postag="WKW.*"/></antipattern>
+                <antipattern><token regexp="yes">de|een|één</token><token>enkel</token></antipattern>
+                <antipattern>
+                    <token skip="3">enkel</token>
+                    <token>dubbel</token>
+                    <example>Heb je er enkel of dubbel glas inzitten?</example>
+                </antipattern>
                 <pattern>
                     <token><exception>geen</exception></token>
                     <marker>
@@ -19887,6 +20227,7 @@ regexp case-insensitive maken: (?i)
                 <example correction="Alleen|Alleen maar|"><marker>Enkel</marker> afhalen mogelijk.</example>
                 <example correction="alleen|alleen maar|">Maandag <marker>enkel</marker> op afspraak.</example>
                 <example correction="alleen|alleen maar|">Ik wil <marker>enkel</marker> voelen.</example>
+                <example>Dat biedt dan één enkel toegangspunt.</example>
             </rule>
         </rulegroup>
         <rulegroup id="ZEGGEN_EN_SCHRIJVEN" name="Zeggen en schrijven → zegge en schrijve">
@@ -20418,24 +20759,6 @@ regexp case-insensitive maken: (?i)
                 <example correction="behalve|naast|en ook|evenals|met daarbij">In geval van ongerechtvaardigde niet-betaling zal <marker>benevens</marker> de hoofdsom en alle aanhorigheden, ten titel van bijkomende vergoeding een forfaitaire som van 10% bij verschuldigd zijn met een minimum van 65 euro.</example>
                 <example correction="behalve|naast|en ook|evenals|met daarbij">De Staat, <marker>benevens</marker> de Provinciale Overheid kwamen dan ook zeer bereidwillig tussen in de kosten van eerste inrichting en zouden jaarlijks een tussenkomst in werkingskosten verlenen.</example>
                 <example correction="Behalve|Naast|En ook|Evenals|Met daarbij"><marker>Benevens</marker> eten, drinken en kleeding trekt ieder lid soldij.</example>
-            </rule>
-        </rulegroup>
-        <rulegroup id="OMTRENT" name="Omtrent → over">
-            <rule>
-                <!-- 2014-09-08 TaalTik -->
-                <pattern>
-                    <token>omtrent</token>
-                </pattern>
-                <message>Als u dit ouderwets woord niet voor het stilistisch effect heeft gekozen, gebruik dan liever <suggestion>over</suggestion> of laat het weg door te herformuleren.</message>
-                <url>https://onzetaal.nl/taaladvies/advies/ouderwets-taalgebruik</url>
-                <example correction="over">De artikelen <marker>omtrent</marker> fouten.</example>
-                <example correction="Over"><marker>Omtrent</marker> je "raad" voor Vanhecke.</example>
-                <example correction="over">Foton informeert en sensibiliseert <marker>omtrent</marker> dementie.</example>
-                <example correction="over">Met Bart gebeld <marker>omtrent</marker> de installatie van de verfwinkels.</example>
-                <example correction="over">Leest u ook even de regels <marker>omtrent</marker> reacties?</example>
-                <example correction="over">Zeker ook de onwetendheid <marker>omtrent</marker> het toeval niet.</example>
-                <example correction="over">De raad van bestuur beslist <marker>omtrent</marker> deze problemen.</example>
-                <example correction="over">Ikzelf was zeer kritisch <marker>omtrent</marker> geweld.</example>
             </rule>
         </rulegroup>
         <rulegroup id="DAARENBOVEN" name="Daarenboven → bovendien, behalve dat, daarbij, verder">
@@ -21072,21 +21395,6 @@ regexp case-insensitive maken: (?i)
             </rule>
             <rule>
                 <pattern>
-                    <token negate="yes">de</token>
-                    <marker>
-                        <token>aanvang</token>
-                    </marker>
-                </pattern>
-                <message>&vlotter_mess; '(het) begin' of '(de) start'.</message>
-                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="">Dit nam een <marker>aanvang</marker> in 1500.</example>
-                <example correction="">Ze gaan nooit al hun kaarten van bij <marker>aanvang</marker> op tafel leggen.</example>
-                <example correction="">De demobilisatie nam een <marker>aanvang</marker>.</example>
-                <example correction="">Onmiddellijk werd een <marker>aanvang</marker> ge nomen met het reddingswerk.</example>
-                <example correction="">Was dat misschien van in <marker>aanvang</marker> de bedoeling geweest?</example>
-            </rule>
-            <rule>
-                <pattern>
                     <token>de</token>
                     <token>aanvang</token>
                 </pattern>
@@ -21661,20 +21969,6 @@ regexp case-insensitive maken: (?i)
                 <example correction="vooraf|van tevoren">Ten overvloede wordt door de rechtsleer benadrukt dat een normaal beheer als goede huisvader niet <marker>a priori</marker> onverzoenbaar is met een zekere graad van speculatie.</example>
             </rule>
         </rulegroup>
-        <rulegroup id="AUTONOOM" name="autonoom" tags="picky">
-            <rule>
-                <pattern>
-                    <token inflected="yes">autonoom</token>
-                </pattern>
-                <message>&vlotter_mess; <suggestion><match no="1" postag="BNW.*" postag_regexp="yes">zelfstandig</match></suggestion> of <suggestion><match no="1" postag="BNW.*" postag_regexp="yes">onafhankelijk</match></suggestion>.</message>
-                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="zelfstandig|onafhankelijk">Kunst moest <marker>autonoom</marker> zijn.</example>
-                <example correction="zelfstandige|onafhankelijke">Uitgangspunt is het <marker>autonome</marker> zelf.</example>
-                <example correction="Zelfstandig|Onafhankelijk">Zij: <marker>Autonoom</marker> voor de manier van vergaderen, ja.</example>
-                <example correction="Zelfstandige|Onafhankelijke"><marker>Autonome</marker> beelden, met sterk formele kwaliteiten.</example>
-                <example correction="zelfstandiger|onafhankelijker">Ze heeft veel minder pijn en functioneert veel <marker>autonomer</marker>.</example>
-            </rule>
-        </rulegroup>
         <rulegroup id="BEDUIDEND" name="beduidend" tags="picky">
             <rule>
                 <pattern>
@@ -22197,12 +22491,12 @@ regexp case-insensitive maken: (?i)
                 <pattern>
                     <token inflected="yes">compatibel</token>
                 </pattern>
-                <message>&vlotter_mess; <suggestion><match no="1" postag="BNW.*" postag_regexp="yes">uitwisselbaar</match></suggestion> of <suggestion><match no="1" postag="BNW.*" postag_regexp="yes">verenigbaar</match></suggestion>.</message>
+                <message>&vlotter_mess; <suggestion><match no="1" postag="BNW.*" postag_regexp="yes">combineerbaar</match></suggestion> of <suggestion><match no="1" postag="BNW.*" postag_regexp="yes">verenigbaar</match></suggestion>.</message>
                 <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="Uitwisselbaar|Verenigbaar"><marker>Compatibel</marker> met maxi cosi en draaglast.</example>
-                <example correction="uitwisselbaar|verenigbaar">Weg wegens niet <marker>compatibel</marker> met urinoir.</example>
-                <example correction="uitwisselbare|verenigbare">Hang een <marker>compatibele</marker> printer aan je NAS-server en iedereen kan hierop printen vanuit de school.</example>
-                <example correction="uitwisselbaar|verenigbaar">Concreet zijn die verschillende doelstellingen niet noodzakelijk complementair of <marker>compatibel</marker>.</example>
+                <example correction="Combineerbaar|Verenigbaar"><marker>Compatibel</marker> met maxi cosi en draaglast.</example>
+                <example correction="combineerbaar|verenigbaar">Weg wegens niet <marker>compatibel</marker> met urinoir.</example>
+                <example correction="combineerbare|verenigbare">Hang een <marker>compatibele</marker> printer aan je NAS-server en iedereen kan hierop printen vanuit de school.</example>
+                <example correction="combineerbaar|verenigbaar">Concreet zijn die verschillende doelstellingen niet noodzakelijk complementair of <marker>compatibel</marker>.</example>
             </rule>
         </rulegroup>
         <rulegroup id="COMPENSATIE" name="compensatie" tags="picky">
@@ -22250,30 +22544,6 @@ regexp case-insensitive maken: (?i)
             </rule>
         </rulegroup>
 
-        <rule id="CONDITIE" name="conditie" tags="picky">
-            <antipattern><token regexp="yes">goede|prima|uitstekende|slechte</token></antipattern>
-            <pattern>
-                <token inflected="yes">conditie</token>
-            </pattern>
-            <message>Als u een voorwaarde bedoelt kunt u ook beter <suggestion><match no="1" postag_regexp="yes" postag="ZNW.*">voorwaarde</match></suggestion> schrijven.</message>
-            <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-            <example correction="voorwaarde">QQ <marker>conditie</marker> QQQ.</example>
-            <example>QQ <marker>voorwaarde</marker>.</example>
-        </rule>
-
-        <rulegroup id="CONFIGURATIE" name="configuratie" tags="picky">
-            <rule>
-                <pattern>
-                    <token inflected="yes">configuratie</token>
-                </pattern>
-                <message>&vlotter_mess; <suggestion><match no="1" postag=".*ZNW.*" postag_regexp="yes">samenstelling</match></suggestion>.</message>
-                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="samenstelling">Vrij simpel in <marker>configuratie</marker>.</example>
-                <example correction="Samenstelling"><marker>Configuratie</marker> voor het activeren van deze gratis optie.</example>
-                <example correction="samenstellingen">Deze omkeerbare deur kan aan alle <marker>configuraties</marker> aangepast worden.</example>
-                <example correction="samenstelling">Al denk ik ook aan de <marker>configuratie</marker> met telenet, draadloos dan?</example>
-            </rule>
-        </rulegroup>
         <rulegroup id="CONFLICTSITUATIE" name="conflictsituatie" tags="picky">
             <rule>
                 <pattern>
@@ -22899,21 +23169,6 @@ regexp case-insensitive maken: (?i)
                 <example correction="deze brief">Graag greep ik <marker>dit schrijven</marker> ook aan om te reageren op een kritiek van anderen.</example>
             </rule>
         </rulegroup>
-        <rulegroup id="DIVERSITEIT" name="diversiteit" tags="picky">
-            <rule>
-                <pattern>
-                    <token inflected="yes">diversiteit</token>
-                </pattern>
-                <message>&vlotter_mess; <suggestion>variatie</suggestion>, <suggestion>afwisseling</suggestion> of <suggestion>verschillen</suggestion>.</message>
-                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="variatie|afwisseling|verschillen">Leren in <marker>diversiteit</marker>.</example>
-                <example correction="variatie|afwisseling|verschillen">Lokale <marker>diversiteit</marker> kan positief zijn.</example>
-                <example correction="variatie|afwisseling|verschillen">Een <marker>diversiteit</marker> van verschillende soorten kunst.</example>
-                <example correction="variatie|afwisseling|verschillen">Deze <marker>diversiteit</marker> proberen we hier op te brengen.</example>
-                <example correction="variatie|afwisseling|verschillen">We hadden daarbij aandacht voor geografische <marker>diversiteit</marker>.</example>
-                <example correction="variatie|afwisseling|verschillen">Skeeleren wordt gekenmerkt door snelheid en <marker>diversiteit</marker>.</example>
-            </rule>
-        </rulegroup>
         <rulegroup id="DOEN_TOEKOMEN" name="doen toekomen" tags="picky">
             <rule>
                 <pattern>
@@ -23081,21 +23336,6 @@ regexp case-insensitive maken: (?i)
                 <example correction="maar|toch">Een net piepende veertiger, getrouwd <marker>edoch</marker> zoekend naar persoonlijk geluk en innerlijke verrijking, beleeft haar leven volgens haar eigen waarden en normen.</example>
             </rule>
         </rulegroup>
-        <rulegroup id="EDUCATIEF" name="educatief" tags="picky">
-            <rule>
-                <pattern>
-                    <token inflected="yes">educatief</token>
-                </pattern>
-                <message>&vlotter_mess; <suggestion><match no="1" postag="BNW.*" postag_regexp="yes">leerzaam</match></suggestion>.</message>
-                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="Leerzaam"><marker>Educatief</marker> en leuk.</example>
-                <example correction="leerzaam">Goed <marker>educatief</marker> spel.</example>
-                <example correction="leerzame">Hier vind je ook een <marker>educatieve</marker> map.</example>
-                <example correction="Leerzame"><marker>Educatieve</marker> auto van het gekende merk Chicco.</example>
-                <example correction="leerzaams">Stilaan groeide het idee om iets <marker>educatiefs</marker> met deze hobby te doen.</example>
-                <example correction="leerzaam">De voetafdruk is vooral <marker>educatief</marker> een sterk instrument.</example>
-            </rule>
-        </rulegroup>
         <rulegroup id="EEN_AANTAL" name="een aantal" tags="picky">
             <rule>
                 <pattern>
@@ -23124,19 +23364,6 @@ regexp case-insensitive maken: (?i)
                 <example correction="binnenkort">De zaak is hangende en zal waarschijnlijk <marker>een dezer dagen</marker> worden afgesloten om dan overhandigd te worden aan de procureur-generaal te Gent die zijn vordering moet formuleren.</example>
                 <example correction="binnenkort">Tegenwoordig wordt het nog maar weinig geserveerd en ik hoop dat de huisman of huisvrouw die van bakken, braden en koken houdt <marker>een dezer dagen</marker> deze lekkere soep volgens onderstaand recept gaat klaarmaken.</example>
                 <example correction="binnenkort">De dokter van spoed heeft haar goed onderzocht, en tot onze grote spijt kregen we te horen dat haar voortandje inderdaad niet meer te redden valt, maar dat het zodanig los zit dat het <marker>een dezer dagen</marker> wel spontaan zal uitvallen.</example>
-            </rule>
-        </rulegroup>
-        <rulegroup id="EEN_EN_ANDER" name="een en ander" tags="picky">
-            <rule>
-                <pattern>
-                    <token>een</token><token>en</token><token>ander</token>
-                </pattern>
-                <message>&vlotter_mess; 'deze', 'dit alles' of 'iets'.</message>
-                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="">Er beweegt dus <marker>een en ander</marker>.</example>
-                <example correction="">We weten het <marker>een en ander</marker> van Antoni.</example>
-                <example correction="">Ja, met paus Gregorius VII veranderde zo <marker>een en ander</marker>.</example>
-                <example correction="">Daarin stond wel <marker>een en ander</marker> ter zake in.</example>
             </rule>
         </rulegroup>
         <rulegroup id="EEN_KLEIN_AANTAL" name="een klein aantal" tags="picky">
@@ -23199,12 +23426,25 @@ regexp case-insensitive maken: (?i)
         </rulegroup>
         <rulegroup id="ELIMINEREN" name="elimineren" tags="picky">
             <rule>
+                <antipattern>
+                    <token>te</token>
+                    <token>elimineren</token>
+                </antipattern>
                 <pattern>
                     <token inflected="yes">elimineren</token>
                 </pattern>
-                <message>&vlotter_mess; 'uitschakelen' of 'verwijderen'.</message>
+                <message>&vlotter_mess; <suggestion><match no="1" postag_regexp="yes" postag="WKW.*">uitschakelen</match></suggestion>, <suggestion><match no="1" postag_regexp="yes" postag="WKW.*">wegwerken</match></suggestion> of <suggestion><match no="1" postag_regexp="yes" postag="WKW.*">verwijderen</match></suggestion>.</message>
                 <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="">Elk gedeelte is <marker>eliminerend</marker>.</example>
+                <example correction="uitgeschakeld|weggewerkt|verwijderd">Kinderziektes moeten worden <marker>geëlimineerd</marker>.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token>te</token>
+                    <token>elimineren</token>
+                </pattern>
+                <message>&vlotter_mess; <suggestion>uit te schakelen</suggestion>, <suggestion>weg te werken</suggestion> of <suggestion>te verwijderen</suggestion>.</message>
+                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
+                <example correction="uit te schakelen|weg te werken|te verwijderen">Hij schuwde niet om tegenstanders <marker>te elimineren</marker>.</example>
             </rule>
         </rulegroup>
         <rulegroup id="ELKEEN" name="elkeen" tags="picky">
@@ -24004,24 +24244,6 @@ regexp case-insensitive maken: (?i)
                 <example correction="ruzies|conflicten">Voor alle <marker>geschillen</marker> in verband met deze overeenkomst is enkel de rechtbank van Kortrijk bevoegd.</example>
             </rule>
         </rulegroup>
-        <rulegroup id="GESTRUCTUREERD" name="gestructureerd" tags="picky">
-            <rule>
-                <pattern>
-                    <token>gestructureerd</token>
-                </pattern>
-                <message>&vlotter_mess; <suggestion>geordend</suggestion>, <suggestion>geregeld</suggestion> of <suggestion>overzichtelijk</suggestion>.</message>
-                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="geordend|geregeld|overzichtelijk">Goed <marker>gestructureerd</marker> en overtuigend.</example>
-            </rule>
-            <rule>
-                <pattern>
-                    <token>gestructureerde</token>
-                </pattern>
-                <message>&vlotter_mess; <suggestion>geordende</suggestion>, <suggestion>geregelde</suggestion> of <suggestion>overzichtelijke</suggestion>.</message>
-                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="geordende|geregelde|overzichtelijke">Een <marker>gestructureerde</marker> aanpak dringt zich op.</example>
-            </rule>
-        </rulegroup>
         <rulegroup id="GEWAG_MAKEN_VAN" name="gewag maken van" tags="picky">
             <rule>
                 <pattern>
@@ -24550,33 +24772,6 @@ regexp case-insensitive maken: (?i)
                 <example correction="In dit geval|In uw geval|In het geval dat"><marker>In casu</marker> had de DVZ een einde gemaakt aan het verblijf van een echtgenoot van een Ghanese vrouw met onbeperkt verblijf in België.</example>
             </rule>
         </rulegroup>
-        <rulegroup id="INCIDENT" name="incident" tags="picky">
-            <rule>
-                <pattern>
-                    <token>incident</token>
-                </pattern>
-                <message>&vlotter_mess; <suggestion>gebeurtenis</suggestion> of <suggestion>vervelende gebeurtenis</suggestion>.</message>
-                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="gebeurtenis|vervelende gebeurtenis">Het <marker>incident</marker> is gesloten.</example>
-                <example correction="gebeurtenis|vervelende gebeurtenis">Bij het <marker>incident</marker> raakte niemand gewond.</example>
-                <example correction="gebeurtenis|vervelende gebeurtenis">Uiteraard betreurt men ook het <marker>incident</marker>.</example>
-                <example correction="gebeurtenis|vervelende gebeurtenis">Gelukkig kwam het <marker>incident</marker> tot een goed einde.</example>
-                <example correction="gebeurtenis|vervelende gebeurtenis">Bij het <marker>incident</marker> raakten geen toeristen gewond.</example>
-            </rule>
-            <rule>
-                <pattern>
-                    <token>incidenten</token>
-                </pattern>
-                <message>&vlotter_mess; <suggestion>gebeurtenissen</suggestion> of <suggestion>vervelende gebeurtenissen</suggestion>.</message>
-                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="gebeurtenissen|vervelende gebeurtenissen">Er deden zich geen <marker>incidenten</marker> voor.</example>
-                <example correction="Gebeurtenissen|Vervelende gebeurtenissen"><marker>Incidenten</marker> in kaart brengen is natuurlijk niet genoeg.</example>
-                <example correction="gebeurtenissen|vervelende gebeurtenissen">50% afname van aantal <marker>incidenten</marker> van urineverlies.</example>
-                <example correction="gebeurtenissen|vervelende gebeurtenissen">Na enkele <marker>incidenten</marker> is de politie tussenbeide gekomen.</example>
-                <example correction="gebeurtenissen|vervelende gebeurtenissen">Om dergelijke <marker>incidenten</marker> te vermijden, overweegt Amerika om een hoogtechnoloische muur te bouwen.</example>
-                <example correction="gebeurtenissen|vervelende gebeurtenissen">Er is het systematisch onderzoek van alle <marker>incidenten</marker>.</example>
-            </rule>
-        </rulegroup>
         <rulegroup id="IN_CONCRETO" name="in concreto" tags="picky">
             <rule>
                 <pattern>
@@ -24754,30 +24949,6 @@ regexp case-insensitive maken: (?i)
                 <example correction=""><marker>In de zin van</marker> dit decreet duren de onderwijsactiviteitsuren zestig minuten.</example>
                 <example correction="">Ook de wissel <marker>in de zin van</marker> onze ouwe spits Lino op het veld mocht niet baten.</example>
                 <example correction="">De angst bestaat, dat juni voor onaangename verrassingen kan gaan zorgen <marker>in de zin van</marker> noodweer.</example>
-            </rule>
-        </rulegroup>
-        <rulegroup id="INDICATIE" name="indicatie" tags="picky">
-            <rule>
-                <pattern>
-                    <token inflected="yes">indicatie</token>
-                </pattern>
-                <message>&vlotter_mess; <suggestion><match no="1" postag=".*ZNW.*" postag_regexp="yes">aanwijzing</match></suggestion>.</message>
-                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="Aanwijzing"><marker>Indicatie</marker> geplande datum opdracht.</example>
-                <example correction="aanwijzingen">Het waren <marker>indicaties</marker> van de oorlogseconomie.</example>
-            </rule>
-        </rulegroup>
-        <rulegroup id="INDIEN" name="indien" tags="picky">
-            <rule>
-                <pattern>
-                    <token>indien</token>
-                </pattern>
-                <message>&vlotter_mess; <suggestion>als</suggestion> of <suggestion>wanneer</suggestion>.</message>
-                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="als|wanneer">Reizen <marker>indien</marker> nodig.</example>
-                <example correction="Als|Wanneer"><marker>Indien</marker> u astma heeft.</example>
-                <example correction="als|wanneer">Laat leeg, <marker>indien</marker> U dit niet wil.</example>
-                <example correction="als|wanneer">Snoeien <marker>indien</marker> nodig.</example>
             </rule>
         </rulegroup>
         <rulegroup id="IN_DIER_VOEGE" name="in dier voege" tags="picky">
@@ -26094,11 +26265,11 @@ regexp case-insensitive maken: (?i)
                 <pattern>
                     <token>naar</token><token>behoren</token>
                 </pattern>
-                <message>&vlotter_mess; <suggestion>goed genoeg</suggestion>.</message>
+                <message>&vlotter_mess; <suggestion>goed</suggestion>, <suggestion>correct</suggestion> of <suggestion>juist</suggestion>.</message>
                 <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="goed genoeg">Werkt nog <marker>naar behoren</marker>.</example>
-                <example correction="goed genoeg">Wanneer de lever niet <marker>naar behoren</marker> werkt, kan deze vermoeidheid met zich meebrengen.</example>
-                <example correction="goed genoeg">Hij oefent en oefent, totdat het instrument <marker>naar behoren</marker> wordt beheerst en een leuk repertoire is opgebouwd.</example>
+                <example correction="goed|correct|juist">Werkt nog <marker>naar behoren</marker>.</example>
+                <example correction="goed|correct|juist">Wanneer de lever niet <marker>naar behoren</marker> werkt, kan deze vermoeidheid met zich meebrengen.</example>
+                <example correction="goed|correct|juist">Hij oefent en oefent, totdat het instrument <marker>naar behoren</marker> wordt beheerst en een leuk repertoire is opgebouwd.</example>
             </rule>
         </rulegroup>
         <rulegroup id="NAAR_DE_MENSEN_TOE" name="naar de mensen toe">
@@ -26654,22 +26825,6 @@ regexp case-insensitive maken: (?i)
                 <example>QQ <marker>nu</marker>.</example>
             </rule>
         </rulegroup>
-        <rulegroup id="OPSTARTEN" name="opstarten" tags="picky">
-            <rule>
-                <pattern>
-                    <token inflected="yes">opstarten<exception>opstart</exception></token>
-                </pattern>
-                <message>&vlotter_mess; <suggestion><match no="1" postag="WKW.*" postag_regexp="yes">beginnen</match></suggestion>.</message>
-                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="beginnen">QQ <marker>opstarten</marker> QQQ.</example>
-                <example>QQ <marker>beginnen</marker>.</example>
-                <example correction="beginnen">Een eigen zaak <marker>opstarten</marker>?</example>
-                <example correction="begon">Als 't ding <marker>opstartte</marker> was 't al lang goed.</example>
-                <example correction="beginnend">Bovendien ging het om een klein <marker>opstartend</marker> bedrijf.</example>
-                <example correction="begonnen">Wij hebben daarom een Belgische afdeling <marker>opgestart</marker>.</example>
-                <example correction="begonnen">Hiermee kan de onderzoeksfase <marker>opgestart</marker> worden.</example>
-            </rule>
-        </rulegroup>
         <rulegroup id="OPTEREN_VOOR" name="opteren voor" tags="picky">
             <rule>
                 <pattern>
@@ -27057,27 +27212,6 @@ regexp case-insensitive maken: (?i)
                 <example correction="">Dit is een <marker>primaire</marker> taalstoornis.</example>
             </rule>
         </rulegroup>
-        <rulegroup id="PRINCIPE" name="principe" tags="picky">
-            <rule>
-                <antipattern><token>in</token><token>principe</token></antipattern>
-                <pattern>
-                    <token>principe</token>
-                </pattern>
-                <message>&vlotter_mess; <suggestion>keuze</suggestion> of <suggestion>uitgangspunt</suggestion>.</message>
-                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="keuze|uitgangspunt">Heel mooi <marker>principe</marker>.</example>
-                <example correction="keuze|uitgangspunt">Eind jaren ‘90 was dit <marker>principe</marker> erg rendabel.</example>
-            </rule>
-            <rule>
-                <pattern>
-                    <token>principes</token>
-                </pattern>
-                <message>&vlotter_mess; <suggestion>keuzes</suggestion> of <suggestion>uitgangspunten</suggestion>.</message>
-                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="keuzes|uitgangspunten">Een mens moet trouw blijven aan zijn <marker>principes</marker>.</example>
-                <example correction="keuzes|uitgangspunten">Wat Newton had gedaan, was dezelfde <marker>principes</marker> toepassen op de natuur.</example>
-            </rule>
-        </rulegroup>
         <rulegroup id="PRINCIPIEEL" name="principieel" tags="picky">
             <rule>
                 <pattern>
@@ -27099,20 +27233,6 @@ regexp case-insensitive maken: (?i)
                 <message>&vlotter_mess; 'volgorde van belangrijkheid'.</message>
                 <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
                 <example correction="">Daarenboven genieten deze projecten van <marker>prioriteitsstelling</marker> t.a.v. het beschikbare budget.</example>
-            </rule>
-        </rulegroup>
-        <rulegroup id="PROACTIEF" name="proactief" tags="picky">
-            <rule>
-                <pattern>
-                    <token inflected="yes">proactief</token>
-                </pattern>
-                <message>&vlotter_mess; <suggestion><match no="1" postag="BNW.*" postag_regexp="yes">actief</match></suggestion> of 'problemen vóór willen zijn'.</message>
-                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="actief">Teamplayer en bent <marker>proactief</marker> binnen een team.</example>
-                <example correction="actieve">Zij worden immers ook in de <marker>proactieve</marker> recherche (vb.</example>
-                <example correction="Actief"><marker>Proactief</marker> ingrijpen op problematisch drugs- en alcoholgebruik.</example>
-                <example correction="actiever">Brussels Airport wil in de toekomst <marker>proactiever</marker> communiceren over haar milieubeleid.</example>
-                <example correction="Actieve"><marker>Proactieve</marker> persoonlijkheden zijn extravert, impulsief, wat agressiever en hebben een sterke drang om routines te volgen.</example>
             </rule>
         </rulegroup>
         <rulegroup id="PROCEDÉ" name="procedé" tags="picky">
@@ -27138,11 +27258,11 @@ regexp case-insensitive maken: (?i)
                 <pattern>
                     <token inflected="yes">procedure</token>
                 </pattern>
-                <message>&vlotter_mess; <suggestion><match no="1" postag=".*ZNW.*" postag_regexp="yes">werkwijze</match></suggestion> of 'manier om iets aan te pakken'.</message>
+                <message>&vlotter_mess; <suggestion><match no="1" postag=".*ZNW.*" postag_regexp="yes">werkwijze</match></suggestion> of <suggestion><match no="1" postag=".*ZNW.*" postag_regexp="yes">methode</match></suggestion>.</message>
                 <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="werkwijze">De <marker>procedure</marker> loopt nog.</example>
-                <example correction="werkwijzen|werkwijzes">Ze wacht alle <marker>procedures</marker> af.</example>
-                <example correction="werkwijze">Deze <marker>procedure</marker> wordt ingeleid bij het vredegerecht.</example>
+                <example correction="werkwijze|methode">De <marker>procedure</marker> loopt nog.</example>
+                <example correction="werkwijzen|werkwijzes|methoden|methodes">Ze wacht alle <marker>procedures</marker> af.</example>
+                <example correction="werkwijze|methode">Deze <marker>procedure</marker> wordt ingeleid bij het vredegerecht.</example>
             </rule>
         </rulegroup>
         <rulegroup id="PROCEDUREEL" name="procedureel" tags="picky">
@@ -27185,18 +27305,6 @@ regexp case-insensitive maken: (?i)
                 <message>&vlotter_mess; 'belangrijk'.</message>
                 <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
                 <example correction="">Het verleden is nog <marker>prominent</marker> aanwezig.</example>
-            </rule>
-        </rulegroup>
-        <rulegroup id="QUA" name="qua" tags="picky">
-            <rule>
-                <pattern>
-                    <token>qua</token>
-                </pattern>
-                <message>&vlotter_mess; <suggestion>over</suggestion> of <suggestion>rond</suggestion> of <suggestion>als het gaat om</suggestion>.</message>
-                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="Over|Rond|Als het gaat om"><marker>Qua</marker> uiterlijk ook.</example>
-                <example correction="over|rond|als het gaat om">Mooi resultaat en <marker>qua</marker> prijs de laagste.</example>
-                <example correction="over|rond|als het gaat om">Het boek is <marker>qua</marker> lay-out bijzonder pittig.</example>
             </rule>
         </rulegroup>
         <rulegroup id="QUASI" name="quasi" tags="picky">
@@ -27841,24 +27949,6 @@ regexp case-insensitive maken: (?i)
                 <message>&vlotter_mess; <suggestion><match no="1" postag="BNW.*" postag_regexp="yes">strak</match></suggestion> of <suggestion><match no="1" postag="BNW.*" postag_regexp="yes">streng</match></suggestion>.</message>
                 <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
                 <example correction="strak|streng">Die vond dat het nogal <marker>stringent</marker> was.</example>
-            </rule>
-        </rulegroup>
-        <rulegroup id="STRUCTUREEL" name="structureel" tags="picky">
-            <rule>
-                <pattern>
-                    <token>structureel</token>
-                </pattern>
-                <message>&vlotter_mess; <suggestion>voortdurend</suggestion>, <suggestion>regelmatig</suggestion>, <suggestion>belangrijk</suggestion> of <suggestion>voldoende</suggestion>.</message>
-                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="voortdurend|regelmatig|belangrijk|voldoende">Om die tegen te gaan, is <marker>structureel</marker> een groot bedrag nodig.</example>
-            </rule>
-            <rule>
-                <pattern>
-                    <token>structurele</token>
-                </pattern>
-                <message>&vlotter_mess; <suggestion>voortdurende</suggestion>, <suggestion>regelmatige</suggestion>, <suggestion>belangrijke</suggestion> of <suggestion>voldoende</suggestion>.</message>
-                <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="voortdurende|regelmatige|belangrijke|voldoende">Ik kom tot een tweede <marker>structurele</marker> vraag.</example>
             </rule>
         </rulegroup>
         <rulegroup id="EEN_STUKJE_BELEID" name="een stukje." >
@@ -29507,9 +29597,9 @@ regexp case-insensitive maken: (?i)
                 <pattern>
                     <token>wellicht</token>
                 </pattern>
-                <message>&vlotter_mess; <suggestion>misschien</suggestion>.</message>
+                <message>&vlotter_mess; <suggestion>misschien</suggestion> of <suggestion>mogelijk</suggestion>.</message>
                 <url>https://onzetaal.nl/taaladvies/ouderwets-taalgebruik</url>
-                <example correction="misschien">Doe <marker>wellicht</marker> iets anders.</example>
+                <example correction="misschien|mogelijk">Doe <marker>wellicht</marker> iets anders.</example>
             </rule>
         </rulegroup>
         <rulegroup id="WERKBAAR" name="werkbaar" tags="picky">
@@ -30059,7 +30149,18 @@ regexp case-insensitive maken: (?i)
             <message>Meestal wordt dit als 'scherpe, ronde o' uitgesproken, en dan is de correcte spelling <suggestion>o</suggestion>.</message>
             <example correction="O"><marker>Oh</marker>, dat is mooi!</example>
         </rule>
-
+        <rulegroup id="TELEFONISCHE" name="zoals telefonische (telefonisch) besproken">
+            <rule>
+                <pattern>
+                    <marker>
+                        <token>telefonische</token>
+                    </marker>
+                    <token>besproken</token>
+                </pattern>
+                <message>Hier moet vast <suggestion>telefonisch</suggestion> staan.</message>
+                <example correction="telefonisch">Zoals zojuist <marker>telefonische</marker> besproken.</example>
+            </rule>
+        </rulegroup>
         <rule id="NL_AFGEBROKEN_WOORD" name="afgebroken woorden">
             <pattern>
                 <token regexp="yes">\p{L}+[-]$</token>
@@ -30144,7 +30245,7 @@ regexp case-insensitive maken: (?i)
         <rulegroup id="_2ASSIG" name="2assig/2-assig" >
             <rule>
                 <pattern>
-                    <token regexp="yes">^[0-9]+[a-z]*ige?$</token>
+                    <token case_sensitive="yes" regexp="yes">^[0-9]+[a-z]*ige?$</token>
                 </pattern>
                 <message>Tussen een cijfer en het ander woorddeel hoort een koppelteken.</message>
                 <suggestion><match no="1" regexp_match="(^[0-9]+)([a-zA-Z]+ige?)$" regexp_replace="$1-$2"/></suggestion>
@@ -30424,43 +30525,42 @@ regexp case-insensitive maken: (?i)
             <antipattern><token>no</token><token>time</token></antipattern>
             <antipattern><token>wil</token><token regexp="yes">hij|zij|men|u</token></antipattern>
             <antipattern><token>dan</token><token postag="WKW:TGW:1EP"/></antipattern>
-
             <antipattern>
                 <token><exception regexp="yes">[;,:]</exception></token>
                 <token postag="WKW:TGW:1EP"><exception regexp="yes">ben|word|heb|kan|zal</exception></token>
                 <token>dan</token>
             </antipattern>
             <antipattern>
-                <!--
-                ...d een centraal |stofzuig| systeem laten ...
-                -->
-                <!-- dit doet vast te veel, maar dat moet dan maar anders worden opgevangen.-->
                 <token postag="WKW:TGW:1EP"><exception regexp="yes">ben|word|heb|kan|zal</exception></token>
                 <token postag_regexp="yes" postag="ZNW:EKV.*"/>
+                <example>We hebben een centraal stofzuig systeem laten plaatsen.</example>
             </antipattern>
             <antipattern>
-                <!-- stam gebruikt als znw :
-                ... al in de ruwe |render| en hadden we t...
-                -->
                 <token regexp="yes">de|een|geen|het</token>
                 <token postag_regexp="yes" postag="BNW.*VRB"/>
                 <token postag="WKW:TGW:1EP"/>
+                <example>Daarmee werkte het al in de ruwe render en hadden we goed resultaat.</example>
             </antipattern>
             <antipattern>
-                <!-- stam gebruikt als znw
-                ...al elke dag de |inruim| in de winkel m...
-                -->
                 <token regexp="yes">de|een|geen</token>
                 <token postag="WKW:TGW:1EP"/>
+                <example>Hij neemt elke dag de inruim in de winkel mee.</example>
             </antipattern>
             <antipattern>
-                <token regexp="yes" case_sensitive="yes">heb|facebook|instagram|ipad|youtube|kan|opzoek|netflix|skype|patience|zie|his</token>
+                <token regexp="yes" case_sensitive="yes">heb|facebook|source|after|flex|time|moon|instagram|ipad|youtube|kan|opzoek|netflix|skype|patience|zie|his</token>
             </antipattern>
             <antipattern>
                 <!-- ik staat in de zin -->
-                <token postag="SENT_START" skip="-1"/>
+                <token skip="-1" postag="SENT_START"/>
                 <token skip="-1" regexp="yes">'k|ik|ikzelf</token>
                 <token postag="SENT_END"/>
+                <example>Dat begrijp ik wel, maar ik vind dat lang niet altijd nodig</example>
+            </antipattern>
+            <antipattern>
+                <!-- voorkom FPs voor zinnen die eindigen op ik (mergen met vorige ap) -->
+                <token skip="-1" postag="SENT_START"/>
+                <token regexp="yes" postag="SENT_END">'k|ik|ikzelf</token>
+                <example>Erg goed gedaan vind ik</example>
             </antipattern>
             <antipattern>
                 <token postag="SENT_START"/>
@@ -33769,11 +33869,11 @@ regexp case-insensitive maken: (?i)
                     <token>ter</token>
                     <token>plekke</token>
                 </pattern>
-                <message>Dit kan ook: <suggestion>daar en op dat moment</suggestion>, <suggestion>meteen</suggestion>, <suggestion>onmiddellijk</suggestion>.</message>
+                <message>Dit kan ook: <suggestion>daar</suggestion>, <suggestion>op dat moment</suggestion>, <suggestion>meteen</suggestion>.</message>
                 <url>https://taaladvies.net/taal/advies/vraag/785/ter_plekke_ter_plaatse/6</url>
-                <example correction="daar en op dat moment|meteen|onmiddellijk">Ze stierf <marker>ter plekke</marker>.</example>
-                <example correction="Daar en op dat moment|Meteen|Onmiddellijk"><marker>Ter plekke</marker> geplaasterd.</example>
-                <example correction="daar en op dat moment|meteen|onmiddellijk">Je bent zelfs niet verplicht om <marker>ter plekke</marker> iets te consumeren.</example>
+                <example correction="daar|op dat moment|meteen">Ze stierf <marker>ter plekke</marker>.</example>
+                <example correction="Daar|Op dat moment|Meteen"><marker>Ter plekke</marker> geplaasterd.</example>
+                <example correction="daar|op dat moment|meteen">Je bent zelfs niet verplicht om <marker>ter plekke</marker> iets te consumeren.</example>
             </rule>
         </rulegroup>
         <rulegroup id="LIJVE" name="uitdrukkingen met 'lijve'">
@@ -37522,6 +37622,22 @@ regexp case-insensitive maken: (?i)
                 <example>We willen weten waarom het het best product voor ons was.</example>
             </rule>
         </rulegroup>
+        <rulegroup id="OVERBODIG_WKW" name="...om het te moeten aangeven en te (moeten) noteren">
+            <rule>
+                <pattern>
+                    <token>te</token>
+                    <token skip="8">moeten</token>
+                    <marker>
+                        <token>te</token>
+                        <token>moeten</token>
+                        <token postag_regexp="yes" postag="WKW.*"></token>
+                    </marker>
+                </pattern>
+                <message>Er staat twee keer 'te moeten', wellicht kan de tweede worden weggelaten: <suggestion>\3 \5</suggestion>.</message>
+                <example correction="te noteren">Om dat dan te moeten aangeven en <marker>te moeten noteren</marker>.</example>
+                <example correction="te verdiepen">Ik vind het ook zeer leuk om zelfstandig te moeten werken en mij in een bepaalde zaak <marker>te moeten verdiepen</marker>.</example>
+            </rule>
+        </rulegroup>
         <rulegroup id="VAN_VAN" name="van van/van Van">
             <rule>
                 <pattern>
@@ -40433,6 +40549,8 @@ regexp case-insensitive maken: (?i)
             <antipattern><token>de</token><token>public</token><token>relations</token></antipattern>
             <antipattern><token>de</token><token>condition</token><token>humaine</token></antipattern>
             <antipattern><token>de</token><token>intensive</token><token>care</token></antipattern>
+            <antipattern><token>de</token><token>waterspitsmuis</token></antipattern>
+            <antipattern><token>de</token><token>eindbaas</token></antipattern>
             <antipattern><token>de</token><token>fine</token><token>fleur</token></antipattern>
             <antipattern><token>de</token><token>nummer</token><token postag_regexp="yes" postag="GET.*"/></antipattern>
             <antipattern><token>de</token><token>,</token><token>,</token></antipattern>
@@ -40456,6 +40574,7 @@ regexp case-insensitive maken: (?i)
                 </pattern>
                 <message>U bedoelt vast: <suggestion>het \2</suggestion>.</message>
                 <example correction="Het surplus"><marker>De surplus</marker> die ik zag.</example>
+                <example>De waterspitsmuis heeft giftig speeksel.</example>
             </rule>
 
             <rule>
@@ -40464,10 +40583,11 @@ regexp case-insensitive maken: (?i)
                     <token>de</token>
                     <token/>
                 </pattern>
-                <message>Het woord na 'de' is onverwacht. Misschien staat er een spatie te veel of zou het niet 'de', maar 'te' of 'het' moeten zijn.</message>
+                <message>Het woord na 'de' is onverwacht. Misschien zou het niet 'de', maar 'het', 'te' of 'dit' moeten zijn.</message>
                 <suggestion>het \2</suggestion>
                 <suggestion>te \2</suggestion>
-                <example correction="het loopt|te loopt"><marker>de loopt</marker></example>
+                <suggestion>dit \2</suggestion>
+                <example correction="het loopt|te loopt|dit loopt"><marker>de loopt</marker></example>
                 <example>Bij de overheadpass zijn beide handen aan de bal.</example> <!-- false alarm 15-12-2019 -->
                 <example>Bij de opgestane Jezus.</example> <!-- false alarm-->
                 <example>Bij de kartuizers.</example> <!-- false alarm-->
@@ -40894,6 +41014,7 @@ regexp case-insensitive maken: (?i)
                 <antipattern><token>financieel</token><token>planner</token></antipattern>
                 <antipattern><token>financieel</token><token>coördinator</token></antipattern>
                 <antipattern><token>vol</token><token>bewondering</token></antipattern>
+                <antipattern><token>wetenschappelijk</token><token>onderzoeksassistent</token></antipattern>
                 <antipattern>
                     <token>een</token>
                     <token>ander</token>

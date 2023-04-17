@@ -6439,3 +6439,27 @@ Sanssouci Park	NNP
 Sanssouci Palace	NNP
 Joy Behar	NNP
 Evan Gershkovich	NNP
+Cuba libre	NNP
+Cuba Libre	NNP
+Baker McKenzie	NNP
+Juan Merchan	NNP
+Doogie Howser	NNP
+Fritz Haber	NNP
+William Crookes	NNP
+Honoré de Balzac	NNP
+Reliance Industries	NNP
+Crate&Barrel	NNP
+Crate & Barrel	NNP
+BMW XM	NNP
+British Telecom	NNP
+BT Group	NNP
+Chun Doo-hwan	NNP
+Bandar Seri Begawan	NNP
+Han Zheng	NNP
+William J. Burns	NNP
+William Burns	NNP
+Sono Motors	NNP
+Jack Teixeira	NNP
+Alex Teixeira	NNP
+Qin Gang	NNP
+Mike Lawler	NNP
