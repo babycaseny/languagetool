@@ -1740,7 +1740,8 @@ public class DocumentCache implements Serializable {
       return true;
     }
     for (int n = 0; n < chapterBegins.get(textParagraph.type).size(); n++) {
-      if (textParagraph.number == chapterBegins.get(textParagraph.type).get(n)) {
+      if (textParagraph.number == 0 ||
+          textParagraph.number == chapterBegins.get(textParagraph.type).get(n)) {
         if (n == chapterBegins.get(textParagraph.type).size() - 1 || 
             chapterBegins.get(textParagraph.type).get(n + 1) == textParagraph.number + 1) {
           return true;
@@ -2061,6 +2062,46 @@ public class DocumentCache implements Serializable {
     }
   }
   
+  /**
+   * has nearest paragraph changed
+   *//*
+  public boolean nearestParagraphHasChanged(int numberOfFlatParagraph, FlatParagraphTools flatPara) {
+    if (flatPara == null || numberOfFlatParagraph < 0 || numberOfFlatParagraph > paragraphs.size() - 1) {
+      return true;
+    }
+    if (paragraphs.size() == 1) {
+      return false;
+    }
+    int pNum = numberOfFlatParagraph == paragraphs.size() - 1 ? numberOfFlatParagraph - 1 : numberOfFlatParagraph + 1;
+    if (!flatPara.getFlatParagraphAt(pNum).getText().equals(paragraphs.get(pNum))) {
+      return true;
+    }
+    return false;
+  }
+*/
+  /**
+   * Return nearest sorted text Id
+   */
+  public int getNearestSortedTextId(int sortedTextId) {
+    rwLock.readLock().lock();
+    try {
+      if (sortedTextIds == null) {
+        return -1;
+      }
+      for (int i = 0; i < sortedTextIds.size(); i++) {
+        if (sortedTextIds.get(i) == sortedTextId) {
+          if (i == sortedTextIds.size() - 1) {
+            return sortedTextIds.get(i - 1);
+          } else {
+            return sortedTextIds.get(i + 1);
+          }
+        }
+      }
+      return -1;
+    } finally {
+      rwLock.readLock().unlock();
+    }
+  }
   
   /**
    * Return Number of flat Paragraph from node index

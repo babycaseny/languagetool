@@ -68,7 +68,9 @@ public abstract class AbstractEnglishSpellerRule extends MorfologikSpellerRule {
     "coon ass",
     "coon asses",
     "cunt",
+    "germane", // confused with German
     "double check",
+    "java script",
     "fine tune",
     "fine tuned",
     "fine tuning",
@@ -450,6 +452,7 @@ public abstract class AbstractEnglishSpellerRule extends MorfologikSpellerRule {
                    !k.getReplacement().toLowerCase().startsWith("r ") &&
                    !k.getReplacement().toLowerCase().startsWith("s ") &&
                    !k.getReplacement().toLowerCase().startsWith("t ") &&
+                   !k.getReplacement().toLowerCase().startsWith("u ") &&
                    !k.getReplacement().toLowerCase().startsWith("w ") &&
                    !k.getReplacement().toLowerCase().startsWith("um ") &&
                    !k.getReplacement().toLowerCase().startsWith("oft ") &&
@@ -503,6 +506,7 @@ public abstract class AbstractEnglishSpellerRule extends MorfologikSpellerRule {
                    !k.getReplacement().endsWith(" s") &&
                    !k.getReplacement().endsWith(" r") &&
                    !k.getReplacement().endsWith(" l") &&
+                   !k.getReplacement().endsWith(" u") &&
                    !k.getReplacement().endsWith(" um") &&
                    !k.getReplacement().endsWith(" er") &&
                    !k.getReplacement().endsWith(" es") &&
@@ -1240,6 +1244,8 @@ public abstract class AbstractEnglishSpellerRule extends MorfologikSpellerRule {
     s.put("nacked", Arrays.asList("backed", "naked"));
     s.put("no-profit", Arrays.asList("non-profit"));
     s.put("No-profit", Arrays.asList("Non-profit"));
+    s.put("wrose", Arrays.asList("worse"));
+    s.put("Wrose", Arrays.asList("Worse"));
 
     return s;
   }
